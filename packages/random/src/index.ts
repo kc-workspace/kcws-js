@@ -5,5 +5,5 @@ export const hello = (name: string): string => {
 };
 
 export const hi = (name: string) => {
-  return `hi ${name}`
+  return `hi ${name}`;
 };
