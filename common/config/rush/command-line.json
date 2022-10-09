@@ -168,12 +168,12 @@
     // }
 
     {
-      "name": "prettier",
+      "name": "hooks:format",
       "commandKind": "global",
-      "summary": "Used by the pre-commit Git hook. This command invokes Prettier to reformat staged changes.",
+      "summary": "Used by the pre-commit Git hook. This command invokes code styles to reformat staged changes.",
       "safeForSimultaneousRushProcesses": true,
-      "autoinstallerName": "rush-prettier",
-      "shellCommand": "pretty-quick --staged --verbose"
+      "autoinstallerName": "rush-lint-staged",
+      "shellCommand": "lint-staged"
     }
   ],
 
