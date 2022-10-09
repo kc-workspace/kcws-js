@@ -1,0 +1,26 @@
+name: Main
+
+on:
+  push:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/`setup-node@v3
+        with:
+          node-version: 16
+          cache: pnpm
+      - name: Checking for missing change logs
+        run: node common/scripts/install-run-rush.js change -v
+      - name: Installing dependencies
+        run: node common/scripts/install-run-rush.js install
+      - name: Building applications
+        run: node common/scripts/install-run-rush.js rebuild --verbose

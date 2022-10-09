@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "@kcws/random",
+      "path": "packages/random"
+    },
+    {
+      "name": "@kcws/node-rig",
+      "path": "internal/node-rig"
+    },
+    {
+      "name": "@kcws/eslint-config",
+      "path": "internal/eslint-config"
+    },
+    {
+      "name": "common",
+      "path": "common"
+    },
+    {
+      "name": ".github",
+      "path": ".github"
+    },
+    {
+      "name": "root",
+      "path": "."
+    }
+  ]
+}

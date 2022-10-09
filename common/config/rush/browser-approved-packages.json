@@ -1,0 +1,50 @@
+// DO NOT ADD COMMENTS IN THIS FILE.  They will be lost when the Rush tool resaves it.
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
+  "packages": [
+    {
+      "name": "@kcws/eslint-config",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "@kcws/node-rig",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "@microsoft/api-extractor",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "@rushstack/eslint-config",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "@rushstack/heft",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "@rushstack/heft-jest-plugin",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "@rushstack/heft-node-rig",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "@rushstack/heift-node-rig",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "eslint",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "jest-environment-node",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "typescript",
+      "allowedCategories": [ "prototypes" ]
+    }
+  ]
+}
