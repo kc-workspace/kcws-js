@@ -1,0 +1,6 @@
+{
+  "extends": "./node_modules/@kcws/node-rig/profiles/default/tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["heft-jest", "node"]
+  }
+}
