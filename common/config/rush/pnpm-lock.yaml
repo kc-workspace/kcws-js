@@ -11,6 +11,20 @@ importers:
     dependencies:
       '@rushstack/eslint-config': 3.1.0
 
+  ../../internal/lintstaged-config:
+    specifiers:
+      '@kcws/eslint-config': workspace:*
+      '@kcws/node-rig': workspace:*
+      '@rushstack/heft': 0.48.0
+      '@types/heft-jest': 1.0.3
+      '@types/node': 18.8.3
+    devDependencies:
+      '@kcws/eslint-config': link:../eslint-config
+      '@kcws/node-rig': link:../node-rig
+      '@rushstack/heft': 0.48.0
+      '@types/heft-jest': 1.0.3
+      '@types/node': 18.8.3
+
   ../../internal/node-rig:
     specifiers:
       '@microsoft/api-extractor': 7.32.0
