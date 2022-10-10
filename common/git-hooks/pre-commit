@@ -16,10 +16,12 @@
 # an appropriate message if it wants to stop the commit.  The hook is allowed to edit
 # the commit message file.
 
-# This example enforces that commit message should contain a minimum amount of
-# description text.
-if [ `cat $1 | wc -w` -lt 3 ]; then
-  echo ""
-  echo "Invalid commit message: The message must contain at least 3 words."
-	exit 1
+action="hooks:format"
+
+if command -v "rush" >/dev/null 2>&1; then
+  rush "$action" || exit $?
+else
+  node common/scripts/install-run-rush.js "$action" || exit $?
 fi
+
+unset cmd

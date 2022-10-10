@@ -24,7 +24,7 @@
     "@rushstack/heft-jest-plugin": "0.3.37",
     "@rushstack/heft-node-rig": "1.11.0",
     "eslint": "8.25.0",
-    "jest-environment-node": "29.1.2",
+    "jest-environment-node": "27.5.1",
     "typescript": "4.8.4"
   },
   "devDependencies": {

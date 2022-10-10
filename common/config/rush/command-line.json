@@ -166,6 +166,15 @@
     //    */
     //   // "autoinstallerName": "my-task"
     // }
+
+    {
+      "name": "hooks:format",
+      "commandKind": "global",
+      "summary": "Used by the pre-commit Git hook. This command invokes code styles to reformat staged changes.",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "rush-lint-staged",
+      "shellCommand": "lint-staged"
+    }
   ],
 
   /**
