@@ -19,7 +19,7 @@ importers:
       '@rushstack/heft-jest-plugin': 0.3.37
       '@rushstack/heft-node-rig': 1.11.0
       eslint: 8.25.0
-      jest-environment-node: 29.1.2
+      jest-environment-node: 27.5.1
       typescript: 4.8.4
     dependencies:
       '@microsoft/api-extractor': 7.32.0
@@ -27,7 +27,7 @@ importers:
       '@rushstack/heft-jest-plugin': 0.3.37_@rushstack+heft@0.48.0
       '@rushstack/heft-node-rig': 1.11.0_@rushstack+heft@0.48.0
       eslint: 8.25.0
-      jest-environment-node: 29.1.2
+      jest-environment-node: 27.5.1
       typescript: 4.8.4
     devDependencies:
       '@rushstack/heft': 0.48.0
@@ -503,16 +503,6 @@ packages:
       jest-mock: 27.5.1
     dev: false
 
-  /@jest/environment/29.1.2:
-    resolution: {integrity: sha512-rG7xZ2UeOfvOVzoLIJ0ZmvPl4tBEQ2n73CZJSlzUjPw4or1oSWC0s0Rk0ZX+pIBJ04aVr6hLWFn1DFtrnf8MhQ==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/fake-timers': 29.1.2
-      '@jest/types': 29.1.2
-      '@types/node': 18.8.3
-      jest-mock: 29.1.2
-    dev: false
-
   /@jest/expect-utils/29.1.2:
     resolution: {integrity: sha512-4a48bhKfGj/KAH39u0ppzNTABXQ8QPccWAFUFobWBaEMSMp+sB31Z2fK/l47c4a/Mu1po2ffmfAIPxXbVTXdtg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -530,18 +520,6 @@ packages:
       jest-message-util: 27.5.1
       jest-mock: 27.5.1
       jest-util: 27.5.1
-    dev: false
-
-  /@jest/fake-timers/29.1.2:
-    resolution: {integrity: sha512-GppaEqS+QQYegedxVMpCe2xCXxxeYwQ7RsNx55zc8f+1q1qevkZGKequfTASI7ejmg9WwI+SJCrHe9X11bLL9Q==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/types': 29.1.2
-      '@sinonjs/fake-timers': 9.1.2
-      '@types/node': 18.8.3
-      jest-message-util: 29.1.2
-      jest-mock: 29.1.2
-      jest-util: 29.1.2
     dev: false
 
   /@jest/globals/27.5.1:
@@ -596,6 +574,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@sinclair/typebox': 0.24.44
+    dev: true
 
   /@jest/source-map/27.5.1:
     resolution: {integrity: sha512-y9NIHUYF3PJRlHk98NdC/N1gl88BL08aQQgu4k4ZopQkCw9t9cV8mtl3TV8b/YCB8XaVTFrmUTAJvjsntDireg==}
@@ -695,6 +674,7 @@ packages:
       '@types/node': 18.8.3
       '@types/yargs': 17.0.13
       chalk: 4.1.2
+    dev: true
 
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
@@ -1023,6 +1003,7 @@ packages:
 
   /@sinclair/typebox/0.24.44:
     resolution: {integrity: sha512-ka0W0KN5i6LfrSocduwliMMpqVgohtPFidKdMEOUjoOFCHcOOYkKsPRxfs5f15oPNHTm6ERAm0GV/+/LTKeiWg==}
+    dev: true
 
   /@sinonjs/commons/1.8.3:
     resolution: {integrity: sha512-xkNcLAn/wZaX14RPlwizcKicDk9G3F8m2nU3L7Ukm5zBgTwiT0wsoFAHx9Jq56fJA1z/7uKGtCRu16sOUCLIHQ==}
@@ -1032,12 +1013,6 @@ packages:
 
   /@sinonjs/fake-timers/8.1.0:
     resolution: {integrity: sha512-OAPJUAtgeINhh/TAlUID4QTs53Njm7xzddaVlEs/SXwgtiD1tW22zAB/W1wdqfrpmikgaWQ9Fw6Ws+hsiRm5Vg==}
-    dependencies:
-      '@sinonjs/commons': 1.8.3
-    dev: false
-
-  /@sinonjs/fake-timers/9.1.2:
-    resolution: {integrity: sha512-BPS4ynJW/o92PUR4wgriz2Ud5gpST5vz6GQfMixEDK0Z8ZCUv2M7SkBLykH56T++Xs+8ln9zTGbOvNGIe02/jw==}
     dependencies:
       '@sinonjs/commons': 1.8.3
     dev: false
@@ -1144,6 +1119,7 @@ packages:
     resolution: {integrity: sha512-9sWaruZk2JGxIQU+IhI1fhPYRcQ0UuTNuKuCW9bR5fp7qi2Llf7WDzNa17Cy7TKnh3cdxDOiyTu6gaLS0eDatg==}
     dependencies:
       '@types/yargs-parser': 21.0.0
+    dev: true
 
   /@typescript-eslint/eslint-plugin/5.38.1_444tv3vqp6lpktlxqzfovoqee4:
     resolution: {integrity: sha512-ky7EFzPhqz3XlhS7vPOoMDaQnQMn+9o5ICR9CPr/6bw8HrFkzhMSxuA3gRfiJVvs7geYrSeawGJjZoZQKCOglQ==}
@@ -2833,7 +2809,7 @@ packages:
       graceful-fs: 4.2.10
       jest-circus: 27.5.1
       jest-environment-jsdom: 27.5.1
-      jest-environment-node: 27.4.6
+      jest-environment-node: 27.5.1
       jest-get-type: 27.5.1
       jest-jasmine2: 27.5.1
       jest-regex-util: 27.5.1
@@ -2929,18 +2905,6 @@ packages:
       '@types/node': 18.8.3
       jest-mock: 27.5.1
       jest-util: 27.5.1
-    dev: false
-
-  /jest-environment-node/29.1.2:
-    resolution: {integrity: sha512-C59yVbdpY8682u6k/lh8SUMDJPbOyCHOTgLVVi1USWFxtNV+J8fyIwzkg+RJIVI30EKhKiAGNxYaFr3z6eyNhQ==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/environment': 29.1.2
-      '@jest/fake-timers': 29.1.2
-      '@jest/types': 29.1.2
-      '@types/node': 18.8.3
-      jest-mock: 29.1.2
-      jest-util: 29.1.2
     dev: false
 
   /jest-get-type/27.5.1:
@@ -3054,6 +3018,7 @@ packages:
       pretty-format: 29.1.2
       slash: 3.0.0
       stack-utils: 2.0.5
+    dev: true
 
   /jest-mock/27.5.1:
     resolution: {integrity: sha512-K4jKbY1d4ENhbrG2zuPWaQBvDly+iZ2yAW+T1fATN78hc0sInwn7wZB8XtlNnvHug5RMwV897Xm4LqmPM4e2Og==}
@@ -3061,15 +3026,6 @@ packages:
     dependencies:
       '@jest/types': 27.5.1
       '@types/node': 18.8.3
-    dev: false
-
-  /jest-mock/29.1.2:
-    resolution: {integrity: sha512-PFDAdjjWbjPUtQPkQufvniXIS3N9Tv7tbibePEjIIprzjgo0qQlyUiVMrT4vL8FaSJo1QXifQUOuPH3HQC/aMA==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/types': 29.1.2
-      '@types/node': 18.8.3
-      jest-util: 29.1.2
     dev: false
 
   /jest-pnp-resolver/1.2.2_jest-resolve@27.4.6:
@@ -3296,6 +3252,7 @@ packages:
       ci-info: 3.5.0
       graceful-fs: 4.2.10
       picomatch: 2.3.1
+    dev: true
 
   /jest-validate/27.5.1:
     resolution: {integrity: sha512-thkNli0LYTmOI1tDB3FI1S1RTp/Bqyd9pTarJwL87OIBFuqEb5Apv5EaApEudYg4g86e3CT6kM0RowkhtEnCBQ==}
@@ -3782,6 +3739,7 @@ packages:
       '@jest/schemas': 29.0.0
       ansi-styles: 5.2.0
       react-is: 18.2.0
+    dev: true
 
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
@@ -3817,6 +3775,7 @@ packages:
 
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    dev: true
 
   /readdirp/3.5.0:
     resolution: {integrity: sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==}
