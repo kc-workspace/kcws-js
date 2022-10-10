@@ -27,7 +27,7 @@
    * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion".  See the Rush documentation
    * for details about these alternatives.
    */
-  "pnpmVersion": "7.12.1",
+  "pnpmVersion": "7.13.3",
   "pnpmOptions": {
     // https://github.com/microsoft/rushstack/issues/2542#issuecomment-794990772
     "useWorkspaces": true
