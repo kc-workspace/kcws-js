@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "comment": "",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config"
+}
