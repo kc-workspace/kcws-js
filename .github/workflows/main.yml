@@ -7,8 +7,11 @@ defaults:
   run:
     shell: bash
 
+env:
+  NODE_VERSION: 16
+
 jobs:
-  linting:
+  changelog:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,10 +19,24 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: ${{ env.NODE_VERSION }}
       - name: Checking for missing change logs
         run: node common/scripts/install-run-rush.js change -v
+
+  testing:
+    runs-on: ubuntu-latest
+    needs:
+      - changelog
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
       - name: Installing dependencies
         run: node common/scripts/install-run-rush.js install
       - name: Building applications
-        run: node common/scripts/install-run-rush.js rebuild --verbose
+        run: node common/scripts/install-run-rush.js build --verbose
+      - name: Testing applications
+        run: node common/scripts/install-run-rush.js test --verbose
