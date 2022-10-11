@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "comment": "initiate utilities for generate lint-staged config easier",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config"
+}
