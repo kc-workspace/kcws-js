@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@kcws/node-rig": "workspace:*",
+    "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.48.0",
     "@types/heft-jest": "1.0.3",
