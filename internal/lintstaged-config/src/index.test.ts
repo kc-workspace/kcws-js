@@ -1,11 +1,16 @@
-import { regex } from ".";
+import * as index from ".";
 
-describe("hello", () => {
-  it("should return correct path on single extension", () => {
-    expect(regex("json")).toHaveProperty("**/*.json");
-  });
+describe("index", () => {
+  it.each([["regex"], ["eslint"], ["prettier"]])(
+    "expose $1 function",
+    (fn: string) => {
+      const mapper = index as Record<string, unknown>;
+      expect(mapper[fn]).not.toBeFalsy();
+    }
+  );
 
-  it("should return correct path on multiple extension", () => {
-    expect(regex("js", "jsx")).toHaveProperty("**/*.{js,jsx}");
+  it.each([["Action"], ["Unknown"]])("NOT expose $1 function", (fn: string) => {
+    const mapper = index as Record<string, unknown>;
+    expect(mapper[fn]).toBeFalsy();
   });
 });
