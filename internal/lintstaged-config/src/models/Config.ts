@@ -1,4 +1,4 @@
-import type { ConfigFn } from "./ConfigFn";
+import type { CommandType, ConfigFn } from "./ConfigFn";
 
 import { prettier } from "../actions/prettier";
 
@@ -29,11 +29,7 @@ export interface IConfigValue {
    * Please use {@link IConfigValue.actionFn} instead.
    * You can specify both values.
    */
-  actions:
-    | string
-    | Array<string>
-    | Promise<string | Array<string>>
-    | Array<Promise<string | Array<string>>>;
+  actions: CommandType;
 
   /**
    * Function execute with matched regex values.
@@ -253,26 +249,16 @@ export class Config<K extends string> {
           console.log(`found matched files [${files.join(",")}]`);
 
         // Resolve static actions
-        const actions = await Promise.all(
-          toArray(value.actions).map((action) =>
-            toPromise(action).then(toArray)
-          )
-        ).then((v) => v.flatMap((v) => v));
-
-        if (this._isDebug) console.log(`static action: [${actions.join(",")}]`);
+        const saction = await this._resolveAction(value.actions);
+        if (this._isDebug) console.log(`static action: [${saction.join(",")}]`);
 
         // Resolve dynamic actions
-        const action = await Promise.all(
-          (value.actionFn &&
-            toArray(value.actionFn(files)).map((act) =>
-              toPromise(act).then(toArray)
-            )) ||
-            []
-        ).then((v) => v.flatMap((v) => v));
-        if (this._isDebug) console.log(`dynamic action: [${action.join(",")}]`);
+        const daction = await this._resolveAction(value.actionFn?.(files));
+        if (this._isDebug)
+          console.log(`dynamic action: [${daction.join(",")}]`);
 
-        results.push(...actions);
-        results.push(...action);
+        results.push(...saction);
+        results.push(...daction);
       }
     }
 
@@ -283,5 +269,20 @@ export class Config<K extends string> {
     return (
       this._settings.has("debug") && this._settings.get("debug") === "true"
     );
+  }
+
+  private async _resolveAction(
+    actions: CommandType | undefined
+  ): Promise<Array<string>> {
+    if (this._isDebug) console.log(`resolve action: ${actions}`);
+    if (!actions) return [];
+
+    // Resolve to list of promise of list of string
+    const promises = toArray(actions).map((action) =>
+      toPromise(action).then(toArray)
+    );
+
+    // Resolve to promise of list of string
+    return Promise.all(promises).then((v) => v.flatMap((v) => v));
   }
 }
