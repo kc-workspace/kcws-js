@@ -10,4 +10,4 @@ console.log("hello world");
  */
 export const hello = (name: string) => {
   return `hello ${name}`;
-}
+};
