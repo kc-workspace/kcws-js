@@ -29,7 +29,9 @@ describe("Config", () => {
       .append("", { actions: ["echo 'hello empty'"] })
       .build();
 
-    const result1 = await config.getCommands((regex) => ["test1", "test2"]);
+    const result1 = await config.getCommands((regex) =>
+      regex.length === 1 ? ["found"] : []
+    );
     expect(result1).toEqual(["echo 'hello world'", "echo 'hello next'"]);
 
     const result2 = await config.getCommands((re) =>
