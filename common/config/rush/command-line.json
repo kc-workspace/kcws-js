@@ -176,6 +176,14 @@
       "shellCommand": "lint-staged"
     },
     {
+      "name": "hooks:docs",
+      "commandKind": "global",
+      "summary": "Used by the pre-commit Git hook. This command invokes documenter to create markdown document to docs directory.",
+      "safeForSimultaneousRushProcesses": false,
+      "autoinstallerName": "rush-api-documenter",
+      "shellCommand": "sh common/scripts/generate-docs.sh"
+    },
+    {
       "name": "test",
       "commandKind": "bulk",
       "summary": "Runs unit tests for all projects",
