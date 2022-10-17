@@ -30,7 +30,9 @@
   "pnpmVersion": "7.13.3",
   "pnpmOptions": {
     // https://github.com/microsoft/rushstack/issues/2542#issuecomment-794990772
-    "useWorkspaces": true
+    "useWorkspaces": true,
+    // https://rushjs.io/pages/maintainer/recommended_settings/#strictpeerdependencies
+    "strictPeerDependencies": true
   },
 
   /**
@@ -70,7 +72,7 @@
    * version. In those cases, you will need to add an entry to the "allowedAlternativeVersions"
    * section of the common-versions.json.
    */
-  // "ensureConsistentVersions": true,
+  "ensureConsistentVersions": true,
 
   /**
    * Large monorepos can become intimidating for newcomers if project folder paths don't follow
