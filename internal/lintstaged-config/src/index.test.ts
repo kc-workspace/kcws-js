@@ -1,16 +1,11 @@
-import * as index from ".";
+import exection, { Config } from ".";
 
 describe("index", () => {
-  it.each([["regex"], ["eslint"], ["prettier"]])(
-    "expose $1 function",
-    (fn: string) => {
-      const mapper = index as Record<string, unknown>;
-      expect(mapper[fn]).not.toBeFalsy();
-    }
-  );
+  it("execution", () => {
+    expect(exection).toBeTruthy();
+  });
 
-  it.each([["Action"], ["Unknown"]])("NOT expose $1 function", (fn: string) => {
-    const mapper = index as Record<string, unknown>;
-    expect(mapper[fn]).toBeFalsy();
+  it("export Config class", () => {
+    expect(Config).toBeTruthy();
   });
 });

@@ -16,18 +16,22 @@
     "email": "developer@kamontat.net",
     "url": "https://github.com/kamontat"
   },
-  "keywords": ["linted-staged"],
+  "keywords": [
+    "linted-staged"
+  ],
   "scripts": {
     "build": "heft build",
     "test": "heft test"
   },
   "dependencies": {
+    "micromatch": "4.0.5"
   },
   "devDependencies": {
     "@kcws/node-rig": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.48.0",
     "@types/heft-jest": "1.0.3",
-    "@types/node": "18.8.3"
+    "@types/node": "18.8.3",
+    "@types/micromatch": "4.0.2"
   }
 }
