@@ -4,7 +4,7 @@
 
 ```ts
 
-// @public (undocumented)
+// @alpha
 export const hello: (name: string) => string;
 
 // (No @packageDocumentation comment for this package)
