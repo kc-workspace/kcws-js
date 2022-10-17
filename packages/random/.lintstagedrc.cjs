@@ -1,6 +1,3 @@
-const { regex, prettier, eslint } = require("@kcws/lintstaged-config");
+const { default: defineConfig, Config } = require("@kcws/lintstaged-config");
 
-module.exports = {
-  [regex("json")]: prettier({ fix: true }),
-  [regex("js", "jsx", "ts", "tsx")]: eslint({ fix: true, maxWarnings: 0 }),
-};
+module.exports = defineConfig(Config.builder().default().build());
