@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "add api-extractor config to enable api-document markdown",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}
