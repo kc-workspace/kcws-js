@@ -4,9 +4,3 @@
 
 ## random package
 
-## Variables
-
-|  Variable | Description |
-|  --- | --- |
-|  [hello](./random.hello.md) |  |
-
