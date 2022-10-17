@@ -215,6 +215,15 @@ export class Config<K extends string> {
   }
 
   /**
+   * is debug mode enabled?
+   */
+  private get _isDebug(): boolean {
+    return (
+      this._settings.has("debug") && this._settings.get("debug") === "true"
+    );
+  }
+
+  /**
    * create config builder with empty value
    *
    * @returns config builder
@@ -263,12 +272,6 @@ export class Config<K extends string> {
     }
 
     return results;
-  }
-
-  private get _isDebug(): boolean {
-    return (
-      this._settings.has("debug") && this._settings.get("debug") === "true"
-    );
   }
 
   private async _resolveAction(
