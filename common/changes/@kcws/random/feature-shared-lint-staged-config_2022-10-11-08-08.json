@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "using shared lint-staged config instead of custom one",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/random"
+}

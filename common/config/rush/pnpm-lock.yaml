@@ -11,6 +11,25 @@ importers:
     dependencies:
       '@rushstack/eslint-config': 3.1.0
 
+  ../../internal/lintstaged-config:
+    specifiers:
+      '@kcws/eslint-config': workspace:*
+      '@kcws/node-rig': workspace:*
+      '@rushstack/heft': 0.48.0
+      '@types/heft-jest': 1.0.3
+      '@types/micromatch': 4.0.2
+      '@types/node': 18.8.3
+      micromatch: 4.0.5
+    dependencies:
+      micromatch: 4.0.5
+    devDependencies:
+      '@kcws/eslint-config': link:../eslint-config
+      '@kcws/node-rig': link:../node-rig
+      '@rushstack/heft': 0.48.0
+      '@types/heft-jest': 1.0.3
+      '@types/micromatch': 4.0.2
+      '@types/node': 18.8.3
+
   ../../internal/node-rig:
     specifiers:
       '@microsoft/api-extractor': 7.32.0
@@ -35,12 +54,14 @@ importers:
   ../../packages/random:
     specifiers:
       '@kcws/eslint-config': workspace:*
+      '@kcws/lintstaged-config': workspace:*
       '@kcws/node-rig': workspace:*
       '@rushstack/heft': 0.48.0
       '@types/heft-jest': 1.0.3
       '@types/node': 18.8.3
     devDependencies:
       '@kcws/eslint-config': link:../../internal/eslint-config
+      '@kcws/lintstaged-config': link:../../internal/lintstaged-config
       '@kcws/node-rig': link:../../internal/node-rig
       '@rushstack/heft': 0.48.0
       '@types/heft-jest': 1.0.3
@@ -1054,6 +1075,10 @@ packages:
       '@babel/types': 7.19.4
     dev: false
 
+  /@types/braces/3.0.1:
+    resolution: {integrity: sha512-+euflG6ygo4bn0JHtn4pYqcXwRtLvElQ7/nnjDu7iYG56H0+OhCd7d6Ug0IE3WcFpZozBKW2+80FUbv5QGk5AQ==}
+    dev: true
+
   /@types/graceful-fs/4.1.5:
     resolution: {integrity: sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw==}
     dependencies:
@@ -1089,6 +1114,12 @@ packages:
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: false
+
+  /@types/micromatch/4.0.2:
+    resolution: {integrity: sha512-oqXqVb0ci19GtH0vOA/U2TmHTcRY9kuZl4mqUxe0QmJAlIW13kzhuK5pi1i9+ngav8FjpSb9FVS/GE00GLX1VA==}
+    dependencies:
+      '@types/braces': 3.0.1
+    dev: true
 
   /@types/node/12.20.24:
     resolution: {integrity: sha512-yxDeaQIAJlMav7fH5AQqPH1u8YIuhYJXYBzxaQ4PifsU0GDO38MSdmEDeRlIxrKbC6NbEaaEHDanWb+y30U8SQ==}

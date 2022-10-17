@@ -1,4 +1,6 @@
 {
   "extends": "@rushstack/heft-jest-plugin/includes/jest-shared.config.json",
-  "testEnvironment": "node"
+  "testEnvironment": "node",
+  // Enabled code coverage by default
+  "collectCoverage": true
 }

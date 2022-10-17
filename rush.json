@@ -346,6 +346,13 @@
       "reviewCategory": "prototypes",
       "tags": ["env.node"],
       "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "projectFolder": "internal/lintstaged-config",
+      "reviewCategory": "prototypes",
+      "tags": ["env.all"],
+      "shouldPublish": true
     }
   ]
 }
