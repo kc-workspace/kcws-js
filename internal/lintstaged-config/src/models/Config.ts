@@ -59,9 +59,11 @@ export type DefaultKey = "jsts" | "json";
  */
 class Builder<K extends string> {
   private _result: Map<string, IConfigValue>;
+  private _settings: Map<string, string>;
 
   public constructor() {
     this._result = new Map();
+    this._settings = new Map();
   }
 
   public default(): Builder<DefaultKey> {
@@ -78,6 +80,11 @@ class Builder<K extends string> {
         regexs: ["*.json"],
         actionFn: (files) => prettier({ fix: true, files }),
       });
+  }
+
+  public debugMode(): Builder<K> {
+    this._settings.set("debug", "true");
+    return this;
   }
 
   /**
@@ -143,7 +150,7 @@ class Builder<K extends string> {
   public build(): Config<K> {
     // I disable eslint here because Config is not used yet
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
-    return new Config(this._result as Map<K, IConfigValue>);
+    return new Config(this._result as Map<K, IConfigValue>, this._settings);
   }
 
   private _fillValue(value: Partial<IConfigValue>): IConfigValue {
@@ -188,9 +195,14 @@ export type ConfigCondition = (regex: Array<string>) => Array<string>;
  */
 export class Config<K extends string> {
   private _config: Map<K, IConfigValue>;
+  private _settings: Map<string, string>;
 
-  public constructor(config: Map<K, IConfigValue>) {
+  public constructor(
+    config: Map<K, IConfigValue>,
+    settings: Map<string, string>
+  ) {
     this._config = config;
+    this._settings = settings;
   }
 
   /**
@@ -232,15 +244,22 @@ export class Config<K extends string> {
    * @beta
    */
   public async getCommands(cond: ConfigCondition): Promise<Array<string>> {
-    for await (const [_key, value] of this._config.entries()) {
+    for await (const [key, value] of this._config.entries()) {
+      if (this._isDebug) console.log(`verifying ${key}...`);
+
       const files = cond(value.regexs);
       if (files.length > 0) {
+        if (this._isDebug)
+          console.log(`found matched files [${files.join(",")}]`);
+
         // Resolve static actions
         const actions = await Promise.all(
           toArray(value.actions).map((action) =>
             toPromise(action).then(toArray)
           )
         ).then((v) => v.flatMap((v) => v));
+
+        if (this._isDebug) console.log(`static action: [${actions.join(",")}]`);
 
         // Resolve dynamic actions
         const action = await Promise.all(
@@ -250,11 +269,18 @@ export class Config<K extends string> {
             )) ||
             []
         ).then((v) => v.flatMap((v) => v));
+        if (this._isDebug) console.log(`dynamic action: [${action.join(",")}]`);
 
         return actions.concat(...action);
       }
     }
 
     return [];
+  }
+
+  private get _isDebug(): boolean {
+    return (
+      this._settings.has("debug") && this._settings.get("debug") === "true"
+    );
   }
 }
