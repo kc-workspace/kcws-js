@@ -3,7 +3,7 @@ console.log("hello world");
 /**
  * say hello
  *
- * @param name input name
+ * @param name - input name
  * @returns hello message
  *
  * @alpha
