@@ -153,7 +153,7 @@ class Builder<K extends string> {
     return {
       regexs: value.regexs ?? [],
       actions: value.actions ?? [],
-      actionFn: () => [],
+      actionFn: value.actionFn ?? (() => []),
     };
   }
 

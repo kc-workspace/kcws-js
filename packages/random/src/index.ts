@@ -8,6 +8,6 @@ console.log("hello world");
  *
  * @alpha
  */
-export const hello = (name: string) => {
+export const hello = (name: string): string => {
   return `hello ${name}`;
-}
+};
