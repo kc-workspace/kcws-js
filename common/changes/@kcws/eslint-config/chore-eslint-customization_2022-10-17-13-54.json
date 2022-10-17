@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "customize rules for personal interest",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}
