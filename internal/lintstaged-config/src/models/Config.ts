@@ -70,14 +70,14 @@ class Builder<K extends string> {
     const builder = new Builder<DefaultKey>();
     return builder
       .set("jsts", {
-        regexs: ["*.js", "*.jsx", "*.ts", "*.tsx"],
+        regexs: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
         actionFn: (files) => [
           eslint({ files, fix: true, maxWarnings: 0 }),
           prettier({ fix: true, files }),
         ],
       })
       .set("json", {
-        regexs: ["*.json"],
+        regexs: ["**/*.json"],
         actionFn: (files) => prettier({ fix: true, files }),
       });
   }
@@ -233,10 +233,9 @@ export class Config<K extends string> {
    * select series of command needed to execute on input condition
    *
    * @remarks
-   * if condition return 1 values or more,
-   * we will select that config value, calculate actions and actionFn.
-   * Then we will return all commands list merge together.
-   *
+   * we will select all static and dynamic actions from
+   * any config group that regex return non-empty array.
+   * and execute action to get command and merge them together.
    *
    * @param cond - condition to select specify config values
    * @returns commands to execute on terminal
@@ -244,6 +243,7 @@ export class Config<K extends string> {
    * @beta
    */
   public async getCommands(cond: ConfigCondition): Promise<Array<string>> {
+    const results: Array<string> = [];
     for await (const [key, value] of this._config.entries()) {
       if (this._isDebug) console.log(`verifying ${key}...`);
 
@@ -271,11 +271,12 @@ export class Config<K extends string> {
         ).then((v) => v.flatMap((v) => v));
         if (this._isDebug) console.log(`dynamic action: [${action.join(",")}]`);
 
-        return actions.concat(...action);
+        results.push(...actions);
+        results.push(...action);
       }
     }
 
-    return [];
+    return results;
   }
 
   private get _isDebug(): boolean {
