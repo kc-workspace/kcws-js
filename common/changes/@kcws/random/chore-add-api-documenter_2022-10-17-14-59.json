@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "add mock document",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/random"
+}
