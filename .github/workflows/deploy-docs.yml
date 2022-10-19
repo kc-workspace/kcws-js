@@ -43,6 +43,10 @@ jobs:
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
+      - name: Installing dependencies
+        run: node common/scripts/install-run-rush.js install
+      - name: Build documentation
+        run: node common/scripts/install-run-rush.js rebuild
       - name: Build documentation
         run: node common/scripts/install-run-rush.js docs
       - name: Build Jekyll output
