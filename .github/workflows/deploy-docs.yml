@@ -44,7 +44,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-
       - name: Build documentation
-        run: node common/scripts/install-run-rush.js hooks:docs
+        run: node common/scripts/install-run-rush.js docs
       - name: Build Jekyll output
         uses: actions/jekyll-build-pages@v1
         with:
