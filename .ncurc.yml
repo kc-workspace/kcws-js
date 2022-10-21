@@ -1,0 +1,15 @@
+upgrade: false
+interactive: false
+verbose: false
+# Include only package names matching the given string, wildcard, glob,
+# comma-or-space-delimited list, or /regex/
+filter:
+  - "*"
+
+# Exclude packages matching the given string, wildcard, glob,
+# comma-or-space-delimited list, or /regex/
+reject:
+  - "@types/*"
+
+doctorInstall: rush install
+doctorTest: rush test
