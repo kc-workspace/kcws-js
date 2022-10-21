@@ -36,13 +36,8 @@ ensure **nodejs** and **pnpm** version by rush.
 
 ### Check & Update dependencies
 
-`rush deps [--upgrade] [--doctor]`: Check dependencies need to upgrade
-or pass `--upgrade` to update package.json with latest version.
-
-Because rush custom command-line isn't supported interactive mode
-therefore, you could run **interactive** mode with 
-`sh common/autoinstallers/rush-dependencies-updater/index.sh --interactive` instead
-
+`rush deps [--upgrade] [--interactive]`: Check dependencies need to upgrade
+or add `--upgrade` to update package.json with latest version or select via prompt using `--interactive` option.
 
 [everyday-commands-rush-update]: https://rushjs.io/pages/developer/everyday_commands/#rush-update
 [everyday-commands-rush-change]: https://rushjs.io/pages/developer/everyday_commands/#rush-change

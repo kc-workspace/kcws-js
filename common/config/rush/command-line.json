@@ -53,8 +53,9 @@
     },
     {
       "parameterKind": "flag",
-      "longName": "--doctor",
-      "description": "Iteratively installs upgrades and runs tests to identify breaking upgrades.",
+      "longName": "--interactive",
+      "shortName": "-i",
+      "description": "Interactively select which packages to upgrade.",
       "associatedCommands": ["deps"]
     }
   ]

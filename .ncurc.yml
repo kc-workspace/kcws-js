@@ -1,6 +1,9 @@
 upgrade: false
 interactive: false
 verbose: false
+# Remove version ranges from the final package version.
+removeRange: true
+format: group
 # Include only package names matching the given string, wildcard, glob,
 # comma-or-space-delimited list, or /regex/
 filter:
