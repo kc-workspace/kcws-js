@@ -178,10 +178,18 @@
     {
       "name": "docs",
       "commandKind": "global",
-      "summary": "Create document markdown for all projects.",
+      "summary": "Create document markdown for all projects. This will automatically run on CI by default",
       "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-api-documenter",
-      "shellCommand": "sh common/scripts/generate-docs.sh"
+      "shellCommand": "sh common/autoinstallers/rush-api-documenter/index.sh"
+    },
+    {
+      "name": "deps",
+      "commandKind": "global",
+      "summary": "Check dependencies version of each packages (including autoinstallers)",
+      "safeForSimultaneousRushProcesses": false,
+      "autoinstallerName": "rush-dependencies-updater",
+      "shellCommand": "sh common/autoinstallers/rush-dependencies-updater/index.sh"
     },
     {
       "name": "test",
