@@ -22,10 +22,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: .github/actions/setup-rush
+      - uses: ./.github/actions/setup-rush
         with:
           install: true
-      - uses: .github/actions/run-rush
+      - uses: ./.github/actions/run-rush
         with:
           command: change
           args: --verify
@@ -38,14 +38,14 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: .github/actions/setup-rush
+      - uses: ./.github/actions/setup-rush
         with:
           install: true
-      - uses: .github/actions/run-rush
+      - uses: ./.github/actions/run-rush
         with:
           command: build
           args: --verbose
-      - uses: .github/actions/run-rush
+      - uses: ./.github/actions/run-rush
         with:
           command: test
           args: --verbose
