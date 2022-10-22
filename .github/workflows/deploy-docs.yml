@@ -23,24 +23,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout source code
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: /.github/actions/setup-rush
+      - name: Setup rushjs
+        uses: ./.github/actions/setup-rush
         with:
           install: true
-      - uses: /.github/actions/run-rush
+      - name: Building packages
+        uses: ./.github/actions/run-rush
         with:
           command: rebuild
-      - uses: /.github/actions/run-rush
+      - name: Building documentation
+        uses: ./.github/actions/run-rush
         with:
           command: docs
-      - name: Build Jekyll output
+      - name: Building Jekyll output
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./docs
           destination: ./_site
-      - name: Upload artifact
+      - name: Upload built document
         uses: actions/upload-pages-artifact@v1
 
   deploy:

@@ -7,10 +7,6 @@ defaults:
   run:
     shell: bash
 
-env:
-  NODE_VERSION: 16
-  PNPM_STORE_PATH: common/temp/pnpm-store/v3
-
 concurrency:
   group: "main"
   cancel-in-progress: true
@@ -19,13 +15,16 @@ jobs:
   changelog:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout source code
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: /.github/actions/setup-rush
+      - name: Setup rushjs
+        uses: ./.github/actions/setup-rush
         with:
           install: true
-      - uses: /.github/actions/run-rush
+      - name: Checking for missing change logs
+        uses: ./.github/actions/run-rush
         with:
           command: change
           args: --verify
@@ -35,17 +34,21 @@ jobs:
     needs:
       - changelog
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout source code
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: /.github/actions/setup-rush
+      - name: Setup rushjs
+        uses: ./.github/actions/setup-rush
         with:
           install: true
-      - uses: /.github/actions/run-rush
+      - name: Building packages
+        uses: ./.github/actions/run-rush
         with:
           command: build
           args: --verbose
-      - uses: /.github/actions/run-rush
+      - name: Testing packages
+        uses: ./.github/actions/run-rush
         with:
           command: test
           args: --verbose
