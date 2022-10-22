@@ -14,6 +14,6 @@ runs:
     - name: Run rush ${{ inputs.command }}
       run: $GITHUB_ACTION_PATH/run-rush.sh
       env:
-        COMMAND: ${{ input.command }}
-        ARGS: ${{ input.args }}
+        COMMAND: ${{ inputs.command }}
+        ARGS: ${{ inputs.args }}
       shell: bash
