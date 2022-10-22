@@ -30,6 +30,6 @@ runs:
         restore-keys: |
           ${{ runner.os }}-pnpm-
     - name: Installing dependencies
-      if: inputs.install == "true"
+      if: inputs.install == 'true'
       run: node common/scripts/install-run-rush.js install
       shell: bash
