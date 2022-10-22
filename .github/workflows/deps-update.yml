@@ -17,17 +17,21 @@ jobs:
   updating:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout source code
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: /.github/actions/setup-rush
+      - name: Setup rushjs
+        uses: ./.github/actions/setup-rush
         with:
           install: true
-      - uses: /.github/actions/run-rush
+      - name: Update dependencies
+        uses: ./.github/actions/run-rush
         with:
           command: deps
           args: --upgrade
-      - uses: /.github/actions/run-rush
+      - name: Upgrade dependencies
+        uses: ./.github/actions/run-rush
         with:
           command: update
-          args: --full
+          args: --full --purge

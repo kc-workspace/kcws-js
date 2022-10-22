@@ -336,6 +336,13 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/color",
+      "projectFolder": "packages/color",
+      "reviewCategory": "prototypes",
+      "tags": ["env.all"],
+      "shouldPublish": true
+    },
+    {
       "packageName": "@kcws/eslint-config",
       "projectFolder": "internal/eslint-config",
       "reviewCategory": "prototypes",

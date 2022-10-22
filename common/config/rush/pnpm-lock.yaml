@@ -51,6 +51,22 @@ importers:
     devDependencies:
       '@rushstack/heft': 0.48.0
 
+  ../../packages/color:
+    specifiers:
+      '@kcws/eslint-config': workspace:*
+      '@kcws/lintstaged-config': workspace:*
+      '@kcws/node-rig': workspace:*
+      '@rushstack/heft': 0.48.0
+      '@types/heft-jest': 1.0.3
+      '@types/node': 18.8.3
+    devDependencies:
+      '@kcws/eslint-config': link:../../internal/eslint-config
+      '@kcws/lintstaged-config': link:../../internal/lintstaged-config
+      '@kcws/node-rig': link:../../internal/node-rig
+      '@rushstack/heft': 0.48.0
+      '@types/heft-jest': 1.0.3
+      '@types/node': 18.8.3
+
   ../../packages/random:
     specifiers:
       '@kcws/eslint-config': workspace:*
