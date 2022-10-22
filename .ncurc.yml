@@ -3,7 +3,16 @@ interactive: false
 verbose: false
 # Remove version ranges from the final package version.
 removeRange: true
+
+# Modify the output formatting or show additional
+# information. Specify one or more comma-delimited
+# choices: group, ownerChanged, repo.
 format: group
+
+# Determines the version to upgrade to.
+# choices: latest, newest, greatest, minor, patch
+target: minor
+
 # Include only package names matching the given string, wildcard, glob,
 # comma-or-space-delimited list, or /regex/
 filter:
@@ -13,6 +22,3 @@ filter:
 # comma-or-space-delimited list, or /regex/
 reject:
   - "@types/*"
-
-doctorInstall: rush install
-doctorTest: rush test
