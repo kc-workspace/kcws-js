@@ -5,6 +5,10 @@
       "path": "packages/random"
     },
     {
+      "name": "@kcws/color",
+      "path": "packages/color"
+    },
+    {
       "name": "@kcws/node-rig",
       "path": "internal/node-rig"
     },
