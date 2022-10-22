@@ -1,0 +1,33 @@
+name: Update dependencies
+
+on:
+  schedule:
+    - cron: '0 3 * * 0' # https://crontab.guru/#0_3_*_*_0
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: "deps-update"
+  cancel-in-progress: true
+
+jobs:
+  updating:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: /.github/actions/setup-rush
+        with:
+          install: true
+      - uses: /.github/actions/run-rush
+        with:
+          command: deps
+          args: --upgrade
+      - uses: /.github/actions/run-rush
+        with:
+          command: update
+          args: --full

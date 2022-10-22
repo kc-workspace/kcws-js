@@ -32,7 +32,7 @@ ensure **nodejs** and **pnpm** version by rush.
 
 > **Changesfile** is a change log entry which later will use to create CHANGELOG file and bump version ([more][everyday-commands-rush-change])
 
-`rush change`: This will prompt to add change log entry and version type to bump.
+`rush change [--commit]`: This will prompt to add change log entry and version type to bump. Add `--commit` to `git commit` as well.
 
 ### Check & Update dependencies
 

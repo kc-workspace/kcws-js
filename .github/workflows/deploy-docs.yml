@@ -26,29 +26,15 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
+      - uses: /.github/actions/setup-rush
         with:
-          node-version: ${{ env.NODE_VERSION }}
-      - name: Caching rush
-        uses: actions/cache@v3
+          install: true
+      - uses: /.github/actions/run-rush
         with:
-          path: common/temp/install-run
-          key: ${{ runner.os }}-rush-${{ hashFiles('rush.json') }}
-          restore-keys: |
-            ${{ runner.os }}-rush-
-      - name: Caching pnpm store
-        uses: actions/cache@v3
+          command: rebuild
+      - uses: /.github/actions/run-rush
         with:
-          path: common/temp/pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
-      - name: Installing dependencies
-        run: node common/scripts/install-run-rush.js install
-      - name: Build documentation
-        run: node common/scripts/install-run-rush.js rebuild
-      - name: Build documentation
-        run: node common/scripts/install-run-rush.js docs
+          command: docs
       - name: Build Jekyll output
         uses: actions/jekyll-build-pages@v1
         with:
