@@ -14,10 +14,10 @@ fi
 
 if test -n "$__shell"; then
   echo "Use install-run-rush.sh"
-  "$__shell" "$__cmd" "$cmd" "${args[@]}"
+  "$__shell" "$__cmd" "$cmd" "${args[@]}" || exit 1
 else
   echo "Use rush"
-  "$__cmd" "$cmd" "${args[@]}"
+  "$__cmd" "$cmd" "${args[@]}" || exit 1
 fi
 
 unset cmd args __shell __cmd
