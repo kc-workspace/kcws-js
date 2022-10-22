@@ -1,0 +1,35 @@
+name: Setup rush
+description: Setup rush using install-run-rush.js script
+author: Kamontat Chantrachirathumrong
+inputs:
+  node-version:
+    description: Install nodejs version
+    default: lts
+  install:
+    description: Install dependencies after setup rush repository
+    default: "true"
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node-version }}
+    - name: Caching rush
+      uses: actions/cache@v3
+      with:
+        path: common/temp/install-run
+        key: ${{ runner.os }}-rush-${{ hashFiles('rush.json') }}
+        restore-keys: |
+          ${{ runner.os }}-rush-
+    - name: Caching pnpm store
+      uses: actions/cache@v3
+      with:
+        path: common/temp/pnpm-store
+        key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-
+    - name: Installing dependencies
+      if: inputs.install == "true"
+      run: node common/scripts/install-run-rush.js install
+      shell: bash

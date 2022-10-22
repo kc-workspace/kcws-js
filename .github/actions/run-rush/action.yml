@@ -1,0 +1,19 @@
+name: Run rush
+description: Directly use rush command if exist; otherwise, use rush helper script
+author: Kamontat Chantrachirathumrong
+inputs:
+  command:
+    description: command name
+    required: true
+  args:
+    description: command options / arguments
+
+runs:
+  using: composite
+  steps:
+    - name: Run rush ${{ inputs.command }}
+      run: $GITHUB_ACTION_PATH/run-rush.sh
+      env:
+        COMMAND: ${{ input.command }}
+        ARGS: ${{ input.args }}
+      shell: bash
