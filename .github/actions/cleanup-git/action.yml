@@ -1,0 +1,23 @@
+name: Cleanup git
+description: cleanup git and github cli configure
+author: Kamontat Chantrachirathumrong
+inputs:
+  gpg-fingerprint:
+    description: fingerprint to remove
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Cleanup git identity
+      run: $GITHUB_ACTION_PATH/cleanup-user.sh
+      shell: bash
+    - name: Cleanup gpg
+      if: inputs.gpg-fingerprint != ''
+      run: $GITHUB_ACTION_PATH/cleanup-gpg.sh
+      env:
+        GPG_FINGERPRINT: ${{ inputs.gpg-fingerprint }}
+      shell: bash
+    - name: Show information
+      run: $GITHUB_ACTION_PATH/show-information.sh
+      shell: bash
