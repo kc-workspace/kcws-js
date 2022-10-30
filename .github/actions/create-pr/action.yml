@@ -40,6 +40,10 @@ runs:
       if: inputs.commit == 'true'
       run: git commit -am "${{ inputs.commit-message }}"
       shell: bash
+    - name: Pushing changes
+      if: inputs.commit == 'true'
+      run: git push
+      shell: bash
     - name: Checking github authentication
       run: gh auth status
       shell: bash

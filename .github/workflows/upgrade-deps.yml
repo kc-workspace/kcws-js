@@ -62,6 +62,5 @@ jobs:
           commit-message: "chore(deps): upgrade all dependencies"
       - name: Cleanup git
         uses: ./.github/actions/cleanup-git
-        # TODO: migrate to use with: instead
-        env:
-          GPG_FINGERPRINT: ${{ secrets.GPG_FINGERPRINT }}
+        with:
+          gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}
