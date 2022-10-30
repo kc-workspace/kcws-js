@@ -13,6 +13,9 @@ concurrency:
   group: "upgrade-deps"
   cancel-in-progress: true
 
+permissions:
+  pull-requests: write
+
 jobs:
   upgrading:
     runs-on: ubuntu-latest
