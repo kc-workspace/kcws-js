@@ -9,8 +9,8 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Cleanup git identity
-      run: $GITHUB_ACTION_PATH/cleanup-user.sh
+    - name: Cleanup git config
+      run: $GITHUB_ACTION_PATH/cleanup-git.sh
       shell: bash
     - name: Cleanup gpg
       if: inputs.gpg-fingerprint != ''

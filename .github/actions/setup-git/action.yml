@@ -8,8 +8,8 @@ runs:
     - name: Show information
       run: $GITHUB_ACTION_PATH/show-information.sh
       shell: bash
-    - name: Setup git identity
-      run: $GITHUB_ACTION_PATH/setup-user.sh
+    - name: Setup git config
+      run: $GITHUB_ACTION_PATH/setup-git.sh
       shell: bash
     - name: Setup gpg
       run: $GITHUB_ACTION_PATH/setup-gpg.sh
