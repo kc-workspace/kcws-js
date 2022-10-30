@@ -4,7 +4,7 @@
   "packages": [
     {
       "name": "@kcws/node-rig",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals", "libraries", "prototypes" ]
     }
   ]
 }

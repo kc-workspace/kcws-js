@@ -134,9 +134,8 @@
      * or you could just have a single category called "default".
      */
     "reviewCategories": [
-      "apps", // application that ship to production
-      "libs", // library that ship to production
-      "internal", // non-shipping projects that are part of the developer toolchain
+      "libraries", // library that ship to production
+      "internals", // non-shipping projects that are part of the developer toolchain
       "prototypes" // experiments that should mostly be ignored by the review process
     ],
 
@@ -331,7 +330,7 @@
     {
       "packageName": "@kcws/random",
       "projectFolder": "packages/random",
-      "reviewCategory": "prototypes",
+      "reviewCategory": "libraries",
       "tags": ["env.all"],
       "shouldPublish": true
     },
@@ -340,26 +339,26 @@
       "projectFolder": "packages/color",
       "reviewCategory": "prototypes",
       "tags": ["env.all"],
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@kcws/eslint-config",
       "projectFolder": "internal/eslint-config",
-      "reviewCategory": "prototypes",
+      "reviewCategory": "internals",
       "tags": ["env.all"],
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/node-rig",
       "projectFolder": "internal/node-rig",
-      "reviewCategory": "prototypes",
+      "reviewCategory": "internals",
       "tags": ["env.node"],
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/lintstaged-config",
       "projectFolder": "internal/lintstaged-config",
-      "reviewCategory": "prototypes",
+      "reviewCategory": "internals",
       "tags": ["env.all"],
       "shouldPublish": true
     }

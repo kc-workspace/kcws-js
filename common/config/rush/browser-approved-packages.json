@@ -4,51 +4,47 @@
   "packages": [
     {
       "name": "@kcws/eslint-config",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals", "libraries", "prototypes" ]
     },
     {
       "name": "@kcws/lintstaged-config",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "libraries", "prototypes" ]
     },
     {
       "name": "@microsoft/api-extractor",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals" ]
     },
     {
       "name": "@rushstack/eslint-config",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals" ]
     },
     {
       "name": "@rushstack/heft",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals", "libraries", "prototypes" ]
     },
     {
       "name": "@rushstack/heft-jest-plugin",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals" ]
     },
     {
       "name": "@rushstack/heft-node-rig",
-      "allowedCategories": [ "prototypes" ]
-    },
-    {
-      "name": "@rushstack/heift-node-rig",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals" ]
     },
     {
       "name": "eslint",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals" ]
     },
     {
       "name": "jest-environment-node",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals" ]
     },
     {
       "name": "micromatch",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals" ]
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "internals" ]
     }
   ]
 }
