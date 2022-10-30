@@ -16,8 +16,6 @@ concurrency:
 jobs:
   upgrading:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
@@ -42,6 +40,7 @@ jobs:
       - name: Create pull request
         uses: ./.github/actions/create-pr
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           title: Upgrade dependencies
           branch-prefix: deps
           commit: true

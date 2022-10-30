@@ -2,6 +2,9 @@ name: Create pull request
 description: Create pull-request on github
 author: Kamontat Chantrachirathumrong
 inputs:
+  github-token:
+    description: github token from secrets.GITHUB_TOKEN
+    required: true
   title:
     description: Pull request title
     required: true
@@ -36,9 +39,9 @@ runs:
       run: gh auth status
       shell: bash
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
     - name: Creating pull request
       run: gh pr create --title "${{ inputs.title }}" --body ""
       shell: bash
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
