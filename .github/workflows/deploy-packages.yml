@@ -1,0 +1,59 @@
+name: Deploy packages
+
+on:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "deployment"
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup rushjs
+        uses: ./.github/actions/setup-rush
+        with:
+          install: true
+      - name: Checking for missing change logs
+        uses: ./.github/actions/run-rush
+        with:
+          command: change
+          args: --verify
+      - name: Deployment summary
+        uses: ./.github/actions/run-rush
+        with:
+          command: publish
+
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: npm-registry
+      url: https://www.npmjs.com/org/kcws
+    needs:
+      - verify
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup rushjs
+        uses: ./.github/actions/setup-rush
+        with:
+          install: true
+      - name: Deployment summary
+        uses: ./.github/actions/run-rush
+        with:
+          command: publish
+          args: --apply --target-branch main --publish
