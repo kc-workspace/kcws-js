@@ -30,6 +30,7 @@ jobs:
           install: true
       - name: Setup git
         uses: ./.github/actions/setup-git
+        # TODO: migrate to use with: instead
         env:
           GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
           GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
@@ -45,6 +46,11 @@ jobs:
         with:
           command: update
           args: --full --purge
+      - name: Build only needed libraries for git hooks
+        uses: ./.github/actions/run-rush
+        with:
+          command: build
+          args: --to @kcws/lintstaged-config
       - id: create-pr
         name: Create pull request
         uses: ./.github/actions/create-pr
@@ -56,5 +62,6 @@ jobs:
           commit-message: "chore(deps): upgrade all dependencies"
       - name: Cleanup git
         uses: ./.github/actions/cleanup-git
+        # TODO: migrate to use with: instead
         env:
           GPG_FINGERPRINT: ${{ secrets.GPG_FINGERPRINT }}
