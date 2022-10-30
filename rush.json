@@ -16,8 +16,10 @@
    * NOTE: If you upgrade to a new major version of Rush, you should replace the "v5"
    * path segment in the "$schema" field for all your Rush config files.  This will ensure
    * correct error-underlining and tab-completion for editors such as VS Code.
+   *
+   * The latest version can found here: https://github.com/microsoft/rushstack/blob/main/apps/rush/CHANGELOG.md
    */
-  "rushVersion": "5.81.0",
+  "rushVersion": "5.82.1",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -26,8 +28,10 @@
    *
    * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion".  See the Rush documentation
    * for details about these alternatives.
+   *
+   * The latest version can found here: https://github.com/pnpm/pnpm/releases
    */
-  "pnpmVersion": "7.13.3",
+  "pnpmVersion": "7.14.1",
   "pnpmOptions": {
     // https://github.com/microsoft/rushstack/issues/2542#issuecomment-794990772
     "useWorkspaces": true,
