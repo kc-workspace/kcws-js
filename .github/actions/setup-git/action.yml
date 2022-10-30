@@ -5,9 +5,12 @@ author: Kamontat Chantrachirathumrong
 runs:
   using: composite
   steps:
-    - name: Print git version [Info]
-      run: git --version
+    - name: Show information
+      run: $GITHUB_ACTION_PATH/show-information.sh
       shell: bash
-    - name: Print github version [Info]
-      run: gh --version
+    - name: Setup git identity
+      run: $GITHUB_ACTION_PATH/setup-user.sh
+      shell: bash
+    - name: Setup gpg
+      run: $GITHUB_ACTION_PATH/setup-gpg.sh
       shell: bash
