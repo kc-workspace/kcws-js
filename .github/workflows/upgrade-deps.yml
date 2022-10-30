@@ -31,10 +31,10 @@ jobs:
       - name: Setup git
         uses: ./.github/actions/setup-git
         env:
-          GIT_EMAIL: ${{ env.GIT_EMAIL }}
-          GIT_USERNAME: ${{ env.GIT_USERNAME }}
-          GPG_PRIVATE_KEY_BASE64: ${{ env.GPG_PRIVATE_KEY_BASE64 }}
-          GPG_FINGERPRINT: ${{ env.GPG_FINGERPRINT }}
+          GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+          GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+          GPG_PRIVATE_KEY_BASE64: ${{ secrets.GPG_PRIVATE_KEY_BASE64 }}
+          GPG_FINGERPRINT: ${{ secrets.GPG_FINGERPRINT }}
       - name: Update dependencies
         uses: ./.github/actions/run-rush
         with:
@@ -57,4 +57,4 @@ jobs:
       - name: Cleanup git
         uses: ./.github/actions/cleanup-git
         env:
-          GPG_FINGERPRINT: ${{ env.GPG_FINGERPRINT }}
+          GPG_FINGERPRINT: ${{ secrets.GPG_FINGERPRINT }}
