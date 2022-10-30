@@ -1,0 +1,44 @@
+name: Create pull request
+description: Create pull-request on github
+author: Kamontat Chantrachirathumrong
+inputs:
+  title:
+    description: Pull request title
+    required: true
+  branch-prefix:
+    description: branch prefix before slash (e.g. <prefix>/<datetime>)
+    required: true
+  commit:
+    description: run git add and git commit on changes file
+    default: "true"
+  commit-message:
+    description: git commit message
+    default: "chore(gh): auto update file"
+
+runs:
+  using: composite
+  steps:
+    - id: date
+      name: Get current date
+      run: echo "string=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      shell: bash
+    - name: Checking git status
+      run: git status --short --branch --porcelain=v1
+      shell: bash
+    - name: Changing git branch
+      run: git checkout -b "${{ inputs.branch-prefix }}/${{ steps.date.outputs.string }}"
+      shell: bash
+    - name: Commiting changes
+      if: inputs.commit == 'true'
+      run: git commit -am "${{ inputs.commit-message }}"
+      shell: bash
+    - name: Checking github authentication
+      run: gh auth status
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Creating pull request
+      run: gh pr create --title "${{ inputs.title }}" --body ""
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

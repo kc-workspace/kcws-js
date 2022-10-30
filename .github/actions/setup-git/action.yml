@@ -1,0 +1,13 @@
+name: Setup git
+description: setup git and github cli
+author: Kamontat Chantrachirathumrong
+
+runs:
+  using: composite
+  steps:
+    - name: Print git version [Info]
+      run: git --version
+      shell: bash
+    - name: Print github version [Info]
+      run: gh --version
+      shell: bash

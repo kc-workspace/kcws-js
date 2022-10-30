@@ -1,4 +1,4 @@
-name: Upgrade dependencies
+name: Dependencies
 
 on:
   schedule:
@@ -14,8 +14,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  updating:
+  upgrading:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
@@ -25,6 +27,8 @@ jobs:
         uses: ./.github/actions/setup-rush
         with:
           install: true
+      - name: Setup git
+        uses: ./.github/actions/setup-git
       - name: Update dependencies
         uses: ./.github/actions/run-rush
         with:
@@ -35,5 +39,10 @@ jobs:
         with:
           command: update
           args: --full --purge
-      - name: Checking result (via git)
-        run: git status --short --branch --porcelain=v1
+      - name: Create pull request
+        uses: ./.github/actions/create-pr
+        with:
+          title: Upgrade dependencies
+          branch-prefix: deps
+          commit: true
+          commit-message: "chore(deps): upgrade all dependencies"
