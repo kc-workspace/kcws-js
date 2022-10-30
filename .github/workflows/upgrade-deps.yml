@@ -30,6 +30,11 @@ jobs:
           install: true
       - name: Setup git
         uses: ./.github/actions/setup-git
+        env:
+          GIT_EMAIL: ${{ env.GIT_EMAIL }}
+          GIT_USERNAME: ${{ env.GIT_USERNAME }}
+          GPG_PRIVATE_KEY_BASE64: ${{ env.GPG_PRIVATE_KEY_BASE64 }}
+          GPG_FINGERPRINT: ${{ env.GPG_FINGERPRINT }}
       - name: Update dependencies
         uses: ./.github/actions/run-rush
         with:
@@ -51,3 +56,5 @@ jobs:
           commit-message: "chore(deps): upgrade all dependencies"
       - name: Cleanup git
         uses: ./.github/actions/cleanup-git
+        env:
+          GPG_FINGERPRINT: ${{ env.GPG_FINGERPRINT }}
