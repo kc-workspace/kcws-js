@@ -16,6 +16,9 @@ concurrency:
 jobs:
   upgrading:
     runs-on: ubuntu-latest
+    environment:
+      name: github
+      url: ${{ steps.create-pr.outputs.url }}
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
@@ -37,7 +40,8 @@ jobs:
         with:
           command: update
           args: --full --purge
-      - name: Create pull request
+      - id: create-pr
+        name: Create pull request
         uses: ./.github/actions/create-pr
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -45,3 +49,5 @@ jobs:
           branch-prefix: deps
           commit: true
           commit-message: "chore(deps): upgrade all dependencies"
+      - name: Cleanup git
+        uses: ./.github/actions/cleanup-git

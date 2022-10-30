@@ -18,6 +18,11 @@ inputs:
     description: git commit message
     default: "chore(gh): auto update file"
 
+outputs:
+  url:
+    description: Pull request url
+    value: ${{ steps.create-pr.outputs.url }}
+
 runs:
   using: composite
   steps:
@@ -40,8 +45,11 @@ runs:
       shell: bash
       env:
         GITHUB_TOKEN: ${{ inputs.github-token }}
-    - name: Creating pull request
-      run: gh pr create --title "${{ inputs.title }}" --body ""
+    - id: create-pr
+      name: Creating pull request
+      run: $GITHUB_ACTION_PATH/create-pr.sh
       shell: bash
       env:
+        PULL_REQUEST_TITLE: ${{ inputs.title }}
+        PULL_REQUEST_BODY: ""
         GITHUB_TOKEN: ${{ inputs.github-token }}
