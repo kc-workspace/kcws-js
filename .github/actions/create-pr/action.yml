@@ -3,7 +3,7 @@ description: Create pull-request on github
 author: Kamontat Chantrachirathumrong
 inputs:
   github-token:
-    description: github token from secrets.GITHUB_TOKEN
+    description: either default GITHUB_TOKEN or custom personal access token
     required: true
   title:
     description: Pull request title
@@ -26,15 +26,15 @@ outputs:
 runs:
   using: composite
   steps:
-    - id: date
-      name: Get current date
-      run: echo "string=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+    - id: branch
+      name: Building branch name
+      run: echo "name=${{ inputs.branch-prefix }}/$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
       shell: bash
     - name: Checking git status
       run: git status --short --branch --porcelain=v1
       shell: bash
     - name: Changing git branch
-      run: git checkout -b "${{ inputs.branch-prefix }}/${{ steps.date.outputs.string }}"
+      run: git checkout -b "${{ steps.branch.outputs.name }}"
       shell: bash
     - name: Commiting changes
       if: inputs.commit == 'true'
@@ -42,13 +42,8 @@ runs:
       shell: bash
     - name: Pushing changes
       if: inputs.commit == 'true'
-      run: git push
+      run: git push --force
       shell: bash
-    - name: Checking github authentication
-      run: gh auth status
-      shell: bash
-      env:
-        GITHUB_TOKEN: ${{ inputs.github-token }}
     - id: create-pr
       name: Creating pull request
       run: $GITHUB_ACTION_PATH/create-pr.sh

@@ -33,12 +33,12 @@ jobs:
           install: true
       - name: Setup git
         uses: ./.github/actions/setup-git
-        # TODO: migrate to use with: instead
-        env:
-          GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
-          GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
-          GPG_PRIVATE_KEY_BASE64: ${{ secrets.GPG_PRIVATE_KEY_BASE64 }}
-          GPG_FINGERPRINT: ${{ secrets.GPG_FINGERPRINT }}
+        with:
+          git-email: ${{ secrets.GIT_EMAIL }}
+          git-username: ${{ secrets.GIT_USERNAME }}
+          github-token: ${{ secrets.GH_TOKEN }}
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY_BASE64 }}
+          gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}
       - name: Update dependencies
         uses: ./.github/actions/run-rush
         with:
@@ -58,12 +58,13 @@ jobs:
         name: Create pull request
         uses: ./.github/actions/create-pr
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           title: Upgrade dependencies
           branch-prefix: deps
           commit: true
           commit-message: "chore(deps): upgrade all dependencies"
       - name: Cleanup git
+        if: always()
         uses: ./.github/actions/cleanup-git
         with:
           gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}
