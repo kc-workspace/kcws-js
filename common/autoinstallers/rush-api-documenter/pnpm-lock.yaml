@@ -1,30 +1,30 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@microsoft/api-documenter': 7.19.20
+  '@microsoft/api-documenter': 7.19.23
 
 dependencies:
-  '@microsoft/api-documenter': 7.19.20
+  '@microsoft/api-documenter': 7.19.23
 
 packages:
 
-  /@microsoft/api-documenter/7.19.20:
-    resolution: {integrity: sha512-1SX16ootdbymEG+ZkGhksDwHkd6SlNoQxhtFpx6n8HexcLVXn+ssENN0ALd1gvWRRHeKf3x+cCzfiMM5qwIX9A==}
+  /@microsoft/api-documenter/7.19.23:
+    resolution: {integrity: sha512-jLwlR+efMHWWrQXc+sgtatUiKhz1XzuFlOrLllirFTaH45Jh4wTZkts467Vqomck9H/2hsfeX5dyv4AjJlisng==}
     hasBin: true
     dependencies:
-      '@microsoft/api-extractor-model': 7.25.1
-      '@microsoft/tsdoc': 0.14.1
+      '@microsoft/api-extractor-model': 7.25.2
+      '@microsoft/tsdoc': 0.14.2
       '@rushstack/node-core-library': 3.53.2
-      '@rushstack/ts-command-line': 4.12.5
+      '@rushstack/ts-command-line': 4.13.0
       colors: 1.2.5
       js-yaml: 3.13.1
       resolve: 1.17.0
     dev: false
 
-  /@microsoft/api-extractor-model/7.25.1:
-    resolution: {integrity: sha512-AaZ0ohCGLRjWiZviM+0p/DaxgMhbawS183LW2+CSqyEBh6wZks7NjoyhzhibAYapS4omnrmv96+0V/2wBvnIZQ==}
+  /@microsoft/api-extractor-model/7.25.2:
+    resolution: {integrity: sha512-+h1uCrLQXFAKMUdghhdDcnniDB+6UA/lS9ArlB4QZQ34UbLuXNy2oQ6fafFK8cKXU4mUPTF/yGRjv7JKD5L7eg==}
     dependencies:
-      '@microsoft/tsdoc': 0.14.1
+      '@microsoft/tsdoc': 0.14.2
       '@microsoft/tsdoc-config': 0.16.2
       '@rushstack/node-core-library': 3.53.2
     dev: false
@@ -36,10 +36,6 @@ packages:
       ajv: 6.12.6
       jju: 1.4.0
       resolve: 1.19.0
-    dev: false
-
-  /@microsoft/tsdoc/0.14.1:
-    resolution: {integrity: sha512-6Wci+Tp3CgPt/B9B0a3J4s3yMgLNSku6w5TV6mN+61C71UqsRBv2FUibBf3tPGlNxebgPHMEUzKpb1ggE8KCKw==}
     dev: false
 
   /@microsoft/tsdoc/0.14.2:
@@ -59,8 +55,8 @@ packages:
       z-schema: 5.0.4
     dev: false
 
-  /@rushstack/ts-command-line/4.12.5:
-    resolution: {integrity: sha512-PCKrOu4RXKXPHcswHEQ9MYDW7Z7iQ+vbkvPtqHC46zFxD67ZCBXkm9P8QNOtED0cQzXh5nCtFnSOMuaOQf0GaQ==}
+  /@rushstack/ts-command-line/4.13.0:
+    resolution: {integrity: sha512-crLT31kl+qilz0eBRjqqYO06CqwbElc0EvzS6jI69B9Ikt1SkkSzIZ2iDP7zt/rd1ZYipKIS9hf9CQR9swDIKg==}
     dependencies:
       '@types/argparse': 1.0.38
       argparse: 1.0.10
@@ -145,8 +141,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /is-core-module/2.10.0:
-    resolution: {integrity: sha512-Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==}
+  /is-core-module/2.11.0:
+    resolution: {integrity: sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==}
     dependencies:
       has: 1.0.3
     dev: false
@@ -206,7 +202,7 @@ packages:
   /resolve/1.19.0:
     resolution: {integrity: sha512-rArEXAgsBG4UgRGcynxWIWKFvh/XZCcS8UJdHhwy91zwAvCZIbcs+vAbflgBnNjYMs/i/i+/Ux6IZhML1yPvxg==}
     dependencies:
-      is-core-module: 2.10.0
+      is-core-module: 2.11.0
       path-parse: 1.0.7
     dev: false
 
