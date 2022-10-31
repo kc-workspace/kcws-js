@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-cmd="${COMMAND:?}"
+cmd="${1:?}"
+shift 1
 
 __shell=""
 __cmd="rush"
@@ -13,11 +14,11 @@ fi
 if test -n "$__shell"; then
   echo "Use install-run-rush.sh"
   # shellcheck disable=SC2086
-  "$__shell" "$__cmd" "$cmd" $ARGS || exit 1
+  "$__shell" "$__cmd" "$cmd" "$@" || exit 1
 else
   echo "Use rush"
   # shellcheck disable=SC2086
-  "$__cmd" "$cmd" $ARGS || exit 1
+  "$__cmd" "$cmd" "$@" || exit 1
 fi
 
 unset cmd __shell __cmd

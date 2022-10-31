@@ -12,8 +12,5 @@ runs:
   using: composite
   steps:
     - name: Run rush ${{ inputs.command }}
-      run: $GITHUB_ACTION_PATH/run-rush.sh
-      env:
-        COMMAND: ${{ inputs.command }}
-        ARGS: ${{ inputs.args }}
+      run: $GITHUB_ACTION_PATH/run-rush.sh ${{ inputs.command }} ${{ inputs.args }}
       shell: bash
