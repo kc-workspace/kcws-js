@@ -54,6 +54,12 @@ jobs:
         with:
           command: build
           args: --to @kcws/lintstaged-config
+      - name: Generate changesfile
+        uses: ./.github/actions/run-rush
+        with:
+          command: change
+          args: |
+            --commit --email "${{ secrets.GIT_EMAIL }}" --bulk --message "upgrade dependencies [auto]" --bump-type minor
       - id: create-pr
         name: Create pull request
         uses: ./.github/actions/create-pr
