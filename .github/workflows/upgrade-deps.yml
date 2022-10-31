@@ -26,7 +26,7 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
       - name: Setup rushjs
         uses: ./.github/actions/setup-rush
         with:
