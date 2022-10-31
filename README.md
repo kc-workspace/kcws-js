@@ -1,7 +1,45 @@
-# Kamontat's Workspace for Javascript Ecosystem
+<!-- Title section -->
+<h1 align="center">
+  Kamontat's Workspace for Js/Ts Ecosystem
 
-This monorepo will include all libraries, tools, and helpers 
-that will make my life easier.
+  <img src="https://simpleicons.org/icons/javascript.svg" width="24px">
+  <img src="https://simpleicons.org/icons/typescript.svg" width="24px">
+  <img src="https://simpleicons.org/icons/nodedotjs.svg" width="24px">
+</h1>
+
+<!-- Description section -->
+<p align="center">
+  <strong>This monorepo included libraries, tools, and helpers that will make my life easier.</strong>
+</p>
+
+<!-- Static badge setup -->
+<p align="center">
+  <a href="https://github.com/kc-workspace/kcws-js">
+    <img src="https://img.shields.io/github/commit-activity/m/kc-workspace/kcws-js" alt="Commit activity" />
+  </a>
+</p>
+
+<!-- External section -->
+<h3 align="center">
+  <a href="https://js.kcws.kamontat.net">Documentation</a>
+  <span> · </span>
+  <a href="https://sonarcloud.io/project/overview?id=kc-workspace_kcws-js">Sonarcloud</a>
+</h3>
+
+<!-- External section -->
+<!-- <h3 align="center">
+  <a href="docs/cicd.md">CI/CD</a>
+  <span> · </span>
+  <a href="docs/website.md">Website</a>
+  <span> · </span>
+  <a href="docs/quality.md">Quality</a>
+  <span> · </span>
+  <a href="docs/technology.md">Technology</a>
+  <span> · </span>
+  <a href="docs/known_issues.md">Known Issues</a>
+  <span> · </span>
+  <a href="docs/abtesting.md">AB Testing</a>
+</h3> -->
 
 ## Get-start
 
