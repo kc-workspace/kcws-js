@@ -32,7 +32,7 @@
   "devDependencies": {
     "@kcws/node-rig": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.48.0",
+    "@rushstack/heft": "0.48.7",
     "@types/heft-jest": "1.0.3",
     "@types/node": "18.8.3",
     "@types/micromatch": "4.0.2"
