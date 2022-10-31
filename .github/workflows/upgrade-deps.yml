@@ -17,7 +17,9 @@ permissions:
   pull-requests: write
 
 env:
-  CHANGE_MESSAGE: upgrade dependencies [auto]
+  PULL_REQUEST_TITLE: Upgrade all dependencies
+  COMMIT_MESSAGE: "chore(deps): upgrade all dependencies"
+  CHANGE_MESSAGE: upgrade all dependencies [auto]
   CHANGE_TYPE: minor
 
 jobs:
@@ -54,26 +56,26 @@ jobs:
         with:
           command: update
           args: --full --purge
-      - name: Build only needed libraries for git hooks
+      - name: Build libraries for git hooks
         uses: ./.github/actions/run-rush
         with:
           command: build
           args: --to @kcws/lintstaged-config
+      - name: Commit changes
+        run: git commit --all --message "${{ env.COMMIT_MESSAGE }}"
       - name: Generate changesfile
         uses: ./.github/actions/run-rush
         with:
           command: change
           args: |
-            --commit --email "${{ secrets.GIT_EMAIL }}" --bulk --message "${{ env.CHANGE_MESSAGE }}" --bump-type ${{ env.CHANGE_TYPE }}
-      - id: create-pr
-        name: Create pull request
+            --commit --email "${{ secrets.GIT_EMAIL }}" --bulk --message "${{ env.CHANGE_MESSAGE }}" --bump-type "${{ env.CHANGE_TYPE }}"
+      - name: Create pull request
+        id: create-pr
         uses: ./.github/actions/create-pr
         with:
           github-token: ${{ secrets.GH_TOKEN }}
-          title: Upgrade dependencies
+          title: ${{ env.PULL_REQUEST_TITLE }}
           branch-prefix: deps
-          commit: true
-          commit-message: "chore(deps): upgrade all dependencies"
       - name: Cleanup git
         if: always()
         uses: ./.github/actions/cleanup-git

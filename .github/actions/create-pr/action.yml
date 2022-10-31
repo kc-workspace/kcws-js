@@ -11,12 +11,6 @@ inputs:
   branch-prefix:
     description: branch prefix before slash (e.g. <prefix>/<datetime>)
     required: true
-  commit:
-    description: run git add and git commit on changes file
-    default: "true"
-  commit-message:
-    description: git commit message
-    default: "chore(gh): auto update file"
 
 outputs:
   url:
@@ -30,18 +24,13 @@ runs:
       name: Building branch name
       run: echo "name=${{ inputs.branch-prefix }}/$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
       shell: bash
-    - name: Checking git status
-      run: git status --short --branch --porcelain=v1
-      shell: bash
     - name: Changing git branch
       run: git checkout -b "${{ steps.branch.outputs.name }}"
       shell: bash
-    - name: Commiting changes
-      if: inputs.commit == 'true'
-      run: git commit -am "${{ inputs.commit-message }}"
+    - name: Checking git status
+      run: git status --short --branch --porcelain=v1
       shell: bash
     - name: Pushing changes
-      if: inputs.commit == 'true'
       run: git push --force
       shell: bash
     - id: create-pr
