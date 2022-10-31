@@ -10,7 +10,7 @@ defaults:
     shell: bash
 
 concurrency:
-  group: "upgrade-deps"
+  group: upgrade-deps
   cancel-in-progress: true
 
 permissions:
