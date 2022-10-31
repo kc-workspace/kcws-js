@@ -1,0 +1,43 @@
+name: Create pull request
+description: Create pull-request on github
+author: Kamontat Chantrachirathumrong
+inputs:
+  github-token:
+    description: either default GITHUB_TOKEN or custom personal access token
+    required: true
+  title:
+    description: Pull request title
+    required: true
+  branch-prefix:
+    description: branch prefix before slash (e.g. <prefix>/<datetime>)
+    required: true
+
+outputs:
+  url:
+    description: Pull request url
+    value: ${{ steps.create-pr.outputs.url }}
+
+runs:
+  using: composite
+  steps:
+    - id: branch
+      name: Building branch name
+      run: echo "name=${{ inputs.branch-prefix }}/$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      shell: bash
+    - name: Changing git branch
+      run: git checkout -b "${{ steps.branch.outputs.name }}"
+      shell: bash
+    - name: Checking git status
+      run: git status --short --branch --porcelain=v1
+      shell: bash
+    - name: Pushing changes
+      run: git push --force
+      shell: bash
+    - id: create-pr
+      name: Creating pull request
+      run: $GITHUB_ACTION_PATH/create-pr.sh
+      shell: bash
+      env:
+        PULL_REQUEST_TITLE: ${{ inputs.title }}
+        PULL_REQUEST_BODY: ""
+        GITHUB_TOKEN: ${{ inputs.github-token }}

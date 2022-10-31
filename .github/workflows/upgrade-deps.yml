@@ -1,4 +1,4 @@
-name: Upgrade dependencies
+name: Dependencies
 
 on:
   schedule:
@@ -10,21 +10,42 @@ defaults:
     shell: bash
 
 concurrency:
-  group: "upgrade-deps"
+  group: upgrade-deps
   cancel-in-progress: true
 
+permissions:
+  pull-requests: write
+
+env:
+  PULL_REQUEST_TITLE: Upgrade all dependencies
+  COMMIT_MESSAGE: "chore(deps): upgrade all dependencies"
+  CHANGE_MESSAGE: upgrade all dependencies [auto]
+  CHANGE_TYPE: minor
+
 jobs:
-  updating:
+  upgrading:
     runs-on: ubuntu-latest
+    environment:
+      name: github
+      url: ${{ steps.create-pr.outputs.url }}
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
       - name: Setup rushjs
         uses: ./.github/actions/setup-rush
         with:
           install: true
+      - name: Setup git
+        uses: ./.github/actions/setup-git
+        with:
+          git-email: ${{ secrets.GIT_EMAIL }}
+          git-username: ${{ secrets.GIT_USERNAME }}
+          github-token: ${{ secrets.GH_TOKEN }}
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY_BASE64 }}
+          gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}
       - name: Update dependencies
         uses: ./.github/actions/run-rush
         with:
@@ -35,5 +56,28 @@ jobs:
         with:
           command: update
           args: --full --purge
-      - name: Checking result (via git)
-        run: git status --short --branch --porcelain=v1
+      - name: Build libraries for git hooks
+        uses: ./.github/actions/run-rush
+        with:
+          command: build
+          args: --to @kcws/lintstaged-config
+      - name: Commit changes
+        run: git commit --all --message "${{ env.COMMIT_MESSAGE }}"
+      - name: Generate changesfile
+        uses: ./.github/actions/run-rush
+        with:
+          command: change
+          args: |
+            --commit --email "${{ secrets.GIT_EMAIL }}" --bulk --message "${{ env.CHANGE_MESSAGE }}" --bump-type "${{ env.CHANGE_TYPE }}"
+      - name: Create pull request
+        id: create-pr
+        uses: ./.github/actions/create-pr
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          title: ${{ env.PULL_REQUEST_TITLE }}
+          branch-prefix: deps
+      - name: Cleanup git
+        if: always()
+        uses: ./.github/actions/cleanup-git
+        with:
+          gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}

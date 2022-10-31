@@ -1,0 +1,47 @@
+name: Setup git
+description: setup git and github cli
+author: Kamontat Chantrachirathumrong
+
+inputs:
+  git-email:
+    description: user.email config for git cli
+    required: true
+  git-username:
+    description: user.name config for git cli
+    required: true
+  github-token:
+    description: token for connect to github
+    required: true
+  gpg-private-key:
+    description: $ gpg --export-secret-keys --armor "<git-email>" | base64
+    default: ""
+  gpg-fingerprint:
+    description: $ gpg --fingerprint "<git-email>"
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Show information
+      run: $GITHUB_ACTION_PATH/show-information.sh
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+    - name: Setup git
+      run: $GITHUB_ACTION_PATH/setup-git.sh
+      shell: bash
+      env:
+        GIT_EMAIL: ${{ inputs.git-email }}
+        GIT_USERNAME: ${{ inputs.git-username }}
+    - name: Setup gpg
+      if: inputs.gpg-fingerprint != '' && inputs.gpg-private-key != ''
+      run: $GITHUB_ACTION_PATH/setup-gpg.sh
+      shell: bash
+      env:
+        GPG_FINGERPRINT: ${{ inputs.gpg-fingerprint }}
+        GPG_PRIVATE_KEY_BASE64: ${{ inputs.gpg-private-key }}
+    - name: Setup github cli
+      run: $GITHUB_ACTION_PATH/setup-github.sh
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
