@@ -40,3 +40,8 @@ runs:
       env:
         GPG_FINGERPRINT: ${{ inputs.gpg-fingerprint }}
         GPG_PRIVATE_KEY_BASE64: ${{ inputs.gpg-private-key }}
+    - name: Setup github cli
+      run: $GITHUB_ACTION_PATH/setup-github.sh
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
