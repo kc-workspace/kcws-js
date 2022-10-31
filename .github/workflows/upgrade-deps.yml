@@ -16,6 +16,10 @@ concurrency:
 permissions:
   pull-requests: write
 
+env:
+  CHANGE_MESSAGE: upgrade dependencies [auto]
+  CHANGE_TYPE: minor
+
 jobs:
   upgrading:
     runs-on: ubuntu-latest
@@ -59,7 +63,7 @@ jobs:
         with:
           command: change
           args: |
-            --commit --email "${{ secrets.GIT_EMAIL }}" --bulk --message "upgrade dependencies [auto]" --bump-type minor
+            --commit --email "${{ secrets.GIT_EMAIL }}" --bulk --message "${{ env.CHANGE_MESSAGE }}" --bump-type "${{ env.CHANGE_TYPE }}"
       - id: create-pr
         name: Create pull request
         uses: ./.github/actions/create-pr
