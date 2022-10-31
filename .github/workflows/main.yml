@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       - name: Setup rushjs
         uses: ./.github/actions/setup-rush
         with:
@@ -30,6 +28,9 @@ jobs:
           args: --verify
 
   testing:
+    environment:
+      name: testing
+      url: https://sonarcloud.io/project/overview?id=kc-workspace_kcws-js
     runs-on: ubuntu-latest
     needs:
       - changelog
@@ -52,3 +53,8 @@ jobs:
         with:
           command: test
           args: --verbose
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
