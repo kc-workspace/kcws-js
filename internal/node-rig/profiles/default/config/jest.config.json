@@ -1,6 +1,17 @@
 {
   "extends": "@rushstack/heft-jest-plugin/includes/jest-shared.config.json",
   "testEnvironment": "node",
+  "reporters": [
+    "default",
+    [
+      "jest-junit",
+      {
+        "outputDirectory": "temp",
+        "outputName": "junit.xml"
+      }
+    ]
+  ],
   // Enabled code coverage by default
-  "collectCoverage": true
+  "collectCoverage": true,
+  "coverageReporters": ["text", "lcov"]
 }
