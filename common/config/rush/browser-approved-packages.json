@@ -39,6 +39,10 @@
       "allowedCategories": [ "internals" ]
     },
     {
+      "name": "jest-html-reporters",
+      "allowedCategories": [ "internals" ]
+    },
+    {
       "name": "jest-junit",
       "allowedCategories": [ "internals" ]
     },
