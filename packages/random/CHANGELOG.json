@@ -1,0 +1,44 @@
+{
+  "name": "@kcws/random",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@kcws/random_v0.1.0",
+      "date": "Fri, 04 Nov 2022 18:42:44 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "add mock document",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "df45c75f8c88bec5ee83006ef1e76a0289b79d89"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "4a23be17b025c17e498a66a5e6fd826810ae3285"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "using shared lint-staged config instead of custom one",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "9ededd2d6ab91c30bceb2798465d56a04d6a5a15"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.1.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.1.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.1.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

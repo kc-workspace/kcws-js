@@ -1,0 +1,49 @@
+{
+  "name": "@kcws/lintstaged-config",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@kcws/lintstaged-config_v0.1.0",
+      "date": "Fri, 04 Nov 2022 18:42:44 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "add shellcheck and enabled by default",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "8fcfd514a0ab1969f2a7c2de000269296f0f5ed7"
+          },
+          {
+            "comment": "increase coverage and fix bugs",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "8fcfd514a0ab1969f2a7c2de000269296f0f5ed7"
+          },
+          {
+            "comment": "add yamllint",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "f2aeb568ed18461a5823f09c8f97d78a5f9c9d17"
+          },
+          {
+            "comment": "initiate utilities for generate lint-staged config easier",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "9ededd2d6ab91c30bceb2798465d56a04d6a5a15"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "4a23be17b025c17e498a66a5e6fd826810ae3285"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.1.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.1.0`"
+          }
+        ]
+      }
+    }
+  ]
+}
