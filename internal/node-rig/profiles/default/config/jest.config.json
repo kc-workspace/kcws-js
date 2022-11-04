@@ -13,5 +13,5 @@
   ],
   // Enabled code coverage by default
   "collectCoverage": true,
-  "coverageReporters": ["text", "lcov"]
+  "coverageReporters": ["text", ["lcov", { "projectRoot": "../.." }]]
 }
