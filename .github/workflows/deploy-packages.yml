@@ -37,6 +37,12 @@ jobs:
           command: publish
 
   deploy:
+    # This is to ensure main branch cannot be run
+    # as well as the workflow still return passed
+    #
+    # I have another protected layers on environment level
+    # however, that will cause deployment workflow to be failed
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: npm-registry
