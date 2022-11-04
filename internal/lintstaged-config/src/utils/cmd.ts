@@ -10,8 +10,10 @@ import { execSync, spawnSync } from "child_process";
  * @beta
  */
 export const getCommand = (name: string): string => {
-  const checking = ["command", "-v", name].join(" ");
-  const output = spawnSync(checking, { shell: false, encoding: "utf8" });
+  // Remove all space from input
+  const _name = name.replaceAll(" ", "");
+  const checking = ["command", "-v", _name].join(" ");
+  const output = spawnSync(checking, { shell: true, encoding: "utf8" });
   if (output.status === 0) return output.stdout;
   else return name;
 };
