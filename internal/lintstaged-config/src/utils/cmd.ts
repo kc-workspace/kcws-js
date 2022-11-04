@@ -1,4 +1,4 @@
-import { execSync, spawnSync } from "child_process";
+import { spawnSync } from "child_process";
 
 /**
  * Find command on the system path, and return the absolute path to the command;
