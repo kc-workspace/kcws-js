@@ -57,6 +57,8 @@ export interface IShellcheckOptions extends IBaseActionOptions {
 export interface IYamllintOptions extends IBaseActionOptions {
     // (undocumented)
     config?: string;
+    // (undocumented)
+    strict?: boolean;
 }
 
 // @beta

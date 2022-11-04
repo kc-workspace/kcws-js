@@ -8,6 +8,7 @@ import { getCommand } from "../utils/cmd";
  */
 export interface IYamllintOptions extends IBaseActionOptions {
   config?: string;
+  strict?: boolean;
 }
 
 /**
@@ -26,10 +27,13 @@ export const DEFAULT_YAMLLINT_CONFIG: string = ".github/linters/.yamllint.yml";
  * @beta
  */
 export const yamllint: BaseActionFn<IYamllintOptions> = (option) => {
+  console.log(process.cwd());
   const args: Array<string> = [getCommand("yamllint")];
 
   const configFile = option?.config ?? DEFAULT_YAMLLINT_CONFIG;
   args.push("--config-file", configFile);
+
+  if (option?.strict ?? true) args.push("--strict");
 
   const files = option?.files ?? [];
   if (files.length > 0) args.push(...files);
