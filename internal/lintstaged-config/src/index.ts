@@ -6,6 +6,7 @@ import micromatch, { type Options } from "micromatch";
 export { Config, ConfigCondition } from "./models/Config";
 export * from "./actions/eslint";
 export * from "./actions/prettier";
+export * from "./actions/shellcheck";
 
 export default <K extends string>(config: Config<K>): ConfigFn => {
   const options: Options = {

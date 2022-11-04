@@ -5,6 +5,7 @@ import { prettier } from "../actions/prettier";
 import { toArray } from "../utils/array";
 import { toPromise } from "../utils/promise";
 import { eslint } from "../actions/eslint";
+import { shellcheck } from "../actions/shellcheck";
 
 /**
  * All possible values contains in configuration mapper.
@@ -46,7 +47,7 @@ export interface IConfigValue {
 /**
  * Default possible key
  */
-export type DefaultKey = "jsts" | "json";
+export type DefaultKey = "jsts" | "json" | "sh";
 
 /**
  * Config builder create by {@link Config.builder} function.
@@ -75,6 +76,10 @@ class Builder<K extends string> {
       .set("json", {
         regexs: ["**/*.json"],
         actionFn: (files) => prettier({ fix: true, files }),
+      })
+      .set("sh", {
+        regexs: ["**/*.sh"],
+        actionFn: (files) => shellcheck({ files }),
       });
   }
 

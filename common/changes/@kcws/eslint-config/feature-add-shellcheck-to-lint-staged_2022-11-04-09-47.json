@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "enable tsdoc configs",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}
