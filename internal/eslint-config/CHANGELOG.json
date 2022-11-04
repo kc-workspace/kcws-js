@@ -1,0 +1,31 @@
+{
+  "name": "@kcws/eslint-config",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@kcws/eslint-config_v0.1.0",
+      "date": "Fri, 04 Nov 2022 18:42:44 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "customize rules for personal interest",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "0b118448b366796a6e011aacf47e122612559a33"
+          },
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "4a23be17b025c17e498a66a5e6fd826810ae3285"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "enable tsdoc configs",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "8fcfd514a0ab1969f2a7c2de000269296f0f5ed7"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@kcws/node-rig",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@kcws/node-rig_v0.1.0",
+      "date": "Fri, 04 Nov 2022 18:42:44 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "add api-extractor config to enable api-document markdown",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "df45c75f8c88bec5ee83006ef1e76a0289b79d89"
+          },
+          {
+            "comment": "add new html-reports and fix lcov relative path",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "8fcfd514a0ab1969f2a7c2de000269296f0f5ed7"
+          },
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "4a23be17b025c17e498a66a5e6fd826810ae3285"
+          },
+          {
+            "comment": "enable code coverage by default",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "9ededd2d6ab91c30bceb2798465d56a04d6a5a15"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "downgrade jest-environment-node from v29 to v27",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "773dc134f3b70aa877afa7e766406dd51160c1ab"
+          }
+        ]
+      }
+    }
+  ]
+}
