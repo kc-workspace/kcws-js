@@ -25,6 +25,9 @@ export type ConfigCondition = (regex: Array<string>) => Array<string>;
 const _default: <K extends string>(config: Config<K>) => ConfigFn;
 export default _default;
 
+// @beta
+export const DEFAULT_YAMLLINT_CONFIG: string;
+
 // Warning: (ae-forgotten-export) The symbol "BaseActionFn" needs to be exported by the entry point index.d.ts
 //
 // @beta
@@ -51,10 +54,21 @@ export interface IShellcheckOptions extends IBaseActionOptions {
 }
 
 // @beta
+export interface IYamllintOptions extends IBaseActionOptions {
+    // (undocumented)
+    config?: string;
+    // (undocumented)
+    strict?: boolean;
+}
+
+// @beta
 export const prettier: BaseActionFn<IPrettierOptions>;
 
 // @beta
 export const shellcheck: BaseActionFn<IShellcheckOptions>;
+
+// @beta
+export const yamllint: BaseActionFn<IYamllintOptions>;
 
 // (No @packageDocumentation comment for this package)
 

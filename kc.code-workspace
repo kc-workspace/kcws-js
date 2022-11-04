@@ -25,6 +25,10 @@
       "path": "common"
     },
     {
+      "name": "scripts",
+      "path": "scripts"
+    },
+    {
       "name": ".github",
       "path": ".github"
     },

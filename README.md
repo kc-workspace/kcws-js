@@ -41,11 +41,9 @@
   <a href="docs/abtesting.md">AB Testing</a>
 </h3> -->
 
-## Get-start
+## Prerequisite
 
-1. Install `NodeJS` and `npm` (lts is required)
-2. Install `Rush` as global package
-3. `Rush` will do the rest
+1. Run `./scripts/prerequisite.sh` for checking current environment
 
 ## Everyday command
 
