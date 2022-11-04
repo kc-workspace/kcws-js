@@ -1,11 +1,9 @@
 import type { CommandType, ConfigFn } from "./ConfigFn";
 
-import { prettier } from "../actions/prettier";
-
 import { toArray } from "../utils/array";
 import { toPromise } from "../utils/promise";
-import { eslint } from "../actions/eslint";
-import { shellcheck } from "../actions/shellcheck";
+
+import { prettier, eslint, shellcheck, yamllint } from "../actions";
 
 /**
  * All possible values contains in configuration mapper.
@@ -47,7 +45,7 @@ export interface IConfigValue {
 /**
  * Default possible key
  */
-export type DefaultKey = "jsts" | "json" | "sh";
+export type DefaultKey = "jsts" | "json" | "sh" | "yaml";
 
 /**
  * Config builder create by {@link Config.builder} function.
@@ -78,8 +76,12 @@ class Builder<K extends string> {
         actionFn: (files) => prettier({ fix: true, files }),
       })
       .set("sh", {
-        regexs: ["**/*.sh"],
+        regexs: ["**/*.sh", "**/*.bash", "**/*.zsh"],
         actionFn: (files) => shellcheck({ files }),
+      })
+      .set("yaml", {
+        regexs: ["**/*.yaml", "**/*.yml"],
+        actionFn: (files) => yamllint({ files }),
       });
   }
 
