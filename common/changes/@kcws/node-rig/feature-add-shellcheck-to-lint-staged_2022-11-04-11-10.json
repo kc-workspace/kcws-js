@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "add new html-reports and fix lcov relative path",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}
