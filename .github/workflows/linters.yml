@@ -1,4 +1,4 @@
-name: Lint
+name: Linters
 
 on:
   push:
@@ -26,3 +26,4 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YAML_CONFIG_FILE: .yamllint.yml
