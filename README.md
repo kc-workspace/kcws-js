@@ -12,10 +12,22 @@
   <strong>This monorepo included libraries, tools, and helpers that will make my life easier.</strong>
 </p>
 
-<!-- Static badge setup -->
+<!-- Badge setup -->
 <p align="center">
   <a href="https://github.com/kc-workspace/kcws-js">
-    <img src="https://img.shields.io/github/commit-activity/m/kc-workspace/kcws-js" alt="Commit activity" />
+    <img src="https://img.shields.io/github/commit-activity/m/kc-workspace/kcws-js?style=flat-square" alt="Commit activity" />
+  </a>
+  <a href="https://sonarcloud.io/project/overview?id=kc-workspace_kcws-js">
+    <img src="https://img.shields.io/sonar/quality_gate/kc-workspace_kcws-js/main?server=https%3A%2F%2Fsonarcloud.io&style=flat-square" alt="Quality gate" />
+  </a>
+  <a href="https://sonarcloud.io/project/issues?resolved=false&id=kc-workspace_kcws-js">
+    <img src="https://img.shields.io/sonar/violations/kc-workspace_kcws-js/main?format=long&server=https%3A%2F%2Fsonarcloud.io&style=flat-square" alt="Violations" />
+  </a>
+  <a href="https://sonarcloud.io/project/overview?id=kc-workspace_kcws-js">
+    <img src="https://img.shields.io/sonar/tech_debt/kc-workspace_kcws-js/main?server=https%3A%2F%2Fsonarcloud.io&style=flat-square" alt="Tech debt" />
+  </a>
+  <a href="https://sonarcloud.io/component_measures?metric=Coverage&view=list&id=kc-workspace_kcws-js">
+    <img src="https://img.shields.io/sonar/coverage/kc-workspace_kcws-js/main?server=https%3A%2F%2Fsonarcloud.io&style=flat-square" alt="Code coverage" />
   </a>
 </p>
 
