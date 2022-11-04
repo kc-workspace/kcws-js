@@ -23,6 +23,8 @@ fi
 if test -n "$CI"; then
   # Mute output in CI
   "$cmd" --quiet || exit $?
+elif test -n "$DEBUG"; then
+  "$cmd" --debug --verbose || exit $?
 else
   "$cmd" || exit $?
 fi
