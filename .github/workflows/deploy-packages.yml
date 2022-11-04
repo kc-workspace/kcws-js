@@ -60,7 +60,11 @@ jobs:
         uses: ./.github/actions/setup-rush
         with:
           install: true
-      - name: Deployment summary
+      - name: Building packages
+        uses: ./.github/actions/run-rush
+        with:
+          command: build
+      - name: Deploying packages
         uses: ./.github/actions/run-rush
         with:
           command: publish
