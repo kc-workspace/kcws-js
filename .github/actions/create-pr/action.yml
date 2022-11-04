@@ -23,9 +23,9 @@ runs:
     - id: branch
       name: Building branch name
       run: >
-        $GITHUB_ACTION_PATH/branch-name.sh
-        "${{ inputs.branch-prefix }}"
-        "$GITHUB_OUTPUT"
+        $GITHUB_ACTION_PATH/branch-name.sh \
+          "${{ inputs.branch-prefix }}" \
+          "$GITHUB_OUTPUT"
       shell: bash
     - name: Changing git branch
       run: git checkout -b "${{ steps.branch.outputs.name }}"
