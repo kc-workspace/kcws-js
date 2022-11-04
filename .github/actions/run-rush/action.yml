@@ -1,5 +1,6 @@
 name: Run rush
-description: Directly use rush command if exist; otherwise, use rush helper script
+description: |
+  Directly use rush command if exist; otherwise, use rush helper script
 author: Kamontat Chantrachirathumrong
 inputs:
   command:
@@ -12,5 +13,8 @@ runs:
   using: composite
   steps:
     - name: Run rush ${{ inputs.command }}
-      run: $GITHUB_ACTION_PATH/run-rush.sh ${{ inputs.command }} ${{ inputs.args }}
+      run: >
+        $GITHUB_ACTION_PATH/run-rush.sh
+          ${{ inputs.command }}
+          ${{ inputs.args }}
       shell: bash

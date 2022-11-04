@@ -22,7 +22,10 @@ runs:
   steps:
     - id: branch
       name: Building branch name
-      run: echo "name=${{ inputs.branch-prefix }}/$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      run: >
+        $GITHUB_ACTION_PATH/branch-name.sh
+        "${{ inputs.branch-prefix }}"
+        "$GITHUB_OUTPUT"
       shell: bash
     - name: Changing git branch
       run: git checkout -b "${{ steps.branch.outputs.name }}"
