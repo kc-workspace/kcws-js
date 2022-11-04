@@ -22,9 +22,9 @@ fi
 
 if test -n "$CI"; then
   # Mute output in CI
-  "$cmd" --quiet
+  "$cmd" --quiet || exit $?
 else
-  "$cmd"
+  "$cmd" || exit $?
 fi
 
 unset root autoinstallers cmd cmd_name
