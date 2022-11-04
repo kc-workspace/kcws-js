@@ -75,9 +75,9 @@ jobs:
         with:
           command: publish
           args: >
-            --apply \
-            --target-branch main \
-            --publish \
+            --apply
+            --target-branch "main"
+            --publish
             --add-commit-details
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
