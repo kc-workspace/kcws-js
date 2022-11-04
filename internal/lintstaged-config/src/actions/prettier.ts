@@ -1,5 +1,7 @@
 import type { IBaseActionOptions, BaseActionFn } from "./_base";
 
+import { getCommand } from "../utils/cmd";
+
 /**
  * Option for create prettier command
  *
@@ -18,7 +20,7 @@ export interface IPrettierOptions extends IBaseActionOptions {
  * @beta
  */
 export const prettier: BaseActionFn<IPrettierOptions> = (option) => {
-  const args: Array<string> = ["prettier"];
+  const args: Array<string> = [getCommand("prettier")];
   if (option?.fix ?? true) args.push("--write");
 
   const files = option?.files ?? [];

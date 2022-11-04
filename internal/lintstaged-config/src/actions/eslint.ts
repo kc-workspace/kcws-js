@@ -1,5 +1,7 @@
 import type { IBaseActionOptions, BaseActionFn } from "./_base";
 
+import { getCommand } from "../utils/cmd";
+
 /**
  * Option for create eslint command
  *
@@ -19,7 +21,7 @@ export interface IEslintOptions extends IBaseActionOptions {
  * @beta
  */
 export const eslint: BaseActionFn<IEslintOptions> = (option) => {
-  const args: Array<string> = ["eslint"];
+  const args: Array<string> = [getCommand("eslint")];
 
   if (option?.fix ?? true) args.push("--fix");
 
