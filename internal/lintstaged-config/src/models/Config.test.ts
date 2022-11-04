@@ -69,7 +69,7 @@ describe("Config", () => {
   });
 
   it("default", () => {
-    expect(Config.builder().default().build().length).toEqual(2);
+    expect(Config.builder().default().build().length).toEqual(3);
   });
 
   it("adding group", () => {
