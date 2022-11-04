@@ -47,7 +47,14 @@ export interface IPrettierOptions extends IBaseActionOptions {
 }
 
 // @beta
+export interface IShellcheckOptions extends IBaseActionOptions {
+}
+
+// @beta
 export const prettier: BaseActionFn<IPrettierOptions>;
+
+// @beta
+export const shellcheck: BaseActionFn<IShellcheckOptions>;
 
 // (No @packageDocumentation comment for this package)
 
