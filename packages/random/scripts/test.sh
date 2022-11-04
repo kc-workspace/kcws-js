@@ -2,4 +2,4 @@
 
 test=`echo 'hello'`
 
-hello="6"
+hello="7"
