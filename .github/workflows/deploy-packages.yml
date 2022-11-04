@@ -80,6 +80,8 @@ jobs:
             --target-branch "main"
             --publish
             --add-commit-details
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - name: Cleanup git
         if: always()
         uses: ./.github/actions/cleanup-git
