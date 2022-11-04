@@ -14,7 +14,7 @@ runs:
   steps:
     - name: Run rush ${{ inputs.command }}
       run: >
-        $GITHUB_ACTION_PATH/run-rush.sh
-          ${{ inputs.command }}
+        $GITHUB_ACTION_PATH/run-rush.sh \
+          ${{ inputs.command }} \
           ${{ inputs.args }}
       shell: bash
