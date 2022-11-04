@@ -55,7 +55,7 @@ jobs:
         with:
           command: test
           args: --verbose
-      - name: SonarCloud Scan
+      - name: Analysis packages
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
