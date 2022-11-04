@@ -37,6 +37,9 @@ jobs:
           command: publish
 
   deploy:
+    # The deployment can run on main branch only
+    # however, the verify steps can run anywhere for testing
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: npm-registry
