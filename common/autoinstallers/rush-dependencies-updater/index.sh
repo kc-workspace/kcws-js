@@ -21,7 +21,7 @@ if ! command -v "$cmd" >/dev/null 2>&1; then
 fi
 
 pkg="package.json"
-config=".ncurc.yml"
+config="$autoinstallers/.ncurc.yml"
 tmp="$(mktemp)"
 
 find "$root" \
