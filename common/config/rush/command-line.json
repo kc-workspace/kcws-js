@@ -57,6 +57,36 @@
       "shortName": "-i",
       "description": "Interactively select which packages to upgrade.",
       "associatedCommands": ["deps"]
+    },
+    {
+      "parameterKind": "choice",
+      "longName": "--target",
+      "shortName": "-t",
+      "description": "Determines the version to upgrade to: latest, newest, greatest, minor, patch. (default: minor)",
+      "defaultValue": "minor",
+      "alternatives": [
+        {
+          "name": "latest",
+          "description": "Upgrades to the latest version of the package."
+        },
+        {
+          "name": "newest",
+          "description": "Upgrades to the newest version of the package."
+        },
+        {
+          "name": "greatest",
+          "description": "Upgrades to the greatest version of the package."
+        },
+        {
+          "name": "minor",
+          "description": "Upgrades to the latest minor version of the package."
+        },
+        {
+          "name": "patch",
+          "description": "Upgrades to the latest patch version of the package."
+        }
+      ],
+      "associatedCommands": ["deps"]
     }
   ]
 }
