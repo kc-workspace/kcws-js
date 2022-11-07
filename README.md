@@ -33,9 +33,11 @@
 
 <!-- External section -->
 <h3 align="center">
-  <a href="https://js.kcws.kamontat.net">Documentation</a>
+  <a href="https://js.kcws.kamontat.net">DOCUMENT</a>
   <span> · </span>
-  <a href="https://sonarcloud.io/project/overview?id=kc-workspace_kcws-js">Sonarcloud</a>
+  <a href="https://sonarcloud.io/project/overview?id=kc-workspace_kcws-js">SONARCLOUD</a>
+  <span> · </span>
+  <a href="https://www.npmjs.com/org/kcws">NPM</a>
 </h3>
 
 <!-- External section -->
