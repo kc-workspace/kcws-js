@@ -11,6 +11,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  DEFAULT_BRANCH: main
+
 jobs:
   linting:
     runs-on: ubuntu-latest
@@ -23,8 +26,9 @@ jobs:
         # https://github.com/github/super-linter#slim-image
         uses: github/super-linter/slim@v4
         env:
+          DEFAULT_BRANCH: ${{ env.DEFAULT_BRANCH }}
           VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: main
+          IGNORE_GITIGNORED_FILES: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           YAML_CONFIG_FILE: .yamllint.yml
           YAML_ERROR_ON_WARNING: true
