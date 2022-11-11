@@ -31,6 +31,7 @@ pull_request_rules:
     actions:
       queue:
         name: default
+        method: squash
   - name: Automatic merging by owner
     conditions:
       - or:
@@ -40,6 +41,7 @@ pull_request_rules:
     actions:
       queue:
         name: default
+        method: squash
   - name: Notify author on queue failure
     conditions:
       - 'check-failure=Queue: Embarked in merge train'
