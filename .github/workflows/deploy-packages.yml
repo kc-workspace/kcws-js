@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  verify:
+  verifying:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -36,7 +36,7 @@ jobs:
         with:
           command: publish
 
-  deploy:
+  deploying:
     # This is to ensure main branch cannot be run
     # as well as the workflow still return passed
     #
@@ -48,7 +48,7 @@ jobs:
       name: npm-registry
       url: https://www.npmjs.com/org/kcws
     needs:
-      - verify
+      - verifying
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3

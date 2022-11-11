@@ -29,6 +29,9 @@
   <a href="https://sonarcloud.io/component_measures?metric=Coverage&view=list&id=kc-workspace_kcws-js">
     <img src="https://img.shields.io/sonar/coverage/kc-workspace_kcws-js/main?server=https%3A%2F%2Fsonarcloud.io&style=flat-square" alt="Code coverage" />
   </a>
+  <a href="https://dashboard.mergify.com/github/kc-workspace/repo/kcws-js/queues">
+  <img src="https://img.shields.io/endpoint.svg?url=https://api.mergify.com/v1/badges/kc-workspace/kcws-js&style=flat-square" alt="Mergify status" />
+  </a>
 </p>
 
 <!-- External section -->

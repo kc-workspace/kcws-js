@@ -5,7 +5,10 @@
   "SpacesAftertabs": false,
   "NoColor": false,
   "exclude": [
-    "pnpm-lock.yaml"
+    "pnpm-lock.yaml",
+    "tsconfig.base.json",
+    "rush.json",
+    "CHANGELOG.md"
   ],
   "AllowedContentTypes": [],
   "PassedFiles": [],
