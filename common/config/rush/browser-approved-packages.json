@@ -4,55 +4,87 @@
   "packages": [
     {
       "name": "@kcws/eslint-config",
-      "allowedCategories": [ "internals", "libraries", "prototypes" ]
+      "allowedCategories": [
+        "libraries",
+        "prototypes",
+        "tools"
+      ]
     },
     {
       "name": "@kcws/lintstaged-config",
-      "allowedCategories": [ "libraries", "prototypes" ]
+      "allowedCategories": [
+        "libraries",
+        "prototypes",
+        "tools"
+      ]
     },
     {
       "name": "@microsoft/api-extractor",
-      "allowedCategories": [ "internals" ]
+      "allowedCategories": [
+        "libraries"
+      ]
     },
     {
       "name": "@rushstack/eslint-config",
-      "allowedCategories": [ "internals" ]
+      "allowedCategories": [
+        "libraries"
+      ]
     },
     {
       "name": "@rushstack/heft",
-      "allowedCategories": [ "internals", "libraries", "prototypes" ]
+      "allowedCategories": [
+        "libraries",
+        "prototypes",
+        "tools"
+      ]
     },
     {
       "name": "@rushstack/heft-jest-plugin",
-      "allowedCategories": [ "internals" ]
+      "allowedCategories": [
+        "libraries"
+      ]
     },
     {
       "name": "@rushstack/heft-node-rig",
-      "allowedCategories": [ "internals" ]
+      "allowedCategories": [
+        "libraries"
+      ]
     },
     {
       "name": "eslint",
-      "allowedCategories": [ "internals" ]
+      "allowedCategories": [
+        "libraries"
+      ]
     },
     {
       "name": "jest-environment-node",
-      "allowedCategories": [ "internals" ]
+      "allowedCategories": [
+        "libraries"
+      ]
     },
     {
       "name": "jest-html-reporters",
-      "allowedCategories": [ "internals" ]
+      "allowedCategories": [
+        "libraries"
+      ]
     },
     {
       "name": "jest-junit",
-      "allowedCategories": [ "internals" ]
+      "allowedCategories": [
+        "libraries"
+      ]
     },
     {
       "name": "micromatch",
-      "allowedCategories": [ "internals" ]
+      "allowedCategories": [
+        "libraries"
+      ]
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "internals" ]
+      "allowedCategories": [
+        "libraries"
+      ]
     }
   ]
 }

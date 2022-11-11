@@ -5,13 +5,29 @@ importers:
   .:
     specifiers: {}
 
-  ../../internal/eslint-config:
+  ../../packages/color:
+    specifiers:
+      '@kcws/eslint-config': workspace:*
+      '@kcws/lintstaged-config': workspace:*
+      '@kcws/node-rig': workspace:*
+      '@rushstack/heft': 0.48.7
+      '@types/heft-jest': 1.0.3
+      '@types/node': 18.8.3
+    devDependencies:
+      '@kcws/eslint-config': link:../eslint-config
+      '@kcws/lintstaged-config': link:../lintstaged-config
+      '@kcws/node-rig': link:../node-rig
+      '@rushstack/heft': 0.48.7
+      '@types/heft-jest': 1.0.3
+      '@types/node': 18.8.3
+
+  ../../packages/eslint-config:
     specifiers:
       '@rushstack/eslint-config': 3.1.1
     dependencies:
       '@rushstack/eslint-config': 3.1.1_wyqvi574yv7oiwfeinomdzmc3m
 
-  ../../internal/lintstaged-config:
+  ../../packages/lintstaged-config:
     specifiers:
       '@kcws/eslint-config': workspace:*
       '@kcws/node-rig': workspace:*
@@ -30,7 +46,7 @@ importers:
       '@types/micromatch': 4.0.2
       '@types/node': 18.8.3
 
-  ../../internal/node-rig:
+  ../../packages/node-rig:
     specifiers:
       '@microsoft/api-extractor': 7.33.5
       '@rushstack/eslint-config': 3.1.1
@@ -55,22 +71,6 @@ importers:
     devDependencies:
       '@rushstack/heft': 0.48.7
 
-  ../../packages/color:
-    specifiers:
-      '@kcws/eslint-config': workspace:*
-      '@kcws/lintstaged-config': workspace:*
-      '@kcws/node-rig': workspace:*
-      '@rushstack/heft': 0.48.7
-      '@types/heft-jest': 1.0.3
-      '@types/node': 18.8.3
-    devDependencies:
-      '@kcws/eslint-config': link:../../internal/eslint-config
-      '@kcws/lintstaged-config': link:../../internal/lintstaged-config
-      '@kcws/node-rig': link:../../internal/node-rig
-      '@rushstack/heft': 0.48.7
-      '@types/heft-jest': 1.0.3
-      '@types/node': 18.8.3
-
   ../../packages/random:
     specifiers:
       '@kcws/eslint-config': workspace:*
@@ -80,9 +80,25 @@ importers:
       '@types/heft-jest': 1.0.3
       '@types/node': 18.8.3
     devDependencies:
-      '@kcws/eslint-config': link:../../internal/eslint-config
-      '@kcws/lintstaged-config': link:../../internal/lintstaged-config
-      '@kcws/node-rig': link:../../internal/node-rig
+      '@kcws/eslint-config': link:../eslint-config
+      '@kcws/lintstaged-config': link:../lintstaged-config
+      '@kcws/node-rig': link:../node-rig
+      '@rushstack/heft': 0.48.7
+      '@types/heft-jest': 1.0.3
+      '@types/node': 18.8.3
+
+  ../../tools/example:
+    specifiers:
+      '@kcws/eslint-config': workspace:*
+      '@kcws/lintstaged-config': workspace:*
+      '@kcws/node-rig': workspace:*
+      '@rushstack/heft': 0.48.7
+      '@types/heft-jest': 1.0.3
+      '@types/node': 18.8.3
+    devDependencies:
+      '@kcws/eslint-config': link:../../packages/eslint-config
+      '@kcws/lintstaged-config': link:../../packages/lintstaged-config
+      '@kcws/node-rig': link:../../packages/node-rig
       '@rushstack/heft': 0.48.7
       '@types/heft-jest': 1.0.3
       '@types/node': 18.8.3
@@ -501,7 +517,7 @@ packages:
       '@jest/console': 27.5.1
       '@jest/reporters': 27.4.6
       '@jest/test-result': 27.5.1
-      '@jest/transform': 27.4.6
+      '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
       '@types/node': 18.8.3
       ansi-escapes: 4.3.2
@@ -514,11 +530,11 @@ packages:
       jest-haste-map: 27.5.1
       jest-message-util: 27.5.1
       jest-regex-util: 27.5.1
-      jest-resolve: 27.4.6
+      jest-resolve: 27.5.1
       jest-resolve-dependencies: 27.5.1
       jest-runner: 27.5.1
       jest-runtime: 27.5.1
-      jest-snapshot: 27.4.6
+      jest-snapshot: 27.5.1
       jest-util: 27.5.1
       jest-validate: 27.5.1
       jest-watcher: 27.5.1
@@ -584,7 +600,7 @@ packages:
       '@bcoe/v8-coverage': 0.2.3
       '@jest/console': 27.5.1
       '@jest/test-result': 27.5.1
-      '@jest/transform': 27.4.6
+      '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
       '@types/node': 18.8.3
       chalk: 4.1.2
@@ -598,7 +614,7 @@ packages:
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.5
       jest-haste-map: 27.5.1
-      jest-resolve: 27.4.6
+      jest-resolve: 27.5.1
       jest-util: 27.5.1
       jest-worker: 27.5.1
       slash: 3.0.0
@@ -987,6 +1003,7 @@ packages:
 
   /@sinonjs/commons/1.8.4:
     resolution: {integrity: sha512-RpmQdHVo8hCEHDVpO39zToS9jOhR6nw+/lQAzRNq9ErrGV9IeHM71XCn68svVl/euFeVW6BWX4p35gkhbOcSIQ==}
+    deprecated: Breaks compatibility with ES5, use v1.8.5
     dependencies:
       type-detect: 4.0.8
     dev: false
@@ -2697,7 +2714,7 @@ packages:
       jest-get-type: 27.5.1
       jest-jasmine2: 27.5.1
       jest-regex-util: 27.5.1
-      jest-resolve: 27.4.6
+      jest-resolve: 27.5.1
       jest-runner: 27.5.1
       jest-util: 27.5.1
       jest-validate: 27.5.1
@@ -3081,7 +3098,7 @@ packages:
       '@babel/plugin-syntax-typescript': 7.20.0_@babel+core@7.20.2
       '@babel/traverse': 7.20.1
       '@babel/types': 7.20.2
-      '@jest/transform': 27.4.6
+      '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
       '@types/babel__traverse': 7.18.2
       '@types/prettier': 2.7.1

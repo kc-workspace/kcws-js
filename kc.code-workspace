@@ -10,15 +10,19 @@
     },
     {
       "name": "@kcws/node-rig",
-      "path": "internal/node-rig"
+      "path": "packages/node-rig"
     },
     {
       "name": "@kcws/eslint-config",
-      "path": "internal/eslint-config"
+      "path": "packages/eslint-config"
     },
     {
       "name": "@kcws/lintstaged-config",
-      "path": "internal/lintstaged-config"
+      "path": "packages/lintstaged-config"
+    },
+    {
+      "name": "@kcws-tools/example",
+      "path": "tools/example"
     },
     {
       "name": "common",

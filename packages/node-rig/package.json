@@ -3,21 +3,21 @@
   "version": "0.1.0",
   "description": "a rig package for node environment projects using heft",
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/internal/node-rig",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/node-rig",
   "repository": {
     "type": "git",
     "url": "https://github.com/kc-workspace/kcws-js.git",
-    "directory": "internal/node-rig"
+    "directory": "packages/node-rig"
   },
   "author": {
     "name": "Kamontat Chantrachirathumrong",
-    "email": "developer@kamontat.net",
+    "email": "kcws@kc.in.th",
     "url": "https://github.com/kamontat"
   },
   "publishConfig": {
     "access": "public"
   },
-  "keywords": [],
+  "keywords": ["heft", "rig", "rushjs"],
   "scripts": {
     "build": ""
   },

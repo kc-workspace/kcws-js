@@ -139,7 +139,7 @@
      */
     "reviewCategories": [
       "libraries", // library that ship to production
-      "internals", // non-shipping projects that are part of the developer toolchain
+      "tools",     // non-shipping projects that are part of the developer toolchain
       "prototypes" // experiments that should mostly be ignored by the review process
     ],
 
@@ -320,7 +320,7 @@
    * separated by hyphens or slashes, where a word may contain lowercase ASCII letters, digits,
    * ".", and "@" characters.
    */
-  "allowedProjectTags": ["env.browser", "env.node", "env.all"],
+  // "allowedProjectTags": [],
 
   /**
    * (Required) This is the inventory of projects to be managed by Rush.
@@ -335,36 +335,37 @@
       "packageName": "@kcws/random",
       "projectFolder": "packages/random",
       "reviewCategory": "libraries",
-      "tags": ["env.all"],
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/color",
       "projectFolder": "packages/color",
       "reviewCategory": "prototypes",
-      "tags": ["env.all"],
       "shouldPublish": false
     },
     {
       "packageName": "@kcws/eslint-config",
-      "projectFolder": "internal/eslint-config",
-      "reviewCategory": "internals",
-      "tags": ["env.all"],
+      "projectFolder": "packages/eslint-config",
+      "reviewCategory": "libraries",
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/node-rig",
-      "projectFolder": "internal/node-rig",
-      "reviewCategory": "internals",
-      "tags": ["env.node"],
+      "projectFolder": "packages/node-rig",
+      "reviewCategory": "libraries",
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/lintstaged-config",
-      "projectFolder": "internal/lintstaged-config",
-      "reviewCategory": "internals",
-      "tags": ["env.all"],
+      "projectFolder": "packages/lintstaged-config",
+      "reviewCategory": "libraries",
       "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws-tools/example",
+      "projectFolder": "tools/example",
+      "reviewCategory": "tools",
+      "shouldPublish": false
     }
   ]
 }

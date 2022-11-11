@@ -31,7 +31,7 @@
         "patch": [
           {
             "comment": "downgrade jest-environment-node from v29 to v27",
-            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "author": "Kamontat Chantrachirathumrong <kcws@kc.in.th>",
             "commit": "773dc134f3b70aa877afa7e766406dd51160c1ab"
           }
         ]

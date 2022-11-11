@@ -1,15 +1,15 @@
 {
-  "name": "@kcws/color",
+  "name": "@kcws-tools/example",
   "version": "0.0.1",
-  "description": "color management",
+  "description": "example tooling for kcws",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/random",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/tools/example",
   "repository": {
     "type": "git",
     "url": "https://github.com/kc-workspace/kcws-js.git",
-    "directory": "packages/random"
+    "directory": "tools/example"
   },
   "author": {
     "name": "Kamontat Chantrachirathumrong",
@@ -20,8 +20,8 @@
     "access": "public"
   },
   "keywords": [
-    "random",
-    "generator"
+    "tooling",
+    "tools"
   ],
   "scripts": {
     "build": "heft build",
