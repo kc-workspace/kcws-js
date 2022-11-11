@@ -1,29 +1,40 @@
+shared:
+  pr-status: &pr_status
+    - -closed
+    - -draft
+    - -conflict
+    - "#review-threads-unresolved=0"
+  ci-status: &ci_status
+    - check-success=changelog
+    - check-success=linting
+    - check-success=testing
+
+queue_rules:
+  - name: default
+    conditions:
+      - and: *pr_status
+      - and: *ci_status
+
 pull_request_rules:
+  - name: Convert wip to draft PR
+    conditions:
+      - label=wip
+    actions:
+      edit:
+        draft: True
+      label:
+        remove:
+          - wip
   - name: Automatic merging by approval
     conditions:
       - "#approved-reviews-by>=1"
-      - "#review-threads-unresolved=0"
-      - -closed
-      - -draft
-      - -conflict
-      - label!=wip
-      - -title~=^wip
-      - check-success=changelog
-      - check-success=linting
-      - check-success=testing
     actions:
-      merge:
-        method: merge
+      queue:
+        name: default
   - name: Automatic merging by kc-bot
     conditions:
       - author~=^kc-bot$
       - base=main
-      - -closed
-      - -draft
-      - -conflict
-      - check-success=changelog
-      - check-success=linting
-      - check-success=testing
     actions:
-      merge:
-        method: merge
+      queue:
+        name: default
