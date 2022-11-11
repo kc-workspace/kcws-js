@@ -11,6 +11,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  DEFAULT_BRANCH: main
+
 jobs:
   changelog:
     runs-on: ubuntu-latest
@@ -28,6 +31,35 @@ jobs:
         with:
           command: change
           args: --verify
+
+  linting:
+    runs-on: ubuntu-latest
+    needs:
+      - changelog
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Linting
+        # https://github.com/github/super-linter#slim-image
+        uses: github/super-linter/slim@v4
+        env:
+          DEFAULT_BRANCH: ${{ env.DEFAULT_BRANCH }}
+          VALIDATE_ALL_CODEBASE: false
+          IGNORE_GITIGNORED_FILES: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YAML_CONFIG_FILE: .yamllint.yml
+          YAML_ERROR_ON_WARNING: true
+          # Disabled javascript/typescript as we have lint on rushjs
+          VALIDATE_JAVASCRIPT_ES: false
+          VALIDATE_JAVASCRIPT_STANDARD: false
+          VALIDATE_JSX: false
+          VALIDATE_TYPESCRIPT_ES: false
+          VALIDATE_TYPESCRIPT_STANDARD: false
+          VALIDATE_TSX: false
+          # Disabled json validation as issue #30
+          VALIDATE_JSON: false
 
   testing:
     environment:
