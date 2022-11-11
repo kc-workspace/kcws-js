@@ -31,9 +31,11 @@ pull_request_rules:
     actions:
       queue:
         name: default
-  - name: Automatic merging by kc-bot
+  - name: Automatic merging by owner
     conditions:
-      - author~=^kc-bot$
+      - or:
+        - author=kc-bot
+        - author=kamontat
       - base=main
     actions:
       queue:
