@@ -1,0 +1,29 @@
+pull_request_rules:
+  - name: Automatic merging by approval
+    conditions:
+      - "#approved-reviews-by>=1"
+      - "#review-threads-unresolved=0"
+      - -closed
+      - -draft
+      - -conflict
+      - label!=wip
+      - -title~=^wip
+      - check-success=changelog
+      - check-success=linting
+      - check-success=testing
+    actions:
+      merge:
+        method: merge
+  - name: Automatic merging by kc-bot
+    conditions:
+      - author~=^kc-bot$
+      - base=main
+      - -closed
+      - -draft
+      - -conflict
+      - check-success=changelog
+      - check-success=linting
+      - check-success=testing
+    actions:
+      merge:
+        method: merge
