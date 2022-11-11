@@ -20,7 +20,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  building:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -47,13 +47,13 @@ jobs:
       - name: Upload built document
         uses: actions/upload-pages-artifact@v1
 
-  deploy:
+  deploying:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs:
-      - build
+      - building
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
