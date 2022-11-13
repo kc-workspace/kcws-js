@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "upgrade all dependencies [auto]",
+      "type": "minor",
+      "packageName": "@kcws/lintstaged-config"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config",
+  "email": "97302203+kc-bot@users.noreply.github.com"
+}
