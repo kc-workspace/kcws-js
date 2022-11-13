@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@microsoft/api-documenter": "7.19.23"
+    "@microsoft/api-documenter": "7.19.24"
   }
 }
