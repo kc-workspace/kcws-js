@@ -42,7 +42,7 @@ jobs:
       - name: Building Jekyll output
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./docs
+          source: ./_docs
           destination: ./_site
       - name: Upload built document
         uses: actions/upload-pages-artifact@v1

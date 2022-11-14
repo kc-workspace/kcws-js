@@ -29,6 +29,10 @@
       "path": "common"
     },
     {
+      "name": "docs",
+      "path": "docs"
+    },
+    {
       "name": "scripts",
       "path": "scripts"
     },
