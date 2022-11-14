@@ -4,12 +4,7 @@
   "IgnoreDefaults": false,
   "SpacesAftertabs": false,
   "NoColor": false,
-  "exclude": [
-    "pnpm-lock.yaml",
-    "tsconfig.base.json",
-    "rush.json",
-    "CHANGELOG.md"
-  ],
+  "Exclude": [],
   "AllowedContentTypes": [],
   "PassedFiles": [],
   "Disable": {

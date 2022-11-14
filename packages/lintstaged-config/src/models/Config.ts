@@ -15,7 +15,7 @@ export interface IConfigValue {
    * Regular Expression for matching staged files
    *
    * @remarks
-   * This values will be passed to 
+   * This values will be passed to
    * {@link https://github.com/micromatch/micromatch | micromatch} to apply.
    */
   regexs: Array<string>;

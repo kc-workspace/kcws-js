@@ -68,17 +68,17 @@ Below is a list of command you usually use to develop this repository.
 
 ### Install dependencies
 
-`rush install` or `rush update`: The main different between **install** and **update** is won't update any files 
+`rush install` or `rush update`: The main different between **install** and **update** is won't update any files
 and failed if lock files need to change ([more][everyday-commands-rush-update]).
 
 ### Build packages
 
-`rush rebuild` or `rush build`: **Rebuild** will build every packages, 
+`rush rebuild` or `rush build`: **Rebuild** will build every packages,
 however **build** will build only changed package.
 
 ### Run package script
 
-`rushx <script_name>`: This will provide better error report and 
+`rushx <script_name>`: This will provide better error report and
 ensure **nodejs** and **pnpm** version by rush.
 
 ### Create changesfile

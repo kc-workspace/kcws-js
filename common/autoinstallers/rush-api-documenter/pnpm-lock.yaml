@@ -1,21 +1,21 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@microsoft/api-documenter': 7.19.23
+  '@microsoft/api-documenter': 7.19.24
 
 dependencies:
-  '@microsoft/api-documenter': 7.19.23
+  '@microsoft/api-documenter': 7.19.24
 
 packages:
 
-  /@microsoft/api-documenter/7.19.23:
-    resolution: {integrity: sha512-jLwlR+efMHWWrQXc+sgtatUiKhz1XzuFlOrLllirFTaH45Jh4wTZkts467Vqomck9H/2hsfeX5dyv4AjJlisng==}
+  /@microsoft/api-documenter/7.19.24:
+    resolution: {integrity: sha512-XSjN07jsBusRDEqazbadGp6e0hds7GZGjdNGWmaQop32f7BxNv81NqE3H/OLONCZSklm/0fzJy8g14xZmByFtQ==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.25.2
       '@microsoft/tsdoc': 0.14.2
       '@rushstack/node-core-library': 3.53.2
-      '@rushstack/ts-command-line': 4.13.0
+      '@rushstack/ts-command-line': 4.13.1
       colors: 1.2.5
       js-yaml: 3.13.1
       resolve: 1.17.0
@@ -55,8 +55,8 @@ packages:
       z-schema: 5.0.4
     dev: false
 
-  /@rushstack/ts-command-line/4.13.0:
-    resolution: {integrity: sha512-crLT31kl+qilz0eBRjqqYO06CqwbElc0EvzS6jI69B9Ikt1SkkSzIZ2iDP7zt/rd1ZYipKIS9hf9CQR9swDIKg==}
+  /@rushstack/ts-command-line/4.13.1:
+    resolution: {integrity: sha512-UTQMRyy/jH1IS2U+6pyzyn9xQ2iMcoUKkTcZUzOP/aaMiKlWLwCTDiBVwhw/M1crDx6apF9CwyjuWO9r1SBdJQ==}
     dependencies:
       '@types/argparse': 1.0.38
       argparse: 1.0.10
