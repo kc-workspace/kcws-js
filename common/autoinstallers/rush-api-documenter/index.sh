@@ -12,6 +12,4 @@ api-documenter "$outtype" \
   --input-folder "$input" \
   --output-folder "$output"
 
-git add "$output"
-
 unset outtype input output
