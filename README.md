@@ -43,21 +43,6 @@
   <a href="https://www.npmjs.com/org/kcws">NPM</a>
 </h3>
 
-<!-- External section -->
-<!-- <h3 align="center">
-  <a href="docs/cicd.md">CI/CD</a>
-  <span> · </span>
-  <a href="docs/website.md">Website</a>
-  <span> · </span>
-  <a href="docs/quality.md">Quality</a>
-  <span> · </span>
-  <a href="docs/technology.md">Technology</a>
-  <span> · </span>
-  <a href="docs/known_issues.md">Known Issues</a>
-  <span> · </span>
-  <a href="docs/abtesting.md">AB Testing</a>
-</h3> -->
-
 ## Prerequisite
 
 1. Run `./scripts/prerequisite.sh` for checking current environment

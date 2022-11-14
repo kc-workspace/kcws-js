@@ -54,6 +54,10 @@ max_line_length = unset
 max_line_length = unset
 insert_final_newline = unset
 
+# Ignore line length of cspell config
+[.github/linters/cspell.json]
+max_line_length = unset
+
 [LICENSE]
 indent_style = space
 indent_size = unset

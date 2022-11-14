@@ -40,6 +40,7 @@ jobs:
       - name: Running cspell
         uses: streetsidesoftware/cspell-action@v2
         with:
+          config: '.github/linters'
           verbose: true
           incremental_files_only: true
 
