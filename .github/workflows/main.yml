@@ -39,6 +39,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Running cspell
         uses: streetsidesoftware/cspell-action@v2
+        with:
+          verbose: true
+          incremental_files_only: true
 
   linting:
     runs-on: ubuntu-latest
