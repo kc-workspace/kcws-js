@@ -23,12 +23,16 @@ completed() {
   return "$exit_code"
 }
 
-checking "node" "$require_mode" "https://nodejs.org/en/download/package-manager"
+checking "node" \
+  "$require_mode" "https://nodejs.org/en/download/package-manager"
 
-checking "rush" "$require_mode" "https://rushjs.io/pages/intro/get_started"
+checking "rush" \
+  "$require_mode" "https://rushjs.io/pages/intro/get_started"
 
-checking "shellcheck" "$optional_mode" "https://github.com/koalaman/shellcheck"
+checking "shellcheck" \
+  "$optional_mode" "https://github.com/koalaman/shellcheck"
 
-checking "yamllint" "$optional_mode" "https://yamllint.readthedocs.io/en/stable/quickstart.html"
+checking "yamllint" \
+  "$optional_mode" "https://yamllint.readthedocs.io/en/stable/quickstart.html"
 
 completed
