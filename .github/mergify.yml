@@ -8,6 +8,7 @@ shared:
     - check-success=changelog
     - check-success=linting
     - check-success=testing
+    - check-success=spellcheck
 
 queue_rules:
   - name: default
