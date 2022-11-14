@@ -26,7 +26,7 @@ jobs:
         uses: ./.github/actions/setup-rush
         with:
           install: true
-      - name: Checking for missing change logs
+      - name: Checking for missing changelogs
         uses: ./.github/actions/run-rush
         with:
           command: change

@@ -19,7 +19,15 @@ max_line_length = 120
 [rush.json]
 max_line_length = 130
 
-[{.prettierignore,.gitattributes,.gitignore,tsconfig.json,tsconfig.*.json}]
+[{.prettierignore,.gitattributes,.gitignore}]
+max_line_length = unset
+
+# Ignore line length of generated tsconfig and base config
+[{tsconfig.json,tsconfig.*.json}]
+max_line_length = unset
+
+# Ignore line length for generated document and config
+[docs]
 max_line_length = unset
 
 # Ignore line length for pnpm generated files
