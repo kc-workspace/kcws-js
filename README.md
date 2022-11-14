@@ -68,8 +68,10 @@ Below is a list of command you usually use to develop this repository.
 
 ### Install dependencies
 
-`rush install` or `rush update`: The main different between **install** and **update** is won't update any files
-and failed if lockfiles need to change ([more][everyday-commands-rush-update]).
+`rush install` or `rush update`:
+The main different between **install** and **update**
+is the **install** won't update files and
+throw if files requires to update ([more][everyday-commands-rush-update]).
 
 ### Build packages
 
@@ -83,14 +85,18 @@ ensure **nodejs** and **pnpm** version by rush.
 
 ### Create changesfile
 
-> **Changesfile** is a changelog entry which later will use to create CHANGELOG file and bump version ([more][everyday-commands-rush-change])
+> **Changesfile** is a changelog entry
+> which later will use to create CHANGELOG file and
+> bump version ([more][everyday-commands-rush-change])
 
-`rush change [--commit]`: This will prompt to add changelog entry and version type to bump. Add `--commit` to `git commit` as well.
+`rush change [--commit]`: This will prompt to add changelog entry
+and version type to bump. Add `--commit` to `git commit` as well.
 
 ### Check & Update dependencies
 
-`rush deps [--upgrade] [--interactive]`: Check dependencies need to upgrade
-or add `--upgrade` to update package.json with latest version or select via prompt using `--interactive` option. powered by [npm-check-updates][npm-check-updates-github]
+`rush deps [--upgrade] [--interactive]`: Check dependencies need to upgrade or
+add `--upgrade` to update package.json with latest version or
+select via prompt using `--interactive` option. powered by [npm-check-updates][npm-check-updates-github]
 
 [everyday-commands-rush-update]: https://rushjs.io/pages/developer/everyday_commands/#rush-update
 [everyday-commands-rush-change]: https://rushjs.io/pages/developer/everyday_commands/#rush-change
