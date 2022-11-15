@@ -3,6 +3,7 @@ shared:
     - -closed
     - -draft
     - -conflict
+    - -label=do-not-automerge
     - "#review-threads-unresolved=0"
   ci-status: &ci_status
     - check-success=changelog
