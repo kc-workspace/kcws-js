@@ -1,0 +1,49 @@
+{
+  "name": "@kcws-tools/heft-stryker-plugin",
+  "version": "0.0.1",
+  "description": "Heft plugin for Stryker Mutator",
+  "main": "lib/index.js",
+  "module": "lib-es6/index.js",
+  "types": "lib/index.d.ts",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/tools/heft-stryker-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "tools/heft-stryker-plugin"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "tooling",
+    "tools",
+    "heft",
+    "heft-plugin"
+  ],
+  "scripts": {
+    "build": "heft build",
+    "test": "heft test",
+    "clean": "heft clean"
+  },
+  "dependencies": {
+    "@rushstack/node-core-library": "3.53.2",
+    "@stryker-mutator/api": "6.3.0",
+    "@stryker-mutator/core": "6.3.0",
+    "@stryker-mutator/jest-runner": "6.3.0",
+    "stryker-cli": "1.0.2"
+  },
+  "devDependencies": {
+    "@kcws/node-rig": "workspace:*",
+    "@kcws/lintstaged-config": "workspace:*",
+    "@kcws/eslint-config": "workspace:*",
+    "@rushstack/heft": "0.48.8",
+    "@types/heft-jest": "1.0.3",
+    "@types/node": "18.8.3"
+  }
+}

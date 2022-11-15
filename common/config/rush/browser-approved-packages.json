@@ -3,88 +3,80 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
+      "name": "@kcws-tools/heft-stryker-plugin",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
       "name": "@kcws/eslint-config",
-      "allowedCategories": [
-        "libraries",
-        "prototypes",
-        "tools"
-      ]
+      "allowedCategories": [ "libraries", "prototypes", "tools" ]
     },
     {
       "name": "@kcws/lintstaged-config",
-      "allowedCategories": [
-        "libraries",
-        "prototypes",
-        "tools"
-      ]
+      "allowedCategories": [ "libraries", "prototypes", "tools" ]
     },
     {
       "name": "@microsoft/api-extractor",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@rushstack/eslint-config",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@rushstack/heft",
-      "allowedCategories": [
-        "libraries",
-        "prototypes",
-        "tools"
-      ]
+      "allowedCategories": [ "libraries", "prototypes", "tools" ]
     },
     {
       "name": "@rushstack/heft-jest-plugin",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@rushstack/heft-node-rig",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "@rushstack/node-core-library",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "@stryker-mutator/api",
+      "allowedCategories": [ "libraries", "tools" ]
+    },
+    {
+      "name": "@stryker-mutator/core",
+      "allowedCategories": [ "libraries", "tools" ]
+    },
+    {
+      "name": "@stryker-mutator/jest-runner",
+      "allowedCategories": [ "libraries", "tools" ]
     },
     {
       "name": "eslint",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "jest-environment-node",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "jest-html-reporters",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "jest-junit",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "micromatch",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "stryker-cli",
+      "allowedCategories": [ "libraries", "tools" ]
     },
     {
       "name": "typescript",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     }
   ]
 }

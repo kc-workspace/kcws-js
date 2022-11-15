@@ -4,11 +4,7 @@
   "packages": [
     {
       "name": "@kcws/node-rig",
-      "allowedCategories": [
-        "libraries",
-        "prototypes",
-        "tools"
-      ]
+      "allowedCategories": [ "libraries", "prototypes", "tools" ]
     }
   ]
 }

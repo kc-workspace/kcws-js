@@ -21,20 +21,16 @@
       "path": "packages/lintstaged-config"
     },
     {
-      "name": "@kcws-tools/example",
-      "path": "tools/example"
+      "name": "@kcws-tools/heft-stryker-plugin",
+      "path": "tools/heft-stryker-plugin"
     },
     {
-      "name": "common",
-      "path": "common"
+      "name": "@kcws-common/autoinstallers",
+      "path": "common/autoinstallers"
     },
     {
-      "name": "docs",
-      "path": "docs"
-    },
-    {
-      "name": "scripts",
-      "path": "scripts"
+      "name": "@kcws-common/config",
+      "path": "common/config"
     },
     {
       "name": ".github",

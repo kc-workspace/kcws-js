@@ -362,6 +362,13 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws-tools/heft-stryker-plugin",
+      "projectFolder": "tools/heft-stryker-plugin",
+      "reviewCategory": "tools",
+      "shouldPublish": false,
+      "decoupledLocalDependencies": ["@kcws/node-rig", "@kcws/lintstaged-config"]
+    },
+    {
       "packageName": "@kcws-tools/example",
       "projectFolder": "tools/example",
       "reviewCategory": "tools",
