@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "description": "random number generator",
   "main": "lib/index.js",
+  "module": "lib-es6/index.js",
+  "browser": "lib-umd/index.js",
   "types": "lib/index.d.ts",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/random",
@@ -25,7 +27,8 @@
   ],
   "scripts": {
     "build": "heft build",
-    "test": "heft test"
+    "test": "heft test",
+    "clean": "heft clean"
   },
   "devDependencies": {
     "@kcws/node-rig": "workspace:*",

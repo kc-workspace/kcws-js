@@ -385,6 +385,7 @@ lib-amd
 lib-es6
 lib-esnext
 lib-commonjs
+lib-umd
 dist
 *.scss.ts
 *.sass.ts
