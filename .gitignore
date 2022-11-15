@@ -393,3 +393,5 @@ dist
 # Exclude documentation because we build and deploy to Github pages
 _docs
 docs/*.md
+
+.stryker-tmp
