@@ -385,6 +385,7 @@ lib-amd
 lib-es6
 lib-esnext
 lib-commonjs
+lib-umd
 dist
 *.scss.ts
 *.sass.ts
@@ -392,3 +393,5 @@ dist
 # Exclude documentation because we build and deploy to Github pages
 _docs
 docs/*.md
+
+.stryker-tmp

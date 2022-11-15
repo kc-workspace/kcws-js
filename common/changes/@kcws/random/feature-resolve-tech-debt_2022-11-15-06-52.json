@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "add esm & umd",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/random"
+}

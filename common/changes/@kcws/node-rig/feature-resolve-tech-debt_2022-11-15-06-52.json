@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "improve liaibility",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}

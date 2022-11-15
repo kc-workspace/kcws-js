@@ -113,3 +113,5 @@ lib
 # Prettier reformats comments in json file which is not desired
 tsconfig.json
 tsconfig.*.json
+
+.stryker-tmp
