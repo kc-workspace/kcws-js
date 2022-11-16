@@ -36,6 +36,14 @@
       "enableParallelism": true,
       "ignoreMissingScript": true,
       "ignoreDependencyOrder": true
+    },
+    {
+      "name": "clean",
+      "commandKind": "bulk",
+      "summary": "Cleaning ignored files/directories for all projects",
+      "enableParallelism": true,
+      "ignoreMissingScript": true,
+      "ignoreDependencyOrder": true
     }
   ],
 
