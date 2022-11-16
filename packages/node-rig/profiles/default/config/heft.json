@@ -8,5 +8,15 @@
    * Optionally specifies another JSON config file that this file extends from. This provides a way for standard
    * settings to be shared across multiple projects.
    */
-  "extends": "@rushstack/heft-node-rig/profiles/default/config/heft.json"
+  // "extends": "@rushstack/heft-node-rig/profiles/default/config/heft.json",
+  "eventActions": [
+    {
+      "actionKind": "deleteGlobs",
+      "heftEvent": "clean",
+      "actionId": "defaultClean",
+      "globsToDelete": ["lib", "lib-es6", "lib-esnext", "lib-umd", "lib-commonjs", "lib-amd", "temp", "dist", "*.log"]
+    }
+  ],
+
+  "heftPlugins": [{ "plugin": "@rushstack/heft-jest-plugin" }]
 }
