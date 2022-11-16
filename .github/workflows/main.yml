@@ -32,7 +32,7 @@ jobs:
           command: change
           args: --verify
 
-  spellcheck: # run the action
+  spellcheck:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -44,10 +44,23 @@ jobs:
           verbose: true
           incremental_files_only: true
 
-  linting:
+  licensecheck:
     runs-on: ubuntu-latest
-    needs:
-      - changelog
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+      - name: Scanning dependencies
+        uses: fossas/fossa-action@v1
+        with:
+          api-key: ${{ secrets.FOSSA_APIKEY }}
+      - name: Testing dependencies
+        uses: fossas/fossa-action@v1
+        with:
+          api-key: ${{ secrets.FOSSA_APIKEY }}
+          run-tests: true
+
+  lintcheck:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
@@ -74,9 +87,6 @@ jobs:
           VALIDATE_JSON: false
 
   testing:
-    environment:
-      name: testing
-      url: https://sonarcloud.io/project/overview?id=kc-workspace_kcws-js
     runs-on: ubuntu-latest
     needs:
       - changelog

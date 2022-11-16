@@ -7,9 +7,10 @@ shared:
     - "#review-threads-unresolved=0"
   ci-status: &ci_status
     - check-success=changelog
-    - check-success=linting
-    - check-success=testing
+    - check-success=lintcheck
     - check-success=spellcheck
+    - check-success=licensecheck
+    - check-success=testing
 
 queue_rules:
   - name: default
