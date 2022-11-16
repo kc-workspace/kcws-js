@@ -1,0 +1,23 @@
+{
+  "extends": "@rushstack/heft-jest-plugin/includes/jest-shared.config.json",
+  "testEnvironment": "jsdom",
+  "reporters": [
+    "default",
+    [
+      "jest-html-reporters",
+      {
+        "publicPath": "temp/test/html"
+      }
+    ],
+    [
+      "jest-junit",
+      {
+        "outputDirectory": "temp/test",
+        "outputName": "junit.xml"
+      }
+    ]
+  ],
+  // Enabled code coverage by default
+  "collectCoverage": true,
+  "coverageReporters": ["text", ["lcov", { "projectRoot": "../.." }]]
+}

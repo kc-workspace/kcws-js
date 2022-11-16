@@ -1,0 +1,8 @@
+{
+  "operationSettings": [
+    {
+      "operationName": "build",
+      "outputFolderNames": ["dist", "lib", "lib-es6", "lib-esnext", "lib-umd", "lib-commonjs", "lib-amd", "temp"]
+    }
+  ]
+}

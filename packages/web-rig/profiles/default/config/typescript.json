@@ -1,0 +1,26 @@
+/**
+ * Configures the TypeScript plugin for Heft.  This plugin also manages linting.
+ */
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/typescript.schema.json",
+
+  /**
+   * Optionally specifies another JSON config file that this file extends from. This provides a way for standard
+   * settings to be shared across multiple projects.
+   */
+  "extends": "@rushstack/heft-web-rig/profiles/default/config/typescript.json",
+  "additionalModuleKindsToEmit": [
+    {
+      "moduleKind": "es2015",
+      "outFolderName": "lib-es6"
+    },
+    {
+      "moduleKind": "esnext",
+      "outFolderName": "lib-esnext"
+    },
+    {
+      "moduleKind": "commonjs",
+      "outFolderName": "lib-commonjs"
+    }
+  ]
+}
