@@ -356,6 +356,12 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/web-rig",
+      "projectFolder": "packages/web-rig",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@kcws/lintstaged-config",
       "projectFolder": "packages/lintstaged-config",
       "reviewCategory": "libraries",

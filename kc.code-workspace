@@ -9,6 +9,10 @@
       "path": "packages/color"
     },
     {
+      "name": "@kcws/web-rig",
+      "path": "packages/web-rig"
+    },
+    {
       "name": "@kcws/node-rig",
       "path": "packages/node-rig"
     },

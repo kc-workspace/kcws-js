@@ -8,15 +8,57 @@
    * Optionally specifies another JSON config file that this file extends from. This provides a way for standard
    * settings to be shared across multiple projects.
    */
-  "extends": "@rushstack/heft-node-rig/profiles/default/config/typescript.json",
+  // "extends": "@rushstack/heft-node-rig/profiles/default/config/typescript.json",
+
+  /**
+   * If provided, emit these module kinds in addition to the modules specified in the tsconfig.
+   * Note that this option only applies to the main tsconfig.json configuration.
+   */
   "additionalModuleKindsToEmit": [
+    {
+      "moduleKind": "commonjs",
+      "outFolderName": "lib-commonjs"
+    },
     {
       "moduleKind": "es2015",
       "outFolderName": "lib-es6"
     },
     {
-      "moduleKind": "esnext",
-      "outFolderName": "lib-esnext"
+      "moduleKind": "amd",
+      "outFolderName": "lib-amd"
+    },
+    {
+      "moduleKind": "umd",
+      "outFolderName": "lib-umd"
     }
-  ]
+  ],
+
+  /**
+   * If true, emit CommonJS module output to the folder specified in the tsconfig "outDir" compiler option with the .cjs extension alongside (or instead of, if TSConfig specifies CommonJS) the default compilation output.
+   */
+  // "emitCjsExtensionForCommonJS": true,
+
+  /**
+   * If true, emit ESNext module output to the folder specified in the tsconfig "outDir" compiler option with the .mjs extension alongside (or instead of, if TSConfig specifies ESNext) the default compilation output.
+   */
+  // "emitMjsExtensionForESModule": true,
+
+  /**
+   * Specifies the intermediary folder that tests will use.  Because Jest uses the
+   * Node.js runtime to execute tests, the module format must be CommonJS.
+   *
+   * The default value is "lib".
+   */
+  "emitFolderNameForTests": "lib-commonjs",
+
+  /**
+   * Configures additional file types that should be copied into the TypeScript compiler's emit folders, for example
+   * so that these files can be resolved by import statements.
+   */
+  "staticAssetsToCopy": {
+    /**
+     * File extensions that should be copied from the src folder to the destination folder(s).
+     */
+    "fileExtensions": [".json"]
+  }
 }

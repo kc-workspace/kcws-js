@@ -4,87 +4,71 @@
   "packages": [
     {
       "name": "@kcws/eslint-config",
-      "allowedCategories": [
-        "libraries",
-        "prototypes",
-        "tools"
-      ]
+      "allowedCategories": [ "libraries", "prototypes", "tools" ]
     },
     {
       "name": "@kcws/lintstaged-config",
-      "allowedCategories": [
-        "libraries",
-        "prototypes",
-        "tools"
-      ]
+      "allowedCategories": [ "libraries", "prototypes", "tools" ]
+    },
+    {
+      "name": "@kcws/web-rig",
+      "allowedCategories": [ "prototypes" ]
     },
     {
       "name": "@microsoft/api-extractor",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@rushstack/eslint-config",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@rushstack/heft",
-      "allowedCategories": [
-        "libraries",
-        "prototypes",
-        "tools"
-      ]
+      "allowedCategories": [ "libraries", "prototypes", "tools" ]
     },
     {
       "name": "@rushstack/heft-jest-plugin",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@rushstack/heft-node-rig",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "@rushstack/heft-sass-plugin",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "@rushstack/heft-web-rig",
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "eslint",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "jest-environment-jsdom",
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "jest-environment-node",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "jest-html-reporters",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "jest-junit",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "micromatch",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "typescript",
-      "allowedCategories": [
-        "libraries"
-      ]
+      "allowedCategories": [ "libraries" ]
     }
   ]
 }
