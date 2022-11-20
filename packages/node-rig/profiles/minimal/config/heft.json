@@ -18,12 +18,5 @@
     }
   ],
 
-  "heftPlugins": [
-    {
-      "plugin": "@kcws-tools/heft-stryker-plugin",
-      "options": {
-        "example": true
-      }
-    }
-  ]
+  "heftPlugins": [{ "plugin": "@rushstack/heft-jest-plugin" }]
 }

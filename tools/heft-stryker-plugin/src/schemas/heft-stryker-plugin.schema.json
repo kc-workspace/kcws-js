@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Heft Stryker mutator Plugin Options Configuration",
+  "description": "This schema describes the \"options\" field that can be specified in heft.json when loading \"@rushstack/heft-stryker-plugin\".",
+  "type": "object",
+
+  "additionalProperties": false,
+  "properties": {
+    "example": {
+      "title": "Example properties for options",
+      "description": "If set to true, modules specified in the Jest configuration will be resolved using Jest default (rootDir-relative) resolution. Otherwise, modules will be resolved using Node module resolution.",
+      "type": "boolean"
+    }
+  }
+}
