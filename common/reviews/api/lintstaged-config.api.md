@@ -11,7 +11,7 @@ export class Config<K extends string> {
     // Warning: (ae-forgotten-export) The symbol "Builder" needs to be exported by the entry point index.d.ts
     static builder<K extends string = "">(): Builder<K>;
     // @beta
-    getCommands(cond: ConfigCondition): Promise<Array<string>>;
+    getCommands(condition: ConfigCondition): Promise<Array<string>>;
     // @beta
     get length(): number;
 }

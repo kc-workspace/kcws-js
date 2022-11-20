@@ -16,7 +16,7 @@
     "**/package.json",
     "**/.cspell.json",
     "**/.vscode",
-    "kc.code-workspace"
+    "**/kc.code-workspace"
   ],
   "dictionaries": [
     "softwareTerms",
