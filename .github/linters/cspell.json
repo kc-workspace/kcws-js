@@ -12,11 +12,18 @@
     "kcws"
   ],
   "ignorePaths": [
+    // Ignore Pnpm lock file
     "**/pnpm-lock.yaml",
+    // Ignore dependencies and package file
     "**/package.json",
+    // Ignore cspell config
     "**/.cspell.json",
+    // Ignore vscode config
     "**/.vscode",
-    "**/kc.code-workspace"
+    // Ignore vscode workspace config
+    "**/kc.code-workspace",
+    // Ignore auto-generate scripts
+    "**/common/scripts"
   ],
   "dictionaries": [
     "softwareTerms",
