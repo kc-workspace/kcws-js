@@ -1,8 +1,8 @@
-import exection, { Config } from ".";
+import execution, { Config } from ".";
 
 describe("index", () => {
   it("execution", () => {
-    expect(exection).toBeTruthy();
+    expect(execution).toBeTruthy();
   });
 
   it("export Config class", () => {
