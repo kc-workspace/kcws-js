@@ -1,4 +1,8 @@
+mergify
+npmjs
+npmrc
 rush
+rushx
 rushjs
 rushstack
 heft

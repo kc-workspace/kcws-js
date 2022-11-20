@@ -11,7 +11,13 @@
     // Application name
     "kcws"
   ],
-  "ignorePaths": ["node_modules/**"],
+  "ignorePaths": [
+    "node_modules",
+    "pnpm-lock.yaml",
+    "package.json",
+    ".cspell.json",
+    ".vscode"
+  ],
   "dictionaries": [
     "softwareTerms",
     "typescript",
@@ -19,11 +25,16 @@
     "bash",
     "filetypes",
     "npm",
-    "custom-people",
-    "custom-libs"
+    "customCommons",
+    "customApps",
+    "customSoftwares",
+    "customNames"
   ],
   "dictionaryDefinitions": [
-    { "name": "custom-people", "path": "./cspell-people.dict.txt" },
-    { "name": "custom-libs", "path": "./cspell-libs.dict.txt" }
-  ]
+    { "name": "customCommons", "path": "./cspell-commons.dict.txt" },
+    { "name": "customApps", "path": "./cspell-apps.dict.txt" },
+    { "name": "customSoftwares", "path": "./cspell-softwares.dict.txt" },
+    { "name": "customNames", "path": "./cspell-names.dict.txt" }
+  ],
+  "useGitignore": true
 }

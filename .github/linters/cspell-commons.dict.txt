@@ -1,0 +1,4 @@
+noreply
+myproject
+qrcode
+tmpl

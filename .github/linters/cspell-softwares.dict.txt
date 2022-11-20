@@ -1,0 +1,6 @@
+tsdoc
+lcov
+webp
+webm
+jsts
+regexs
