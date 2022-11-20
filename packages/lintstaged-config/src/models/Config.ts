@@ -255,12 +255,12 @@ export class Config<K extends string> {
    *
    * @beta
    */
-  public async getCommands(cond: ConfigCondition): Promise<Array<string>> {
+  public async getCommands(condition: ConfigCondition): Promise<Array<string>> {
     const results: Array<string> = [];
     for await (const [key, value] of this._config.entries()) {
       if (this._isDebug) console.log(`verifying ${key}...`);
 
-      const files = cond(value.regexs);
+      const files = condition(value.regexs);
       if (files.length > 0) {
         if (this._isDebug)
           console.log(`found matched files [${files.join(",")}]`);
