@@ -12,11 +12,10 @@
     "kcws"
   ],
   "ignorePaths": [
-    "node_modules",
-    "pnpm-lock.yaml",
-    "package.json",
-    ".cspell.json",
-    ".vscode"
+    "**/pnpm-lock.yaml",
+    "**/package.json",
+    "**/.cspell.json",
+    "**/.vscode"
   ],
   "dictionaries": [
     "softwareTerms",
@@ -36,5 +35,6 @@
     { "name": "customSoftwares", "path": "./cspell-softwares.dict.txt" },
     { "name": "customNames", "path": "./cspell-names.dict.txt" }
   ],
-  "useGitignore": true
+  "useGitignore": true,
+  "gitignoreRoot": "../.."
 }
