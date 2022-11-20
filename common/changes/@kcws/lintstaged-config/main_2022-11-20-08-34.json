@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "comment": "update variable name for meaningful word",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config"
+}
