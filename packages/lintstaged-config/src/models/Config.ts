@@ -266,16 +266,16 @@ export class Config<K extends string> {
           console.log(`found matched files [${files.join(",")}]`);
 
         // Resolve static actions
-        const saction = await this._resolveAction(value.actions);
-        if (this._isDebug) console.log(`static action: [${saction.join(",")}]`);
+        const staticActions = await this._resolveAction(value.actions);
+        if (this._isDebug) console.log(`static action: [${staticActions.join(",")}]`);
 
         // Resolve dynamic actions
-        const daction = await this._resolveAction(value.actionFn?.(files));
+        const dynamicActions = await this._resolveAction(value.actionFn?.(files));
         if (this._isDebug)
-          console.log(`dynamic action: [${daction.join(",")}]`);
+          console.log(`dynamic action: [${dynamicActions.join(",")}]`);
 
-        results.push(...saction);
-        results.push(...daction);
+        results.push(...staticActions);
+        results.push(...dynamicActions);
       }
     }
 

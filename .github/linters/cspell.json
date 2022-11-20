@@ -1,20 +1,29 @@
 // https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell#example-cspelljson-file
 {
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
-  // Version of the setting file.  Always 0.2
   "version": "0.2",
-  // language - current active spelling language
   "language": "en",
-  // words - list of words to be always considered correct
+  "allowCompoundWords": true,
   "words": [
+    // People name
     "kamontat",
-    "mergify",
-    "sonar",
-    "sonarqube",
-    "sonarcloud",
-    "rushx",
-    "rushjs",
-    "changesfile"
+    "chantrachirathumrong",
+    // Application name
+    "kcws"
   ],
-  "ignorePaths": ["node_modules/**"]
+  "ignorePaths": ["node_modules/**"],
+  "dictionaries": [
+    "softwareTerms",
+    "typescript",
+    "node",
+    "bash",
+    "filetypes",
+    "npm",
+    "custom-people",
+    "custom-libs"
+  ],
+  "dictionaryDefinitions": [
+    { "name": "custom-people", "path": "./cspell-people.dict.txt" },
+    { "name": "custom-libs", "path": "./cspell-libs.dict.txt" }
+  ]
 }
