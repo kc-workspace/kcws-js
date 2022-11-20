@@ -31,7 +31,7 @@
     "clean": "heft clean"
   },
   "devDependencies": {
-    "@kcws/node-rig": "workspace:*",
+    "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.48.8",

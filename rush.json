@@ -31,7 +31,7 @@
    *
    * The latest version can found here: https://github.com/pnpm/pnpm/releases
    */
-  "pnpmVersion": "7.15.0",
+  "pnpmVersion": "7.16.1",
   "pnpmOptions": {
     // https://github.com/microsoft/rushstack/issues/2542#issuecomment-794990772
     "useWorkspaces": true,
@@ -352,6 +352,12 @@
     {
       "packageName": "@kcws/node-rig",
       "projectFolder": "packages/node-rig",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/web-rig",
+      "projectFolder": "packages/web-rig",
       "reviewCategory": "libraries",
       "shouldPublish": true
     },

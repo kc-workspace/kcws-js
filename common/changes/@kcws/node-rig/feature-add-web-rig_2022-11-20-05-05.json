@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "update dependencies",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}

@@ -36,6 +36,14 @@
       "enableParallelism": true,
       "ignoreMissingScript": true,
       "ignoreDependencyOrder": true
+    },
+    {
+      "name": "clean",
+      "commandKind": "bulk",
+      "summary": "Cleaning ignored files/directories for all projects",
+      "enableParallelism": true,
+      "ignoreMissingScript": true,
+      "ignoreDependencyOrder": true
     }
   ],
 
@@ -49,6 +57,12 @@
       "longName": "--upgrade",
       "shortName": "-u",
       "description": "Overwrite package file with upgraded versions instead of just outputting to console.",
+      "associatedCommands": ["deps"]
+    },
+    {
+      "parameterKind": "flag",
+      "longName": "--verbose",
+      "description": "Log additional information for debugging.",
       "associatedCommands": ["deps"]
     },
     {

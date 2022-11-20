@@ -9,6 +9,10 @@
       "path": "packages/color"
     },
     {
+      "name": "@kcws/web-rig",
+      "path": "packages/web-rig"
+    },
+    {
       "name": "@kcws/node-rig",
       "path": "packages/node-rig"
     },
@@ -25,15 +29,15 @@
       "path": "tools/example"
     },
     {
-      "name": "common",
-      "path": "common"
+      "name": "@kcws-common/autoinstallers",
+      "path": "common/autoinstallers"
     },
     {
-      "name": "docs",
-      "path": "docs"
+      "name": "@kcws-common/config",
+      "path": "common/config"
     },
     {
-      "name": "scripts",
+      "name": "@kcws-common/scripts",
       "path": "scripts"
     },
     {

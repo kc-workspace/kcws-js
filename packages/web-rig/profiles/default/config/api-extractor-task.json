@@ -1,0 +1,15 @@
+/**
+ * Configures the API Extractor task for the Heft build system.
+ *
+ * This optional additional file customizes how the Heft task is invoked. The main analysis is
+ * controlled by API Extractor's own "api-extractor.json" config file.
+ */
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/api-extractor-task.schema.json",
+
+  /**
+   * Optionally specifies another JSON config file that this file extends from. This provides a way for standard
+   * settings to be shared across multiple projects.
+   */
+  "extends": "@rushstack/heft-web-rig/profiles/library/config/api-extractor-task.json"
+}

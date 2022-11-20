@@ -8,7 +8,7 @@
    * Optionally specifies another JSON config file that this file extends from. This provides a way for standard
    * settings to be shared across multiple projects.
    */
-  // "extends": "@rushstack/heft-node-rig/profiles/default/config/typescript.json",
+  // "extends": "@rushstack/heft-web-rig/profiles/library/config/typescript.json",
 
   /**
    * If provided, emit these module kinds in addition to the modules specified in the tsconfig.
@@ -55,10 +55,32 @@
    * Configures additional file types that should be copied into the TypeScript compiler's emit folders, for example
    * so that these files can be resolved by import statements.
    */
-  "staticAssetsToCopy": {
+   "staticAssetsToCopy": {
     /**
      * File extensions that should be copied from the src folder to the destination folder(s).
      */
-    "fileExtensions": [".json"]
+    "fileExtensions": [
+      ".aac",
+      ".css",
+      ".eot",
+      ".gif",
+      ".jpeg",
+      ".jpg",
+      ".json",
+      ".m4a",
+      ".mp3",
+      ".mp4",
+      ".oga",
+      ".otf",
+      ".png",
+      ".scss",
+      ".svg",
+      ".ttf",
+      ".wav",
+      ".webm",
+      ".webp",
+      ".woff",
+      ".woff2"
+    ]
   }
 }
