@@ -4,3 +4,5 @@ webp
 webm
 jsts
 regexs
+pjson
+pnpmfile

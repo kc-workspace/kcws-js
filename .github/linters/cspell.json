@@ -15,7 +15,8 @@
     "**/pnpm-lock.yaml",
     "**/package.json",
     "**/.cspell.json",
-    "**/.vscode"
+    "**/.vscode",
+    "kc.code-workspace"
   ],
   "dictionaries": [
     "softwareTerms",

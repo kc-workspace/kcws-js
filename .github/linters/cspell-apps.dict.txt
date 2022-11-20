@@ -1,9 +1,11 @@
 mergify
 npmjs
 npmrc
+pnpm
 rush
 rushx
 rushjs
 rushstack
 heft
 rig
+ncurc
