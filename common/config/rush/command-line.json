@@ -61,6 +61,12 @@
     },
     {
       "parameterKind": "flag",
+      "longName": "--verbose",
+      "description": "Log additional information for debugging.",
+      "associatedCommands": ["deps"]
+    },
+    {
+      "parameterKind": "flag",
       "longName": "--interactive",
       "shortName": "-i",
       "description": "Interactively select which packages to upgrade.",
