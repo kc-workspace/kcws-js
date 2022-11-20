@@ -52,11 +52,11 @@ jobs:
       - name: Scanning dependencies
         uses: fossas/fossa-action@v1
         with:
-          api-key: ${{ secrets.FOSSA_APIKEY }}
+          api-key: ${{ secrets.FOSSA_API_KEY }}
       - name: Testing dependencies
         uses: fossas/fossa-action@v1
         with:
-          api-key: ${{ secrets.FOSSA_APIKEY }}
+          api-key: ${{ secrets.FOSSA_API_KEY }}
           run-tests: true
 
   lintcheck:
