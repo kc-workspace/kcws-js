@@ -11,7 +11,7 @@ format: group
 
 # Determines the version to upgrade to.
 # choices: latest, newest, greatest, minor, patch
-target: minor
+target: latest
 
 # Include only package names matching the given string, wildcard, glob,
 # comma-or-space-delimited list, or /regex/
@@ -21,4 +21,6 @@ filter:
 # Exclude packages matching the given string, wildcard, glob,
 # comma-or-space-delimited list, or /regex/
 reject:
-  - "@types/*"
+  # Jest environment will upgrade based on heft-jest-plugin
+  - "jest-environment-jsdom"
+  - "jest-environment-node"
