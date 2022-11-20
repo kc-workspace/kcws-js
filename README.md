@@ -30,7 +30,7 @@
     <img src="https://img.shields.io/sonar/coverage/kc-workspace_kcws-js/main?server=https%3A%2F%2Fsonarcloud.io&style=flat-square" alt="Code coverage" />
   </a>
   <a href="https://dashboard.mergify.com/github/kc-workspace/repo/kcws-js/queues">
-  <img src="https://img.shields.io/endpoint.svg?url=https://api.mergify.com/v1/badges/kc-workspace/kcws-js&style=flat-square" alt="Mergify status" />
+  <img src="https://img.shields.io/endpoint?label=mergify&logo=-&style=flat-square&url=https%3A%2F%2Fapi.mergify.com%2Fv1%2Fbadges%2Fkc-workspace%2Fkcws-js" alt="Mergify status" />
   </a>
 </p>
 
