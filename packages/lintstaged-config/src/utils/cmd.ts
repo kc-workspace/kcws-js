@@ -14,6 +14,6 @@ export const getCommand = (name: string): string => {
   const _name = name.replace(/ /g, "");
   const checking = ["command", "-v", _name].join(" ");
   const output = spawnSync(checking, { shell: true, encoding: "utf8" });
-  if (output.status === 0) return output.stdout;
+  if (output.status === 0) return output.stdout.trim();
   else return name;
 };
