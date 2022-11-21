@@ -87,7 +87,7 @@ describe("index", () => {
   ])(
     "default config with filenames %p, should return %p",
     async (filenames, expected) => {
-      // defineConfig will always return as string[] to simplefy the usage
+      // defineConfig will always return as string[] to simplify the usage
       // however, ConfigFn still require to return CommandType
       // for accurate type of lintstaged config
       const actual = (await defineConfig(Config.default().build())(
