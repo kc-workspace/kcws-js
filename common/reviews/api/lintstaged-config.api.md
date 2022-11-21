@@ -5,36 +5,75 @@
 ```ts
 
 // @public
-export class Config<K extends string> {
-    // Warning: (ae-forgotten-export) The symbol "IConfigValue" needs to be exported by the entry point index.d.ts
+export type BaseActionFn<O extends IBaseActionOptions> = (options?: O) => string;
+
+// @public
+export class Builder<K extends string> implements IConfigBuilder {
+    constructor();
+    append(key: K, value: Partial<Exclude<IConfigValue, "actionFn">>): Builder<K>;
+    build(): Config<K>;
+    debugMode(): Builder<K>;
+    default(): Builder<K | DefaultKey>;
+    delete<EK extends K>(key: EK): Builder<Exclude<K, EK>>;
+    set<EK extends string>(key: EK, value: Partial<IConfigValue>): Builder<K | EK>;
+}
+
+// @public
+export type CommandType = string | Array<string> | Promise<string | Array<string>> | Array<Promise<string | Array<string>>>;
+
+// @public
+export class Config<K extends string> implements IConfigBuilder, IConfig {
     constructor(config: Map<K, IConfigValue>, settings: Map<string, string>);
-    // Warning: (ae-forgotten-export) The symbol "Builder" needs to be exported by the entry point index.d.ts
+    // @override
+    build(): this;
     static builder<K extends string = "">(): Builder<K>;
-    // @beta
+    static default(): Builder<DefaultKey>;
+    // @override
     getCommands(condition: ConfigCondition): Promise<Array<string>>;
-    // @beta
     get length(): number;
 }
 
-// @beta
+// @public
 export type ConfigCondition = (regex: Array<string>) => Array<string>;
 
-// Warning: (ae-forgotten-export) The symbol "ConfigFn" needs to be exported by the entry point index.d.ts
-//
-// @public (undocumented)
-const _default: <K extends string>(config: Config<K>) => ConfigFn;
-export default _default;
+// @public
+export type ConfigFn = (filenames: Array<string>) => CommandType;
 
 // @beta
 export const DEFAULT_YAMLLINT_CONFIG: string;
 
-// Warning: (ae-forgotten-export) The symbol "BaseActionFn" needs to be exported by the entry point index.d.ts
-//
+// @public
+export type DefaultKey = "jsts" | "json" | "sh" | "yaml";
+
+// @beta
+function defineConfig(builder: IConfigBuilder): ConfigFn;
+export default defineConfig;
+
 // @beta
 export const eslint: BaseActionFn<IEslintOptions>;
 
-// Warning: (ae-forgotten-export) The symbol "IBaseActionOptions" needs to be exported by the entry point index.d.ts
-//
+// @public
+export interface IBaseActionOptions {
+    files?: Array<string>;
+}
+
+// @public
+export interface IConfig {
+    getCommands(condition: ConfigCondition): Promise<Array<string>>;
+}
+
+// @public
+export interface IConfigBuilder {
+    build(): IConfig;
+}
+
+// @public
+export interface IConfigValue {
+    actionFn: ConfigFn;
+    actions: CommandType;
+    regexs: Array<string>;
+}
+
 // @beta
 export interface IEslintOptions extends IBaseActionOptions {
     // (undocumented)
@@ -69,7 +108,5 @@ export const shellcheck: BaseActionFn<IShellcheckOptions>;
 
 // @beta
 export const yamllint: BaseActionFn<IYamllintOptions>;
-
-// (No @packageDocumentation comment for this package)
 
 ```

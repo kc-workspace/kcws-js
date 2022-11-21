@@ -19,7 +19,7 @@ export type ConfigFn = (filenames: Array<string>) => CommandType;
 /**
  * All possible values contains in configuration mapper.
  *
- * @internal
+ * @public
  */
 export interface IConfigValue {
   /**
@@ -57,24 +57,41 @@ export interface IConfigValue {
 /**
  * A configuration builder for lintstaged.
  *
- * @beta
+ * @public
  */
 export interface IConfigBuilder {
+  /**
+   * Build configuration object.
+   */
   build(): IConfig;
 }
 
 /**
  * A lintstaged configuration
  *
- * @beta
+ * @public
  */
 export interface IConfig {
+  /**
+   * select series of command needed to execute based on input condition
+   *
+   * @remarks
+   *
+   * we will select all static and dynamic actions from
+   * any config group that regex return non-empty array.
+   * and execute action to get command and merge them together.
+   *
+   * @param cond - condition to select specify config values
+   * @returns commands to execute on terminal
+   *
+   * @public
+   */
   getCommands(condition: ConfigCondition): Promise<Array<string>>;
 }
 
 /**
  * Condition to getCommand from config
  *
- * @beta
+ * @public
  */
 export type ConfigCondition = (regex: Array<string>) => Array<string>;

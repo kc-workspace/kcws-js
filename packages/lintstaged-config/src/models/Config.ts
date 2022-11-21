@@ -12,7 +12,8 @@ import { toArray } from "../utils/array";
 import { toPromise } from "../utils/promise";
 
 /**
- * Config builder create by {@link Config.builder} function.
+ * Config builder. This class should not be created manually.
+ * Use {@link Config.builder} or {@link Config.default} instead.
  *
  * @public
  */
@@ -20,15 +21,33 @@ class Builder<K extends string> implements IConfigBuilder {
   private _result: Map<string, IConfigValue>;
   private _settings: Map<string, string>;
 
+  /**
+   * Do not use this constructor directly.
+   * Use {@link Config.builder} or {@link Config.default} instead.
+   */
   public constructor() {
     this._result = new Map();
     this._settings = new Map();
   }
 
+  /**
+   * append default actions to current builder
+   *
+   * @returns this object
+   *
+   * @public
+   */
   public default(): Builder<K | DefaultKey> {
     return defineDefaultConfig(this);
   }
 
+  /**
+   * enable debug mode when loading configuration
+   *
+   * @returns this object
+   *
+   * @public
+   */
   public debugMode(): Builder<K> {
     this._settings.set("debug", "true");
     return this;
@@ -152,7 +171,7 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
    * This can be check to ensure
    * we setting config object correctly
    *
-   * @beta
+   * @public
    */
   public get length(): number {
     return this._config.size;
@@ -168,7 +187,7 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
   }
 
   /**
-   * create config builder with empty value
+   * create config builder with empty value.
    *
    * @returns config builder
    *
@@ -178,22 +197,18 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
     return new Builder<K>();
   }
 
+  /**
+   * create config builder with default group predefined.
+   *
+   * @returns config builder
+   */
   public static default(): Builder<DefaultKey> {
     return new Builder<DefaultKey>().default();
   }
 
   /**
-   * select series of command needed to execute on input condition
-   *
-   * @remarks
-   * we will select all static and dynamic actions from
-   * any config group that regex return non-empty array.
-   * and execute action to get command and merge them together.
-   *
-   * @param cond - condition to select specify config values
-   * @returns commands to execute on terminal
-   *
-   * @beta
+   * {@inheritDoc IConfig.getCommands}
+   * @override
    */
   public async getCommands(condition: ConfigCondition): Promise<Array<string>> {
     const results: Array<string> = [];
@@ -229,7 +244,8 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
    * Empty implementation as Config already IConfig,
    * so we can just return itself.
    *
-   * @returns itself
+   * @returns this object
+   * @override
    */
   public build(): this {
     return this;

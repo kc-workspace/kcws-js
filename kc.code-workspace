@@ -37,6 +37,10 @@
       "path": "common/config"
     },
     {
+      "name": "@kcws-common/reviews",
+      "path": "common/reviews"
+    },
+    {
       "name": "@kcws-common/scripts",
       "path": "scripts"
     },

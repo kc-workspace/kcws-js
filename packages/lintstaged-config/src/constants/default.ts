@@ -4,6 +4,8 @@ import { prettier, eslint, shellcheck, yamllint } from "../actions";
 
 /**
  * Default possible key
+ *
+ * @public
  */
 export type DefaultKey = "jsts" | "json" | "sh" | "yaml";
 
