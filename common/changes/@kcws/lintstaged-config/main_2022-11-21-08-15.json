@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "comment": "improve config, builder, and default value",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config"
+}
