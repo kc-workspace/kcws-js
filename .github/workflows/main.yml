@@ -43,7 +43,8 @@ jobs:
           config: '.github/linters/cspell.json'
           # Log progress and other information during the action execution.
           verbose: true
-          # Determines if the action should be failed if any spelling issues are found.
+          # Determines if the action should be failed
+          # if any spelling issues are found.
           strict: true
           # Limit the files checked to the ones in the pull request or push.
           # We will enabled this only if this job tooks more than 3 minutes
@@ -97,7 +98,7 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     # This is depends on which node version rushjs support
-    # https://github.com/microsoft/rushstack/blob/main/.github/workflows/ci.yml#L15
+    # https://github.com/microsoft/rushstack/blob/main/.github/workflows/ci.yml
     strategy:
       matrix:
         node-version: [14, 16]
