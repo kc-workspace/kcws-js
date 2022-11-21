@@ -1,59 +1,22 @@
-import type { CommandType, ConfigFn } from "./ConfigFn";
+import type {
+  ConfigCondition,
+  IConfigValue,
+  IConfigBuilder,
+  CommandType,
+  IConfig,
+} from "./IConfig";
+
+import { defineDefaultConfig, type DefaultKey } from "../constants/default";
 
 import { toArray } from "../utils/array";
 import { toPromise } from "../utils/promise";
-
-import { prettier, eslint, shellcheck, yamllint } from "../actions";
-
-/**
- * All possible values contains in configuration mapper.
- *
- * @internal
- */
-export interface IConfigValue {
-  /**
-   * Regular Expression for matching staged files
-   *
-   * @remarks
-   * This values will be passed to
-   * {@link https://github.com/micromatch/micromatch | micromatch} to apply.
-   */
-  regexs: Array<string>;
-  /**
-   * Action after staged file matched with regex values.
-   *
-   * @remarks
-   * This values will execute as static command
-   * without any matched files name,
-   * if you would like to include staged file in the command.
-   * Please use {@link IConfigValue.actionFn} instead.
-   * You can specify both values.
-   */
-  actions: CommandType;
-
-  /**
-   * Function execute with matched regex values.
-   *
-   * @remarks
-   * This function will include staged files matched with provide regex,
-   * if you would like to run simple command(s).
-   * Please use {@link IConfigValue.actions} instead.
-   * You can specify both values.
-   */
-  actionFn: ConfigFn;
-}
-
-/**
- * Default possible key
- */
-export type DefaultKey = "jsts" | "json" | "sh" | "yaml";
 
 /**
  * Config builder create by {@link Config.builder} function.
  *
  * @public
  */
-class Builder<K extends string> {
+class Builder<K extends string> implements IConfigBuilder {
   private _result: Map<string, IConfigValue>;
   private _settings: Map<string, string>;
 
@@ -62,28 +25,8 @@ class Builder<K extends string> {
     this._settings = new Map();
   }
 
-  public default(): Builder<DefaultKey> {
-    const builder = new Builder<DefaultKey>();
-    return builder
-      .set("jsts", {
-        regexs: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-        actionFn: (files) => [
-          eslint({ files, fix: true, maxWarnings: 0 }),
-          prettier({ fix: true, files }),
-        ],
-      })
-      .set("json", {
-        regexs: ["**/*.json"],
-        actionFn: (files) => prettier({ fix: true, files }),
-      })
-      .set("sh", {
-        regexs: ["**/*.sh", "**/*.bash", "**/*.zsh"],
-        actionFn: (files) => shellcheck({ files }),
-      })
-      .set("yaml", {
-        regexs: ["**/*.yaml", "**/*.yml"],
-        actionFn: (files) => yamllint({ files }),
-      });
+  public default(): Builder<K | DefaultKey> {
+    return defineDefaultConfig(this);
   }
 
   public debugMode(): Builder<K> {
@@ -185,19 +128,12 @@ class Builder<K extends string> {
 }
 
 /**
- * Condition to getCommand from config
- *
- * @beta
- */
-export type ConfigCondition = (regex: Array<string>) => Array<string>;
-
-/**
  * Configuration object to generate list of command
  * needed for specify values on {@link ConfigCondition}
  *
  * @public
  */
-export class Config<K extends string> {
+export class Config<K extends string> implements IConfigBuilder, IConfig {
   private _config: Map<K, IConfigValue>;
   private _settings: Map<string, string>;
 
@@ -242,6 +178,10 @@ export class Config<K extends string> {
     return new Builder<K>();
   }
 
+  public static default(): Builder<DefaultKey> {
+    return new Builder<DefaultKey>().default();
+  }
+
   /**
    * select series of command needed to execute on input condition
    *
@@ -267,10 +207,13 @@ export class Config<K extends string> {
 
         // Resolve static actions
         const staticActions = await this._resolveAction(value.actions);
-        if (this._isDebug) console.log(`static action: [${staticActions.join(",")}]`);
+        if (this._isDebug)
+          console.log(`static action: [${staticActions.join(",")}]`);
 
         // Resolve dynamic actions
-        const dynamicActions = await this._resolveAction(value.actionFn?.(files));
+        const dynamicActions = await this._resolveAction(
+          value.actionFn?.(files)
+        );
         if (this._isDebug)
           console.log(`dynamic action: [${dynamicActions.join(",")}]`);
 
@@ -280,6 +223,16 @@ export class Config<K extends string> {
     }
 
     return results;
+  }
+
+  /**
+   * Empty implementation as Config already IConfig,
+   * so we can just return itself.
+   *
+   * @returns itself
+   */
+  public build(): this {
+    return this;
   }
 
   private async _resolveAction(
@@ -297,3 +250,5 @@ export class Config<K extends string> {
     return Promise.all(promises).then((v) => v.flatMap((v) => v));
   }
 }
+
+export type { Builder };

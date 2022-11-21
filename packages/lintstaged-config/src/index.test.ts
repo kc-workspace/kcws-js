@@ -1,11 +1,15 @@
-import execution, { Config } from ".";
+import defineConfig, { Config } from ".";
 
 describe("index", () => {
-  it("execution", () => {
-    expect(execution).toBeTruthy();
+  it("defineConfig exported", () => {
+    expect(defineConfig).toBeTruthy();
   });
 
-  it("export Config class", () => {
+  it("Config exported", () => {
     expect(Config).toBeTruthy();
+  });
+
+  it("default config", () => {
+    expect(Config.default().build().length).toBeGreaterThan(0);
   });
 });
