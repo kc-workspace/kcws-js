@@ -11,6 +11,11 @@ export interface IShellcheckOptions extends IBaseActionOptions {}
 /**
  * create command with input option
  *
+ * @remarks
+ *
+ * Function type: {@link BaseActionFn} and
+ * Option type: {@link IShellcheckOptions}
+ *
  * @param option - customize option
  * @returns command
  *

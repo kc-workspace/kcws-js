@@ -21,6 +21,11 @@ export const DEFAULT_YAMLLINT_CONFIG: string = ".github/linters/.yamllint.yml";
 /**
  * create command with input option
  *
+ * @remarks
+ *
+ * Function type: {@link BaseActionFn} and
+ * Option type: {@link IYamllintOptions}
+ *
  * @param option - customize option
  * @returns command
  *

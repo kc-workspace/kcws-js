@@ -14,6 +14,11 @@ export interface IPrettierOptions extends IBaseActionOptions {
 /**
  * create command with input option
  *
+ * @remarks
+ *
+ * Function type: {@link BaseActionFn} and
+ * Option type: {@link IPrettierOptions}
+ *
  * @param option - customize option
  * @returns command
  *

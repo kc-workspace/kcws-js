@@ -13,11 +13,22 @@ import micromatch, { type Options } from "micromatch";
  *
  * @param builder - a setting for configure lintstaged.
  * @returns a lintstaged configuration.
+ *
  * @example
  *
- * const \{ default: defineConfig, Config \} = require("\@kcws/lintstaged-config");
- * // you can custom your setting via .append() or .set() in Config.builder()
+ * Use lintstaged-config with default configuration
+ * ```ts
+ * const { default: defineConfig, Config } = require("@kcws/lintstaged-config");
  * module.exports = defineConfig(Config.default());
+ * ```
+ *
+ * @example
+ *
+ * Use lintstaged-config with custom configuration
+ * ```ts
+ * const { default: defineConfig, Config } = require("@kcws/lintstaged-config");
+ * module.exports = defineConfig(Config.builder().append("group_name", {}));
+ * ```
  *
  * @beta
  */
