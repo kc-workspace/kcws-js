@@ -126,6 +126,7 @@ jobs:
           args: --verbose
       - name: Analysis packages
         uses: SonarSource/sonarcloud-github-action@master
+        if: matrix.node-version == 16
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
