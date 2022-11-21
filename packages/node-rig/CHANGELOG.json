@@ -2,6 +2,39 @@
   "name": "@kcws/node-rig",
   "entries": [
     {
+      "version": "0.2.0",
+      "tag": "@kcws/node-rig_v0.2.0",
+      "date": "Mon, 21 Nov 2022 08:39:34 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "update dependencies",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "3b85884b87cea3fc32ae77ebafe6a87e850b371a"
+          }
+        ],
+        "none": [
+          {
+            "comment": "improve liability",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "d116e684c7fca1740073c11a62c9e2156ead17ef"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2ee487b2cd7929f77e52a220b24140e90bb72fd5"
+          },
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "0b5e8f508638cc932ce6d63398b0a4856e977a2d"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.0",
       "tag": "@kcws/node-rig_v0.1.0",
       "date": "Fri, 04 Nov 2022 18:42:44 GMT",

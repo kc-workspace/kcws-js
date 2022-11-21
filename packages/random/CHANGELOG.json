@@ -2,6 +2,35 @@
   "name": "@kcws/random",
   "entries": [
     {
+      "version": "0.2.0",
+      "tag": "@kcws/random_v0.2.0",
+      "date": "Mon, 21 Nov 2022 08:39:34 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "add esm & umd",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "53b7e08fccdc55d4dd0f68a29f795bff88de38ff"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2ee487b2cd7929f77e52a220b24140e90bb72fd5"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.2.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.2.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.0",
       "tag": "@kcws/random_v0.1.0",
       "date": "Fri, 04 Nov 2022 18:42:44 GMT",

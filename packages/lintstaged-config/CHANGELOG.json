@@ -2,6 +2,49 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "0.2.0",
+      "tag": "@kcws/lintstaged-config_v0.2.0",
+      "date": "Mon, 21 Nov 2022 08:39:34 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "update dependencies",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "3b85884b87cea3fc32ae77ebafe6a87e850b371a"
+          },
+          {
+            "comment": "add esm & umd",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "53b7e08fccdc55d4dd0f68a29f795bff88de38ff"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2ee487b2cd7929f77e52a220b24140e90bb72fd5"
+          },
+          {
+            "comment": "improve config, builder, and default value",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "1a147ffdeb035107da5fd1d724ee5e88a1e98c3e"
+          }
+        ],
+        "none": [
+          {
+            "comment": "update variable name for meaningful word",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "3fb45daca5f6fe5016f340e2cfa758e9c7d0bc9a"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.2.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.0",
       "tag": "@kcws/lintstaged-config_v0.1.0",
       "date": "Fri, 04 Nov 2022 18:42:44 GMT",
