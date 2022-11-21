@@ -10,7 +10,7 @@ export type BaseActionFn<O extends IBaseActionOptions> = (options?: O) => string
 // @public
 export class Builder<K extends string> implements IConfigBuilder {
     constructor();
-    append(key: K, value: Partial<Exclude<IConfigValue, "actionFn">>): Builder<K>;
+    append<EK extends string>(key: EK, value: Partial<Exclude<IConfigValue, "actionFn">>): Builder<K | EK>;
     build(): Config<K>;
     debugMode(): Builder<K>;
     default(): Builder<K | DefaultKey>;
@@ -27,6 +27,8 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
     // @override
     build(): this;
     static builder<K extends string = "">(): Builder<K>;
+    // @beta
+    compare(c: Config<string>): boolean;
     static default(): Builder<DefaultKey>;
     // @override
     getCommands(condition: ConfigCondition): Promise<Array<string>>;

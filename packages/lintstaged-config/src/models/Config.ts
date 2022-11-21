@@ -10,6 +10,9 @@ import { defineDefaultConfig, type DefaultKey } from "../constants/default";
 
 import { toArray } from "../utils/array";
 import { toPromise } from "../utils/promise";
+import { isSameMap } from "../utils/map";
+
+const DEBUG_MODE: string = "debug";
 
 /**
  * Config builder. This class should not be created manually.
@@ -49,7 +52,7 @@ class Builder<K extends string> implements IConfigBuilder {
    * @public
    */
   public debugMode(): Builder<K> {
-    this._settings.set("debug", "true");
+    this._settings.set(DEBUG_MODE, "true");
     return this;
   }
 
@@ -81,10 +84,10 @@ class Builder<K extends string> implements IConfigBuilder {
    *
    * @public
    */
-  public append(
-    key: K,
+  public append<EK extends string>(
+    key: EK,
     value: Partial<Exclude<IConfigValue, "actionFn">>
-  ): Builder<K> {
+  ): Builder<K | EK> {
     if (this._result.has(key)) {
       const cached = this._result.get(key) as IConfigValue;
       return this.set(key, this._mergeValue(cached, value));
@@ -182,7 +185,8 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
    */
   private get _isDebug(): boolean {
     return (
-      this._settings.has("debug") && this._settings.get("debug") === "true"
+      this._settings.has(DEBUG_MODE) &&
+      this._settings.get(DEBUG_MODE) === "true"
     );
   }
 
@@ -246,9 +250,37 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
    *
    * @returns this object
    * @override
+   *
+   * @public
    */
   public build(): this {
     return this;
+  }
+
+  /**
+   * Compare current config with other,
+   * This function WILL NOT compare function.
+   *
+   * @param c - other config
+   * @returns true if this config is equal to other config
+   *
+   * @beta
+   */
+  public compare(c: Config<string>): boolean {
+    if (this._settings.size !== c._settings.size) return false;
+    if (!isSameMap(this._settings, c._settings)) return false;
+
+    if (this._config.size !== c._config.size) return false;
+    if (
+      !isSameMap(
+        this._config,
+        c._config,
+        (a, b) => a.toString() === b.toString()
+      )
+    )
+      return false;
+
+    return true;
   }
 
   private async _resolveAction(
