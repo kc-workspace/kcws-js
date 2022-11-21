@@ -16,7 +16,7 @@ export { Config } from "./models/Config";
 /**
  * This is a function to define a configuration for lintstaged file.
  *
- * @param config - a setting for configure lintstaged.
+ * @param builder - a setting for configure lintstaged.
  * @returns a lintstaged configuration.
  * @example
  *    const { default: defineConfig, Config } = require("@kcws/lintstaged-config");
@@ -25,7 +25,7 @@ export { Config } from "./models/Config";
  *
  * @beta
  */
-export default (builder: IConfigBuilder): ConfigFn => {
+function defineConfig(builder: IConfigBuilder): ConfigFn {
   const options: Options = {
     dot: true,
   };
@@ -36,4 +36,6 @@ export default (builder: IConfigBuilder): ConfigFn => {
       return micromatch(stagedFiles, regexs, options);
     });
   };
-};
+}
+
+export default defineConfig;
