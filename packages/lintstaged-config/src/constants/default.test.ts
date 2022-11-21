@@ -11,4 +11,10 @@ describe("default constants", () => {
     const builder = Config.builder().set("test", {});
     expect(defineDefaultConfig(builder).build().length).toBeGreaterThan(1);
   });
+
+  it("builder.default() should be the same with defineDefaultConfig()", () => {
+    const config1 = Config.builder().default().build();
+    const config2 = defineDefaultConfig(Config.builder()).build();
+    expect(config1.compare(config2)).toBeTruthy();
+  });
 });
