@@ -32,7 +32,6 @@ export const DEFAULT_YAMLLINT_CONFIG: string = ".github/linters/.yamllint.yml";
  * @beta
  */
 export const yamllint: BaseActionFn<IYamllintOptions> = (option) => {
-  console.log(process.cwd());
   const args: Array<string> = [getCommand("yamllint")];
 
   const configFile = option?.config ?? DEFAULT_YAMLLINT_CONFIG;
