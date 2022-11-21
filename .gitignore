@@ -379,16 +379,18 @@ common/autoinstallers/*/.npmrc
 .heft
 
 # Common toolchain intermediate files
-temp
 lib
-lib-amd
+lib-commonjs
 lib-es6
 lib-esnext
-lib-commonjs
 lib-umd
+lib-amd
+lib-css
+temp
 dist
 *.scss.ts
 *.sass.ts
+*.css.ts
 
 # Exclude documentation because we build and deploy to Github pages
 _docs

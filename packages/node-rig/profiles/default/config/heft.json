@@ -14,7 +14,7 @@
       "actionKind": "deleteGlobs",
       "heftEvent": "clean",
       "actionId": "defaultClean",
-      "globsToDelete": ["lib", "lib-commonjs", "lib-es6", "lib-esnext", "lib-umd", "lib-amd", "temp", "dist", "*.log"]
+      "globsToDelete": ["lib", "lib-commonjs", "lib-es6", "lib-esnext", "lib-umd", "lib-amd", "lib-css", "temp", "dist", "*.log"]
     }
   ],
 
