@@ -1,0 +1,19 @@
+{
+  "name": "@kcws/web-rig",
+  "entries": [
+    {
+      "version": "0.2.0",
+      "tag": "@kcws/web-rig_v0.2.0",
+      "date": "Mon, 21 Nov 2022 08:39:34 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "initiate new application for web development",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "3b85884b87cea3fc32ae77ebafe6a87e850b371a"
+          }
+        ]
+      }
+    }
+  ]
+}
