@@ -1,0 +1,37 @@
+{
+  "name": "@types/generic",
+  "private": true,
+  "version": "0.1.0",
+  "description": "TypeScript definitions for global generic type",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/typings/generic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "typings/generic"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "keywords": [
+    "typescript",
+    "dts",
+    "definitions",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "",
+    "test": "dtslint types"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@definitelytyped/dtslint": "0.0.140",
+    "@kcws/eslint-config": "workspace:*",
+    "typescript": "4.9.3"
+  },
+  "peerDependencies": {
+    "typescript": ">=2.0.0"
+  }
+}
