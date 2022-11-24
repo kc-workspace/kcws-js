@@ -1,11 +1,9 @@
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
 require("@rushstack/eslint-config/patch/modern-module-resolution");
 
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: [
-    "@rushstack/eslint-config/profile/node",
-    "@rushstack/eslint-config/mixins/tsdoc"
-  ],
+  root: true,
   rules: {
     "@typescript-eslint/member-ordering": [
       "warn",
@@ -155,6 +153,6 @@ module.exports = {
         args: "none",
         varsIgnorePattern: "^_*",
       },
-    ]
+    ],
   },
 };
