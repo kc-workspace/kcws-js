@@ -29,6 +29,14 @@
       "path": "tools/example"
     },
     {
+      "name": "@types/package_json",
+      "path": "typings/package_json"
+    },
+    {
+      "name": "@types/generic",
+      "path": "typings/generic"
+    },
+    {
       "name": "@kcws-common/autoinstallers",
       "path": "common/autoinstallers"
     },

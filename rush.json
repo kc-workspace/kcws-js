@@ -50,7 +50,7 @@
    * LTS schedule: https://nodejs.org/en/about/releases/
    * LTS versions: https://nodejs.org/en/download/releases/
    */
-  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0 || >=16.13.0 <17.0.0",
+  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0 || >=16.13.0 <17.0.0 || >=18.12.0 <19.0.0",
 
   /**
    * Odd-numbered major versions of Node.js are experimental.  Even-numbered releases
@@ -139,7 +139,8 @@
      */
     "reviewCategories": [
       "libraries", // library that ship to production
-      "tools",     // non-shipping projects that are part of the developer toolchain
+      "typings", // typing library that ship to production
+      "tools", // non-shipping projects that are part of the developer toolchain
       "prototypes" // experiments that should mostly be ignored by the review process
     ],
 
@@ -344,12 +345,6 @@
       "shouldPublish": false
     },
     {
-      "packageName": "@kcws/eslint-config",
-      "projectFolder": "packages/eslint-config",
-      "reviewCategory": "libraries",
-      "shouldPublish": true
-    },
-    {
       "packageName": "@kcws/node-rig",
       "projectFolder": "packages/node-rig",
       "reviewCategory": "libraries",
@@ -366,6 +361,24 @@
       "projectFolder": "packages/lintstaged-config",
       "reviewCategory": "libraries",
       "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/eslint-config",
+      "projectFolder": "packages/eslint-config",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@types/package_json",
+      "projectFolder": "typings/package_json",
+      "reviewCategory": "typings",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@types/generic",
+      "projectFolder": "typings/generic",
+      "reviewCategory": "typings",
+      "shouldPublish": false
     },
     {
       "packageName": "@kcws-tools/example",
