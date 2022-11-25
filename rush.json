@@ -138,9 +138,10 @@
      * or you could just have a single category called "default".
      */
     "reviewCategories": [
-      "libraries", // library that ship to production
-      "typings", // typing library that ship to production
-      "tools", // non-shipping projects that are part of the developer toolchain
+      "libraries", // external shipping packages
+      "configs",   // configuration packages
+      "typings",   // internal typescripts type packages
+      "tools",     // internal tools as part of the developer toolchain
       "prototypes" // experiments that should mostly be ignored by the review process
     ],
 
@@ -359,13 +360,13 @@
     {
       "packageName": "@kcws/lintstaged-config",
       "projectFolder": "packages/lintstaged-config",
-      "reviewCategory": "libraries",
+      "reviewCategory": "configs",
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/eslint-config",
       "projectFolder": "packages/eslint-config",
-      "reviewCategory": "libraries",
+      "reviewCategory": "configs",
       "shouldPublish": true
     },
     {

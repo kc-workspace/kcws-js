@@ -4,8 +4,182 @@
 
 ```ts
 
-// @alpha
-export const hello: (name: string) => string;
+// @public
+export const alphanumeric: Array<string>;
+
+// @public
+export interface IRandom {
+    copy(seed: ISeed): IRandom;
+    // @internal
+    pseudo(): number;
+}
+
+// @public
+export interface ISeed {
+    copy(input: string, builder?: SeedBuilder): ISeed;
+    value(patch?: SeedPatch): number;
+}
+
+// @public
+export const lowerAlphabet: Array<string>;
+
+// @public
+export const lowerAlphanumeric: Array<string>;
+
+// @public
+export const numeric: Array<string>;
+
+// @beta
+export abstract class Random implements IRandom {
+    constructor(seed: ISeed);
+    boolean(): boolean;
+    // (undocumented)
+    abstract copy(seed: ISeed): IRandom;
+    dynamicString(option?: Partial<RandomDynamicStringOption>): string;
+    fixedString(option?: Partial<RandomFixedStringOption>): string;
+    float(option?: Partial<RandomFloatOption>): number;
+    // @internal
+    protected getSeed(p?: SeedPatch): number;
+    int(option?: Partial<RandomIntOption>): number;
+    number(option?: Partial<RandomNumberOption>): number;
+    // (undocumented)
+    abstract pseudo(): number;
+    // (undocumented)
+    protected seed: ISeed;
+    select<T>(option: RandomSelectOption<T>): T;
+    shuffle<T>(option: RandomMultipleValueOption<T>): Array<T>;
+    string(option?: Partial<RandomStringOption>): string;
+    weighted<T>(...options: Array<RandomWeightedOption<T>>): T;
+}
+
+// Warning: (ae-incompatible-release-tags) The symbol "RandomAlea" is marked as @public, but its signature references "Random" which is marked as @beta
+//
+// @public
+export class RandomAlea extends Random {
+    constructor(seed: ISeed);
+    // (undocumented)
+    copy(s?: ISeed): Random;
+    // (undocumented)
+    pseudo(): number;
+}
+
+// @public
+export type RandomDynamicStringOption = RandomMultipleValueOption<string> & RandomIntOption;
+
+// @public
+export type RandomFixedStringOption = RandomMultipleValueOption<string> & {
+    length: number;
+};
+
+// @public
+export type RandomFloatOption = Omit<RandomNumberOption, "integerMode" | "maxInclusive">;
+
+// @public
+export type RandomIntOption = Omit<RandomNumberOption, "integerMode">;
+
+// @public
+export type RandomMultipleValueOption<T> = {
+    whitelist: Array<T>;
+};
+
+// @public
+export type RandomNumberOption = {
+    min: number;
+    max: number;
+    maxInclusive: boolean;
+    integerMode: boolean;
+};
+
+// @public
+export type RandomSelectOption<T> = RandomMultipleValueOption<T>;
+
+// Warning: (ae-incompatible-release-tags) The symbol "RandomSimple" is marked as @public, but its signature references "Random" which is marked as @beta
+//
+// @public
+export class RandomSimple extends Random {
+    constructor();
+    // (undocumented)
+    copy(): Random;
+    // (undocumented)
+    pseudo(): number;
+}
+
+// @public
+export type RandomStringOption = RandomFixedStringOption | RandomDynamicStringOption;
+
+// @public
+export type RandomWeightedOption<T> = {
+    weight: number;
+    value: T;
+};
+
+// Warning: (ae-incompatible-release-tags) The symbol "RandomXoshiro128PP" is marked as @public, but its signature references "Random" which is marked as @beta
+//
+// @public
+export class RandomXoshiro128PP extends Random {
+    constructor(seed: ISeed);
+    // (undocumented)
+    copy(s?: ISeed): Random;
+    // (undocumented)
+    pseudo(): number;
+}
+
+// Warning: (ae-incompatible-release-tags) The symbol "RandomXoshiro128SS" is marked as @public, but its signature references "Random" which is marked as @beta
+//
+// @public
+export class RandomXoshiro128SS extends Random {
+    constructor(seed: ISeed);
+    // (undocumented)
+    copy(s?: ISeed): Random;
+    // (undocumented)
+    pseudo(): number;
+}
+
+// @public
+export class Seed implements ISeed {
+    constructor(input: string, builder: SeedBuilder);
+    copy(input: string, builder?: SeedBuilder | undefined): ISeed;
+    value(patch?: SeedPatch): number;
+}
+
+// @public
+export type SeedBuilder = (input: string) => SeedFn;
+
+// @public
+export class SeedFixed extends Seed {
+    constructor(input: number);
+    static Builder: SeedBuilder;
+}
+
+// @public
+export type SeedFn = () => number;
+
+// @public
+export type SeedPatch = (n: number) => number;
+
+// @public
+export class SeedTimestamp extends Seed {
+    constructor();
+    static Builder: SeedBuilder;
+}
+
+// @public
+export class SeedXfnv1a extends Seed {
+    constructor(input: string);
+    static Builder: SeedBuilder;
+}
+
+// @public
+export class SeedXmur3 extends Seed {
+    constructor(input: string);
+    static Builder: SeedBuilder;
+}
+
+// @public
+export const upperAlphabet: Array<string>;
+
+// @public
+export const upperAlphanumeric: Array<string>;
 
 // (No @packageDocumentation comment for this package)
 
