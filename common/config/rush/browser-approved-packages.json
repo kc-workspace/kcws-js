@@ -3,12 +3,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
-      "name": "@kcws/eslint-config",
-      "allowedCategories": [ "libraries", "prototypes", "tools" ]
+      "name": "@definitelytyped/dtslint",
+      "allowedCategories": [ "typings" ]
     },
     {
-      "name": "@kcws/lintstaged-config",
-      "allowedCategories": [ "libraries", "prototypes", "tools" ]
+      "name": "@kcws/eslint-config",
+      "allowedCategories": [ "configs", "libraries", "prototypes", "tools", "typings" ]
     },
     {
       "name": "@kcws/web-rig",
@@ -16,59 +16,59 @@
     },
     {
       "name": "@microsoft/api-extractor",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "@rushstack/eslint-config",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "@rushstack/heft",
-      "allowedCategories": [ "libraries", "prototypes", "tools" ]
+      "allowedCategories": [ "configs", "libraries", "prototypes", "tools" ]
     },
     {
       "name": "@rushstack/heft-jest-plugin",
-      "allowedCategories": [ "libraries" ]
-    },
-    {
-      "name": "@rushstack/heft-node-rig",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "@rushstack/heft-sass-plugin",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "@rushstack/heft-web-rig",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "eslint",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "jest-environment-jsdom",
-      "allowedCategories": [ "libraries" ]
-    },
-    {
-      "name": "jest-environment-node",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "jest-html-reporters",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "jest-junit",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "micromatch",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "configs", "typings" ]
     }
   ]
 }

@@ -3,8 +3,20 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
+      "name": "@kcws/lintstaged-config",
+      "allowedCategories": [ "libraries", "prototypes", "tools", "typings" ]
+    },
+    {
       "name": "@kcws/node-rig",
-      "allowedCategories": [ "libraries", "prototypes", "tools" ]
+      "allowedCategories": [ "configs", "libraries", "tools" ]
+    },
+    {
+      "name": "@rushstack/heft-node-rig",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "jest-environment-node",
+      "allowedCategories": [ "configs" ]
     }
   ]
 }

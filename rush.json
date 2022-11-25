@@ -139,9 +139,9 @@
      */
     "reviewCategories": [
       "libraries", // external shipping packages
-      "configs",   // configuration packages
-      "typings",   // internal typescripts type packages
-      "tools",     // internal tools as part of the developer toolchain
+      "configs", // configuration packages
+      "typings", // internal typescripts type packages
+      "tools", // internal tools as part of the developer toolchain
       "prototypes" // experiments that should mostly be ignored by the review process
     ],
 
@@ -348,13 +348,13 @@
     {
       "packageName": "@kcws/node-rig",
       "projectFolder": "packages/node-rig",
-      "reviewCategory": "libraries",
+      "reviewCategory": "configs",
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/web-rig",
       "projectFolder": "packages/web-rig",
-      "reviewCategory": "libraries",
+      "reviewCategory": "configs",
       "shouldPublish": true
     },
     {
