@@ -24,3 +24,5 @@ reject:
   # Jest environment will upgrade based on heft-jest-plugin
   - "jest-environment-jsdom"
   - "jest-environment-node"
+  # This depends on Heft to upgrade
+  - "typescript"
