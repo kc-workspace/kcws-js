@@ -10,8 +10,8 @@
       "commandKind": "global",
       "summary": "Used by the pre-commit Git hook. This command invokes code styles to reformat staged changes.",
       "safeForSimultaneousRushProcesses": true,
-      "autoinstallerName": "rush-lint-staged",
-      "shellCommand": "sh common/autoinstallers/rush-lint-staged/index.sh"
+      "autoinstallerName": "rush-lintstaged",
+      "shellCommand": "sh common/autoinstallers/rush-lintstaged/index.sh"
     },
     {
       "name": "docs",
