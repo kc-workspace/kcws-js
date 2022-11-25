@@ -17,9 +17,9 @@ permissions:
   pull-requests: write
 
 env:
-  PULL_REQUEST_TITLE: Upgrade all dependencies
-  COMMIT_MESSAGE: "chore(deps): upgrade all dependencies"
-  CHANGE_MESSAGE: upgrade all dependencies [auto]
+  PULL_REQUEST_TITLE: "chore(deps): upgrade dependencies"
+  COMMIT_MESSAGE: "chore(deps): upgrade dependencies"
+  CHANGE_MESSAGE: upgrade dependencies [auto]
   CHANGE_TYPE: minor
 
 jobs:
