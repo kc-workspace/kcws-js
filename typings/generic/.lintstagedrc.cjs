@@ -1,3 +1,15 @@
-const { default: defineConfig, Config } = require("@kcws/lintstaged-config");
+const {
+  default: defineConfig,
+  Config,
+  generic,
+} = require("@kcws/lintstaged-config");
 
-module.exports = defineConfig(Config.builder().default().build());
+// TODO: improve action by only run rush test on current package only
+module.exports = defineConfig(
+  Config.builder()
+    .append("dts", {
+      regexs: "**/*.d.ts",
+      actions: generic("rush", "test"),
+    })
+    .build()
+);
