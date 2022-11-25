@@ -6,3 +6,4 @@ jsts
 regexs
 pjson
 pnpmfile
+randomizer

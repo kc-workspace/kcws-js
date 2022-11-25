@@ -3,3 +3,7 @@ chantrachirathumrong
 kc
 kcnt
 kcws
+xoshiro
+xfnv
+xmur
+alea
