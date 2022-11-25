@@ -34,17 +34,6 @@ class Builder<K extends string> implements IConfigBuilder {
   }
 
   /**
-   * append default actions to current builder
-   *
-   * @returns this object
-   *
-   * @public
-   */
-  public default(): Builder<K | DefaultKey> {
-    return defineDefaultConfig(this);
-  }
-
-  /**
    * enable debug mode when loading configuration
    *
    * @returns this object
@@ -57,20 +46,14 @@ class Builder<K extends string> implements IConfigBuilder {
   }
 
   /**
-   * add new config group to current configuration
+   * append default actions to current builder
    *
-   * @param key - group key
-   * @param value - config value associate with input key
    * @returns this object
    *
    * @public
    */
-  public set<EK extends string>(
-    key: EK,
-    value: Partial<IConfigValue>
-  ): Builder<K | EK> {
-    this._result.set(key, this._fillValue(value));
-    return this as Builder<K | EK>;
+  public default(): Builder<K | DefaultKey> {
+    return defineDefaultConfig(this);
   }
 
   /**
@@ -97,16 +80,20 @@ class Builder<K extends string> implements IConfigBuilder {
   }
 
   /**
-   * delete group by key
+   * add new config group to current configuration
    *
    * @param key - group key
+   * @param value - config value associate with input key
    * @returns this object
    *
    * @public
    */
-  public delete<EK extends K>(key: EK): Builder<Exclude<K, EK>> {
-    this._result.delete(key);
-    return this as unknown as Builder<Exclude<K, EK>>;
+  public set<EK extends string>(
+    key: EK,
+    value: Partial<IConfigValue>
+  ): Builder<K | EK> {
+    this._result.set(key, this._fillValue(value));
+    return this as Builder<K | EK>;
   }
 
   /**
@@ -120,6 +107,19 @@ class Builder<K extends string> implements IConfigBuilder {
     // I disable eslint here because Config is not used yet
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
     return new Config(this._result as Map<K, IConfigValue>, this._settings);
+  }
+
+  /**
+   * delete group by key
+   *
+   * @param key - group key
+   * @returns this object
+   *
+   * @public
+   */
+  public delete<EK extends K>(key: EK): Builder<Exclude<K, EK>> {
+    this._result.delete(key);
+    return this as unknown as Builder<Exclude<K, EK>>;
   }
 
   private _fillValue(value: Partial<IConfigValue>): IConfigValue {
@@ -156,6 +156,26 @@ class Builder<K extends string> implements IConfigBuilder {
  * @public
  */
 export class Config<K extends string> implements IConfigBuilder, IConfig {
+  /**
+   * create config builder with empty value.
+   *
+   * @returns config builder
+   *
+   * @public
+   */
+  public static builder<K extends string = "">(): Builder<K> {
+    return new Builder<K>();
+  }
+
+  /**
+   * create config builder with default group predefined.
+   *
+   * @returns config builder
+   */
+  public static default(): Builder<DefaultKey> {
+    return new Builder<DefaultKey>().default();
+  }
+
   private _config: Map<K, IConfigValue>;
   private _settings: Map<string, string>;
 
@@ -188,26 +208,6 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
       this._settings.has(DEBUG_MODE) &&
       this._settings.get(DEBUG_MODE) === "true"
     );
-  }
-
-  /**
-   * create config builder with empty value.
-   *
-   * @returns config builder
-   *
-   * @public
-   */
-  public static builder<K extends string = "">(): Builder<K> {
-    return new Builder<K>();
-  }
-
-  /**
-   * create config builder with default group predefined.
-   *
-   * @returns config builder
-   */
-  public static default(): Builder<DefaultKey> {
-    return new Builder<DefaultKey>().default();
   }
 
   /**

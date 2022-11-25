@@ -54,6 +54,9 @@ export default defineConfig;
 // @beta
 export const eslint: BaseActionFn<IEslintOptions>;
 
+// @beta
+export const generic: (cmd: string, ...args: Array<string>) => string;
+
 // @public
 export interface IBaseActionOptions {
     files?: Array<string>;
