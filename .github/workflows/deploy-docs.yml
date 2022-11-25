@@ -39,6 +39,8 @@ jobs:
         uses: ./.github/actions/run-rush
         with:
           command: docs
+      - name: List files from _docs [DEBUG]
+        run: ls -la ./_docs
       - name: Building Jekyll output
         uses: actions/jekyll-build-pages@v1
         with:
