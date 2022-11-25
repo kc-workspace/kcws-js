@@ -6,6 +6,11 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
   rules: {
+    ...base.rules,
+
+    // Mute this rules as it conflict with dtslint
+    "@typescript-eslint/array-type": "off",
+
     // Rules for types
     // https://github.com/microsoft/DefinitelyTyped-tools/tree/master/packages/dtslint/src/rules
     "dt-header": "error",

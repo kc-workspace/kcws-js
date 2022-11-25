@@ -5,141 +5,87 @@ require("@rushstack/eslint-config/patch/modern-module-resolution");
 module.exports = {
   root: true,
   rules: {
+    semi: ["error", "always"],
+    quotes: ["error", "double", { allowTemplateLiterals: true }],
+    "no-tabs": "error",
+    "no-bitwise": [
+      "warn",
+      {
+        allow: ["^", "<<", ">>", ">>>", "^=", "<<=", ">>=", ">>>=", "~"],
+        int32Hint: true,
+      },
+    ],
     "@typescript-eslint/member-ordering": [
       "warn",
       {
-        default: [
-          // Index signature
-          "signature",
+        default: {
+          order: "as-written",
+          memberTypes: [
+            "signature",
+            // Public static
+            "public-static-field",
+            "public-static-get",
+            "public-static-set",
+            "public-static-method",
 
-          // Fields
-          "public-static-field",
-          "protected-static-field",
-          "private-static-field",
+            // Protected static
+            "protected-static-field",
+            "protected-static-get",
+            "protected-static-set",
+            "protected-static-method",
 
-          "public-decorated-field",
-          "protected-decorated-field",
-          "private-decorated-field",
+            // Private static
+            "private-static-field",
+            "private-static-get",
+            "private-static-set",
+            "private-static-method",
 
-          "public-instance-field",
-          "protected-instance-field",
-          "private-instance-field",
+            // Field
+            "public-field",
+            "protected-field",
+            "private-field",
 
-          "public-abstract-field",
-          "protected-abstract-field",
-          "private-abstract-field",
+            // Constructor
+            "public-constructor",
+            "protected-constructor",
+            "private-constructor",
 
-          "public-field",
-          "protected-field",
-          "private-field",
+            // Getter and Setter
+            "public-get",
+            "public-set",
+            "protected-get",
+            "protected-set",
+            "private-get",
+            "private-set",
 
-          "static-field",
-          "instance-field",
-          "abstract-field",
+            // Method
+            "public-instance-method",
+            "protected-instance-method",
+            "private-instance-method",
 
-          "decorated-field",
+            // Public abstract
+            "public-abstract-field",
+            "public-abstract-get",
+            "public-abstract-set",
+            "public-abstract-method",
 
-          "field",
+            // Protected abstract
+            "protected-abstract-field",
+            "protected-abstract-get",
+            "protected-abstract-set",
+            "protected-abstract-method",
 
-          // Static initialization
-          "static-initialization",
-
-          // Constructors
-          "public-constructor",
-          "protected-constructor",
-          "private-constructor",
-
-          "constructor",
-
-          // Getters
-          "public-static-get",
-          "protected-static-get",
-          "private-static-get",
-
-          "public-decorated-get",
-          "protected-decorated-get",
-          "private-decorated-get",
-
-          "public-instance-get",
-          "protected-instance-get",
-          "private-instance-get",
-
-          "public-abstract-get",
-          "protected-abstract-get",
-          "private-abstract-get",
-
-          "public-get",
-          "protected-get",
-          "private-get",
-
-          "static-get",
-          "instance-get",
-          "abstract-get",
-
-          "decorated-get",
-
-          "get",
-
-          // Setters
-          "public-static-set",
-          "protected-static-set",
-          "private-static-set",
-
-          "public-decorated-set",
-          "protected-decorated-set",
-          "private-decorated-set",
-
-          "public-instance-set",
-          "protected-instance-set",
-          "private-instance-set",
-
-          "public-abstract-set",
-          "protected-abstract-set",
-          "private-abstract-set",
-
-          "public-set",
-          "protected-set",
-          "private-set",
-
-          "static-set",
-          "instance-set",
-          "abstract-set",
-
-          "decorated-set",
-
-          "set",
-
-          // Methods
-          "public-static-method",
-          "protected-static-method",
-          "private-static-method",
-
-          "public-decorated-method",
-          "protected-decorated-method",
-          "private-decorated-method",
-
-          "public-instance-method",
-          "protected-instance-method",
-          "private-instance-method",
-
-          "public-abstract-method",
-          "protected-abstract-method",
-          "private-abstract-method",
-
-          "public-method",
-          "protected-method",
-          "private-method",
-
-          "static-method",
-          "instance-method",
-          "abstract-method",
-
-          "decorated-method",
-
-          "method",
-        ],
+            // Private abstract
+            "private-abstract-field",
+            "private-abstract-get",
+            "private-abstract-set",
+            "private-abstract-method",
+          ],
+        },
       },
     ],
+    // This rule has been deprecated in favour of the equivalent,
+    // better named parameter-properties rule.
     "@typescript-eslint/no-parameter-properties": "off",
     "@typescript-eslint/parameter-properties": [
       "warn",
