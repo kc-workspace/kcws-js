@@ -209,8 +209,7 @@ export abstract class Random implements IRandom {
     const totalWeighted = options.reduce((p, { weight }) => p + weight, 0);
 
     let chance = this.int({ min: 0, max: totalWeighted });
-    for (let i = 0; i < options.length; i++) {
-      const value = options[i];
+    for (const value of options) {
       if (chance < value.weight) {
         return value.value;
       }
