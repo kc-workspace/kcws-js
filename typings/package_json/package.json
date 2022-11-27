@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "build": "",
-    "test": "dtslint types"
+    "test:types": "dtslint types"
   },
   "dependencies": {},
   "devDependencies": {

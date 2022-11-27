@@ -38,6 +38,21 @@
       "ignoreDependencyOrder": true
     },
     {
+      "name": "test:types",
+      "commandKind": "bulk",
+      "summary": "Runs unit tests for typing projects",
+      "enableParallelism": false,
+      "ignoreMissingScript": true,
+      "ignoreDependencyOrder": true,
+      // Typings package might contains warning message
+      // When we use typescript version higher than
+      // what they recommend, however it didn't mean application
+      // will failed.
+      "allowWarningsInSuccessfulBuild": true,
+      "incremental": true,
+      "safeForSimultaneousRushProcesses": false
+    },
+    {
       "name": "clean",
       "commandKind": "bulk",
       "summary": "Cleaning ignored files/directories for all projects",
