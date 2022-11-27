@@ -61,6 +61,10 @@
       "path": "scripts"
     },
     {
+      "name": "@kcws-common/docs",
+      "path": "docs"
+    },
+    {
       "name": ".github",
       "path": ".github"
     },

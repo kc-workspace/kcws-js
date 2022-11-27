@@ -16,9 +16,6 @@ lsi                 : false
 excerpt_separator   : "\n\n"
 incremental         : false
 
-# https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
-theme: cayman
-
 defaults:
   - scope:
       path: ""
