@@ -15,6 +15,6 @@ api-documenter "$outtype" \
   --output-folder "$temp_output"
 
 # Copy all configuration to temp_output
-cp -r "$output/*" "$temp_output/"
+cp -r "$output/" "$temp_output/"
 
 unset outtype input temp_output output

@@ -37,16 +37,24 @@
       "path": "typings/generic"
     },
     {
-      "name": "@kcws-common/autoinstallers",
-      "path": "common/autoinstallers"
+      "name": "@kcws-ai/rush-api-documenter",
+      "path": "common/autoinstallers/rush-api-documenter"
     },
     {
-      "name": "@kcws-common/config",
-      "path": "common/config"
+      "name": "@kcws-ai/rush-dependencies-updater",
+      "path": "common/autoinstallers/rush-dependencies-updater"
     },
     {
-      "name": "@kcws-common/reviews",
-      "path": "common/reviews"
+      "name": "@kcws-ai/rush-lintstaged",
+      "path": "common/autoinstallers/rush-lintstaged"
+    },
+    {
+      "name": "@kcws-config/rush",
+      "path": "common/config/rush"
+    },
+    {
+      "name": "@kcws-reviews/api",
+      "path": "common/reviews/api"
     },
     {
       "name": "@kcws-common/scripts",
