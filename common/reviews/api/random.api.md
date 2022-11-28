@@ -48,7 +48,6 @@ export abstract class Random implements IRandom {
     protected seed: ISeed;
     select<T>(option: RandomSelectOption<T>): T;
     shuffle<T>(option: RandomMultipleValueOption<T>): Array<T>;
-    string(option?: Partial<RandomStringOption>): string;
     weighted<T>(...options: Array<RandomWeightedOption<T>>): T;
 }
 
@@ -103,9 +102,6 @@ export class RandomSimple extends Random {
     // (undocumented)
     pseudo(): number;
 }
-
-// @public
-export type RandomStringOption = RandomFixedStringOption | RandomDynamicStringOption;
 
 // @public
 export type RandomWeightedOption<T> = {
