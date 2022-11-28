@@ -94,12 +94,3 @@ export type RandomFixedStringOption = RandomMultipleValueOption<string> & {
  */
 export type RandomDynamicStringOption = RandomMultipleValueOption<string> &
   RandomIntOption;
-
-/**
- * union type of all string randomizer option.
- *
- * @public
- */
-export type RandomStringOption =
-  | RandomFixedStringOption
-  | RandomDynamicStringOption;
