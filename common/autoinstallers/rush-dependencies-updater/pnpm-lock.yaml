@@ -1,10 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
-  npm-check-updates: 16.4.1
+  npm-check-updates: 16.4.3
 
 dependencies:
-  npm-check-updates: 16.4.1
+  npm-check-updates: 16.4.3
 
 packages:
 
@@ -1205,8 +1205,8 @@ packages:
       npm-normalize-package-bin: 3.0.0
     dev: false
 
-  /npm-check-updates/16.4.1:
-    resolution: {integrity: sha512-g0Uf1kCw0p5boutvu5E4htsjYEDuFT9LxYHYFLldAzWs5012jVikEH1Wdae68xedu4twF4EVbKcs83+G2nGnQg==}
+  /npm-check-updates/16.4.3:
+    resolution: {integrity: sha512-kuTErUSd9DkJKU5Kf5nitkN4Yf8k41OJL/hudtRR+Rf9YaKJasLHHnQboQdEtbf6DFrqMzwxrPSX8p1engLLbQ==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
