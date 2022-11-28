@@ -6,14 +6,17 @@ import type {
   RandomMultipleValueOption,
   RandomNumberOption,
   RandomSelectOption,
-  RandomStringOption,
   RandomWeightedOption,
-} from "./Options";
-
+} from "./IOptions";
 import type { IRandom } from "./IRandom";
 import type { ISeed, SeedPatch } from "./ISeed";
 
-import { alphanumeric } from "../constants/whitelist";
+import {
+  getRandomDynamicStringOption,
+  getRandomFixedStringOption,
+  getRandomFloatOption,
+  getRandomIntOption,
+} from "../utils/option";
 
 /**
  * Base random implementation,
@@ -57,11 +60,7 @@ export abstract class Random implements IRandom {
    * @beta
    */
   public int(option?: Partial<RandomIntOption>): number {
-    const _option: RandomIntOption = {
-      min: Math.floor(option?.min ?? 0),
-      max: Math.floor(option?.max ?? 10),
-      maxInclusive: option?.maxInclusive ?? false,
-    };
+    const _option = getRandomIntOption(option);
     if (_option.min === _option.max) return _option.min;
 
     const maxShift = _option.maxInclusive ? 1 : 0;
@@ -82,11 +81,7 @@ export abstract class Random implements IRandom {
    * @beta
    */
   public float(option?: Partial<RandomFloatOption>): number {
-    const _option: RandomFloatOption = {
-      min: option?.min ?? 0,
-      max: option?.max ?? 1,
-    };
-
+    const _option = getRandomFloatOption(option);
     const min = Math.min(_option.min, _option.max);
     const max = Math.max(_option.min, _option.max);
     if (min === max) return min;
@@ -118,10 +113,7 @@ export abstract class Random implements IRandom {
    * @beta
    */
   public fixedString(option?: Partial<RandomFixedStringOption>): string {
-    const _option: RandomFixedStringOption = {
-      length: option?.length ?? 10,
-      whitelist: option?.whitelist ?? alphanumeric,
-    };
+    const _option = getRandomFixedStringOption(option);
 
     let result = "";
     for (let i = 0; i < _option.length; i++) {
@@ -140,29 +132,10 @@ export abstract class Random implements IRandom {
    * @beta
    */
   public dynamicString(option?: Partial<RandomDynamicStringOption>): string {
-    const whitelist = option?.whitelist ?? alphanumeric;
-    const length = this.int({
-      min: Math.min(option?.min ?? 1, whitelist.length),
-      max: Math.max(option?.max ?? 100, whitelist.length),
-      maxInclusive: option?.maxInclusive ?? false,
-    });
+    const _option = getRandomDynamicStringOption(option);
+    const length = this.int(_option);
 
-    return this.fixedString({ length, whitelist: whitelist });
-  }
-
-  /**
-   * random either dynamic or fixed size of string
-   * depends on input option.
-   *
-   * @param option - random option
-   * @returns string
-   *
-   * @beta
-   */
-  public string(option?: Partial<RandomStringOption>): string {
-    if (!option) return this.fixedString();
-    else if ("length" in option) return this.fixedString(option);
-    else return this.dynamicString(option);
+    return this.fixedString({ length, whitelist: _option.whitelist });
   }
 
   /**
