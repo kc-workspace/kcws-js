@@ -1,5 +1,5 @@
-import type { ISeed } from "../models/ISeed";
-import { Random } from "../models/Random";
+import type { ISeed } from "../ISeed";
+import { Random } from "../Random";
 
 /**
  * Random Xoshiro128** included in Xoshiro family.

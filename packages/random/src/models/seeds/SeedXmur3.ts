@@ -1,5 +1,5 @@
-import type { SeedBuilder } from "../models/ISeed";
-import { Seed } from "../models/Seed";
+import type { SeedBuilder } from "../ISeed";
+import { Seed } from "../Seed";
 
 /**
  * Xmur3 implementation for random seed.

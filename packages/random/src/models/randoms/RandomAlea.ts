@@ -1,5 +1,5 @@
-import type { ISeed } from "../models/ISeed";
-import { Random } from "../models/Random";
+import type { ISeed } from "../ISeed";
+import { Random } from "../Random";
 
 /**
  * Random Alea is based on MWC (Multiply-with-Carry). It includes its own string hash function: Mash.

@@ -1,4 +1,4 @@
-import { Random } from "../models/Random";
+import { Random } from "../Random";
 import { SeedFixed } from "../seeds/SeedFixed";
 
 /**
