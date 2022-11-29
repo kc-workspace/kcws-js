@@ -145,7 +145,7 @@ export abstract class Random implements IRandom {
    */
   public select<T>(option: RandomSelectOption<T>): T {
     const index = this.int({ min: 0, max: option.whitelist.length });
-    return option.whitelist.at(index)!;
+    return option.whitelist[index];
   }
 
   /**
