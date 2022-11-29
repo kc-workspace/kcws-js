@@ -15,9 +15,11 @@ const onlyBetween = (i: number, min: number, max: number): number =>
 export const getRandomIntOption = (
   input?: Partial<RandomIntOption>
 ): RandomIntOption => {
+  const min = toInt(input?.min ?? 0);
+  const max = toInt(input?.max ?? 10);
   return {
-    min: toInt(input?.min ?? 0),
-    max: toInt(input?.max ?? 10),
+    min: Math.min(min, max),
+    max: Math.max(min, max),
     maxInclusive: input?.maxInclusive ?? false,
   };
 };
@@ -25,9 +27,11 @@ export const getRandomIntOption = (
 export const getRandomFloatOption = (
   input?: Partial<RandomFloatOption>
 ): RandomFloatOption => {
+  const min = toInt(input?.min ?? 0);
+  const max = toInt(input?.max ?? 1);
   return {
-    min: input?.min ?? 0,
-    max: input?.max ?? 1,
+    min: Math.min(min, max),
+    max: Math.max(min, max),
   };
 };
 

@@ -64,8 +64,8 @@ export abstract class Random implements IRandom {
     if (_option.min === _option.max) return _option.min;
 
     const maxShift = _option.maxInclusive ? 1 : 0;
-    const min = Math.min(_option.min, _option.max);
-    const max = Math.max(_option.min, _option.max) + maxShift;
+    const min = _option.min;
+    const max = _option.max + maxShift;
 
     const diff = max - min;
     const out = this.pseudo() * diff + min;
@@ -82,12 +82,10 @@ export abstract class Random implements IRandom {
    */
   public float(option?: Partial<RandomFloatOption>): number {
     const _option = getRandomFloatOption(option);
-    const min = Math.min(_option.min, _option.max);
-    const max = Math.max(_option.min, _option.max);
-    if (min === max) return min;
+    if (_option.min === _option.max) return _option.min;
 
-    const diff = max - min;
-    return this.pseudo() * diff + min;
+    const diff = _option.max - _option.min;
+    return this.pseudo() * diff + _option.min;
   }
 
   /**
@@ -117,8 +115,7 @@ export abstract class Random implements IRandom {
 
     let result = "";
     for (let i = 0; i < _option.length; i++) {
-      const index = this.int({ min: 0, max: _option.whitelist.length });
-      result += _option.whitelist.at(index);
+      result += this.select(_option);
     }
     return result;
   }
@@ -147,7 +144,7 @@ export abstract class Random implements IRandom {
    * @beta
    */
   public select<T>(option: RandomSelectOption<T>): T {
-    const index = this.number({ min: 0, max: option.whitelist.length });
+    const index = this.int({ min: 0, max: option.whitelist.length });
     return option.whitelist.at(index)!;
   }
 
