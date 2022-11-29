@@ -38,9 +38,7 @@ jobs:
       - name: Building documentation
         uses: ./.github/actions/run-rush
         with:
-          command: docs
-      - name: List files from _docs [DEBUG]
-        run: ls -la ./_docs
+          command: build:docs
       - name: Building Jekyll output
         uses: actions/jekyll-build-pages@v1
         with:
@@ -48,6 +46,9 @@ jobs:
           destination: ./_site
       - name: Upload built document
         uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./_site
+          retention-days: "1"
 
   deploying:
     runs-on: ubuntu-latest
