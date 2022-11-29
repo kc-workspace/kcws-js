@@ -30,7 +30,9 @@ export class Result {
         if (value < min || value > max) {
           errors.push(
             new Error(
-              `The result not distribute correctly on index ${index} not in length (max) ${max} > ${value} > ${min} (min)`
+              `The result not distribute correctly` +
+                `on index ${index} not in length ` +
+                `(max) ${max} > ${value} > ${min} (min)`
             )
           );
         }
@@ -65,6 +67,10 @@ export class Range {
   }
 }
 
+// We ignore jscpd here because
+// most tests are similar and it
+// trigger error on jscpd.
+/* jscpd:ignore-start */
 describe("Random constants", () => {
   test.each([
     [1000000, 7],
@@ -74,6 +80,7 @@ describe("Random constants", () => {
     const r = new RandomAlea(new SeedFixed(i));
     expect(r.int({ min: 1, max: 10, maxInclusive: true })).toBeCloseTo(o, 2);
   });
+
   test("Alea: copy return new object", () => {
     const r = new RandomAlea(new SeedFixed(1));
     const rr = r.copy(new SeedFixed(2));
@@ -85,11 +92,15 @@ describe("Random constants", () => {
     expect(rrr.pseudo()).toBeCloseTo(0.526047095656395, 8);
     expect(rrr.pseudo()).toBeCloseTo(0.12264361372217536, 8);
   });
-  test("Alea: The return value of 1000 times should be average with 0.01 error", () => {
-    const r = new RandomAlea(new SeedXmur3("1000 times"));
-    const errors = Range.new(r).average(10000, 75).check(0.01);
-    if (errors.length > 0) fail(errors);
-  });
+  test(
+    "Alea: The return value of 1000 times " +
+      "should be average with 0.01 error",
+    () => {
+      const r = new RandomAlea(new SeedXmur3("1000 times"));
+      const errors = Range.new(r).average(10000, 75).check(0.01);
+      if (errors.length > 0) fail(errors);
+    }
+  );
 
   test.each([
     [1000000, 1],
@@ -108,11 +119,15 @@ describe("Random constants", () => {
     expect(rr.pseudo()).toBeCloseTo(0.9837475430686027, 8);
     expect(rrr.pseudo()).toBeCloseTo(0.991873771417886, 8);
   });
-  test("Xoshiro128PP: The return value of 1000 times should be average with 0.01 error", () => {
-    const r = new RandomXoshiro128PP(new SeedXfnv1a("1000 times"));
-    const errors = Range.new(r).average(10000, 75).check(0.01);
-    if (errors.length > 0) fail(errors);
-  });
+  test(
+    "Xoshiro128PP: The return value of 1000 times " +
+      "should be average with 0.01 error",
+    () => {
+      const r = new RandomXoshiro128PP(new SeedXfnv1a("1000 times"));
+      const errors = Range.new(r).average(10000, 75).check(0.01);
+      if (errors.length > 0) fail(errors);
+    }
+  );
 
   test.each([
     [1000000, 4],
@@ -131,11 +146,15 @@ describe("Random constants", () => {
     expect(rr.pseudo()).toBeCloseTo(0.11045077396556735, 8);
     expect(rrr.pseudo()).toBeCloseTo(0.055225386982783675, 8);
   });
-  test("Xoshiro128SS: The return value of 10000 times should be average with 0.01 error", () => {
-    const r = new RandomXoshiro128SS(new SeedXfnv1a("1000 times"));
-    const errors = Range.new(r).average(10000, 75).check(0.01);
-    if (errors.length > 0) fail(errors);
-  });
+  test(
+    "Xoshiro128SS: The return value of 10000 times " +
+      "should be average with 0.01 error",
+    () => {
+      const r = new RandomXoshiro128SS(new SeedXfnv1a("1000 times"));
+      const errors = Range.new(r).average(10000, 75).check(0.01);
+      if (errors.length > 0) fail(errors);
+    }
+  );
 
   test.each([[1], [1], [1]])("Simple: Random will return %s", (o) => {
     const r = new RandomSimple();
@@ -154,11 +173,16 @@ describe("Random constants", () => {
     expect(rrr.pseudo()).toBeCloseTo(0, 1);
     expect(rrr.pseudo()).toBeCloseTo(0.2, 1);
   });
-  test("Simple: The return value of 1000 times should be average with 0.01 error", () => {
-    const r = new RandomSimple();
-    const errors = Range.new(r)
-      .average(6 * 125, 6 * 100)
-      .check(0.1);
-    if (errors.length > 0) fail(errors);
-  });
+  test(
+    "Simple: The return value of 1000 times " +
+      "should be average with 0.01 error",
+    () => {
+      const r = new RandomSimple();
+      const errors = Range.new(r)
+        .average(6 * 125, 6 * 100)
+        .check(0.1);
+      if (errors.length > 0) fail(errors);
+    }
+  );
 });
+/* jscpd:ignore-end */

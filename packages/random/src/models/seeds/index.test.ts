@@ -32,13 +32,14 @@ describe("Predefined seed", () => {
   });
 
   test("XFNV1A: Average of result random number will be the sum (approximately +- 1000)", () => {
-    const inputString = "this is very longgggggggggggggggg string";
+    const inputString = `My secretary is the only person who
+truly understands my stamp-collecting obsession.`;
     const size = 500;
 
     /**
-     * This magic number depend on input string for hashing and recusive size
+     * This magic number depend on input string for hashing and recursive size
      */
-    const magicNumber = 2143722380;
+    const magicNumber = 2155928635;
     const round = 1;
 
     const a = new SeedXfnv1a(inputString);
@@ -69,13 +70,14 @@ describe("Predefined seed", () => {
   });
 
   test("XMUR3: Average of result random number will be the sum (approximately +- 1000)", () => {
-    const inputString = "this is very longgggggggggggggggg string";
+    const inputString = `There's a growing trend among
+teenagers of using frisbees as go-cart wheels.`;
     const size = 500;
 
     /**
-     * This magic number depend on input string for hashing and recusive size
+     * This magic number depend on input string for hashing and recursive size
      */
-    const magicNumber = 2202321726;
+    const magicNumber = 2132101816;
     const round = 1;
 
     const a = new SeedXmur3(inputString);
