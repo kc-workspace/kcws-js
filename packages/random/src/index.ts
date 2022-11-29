@@ -6,5 +6,5 @@ export * from "./models/IOptions";
 export * from "./models/seeds";
 export * from "./models/randoms";
 
-export type { IRandom } from "./models/IRandom";
-export type { ISeed, SeedBuilder, SeedFn, SeedPatch } from "./models/ISeed";
+export * from "./models/IRandom";
+export * from "./models/ISeed";
