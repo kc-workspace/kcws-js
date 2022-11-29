@@ -394,6 +394,8 @@ dist
 
 # Exclude documentation because we build and deploy to Github pages
 _docs
+# Output of jekyll
+_site
 docs/*.md
 
 .stryker-tmp
