@@ -14,12 +14,28 @@
       "shellCommand": "sh common/autoinstallers/rush-lintstaged/index.sh"
     },
     {
-      "name": "docs",
+      "name": "build:docs",
       "commandKind": "global",
       "summary": "Create document markdown for all projects. This will automatically run on CI by default",
       "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-api-documenter",
       "shellCommand": "sh common/autoinstallers/rush-api-documenter/index.sh"
+    },
+    {
+      "name": "compile:docs:local",
+      "commandKind": "global",
+      "summary": "Compile documentation to html (For locally use only)",
+      "safeForSimultaneousRushProcesses": false,
+      "autoinstallerName": "rush-api-documenter",
+      "shellCommand": "sh common/autoinstallers/rush-api-documenter/build-local.sh"
+    },
+    {
+      "name": "start:docs:local",
+      "commandKind": "global",
+      "summary": "Serve built documentation website (For locally use only)",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "rush-api-documenter",
+      "shellCommand": "sh common/autoinstallers/rush-api-documenter/start-local.sh"
     },
     {
       "name": "deps",
