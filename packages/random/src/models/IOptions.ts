@@ -38,7 +38,6 @@ export type RandomNumberOption = {
 
   /**
    * maximum value of output.
-   * Exclusive by default except {@link RandomNumberOption.maxInclusive} is true
    */
   max: number;
 

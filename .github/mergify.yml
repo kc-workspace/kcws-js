@@ -10,7 +10,9 @@ shared:
     - check-success=lintcheck
     - check-success=spellcheck
     - check-success=licensecheck
-    - check-success=testing
+    - check-success=testing (14)
+    - check-success=testing (16)
+    - check-success=testing (18)
 
 queue_rules:
   - name: default
@@ -38,8 +40,8 @@ pull_request_rules:
   - name: Automatic merging by owner
     conditions:
       - or:
-        - author=kc-bot
-        - author=kamontat
+          - author=kc-bot
+          - author=kamontat
       - base=main
     actions:
       queue:
@@ -47,7 +49,7 @@ pull_request_rules:
         method: squash
   - name: Notify author on queue failure
     conditions:
-      - 'check-failure=Queue: Embarked in merge train'
+      - "check-failure=Queue: Embarked in merge train"
     actions:
       comment:
         message: >
