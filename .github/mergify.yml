@@ -10,7 +10,9 @@ shared:
     - check-success=lintcheck
     - check-success=spellcheck
     - check-success=licensecheck
-    - check-success=testing
+    - check-success=testing (14)
+    - check-success=testing (16)
+    - check-success=testing (18)
 
 queue_rules:
   - name: default
