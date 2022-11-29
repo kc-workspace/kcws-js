@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "exports all types instead of selected name",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/random"
+}
