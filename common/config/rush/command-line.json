@@ -14,12 +14,20 @@
       "shellCommand": "sh common/autoinstallers/rush-lintstaged/index.sh"
     },
     {
-      "name": "build:docs",
+      "name": "build:docs:v1",
       "commandKind": "global",
-      "summary": "Create document markdown for all projects. This will automatically run on CI by default",
+      "summary": "Create document markdown using api-extractor. This will automatically run on CI by default",
       "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-api-documenter",
       "shellCommand": "sh common/autoinstallers/rush-api-documenter/index.sh"
+    },
+    {
+      "name": "build:docs:v2",
+      "commandKind": "global",
+      "summary": "Create document website using typedocs. This will automatically run on CI by default",
+      "safeForSimultaneousRushProcesses": false,
+      "autoinstallerName": "rush-api-documenter",
+      "shellCommand": "sh common/autoinstallers/rush-api-documenter/index-v2.sh"
     },
     {
       "name": "compile:docs:local",

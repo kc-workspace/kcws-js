@@ -19,6 +19,10 @@ concurrency:
   group: gh-pages
   cancel-in-progress: true
 
+env:
+  # Either v1 or v2
+  DOCS_VERSION: v2
+
 jobs:
   building:
     runs-on: ubuntu-latest
@@ -38,8 +42,9 @@ jobs:
       - name: Building documentation
         uses: ./.github/actions/run-rush
         with:
-          command: build:docs
+          command: build:docs:${{ env.DOCS_VERSION }}
       - name: Building Jekyll output
+        if: env.DOCS_VERSION == "v1"
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./_docs
