@@ -26,3 +26,5 @@ reject:
   - "jest-environment-node"
   # This depends on Heft to upgrade
   - "typescript"
+  # This should be pin to oldest version we supported
+  - "@types/node"
