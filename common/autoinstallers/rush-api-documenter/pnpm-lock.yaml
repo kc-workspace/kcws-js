@@ -1,21 +1,21 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@microsoft/api-documenter': 7.19.24
+  '@microsoft/api-documenter': 7.19.25
   '@mxssfd/typedoc-theme': 1.0.3
   serve: 14.1.2
   typedoc: 0.23.21
 
 dependencies:
-  '@microsoft/api-documenter': 7.19.24
+  '@microsoft/api-documenter': 7.19.25
   '@mxssfd/typedoc-theme': 1.0.3_typedoc@0.23.21
   serve: 14.1.2
   typedoc: 0.23.21_typescript@4.9.3
 
 packages:
 
-  /@microsoft/api-documenter/7.19.24:
-    resolution: {integrity: sha512-XSjN07jsBusRDEqazbadGp6e0hds7GZGjdNGWmaQop32f7BxNv81NqE3H/OLONCZSklm/0fzJy8g14xZmByFtQ==}
+  /@microsoft/api-documenter/7.19.25:
+    resolution: {integrity: sha512-/yC6cG7QpjkDqHvoXt5SJJdB0Mdj0oYpaWgxdOV8uHRniZ9kZwxAEResswdS6QDCYoyqDD6jlh008HwXIcmXjA==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.25.2
@@ -539,8 +539,8 @@ packages:
       brace-expansion: 1.1.11
     dev: false
 
-  /minimatch/5.1.0:
-    resolution: {integrity: sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==}
+  /minimatch/5.1.1:
+    resolution: {integrity: sha512-362NP+zlprccbEt/SkxKfRMHnNY85V74mVnpUpNyr3F35covl09Kec7/sEFLt3RA4oXmewtoaanoIf67SE5Y5g==}
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1
@@ -796,7 +796,7 @@ packages:
     dependencies:
       lunr: 2.3.9
       marked: 4.2.3
-      minimatch: 5.1.0
+      minimatch: 5.1.1
       shiki: 0.11.1
       typescript: 4.9.3
     dev: false

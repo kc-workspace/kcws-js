@@ -28,7 +28,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@definitelytyped/dtslint": "0.0.140",
+    "@definitelytyped/dtslint": "0.0.141",
     "@kcws/eslint-config": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "typescript": "4.9.3"
