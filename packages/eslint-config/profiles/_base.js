@@ -74,12 +74,6 @@ module.exports = {
             "protected-abstract-get",
             "protected-abstract-set",
             "protected-abstract-method",
-
-            // Private abstract
-            "private-abstract-field",
-            "private-abstract-get",
-            "private-abstract-set",
-            "private-abstract-method",
           ],
         },
       },
