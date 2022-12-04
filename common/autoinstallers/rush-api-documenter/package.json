@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@microsoft/api-documenter": "7.19.24",
+    "@microsoft/api-documenter": "7.19.25",
     "@mxssfd/typedoc-theme": "1.0.3",
     "typedoc": "0.23.21",
     "serve": "14.1.2"
