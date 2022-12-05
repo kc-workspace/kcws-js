@@ -11,10 +11,22 @@ export const isArray: <T>(input: Optional<unknown>) => input is T[];
 export const isExist: <T = unknown>(t: Optional<T>) => t is T;
 
 // @public
+export const isFloat: (input: Optional<unknown>) => input is number;
+
+// @public
+export const isInteger: (input: Optional<unknown>) => input is number;
+
+// @public
 export const isNotExist: <T = unknown>(t: Optional<T>) => t is Null;
 
 // @public
+export const isNumber: (input: Optional<unknown>, ignoreSpecial?: boolean) => input is number;
+
+// @public
 export const isObject: <T = unknown>(input: Optional<T>) => input is T;
+
+// @public
+export const isString: (input: Optional<unknown>) => input is string;
 
 // (No @packageDocumentation comment for this package)
 
