@@ -9,6 +9,10 @@
       "path": "packages/color"
     },
     {
+      "name": "@kcws/dtcheck",
+      "path": "packages/dtcheck"
+    },
+    {
       "name": "@kcws/web-rig",
       "path": "packages/web-rig"
     },
@@ -25,16 +29,20 @@
       "path": "packages/lintstaged-config"
     },
     {
-      "name": "@kcws-tools/example",
-      "path": "tools/example"
-    },
-    {
       "name": "@types/package_json",
       "path": "typings/package_json"
     },
     {
       "name": "@types/generic",
       "path": "typings/generic"
+    },
+    {
+      "name": "@kcws/example",
+      "path": "packages/example"
+    },
+    {
+      "name": "@kcws-tools/example",
+      "path": "tools/example"
     },
     {
       "name": "@kcws-ai/rush-api-documenter",

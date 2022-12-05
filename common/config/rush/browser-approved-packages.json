@@ -12,7 +12,7 @@
     },
     {
       "name": "@kcws/web-rig",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "libraries", "prototypes" ]
     },
     {
       "name": "@microsoft/api-extractor",

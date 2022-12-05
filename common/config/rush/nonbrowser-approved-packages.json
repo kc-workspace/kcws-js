@@ -8,7 +8,7 @@
     },
     {
       "name": "@kcws/node-rig",
-      "allowedCategories": [ "configs", "libraries", "tools" ]
+      "allowedCategories": [ "configs", "libraries", "prototypes", "tools" ]
     },
     {
       "name": "@rushstack/heft-node-rig",

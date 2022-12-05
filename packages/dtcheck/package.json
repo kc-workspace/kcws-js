@@ -1,0 +1,42 @@
+{
+  "name": "@kcws/dtcheck",
+  "version": "0.0.1",
+  "description": "datatype checking",
+  "main": "lib/index.js",
+  "module": "lib-es6/index.js",
+  "browser": "lib-umd/index.js",
+  "types": "lib/index.d.ts",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/dtcheck",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "packages/dtcheck"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "dtcheck",
+    "checker",
+    "datatype"
+  ],
+  "scripts": {
+    "build": "heft build",
+    "test": "heft test",
+    "clean": "heft clean"
+  },
+  "devDependencies": {
+    "@kcws/web-rig": "workspace:*",
+    "@kcws/lintstaged-config": "workspace:*",
+    "@kcws/eslint-config": "workspace:*",
+    "@rushstack/heft": "0.48.8",
+    "@types/heft-jest": "1.0.3",
+    "@types/node": "14.14.45"
+  }
+}

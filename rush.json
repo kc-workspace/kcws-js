@@ -340,9 +340,15 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/dtcheck",
+      "projectFolder": "packages/dtcheck",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@kcws/color",
       "projectFolder": "packages/color",
-      "reviewCategory": "prototypes",
+      "reviewCategory": "libraries",
       "shouldPublish": false
     },
     {
@@ -382,9 +388,15 @@
       "shouldPublish": false
     },
     {
+      "packageName": "@kcws/example",
+      "projectFolder": "packages/example",
+      "reviewCategory": "prototypes",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@kcws-tools/example",
       "projectFolder": "tools/example",
-      "reviewCategory": "tools",
+      "reviewCategory": "prototypes",
       "shouldPublish": false
     }
   ]
