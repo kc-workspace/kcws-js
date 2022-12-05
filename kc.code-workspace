@@ -41,7 +41,7 @@
       "path": "packages/example"
     },
     {
-      "name": "@kcws-tools/example",
+      "name": "@kcws/tool-example",
       "path": "tools/example"
     },
     {

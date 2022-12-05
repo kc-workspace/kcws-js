@@ -4,7 +4,8 @@
   "mainEntryPointFilePath": "<projectFolder>/lib/index.d.ts",
   "apiReport": {
     "enabled": true,
-    "reportFolder": "../../../../../../../../common/reviews/api"
+    "reportFolder": "../../../../../../../../common/reviews/api",
+    "reportFileName": "<unscopedPackageName>.api.md"
   },
   "dtsRollup": {
     "enabled": true,

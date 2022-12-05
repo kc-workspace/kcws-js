@@ -394,7 +394,7 @@
       "shouldPublish": false
     },
     {
-      "packageName": "@kcws-tools/example",
+      "packageName": "@kcws/tool-example",
       "projectFolder": "tools/example",
       "reviewCategory": "prototypes",
       "shouldPublish": false
