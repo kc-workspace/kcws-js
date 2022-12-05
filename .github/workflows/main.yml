@@ -94,6 +94,9 @@ jobs:
           VALIDATE_TSX: false
           # Disabled json validation as issue #30
           VALIDATE_JSON: false
+          # For markdownlint, as it cannot exclude file from config file
+          # exclude reviews file because it autogen file
+          FILTER_REGEX_EXCLUDE: common/reviews/api/*
 
   testing:
     runs-on: ubuntu-latest
