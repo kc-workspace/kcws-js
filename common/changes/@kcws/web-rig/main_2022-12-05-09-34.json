@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/web-rig",
+      "comment": "fix errors where tslib is required",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/web-rig"
+}
