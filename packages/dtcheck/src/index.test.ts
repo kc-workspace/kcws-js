@@ -1,7 +1,18 @@
-import { hello } from ".";
+import { isArray, isObject, isExist, isNotExist } from ".";
 
-describe("hello", () => {
-  it("should return hello world", () => {
-    expect(hello("world")).toEqual("hello world");
+describe("Index", () => {
+  it("check exist", () => {
+    expect(isExist("")).toEqual(true);
+  });
+  it("check not exist", () => {
+    expect(isNotExist(undefined)).toEqual(true);
+  });
+
+  it("check array", () => {
+    expect(isArray([1, 2, 3])).toEqual(true);
+  });
+
+  it("check object", () => {
+    expect(isObject({ hello: "world" })).toEqual(true);
   });
 });
