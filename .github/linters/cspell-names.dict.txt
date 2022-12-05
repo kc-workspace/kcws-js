@@ -8,3 +8,4 @@ xfnv
 xmur
 alea
 mxssfd
+dtcheck
