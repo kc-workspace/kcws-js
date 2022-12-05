@@ -42,5 +42,5 @@ build type definition.
 [j-html-npm]: https://www.npmjs.com/package/jest-html-reporters
 [j-junit-npm]: https://www.npmjs.com/package/jest-junit
 
-[tsconfig]: /packages/node-rig/profiles/default/tsconfig.base.json
-[ts-config]: /packages/node-rig/profiles/default/config/typescript.json
+[tsconfig]: /packages/web-rig/profiles/default/tsconfig.base.json
+[ts-config]: /packages/web-rig/profiles/default/config/typescript.json

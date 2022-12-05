@@ -67,6 +67,10 @@
       "allowedCategories": [ "configs" ]
     },
     {
+      "name": "tslib",
+      "allowedCategories": [ "configs", "libraries" ]
+    },
+    {
       "name": "typescript",
       "allowedCategories": [ "configs", "typings" ]
     }

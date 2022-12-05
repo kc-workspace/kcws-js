@@ -27,15 +27,19 @@ importers:
       '@kcws/lintstaged-config': workspace:*
       '@kcws/web-rig': workspace:*
       '@rushstack/heft': 0.48.8
+      '@types/generic': workspace:*
       '@types/heft-jest': 1.0.3
       '@types/node': 14.14.45
+      tslib: 2.4.1
     devDependencies:
       '@kcws/eslint-config': link:../eslint-config
       '@kcws/lintstaged-config': link:../lintstaged-config
       '@kcws/web-rig': link:../web-rig
       '@rushstack/heft': 0.48.8
+      '@types/generic': link:../../typings/generic
       '@types/heft-jest': 1.0.3
       '@types/node': 14.14.45
+      tslib: 2.4.1
 
   ../../packages/eslint-config:
     specifiers:
@@ -7187,7 +7191,6 @@ packages:
 
   /tslib/2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
-    dev: false
 
   /tslint/5.14.0_typescript@4.9.3:
     resolution: {integrity: sha512-IUla/ieHVnB8Le7LdQFRGlVJid2T/gaJe5VkjzRVSRR6pA2ODYrnfR1hmxi+5+au9l50jBwpbBL34txgv4NnTQ==}
