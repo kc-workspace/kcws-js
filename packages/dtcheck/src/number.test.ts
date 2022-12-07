@@ -51,6 +51,8 @@ describe("Number", () => {
     [-124.0, true],
     [12.4, false],
     [-12.4, false],
+    [undefined, false],
+    [null, false],
   ])("is '%p' number is integer? %s", (input, output) => {
     expect(isInteger(input)).toEqual(output);
   });
@@ -64,6 +66,8 @@ describe("Number", () => {
     [-124.0, false],
     [12.4, true],
     [-12.4, true],
+    [undefined, false],
+    [null, false],
   ])("is '%p' number is float? %s", (input, output) => {
     expect(isFloat(input)).toEqual(output);
   });
