@@ -2,7 +2,7 @@
   "changes": [
     {
       "packageName": "@kcws/random",
-      "comment": "selected files to publish, and fix main pat",
+      "comment": "selected files to publish, and fix main path",
       "type": "patch"
     }
   ],

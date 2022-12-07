@@ -2,7 +2,7 @@
   "changes": [
     {
       "packageName": "@kcws/eslint-config",
-      "comment": "selected files to publish, and fix main pat",
+      "comment": "selected files to publish, and fix main path",
       "type": "patch"
     }
   ],
