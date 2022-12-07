@@ -1,0 +1,30 @@
+{
+  "name": "@kcws/dtcheck",
+  "entries": [
+    {
+      "version": "0.0.2",
+      "tag": "@kcws/dtcheck_v0.0.2",
+      "date": "Wed, 07 Dec 2022 16:52:20 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "migrate checker function from @kcutils/helper",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "644896a44a8db011adaaf2f14921e568de31c9ae"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.3.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.3.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.2.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

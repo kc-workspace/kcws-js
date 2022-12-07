@@ -1,6 +1,6 @@
 {
   "name": "@kcws/web-rig",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "a rig package for web environment projects using heft",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/web-rig",
