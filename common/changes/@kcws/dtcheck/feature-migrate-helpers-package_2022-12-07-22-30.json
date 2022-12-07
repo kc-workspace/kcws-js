@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/dtcheck",
+      "comment": "migrate checker function from @kcutils/helper",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/dtcheck"
+}
