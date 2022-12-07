@@ -2,6 +2,43 @@
   "name": "@kcws/random",
   "entries": [
     {
+      "version": "0.3.0",
+      "tag": "@kcws/random_v0.3.0",
+      "date": "Wed, 07 Dec 2022 16:52:20 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "exports all types instead of selected name",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "319f01a7fe277acd6796f136f6cdbbd72debe46e"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "6739ee621001d718be65508e4d5a889deb07a601"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "3ba9e73b1a6e3792f843cee08aae59f5b2aa34d4"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.3.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.3.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.2.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.2.0",
       "tag": "@kcws/random_v0.2.0",
       "date": "Mon, 21 Nov 2022 08:39:34 GMT",

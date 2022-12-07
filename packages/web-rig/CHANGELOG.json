@@ -2,6 +2,27 @@
   "name": "@kcws/web-rig",
   "entries": [
     {
+      "version": "0.3.0",
+      "tag": "@kcws/web-rig_v0.3.0",
+      "date": "Wed, 07 Dec 2022 16:52:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "3ba9e73b1a6e3792f843cee08aae59f5b2aa34d4"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "fix errors where tslib is required",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "818418c2d0554040ee6b49e84673df8aca913985"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.2.0",
       "tag": "@kcws/web-rig_v0.2.0",
       "date": "Mon, 21 Nov 2022 08:39:34 GMT",
