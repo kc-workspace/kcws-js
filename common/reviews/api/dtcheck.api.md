@@ -7,8 +7,14 @@
 // @public
 export const isArray: <T>(input: Optional<unknown>) => input is T[];
 
+// @beta
+export const isBoolean: (input: Optional<unknown>, looseMode?: boolean) => input is boolean;
+
 // @public
-export const isExist: <T = unknown>(t: Optional<T>) => t is T;
+export const isEmpty: <T = unknown>(input: Optional<T>) => input is Null;
+
+// @public
+export const isExist: <T = unknown>(input: Optional<T>) => input is T;
 
 // @public
 export const isFloat: (input: Optional<unknown>) => input is number;
@@ -17,7 +23,10 @@ export const isFloat: (input: Optional<unknown>) => input is number;
 export const isInteger: (input: Optional<unknown>) => input is number;
 
 // @public
-export const isNotExist: <T = unknown>(t: Optional<T>) => t is Null;
+export const isNotEmpty: <T = unknown>(input: Optional<T>) => input is T;
+
+// @public
+export const isNotExist: <T = unknown>(input: Optional<T>) => input is Null;
 
 // @public
 export const isNumber: (input: Optional<unknown>, ignoreSpecial?: boolean) => input is number;
