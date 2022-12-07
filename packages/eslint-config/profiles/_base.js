@@ -6,7 +6,11 @@ module.exports = {
   root: true,
   rules: {
     semi: ["error", "always"],
-    quotes: ["error", "double", { allowTemplateLiterals: true }],
+    quotes: [
+      "error",
+      "double",
+      { avoidEscape: true, allowTemplateLiterals: true },
+    ],
     "no-tabs": "error",
     "no-bitwise": [
       "warn",
