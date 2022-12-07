@@ -343,7 +343,7 @@
       "packageName": "@kcws/dtcheck",
       "projectFolder": "packages/dtcheck",
       "reviewCategory": "libraries",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@kcws/color",
