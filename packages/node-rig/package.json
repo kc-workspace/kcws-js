@@ -18,6 +18,13 @@
     "access": "public"
   },
   "keywords": ["heft", "rig", "rushjs"],
+  "files": [
+    "package.json",
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "README.md",
+    "profiles"
+  ],
   "scripts": {
     "build": ""
   },

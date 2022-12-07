@@ -5,7 +5,7 @@
   "main": "lib-commonjs/index.js",
   "module": "lib-es6/index.js",
   "browser": "lib-umd/index.js",
-  "types": "lib/index.d.ts",
+  "types": "dist/index.d.ts",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/lintstaged-config",
   "repository": {
@@ -23,6 +23,19 @@
   },
   "keywords": [
     "linted-staged"
+  ],
+  "files": [
+    "package.json",
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "README.md",
+    "dist/**/*.d.ts",
+    "lib-commonjs/**/*.js",
+    "lib-commonjs/**/*.js.map",
+    "lib-es6/**/*.js",
+    "lib-es6/**/*.js.map",
+    "lib-umd/**/*.js",
+    "lib-umd/**/*.js.map"
   ],
   "scripts": {
     "build": "heft build",
