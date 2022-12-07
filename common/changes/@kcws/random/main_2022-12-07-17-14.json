@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "selected files to publish, and fix main pat",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/random"
+}
