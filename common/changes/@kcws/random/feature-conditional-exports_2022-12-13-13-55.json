@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "add exports for modern define entry point",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/random"
+}
