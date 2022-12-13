@@ -72,7 +72,10 @@ jobs:
         uses: ./.github/actions/run-rush
         with:
           command: update
-          args: --full --purge
+          args: >
+            --full
+            --purge
+            --recheck
       - name: Build libraries for git hooks
         uses: ./.github/actions/run-rush
         with:
