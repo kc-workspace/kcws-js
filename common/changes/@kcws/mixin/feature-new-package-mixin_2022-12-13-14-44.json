@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "initiate typescript mixins using mixin handbook",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}
