@@ -39,7 +39,7 @@ describe("Mixin", () => {
     expect(sprite.duck()).toEqual("duck");
   });
 
-  test("base property cannot be overrided by mixin", () => {
+  test("base property cannot be overridden by mixin", () => {
     const mixin = Mixin.derive(
       class Sprite {
         public a: number = 1;
@@ -54,7 +54,7 @@ describe("Mixin", () => {
     expect(sprite.b).toEqual(2);
   });
 
-  test("base function will be overrided by mixin", () => {
+  test("base function will be overridden by mixin", () => {
     const mixin = Mixin.derive(
       class Sprite {
         public fn(): string {

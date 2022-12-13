@@ -19,7 +19,7 @@ class Mixin<BC> {
    * This function contains side-effect to input constructor,
    * be-aware that your input will be applied to mixin without copied first.
    *
-   * @param ctor - base contructor to apply mixin
+   * @param ctor - base constructor to apply mixin
    * @returns mixin deriver object to apply more mixins
    *
    * @beta
