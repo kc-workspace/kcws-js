@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/dtcheck",
+      "comment": "add exports for modern define entry point",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/dtcheck"
+}
