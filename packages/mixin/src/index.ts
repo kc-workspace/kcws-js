@@ -35,11 +35,11 @@ class Mixin<BC> {
   }
 
   /**
-   * apply mixins base constuctor to extends function
+   * apply mixins base constructor to extends function
    *
    * @param ctor - extra object that should extends to base class
    *
-   * @see https://www.typescriptlang.org/docs/handbook/mixins.html#alternative-pattern
+   * @see https://www.typescriptlang.org/docs/handbook/mixins.html
    *
    * @beta
    */
