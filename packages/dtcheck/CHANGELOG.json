@@ -2,6 +2,43 @@
   "name": "@kcws/dtcheck",
   "entries": [
     {
+      "version": "0.1.0",
+      "tag": "@kcws/dtcheck_v0.1.0",
+      "date": "Tue, 13 Dec 2022 15:18:50 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "add exports for modern define entry point",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "e5eceadfb1b415480d7b2afa56ac5705f26dcdfe"
+          },
+          {
+            "comment": "selected files to publish, and fix main path",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "7f2c9cd713e97cffed56a19a2c64440464880435"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "30a60a90f1afe49d4e047f446900861e0a0fcc64"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.4.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.4.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.3.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.2",
       "tag": "@kcws/dtcheck_v0.0.2",
       "date": "Wed, 07 Dec 2022 16:52:20 GMT",

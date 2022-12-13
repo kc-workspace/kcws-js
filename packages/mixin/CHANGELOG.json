@@ -1,0 +1,30 @@
+{
+  "name": "@kcws/mixin",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@kcws/mixin_v0.1.0",
+      "date": "Tue, 13 Dec 2022 15:18:50 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "initiate typescript mixins using mixin handbook",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "258b4d0c9d183a2aa03d532306ddcb2ca5d6a303"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.4.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.4.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.3.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

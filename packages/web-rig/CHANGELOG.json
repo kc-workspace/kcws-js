@@ -2,6 +2,27 @@
   "name": "@kcws/web-rig",
   "entries": [
     {
+      "version": "0.4.0",
+      "tag": "@kcws/web-rig_v0.4.0",
+      "date": "Tue, 13 Dec 2022 15:18:50 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "selected files to publish, and fix main path",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "36f6fb907c1f496c84ccdbc576254d6c3ac3e075"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "30a60a90f1afe49d4e047f446900861e0a0fcc64"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.3.0",
       "tag": "@kcws/web-rig_v0.3.0",
       "date": "Wed, 07 Dec 2022 16:52:20 GMT",
