@@ -5,6 +5,13 @@
   "main": "lib-commonjs/index.js",
   "module": "lib-es6/index.js",
   "browser": "lib-umd/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib-es6/index.js",
+      "require": "./lib-commonjs/index.js",
+      "default": "./lib-umd/index.js"
+    }
+  },
   "types": "dist/index.d.ts",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/dtcheck",
