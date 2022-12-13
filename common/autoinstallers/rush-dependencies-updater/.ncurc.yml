@@ -3,6 +3,8 @@ interactive: false
 verbose: false
 # Remove version ranges from the final package version.
 removeRange: true
+# Not update peerDependencies version.
+peer: false
 
 # Modify the output formatting or show additional
 # information. Specify one or more comma-delimited

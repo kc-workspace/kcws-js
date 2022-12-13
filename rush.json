@@ -19,7 +19,7 @@
    *
    * The latest version can found here: https://github.com/microsoft/rushstack/blob/main/apps/rush/CHANGELOG.md
    */
-  "rushVersion": "5.85.1",
+  "rushVersion": "5.86.0",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -31,7 +31,7 @@
    *
    * The latest version can found here: https://github.com/pnpm/pnpm/releases
    */
-  "pnpmVersion": "7.17.1",
+  "pnpmVersion": "7.18.2",
   "pnpmOptions": {
     // https://github.com/microsoft/rushstack/issues/2542#issuecomment-794990772
     "useWorkspaces": true,

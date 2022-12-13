@@ -1,38 +1,38 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@microsoft/api-documenter': 7.19.25
+  '@microsoft/api-documenter': 7.19.26
   '@mxssfd/typedoc-theme': 1.0.3
   serve: 14.1.2
   typedoc: 0.23.21
 
 dependencies:
-  '@microsoft/api-documenter': 7.19.25
+  '@microsoft/api-documenter': 7.19.26
   '@mxssfd/typedoc-theme': 1.0.3_typedoc@0.23.21
   serve: 14.1.2
-  typedoc: 0.23.21_typescript@4.9.3
+  typedoc: 0.23.21_typescript@4.9.4
 
 packages:
 
-  /@microsoft/api-documenter/7.19.25:
-    resolution: {integrity: sha512-/yC6cG7QpjkDqHvoXt5SJJdB0Mdj0oYpaWgxdOV8uHRniZ9kZwxAEResswdS6QDCYoyqDD6jlh008HwXIcmXjA==}
+  /@microsoft/api-documenter/7.19.26:
+    resolution: {integrity: sha512-sFhYmO8k6CMFJ20D/LP1B7GdH+JfwmSKO/xTXnm63WA3+AX7g94G4TlKlc1FXdHFS2qhHnlm4qZUD3fgfs1vqg==}
     hasBin: true
     dependencies:
-      '@microsoft/api-extractor-model': 7.25.2
+      '@microsoft/api-extractor-model': 7.25.3
       '@microsoft/tsdoc': 0.14.2
-      '@rushstack/node-core-library': 3.53.2
+      '@rushstack/node-core-library': 3.53.3
       '@rushstack/ts-command-line': 4.13.1
       colors: 1.2.5
       js-yaml: 3.13.1
       resolve: 1.17.0
     dev: false
 
-  /@microsoft/api-extractor-model/7.25.2:
-    resolution: {integrity: sha512-+h1uCrLQXFAKMUdghhdDcnniDB+6UA/lS9ArlB4QZQ34UbLuXNy2oQ6fafFK8cKXU4mUPTF/yGRjv7JKD5L7eg==}
+  /@microsoft/api-extractor-model/7.25.3:
+    resolution: {integrity: sha512-WWxBUq77p2iZ+5VF7Nmrm3y/UtqCh5bYV8ii3khwq3w99+fXWpvfsAhgSLsC7k8XDQc6De4ssMxH6He/qe1pzg==}
     dependencies:
       '@microsoft/tsdoc': 0.14.2
       '@microsoft/tsdoc-config': 0.16.2
-      '@rushstack/node-core-library': 3.53.2
+      '@rushstack/node-core-library': 3.53.3
     dev: false
 
   /@microsoft/tsdoc-config/0.16.2:
@@ -54,11 +54,11 @@ packages:
     peerDependencies:
       typedoc: ^0.23.21
     dependencies:
-      typedoc: 0.23.21_typescript@4.9.3
+      typedoc: 0.23.21_typescript@4.9.4
     dev: false
 
-  /@rushstack/node-core-library/3.53.2:
-    resolution: {integrity: sha512-FggLe5DQs0X9MNFeJN3/EXwb+8hyZUTEp2i+V1e8r4Va4JgkjBNY0BuEaQI+3DW6S4apV3UtXU3im17MSY00DA==}
+  /@rushstack/node-core-library/3.53.3:
+    resolution: {integrity: sha512-H0+T5koi5MFhJUd5ND3dI3bwLhvlABetARl78L3lWftJVQEPyzcgTStvTTRiIM5mCltyTM8VYm6BuCtNUuxD0Q==}
     dependencies:
       '@types/node': 12.20.24
       colors: 1.2.5
@@ -494,8 +494,8 @@ packages:
     resolution: {integrity: sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==}
     dev: false
 
-  /marked/4.2.3:
-    resolution: {integrity: sha512-slWRdJkbTZ+PjkyJnE30Uid64eHwbwa1Q25INCAYfZlK4o6ylagBy/Le9eWntqJFoFT93ikUKMv47GZ4gTwHkw==}
+  /marked/4.2.4:
+    resolution: {integrity: sha512-Wcc9ikX7Q5E4BYDPvh1C6QNSxrjC9tBgz+A/vAhp59KXUgachw++uMvMKiSW8oA85nopmPZcEvBoex/YLMsiyA==}
     engines: {node: '>= 12'}
     hasBin: true
     dev: false
@@ -787,7 +787,7 @@ packages:
     engines: {node: '>=12.20'}
     dev: false
 
-  /typedoc/0.23.21_typescript@4.9.3:
+  /typedoc/0.23.21_typescript@4.9.4:
     resolution: {integrity: sha512-VNE9Jv7BgclvyH9moi2mluneSviD43dCE9pY8RWkO88/DrEgJZk9KpUk7WO468c9WWs/+aG6dOnoH7ccjnErhg==}
     engines: {node: '>= 14.14'}
     hasBin: true
@@ -795,14 +795,14 @@ packages:
       typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x
     dependencies:
       lunr: 2.3.9
-      marked: 4.2.3
+      marked: 4.2.4
       minimatch: 5.1.1
       shiki: 0.11.1
-      typescript: 4.9.3
+      typescript: 4.9.4
     dev: false
 
-  /typescript/4.9.3:
-    resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==}
+  /typescript/4.9.4:
+    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: false
