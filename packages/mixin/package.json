@@ -1,0 +1,61 @@
+{
+  "name": "@kcws/mixin",
+  "version": "0.0.1",
+  "description": "typescript mixin helpers",
+  "main": "lib-commonjs/index.js",
+  "module": "lib-es6/index.js",
+  "browser": "lib-umd/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib-es6/index.js",
+      "require": "./lib-commonjs/index.js",
+      "default": "./lib-umd/index.js"
+    }
+  },
+  "types": "dist/index.d.ts",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/mixin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "packages/mixin"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "mixin",
+    "typescript"
+  ],
+  "files": [
+    "package.json",
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "README.md",
+    "dist/**/*.d.ts",
+    "lib-commonjs/**/*.js",
+    "lib-commonjs/**/*.js.map",
+    "lib-es6/**/*.js",
+    "lib-es6/**/*.js.map",
+    "lib-umd/**/*.js",
+    "lib-umd/**/*.js.map"
+  ],
+  "scripts": {
+    "build": "heft build",
+    "test": "heft test",
+    "clean": "heft clean"
+  },
+  "devDependencies": {
+    "@kcws/web-rig": "workspace:*",
+    "@kcws/lintstaged-config": "workspace:*",
+    "@kcws/eslint-config": "workspace:*",
+    "@rushstack/heft": "0.48.9",
+    "@types/heft-jest": "1.0.3",
+    "@types/node": "14.14.45"
+  }
+}

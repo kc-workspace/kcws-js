@@ -86,6 +86,22 @@ importers:
       '@types/micromatch': 4.0.2
       '@types/node': 14.14.45
 
+  ../../packages/mixin:
+    specifiers:
+      '@kcws/eslint-config': workspace:*
+      '@kcws/lintstaged-config': workspace:*
+      '@kcws/web-rig': workspace:*
+      '@rushstack/heft': 0.48.9
+      '@types/heft-jest': 1.0.3
+      '@types/node': 14.14.45
+    devDependencies:
+      '@kcws/eslint-config': link:../eslint-config
+      '@kcws/lintstaged-config': link:../lintstaged-config
+      '@kcws/web-rig': link:../web-rig
+      '@rushstack/heft': 0.48.9
+      '@types/heft-jest': 1.0.3
+      '@types/node': 14.14.45
+
   ../../packages/node-rig:
     specifiers:
       '@microsoft/api-extractor': 7.33.7

@@ -13,6 +13,10 @@
       "path": "packages/dtcheck"
     },
     {
+      "name": "@kcws/mixin",
+      "path": "packages/mixin"
+    },
+    {
       "name": "@kcws/web-rig",
       "path": "packages/web-rig"
     },

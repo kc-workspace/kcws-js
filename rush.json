@@ -346,6 +346,12 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/mixin",
+      "projectFolder": "packages/mixin",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@kcws/color",
       "projectFolder": "packages/color",
       "reviewCategory": "libraries",
