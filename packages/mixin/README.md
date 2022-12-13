@@ -1,1 +1,1 @@
-# Typescript Mixin
+# TypeScript Mixin
