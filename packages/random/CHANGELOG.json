@@ -2,6 +2,32 @@
   "name": "@kcws/random",
   "entries": [
     {
+      "version": "0.5.0",
+      "tag": "@kcws/random_v0.5.0",
+      "date": "Wed, 14 Dec 2022 07:25:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "change default package type to module",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "a004b6af025dfab1068adbfd9c2ddb8ab8b169ba"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "ignore test files on packed output",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "169c03147408da32e7669258c31d5d688f02c57d"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.5.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.4.0",
       "tag": "@kcws/random_v0.4.0",
       "date": "Tue, 13 Dec 2022 15:18:50 GMT",
