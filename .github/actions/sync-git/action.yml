@@ -1,0 +1,26 @@
+name: Sync git branch
+description: sync branches change
+author: Kamontat Chantrachirathumrong
+inputs:
+  base-branch:
+    description: base branch to syncup
+    required: true
+  branch:
+    description: modified branch
+    required: true
+  remote-name:
+    description: remote name
+    default: origin
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout to base-branch
+      run: git checkout "${{ inputs.base-branch }}"
+      shell: bash
+    - name: Merge change from modified branch
+      run: git merge "${{ inputs.remote-name }}/${{ inputs.branch }}"
+      shell: bash
+    - name: Push all changes to Github
+      run: git push "${{ inputs.remote-name }}" "${{ inputs.base-branch }}"
+      shell: bash
