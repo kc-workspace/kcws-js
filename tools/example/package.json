@@ -2,8 +2,8 @@
   "name": "@kcws/tool-example",
   "version": "0.0.1",
   "description": "example tooling for kcws",
-  "type": "module",
-  "main": "lib-es6/index.js",
+  "type": "commonjs",
+  "main": "lib-commonjs/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
