@@ -77,7 +77,7 @@ jobs:
           command: publish
           args: >
             --apply
-            --target-branch "main"
+            --target-branch "release"
             --publish
             --add-commit-details
         env:
