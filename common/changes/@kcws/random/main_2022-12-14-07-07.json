@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "ignore test files on packed output",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/random"
+}
