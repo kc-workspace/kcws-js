@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "change default package type to module",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}
