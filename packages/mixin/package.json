@@ -2,17 +2,17 @@
   "name": "@kcws/mixin",
   "version": "0.1.0",
   "description": "typescript mixin helpers",
-  "main": "lib-commonjs/index.js",
-  "module": "lib-es6/index.js",
-  "browser": "lib-umd/index.js",
+  "type": "module",
+  "main": "lib-es6/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./lib-es6/index.js",
       "require": "./lib-commonjs/index.js",
-      "default": "./lib-umd/index.js"
+      "default": "./lib-umd/index.js",
+      "node": "./lib-es6/index.js"
     }
   },
-  "types": "dist/index.d.ts",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/mixin",
   "repository": {
@@ -33,17 +33,21 @@
     "typescript"
   ],
   "files": [
-    "package.json",
     "CHANGELOG.json",
     "CHANGELOG.md",
-    "README.md",
     "dist/**/*.d.ts",
     "lib-commonjs/**/*.js",
     "lib-commonjs/**/*.js.map",
+    "!lib-commonjs/**/*.test.js",
+    "!lib-commonjs/**/*.test.js.map",
     "lib-es6/**/*.js",
     "lib-es6/**/*.js.map",
+    "!lib-es6/**/*.test.js",
+    "!lib-es6/**/*.test.js.map",
     "lib-umd/**/*.js",
-    "lib-umd/**/*.js.map"
+    "lib-umd/**/*.js.map",
+    "!lib-umd/**/*.test.js",
+    "!lib-umd/**/*.test.js.map"
   ],
   "scripts": {
     "build": "heft build",
