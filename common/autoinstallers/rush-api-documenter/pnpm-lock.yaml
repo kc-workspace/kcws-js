@@ -4,13 +4,13 @@ specifiers:
   '@microsoft/api-documenter': 7.19.26
   '@mxssfd/typedoc-theme': 1.0.3
   serve: 14.1.2
-  typedoc: 0.23.21
+  typedoc: 0.23.22
 
 dependencies:
   '@microsoft/api-documenter': 7.19.26
-  '@mxssfd/typedoc-theme': 1.0.3_typedoc@0.23.21
+  '@mxssfd/typedoc-theme': 1.0.3_typedoc@0.23.22
   serve: 14.1.2
-  typedoc: 0.23.21_typescript@4.9.4
+  typedoc: 0.23.22_typescript@4.9.4
 
 packages:
 
@@ -48,13 +48,13 @@ packages:
     resolution: {integrity: sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==}
     dev: false
 
-  /@mxssfd/typedoc-theme/1.0.3_typedoc@0.23.21:
+  /@mxssfd/typedoc-theme/1.0.3_typedoc@0.23.22:
     resolution: {integrity: sha512-xtgE5+Pe3Dk2NSqYyZKIz8Zi6/Mupps+nIFtfL7hFTN3vjXpvcFFevJg7DcCwD51q/tPy0VEivOhbfpCrocvsA==}
     engines: {node: '>= 14'}
     peerDependencies:
       typedoc: ^0.23.21
     dependencies:
-      typedoc: 0.23.21_typescript@4.9.4
+      typedoc: 0.23.22_typescript@4.9.4
     dev: false
 
   /@rushstack/node-core-library/3.53.3:
@@ -168,7 +168,7 @@ packages:
     engines: {node: '>=14.16'}
     dependencies:
       ansi-align: 3.0.1
-      camelcase: 7.0.0
+      camelcase: 7.0.1
       chalk: 5.0.1
       cli-boxes: 3.0.0
       string-width: 5.1.2
@@ -195,8 +195,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /camelcase/7.0.0:
-    resolution: {integrity: sha512-JToIvOmz6nhGsUhAYScbo2d6Py5wojjNfoxoc2mEVLUdJ70gJK2gnd+ABY1Tc3sVMyK7QDPtN0T/XdlCQWITyQ==}
+  /camelcase/7.0.1:
+    resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
     dev: false
 
@@ -787,8 +787,8 @@ packages:
     engines: {node: '>=12.20'}
     dev: false
 
-  /typedoc/0.23.21_typescript@4.9.4:
-    resolution: {integrity: sha512-VNE9Jv7BgclvyH9moi2mluneSviD43dCE9pY8RWkO88/DrEgJZk9KpUk7WO468c9WWs/+aG6dOnoH7ccjnErhg==}
+  /typedoc/0.23.22_typescript@4.9.4:
+    resolution: {integrity: sha512-5sJkjK60xp8A7YpcYniu3+Wf0QcgojEnhzHuCN+CkdpQkKRhOspon/9+sGTkGI8kjVkZs3KHrhltpQyVhRMVfw==}
     engines: {node: '>= 14.14'}
     hasBin: true
     peerDependencies:
