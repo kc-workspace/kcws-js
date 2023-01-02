@@ -22,10 +22,8 @@
     "eslint-config"
   ],
   "files": [
-    "package.json",
     "CHANGELOG.json",
     "CHANGELOG.md",
-    "README.md",
     "profiles"
   ],
   "scripts": {

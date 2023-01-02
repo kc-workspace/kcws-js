@@ -3,14 +3,13 @@
   "version": "0.0.1",
   "description": "example tooling for kcws",
   "type": "commonjs",
-  "main": "lib-commonjs/index.js",
+  "main": "lib/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib-es6/index.js",
-      "require": "./lib-commonjs/index.js",
-      "default": "./lib-umd/index.js",
-      "node": "./lib-es6/index.js"
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs",
+      "default": "./lib-umd/index.js"
     }
   },
   "license": "SEE LICENSE IN LICENSE",
@@ -30,20 +29,21 @@
   },
   "keywords": [
     "tooling",
-    "tools"
+    "tools",
+    "example"
   ],
   "files": [
     "CHANGELOG.json",
     "CHANGELOG.md",
     "dist/**/*.d.ts",
-    "lib-commonjs/**/*.js",
-    "lib-commonjs/**/*.js.map",
-    "!lib-commonjs/**/*.test.js",
-    "!lib-commonjs/**/*.test.js.map",
-    "lib-es6/**/*.js",
-    "lib-es6/**/*.js.map",
-    "!lib-es6/**/*.test.js",
-    "!lib-es6/**/*.test.js.map",
+    "lib/**/*.js",
+    "lib/**/*.js.map",
+    "!lib/**/*.test.js",
+    "!lib/**/*.test.js.map",
+    "lib/**/*.mjs",
+    "lib/**/*.mjs.map",
+    "!lib/**/*.test.mjs",
+    "!lib/**/*.test.mjs.map",
     "lib-umd/**/*.js",
     "lib-umd/**/*.js.map",
     "!lib-umd/**/*.test.js",
@@ -51,7 +51,8 @@
   ],
   "scripts": {
     "build": "heft build",
-    "test": "heft test"
+    "test": "heft test",
+    "clean": "heft clean"
   },
   "devDependencies": {
     "@kcws/node-rig": "workspace:*",

@@ -23,10 +23,8 @@
     "package.json"
   ],
   "files": [
-    "package.json",
     "CHANGELOG.json",
     "CHANGELOG.md",
-    "README.md",
     "types"
   ],
   "scripts": {
@@ -38,7 +36,7 @@
     "@definitelytyped/dtslint": "0.0.142",
     "@kcws/eslint-config": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
-    "typescript": "4.9.3"
+    "typescript": "4.9.4"
   },
   "peerDependencies": {
     "typescript": ">=2.0.0"
