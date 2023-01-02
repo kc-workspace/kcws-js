@@ -100,11 +100,6 @@ jobs:
 
   testing:
     runs-on: ubuntu-latest
-    # This is depends on which node version rushjs support
-    # https://github.com/microsoft/rushstack/blob/main/.github/workflows/ci.yml
-    strategy:
-      matrix:
-        node-version: [14, 16, 18]
     needs:
       - changelog
     steps:
@@ -116,7 +111,7 @@ jobs:
         uses: ./.github/actions/setup-rush
         with:
           install: true
-          node-version: ${{ matrix.node-version }}
+          node-version: 18
       - name: Building packages
         uses: ./.github/actions/run-rush
         with:
@@ -134,7 +129,32 @@ jobs:
           args: --verbose
       - name: Analysis packages
         uses: SonarSource/sonarcloud-github-action@master
-        if: matrix.node-version == 18
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  alternative-testing:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Support backward 'LTS' version
+        # and 'current' version
+        # https://github.com/nodejs/release#release-schedule
+        node-version: [14, 16, 19]
+    needs:
+      - testing
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+      - name: Setup rushjs
+        uses: ./.github/actions/setup-rush
+        with:
+          install: true
+          node-version: ${{ matrix.node-version }}
+      - name: Building packages
+        uses: ./.github/actions/run-rush
+        with:
+          command: build
+      - name: Testing packages
+        uses: ./.github/actions/run-rush
+        with:
+          command: test
