@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "enable importsNotUsedAsValues by default to omit import if not use as value",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}
