@@ -8,6 +8,7 @@ inputs:
     required: true
   args:
     description: command options / arguments
+    default: ""
 
 runs:
   using: composite
