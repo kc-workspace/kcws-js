@@ -2,13 +2,18 @@
 
 exit_code=0
 
-require_mode="Required"
-optional_mode="Optional"
+require_mode="required"
+optional_mode="optional"
 
 checking() {
   local name="$1" mode="$2" link="$3"
+  local info=""
 
-  printf "Checking %-15s: " "$name"
+  if [ "$mode" = "$optional_mode" ]; then
+    info="($optional_mode) "
+  fi
+
+  printf "Checking %-12s%18s: " "$name" "$info"
   if command -v "$name" >/dev/null 2>&1; then
     printf "%s\n" "passed"
   else
@@ -20,6 +25,8 @@ checking() {
 }
 
 completed() {
+  printf "Summary: exit code (%s)" "$exit_code"
+  echo
   return "$exit_code"
 }
 
