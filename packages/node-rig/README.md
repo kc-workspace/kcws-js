@@ -2,15 +2,27 @@
 
 ## Typescript
 
-Using `Typescript` module to build and compile typescript
-via [TypescriptTask][h-ts-pg] ([source][h-ts-pg-gh]) of heft cli.
+Using `Typescript` module in heft to build and compile typescript
+via [TypescriptTask][h-ts-pg] ([source][h-ts-pg-gh]).
+
+- [tsconfig.json][tsconfig] - tsconfig used for compile project
+- [typescript.json][ts-config] - custom typescript config used by heft for addition feature
 
 ### Output
 
-By default [tsconfig][tsconfig] will always produce **./lib** directory with
-ESNext javascript and types. However, we configure TypescriptTask
-to also produce **commonjs**, **es6**, **amd**
-and **umd** ([source][ts-config]).
+This will generate output on multiple directories,
+
+1. **lib** - a main directory contains compiled code.
+  - `commonjs` (**.js**) - compiled code using commonjs type.
+  - `esmodule` (**.mjs**) - compiled code using esmodule/es5 type.
+  - `mapping` (**.js.map** or **.mjs.map**) - file mapping for commonjs or esmodule.
+  - `typings` (**.d.ts**) - typescript definition created by `tsc` cli.
+2. **dist** - a main typescript definition single file. it's separated to 4 files.
+  - **index.d.ts** is a aggregated type of a project.
+  - **index-alpha.d.ts** is a alpha-only type of a project.
+  - **index-beta.d.ts** is a beta-only type of a project.
+  - **index-public.d.ts** is a public-only type of a project.
+3. **lib-umd** - a compiled [umd][umd-gh] code.
 
 ## Jest
 
