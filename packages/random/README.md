@@ -12,5 +12,5 @@
 [link:libsio@latest]: https://libraries.io/npm/@kcws%2Frandom
 [link:npm@latest]: https://www.npmjs.com/package/@kcws/random/v/latest
 [img:snyk@latest]: https://img.shields.io/snyk/vulnerabilities/npm/@kcws/random?style=flat-square
-[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/random/latest?style=flat-square
+[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/random/latest?style=flat-square&label=size
 [link:bundle@latest]: https://bundlephobia.com/result?p=@kcws/random@latest

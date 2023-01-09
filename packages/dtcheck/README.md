@@ -12,5 +12,5 @@
 [link:libsio@latest]: https://libraries.io/npm/@kcws%2Fdtcheck
 [link:npm@latest]: https://www.npmjs.com/package/@kcws/dtcheck/v/latest
 [img:snyk@latest]: https://img.shields.io/snyk/vulnerabilities/npm/@kcws/dtcheck?style=flat-square
-[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/dtcheck/latest?style=flat-square
+[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/dtcheck/latest?style=flat-square&label=size
 [link:bundle@latest]: https://bundlephobia.com/result?p=@kcws/dtcheck@latest

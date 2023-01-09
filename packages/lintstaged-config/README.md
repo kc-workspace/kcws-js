@@ -12,5 +12,5 @@
 [link:libsio@latest]: https://libraries.io/npm/@kcws%2Flintstaged-config
 [link:npm@latest]: https://www.npmjs.com/package/@kcws/lintstaged-config/v/latest
 [img:snyk@latest]: https://img.shields.io/snyk/vulnerabilities/npm/@kcws/lintstaged-config?style=flat-square
-[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/lintstaged-config/latest?style=flat-square
+[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/lintstaged-config/latest?style=flat-square&label=size
 [link:bundle@latest]: https://bundlephobia.com/result?p=@kcws/lintstaged-config@latest

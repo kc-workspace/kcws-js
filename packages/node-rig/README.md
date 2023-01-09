@@ -46,7 +46,7 @@ There are several config we overwritten to meet our need.
 [link:libsio@latest]: https://libraries.io/npm/@kcws%2Fnode-rig
 [link:npm@latest]: https://www.npmjs.com/package/@kcws/node-rig/v/latest
 [img:snyk@latest]: https://img.shields.io/snyk/vulnerabilities/npm/@kcws/node-rig?style=flat-square
-[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/node-rig/latest?style=flat-square
+[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/node-rig/latest?style=flat-square&label=size
 [link:bundle@latest]: https://bundlephobia.com/result?p=@kcws/node-rig@latest
 
 [link:sonarcloud]: https://sonarcloud.io/

@@ -49,5 +49,5 @@ module.exports = {
 [link:libsio@latest]: https://libraries.io/npm/@kcws%2Feslint-config
 [link:npm@latest]: https://www.npmjs.com/package/@kcws/eslint-config/v/latest
 [img:snyk@latest]: https://img.shields.io/snyk/vulnerabilities/npm/@kcws/eslint-config?style=flat-square
-[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/eslint-config/latest?style=flat-square
+[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/eslint-config/latest?style=flat-square&label=size
 [link:bundle@latest]: https://bundlephobia.com/result?p=@kcws/eslint-config@latest
