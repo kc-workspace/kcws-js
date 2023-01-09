@@ -1,12 +1,17 @@
 # Web-rig
 
+[![npm@latest][img:npm@latest]][link:npm@latest]
+[![bundle@latest][img:bundle@latest]][link:bundle@latest]
+[![libsio@latest][img:libsio@latest]][link:libsio@latest]
+![snyk@latest][img:snyk@latest]
+
 ## Typescript
 
 Using `Typescript` module in heft to build and compile typescript
-via [TypescriptTask][h-ts-pg] ([source][h-ts-pg-gh]).
+via [TypescriptTask][link:heft-ts] ([source][gh:heft-ts]).
 
-- [tsconfig.json][tsconfig] - tsconfig used for compile project
-- [typescript.json][ts-config] - custom typescript config used by heft for addition feature
+- [tsconfig.json][local:tsconfig] - tsconfig used for compile project
+- [typescript.json][local:ts-config] - custom typescript config used by heft for addition feature
 
 ### Output
 
@@ -22,41 +27,47 @@ This will generate output on multiple directories,
   - **index-alpha.d.ts** is a alpha-only type of a project.
   - **index-beta.d.ts** is a beta-only type of a project.
   - **index-public.d.ts** is a public-only type of a project.
-3. **lib-umd** - a compiled [umd][umd-gh] code.
+3. **lib-umd** - a compiled [umd][gh:umd] code.
 
 > notes: library using this rig will requires client to install 'tslib' package.
 > This is to reduce package size on production build
 
 ## Jest
 
-Using [heft-jest-plugin][h-j-pg] module to configure jest.
+Using [heft-jest-plugin][link:heft-jest] module to configure jest.
 There are several config we overwritten to meet our need.
 
 1. Enabled code coverage by default
-2. Produce lcov report for **analysis code coverage** at [sonarcloud][sonarcloud]
-3. Produce html report for test result using [jest-html-reporters][j-html-npm]
-4. Produce junit report for test result using [jest-junit][j-junit-npm]
+2. Produce lcov report for **analysis code coverage** at [sonarcloud][link:sonarcloud]
+3. Produce html report for test result using [jest-html-reporters][npm:jest-html]
+4. Produce junit report for test result using [jest-junit][npm:jest-junit]
 
 ## Scss
 
 > We didn't test this yet, it may or may not works as we expected
 
-Using [heft-sass-plugin][h-scss-pg] module to generate css and
+Using [heft-sass-plugin][link:heft-scss] module to generate css and
 build type definition.
 
-<!-- Links -->
+<!-- LINKS SECTION -->
 
-[sonarcloud]: https://sonarcloud.io/
+[img:npm@latest]: https://img.shields.io/npm/v/@kcws/web-rig/latest?style=flat-square
+[img:libsio@latest]: https://img.shields.io/librariesio/release/npm/@kcws/web-rig?style=flat-square
+[link:libsio@latest]: https://libraries.io/npm/@kcws%2Fweb-rig
+[link:npm@latest]: https://www.npmjs.com/package/@kcws/web-rig/v/latest
+[img:snyk@latest]: https://img.shields.io/snyk/vulnerabilities/npm/@kcws/web-rig?style=flat-square
+[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/web-rig/latest?style=flat-square
+[link:bundle@latest]: https://bundlephobia.com/result?p=@kcws/web-rig@latest
 
-[h-ts-pg]: https://rushstack.io/pages/heft_tasks/typescript/
-[h-j-pg]: https://rushstack.io/pages/heft_tasks/jest/
-[h-scss-pg]: https://rushstack.io/pages/heft_tasks/sass-typings/
+[link:sonarcloud]: https://sonarcloud.io/
+[link:heft-ts]: https://rushstack.io/pages/heft_tasks/typescript/
+[link:heft-jest]: https://rushstack.io/pages/heft_tasks/jest
+[link:heft-scss]: https://rushstack.io/pages/heft_tasks/sass-typings/
+[npm:jest-html]: https://www.npmjs.com/package/jest-html-reporters
+[npm:jest-junit]: https://www.npmjs.com/package/jest-junit
+[gh:umd]: https://github.com/umdjs/umd
+[gh:heft-ts]: https://github.com/microsoft/rushstack/tree/576d198/apps/heft/src/plugins/TypeScriptPlugin
 
-[h-ts-pg-gh]: https://github.com/microsoft/rushstack/tree/576d198/apps/heft/src/plugins/TypeScriptPlugin
-[umd-gh]: https://github.com/umdjs/umd
 
-[j-html-npm]: https://www.npmjs.com/package/jest-html-reporters
-[j-junit-npm]: https://www.npmjs.com/package/jest-junit
-
-[tsconfig]: /packages/web-rig/profiles/default/tsconfig.base.json
-[ts-config]: /packages/web-rig/profiles/default/config/typescript.json
+[local:tsconfig]: /packages/web-rig/profiles/default/tsconfig.base.json
+[local:ts-config]: /packages/web-rig/profiles/default/config/typescript.json

@@ -1,12 +1,17 @@
 # Node-rig
 
+[![npm@latest][img:npm@latest]][link:npm@latest]
+[![bundle@latest][img:bundle@latest]][link:bundle@latest]
+[![libsio@latest][img:libsio@latest]][link:libsio@latest]
+![snyk@latest][img:snyk@latest]
+
 ## Typescript
 
 Using `Typescript` module in heft to build and compile typescript
-via [TypescriptTask][h-ts-pg] ([source][h-ts-pg-gh]).
+via [TypescriptTask][link:heft-ts] ([source][gh:heft-ts]).
 
-- [tsconfig.json][tsconfig] - tsconfig used for compile project
-- [typescript.json][ts-config] - custom typescript config used by heft for addition feature
+- [tsconfig.json][local:tsconfig] - tsconfig used for compile project
+- [typescript.json][local:ts-config] - custom typescript config used by heft for addition feature
 
 ### Output
 
@@ -26,25 +31,30 @@ This will generate output on multiple directories,
 
 ## Jest
 
-Using [heft-jest-plugin][h-j-pg] module to configure jest.
+Using [heft-jest-plugin][link:heft-jest] module to configure jest.
 There are several config we overwritten to meet our need.
 
 1. Enabled code coverage by default
-2. Produce lcov report for **analysis code coverage** at [sonarcloud][sonarcloud]
-3. Produce html report for test result using [jest-html-reporters][j-html-npm]
-4. Produce junit report for test result using [jest-junit][j-junit-npm]
+2. Produce lcov report for **analysis code coverage** at [sonarcloud][link:sonarcloud]
+3. Produce html report for test result using [jest-html-reporters][npm:jest-html]
+4. Produce junit report for test result using [jest-junit][npm:jest-junit]
 
-<!-- Links -->
+<!-- LINKS SECTION -->
 
-[sonarcloud]: https://sonarcloud.io/
+[img:npm@latest]: https://img.shields.io/npm/v/@kcws/node-rig/latest?style=flat-square
+[img:libsio@latest]: https://img.shields.io/librariesio/release/npm/@kcws/node-rig?style=flat-square
+[link:libsio@latest]: https://libraries.io/npm/@kcws%2Fnode-rig
+[link:npm@latest]: https://www.npmjs.com/package/@kcws/node-rig/v/latest
+[img:snyk@latest]: https://img.shields.io/snyk/vulnerabilities/npm/@kcws/node-rig?style=flat-square
+[img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/node-rig/latest?style=flat-square
+[link:bundle@latest]: https://bundlephobia.com/result?p=@kcws/node-rig@latest
 
-[h-ts-pg]: https://rushstack.io/pages/heft_tasks/typescript/
-[h-j-pg]: https://rushstack.io/pages/heft_tasks/jest/
+[link:sonarcloud]: https://sonarcloud.io/
+[link:heft-ts]: https://rushstack.io/pages/heft_tasks/typescript/
+[link:heft-jest]: https://rushstack.io/pages/heft_tasks/jest/
+[npm:jest-html]: https://www.npmjs.com/package/jest-html-reporters
+[npm:jest-junit]: https://www.npmjs.com/package/jest-junit
+[gh:heft-ts]: https://github.com/microsoft/rushstack/tree/576d198/apps/heft/src/plugins/TypeScriptPlugin
 
-[h-ts-pg-gh]: https://github.com/microsoft/rushstack/tree/576d198/apps/heft/src/plugins/TypeScriptPlugin
-
-[j-html-npm]: https://www.npmjs.com/package/jest-html-reporters
-[j-junit-npm]: https://www.npmjs.com/package/jest-junit
-
-[tsconfig]: /packages/node-rig/profiles/default/tsconfig.base.json
-[ts-config]: /packages/node-rig/profiles/default/config/typescript.json
+[local:tsconfig]: /packages/node-rig/profiles/default/tsconfig.base.json
+[local:ts-config]: /packages/node-rig/profiles/default/config/typescript.json
