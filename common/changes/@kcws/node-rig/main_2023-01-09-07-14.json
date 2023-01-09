@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "update readme",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}

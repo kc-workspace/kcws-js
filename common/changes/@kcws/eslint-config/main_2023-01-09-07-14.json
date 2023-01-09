@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "update readme",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}

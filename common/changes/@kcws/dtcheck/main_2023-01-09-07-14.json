@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/dtcheck",
+      "comment": "update readme",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/dtcheck"
+}

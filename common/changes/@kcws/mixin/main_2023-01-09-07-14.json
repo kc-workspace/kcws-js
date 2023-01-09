@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "update readme",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}
