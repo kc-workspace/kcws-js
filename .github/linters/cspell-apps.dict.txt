@@ -9,3 +9,5 @@ rushstack
 heft
 rig
 ncurc
+libsio
+snyk
