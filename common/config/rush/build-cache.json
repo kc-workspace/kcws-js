@@ -10,7 +10,7 @@
    *
    * See https://rushjs.io/pages/maintainer/build_cache/ for details about this experimental feature.
    */
-  "buildCacheEnabled": false,
+  "buildCacheEnabled": true,
 
   /**
    * (Required) Choose where project build outputs will be cached.
@@ -30,7 +30,7 @@
    *  - [phaseName:normalize]
    *  - [phaseName:trimPrefix]
    */
-  // "cacheEntryNamePattern": "[projectName:normalize]-[phaseName:normalize]-[hash]"
+  "cacheEntryNamePattern": "[projectName:normalize]-[phaseName:normalize]-[hash]",
 
   /**
    * Use this configuration with "cacheProvider"="azure-blob-storage"
