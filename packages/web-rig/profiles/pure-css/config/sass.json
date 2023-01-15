@@ -25,7 +25,7 @@
    *
    * Default value: "temp/sass-ts/"
    */
-  "generatedTsFolder": "types/",
+  "generatedTsFolder": "dist/",
 
   /**
    * Determines whether export values are wrapped in a default property, or not.
@@ -40,7 +40,7 @@
    *
    * Default value: undefined
    */
-  "cssOutputFolders": ["lib-css"],
+  "cssOutputFolders": ["lib"],
 
   /**
    * Files with these extensions will pass through the Sass transpiler for typings generation.
