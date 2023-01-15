@@ -358,6 +358,12 @@
       "shouldPublish": false
     },
     {
+      "packageName": "@kcws/reset.css",
+      "projectFolder": "packages/reset.css",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@kcws/node-rig",
       "projectFolder": "packages/node-rig",
       "reviewCategory": "configs",

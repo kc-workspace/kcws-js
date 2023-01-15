@@ -17,6 +17,10 @@
       "path": "packages/mixin"
     },
     {
+      "name": "@kcws/reset.css",
+      "path": "packages/reset.css"
+    },
+    {
       "name": "@kcws/web-rig",
       "path": "packages/web-rig"
     },
