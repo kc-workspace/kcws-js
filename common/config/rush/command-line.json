@@ -4,85 +4,116 @@
  */
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+  "phases": [
+    {
+      "name": "_phase:lint",
+      "ignoreMissingScript": true,
+      "allowWarningsOnSuccess": false
+    },
+    {
+      "name": "_phase:build",
+      "dependencies": {
+        "upstream": ["_phase:build"]
+      },
+      "ignoreMissingScript": false,
+      "allowWarningsOnSuccess": false
+    },
+    {
+      "name": "_phase:test",
+      "dependencies": {
+        "self": ["_phase:build"]
+      },
+      "ignoreMissingScript": false,
+      "allowWarningsOnSuccess": false
+    },
+    {
+      "name": "_phase:test-types",
+      "ignoreMissingScript": true,
+      // Typings package might contains warning message
+      // When we use typescript version higher than
+      // what they recommend, however it didn't mean application
+      // will failed.
+      "allowWarningsOnSuccess": true
+    },
+    {
+      "name": "_phase:clean",
+      "ignoreMissingScript": false,
+      "allowWarningsOnSuccess": false
+    }
+  ],
   "commands": [
     {
-      "name": "hooks:format",
+      "commandKind": "phased",
+      "name": "build",
+      "summary": "Build packages using phase block",
+      "phases": ["_phase:lint", "_phase:build"],
+      "enableParallelism": true,
+      "incremental": true
+    },
+    {
+      "commandKind": "phased",
+      "name": "rebuild",
+      "summary": "Rebuild packages using phase block",
+      "phases": ["_phase:clean", "_phase:lint", "_phase:build"],
+      "enableParallelism": true,
+      "incremental": false
+    },
+    {
+      "commandKind": "phased",
+      "name": "test",
+      "summary": "Test packages using phase block",
+      "phases": ["_phase:lint", "_phase:build", "_phase:test", "_phase:test-types"],
+      "enableParallelism": false,
+      "incremental": true
+    },
+    {
+      "commandKind": "phased",
+      "name": "retest",
+      "summary": "Retest packages using phase block",
+      "phases": ["_phase:clean", "_phase:lint", "_phase:build", "_phase:test", "_phase:test-types"],
+      "enableParallelism": false,
+      "incremental": false
+    },
+    {
+      "commandKind": "phased",
+      "name": "clean",
+      "summary": "Clean packages using phase block",
+      "phases": ["_phase:clean"],
+      "enableParallelism": true,
+      "incremental": false
+    },
+
+    {
       "commandKind": "global",
+      "name": "hooks:format",
       "summary": "Used by the pre-commit Git hook. This command invokes code styles to reformat staged changes.",
       "safeForSimultaneousRushProcesses": true,
       "autoinstallerName": "rush-lintstaged",
       "shellCommand": "sh common/autoinstallers/rush-lintstaged/index.sh"
     },
     {
-      "name": "build:docs:v1",
       "commandKind": "global",
-      "summary": "Create document markdown using api-extractor. This will automatically run on CI by default",
+      "name": "docs:v1",
+      "summary": "invokes api-extractor to create document markdown.",
       "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-api-documenter",
       "shellCommand": "sh common/autoinstallers/rush-api-documenter/index.sh"
     },
     {
-      "name": "build:docs:v2",
       "commandKind": "global",
-      "summary": "Create document website using typedocs. This will automatically run on CI by default",
+      "name": "docs:v2",
+      "summary": "invokes typedocs to create document markdown.",
       "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-api-documenter",
       "shellCommand": "sh common/autoinstallers/rush-api-documenter/index-v2.sh"
     },
     {
-      "name": "compile:docs:local",
       "commandKind": "global",
-      "summary": "Compile documentation to html (For locally use only)",
-      "safeForSimultaneousRushProcesses": false,
-      "autoinstallerName": "rush-api-documenter",
-      "shellCommand": "sh common/autoinstallers/rush-api-documenter/build-local.sh"
-    },
-    {
-      "name": "start:docs:local",
-      "commandKind": "global",
-      "summary": "Serve built documentation website (For locally use only)",
-      "safeForSimultaneousRushProcesses": true,
-      "autoinstallerName": "rush-api-documenter",
-      "shellCommand": "sh common/autoinstallers/rush-api-documenter/start-local.sh"
-    },
-    {
-      "name": "deps",
-      "commandKind": "global",
-      "summary": "Check dependencies version of each packages (including autoinstallers)",
+      "name": "upgrade",
+      "summary": "Upgrade dependencies of each packages (including autoinstallers)",
       "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-dependencies-updater",
       "shellCommand": "sh common/autoinstallers/rush-dependencies-updater/index.sh"
-    },
-    {
-      "name": "test",
-      "commandKind": "bulk",
-      "summary": "Runs unit tests for all projects",
-      "enableParallelism": true,
-      "ignoreMissingScript": true,
-      "ignoreDependencyOrder": true
-    },
-    {
-      "name": "test:types",
-      "commandKind": "bulk",
-      "summary": "Runs unit tests for typing projects",
-      "enableParallelism": false,
-      "ignoreMissingScript": true,
-      "ignoreDependencyOrder": true,
-      // Typings package might contains warning message
-      // When we use typescript version higher than
-      // what they recommend, however it didn't mean application
-      // will failed.
-      "allowWarningsInSuccessfulBuild": true,
-      "incremental": true,
-      "safeForSimultaneousRushProcesses": false
-    },
-    {
-      "name": "clean",
-      "commandKind": "bulk",
-      "summary": "Cleaning ignored files/directories for all projects",
-      "enableParallelism": true,
-      "ignoreMissingScript": true,
-      "ignoreDependencyOrder": true
     }
   ],
 
@@ -93,23 +124,10 @@
   "parameters": [
     {
       "parameterKind": "flag",
-      "longName": "--upgrade",
-      "shortName": "-u",
-      "description": "Overwrite package file with upgraded versions instead of just outputting to console.",
-      "associatedCommands": ["deps"]
-    },
-    {
-      "parameterKind": "flag",
-      "longName": "--verbose",
-      "description": "Log additional information for debugging.",
-      "associatedCommands": ["deps"]
-    },
-    {
-      "parameterKind": "flag",
       "longName": "--interactive",
       "shortName": "-i",
       "description": "Interactively select which packages to upgrade.",
-      "associatedCommands": ["deps"]
+      "associatedCommands": ["upgrade"]
     },
     {
       "parameterKind": "choice",
@@ -139,7 +157,7 @@
           "description": "Upgrades to the latest patch version of the package."
         }
       ],
-      "associatedCommands": ["deps"]
+      "associatedCommands": ["upgrade"]
     }
   ]
 }
