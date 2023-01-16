@@ -91,12 +91,14 @@ jobs:
           VALIDATE_TSX: false
           # Disabled json validation as issue #30
           VALIDATE_JSON: false
+          # The overrided config cannot resolve to correct path
+          # so we disabled it for now.
+          # For now, we only have single project using css linter
+          # so we will run it manually on local.
+          VALIDATE_CSS: false
           # For markdownlint, as it cannot exclude file from config file
           # exclude reviews file because it autogen file
           FILTER_REGEX_EXCLUDE: common/reviews/api/*
-          # For now, we only have single project using css linter
-          # If we have more, we will create as libraries to extends instead
-          CSS_FILE_NAME: /github/workspace/packages/reset.css/.stylelintrc.json
 
   testing:
     runs-on: ubuntu-latest
