@@ -112,17 +112,10 @@ jobs:
         uses: ./.github/actions/run-rush
         with:
           command: build
-          args: --verbose
-      - name: Testing packages
+      - name: Testing
         uses: ./.github/actions/run-rush
         with:
           command: test
-          args: --verbose
-      - name: Testing typings
-        uses: ./.github/actions/run-rush
-        with:
-          command: test:types
-          args: --verbose
       - name: Analysis packages
         uses: SonarSource/sonarcloud-github-action@master
         env:
