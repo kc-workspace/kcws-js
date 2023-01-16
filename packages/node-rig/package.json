@@ -24,7 +24,9 @@
     "profiles"
   ],
   "scripts": {
-    "build": ""
+    "_phase:build": "",
+    "_phase:test": "",
+    "_phase:clean": ""
   },
   "dependencies": {
     "@microsoft/api-extractor": "7.33.7",

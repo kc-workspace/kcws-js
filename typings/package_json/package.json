@@ -28,8 +28,10 @@
     "types"
   ],
   "scripts": {
-    "build": "",
-    "test:types": "dtslint types"
+    "_phase:build": "",
+    "_phase:test": "",
+    "_phase:test-types": "dtslint types",
+    "_phase:clean": ""
   },
   "dependencies": {},
   "devDependencies": {

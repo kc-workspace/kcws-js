@@ -48,9 +48,9 @@
     "!lib-umd/**/*.test.js.map"
   ],
   "scripts": {
-    "build": "heft build",
-    "test": "heft test",
-    "clean": "heft clean"
+    "_phase:build": "heft build",
+    "_phase:test": "heft test",
+    "_phase:clean": "heft clean"
   },
   "dependencies": {
     "micromatch": "4.0.5"

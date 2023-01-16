@@ -27,7 +27,9 @@
     "profiles"
   ],
   "scripts": {
-    "build": ""
+    "_phase:build": "",
+    "_phase:test": "",
+    "_phase:clean": ""
   },
   "dependencies": {
     "@rushstack/eslint-config": "3.1.1",
