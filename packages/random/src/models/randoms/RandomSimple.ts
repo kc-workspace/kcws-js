@@ -33,6 +33,9 @@ export class RandomSimple extends Random {
     return new RandomSimple();
   }
 
+  /**
+   * Move pointer to next number.
+   */
   private _nextPointer(): void {
     this._pointer++;
     if (this._pointer === this._whitelist.length) {

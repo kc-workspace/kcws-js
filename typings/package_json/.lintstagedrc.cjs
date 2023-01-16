@@ -9,7 +9,7 @@ module.exports = defineConfig(
   Config.builder()
     .append("dts", {
       regexs: "**/*.d.ts",
-      actions: generic("rush", "test:types"),
+      actions: generic("rush", "test"),
     })
     .build()
 );

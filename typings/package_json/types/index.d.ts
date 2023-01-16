@@ -1,29 +1,47 @@
 declare global {
+  /**
+   * The repository field on package.json file.
+   */
   interface PackageRepository {
     type: "git";
     url: string;
     directory?: string;
   }
 
+  /**
+   * The bugs field on package.json file.
+   */
   interface PackageBugReport {
     email?: string;
     url?: string;
   }
 
+  /**
+   * The author field on package.json file.
+   */
   interface PackageAuthor {
     name: string;
     email?: string;
     url?: string;
   }
 
+  /**
+   * The publishConfig field on package.json file.
+   */
   interface PackagePublishConfig {
     access: "public" | "restricted";
   }
 
+  /**
+   * Custom typedoc field on package.json file.
+   */
   interface TypedocConfig {
     entryPoint: string;
   }
 
+  /**
+   * The package.json schema.
+   */
   interface Package {
     name: string;
     version: string;

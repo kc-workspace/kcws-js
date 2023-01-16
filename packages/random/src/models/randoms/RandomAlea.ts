@@ -44,6 +44,12 @@ export class RandomAlea extends Random {
     return new RandomAlea(s ?? this.seed);
   }
 
+  /**
+   * create mash from seed.
+   *
+   * @param seed - seed string
+   * @returns mash from seed
+   */
   private _mash(seed: string): number {
     let t;
     let s;
