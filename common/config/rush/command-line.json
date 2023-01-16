@@ -44,6 +44,14 @@
   "commands": [
     {
       "commandKind": "phased",
+      "name": "lint",
+      "summary": "Run linter on packages using phase block",
+      "phases": ["_phase:lint"],
+      "enableParallelism": true,
+      "incremental": true
+    },
+    {
+      "commandKind": "phased",
       "name": "build",
       "summary": "Build packages using phase block",
       "phases": ["_phase:lint", "_phase:build"],

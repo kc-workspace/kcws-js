@@ -1,6 +1,12 @@
 {
   "extends": "stylelint-config-standard-scss",
   "rules": {
-    "property-no-vendor-prefix": null
+    "property-no-vendor-prefix": null,
+    "max-line-length": [
+      80,
+      {
+        "ignore": ["comments"]
+      }
+    ]
   }
 }
