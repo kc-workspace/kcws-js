@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "migrate to phased command",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}

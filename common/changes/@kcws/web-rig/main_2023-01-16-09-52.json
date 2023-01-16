@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/web-rig",
+      "comment": "add new pure-css profiles for css libraries",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/web-rig"
+}

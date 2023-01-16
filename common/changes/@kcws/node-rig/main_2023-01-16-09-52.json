@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "migrate to phased command",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}

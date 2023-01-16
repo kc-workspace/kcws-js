@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/dtcheck",
+      "comment": "migrate to phased command",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/dtcheck"
+}

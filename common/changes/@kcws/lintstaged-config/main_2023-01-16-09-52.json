@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "comment": "add rush() and rushOn() action for execute rush command on current package",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config"
+}
