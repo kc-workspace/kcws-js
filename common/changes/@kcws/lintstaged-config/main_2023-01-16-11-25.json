@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "comment": "add tests on rush apis",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config"
+}
