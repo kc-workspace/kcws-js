@@ -21,7 +21,7 @@ import {
 /**
  * Base random implementation,
  * this include all utilities around random
- * using {@link Random.pseudo} function to generate
+ * using {@link IRandom.pseudo} function to generate
  * random value.
  *
  * @beta
