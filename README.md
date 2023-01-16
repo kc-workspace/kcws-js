@@ -79,8 +79,7 @@ and version type to bump. Add `--commit` to `git commit` as well.
 
 ### Check & Update dependencies
 
-`rush deps [--upgrade] [--interactive]`: Check dependencies need to upgrade or
-add `--upgrade` to update package.json with latest version or
+`rush upgrade [--interactive]`: Upgrade all outdated dependencies or
 select via prompt using `--interactive` option. powered by [npm-check-updates][npm-check-updates-github]
 
 [everyday-commands-rush-update]: https://rushjs.io/pages/developer/everyday_commands/#rush-update

@@ -49,10 +49,7 @@ jobs:
       - name: Update dependencies
         uses: ./.github/actions/run-rush
         with:
-          command: deps
-          args: >
-            --upgrade
-            --verbose
+          command: upgrade
       - name: Upgrade autoinstaller [rush-api-documenter]
         uses: ./.github/actions/run-rush
         with:

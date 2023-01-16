@@ -42,7 +42,7 @@ jobs:
       - name: Building documentation
         uses: ./.github/actions/run-rush
         with:
-          command: build:docs:${{ env.DOCS_VERSION }}
+          command: docs:${{ env.DOCS_VERSION }}
       - name: Building Jekyll output
         if: env.DOCS_VERSION == 'v1'
         uses: actions/jekyll-build-pages@v1

@@ -16,6 +16,7 @@ typedoc \
   --out "$output" \
   --logLevel "$log_level" \
   --exclude "**/*+(index|.spec|.e2e).ts" \
+  --excludeNotDocumented \
   --sort "visibility" --sort "static-first" \
   --sort "enum-value-ascending" --sort "alphabetical" \
   --plugin "$plugin_name" --theme "$theme_name" \

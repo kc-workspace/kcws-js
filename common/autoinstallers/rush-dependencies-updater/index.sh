@@ -21,6 +21,11 @@ Please run 'rush update-autoinstallers' first." >&2
   exit 1
 fi
 
+verbose=""
+if test -n "$CI"; then
+  verbose="--verbose"
+fi
+
 pkg="package.json"
 config="$autoinstallers/.ncurc.yml"
 tmp="$(mktemp)"
@@ -32,9 +37,11 @@ find "$root" \
   -and -not -path "*temp*" >"$tmp"
 while IFS= read -r pjson <&3; do
   "$cmd" \
+    --upgrade \
     --packageFile "$pjson" \
     --configFilePath "$root" \
     --configFileName "$config" \
+    "$verbose" \
     "$@"
 done 3<"$tmp"
 
