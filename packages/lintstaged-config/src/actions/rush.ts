@@ -63,9 +63,9 @@ export const rushOn = (
   cmd: string,
   ...args: Array<string>
 ): string => {
-  const base = resolveRushCommand();
-  base.push(cmd, ...args);
+  const base = resolveRushCommand().concat(cmd);
   if (pkg) base.push("--only", pkg);
+  base.push(...args);
 
   return base.join(" ");
 };
