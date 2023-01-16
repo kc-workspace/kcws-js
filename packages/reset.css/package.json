@@ -32,6 +32,7 @@
     "types/*.d.ts"
   ],
   "scripts": {
+    "_phase:lint": "stylelint **/*.scss",
     "_phase:build": "heft build",
     "_phase:test": "heft test",
     "_phase:clean": "heft clean"
@@ -39,10 +40,12 @@
   "devDependencies": {
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
-    "@rushstack/heft": "0.49.0"
+    "@rushstack/heft": "0.49.0",
+    "sass": "1.57.1",
+    "stylelint": "14.16.1",
+    "stylelint-config-standard-scss": "6.1.0"
   },
   "typedoc": {
-    "entryPoint": "dist/reset.scss.d.ts",
-    "tsconfig": "./tsconfig.json"
+    "entryPoint": "dist/reset.scss.d.ts"
   }
 }

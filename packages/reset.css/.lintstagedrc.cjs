@@ -1,3 +1,15 @@
-const { default: defineConfig, Config } = require("@kcws/lintstaged-config");
+const {
+  default: defineConfig,
+  Config,
+  rush,
+} = require("@kcws/lintstaged-config");
 
-module.exports = defineConfig(Config.builder().default().build());
+module.exports = defineConfig(
+  Config.builder()
+    .default()
+    .append("dts", {
+      regexs: ["**/*.css", "**/*.scss", "**/*.sass"],
+      actionFn: rush("test"),
+    })
+    .build()
+);

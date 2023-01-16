@@ -67,6 +67,18 @@
       "allowedCategories": [ "configs" ]
     },
     {
+      "name": "sass",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "stylelint",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "stylelint-config-standard-scss",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
       "name": "tslib",
       "allowedCategories": [ "configs", "libraries" ]
     },

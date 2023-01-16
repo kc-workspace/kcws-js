@@ -352,14 +352,14 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@kcws/color",
-      "projectFolder": "packages/color",
-      "reviewCategory": "libraries",
-      "shouldPublish": false
-    },
-    {
       "packageName": "@kcws/reset.css",
       "projectFolder": "packages/reset.css",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/color",
+      "projectFolder": "packages/color",
       "reviewCategory": "libraries",
       "shouldPublish": false
     },
