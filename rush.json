@@ -379,7 +379,8 @@
       "packageName": "@kcws/lintstaged-config",
       "projectFolder": "packages/lintstaged-config",
       "reviewCategory": "configs",
-      "shouldPublish": true
+      "shouldPublish": true,
+      "decoupledLocalDependencies": ["@types/generic"]
     },
     {
       "packageName": "@kcws/eslint-config",

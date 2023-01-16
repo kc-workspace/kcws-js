@@ -1,32 +1,51 @@
-import { existsSync, readFileSync } from "fs";
-import { resolve } from "path";
+import { existsSync, readFileSync, statSync } from "fs";
+import { resolve, dirname } from "path";
+import { ConfigFn } from "../models/IConfig";
 import { getCommand } from "../utils/cmd";
+
+const ROOT: string = "/";
+
+/**
+ * @internal
+ */
+export type WalkCallback = (dir: string) => WithUndefined<string>;
+
+const walkDir = (file: string, cb: WalkCallback): WithUndefined<string> => {
+  const next = dirname(file);
+  if (next === ROOT) return undefined;
+
+  const nextStat = statSync(next);
+  if (nextStat.isDirectory()) {
+    const result = cb(next);
+    if (!result) return walkDir(next, cb);
+    else return result;
+  }
+
+  return undefined;
+};
 
 const resolveRushCommand = (): Array<string> => {
   const rush = getCommand("rush");
   if (rush === "rush") {
-    // TODO: Use install-run-rush instead of throw error
-    // The problem is how can we resolve to install-run-rush file
-    // from package directory.
-
-    throw new Error("Cannot resolve rush scripts, please install rush first.")
+    return ["node", "common/scripts/install-run-rush.js"];
   }
 
   return [rush];
 };
 
-const resolvePackageName = (): string => {
-  const cwd = process.cwd();
-  const pkg = resolve(cwd, "package.json");
-  if (existsSync(pkg)) {
-    const content = readFileSync(pkg, {
-      encoding: "utf8",
+const resolvePackageName = (files: Array<string>): WithUndefined<string> => {
+  for (const file of files) {
+    const name = walkDir(file, (dir) => {
+      const pkg = resolve(dir, "package.json");
+      if (existsSync(pkg)) {
+        const content = readFileSync(pkg);
+        const json = JSON.parse(content.toString("utf8"));
+        return json.name;
+      }
     });
-    const json = JSON.parse(content);
-    if (json.name) return json.name;
-  }
 
-  return "";
+    if (name) return name;
+  }
 };
 
 /**
@@ -40,13 +59,13 @@ const resolvePackageName = (): string => {
  * @beta
  */
 export const rushOn = (
-  pkg: string,
+  pkg: WithUndefined<string>,
   cmd: string,
   ...args: Array<string>
 ): string => {
   const base = resolveRushCommand();
-  if (pkg !== "") base.push("--only", pkg);
   base.push(cmd, ...args);
+  if (pkg) base.push("--only", pkg);
 
   return base.join(" ");
 };
@@ -62,7 +81,9 @@ export const rushOn = (
  *
  * @beta
  */
-export const rush = (cmd: string, ...args: Array<string>): string => {
-  const pkg = resolvePackageName();
-  return rushOn(pkg, cmd, ...args);
+export const rush = (cmd: string, ...args: Array<string>): ConfigFn => {
+  return (files: Array<string>) => {
+    const pkg = resolvePackageName(files);
+    return rushOn(pkg, cmd, ...args);
+  };
 };

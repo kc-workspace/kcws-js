@@ -4,6 +4,8 @@
 
 ```ts
 
+/// <reference types="generic" />
+
 // @public
 export type BaseActionFn<O extends IBaseActionOptions> = (options?: O) => string;
 
@@ -109,7 +111,18 @@ export interface IYamllintOptions extends IBaseActionOptions {
 export const prettier: BaseActionFn<IPrettierOptions>;
 
 // @beta
+export const rush: (cmd: string, ...args: Array<string>) => ConfigFn;
+
+// @beta
+export const rushOn: (pkg: WithUndefined<string>, cmd: string, ...args: Array<string>) => string;
+
+// @beta
 export const shellcheck: BaseActionFn<IShellcheckOptions>;
+
+// Warning: (ae-internal-missing-underscore) The name "WalkCallback" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal (undocumented)
+export type WalkCallback = (dir: string) => WithUndefined<string>;
 
 // @beta
 export const yamllint: BaseActionFn<IYamllintOptions>;
