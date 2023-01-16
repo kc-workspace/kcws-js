@@ -1,0 +1,59 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "@kcws/js",
+  "entryPointStrategy": "packages",
+  "entryPoints": [
+    "../../../packages/color",
+    "../../../packages/dtcheck",
+    "../../../packages/lintstaged-config",
+    "../../../packages/mixin",
+    "../../../packages/random",
+    "../../../packages/reset.css",
+    "../../../typings/*"
+  ],
+  "out": "../../../_site",
+  "emit": "docs",
+  "logLevel": "Warn",
+  "exclude": [
+    "**/*+(index|.spec|.e2e).ts",
+  ],
+  "sort": [
+    "visibility",
+    "static-first",
+    "enum-value-ascending",
+    "alphabetical"
+  ],
+  "plugin": [
+    "typedoc-plugin-missing-exports",
+    "typedoc-plugin-extras",
+    "typedoc-theme-hierarchy"
+  ],
+  "theme": "hierarchy",
+  "lightHighlightTheme": "solarized-light",
+  "darkHighlightTheme": "solarized-dark",
+  "gaID": "",
+  "readme": "none",
+  "githubPages": true,
+  "cleanOutputDir": true,
+  "includeVersion": true,
+  "treatWarningsAsErrors": true,
+  "validation": {
+    "invalidLink": true,
+    "notExported": true,
+    "notDocumented": true
+  },
+  "requiredToBeDocumented": [
+    "Namespace",
+    "Enum",
+    "EnumMember",
+    "Function",
+    "Class",
+    "Method",
+    "Reference"
+  ],
+  "internalModule": "internal",
+  "customDescription": "kamontat's workspace for javascript ecosystem",
+  "favicon": "common/autoinstallers/rush-api-documenter/public/kc.ico",
+  "footerTypedocVersion": true,
+  "footerLastModified": true
+}
