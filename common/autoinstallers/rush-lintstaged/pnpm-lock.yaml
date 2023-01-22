@@ -217,7 +217,7 @@ packages:
       debug: 4.3.4
       execa: 6.1.0
       lilconfig: 2.0.6
-      listr2: 5.0.6
+      listr2: 5.0.7
       micromatch: 4.0.5
       normalize-path: 3.0.0
       object-inspect: 1.12.3
@@ -229,8 +229,8 @@ packages:
       - supports-color
     dev: false
 
-  /listr2/5.0.6:
-    resolution: {integrity: sha512-u60KxKBy1BR2uLJNTWNptzWQ1ob/gjMzIJPZffAENzpZqbMZ/5PrXXOomDcevIS/+IB7s1mmCEtSlT2qHWMqag==}
+  /listr2/5.0.7:
+    resolution: {integrity: sha512-MD+qXHPmtivrHIDRwPYdfNkrzqDiuaKU/rfBcec3WMyMF3xylQj3jMq344OtvQxz7zaCFViRAeqlr2AFhPvXHw==}
     engines: {node: ^14.13.1 || >=16.0.0}
     peerDependencies:
       enquirer: '>= 2.3.0 < 3'
