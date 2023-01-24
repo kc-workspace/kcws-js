@@ -2,6 +2,47 @@
   "name": "@kcws/web-rig",
   "entries": [
     {
+      "version": "0.6.0",
+      "tag": "@kcws/web-rig_v0.6.0",
+      "date": "Tue, 24 Jan 2023 02:31:17 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "enable importsNotUsedAsValues by default to omit import if not use as value",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "b2109affef2ce8191f84929acf97e596ae0a6504"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "388d0a138e1f9a89f712682eee9b31a000fc14bc"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "b6287f5b863451d5f7a55cba10158995f74a8fbd"
+          },
+          {
+            "comment": "add new pure-css profiles for css libraries",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "f1388ff1a2fe4ce533c28279754fc77fa85e4686"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "e83de362e12c1cf5814be481a4b16a18dcc70c09"
+          }
+        ],
+        "none": [
+          {
+            "comment": "update readme",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "b32c4bc3597d01cf6a273a8e20f2acf5dee3ecb9"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.5.0",
       "tag": "@kcws/web-rig_v0.5.0",
       "date": "Mon, 02 Jan 2023 18:55:50 GMT",

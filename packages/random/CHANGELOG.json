@@ -2,6 +2,48 @@
   "name": "@kcws/random",
   "entries": [
     {
+      "version": "0.7.0",
+      "tag": "@kcws/random_v0.7.0",
+      "date": "Tue, 24 Jan 2023 02:31:17 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "update readme",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "b32c4bc3597d01cf6a273a8e20f2acf5dee3ecb9"
+          },
+          {
+            "comment": "migrate to phased command",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "f1388ff1a2fe4ce533c28279754fc77fa85e4686"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "b6287f5b863451d5f7a55cba10158995f74a8fbd"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "e83de362e12c1cf5814be481a4b16a18dcc70c09"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.6.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.7.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.5.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.6.0",
       "tag": "@kcws/random_v0.6.0",
       "date": "Mon, 02 Jan 2023 18:55:50 GMT",

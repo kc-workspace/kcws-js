@@ -1,6 +1,15 @@
 # Change Log - @kcws/lintstaged-config
 
-This log was last generated on Mon, 02 Jan 2023 18:55:50 GMT and should not be manually modified.
+This log was last generated on Tue, 24 Jan 2023 02:31:17 GMT and should not be manually modified.
+
+## 0.7.0
+Tue, 24 Jan 2023 02:31:17 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+- add rush() and rushOn() action for execute rush command on current package
+- upgrade dependencies [auto]
 
 ## 0.6.0
 Mon, 02 Jan 2023 18:55:50 GMT

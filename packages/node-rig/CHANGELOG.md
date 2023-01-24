@@ -1,6 +1,16 @@
 # Change Log - @kcws/node-rig
 
-This log was last generated on Mon, 02 Jan 2023 18:55:50 GMT and should not be manually modified.
+This log was last generated on Tue, 24 Jan 2023 02:31:17 GMT and should not be manually modified.
+
+## 0.6.0
+Tue, 24 Jan 2023 02:31:17 GMT
+
+### Minor changes
+
+- enable importsNotUsedAsValues by default to omit import if not use as value
+- upgrade dependencies [auto]
+- upgrade dependencies [auto]
+- upgrade dependencies [auto]
 
 ## 0.5.0
 Mon, 02 Jan 2023 18:55:50 GMT
