@@ -4,7 +4,7 @@ author: Kamontat Chantrachirathumrong
 inputs:
   node-version:
     description: Install nodejs version
-    default: "16"
+    default: "lts/*"
   install:
     description: Install dependencies after setup rush repository
     default: "true"
