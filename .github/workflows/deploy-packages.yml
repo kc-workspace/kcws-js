@@ -17,6 +17,8 @@ concurrency:
 env:
   RELEASE_BRANCH: release
   ACTIVE_BRANCH: main
+  # Either v1 or v2
+  DOCS_VERSION: v2
 
 jobs:
   verifying:
@@ -41,11 +43,13 @@ jobs:
           command: publish
 
   deploying:
-    # This is to ensure main branch cannot be run
-    # as well as the workflow still return passed
+    # This will enforce deploy applications from main branch only
+    # however, developer still able to dry-run
+    # deployment on their feature branch.
     #
-    # I have another protected layers on environment level
-    # however, that will cause deployment workflow to be failed
+    # We have another protection on environment layers
+    # however, that will cause deployment workflow
+    # completed with failure.
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
@@ -96,3 +100,12 @@ jobs:
         uses: ./.github/actions/cleanup-git
         with:
           gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}
+
+  document:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs:
+      - deploying
+    steps:
+      - name: Deploying documentation website
+        uses: ./.github/workflows/deploy-docs.yml
