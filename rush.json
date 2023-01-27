@@ -352,6 +352,18 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/object",
+      "projectFolder": "packages/object",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcws/array",
+      "projectFolder": "packages/array",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@kcws/reset.css",
       "projectFolder": "packages/reset.css",
       "reviewCategory": "libraries",

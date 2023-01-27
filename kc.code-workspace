@@ -17,6 +17,14 @@
       "path": "packages/mixin"
     },
     {
+      "name": "@kcws/array",
+      "path": "packages/array"
+    },
+    {
+      "name": "@kcws/object",
+      "path": "packages/object"
+    },
+    {
       "name": "@kcws/reset.css",
       "path": "packages/reset.css"
     },
@@ -45,40 +53,12 @@
       "path": "typings/generic"
     },
     {
-      "name": "@kcws/example",
-      "path": "packages/example"
+      "name": "@common/autoinstallers",
+      "path": "common/autoinstallers"
     },
     {
-      "name": "@kcws/tool-example",
-      "path": "tools/example"
-    },
-    {
-      "name": "@kcws-ai/rush-api-documenter",
-      "path": "common/autoinstallers/rush-api-documenter"
-    },
-    {
-      "name": "@kcws-ai/rush-dependencies-updater",
-      "path": "common/autoinstallers/rush-dependencies-updater"
-    },
-    {
-      "name": "@kcws-ai/rush-lintstaged",
-      "path": "common/autoinstallers/rush-lintstaged"
-    },
-    {
-      "name": "@kcws-config/rush",
+      "name": "@common/config",
       "path": "common/config/rush"
-    },
-    {
-      "name": "@kcws-reviews/api",
-      "path": "common/reviews/api"
-    },
-    {
-      "name": "@kcws-common/scripts",
-      "path": "scripts"
-    },
-    {
-      "name": "@kcws-common/docs",
-      "path": "docs"
     },
     {
       "name": ".github",
