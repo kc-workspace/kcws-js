@@ -1,14 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@microsoft/api-documenter': 7.19.28
+  '@microsoft/api-documenter': 7.20.1
   typedoc: 0.23.24
   typedoc-plugin-extras: 2.3.2
   typedoc-plugin-missing-exports: 1.0.0
   typedoc-theme-hierarchy: 3.0.2
 
 dependencies:
-  '@microsoft/api-documenter': 7.19.28
+  '@microsoft/api-documenter': 7.20.1
   typedoc: 0.23.24_typescript@4.9.4
   typedoc-plugin-extras: 2.3.2_typedoc@0.23.24
   typedoc-plugin-missing-exports: 1.0.0_typedoc@0.23.24
@@ -16,11 +16,11 @@ dependencies:
 
 packages:
 
-  /@microsoft/api-documenter/7.19.28:
-    resolution: {integrity: sha512-m9FG5vj8d5Zf3N7UV/Xuau/17Loe32A+nEsY4Pgyye+9gR12yz6LAyunUOehNjgDav0C4edy+qtrxOvXyGu7aA==}
+  /@microsoft/api-documenter/7.20.1:
+    resolution: {integrity: sha512-eOyGTbTXWDo0iZw4LZmD2f6C9hHHw847sS8E8DYn33eSRXhEOsR3ZStU6JU4ITsDSmfC/NFQW7L+ll0zY0G9GA==}
     hasBin: true
     dependencies:
-      '@microsoft/api-extractor-model': 7.25.3
+      '@microsoft/api-extractor-model': 7.26.0
       '@microsoft/tsdoc': 0.14.2
       '@rushstack/node-core-library': 3.53.3
       '@rushstack/ts-command-line': 4.13.1
@@ -29,8 +29,8 @@ packages:
       resolve: 1.22.1
     dev: false
 
-  /@microsoft/api-extractor-model/7.25.3:
-    resolution: {integrity: sha512-WWxBUq77p2iZ+5VF7Nmrm3y/UtqCh5bYV8ii3khwq3w99+fXWpvfsAhgSLsC7k8XDQc6De4ssMxH6He/qe1pzg==}
+  /@microsoft/api-extractor-model/7.26.0:
+    resolution: {integrity: sha512-iUlscM9a3/scqgaL+sipTYsfbkF/frrZhdYWXm5+zEVMW6QlP5jDV6cYNeIEIdMeGSbzk1yxpBjyeBDAZQLdyA==}
     dependencies:
       '@microsoft/tsdoc': 0.14.2
       '@microsoft/tsdoc-config': 0.16.2
