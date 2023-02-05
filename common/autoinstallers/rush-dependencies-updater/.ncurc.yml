@@ -16,7 +16,10 @@ format: group
 target: latest
 
 # FIXME: filter cause local `rush upgrade` to be failed with error:
-# ```Cannot specify a filter using both --filter and args. Did you forget to quote an argument?```
+# ```
+# Cannot specify a filter using both --filter and args.
+# Did you forget to quote an argument?
+# ```
 # Include only package names matching the given string, wildcard, glob,
 # comma-or-space-delimited list, or /regex/
 # filter:
