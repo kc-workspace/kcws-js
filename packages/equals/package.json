@@ -1,7 +1,7 @@
 {
-  "name": "@kcws/object",
+  "name": "@kcws/equals",
   "version": "0.0.1",
-  "description": "array utilities",
+  "description": "object equivalent",
   "type": "commonjs",
   "main": "lib/index.js",
   "types": "dist/index.d.ts",
@@ -13,11 +13,11 @@
     }
   },
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/object",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/equals",
   "repository": {
     "type": "git",
     "url": "https://github.com/kc-workspace/kcws-js.git",
-    "directory": "packages/object"
+    "directory": "packages/equals"
   },
   "author": {
     "name": "Kamontat Chantrachirathumrong",
@@ -28,11 +28,10 @@
     "access": "public"
   },
   "keywords": [
-    "array",
-    "utilities",
-    "clone",
     "equals",
-    "merge"
+    "equivalent",
+    "array",
+    "object"
   ],
   "files": [
     "CHANGELOG.json",
@@ -55,6 +54,9 @@
     "_phase:build": "heft build",
     "_phase:test": "heft test",
     "_phase:clean": "heft clean"
+  },
+  "dependencies": {
+    "@kcws/dtcheck": "workspace:*"
   },
   "devDependencies": {
     "@kcws/web-rig": "workspace:*",

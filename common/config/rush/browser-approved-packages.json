@@ -7,6 +7,10 @@
       "allowedCategories": [ "typings" ]
     },
     {
+      "name": "@kcws/dtcheck",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
       "name": "@kcws/eslint-config",
       "allowedCategories": [ "configs", "libraries", "prototypes", "tools", "typings" ]
     },

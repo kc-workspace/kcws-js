@@ -17,12 +17,8 @@
       "path": "packages/mixin"
     },
     {
-      "name": "@kcws/array",
-      "path": "packages/array"
-    },
-    {
-      "name": "@kcws/object",
-      "path": "packages/object"
+      "name": "@kcws/equals",
+      "path": "packages/equals"
     },
     {
       "name": "@kcws/reset.css",
