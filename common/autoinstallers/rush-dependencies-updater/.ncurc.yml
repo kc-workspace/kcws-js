@@ -15,10 +15,12 @@ format: group
 # choices: latest, newest, greatest, minor, patch
 target: latest
 
+# FIXME: filter cause local `rush upgrade` to be failed with error:
+# ```Cannot specify a filter using both --filter and args. Did you forget to quote an argument?```
 # Include only package names matching the given string, wildcard, glob,
 # comma-or-space-delimited list, or /regex/
-filter:
-  - "*"
+# filter:
+#   - "*"
 
 # Exclude packages matching the given string, wildcard, glob,
 # comma-or-space-delimited list, or /regex/
