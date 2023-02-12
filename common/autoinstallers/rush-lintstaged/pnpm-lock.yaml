@@ -1,12 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
-  lint-staged: 13.1.0
-  prettier: 2.8.3
+  lint-staged: 13.1.1
+  prettier: 2.8.4
 
 dependencies:
-  lint-staged: 13.1.0
-  prettier: 2.8.3
+  lint-staged: 13.1.1
+  prettier: 2.8.4
 
 packages:
 
@@ -206,8 +206,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /lint-staged/13.1.0:
-    resolution: {integrity: sha512-pn/sR8IrcF/T0vpWLilih8jmVouMlxqXxKuAojmbiGX5n/gDnz+abdPptlj0vYnbfE0SQNl3CY/HwtM0+yfOVQ==}
+  /lint-staged/13.1.1:
+    resolution: {integrity: sha512-LLJLO0Kdbcv2a+CvSF4p1M7jBZOajKSMpBUvyR8+bXccsqPER0/NxTFQSpNHjqwV9kM3tkHczYerTB5wI+bksQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -342,8 +342,8 @@ packages:
     hasBin: true
     dev: false
 
-  /prettier/2.8.3:
-    resolution: {integrity: sha512-tJ/oJ4amDihPoufT5sM0Z1SKEuKay8LfVAMlbbhnnkvt6BUserZylqo2PN+p9KeljLr0OHa2rXHU1T8reeoTrw==}
+  /prettier/2.8.4:
+    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: false
