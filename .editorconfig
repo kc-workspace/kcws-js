@@ -48,6 +48,7 @@ insert_final_newline = unset
 # Ignore line length of rush configuration file
 [common/config/**/*.json]
 max_line_length = unset
+end_of_line = unset
 
 # Ignore line length of rush configuration file
 [common/changes/**/*.json]
