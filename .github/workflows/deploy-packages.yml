@@ -107,5 +107,7 @@ jobs:
     needs:
       - deploying
     steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
       - name: Deploying documentation website
         uses: ./.github/workflows/deploy-docs.yml
