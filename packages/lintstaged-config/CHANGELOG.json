@@ -2,6 +2,53 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "0.8.0",
+      "tag": "@kcws/lintstaged-config_v0.8.0",
+      "date": "Sun, 05 Mar 2023 06:58:38 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "89149824b29f7a927dace9de1a2de45c13893bfa"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "04e60c6c418343943a1d53bab49ef23bd4d1bde4"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "d66273cf4f806b050469f2a9f98885eca319e10b"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "c7ddfd0effd9a41a11ad3bc103fab49e54046df4"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "445ac9915c1f33d82c2757cd754f31aa73632e0e"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "89f1e13d08a77df6a021d74a4366da8527cad30b"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.7.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.6.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.7.0",
       "tag": "@kcws/lintstaged-config_v0.7.0",
       "date": "Tue, 24 Jan 2023 02:31:17 GMT",
