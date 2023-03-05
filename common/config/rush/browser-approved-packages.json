@@ -51,6 +51,10 @@
       "allowedCategories": [ "configs" ]
     },
     {
+      "name": "@typescript-eslint/typescript-estree",
+      "allowedCategories": [ "configs", "typings" ]
+    },
+    {
       "name": "eslint",
       "allowedCategories": [ "configs" ]
     },

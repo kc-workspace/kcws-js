@@ -133,7 +133,7 @@ importers:
       '@rushstack/heft-jest-plugin': 0.5.4
       '@rushstack/heft-node-rig': 1.12.4
       eslint: 8.35.0
-      jest-environment-node: 29.4.1
+      jest-environment-node: 29.4.2
       jest-html-reporters: 3.1.4
       jest-junit: 15.0.0
       typescript: 4.9.5
@@ -143,7 +143,7 @@ importers:
       '@rushstack/heft-jest-plugin': 0.5.4_@rushstack+heft@0.49.7
       '@rushstack/heft-node-rig': 1.12.4_@rushstack+heft@0.49.7
       eslint: 8.35.0
-      jest-environment-node: 29.4.1
+      jest-environment-node: 29.4.2
       jest-html-reporters: 3.1.4
       jest-junit: 15.0.0
       typescript: 4.9.5
@@ -193,7 +193,7 @@ importers:
       '@rushstack/heft-sass-plugin': 0.8.3
       '@rushstack/heft-web-rig': 0.14.5
       eslint: 8.35.0
-      jest-environment-jsdom: 29.4.1
+      jest-environment-jsdom: 29.4.2
       jest-html-reporters: 3.1.4
       jest-junit: 15.0.0
       tslib: 2.5.0
@@ -205,7 +205,7 @@ importers:
       '@rushstack/heft-sass-plugin': 0.8.3_@rushstack+heft@0.49.7
       '@rushstack/heft-web-rig': 0.14.5_@rushstack+heft@0.49.7
       eslint: 8.35.0
-      jest-environment-jsdom: 29.4.1
+      jest-environment-jsdom: 29.4.2
       jest-html-reporters: 3.1.4
       jest-junit: 15.0.0
       typescript: 4.9.5
@@ -234,11 +234,13 @@ importers:
       '@definitelytyped/dtslint': 0.0.151
       '@kcws/eslint-config': workspace:*
       '@kcws/lintstaged-config': workspace:*
+      '@typescript-eslint/typescript-estree': 5.54.0
       typescript: 4.9.5
     devDependencies:
       '@definitelytyped/dtslint': 0.0.151_typescript@4.9.5
       '@kcws/eslint-config': link:../../packages/eslint-config
       '@kcws/lintstaged-config': link:../../packages/lintstaged-config
+      '@typescript-eslint/typescript-estree': 5.54.0_typescript@4.9.5
       typescript: 4.9.5
 
   ../../typings/package_json:
@@ -246,11 +248,13 @@ importers:
       '@definitelytyped/dtslint': 0.0.151
       '@kcws/eslint-config': workspace:*
       '@kcws/lintstaged-config': workspace:*
+      '@typescript-eslint/typescript-estree': 5.54.0
       typescript: 4.9.5
     devDependencies:
       '@definitelytyped/dtslint': 0.0.151_typescript@4.9.5
       '@kcws/eslint-config': link:../../packages/eslint-config
       '@kcws/lintstaged-config': link:../../packages/lintstaged-config
+      '@typescript-eslint/typescript-estree': 5.54.0_typescript@4.9.5
       typescript: 4.9.5
 
 packages:
@@ -4786,7 +4790,7 @@ packages:
       glob: 7.2.3
       graceful-fs: 4.2.10
       jest-circus: 29.4.3
-      jest-environment-node: 29.4.1
+      jest-environment-node: 29.4.2
       jest-get-type: 29.4.3
       jest-regex-util: 29.4.3
       jest-resolve: 29.3.1
@@ -4825,7 +4829,7 @@ packages:
       glob: 7.2.3
       graceful-fs: 4.2.10
       jest-circus: 29.4.3
-      jest-environment-node: 29.4.1
+      jest-environment-node: 29.4.2
       jest-get-type: 29.4.3
       jest-regex-util: 29.4.3
       jest-resolve: 29.3.1
@@ -4891,8 +4895,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /jest-environment-jsdom/29.4.1:
-    resolution: {integrity: sha512-+KfYmRTl5CBHQst9hIz77TiiriHYvuWoLjMT855gx2AMxhHxpk1vtKvag1DQfyWCPVTWV/AG7SIqVh5WI1O/uw==}
+  /jest-environment-jsdom/29.4.2:
+    resolution: {integrity: sha512-v1sH4Q0JGM+LPEGqHNM+m+uTMf3vpXpKiuDYqWUAh+0c9+nc7scGE+qTR5JuE+OOTDnwfzPgcv9sMq6zWAOaVg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
       canvas: ^2.5.0
@@ -4926,8 +4930,8 @@ packages:
       jest-util: 29.4.3
     dev: false
 
-  /jest-environment-node/29.4.1:
-    resolution: {integrity: sha512-x/H2kdVgxSkxWAIlIh9MfMuBa0hZySmfsC5lCsWmWr6tZySP44ediRKDUiNggX/eHLH7Cd5ZN10Rw+XF5tXsqg==}
+  /jest-environment-node/29.4.2:
+    resolution: {integrity: sha512-MLPrqUcOnNBc8zTOfqBbxtoa8/Ee8tZ7UFW7hRDQSUT+NGsvS96wlbHGTf+EFAT9KC3VNb7fWEM6oyvmxtE/9w==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/environment': 29.4.3
@@ -8213,7 +8217,7 @@ packages:
   /wide-align/1.1.5:
     resolution: {integrity: sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==}
     dependencies:
-      string-width: 1.0.2
+      string-width: 4.2.3
     dev: true
     optional: true
 
