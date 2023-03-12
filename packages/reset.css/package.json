@@ -41,7 +41,7 @@
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@rushstack/heft": "0.49.7",
-    "sass": "1.58.3",
+    "sass": "1.59.2",
     "stylelint": "14.16.1",
     "stylelint-config-standard-scss": "6.1.0"
   },
