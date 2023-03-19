@@ -40,8 +40,8 @@
   "devDependencies": {
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
-    "@rushstack/heft": "0.49.7",
-    "sass": "1.59.2",
+    "@rushstack/heft": "0.50.0",
+    "sass": "1.59.3",
     "stylelint": "14.16.1",
     "stylelint-config-standard-scss": "6.1.0"
   },
