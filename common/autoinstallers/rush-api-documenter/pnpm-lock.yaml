@@ -2,17 +2,17 @@ lockfileVersion: 5.4
 
 specifiers:
   '@microsoft/api-documenter': 7.21.6
-  typedoc: 0.23.27
+  typedoc: 0.23.28
   typedoc-plugin-extras: 2.3.2
   typedoc-plugin-missing-exports: 1.0.0
   typedoc-theme-hierarchy: 3.1.0
 
 dependencies:
   '@microsoft/api-documenter': 7.21.6
-  typedoc: 0.23.27_typescript@4.9.5
-  typedoc-plugin-extras: 2.3.2_typedoc@0.23.27
-  typedoc-plugin-missing-exports: 1.0.0_typedoc@0.23.27
-  typedoc-theme-hierarchy: 3.1.0_typedoc@0.23.27
+  typedoc: 0.23.28_typescript@5.0.2
+  typedoc-plugin-extras: 2.3.2_typedoc@0.23.28
+  typedoc-plugin-missing-exports: 1.0.0_typedoc@0.23.28
+  typedoc-theme-hierarchy: 3.1.0_typedoc@0.23.28
 
 packages:
 
@@ -236,14 +236,14 @@ packages:
     resolution: {integrity: sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==}
     dev: false
 
-  /marked/4.2.12:
-    resolution: {integrity: sha512-yr8hSKa3Fv4D3jdZmtMMPghgVt6TWbk86WQaWhDloQjRSQhMMYCAro7jP7VDJrjjdV8pxVxMssXS8B8Y5DZ5aw==}
+  /marked/4.3.0:
+    resolution: {integrity: sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==}
     engines: {node: '>= 12'}
     hasBin: true
     dev: false
 
-  /minimatch/7.4.2:
-    resolution: {integrity: sha512-xy4q7wou3vUoC9k1xGTXc+awNdGaGVHtFUaey8tiX4H1QRc04DZ/rmDFwNm2EBsuYEhAZ6SgMmYf3InGY6OauA==}
+  /minimatch/7.4.3:
+    resolution: {integrity: sha512-5UB4yYusDtkRPbRiy1cqZ1IpGNcJCGlEMG17RKzPddpyiPKoCdwohbED8g4QXT0ewCt8LTkQXuljsUfQ3FKM4A==}
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1
@@ -305,48 +305,48 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /typedoc-plugin-extras/2.3.2_typedoc@0.23.27:
+  /typedoc-plugin-extras/2.3.2_typedoc@0.23.28:
     resolution: {integrity: sha512-g2m8UuGgaD5lNKO6f1p3atEugtTEb/le8IYkAiksmGYZyyF44SvRe8NcaJLq61mC+XRHHszQ664v3Vw9avIrMw==}
     peerDependencies:
       typedoc: 0.23.x
     dependencies:
-      typedoc: 0.23.27_typescript@4.9.5
+      typedoc: 0.23.28_typescript@5.0.2
     dev: false
 
-  /typedoc-plugin-missing-exports/1.0.0_typedoc@0.23.27:
+  /typedoc-plugin-missing-exports/1.0.0_typedoc@0.23.28:
     resolution: {integrity: sha512-7s6znXnuAj1eD9KYPyzVzR1lBF5nwAY8IKccP5sdoO9crG4lpd16RoFpLsh2PccJM+I2NASpr0+/NMka6ThwVA==}
     peerDependencies:
       typedoc: 0.22.x || 0.23.x
     dependencies:
-      typedoc: 0.23.27_typescript@4.9.5
+      typedoc: 0.23.28_typescript@5.0.2
     dev: false
 
-  /typedoc-theme-hierarchy/3.1.0_typedoc@0.23.27:
+  /typedoc-theme-hierarchy/3.1.0_typedoc@0.23.28:
     resolution: {integrity: sha512-y0lCXC4JC9lQvirAhCd5NX75vFV/XsUzS1QRFRiqW2vJtDYPb+bsKdvSzbC1KpLI4nb8BJg+8wenKshKm8WGOA==}
     peerDependencies:
       typedoc: ^0.23.6
     dependencies:
       fs-extra: 10.1.0
-      typedoc: 0.23.27_typescript@4.9.5
+      typedoc: 0.23.28_typescript@5.0.2
     dev: false
 
-  /typedoc/0.23.27_typescript@4.9.5:
-    resolution: {integrity: sha512-YKjlxX3LEhYbMCkemjlpNh1OKDiFa+ynqP0VRPsH28bEugrMTGI6l8DC6oX5kzFcUKKlYWKpZDSGWszuO/FR3g==}
+  /typedoc/0.23.28_typescript@5.0.2:
+    resolution: {integrity: sha512-9x1+hZWTHEQcGoP7qFmlo4unUoVJLB0H/8vfO/7wqTnZxg4kPuji9y3uRzEu0ZKez63OJAUmiGhUrtukC6Uj3w==}
     engines: {node: '>= 14.14'}
     hasBin: true
     peerDependencies:
-      typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x
+      typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x
     dependencies:
       lunr: 2.3.9
-      marked: 4.2.12
-      minimatch: 7.4.2
+      marked: 4.3.0
+      minimatch: 7.4.3
       shiki: 0.14.1
-      typescript: 4.9.5
+      typescript: 5.0.2
     dev: false
 
-  /typescript/4.9.5:
-    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
-    engines: {node: '>=4.2.0'}
+  /typescript/5.0.2:
+    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
+    engines: {node: '>=12.20'}
     hasBin: true
     dev: false
 
