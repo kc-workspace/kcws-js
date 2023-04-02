@@ -36,10 +36,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@definitelytyped/dtslint": "0.0.157",
+    "@definitelytyped/dtslint": "0.0.159",
     "@kcws/eslint-config": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
-    "@typescript-eslint/typescript-estree": "5.56.0",
+    "@typescript-eslint/typescript-estree": "5.57.0",
     "typescript": "4.9.5"
   },
   "peerDependencies": {
