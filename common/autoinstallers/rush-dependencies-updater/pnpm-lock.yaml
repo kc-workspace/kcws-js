@@ -1,10 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
-  npm-check-updates: 16.8.0
+  npm-check-updates: 16.10.0
 
 dependencies:
-  npm-check-updates: 16.8.0
+  npm-check-updates: 16.10.0
 
 packages:
 
@@ -60,7 +60,7 @@ packages:
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
       '@npmcli/promise-spawn': 6.0.1
-      lru-cache: 7.14.0
+      lru-cache: 7.18.3
       mkdirp: 1.0.4
       npm-pick-manifest: 8.0.1
       proc-log: 3.0.0
@@ -317,7 +317,7 @@ packages:
       '@npmcli/move-file': 3.0.0
       fs-minipass: 2.1.0
       glob: 8.0.3
-      lru-cache: 7.14.0
+      lru-cache: 7.18.3
       minipass: 3.3.4
       minipass-collect: 1.0.2
       minipass-flush: 1.0.5
@@ -716,7 +716,7 @@ packages:
     resolution: {integrity: sha512-Ek+QmMEqZF8XrbFdwoDjSbm7rT23pCgEMOJmz6GPk/s4yH//RQfNPArhIxbguNxROq/+5lNBwCDHMhA903Kx1Q==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     dependencies:
-      lru-cache: 7.14.0
+      lru-cache: 7.18.3
     dev: false
 
   /hosted-git-info/6.1.1:
@@ -990,11 +990,6 @@ packages:
       yallist: 4.0.0
     dev: false
 
-  /lru-cache/7.14.0:
-    resolution: {integrity: sha512-EIRtP1GrSJny0dqb50QXRUNBxHJhcpxHC++M5tD7RYbvLLn5KVWKsbyswSSqDuU15UFi3bgTQIY8nhDMeF6aDQ==}
-    engines: {node: '>=12'}
-    dev: false
-
   /lru-cache/7.18.3:
     resolution: {integrity: sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==}
     engines: {node: '>=12'}
@@ -1168,13 +1163,6 @@ packages:
       yallist: 4.0.0
     dev: false
 
-  /minipass/4.0.0:
-    resolution: {integrity: sha512-g2Uuh2jEKoht+zvO6vJqXmYpflPqzRBT+Th2h01DKh5z7wbY/AZ2gCQ78cP70YoHPyFdY30YBV5WxgLOEwOykw==}
-    engines: {node: '>=8'}
-    dependencies:
-      yallist: 4.0.0
-    dev: false
-
   /minipass/4.2.5:
     resolution: {integrity: sha512-+yQl7SX3bIT83Lhb4BVorMAHVuqsskxRdlmO9kTpyukp8vsm2Sn/fUOV9xlnG8/a5JsypJzap21lz/y3FBMJ8Q==}
     engines: {node: '>=8'}
@@ -1257,8 +1245,8 @@ packages:
       npm-normalize-package-bin: 3.0.0
     dev: false
 
-  /npm-check-updates/16.8.0:
-    resolution: {integrity: sha512-2xpFtUPa2OyswC8kpIpxRqQcP/D0uqaBgfiOQAtvGlnDhmHr3QwR2gWjjWtS6xnNvgyyVly/4edY0Uu24c46ew==}
+  /npm-check-updates/16.10.0:
+    resolution: {integrity: sha512-xtTm38/94u9BhFbIuq1yxjKs+lmXQK+RnzxgfMVzRhz9vRXgcuC9ZsSw8hormmrmVtIZ8yG0At80d1R5vRf6rQ==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
@@ -1415,7 +1403,7 @@ packages:
       '@npmcli/run-script': 6.0.0
       cacache: 17.0.1
       fs-minipass: 3.0.0
-      minipass: 4.0.0
+      minipass: 4.2.5
       npm-package-arg: 10.0.0
       npm-packlist: 7.0.1
       npm-pick-manifest: 8.0.1

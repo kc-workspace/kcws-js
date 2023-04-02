@@ -9,7 +9,7 @@ specifiers:
 
 dependencies:
   '@microsoft/api-documenter': 7.21.6
-  typedoc: 0.23.28_typescript@5.0.2
+  typedoc: 0.23.28_typescript@5.0.3
   typedoc-plugin-extras: 2.3.2_typedoc@0.23.28
   typedoc-plugin-missing-exports: 1.0.0_typedoc@0.23.28
   typedoc-theme-hierarchy: 3.1.0_typedoc@0.23.28
@@ -242,8 +242,8 @@ packages:
     hasBin: true
     dev: false
 
-  /minimatch/7.4.3:
-    resolution: {integrity: sha512-5UB4yYusDtkRPbRiy1cqZ1IpGNcJCGlEMG17RKzPddpyiPKoCdwohbED8g4QXT0ewCt8LTkQXuljsUfQ3FKM4A==}
+  /minimatch/7.4.4:
+    resolution: {integrity: sha512-T+8B3kNrLP7jDb5eaC4rUIp6DKoeTSb6f9SwF2phcY2gxJUA0GEf1i29/FHxBMEfx0ppWlr434/D0P+6jb8bOQ==}
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1
@@ -310,7 +310,7 @@ packages:
     peerDependencies:
       typedoc: 0.23.x
     dependencies:
-      typedoc: 0.23.28_typescript@5.0.2
+      typedoc: 0.23.28_typescript@5.0.3
     dev: false
 
   /typedoc-plugin-missing-exports/1.0.0_typedoc@0.23.28:
@@ -318,7 +318,7 @@ packages:
     peerDependencies:
       typedoc: 0.22.x || 0.23.x
     dependencies:
-      typedoc: 0.23.28_typescript@5.0.2
+      typedoc: 0.23.28_typescript@5.0.3
     dev: false
 
   /typedoc-theme-hierarchy/3.1.0_typedoc@0.23.28:
@@ -327,10 +327,10 @@ packages:
       typedoc: ^0.23.6
     dependencies:
       fs-extra: 10.1.0
-      typedoc: 0.23.28_typescript@5.0.2
+      typedoc: 0.23.28_typescript@5.0.3
     dev: false
 
-  /typedoc/0.23.28_typescript@5.0.2:
+  /typedoc/0.23.28_typescript@5.0.3:
     resolution: {integrity: sha512-9x1+hZWTHEQcGoP7qFmlo4unUoVJLB0H/8vfO/7wqTnZxg4kPuji9y3uRzEu0ZKez63OJAUmiGhUrtukC6Uj3w==}
     engines: {node: '>= 14.14'}
     hasBin: true
@@ -339,13 +339,13 @@ packages:
     dependencies:
       lunr: 2.3.9
       marked: 4.3.0
-      minimatch: 7.4.3
+      minimatch: 7.4.4
       shiki: 0.14.1
-      typescript: 5.0.2
+      typescript: 5.0.3
     dev: false
 
-  /typescript/5.0.2:
-    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
+  /typescript/5.0.3:
+    resolution: {integrity: sha512-xv8mOEDnigb/tN9PSMTwSEqAnUvkoXMQlicOb0IUVDBSQCgBSaAAROUZYy2IcUy5qU6XajK5jjjO7TMWqBTKZA==}
     engines: {node: '>=12.20'}
     hasBin: true
     dev: false

@@ -38,7 +38,7 @@
     "@rushstack/heft-jest-plugin": "0.5.5",
     "@rushstack/heft-sass-plugin": "0.8.4",
     "@rushstack/heft-web-rig": "0.14.7",
-    "eslint": "8.36.0",
+    "eslint": "8.37.0",
     "jest-environment-jsdom": "29.4.2",
     "jest-html-reporters": "3.1.4",
     "jest-junit": "15.0.0",
