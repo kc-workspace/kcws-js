@@ -31,9 +31,9 @@
   "dependencies": {
     "@microsoft/api-extractor": "7.34.4",
     "@rushstack/eslint-config": "3.2.0",
-    "@rushstack/heft-jest-plugin": "0.5.5",
-    "@rushstack/heft-node-rig": "1.12.5",
-    "eslint": "8.37.0",
+    "@rushstack/heft-jest-plugin": "0.5.6",
+    "@rushstack/heft-node-rig": "1.12.6",
+    "eslint": "8.38.0",
     "jest-environment-node": "29.4.2",
     "jest-html-reporters": "3.1.4",
     "jest-junit": "15.0.0",
