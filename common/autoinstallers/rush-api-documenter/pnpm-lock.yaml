@@ -2,17 +2,17 @@ lockfileVersion: 5.4
 
 specifiers:
   '@microsoft/api-documenter': 7.21.7
-  typedoc: 0.24.1
-  typedoc-plugin-extras: 2.3.2
+  typedoc: 0.24.2
+  typedoc-plugin-extras: 2.3.3
   typedoc-plugin-missing-exports: 1.0.0
   typedoc-theme-hierarchy: 3.1.0
 
 dependencies:
   '@microsoft/api-documenter': 7.21.7
-  typedoc: 0.24.1_typescript@5.0.4
-  typedoc-plugin-extras: 2.3.2_typedoc@0.24.1
-  typedoc-plugin-missing-exports: 1.0.0_typedoc@0.24.1
-  typedoc-theme-hierarchy: 3.1.0_typedoc@0.24.1
+  typedoc: 0.24.2_typescript@5.0.4
+  typedoc-plugin-extras: 2.3.3_typedoc@0.24.2
+  typedoc-plugin-missing-exports: 1.0.0_typedoc@0.24.2
+  typedoc-theme-hierarchy: 3.1.0_typedoc@0.24.2
 
 packages:
 
@@ -26,7 +26,7 @@ packages:
       '@rushstack/ts-command-line': 4.13.2
       colors: 1.2.5
       js-yaml: 3.13.1
-      resolve: 1.22.2
+      resolve: 1.22.3
     transitivePeerDependencies:
       - '@types/node'
     dev: false
@@ -66,7 +66,7 @@ packages:
       fs-extra: 7.0.1
       import-lazy: 4.0.0
       jju: 1.4.0
-      resolve: 1.22.2
+      resolve: 1.22.3
       semver: 7.3.8
       z-schema: 5.0.5
     dev: false
@@ -242,9 +242,9 @@ packages:
     hasBin: true
     dev: false
 
-  /minimatch/7.4.6:
-    resolution: {integrity: sha512-sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw==}
-    engines: {node: '>=10'}
+  /minimatch/9.0.0:
+    resolution: {integrity: sha512-0jJj8AvgKqWN05mrwuqi8QYKx1WmYSUoKSxu5Qhs9prezTz10sxAHGNZe9J9cqIJzta8DWsleh2KaVaLl6Ru2w==}
+    engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       brace-expansion: 2.0.1
     dev: false
@@ -265,8 +265,8 @@ packages:
       path-parse: 1.0.7
     dev: false
 
-  /resolve/1.22.2:
-    resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
+  /resolve/1.22.3:
+    resolution: {integrity: sha512-P8ur/gp/AmbEzjr729bZnLjXK5Z+4P0zhIJgBgzqRih7hL7BOukHGtSTA3ACMY467GRFz3duQsi0bDZdR7DKdw==}
     hasBin: true
     dependencies:
       is-core-module: 2.12.0
@@ -305,33 +305,33 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /typedoc-plugin-extras/2.3.2_typedoc@0.24.1:
-    resolution: {integrity: sha512-g2m8UuGgaD5lNKO6f1p3atEugtTEb/le8IYkAiksmGYZyyF44SvRe8NcaJLq61mC+XRHHszQ664v3Vw9avIrMw==}
+  /typedoc-plugin-extras/2.3.3_typedoc@0.24.2:
+    resolution: {integrity: sha512-n9zOdVSbGQ8rhsSxtmGCQPVEim345MwpeKl9PUC6ToLR8tu3YYA3BEuR9fP0z+FSx1ExU/kGzxY3sn4+FyHE2w==}
     peerDependencies:
-      typedoc: 0.23.x
+      typedoc: 0.24.x
     dependencies:
-      typedoc: 0.24.1_typescript@5.0.4
+      typedoc: 0.24.2_typescript@5.0.4
     dev: false
 
-  /typedoc-plugin-missing-exports/1.0.0_typedoc@0.24.1:
+  /typedoc-plugin-missing-exports/1.0.0_typedoc@0.24.2:
     resolution: {integrity: sha512-7s6znXnuAj1eD9KYPyzVzR1lBF5nwAY8IKccP5sdoO9crG4lpd16RoFpLsh2PccJM+I2NASpr0+/NMka6ThwVA==}
     peerDependencies:
       typedoc: 0.22.x || 0.23.x
     dependencies:
-      typedoc: 0.24.1_typescript@5.0.4
+      typedoc: 0.24.2_typescript@5.0.4
     dev: false
 
-  /typedoc-theme-hierarchy/3.1.0_typedoc@0.24.1:
+  /typedoc-theme-hierarchy/3.1.0_typedoc@0.24.2:
     resolution: {integrity: sha512-y0lCXC4JC9lQvirAhCd5NX75vFV/XsUzS1QRFRiqW2vJtDYPb+bsKdvSzbC1KpLI4nb8BJg+8wenKshKm8WGOA==}
     peerDependencies:
       typedoc: ^0.23.6
     dependencies:
       fs-extra: 10.1.0
-      typedoc: 0.24.1_typescript@5.0.4
+      typedoc: 0.24.2_typescript@5.0.4
     dev: false
 
-  /typedoc/0.24.1_typescript@5.0.4:
-    resolution: {integrity: sha512-u4HwjZcSQhQSkkhLjgcs0ooAf6HrFVLDHHrwU2xZW8WxH0KnGZlNkaWxiOcK5Gagj7mxJSgwWx0dv8ACDAOXAQ==}
+  /typedoc/0.24.2_typescript@5.0.4:
+    resolution: {integrity: sha512-Ln1EItgcdKfRzaFSfs9uEc4amz9ZeUZoaTbFdH0ZC8ScA2OjvNMdW7vrjTtZwKE0iF38njUmuFFgQMP4tDl7ag==}
     engines: {node: '>= 14.14'}
     hasBin: true
     peerDependencies:
@@ -339,7 +339,7 @@ packages:
     dependencies:
       lunr: 2.3.9
       marked: 4.3.0
-      minimatch: 7.4.6
+      minimatch: 9.0.0
       shiki: 0.14.1
       typescript: 5.0.4
     dev: false
