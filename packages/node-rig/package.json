@@ -33,7 +33,7 @@
     "@rushstack/eslint-config": "3.2.0",
     "@rushstack/heft-jest-plugin": "0.5.6",
     "@rushstack/heft-node-rig": "1.12.6",
-    "eslint": "8.38.0",
+    "eslint": "8.39.0",
     "jest-environment-node": "29.4.3",
     "jest-html-reporters": "3.1.4",
     "jest-junit": "15.0.0",
