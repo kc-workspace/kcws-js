@@ -30,6 +30,9 @@
    * for details about these alternatives.
    *
    * The latest version can found here: https://github.com/pnpm/pnpm/releases
+   *
+   * Pnpm8 is not supported by Rush yet:
+   * https://github.com/microsoft/rushstack/issues/4033
    */
   "pnpmVersion": "7.28.0",
   "pnpmOptions": {
