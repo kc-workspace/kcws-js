@@ -133,7 +133,7 @@ jobs:
         # Support backward 'LTS' version
         # and 'current' version
         # https://github.com/nodejs/release#release-schedule
-        node-version: [14, 16, 19]
+        node-version: [14, 16, 20]
     needs:
       - testing
     steps:
