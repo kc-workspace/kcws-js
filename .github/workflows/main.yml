@@ -122,9 +122,7 @@ jobs:
         with:
           command: test
       - name: Analysis packages
-        ## TODO: rollback sonarcloud to v1.8 to avoid node 12 error
-        ## ref: https://community.sonarsource.com/t/sonarsource-sonarcloud-github-action-failing-with-node-js-12-error/89664
-        uses: SonarSource/sonarcloud-github-action@v1.8
+        uses: SonarSource/sonarcloud-github-action@v1.9.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -135,7 +133,7 @@ jobs:
         # Support backward 'LTS' version
         # and 'current' version
         # https://github.com/nodejs/release#release-schedule
-        node-version: [14, 16, 19]
+        node-version: [14, 16, 20]
     needs:
       - testing
     steps:
