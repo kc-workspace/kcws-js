@@ -13,7 +13,7 @@ shared:
     - check-success=testing
     - check-success=alternative-testing (14)
     - check-success=alternative-testing (16)
-    - check-success=alternative-testing (19)
+    - check-success=alternative-testing (20)
 
 queue_rules:
   - name: default
