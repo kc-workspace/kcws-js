@@ -1,42 +1,42 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@microsoft/api-documenter': 7.21.7
-  typedoc: 0.24.2
+  '@microsoft/api-documenter': 7.22.2
+  typedoc: 0.24.6
   typedoc-plugin-extras: 2.3.3
   typedoc-plugin-missing-exports: 1.0.0
   typedoc-theme-hierarchy: 3.1.0
 
 dependencies:
-  '@microsoft/api-documenter': 7.21.7
-  typedoc: 0.24.2_typescript@5.0.4
-  typedoc-plugin-extras: 2.3.3_typedoc@0.24.2
-  typedoc-plugin-missing-exports: 1.0.0_typedoc@0.24.2
-  typedoc-theme-hierarchy: 3.1.0_typedoc@0.24.2
+  '@microsoft/api-documenter': 7.22.2
+  typedoc: 0.24.6_typescript@5.0.4
+  typedoc-plugin-extras: 2.3.3_typedoc@0.24.6
+  typedoc-plugin-missing-exports: 1.0.0_typedoc@0.24.6
+  typedoc-theme-hierarchy: 3.1.0_typedoc@0.24.6
 
 packages:
 
-  /@microsoft/api-documenter/7.21.7:
-    resolution: {integrity: sha512-qlCJ9dSefL6Rmuv1FKtxg7i6N7Bv6LUPrA5Bb0dR/9Ffac2xQuXtuSXOJ09seM7G0WkpQOzta2Kc1CPixzDaIw==}
+  /@microsoft/api-documenter/7.22.2:
+    resolution: {integrity: sha512-xpxpdoOi5ENnRat+M6dHcpFTKzbIokZYHmiiSRLv4XzAhdJtFGRLLhybkORYwT70x8Xh1kaJmPUhEiBZKVEmQg==}
     hasBin: true
     dependencies:
-      '@microsoft/api-extractor-model': 7.26.4
+      '@microsoft/api-extractor-model': 7.26.6
       '@microsoft/tsdoc': 0.14.2
-      '@rushstack/node-core-library': 3.55.2
+      '@rushstack/node-core-library': 3.57.0
       '@rushstack/ts-command-line': 4.13.2
       colors: 1.2.5
       js-yaml: 3.13.1
-      resolve: 1.22.3
+      resolve: 1.22.2
     transitivePeerDependencies:
       - '@types/node'
     dev: false
 
-  /@microsoft/api-extractor-model/7.26.4:
-    resolution: {integrity: sha512-PDCgCzXDo+SLY5bsfl4bS7hxaeEtnXj7XtuzEE+BtALp7B5mK/NrS2kHWU69pohgsRmEALycQdaQPXoyT2i5MQ==}
+  /@microsoft/api-extractor-model/7.26.6:
+    resolution: {integrity: sha512-vacINIUTAwtN6W2fMbO/JORR8sVfq+DxS++ewSeqy0AM9a55IgMXC04p31IB3vShaFnozcjHLxTOD/eWom0dXA==}
     dependencies:
       '@microsoft/tsdoc': 0.14.2
       '@microsoft/tsdoc-config': 0.16.2
-      '@rushstack/node-core-library': 3.55.2
+      '@rushstack/node-core-library': 3.57.0
     transitivePeerDependencies:
       - '@types/node'
     dev: false
@@ -54,8 +54,8 @@ packages:
     resolution: {integrity: sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==}
     dev: false
 
-  /@rushstack/node-core-library/3.55.2:
-    resolution: {integrity: sha512-SaLe/x/Q/uBVdNFK5V1xXvsVps0y7h1sN7aSJllQyFbugyOaxhNRF25bwEDnicARNEjJw0pk0lYnJQ9Kr6ev0A==}
+  /@rushstack/node-core-library/3.57.0:
+    resolution: {integrity: sha512-uR5I9vLJuknliZXDDqW7nBtiKSO0fYOnvNEUNPQ84rmFYbvDWQGTDx7MREMVGXhfEN5J50xzAtGTPC9xdbia6g==}
     peerDependencies:
       '@types/node': '*'
     peerDependenciesMeta:
@@ -66,7 +66,7 @@ packages:
       fs-extra: 7.0.1
       import-lazy: 4.0.0
       jju: 1.4.0
-      resolve: 1.22.3
+      resolve: 1.22.2
       semver: 7.3.8
       z-schema: 5.0.5
     dev: false
@@ -265,8 +265,8 @@ packages:
       path-parse: 1.0.7
     dev: false
 
-  /resolve/1.22.3:
-    resolution: {integrity: sha512-P8ur/gp/AmbEzjr729bZnLjXK5Z+4P0zhIJgBgzqRih7hL7BOukHGtSTA3ACMY467GRFz3duQsi0bDZdR7DKdw==}
+  /resolve/1.22.2:
+    resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
     hasBin: true
     dependencies:
       is-core-module: 2.12.0
@@ -282,8 +282,8 @@ packages:
       lru-cache: 6.0.0
     dev: false
 
-  /shiki/0.14.1:
-    resolution: {integrity: sha512-+Jz4nBkCBe0mEDqo1eKRcCdjRtrCjozmcbTUjbPTX7OOJfEbTZzlUWlZtGe3Gb5oV1/jnojhG//YZc3rs9zSEw==}
+  /shiki/0.14.2:
+    resolution: {integrity: sha512-ltSZlSLOuSY0M0Y75KA+ieRaZ0Trf5Wl3gutE7jzLuIcWxLp5i/uEnLoQWNvgKXQ5OMpGkJnVMRLAuzjc0LJ2A==}
     dependencies:
       ansi-sequence-parser: 1.1.0
       jsonc-parser: 3.2.0
@@ -305,33 +305,33 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /typedoc-plugin-extras/2.3.3_typedoc@0.24.2:
+  /typedoc-plugin-extras/2.3.3_typedoc@0.24.6:
     resolution: {integrity: sha512-n9zOdVSbGQ8rhsSxtmGCQPVEim345MwpeKl9PUC6ToLR8tu3YYA3BEuR9fP0z+FSx1ExU/kGzxY3sn4+FyHE2w==}
     peerDependencies:
       typedoc: 0.24.x
     dependencies:
-      typedoc: 0.24.2_typescript@5.0.4
+      typedoc: 0.24.6_typescript@5.0.4
     dev: false
 
-  /typedoc-plugin-missing-exports/1.0.0_typedoc@0.24.2:
+  /typedoc-plugin-missing-exports/1.0.0_typedoc@0.24.6:
     resolution: {integrity: sha512-7s6znXnuAj1eD9KYPyzVzR1lBF5nwAY8IKccP5sdoO9crG4lpd16RoFpLsh2PccJM+I2NASpr0+/NMka6ThwVA==}
     peerDependencies:
       typedoc: 0.22.x || 0.23.x
     dependencies:
-      typedoc: 0.24.2_typescript@5.0.4
+      typedoc: 0.24.6_typescript@5.0.4
     dev: false
 
-  /typedoc-theme-hierarchy/3.1.0_typedoc@0.24.2:
+  /typedoc-theme-hierarchy/3.1.0_typedoc@0.24.6:
     resolution: {integrity: sha512-y0lCXC4JC9lQvirAhCd5NX75vFV/XsUzS1QRFRiqW2vJtDYPb+bsKdvSzbC1KpLI4nb8BJg+8wenKshKm8WGOA==}
     peerDependencies:
       typedoc: ^0.23.6
     dependencies:
       fs-extra: 10.1.0
-      typedoc: 0.24.2_typescript@5.0.4
+      typedoc: 0.24.6_typescript@5.0.4
     dev: false
 
-  /typedoc/0.24.2_typescript@5.0.4:
-    resolution: {integrity: sha512-Ln1EItgcdKfRzaFSfs9uEc4amz9ZeUZoaTbFdH0ZC8ScA2OjvNMdW7vrjTtZwKE0iF38njUmuFFgQMP4tDl7ag==}
+  /typedoc/0.24.6_typescript@5.0.4:
+    resolution: {integrity: sha512-c3y3h45xJv3qYwKDAwU6Cl+26CjT0ZvblHzfHJ+SjQDM4p1mZxtgHky4lhmG0+nNarRht8kADfZlbspJWdZarQ==}
     engines: {node: '>= 14.14'}
     hasBin: true
     peerDependencies:
@@ -340,7 +340,7 @@ packages:
       lunr: 2.3.9
       marked: 4.3.0
       minimatch: 9.0.0
-      shiki: 0.14.1
+      shiki: 0.14.2
       typescript: 5.0.4
     dev: false
 
