@@ -33,11 +33,11 @@
     "_phase:clean": ""
   },
   "dependencies": {
-    "@microsoft/api-extractor": "7.34.8",
+    "@microsoft/api-extractor": "7.34.9",
     "@rushstack/eslint-config": "3.2.0",
-    "@rushstack/heft-jest-plugin": "0.5.10",
-    "@rushstack/heft-sass-plugin": "0.8.9",
-    "@rushstack/heft-web-rig": "0.14.15",
+    "@rushstack/heft-jest-plugin": "0.5.11",
+    "@rushstack/heft-sass-plugin": "0.9.1",
+    "@rushstack/heft-web-rig": "0.14.17",
     "eslint": "8.40.0",
     "jest-environment-jsdom": "29.5.0",
     "jest-html-reporters": "3.1.4",
@@ -45,7 +45,7 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
-    "@rushstack/heft": "0.50.4",
+    "@rushstack/heft": "0.50.5",
     "tslib": "2.5.0"
   },
   "peerDependencies": {

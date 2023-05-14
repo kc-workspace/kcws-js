@@ -1,10 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
-  npm-check-updates: 16.10.10
+  npm-check-updates: 16.10.12
 
 dependencies:
-  npm-check-updates: 16.10.10
+  npm-check-updates: 16.10.12
 
 packages:
 
@@ -294,7 +294,7 @@ packages:
       string-width: 5.1.2
       type-fest: 2.19.0
       widest-line: 4.0.1
-      wrap-ansi: 8.0.1
+      wrap-ansi: 8.1.0
     dev: false
 
   /brace-expansion/1.1.11:
@@ -791,10 +791,6 @@ packages:
       lru-cache: 7.18.3
     dev: false
 
-  /http-cache-semantics/4.1.0:
-    resolution: {integrity: sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ==}
-    dev: false
-
   /http-cache-semantics/4.1.1:
     resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
     dev: false
@@ -1084,7 +1080,7 @@ packages:
     dependencies:
       agentkeepalive: 4.2.1
       cacache: 16.1.3
-      http-cache-semantics: 4.1.0
+      http-cache-semantics: 4.1.1
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.1
       is-lambda: 1.0.1
@@ -1098,31 +1094,6 @@ packages:
       promise-retry: 2.0.1
       socks-proxy-agent: 7.0.0
       ssri: 9.0.1
-    transitivePeerDependencies:
-      - bluebird
-      - supports-color
-    dev: false
-
-  /make-fetch-happen/11.0.1:
-    resolution: {integrity: sha512-clv3IblugXn2CDUmqFhNzii3rjKa46u5wNeivc+QlLXkGI5FjLX3rGboo+y2kwf1pd8W0iDiC384cemeDtw9kw==}
-    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
-    dependencies:
-      agentkeepalive: 4.2.1
-      cacache: 17.0.1
-      http-cache-semantics: 4.1.0
-      http-proxy-agent: 5.0.0
-      https-proxy-agent: 5.0.1
-      is-lambda: 1.0.1
-      lru-cache: 7.18.3
-      minipass: 3.3.4
-      minipass-collect: 1.0.2
-      minipass-fetch: 3.0.0
-      minipass-flush: 1.0.5
-      minipass-pipeline: 1.2.4
-      negotiator: 0.6.3
-      promise-retry: 2.0.1
-      socks-proxy-agent: 7.0.0
-      ssri: 10.0.0
     transitivePeerDependencies:
       - bluebird
       - supports-color
@@ -1350,9 +1321,9 @@ packages:
       npm-normalize-package-bin: 3.0.0
     dev: false
 
-  /npm-check-updates/16.10.10:
-    resolution: {integrity: sha512-QO8gsUJRPTUltu3MqyUVgJDgG7H+oyKnpMJ5JRG40tLTPd0s6AI18gGBtq8RZiAQTeVbNkWu7C8gOEJgl3goBw==}
-    engines: {node: '>=16'}
+  /npm-check-updates/16.10.12:
+    resolution: {integrity: sha512-js/Gg9+5RTyOQZnmFcPswLxf4sK/H5AE/8bl4tkleLJTC1gXhQqqELUFwXqppNvx488aXxN52ZY9k9MSSvEW2A==}
+    engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
       chalk: 5.2.0
@@ -1371,7 +1342,7 @@ packages:
       lodash: 4.17.21
       minimatch: 9.0.0
       p-map: 4.0.0
-      pacote: 15.1.3
+      pacote: 15.1.1
       parse-github-url: 1.0.2
       progress: 2.0.3
       prompts-ncu: 3.0.0
@@ -1433,7 +1404,7 @@ packages:
     resolution: {integrity: sha512-TMenrMagFA9KF81E2bkS5XRyzERK4KXu70vgXt5+i8FcrFeLNgNsc6e5hekTqjDwPDkL3HGn/holWcXDMfnFgw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      make-fetch-happen: 11.0.1
+      make-fetch-happen: 11.1.1
       minipass: 3.3.4
       minipass-fetch: 3.0.0
       minipass-json-stream: 1.0.1
@@ -1497,8 +1468,8 @@ packages:
       semver: 7.5.0
     dev: false
 
-  /pacote/15.1.3:
-    resolution: {integrity: sha512-aRts8cZqxiJVDitmAh+3z+FxuO3tLNWEmwDRPEpDDiZJaRz06clP4XX112ynMT5uF0QNoMPajBBHnaStUEPJXA==}
+  /pacote/15.1.1:
+    resolution: {integrity: sha512-eeqEe77QrA6auZxNHIp+1TzHQ0HBKf5V6c8zcaYZ134EJe1lCi+fjXATkNiEEfbG+e50nu02GLvUtmZcGOYabQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     hasBin: true
     dependencies:
@@ -1508,7 +1479,7 @@ packages:
       '@npmcli/run-script': 6.0.0
       cacache: 17.0.1
       fs-minipass: 3.0.0
-      minipass: 5.0.0
+      minipass: 4.2.5
       npm-package-arg: 10.0.0
       npm-packlist: 7.0.1
       npm-pick-manifest: 8.0.1
@@ -1792,7 +1763,7 @@ packages:
     hasBin: true
     dependencies:
       '@sigstore/protobuf-specs': 0.1.0
-      make-fetch-happen: 11.0.1
+      make-fetch-happen: 11.1.1
       tuf-js: 1.1.5
     transitivePeerDependencies:
       - bluebird
@@ -2095,15 +2066,6 @@ packages:
       ansi-styles: 4.3.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
-    dev: false
-
-  /wrap-ansi/8.0.1:
-    resolution: {integrity: sha512-QFF+ufAqhoYHvoHdajT/Po7KoXVBPXS2bgjIam5isfWJPfIOnQZ50JtUiVvCv/sjgacf3yRrt2ZKUZ/V4itN4g==}
-    engines: {node: '>=12'}
-    dependencies:
-      ansi-styles: 6.2.1
-      string-width: 5.1.2
-      strip-ansi: 7.0.1
     dev: false
 
   /wrap-ansi/8.1.0:
