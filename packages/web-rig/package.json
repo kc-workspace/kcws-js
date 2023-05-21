@@ -38,7 +38,7 @@
     "@rushstack/heft-jest-plugin": "0.5.11",
     "@rushstack/heft-sass-plugin": "0.9.1",
     "@rushstack/heft-web-rig": "0.14.17",
-    "eslint": "8.40.0",
+    "eslint": "8.41.0",
     "jest-environment-jsdom": "29.5.0",
     "jest-html-reporters": "3.1.4",
     "jest-junit": "15.0.0",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@rushstack/heft": "0.50.5",
-    "tslib": "2.5.0"
+    "tslib": "2.5.2"
   },
   "peerDependencies": {
     "@rushstack/heft": "^0.48.0",
