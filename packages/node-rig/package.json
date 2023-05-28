@@ -29,10 +29,10 @@
     "_phase:clean": ""
   },
   "dependencies": {
-    "@microsoft/api-extractor": "7.34.9",
-    "@rushstack/eslint-config": "3.2.0",
-    "@rushstack/heft-jest-plugin": "0.5.11",
-    "@rushstack/heft-node-rig": "1.12.11",
+    "@microsoft/api-extractor": "7.35.0",
+    "@rushstack/eslint-config": "3.3.0",
+    "@rushstack/heft-jest-plugin": "0.5.12",
+    "@rushstack/heft-node-rig": "1.13.0",
     "eslint": "8.41.0",
     "jest-environment-node": "29.5.0",
     "jest-html-reporters": "3.1.4",
@@ -40,7 +40,7 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
-    "@rushstack/heft": "0.50.5"
+    "@rushstack/heft": "0.50.6"
   },
   "peerDependencies": {
     "@rushstack/heft": "^0.48.0"
