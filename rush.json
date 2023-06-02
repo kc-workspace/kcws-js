@@ -3,7 +3,7 @@
  * For full documentation, please see https://rushjs.io
  */
 {
-  // "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json", 
+  // "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
   "$schema": "https://raw.githubusercontent.com/microsoft/rushstack/main/libraries/rush-lib/src/schemas/rush.schema.json",
 
   /**
