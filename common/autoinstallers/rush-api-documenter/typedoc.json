@@ -1,59 +1,53 @@
 {
   "$schema": "https://typedoc.org/schema.json",
-  "name": "@kcws/js",
+  "extends": ["./typedoc.base.json"],
+
+  // Input: https://typedoc.org/options/input/
   "entryPointStrategy": "packages",
   "entryPoints": [
     "../../../packages/color",
     "../../../packages/dtcheck",
-    "../../../packages/lintstaged-config",
+    "../../../packages/equals",
     "../../../packages/mixin",
     "../../../packages/random",
     "../../../packages/reset.css",
+    "../../../packages/lintstaged-config",
     "../../../typings/*"
   ],
+  "name": "@kcws/js",
+
+  // Output: https://typedoc.org/options/output/
   "out": "../../../_site",
   "emit": "docs",
-  "logLevel": "Warn",
-  "exclude": [
-    "**/*+(index|.spec|.e2e).ts",
-  ],
-  "sort": [
-    "visibility",
-    "static-first",
-    "enum-value-ascending",
-    "alphabetical"
-  ],
-  "plugin": [
-    "typedoc-plugin-missing-exports",
-    "typedoc-plugin-extras",
-    "typedoc-theme-hierarchy"
-  ],
-  "theme": "hierarchy",
   "lightHighlightTheme": "solarized-light",
   "darkHighlightTheme": "solarized-dark",
-  "gaID": "",
-  "readme": "none",
+  "cname": "js.kcws.kamontat.net",
+  "htmlLang": "en",
   "githubPages": true,
+  "gaID": "",
+  "hideParameterTypesInTitle": true,
+  "hideGenerator": false,
+  "searchInComments": true,
   "cleanOutputDir": true,
-  "includeVersion": true,
-  "treatWarningsAsErrors": true,
-  "validation": {
-    "invalidLink": true,
-    "notExported": true,
-    "notDocumented": true
+  "navigationLinks": {
+    "Github": "https://github.com/kc-workspace/kcws-js"
   },
-  "requiredToBeDocumented": [
-    "Namespace",
-    "Enum",
-    "EnumMember",
-    "Function",
-    "Class",
-    "Method",
-    "Reference"
-  ],
-  "internalModule": "internal",
-  "customDescription": "kamontat's workspace for javascript ecosystem",
-  "favicon": "common/autoinstallers/rush-api-documenter/public/kc.ico",
-  "footerTypedocVersion": true,
-  "footerLastModified": true
+  "sidebarLinks": {
+    "Github": "https://github.com/kc-workspace/kcws-js"
+  },
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": true
+  },
+  "visibilityFilters": {
+    "inherited": true,
+    "protected": true,
+    "private": false,
+    "external": false,
+    "@beta": true,
+    "@alpha": false
+  },
+
+  // Other: https://typedoc.org/options/other/
+  // "logLevel": "Verbose"
 }

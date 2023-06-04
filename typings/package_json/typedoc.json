@@ -1,0 +1,5 @@
+{
+  "extends": ["../../common/autoinstallers/rush-api-documenter/typedoc.base.json"],
+  "tsconfig": "./types/tsconfig.json",
+  "entryPoints": ["types/index.d.ts"]
+}

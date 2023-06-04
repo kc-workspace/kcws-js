@@ -44,8 +44,5 @@
     "sass": "1.62.1",
     "stylelint": "14.16.1",
     "stylelint-config-standard-scss": "6.1.0"
-  },
-  "typedoc": {
-    "entryPoint": "dist/reset.scss.d.ts"
   }
 }
