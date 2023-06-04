@@ -142,7 +142,7 @@
       "longName": "--target",
       "shortName": "-t",
       "description": "Determines the version to upgrade to: latest, newest, greatest, minor, patch. (default: minor)",
-      "defaultValue": "minor",
+      "defaultValue": "latest",
       "alternatives": [
         {
           "name": "latest",
