@@ -25,7 +25,7 @@
    *
    * Default value: "temp/sass-ts/"
    */
-  "generatedTsFolder": "temp/scss-ts/",
+  "generatedTsFolder": "lib/types/",
 
   /**
    * Determines whether export values are wrapped in a default property, or not.

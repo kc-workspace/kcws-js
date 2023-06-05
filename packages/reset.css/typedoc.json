@@ -1,4 +1,4 @@
 {
   "extends": ["../../common/autoinstallers/rush-api-documenter/typedoc.base.json"],
-  "entryPoints": ["temp/scss-ts/reset.scss.d.ts"]
+  "entryPoints": ["lib/types/reset.scss.d.ts"]
 }
