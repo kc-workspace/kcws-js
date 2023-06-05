@@ -59,14 +59,6 @@
       "allowedCategories": [ "configs" ]
     },
     {
-      "name": "@rushstack/heft-web-rig",
-      "allowedCategories": [ "configs" ]
-    },
-    {
-      "name": "@rushstack/heft-webpack5-plugin",
-      "allowedCategories": [ "configs" ]
-    },
-    {
       "name": "@typescript-eslint/eslint-plugin",
       "allowedCategories": [ "configs" ]
     },
