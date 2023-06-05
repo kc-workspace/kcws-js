@@ -1,4 +1,4 @@
-# Css Reset
+# CSS Reset
 
 [![npm@latest][img:npm@latest]][link:npm@latest]
 [![bundle@latest][img:bundle@latest]][link:bundle@latest]
