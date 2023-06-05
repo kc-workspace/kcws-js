@@ -8,7 +8,7 @@
    * Optionally specifies another JSON config file that this file extends from. This provides a way for standard
    * settings to be shared across multiple projects.
    */
-  // "extends": "@rushstack/heft-web-rig/profiles/library/config/typescript.json",
+  // "extends": "@rushstack/heft-node-rig/profiles/default/config/typescript.json",
 
   /**
    * If provided, emit these module kinds in addition to the modules specified in the tsconfig.
@@ -54,6 +54,11 @@
    * The default value is "lib".
    */
   // "emitFolderNameForTests": "lib-commonjs",
+
+  /**
+   * If true and "isolatedModules" is configured in tsconfig.json, use a worker thread to run transpilation concurrently with type checking and declaration emit.
+   */
+  // "useTranspilerWorker": true
 
   /**
    * Configures additional file types that should be copied into the TypeScript compiler's emit folders, for example
