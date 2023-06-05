@@ -2,6 +2,7 @@ import { existsSync, readFileSync, statSync } from "fs";
 import { resolve, dirname } from "path";
 import { ConfigFn } from "../models/IConfig";
 import { getCommand } from "../utils/cmd";
+import { WithUndefined } from "../types/generic";
 
 const ROOT: string = "/";
 
