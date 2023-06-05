@@ -1,0 +1,17 @@
+diff --git a/lib/Eslint.js b/lib/Eslint.js
+index e92894b8a28c1f56ff4fd14561b7606c81aa0303..6efa22a0fb33ac2ffa865b9e6350331e3056b2e2 100644
+--- a/lib/Eslint.js
++++ b/lib/Eslint.js
+@@ -146,10 +146,11 @@ class Eslint extends LinterBase_1.LinterBase {
+         const patchedTime = (key, fn) => {
+             return (...args) => {
+                 const startTime = perf_hooks_1.performance.now();
+-                fn(...args);
++                const result = fn(...args);
+                 const endTime = perf_hooks_1.performance.now();
+                 const existingTiming = this._eslintTimings.get(key) || 0;
+                 this._eslintTimings.set(key, existingTiming + endTime - startTime);
++                return result;
+             };
+         };
+         timing.time = patchedTime;
