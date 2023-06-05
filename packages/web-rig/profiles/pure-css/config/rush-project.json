@@ -1,8 +1,12 @@
 {
   "operationSettings": [
     {
+      "operationName": "_phase:build",
+      "outputFolderNames": ["lib", "lib-commonjs", "lib-es6", "lib-esnext", "lib-umd", "lib-amd", "lib-css", "temp", "dist"]
+    },
+    {
       "operationName": "build",
-      "outputFolderNames": ["lib", "temp", "dist"]
+      "outputFolderNames": ["lib", "lib-commonjs", "lib-es6", "lib-esnext", "lib-umd", "lib-amd", "lib-css", "temp", "dist"]
     }
   ]
 }
