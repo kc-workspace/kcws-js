@@ -30,8 +30,7 @@
   ],
   "scripts": {
     "_phase:build": "",
-    "_phase:test": "",
-    "_phase:test-types": "dtslint types",
+    "_phase:test": "dtslint types",
     "_phase:clean": ""
   },
   "dependencies": {},
