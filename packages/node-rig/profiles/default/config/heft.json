@@ -21,6 +21,8 @@
         { "sourcePath": "lib-umd" },
         { "sourcePath": "lib-amd" },
         { "sourcePath": "lib-css" },
+        { "sourcePath": ".rush" },
+        { "sourcePath": "rush-logs" },
         { "sourcePath": "temp" },
         { "sourcePath": "dist" },
         { "sourcePath": "*.log" }

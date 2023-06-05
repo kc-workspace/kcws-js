@@ -1,7 +1,7 @@
 /**
  * Defines configuration used by core Heft.
  */
- {
+{
   // "$schema": "https://developer.microsoft.com/json-schemas/heft/heft.schema.json",
   "$schema": "https://raw.githubusercontent.com/microsoft/rushstack/main/apps/heft/src/schemas/heft.schema.json",
 
@@ -21,6 +21,8 @@
         { "sourcePath": "lib-umd" },
         { "sourcePath": "lib-amd" },
         { "sourcePath": "lib-css" },
+        { "sourcePath": ".rush" },
+        { "sourcePath": "rush-logs" },
         { "sourcePath": "temp" },
         { "sourcePath": "dist" },
         { "sourcePath": "*.log" }
@@ -47,12 +49,6 @@
           "taskDependencies": ["typescript"],
           "taskPlugin": {
             "pluginPackage": "@rushstack/heft-api-extractor-plugin"
-          }
-        },
-        "webpack": {
-          "taskDependencies": ["typescript"],
-          "taskPlugin": {
-            "pluginPackage": "@rushstack/heft-webpack5-plugin"
           }
         }
       }

@@ -7,7 +7,13 @@
 
   "phasesByName": {
     "build": {
-      "cleanFiles": [{ "sourcePath": "lib" }, { "sourcePath": "temp" }, { "sourcePath": "dist" }],
+      "cleanFiles": [
+        { "sourcePath": "lib" },
+        { "sourcePath": "dist" },
+        { "sourcePath": ".rush" },
+        { "sourcePath": "rush-logs" },
+        { "sourcePath": "temp" }
+      ],
       "tasksByName": {
         "sass-typings": {
           "taskPlugin": {

@@ -6,7 +6,7 @@
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/reset.css",
   "main": "lib/reset.scss.css",
   "style": "lib/reset.scss.css",
-  "types": "dist/reset.scss.d.ts",
+  "types": "temp/scss-ts/reset.scss.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/kc-workspace/kcws-js.git",
@@ -29,7 +29,7 @@
     "CHANGELOG.json",
     "CHANGELOG.md",
     "lib/*.css",
-    "dist/*.d.ts"
+    "temp/scss-ts/*.d.ts"
   ],
   "scripts": {
     "_phase:lint": "stylelint **/*.scss",
