@@ -5,23 +5,9 @@
     {
       "operationName": "_phase:build",
       "outputFolderNames": [
-        "lib",
-        "lib-commonjs",
-        "lib-es6",
-        "lib-esnext",
-        "lib-umd",
-        "lib-amd",
         "lib-css",
-        "temp",
-        "dist"
-      ]
-    },
-    {
-      "operationName": "_phase:test",
-      "outputFolderNames": [
-        "temp/test.jest",
-        "temp/test",
-        "temp/coverage"
+        "dist",
+        "temp/build.typescript"
       ]
     }
   ]

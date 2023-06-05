@@ -12,8 +12,8 @@
         "lib-umd",
         "lib-amd",
         "lib-css",
-        "temp",
-        "dist"
+        "dist",
+        "temp/build.typescript"
       ]
     },
     {
