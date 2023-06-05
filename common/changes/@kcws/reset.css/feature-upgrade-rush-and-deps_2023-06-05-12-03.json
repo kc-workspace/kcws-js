@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/reset.css",
+      "comment": "upgrade dependencies major version",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/reset.css"
+}

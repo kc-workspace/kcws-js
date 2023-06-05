@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "upgrade heft version",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "upgrade heft version",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}

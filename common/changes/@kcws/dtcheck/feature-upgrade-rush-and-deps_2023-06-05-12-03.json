@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/dtcheck",
+      "comment": "upgrade heft version",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/dtcheck"
+}
