@@ -34,7 +34,6 @@
   "scripts": {
     "_phase:lint": "stylelint **/*.scss",
     "_phase:build": "heft build",
-    "_phase:test": "heft test",
     "_phase:clean": "heft clean"
   },
   "devDependencies": {

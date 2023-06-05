@@ -15,6 +15,7 @@
       "dependencies": {
         "upstream": ["_phase:build"]
       },
+      // Required phase
       "ignoreMissingScript": false,
       "allowWarningsOnSuccess": false
     },
@@ -23,20 +24,12 @@
       "dependencies": {
         "self": ["_phase:build"]
       },
-      "ignoreMissingScript": false,
+      "ignoreMissingScript": true,
       "allowWarningsOnSuccess": false
     },
     {
-      "name": "_phase:test-types",
-      "ignoreMissingScript": true,
-      // Typings package might contains warning message
-      // When we use typescript version higher than
-      // what they recommend, however it didn't mean application
-      // will failed.
-      "allowWarningsOnSuccess": true
-    },
-    {
       "name": "_phase:clean",
+      // Required phase
       "ignoreMissingScript": false,
       "allowWarningsOnSuccess": false
     }
@@ -70,7 +63,7 @@
       "commandKind": "phased",
       "name": "test",
       "summary": "Test packages using phase block",
-      "phases": ["_phase:lint", "_phase:build", "_phase:test", "_phase:test-types"],
+      "phases": ["_phase:lint", "_phase:build", "_phase:test"],
       "enableParallelism": false,
       "incremental": true
     },
@@ -78,7 +71,7 @@
       "commandKind": "phased",
       "name": "retest",
       "summary": "Retest packages using phase block",
-      "phases": ["_phase:clean", "_phase:lint", "_phase:build", "_phase:test", "_phase:test-types"],
+      "phases": ["_phase:clean", "_phase:lint", "_phase:build", "_phase:test"],
       "enableParallelism": false,
       "incremental": false
     },

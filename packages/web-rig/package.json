@@ -29,7 +29,6 @@
   ],
   "scripts": {
     "_phase:build": "",
-    "_phase:test": "",
     "_phase:clean": ""
   },
   "dependencies": {
