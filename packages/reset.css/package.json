@@ -29,7 +29,7 @@
     "CHANGELOG.json",
     "CHANGELOG.md",
     "lib/*.css",
-    "types/*.d.ts"
+    "dist/*.d.ts"
   ],
   "scripts": {
     "_phase:lint": "stylelint **/*.scss",
@@ -40,7 +40,6 @@
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@rushstack/heft": "0.51.0",
-    "sass": "1.62.1",
     "stylelint": "15.6.3",
     "stylelint-config-standard-scss": "9.0.0"
   }
