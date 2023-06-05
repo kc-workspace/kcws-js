@@ -5,10 +5,6 @@
 [![libsio@latest][img:libsio@latest]][link:libsio@latest]
 ![snyk@latest][img:snyk@latest]
 
-## Known issues
-
-1. Segmentation fault (core dumped) on CI: stylelint/stylelint#6898
-
 <!-- LINKS SECTION -->
 
 [img:npm@latest]: https://img.shields.io/npm/v/@kcws/reset.css/latest?style=flat-square
