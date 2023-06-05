@@ -77,7 +77,6 @@ importers:
       '@kcws/eslint-config': workspace:*
       '@kcws/node-rig': workspace:*
       '@rushstack/heft': 0.51.0
-      '@types/generic': workspace:*
       '@types/micromatch': 4.0.2
       micromatch: 4.0.5
     dependencies:
@@ -86,7 +85,6 @@ importers:
       '@kcws/eslint-config': link:../eslint-config
       '@kcws/node-rig': link:../node-rig
       '@rushstack/heft': 0.51.0
-      '@types/generic': link:../../typings/generic
       '@types/micromatch': 4.0.2
 
   ../../packages/mixin:
