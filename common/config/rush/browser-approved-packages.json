@@ -31,7 +31,15 @@
       "allowedCategories": [ "configs", "libraries", "prototypes", "tools" ]
     },
     {
+      "name": "@rushstack/heft-api-extractor-plugin",
+      "allowedCategories": [ "configs" ]
+    },
+    {
       "name": "@rushstack/heft-jest-plugin",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "@rushstack/heft-lint-plugin",
       "allowedCategories": [ "configs" ]
     },
     {
@@ -39,7 +47,15 @@
       "allowedCategories": [ "configs" ]
     },
     {
+      "name": "@rushstack/heft-typescript-plugin",
+      "allowedCategories": [ "configs" ]
+    },
+    {
       "name": "@rushstack/heft-web-rig",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "@rushstack/heft-webpack5-plugin",
       "allowedCategories": [ "configs" ]
     },
     {
