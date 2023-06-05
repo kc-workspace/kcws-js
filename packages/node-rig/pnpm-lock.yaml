@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 patchedDependencies:
   '@rushstack/heft-lint-plugin@0.1.0':
-    hash: 3okvdwbt35z42icyc5n7j3ebq4
+    hash: xcq4iet26e7tgfoqchqzjc3e7a
     path: patches/@rushstack__heft-lint-plugin@0.1.0.patch
 
 specifiers:
@@ -24,7 +24,7 @@ dependencies:
   '@microsoft/api-extractor': 7.35.1_@types+node@14.14.45
   '@rushstack/heft-api-extractor-plugin': 0.1.0_zccor4tjfmbczcdwt77q5gpd3q
   '@rushstack/heft-jest-plugin': 0.6.0_zccor4tjfmbczcdwt77q5gpd3q
-  '@rushstack/heft-lint-plugin': 0.1.0_3okvdwbt35z42icyc5n7j3ebq4_zccor4tjfmbczcdwt77q5gpd3q
+  '@rushstack/heft-lint-plugin': 0.1.0_xcq4iet26e7tgfoqchqzjc3e7a_zccor4tjfmbczcdwt77q5gpd3q
   '@rushstack/heft-typescript-plugin': 0.1.0_zccor4tjfmbczcdwt77q5gpd3q
   '@types/heft-jest': 1.0.3
   '@types/node': 14.14.45
@@ -806,7 +806,7 @@ packages:
       - ts-node
     dev: false
 
-  /@rushstack/heft-lint-plugin/0.1.0_3okvdwbt35z42icyc5n7j3ebq4_zccor4tjfmbczcdwt77q5gpd3q:
+  /@rushstack/heft-lint-plugin/0.1.0_xcq4iet26e7tgfoqchqzjc3e7a_zccor4tjfmbczcdwt77q5gpd3q:
     resolution: {integrity: sha512-PdF5V75TTmyaMRcP7ua0s9IxhJUZvdNf0ZnR7sYIxCbk4EpagRlQFRrzgjczk95Hj8CO8sSWPr5q6lpDlmPCpA==}
     peerDependencies:
       '@rushstack/heft': 0.51.0
