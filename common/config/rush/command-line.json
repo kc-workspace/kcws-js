@@ -28,14 +28,6 @@
       "allowWarningsOnSuccess": false
     },
     {
-      "name": "_phase:test-types",
-      "dependencies": {
-        "self": ["_phase:build"]
-      },
-      "ignoreMissingScript": true,
-      "allowWarningsOnSuccess": true
-    },
-    {
       "name": "_phase:clean",
       // Required phase
       "ignoreMissingScript": false,
@@ -71,7 +63,7 @@
       "commandKind": "phased",
       "name": "test",
       "summary": "Test packages using phase block",
-      "phases": ["_phase:lint", "_phase:build", "_phase:test", "_phase:test-types"],
+      "phases": ["_phase:lint", "_phase:build", "_phase:test"],
       "enableParallelism": true,
       "incremental": true
     },
@@ -79,7 +71,7 @@
       "commandKind": "phased",
       "name": "retest",
       "summary": "Retest packages using phase block",
-      "phases": ["_phase:clean", "_phase:lint", "_phase:build", "_phase:test", "_phase:test-types"],
+      "phases": ["_phase:clean", "_phase:lint", "_phase:build", "_phase:test"],
       "enableParallelism": true,
       "incremental": false
     },
@@ -91,7 +83,19 @@
       "enableParallelism": true,
       "incremental": false
     },
-
+    {
+      "commandKind": "bulk",
+      // This cannot use test phase because test can be parallelism, but test:types cannot
+      "name": "test:types",
+      "summary": "Testing typing packages with dtslint configure",
+      // test:types using dtslint which not support parallelism
+      "enableParallelism": false,
+      "incremental": true,
+      "safeForSimultaneousRushProcesses": true,
+      "allowWarningsInSuccessfulBuild": true,
+      "ignoreMissingScript": true,
+      "ignoreDependencyOrder": true
+    },
     {
       "commandKind": "global",
       "name": "hooks:format",
@@ -177,13 +181,13 @@
       "associatedCommands": ["upgrade"]
     },
     {
-       "parameterKind": "string",
-       "longName": "--edit",
-       "shortName": "-e",
-       "argumentName": "MESSAGE",
-       "description": "Commit message to verify on commitlint",
-       "required": true,
-       "associatedCommands": ["hooks:commitlint"]
+      "parameterKind": "string",
+      "longName": "--edit",
+      "shortName": "-e",
+      "argumentName": "MESSAGE",
+      "description": "Commit message to verify on commitlint",
+      "required": true,
+      "associatedCommands": ["hooks:commitlint"]
     }
   ]
 }

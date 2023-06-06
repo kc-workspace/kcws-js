@@ -117,10 +117,14 @@ jobs:
         uses: ./.github/actions/run-rush
         with:
           command: build
-      - name: Testing
+      - name: Testing packages
         uses: ./.github/actions/run-rush
         with:
           command: test
+      - name: Testing types
+        uses: ./.github/actions/run-rush
+        with:
+          command: test:types
       - name: Analysis packages
         uses: SonarSource/sonarcloud-github-action@v1.9.1
         env:
@@ -152,3 +156,7 @@ jobs:
         uses: ./.github/actions/run-rush
         with:
           command: test
+      - name: Testing types
+        uses: ./.github/actions/run-rush
+        with:
+          command: test:types
