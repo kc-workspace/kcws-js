@@ -1,5 +1,10 @@
 #!/bin/sh
 
+## Do NOT run on CI machine
+if test -n "$CI"; then
+  exit 0
+fi
+
 action="change"
 arg="-v"
 
