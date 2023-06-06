@@ -1,10 +1,6 @@
 {
   "folders": [
     {
-      "name": "@kcws/random",
-      "path": "packages/random"
-    },
-    {
       "name": "@kcws/color",
       "path": "packages/color"
     },
@@ -13,24 +9,28 @@
       "path": "packages/dtcheck"
     },
     {
+      "name": "@kcws/equals",
+      "path": "packages/equals"
+    },
+    {
       "name": "@kcws/mixin",
       "path": "packages/mixin"
     },
     {
-      "name": "@kcws/equals",
-      "path": "packages/equals"
+      "name": "@kcws/random",
+      "path": "packages/random"
     },
     {
       "name": "@kcws/reset.css",
       "path": "packages/reset.css"
     },
     {
-      "name": "@kcws/web-rig",
-      "path": "packages/web-rig"
-    },
-    {
       "name": "@kcws/node-rig",
       "path": "packages/node-rig"
+    },
+    {
+      "name": "@kcws/web-rig",
+      "path": "packages/web-rig"
     },
     {
       "name": "@kcws/eslint-config",

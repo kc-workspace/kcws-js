@@ -4,8 +4,6 @@
 
 ```ts
 
-/// <reference types="generic" />
-
 // @public
 export type BaseActionFn<O extends IBaseActionOptions> = (options?: O) => string;
 
@@ -113,6 +111,8 @@ export const prettier: BaseActionFn<IPrettierOptions>;
 // @beta
 export const rush: (cmd: string, ...args: Array<string>) => ConfigFn;
 
+// Warning: (ae-forgotten-export) The symbol "WithUndefined" needs to be exported by the entry point index.d.ts
+//
 // @beta
 export const rushOn: (pkg: WithUndefined<string>, cmd: string, ...args: Array<string>) => string;
 

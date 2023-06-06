@@ -2,21 +2,61 @@
  * Defines configuration used by core Heft.
  */
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/heft/heft.schema.json",
+  // "$schema": "https://developer.microsoft.com/json-schemas/heft/heft.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/rushstack/main/apps/heft/src/schemas/heft.schema.json",
 
   /**
    * Optionally specifies another JSON config file that this file extends from. This provides a way for standard
    * settings to be shared across multiple projects.
    */
   // "extends": "@rushstack/heft-node-rig/profiles/default/config/heft.json",
-  "eventActions": [
-    {
-      "actionKind": "deleteGlobs",
-      "heftEvent": "clean",
-      "actionId": "defaultClean",
-      "globsToDelete": ["lib", "lib-commonjs", "lib-es6", "lib-esnext", "lib-umd", "lib-amd", "lib-css", "temp", "dist", "*.log"]
-    }
-  ],
 
-  "heftPlugins": [{ "plugin": "@rushstack/heft-jest-plugin" }]
+  "phasesByName": {
+    "build": {
+      "cleanFiles": [
+        { "sourcePath": "lib" },
+        { "sourcePath": "lib-commonjs" },
+        { "sourcePath": "lib-es6" },
+        { "sourcePath": "lib-esnext" },
+        { "sourcePath": "lib-umd" },
+        { "sourcePath": "lib-amd" },
+        { "sourcePath": "lib-css" },
+        { "sourcePath": ".rush" },
+        { "sourcePath": "rush-logs" },
+        { "sourcePath": "temp" },
+        { "sourcePath": "dist" },
+        { "sourcePath": "*.log" }
+      ],
+      "tasksByName": {
+        "typescript": {
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-typescript-plugin"
+          }
+        },
+        "lint": {
+          "taskDependencies": ["typescript"],
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-lint-plugin"
+          }
+        },
+        "api-extractor": {
+          "taskDependencies": ["typescript"],
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-api-extractor-plugin"
+          }
+        }
+      }
+    },
+
+    "test": {
+      "phaseDependencies": ["build"],
+      "tasksByName": {
+        "jest": {
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-jest-plugin"
+          }
+        }
+      }
+    }
+  }
 }

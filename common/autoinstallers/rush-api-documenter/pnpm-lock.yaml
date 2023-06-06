@@ -4,14 +4,14 @@ specifiers:
   '@microsoft/api-documenter': 7.22.6
   typedoc: 0.24.7
   typedoc-plugin-extras: 2.3.3
-  typedoc-plugin-missing-exports: 1.0.0
+  typedoc-plugin-missing-exports: 2.0.0
   typedoc-theme-hierarchy: 3.2.0
 
 dependencies:
   '@microsoft/api-documenter': 7.22.6
   typedoc: 0.24.7_typescript@5.0.4
   typedoc-plugin-extras: 2.3.3_typedoc@0.24.7
-  typedoc-plugin-missing-exports: 1.0.0_typedoc@0.24.7
+  typedoc-plugin-missing-exports: 2.0.0_typedoc@0.24.7
   typedoc-theme-hierarchy: 3.2.0_typedoc@0.24.7
 
 packages:
@@ -313,10 +313,10 @@ packages:
       typedoc: 0.24.7_typescript@5.0.4
     dev: false
 
-  /typedoc-plugin-missing-exports/1.0.0_typedoc@0.24.7:
-    resolution: {integrity: sha512-7s6znXnuAj1eD9KYPyzVzR1lBF5nwAY8IKccP5sdoO9crG4lpd16RoFpLsh2PccJM+I2NASpr0+/NMka6ThwVA==}
+  /typedoc-plugin-missing-exports/2.0.0_typedoc@0.24.7:
+    resolution: {integrity: sha512-t0QlKCm27/8DaheJkLo/gInSNjzBXgSciGhoLpL6sLyXZibm7SuwJtHvg4qXI2IjJfFBgW9mJvvszpoxMyB0TA==}
     peerDependencies:
-      typedoc: 0.22.x || 0.23.x
+      typedoc: 0.24.x
     dependencies:
       typedoc: 0.24.7_typescript@5.0.4
     dev: false

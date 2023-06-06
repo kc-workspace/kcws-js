@@ -1,22 +1,5 @@
 // DO NOT ADD COMMENTS IN THIS FILE.  They will be lost when the Rush tool resaves it.
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
-  "packages": [
-    {
-      "name": "@kcws/lintstaged-config",
-      "allowedCategories": [ "libraries", "prototypes", "tools", "typings" ]
-    },
-    {
-      "name": "@kcws/node-rig",
-      "allowedCategories": [ "configs", "libraries", "prototypes", "tools" ]
-    },
-    {
-      "name": "@rushstack/heft-node-rig",
-      "allowedCategories": [ "configs" ]
-    },
-    {
-      "name": "jest-environment-node",
-      "allowedCategories": [ "configs" ]
-    }
-  ]
+  "packages": []
 }

@@ -1,0 +1,16 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "upgrade dependencies [auto]",
+      "type": "minor"
+    },
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "add patch files at patch directory",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config",
+  "email": "14089557+kamontat@users.noreply.github.com"
+}

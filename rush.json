@@ -3,8 +3,8 @@
  * For full documentation, please see https://rushjs.io
  */
 {
-  // "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
-  "$schema": "https://raw.githubusercontent.com/microsoft/rushstack/main/libraries/rush-lib/src/schemas/rush.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  // "$schema": "https://raw.githubusercontent.com/microsoft/rushstack/main/libraries/rush-lib/src/schemas/rush.schema.json",
 
   /**
    * (Required) This specifies the version of the Rush engine to be used in this repo.
@@ -19,7 +19,7 @@
    *
    * The latest version can found here: https://github.com/microsoft/rushstack/blob/main/apps/rush/CHANGELOG.md
    */
-  "rushVersion": "5.98.0",
+  "rushVersion": "5.99.0",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -35,12 +35,6 @@
    * https://github.com/microsoft/rushstack/issues/4033
    */
   "pnpmVersion": "7.33.0",
-  "pnpmOptions": {
-    // https://github.com/microsoft/rushstack/issues/2542#issuecomment-794990772
-    "useWorkspaces": true,
-    // https://rushjs.io/pages/maintainer/recommended_settings/#strictpeerdependencies
-    "strictPeerDependencies": true
-  },
 
   /**
    * Older releases of the Node.js engine may be missing features required by your system.
@@ -54,6 +48,14 @@
    * LTS versions: https://nodejs.org/en/download/releases/
    */
   "nodeSupportedVersionRange": ">=14.15.0 <15.0.0 || >=16.13.0 <17.0.0 || >=18.12.0 <19.0.0 || >=20",
+
+  /**
+   * If the version check above fails, Rush will display a message showing the current
+   * node version and the supported version range. You can use this setting to provide
+   * additional instructions that will display below the warning, if there's a specific
+   * tool or script you'd like the user to use to get in line with the expected version.
+   */
+  // "nodeSupportedVersionInstructions": "Run 'nvs use' to switch to the expected node version.",
 
   /**
    * Odd-numbered major versions of Node.js are experimental.  Even-numbered releases
@@ -388,8 +390,7 @@
       "packageName": "@kcws/lintstaged-config",
       "projectFolder": "packages/lintstaged-config",
       "reviewCategory": "configs",
-      "shouldPublish": true,
-      "decoupledLocalDependencies": ["@types/generic"]
+      "shouldPublish": true
     },
     {
       "packageName": "@kcws/eslint-config",

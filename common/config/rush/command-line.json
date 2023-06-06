@@ -15,6 +15,7 @@
       "dependencies": {
         "upstream": ["_phase:build"]
       },
+      // Required phase
       "ignoreMissingScript": false,
       "allowWarningsOnSuccess": false
     },
@@ -23,20 +24,12 @@
       "dependencies": {
         "self": ["_phase:build"]
       },
-      "ignoreMissingScript": false,
+      "ignoreMissingScript": true,
       "allowWarningsOnSuccess": false
     },
     {
-      "name": "_phase:test-types",
-      "ignoreMissingScript": true,
-      // Typings package might contains warning message
-      // When we use typescript version higher than
-      // what they recommend, however it didn't mean application
-      // will failed.
-      "allowWarningsOnSuccess": true
-    },
-    {
       "name": "_phase:clean",
+      // Required phase
       "ignoreMissingScript": false,
       "allowWarningsOnSuccess": false
     }
@@ -70,16 +63,16 @@
       "commandKind": "phased",
       "name": "test",
       "summary": "Test packages using phase block",
-      "phases": ["_phase:lint", "_phase:build", "_phase:test", "_phase:test-types"],
-      "enableParallelism": false,
+      "phases": ["_phase:lint", "_phase:build", "_phase:test"],
+      "enableParallelism": true,
       "incremental": true
     },
     {
       "commandKind": "phased",
       "name": "retest",
       "summary": "Retest packages using phase block",
-      "phases": ["_phase:clean", "_phase:lint", "_phase:build", "_phase:test", "_phase:test-types"],
-      "enableParallelism": false,
+      "phases": ["_phase:clean", "_phase:lint", "_phase:build", "_phase:test"],
+      "enableParallelism": true,
       "incremental": false
     },
     {
@@ -90,7 +83,19 @@
       "enableParallelism": true,
       "incremental": false
     },
-
+    {
+      "commandKind": "bulk",
+      // This cannot use test phase because test can be parallelism, but test:types cannot
+      "name": "test:types",
+      "summary": "Testing typing packages with dtslint configure",
+      // test:types using dtslint which not support parallelism
+      "enableParallelism": false,
+      "incremental": true,
+      "safeForSimultaneousRushProcesses": true,
+      "allowWarningsInSuccessfulBuild": true,
+      "ignoreMissingScript": true,
+      "ignoreDependencyOrder": true
+    },
     {
       "commandKind": "global",
       "name": "hooks:format",
@@ -98,6 +103,14 @@
       "safeForSimultaneousRushProcesses": true,
       "autoinstallerName": "rush-lintstaged",
       "shellCommand": "sh common/autoinstallers/rush-lintstaged/index.sh"
+    },
+    {
+      "commandKind": "global",
+      "name": "hooks:commitlint",
+      "summary": "Used by the commit-msg Git hook. This command invokes linting commit message.",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "rush-commitlint",
+      "shellCommand": "sh common/autoinstallers/rush-commitlint/lint.sh"
     },
     {
       "commandKind": "global",
@@ -122,6 +135,14 @@
       "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-dependencies-updater",
       "shellCommand": "sh common/autoinstallers/rush-dependencies-updater/index.sh"
+    },
+    {
+      "commandKind": "global",
+      "name": "commit",
+      "summary": "Create git commit with conventional syntax",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "rush-commitlint",
+      "shellCommand": "sh common/autoinstallers/rush-commitlint/commit.sh"
     }
   ],
 
@@ -142,7 +163,7 @@
       "longName": "--target",
       "shortName": "-t",
       "description": "Determines the version to upgrade to: latest, newest, greatest, minor, patch. (default: minor)",
-      "defaultValue": "minor",
+      "defaultValue": "latest",
       "alternatives": [
         {
           "name": "latest",
@@ -166,6 +187,15 @@
         }
       ],
       "associatedCommands": ["upgrade"]
+    },
+    {
+      "parameterKind": "string",
+      "longName": "--edit",
+      "shortName": "-e",
+      "argumentName": "MESSAGE",
+      "description": "Commit message to verify on commitlint",
+      "required": true,
+      "associatedCommands": ["hooks:commitlint"]
     }
   ]
 }

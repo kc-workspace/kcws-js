@@ -24,16 +24,16 @@
   "files": [
     "CHANGELOG.json",
     "CHANGELOG.md",
+    "patch",
     "profiles"
   ],
   "scripts": {
     "_phase:build": "",
-    "_phase:test": "",
     "_phase:clean": ""
   },
   "dependencies": {
     "@rushstack/eslint-config": "3.3.0",
-    "@typescript-eslint/eslint-plugin": "5.59.7",
-    "@typescript-eslint/parser": "5.59.7"
+    "@typescript-eslint/eslint-plugin": "5.59.9",
+    "@typescript-eslint/parser": "5.59.9"
   }
 }

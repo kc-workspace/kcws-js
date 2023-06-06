@@ -11,9 +11,8 @@ peer: false
 # choices: group, ownerChanged, repo.
 format: group
 
-# Determines the version to upgrade to.
-# choices: latest, newest, greatest, minor, patch
-target: latest
+# Because Rush using pnpm by default
+packageManager: pnpm
 
 # FIXME: filter cause local `rush upgrade` to be failed with error:
 # ```

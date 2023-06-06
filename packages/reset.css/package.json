@@ -6,7 +6,7 @@
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/reset.css",
   "main": "lib/reset.scss.css",
   "style": "lib/reset.scss.css",
-  "types": "dist/reset.scss.d.ts",
+  "types": "lib/types/reset.scss.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/kc-workspace/kcws-js.git",
@@ -29,23 +29,18 @@
     "CHANGELOG.json",
     "CHANGELOG.md",
     "lib/*.css",
-    "types/*.d.ts"
+    "lib/types/*.d.ts"
   ],
   "scripts": {
     "_phase:lint": "stylelint **/*.scss",
     "_phase:build": "heft build",
-    "_phase:test": "heft test",
     "_phase:clean": "heft clean"
   },
   "devDependencies": {
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
-    "@rushstack/heft": "0.50.6",
-    "sass": "1.62.1",
-    "stylelint": "14.16.1",
-    "stylelint-config-standard-scss": "6.1.0"
-  },
-  "typedoc": {
-    "entryPoint": "dist/reset.scss.d.ts"
+    "@rushstack/heft": "0.51.0",
+    "stylelint": "15.7.0",
+    "stylelint-config-standard-scss": "9.0.0"
   }
 }

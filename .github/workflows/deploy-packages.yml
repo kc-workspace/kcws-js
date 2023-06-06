@@ -1,6 +1,8 @@
 name: Deploy packages
 
 on:
+  schedule:
+    - cron: "30 22 * * 2" # https://crontab.guru/#30_22_*_*_2
   workflow_dispatch:
 
 defaults:

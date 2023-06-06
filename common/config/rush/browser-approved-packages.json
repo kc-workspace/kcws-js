@@ -12,7 +12,15 @@
     },
     {
       "name": "@kcws/eslint-config",
-      "allowedCategories": [ "configs", "libraries", "prototypes", "tools", "typings" ]
+      "allowedCategories": [ "configs", "libraries", "prototypes", "typings" ]
+    },
+    {
+      "name": "@kcws/lintstaged-config",
+      "allowedCategories": [ "libraries", "prototypes", "typings" ]
+    },
+    {
+      "name": "@kcws/node-rig",
+      "allowedCategories": [ "configs", "libraries", "prototypes" ]
     },
     {
       "name": "@kcws/web-rig",
@@ -28,10 +36,18 @@
     },
     {
       "name": "@rushstack/heft",
-      "allowedCategories": [ "configs", "libraries", "prototypes", "tools" ]
+      "allowedCategories": [ "configs", "libraries", "prototypes" ]
+    },
+    {
+      "name": "@rushstack/heft-api-extractor-plugin",
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "@rushstack/heft-jest-plugin",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "@rushstack/heft-lint-plugin",
       "allowedCategories": [ "configs" ]
     },
     {
@@ -39,7 +55,7 @@
       "allowedCategories": [ "configs" ]
     },
     {
-      "name": "@rushstack/heft-web-rig",
+      "name": "@rushstack/heft-typescript-plugin",
       "allowedCategories": [ "configs" ]
     },
     {
@@ -52,7 +68,7 @@
     },
     {
       "name": "@typescript-eslint/typescript-estree",
-      "allowedCategories": [ "configs", "typings" ]
+      "allowedCategories": [ "typings" ]
     },
     {
       "name": "eslint",
@@ -60,6 +76,10 @@
     },
     {
       "name": "jest-environment-jsdom",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "jest-environment-node",
       "allowedCategories": [ "configs" ]
     },
     {
@@ -73,10 +93,6 @@
     {
       "name": "micromatch",
       "allowedCategories": [ "configs" ]
-    },
-    {
-      "name": "sass",
-      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "stylelint",

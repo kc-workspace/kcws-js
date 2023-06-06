@@ -1,0 +1,49 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  // Input: https://typedoc.org/options/input/
+  "entryPointStrategy": "expand",
+  "exclude": ["**/*+(index|.spec|.e2e).ts"],
+  "includeVersion": true,
+
+  // Output: https://typedoc.org/options/output/
+
+  // Comment: https://typedoc.org/options/comments/
+
+  // Organization: https://typedoc.org/options/organization/
+  "categorizeByGroup": false,
+  "sort": ["visibility", "static-first", "enum-value-ascending", "alphabetical"],
+
+  // Validation: https://typedoc.org/options/validation/
+  "validation": {
+    "invalidLink": true,
+    "notExported": true,
+    "notDocumented": false
+  },
+  "treatWarningsAsErrors": false,
+  "treatValidationWarningsAsErrors": false,
+  // "requiredToBeDocumented": [
+  //   "Namespace",
+  //   "Enum",
+  //   "EnumMember",
+  //   "Function",
+  //   "Class",
+  //   "Method",
+  //   "Reference"
+  // ],
+
+  // Other: https://typedoc.org/options/other/
+
+  // Plugins: https://typedoc.org/guides/plugins/
+  "plugin": ["typedoc-plugin-missing-exports", "typedoc-plugin-extras"],
+
+  // typedoc-plugin-missing-exports
+  // https://github.com/Gerrit0/typedoc-plugin-missing-exports#options
+  "internalModule": "internal",
+
+  // typedoc-plugin-extras
+  // https://github.com/Drarig29/typedoc-plugin-extras#arguments
+  "customDescription": "kamontat's workspace for javascript ecosystem",
+  "favicon": "common/autoinstallers/rush-api-documenter/public/kc.ico",
+  "footerTypedocVersion": true,
+  "footerLastModified": true
+}

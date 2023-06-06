@@ -29,27 +29,28 @@
   ],
   "scripts": {
     "_phase:build": "",
-    "_phase:test": "",
     "_phase:clean": ""
   },
   "dependencies": {
-    "@microsoft/api-extractor": "7.35.0",
-    "@rushstack/eslint-config": "3.3.0",
-    "@rushstack/heft-jest-plugin": "0.5.12",
-    "@rushstack/heft-sass-plugin": "0.9.2",
-    "@rushstack/heft-web-rig": "0.15.0",
-    "eslint": "8.41.0",
+    "@microsoft/api-extractor": "7.35.1",
+    "@rushstack/heft-api-extractor-plugin": "0.1.0",
+    "@rushstack/heft-jest-plugin": "0.6.0",
+    "@rushstack/heft-lint-plugin": "0.1.1",
+    "@rushstack/heft-sass-plugin": "0.11.1",
+    "@rushstack/heft-typescript-plugin": "0.1.1",
+    "@types/heft-jest": "1.0.3",
+    "eslint": "8.42.0",
     "jest-environment-jsdom": "29.5.0",
     "jest-html-reporters": "3.1.4",
-    "jest-junit": "15.0.0",
-    "typescript": "4.9.5"
+    "jest-junit": "16.0.0",
+    "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@rushstack/heft": "0.50.6",
-    "tslib": "2.5.2"
+    "@rushstack/heft": "0.51.0",
+    "tslib": "2.5.3"
   },
   "peerDependencies": {
-    "@rushstack/heft": "^0.48.0",
+    "@rushstack/heft": "^0.51.0",
     "tslib": "^2.4.1"
   }
 }

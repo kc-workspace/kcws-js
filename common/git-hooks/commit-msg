@@ -1,0 +1,12 @@
+#!/bin/sh
+
+action="hooks:commitlint"
+arg="--edit"
+
+if command -v "rush" >/dev/null 2>&1; then
+  rush "$action" "$arg" "$1" || exit $?
+else
+  node common/scripts/install-run-rush.js "$action" "$arg" "$1" || exit $?
+fi
+
+unset action arg

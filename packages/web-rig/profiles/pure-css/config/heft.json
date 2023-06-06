@@ -2,23 +2,37 @@
  * Defines configuration used by core Heft.
  */
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/heft/heft.schema.json",
+  // "$schema": "https://developer.microsoft.com/json-schemas/heft/heft.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/rushstack/main/apps/heft/src/schemas/heft.schema.json",
 
-  /**
-   * Optionally specifies another JSON config file that this file extends from. This provides a way for standard
-   * settings to be shared across multiple projects.
-   */
-  // "extends": "@rushstack/heft-web-rig/profiles/library/config/heft.json",
-  "eventActions": [
-    {
-      "actionKind": "deleteGlobs",
-      "heftEvent": "clean",
-      "actionId": "defaultClean",
-      "globsToDelete": ["lib", "temp", "dist"]
+  "phasesByName": {
+    "build": {
+      "cleanFiles": [
+        { "sourcePath": "lib" },
+        { "sourcePath": "dist" },
+        { "sourcePath": ".rush" },
+        { "sourcePath": "rush-logs" },
+        { "sourcePath": "temp" }
+      ],
+      "tasksByName": {
+        "sass-typings": {
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-sass-plugin"
+          }
+        },
+        "typescript": {
+          "taskDependencies": ["sass-typings"],
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-typescript-plugin"
+          }
+        },
+        "lint": {
+          "taskDependencies": ["typescript"],
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-lint-plugin"
+          }
+        }
+      }
     }
-  ],
-
-  "heftPlugins": [
-    { "plugin": "@rushstack/heft-sass-plugin" }
-  ]
+  }
 }

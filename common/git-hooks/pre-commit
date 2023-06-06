@@ -1,11 +1,11 @@
 #!/bin/sh
 
-act_format="hooks:format"
+action="hooks:format"
 
 if command -v "rush" >/dev/null 2>&1; then
-  rush "$act_format" || exit $?
+  rush "$action" || exit $?
 else
-  node common/scripts/install-run-rush.js "$act_format" || exit $?
+  node common/scripts/install-run-rush.js "$action" || exit $?
 fi
 
-unset act_format
+unset action
