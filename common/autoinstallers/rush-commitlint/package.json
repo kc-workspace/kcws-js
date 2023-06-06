@@ -4,9 +4,17 @@
   "private": true,
   "dependencies": {
     "@commitlint/cli": "17.6.5",
-    "@commitlint/config-conventional": "17.6.5"
+    "@commitlint/config-conventional": "17.6.5",
+    "@commitlint/cz-commitlint": "17.5.0",
+    "commitizen": "4.3.0",
+    "inquirer": "8.2.5"
   },
   "devDependencies": {
     "@commitlint/types": "17.4.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }

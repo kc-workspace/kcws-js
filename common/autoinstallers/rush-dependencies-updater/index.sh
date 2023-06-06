@@ -3,7 +3,7 @@
 root="$PWD"
 autoinstallers="$(dirname "$0")"
 
-cmd_name="${COMMAND_NAME:-ncu}"
+cmd_name="${NPM_CHECK_UPDATES_CMD:-npm-check-updates}"
 
 if ! test -f "$root/rush.json"; then
   echo "This script must be run from the root of a Rush monorepo." >&2
@@ -17,7 +17,7 @@ fi
 
 if ! command -v "$cmd" >/dev/null 2>&1; then
   echo "This script require autoinstallers dependencies,
-Please run 'rush update-autoinstallers' first." >&2
+Please run 'rush update-autoinstaller --name rush-dependencies-updater' first." >&2
   exit 1
 fi
 

@@ -110,7 +110,7 @@
       "summary": "Used by the commit-msg Git hook. This command invokes linting commit message.",
       "safeForSimultaneousRushProcesses": true,
       "autoinstallerName": "rush-commitlint",
-      "shellCommand": "sh common/autoinstallers/rush-commitlint/index.sh"
+      "shellCommand": "sh common/autoinstallers/rush-commitlint/lint.sh"
     },
     {
       "commandKind": "global",
@@ -135,6 +135,14 @@
       "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-dependencies-updater",
       "shellCommand": "sh common/autoinstallers/rush-dependencies-updater/index.sh"
+    },
+    {
+      "commandKind": "global",
+      "name": "commit",
+      "summary": "Create git commit with conventional syntax",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "rush-commitlint",
+      "shellCommand": "sh common/autoinstallers/rush-commitlint/commit.sh"
     }
   ],
 
