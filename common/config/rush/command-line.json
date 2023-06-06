@@ -28,6 +28,14 @@
       "allowWarningsOnSuccess": false
     },
     {
+      "name": "_phase:test-types",
+      "dependencies": {
+        "self": ["_phase:build"]
+      },
+      "ignoreMissingScript": true,
+      "allowWarningsOnSuccess": true
+    },
+    {
       "name": "_phase:clean",
       // Required phase
       "ignoreMissingScript": false,
@@ -63,16 +71,16 @@
       "commandKind": "phased",
       "name": "test",
       "summary": "Test packages using phase block",
-      "phases": ["_phase:lint", "_phase:build", "_phase:test"],
-      "enableParallelism": false,
+      "phases": ["_phase:lint", "_phase:build", "_phase:test", "_phase:test-types"],
+      "enableParallelism": true,
       "incremental": true
     },
     {
       "commandKind": "phased",
       "name": "retest",
       "summary": "Retest packages using phase block",
-      "phases": ["_phase:clean", "_phase:lint", "_phase:build", "_phase:test"],
-      "enableParallelism": false,
+      "phases": ["_phase:clean", "_phase:lint", "_phase:build", "_phase:test", "_phase:test-types"],
+      "enableParallelism": true,
       "incremental": false
     },
     {
