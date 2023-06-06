@@ -68,6 +68,11 @@ however **build** will build only changed package.
 `rushx <script_name>`: This will provide better error report and
 ensure **nodejs** and **pnpm** version by rush.
 
+### Create git commit
+
+`rush commit`: Create Git commit using commitizen configure as
+conventional syntax.
+
 ### Create changesfile
 
 > **Changesfile** is a changelog entry
