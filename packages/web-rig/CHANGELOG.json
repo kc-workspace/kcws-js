@@ -2,6 +2,64 @@
   "name": "@kcws/web-rig",
   "entries": [
     {
+      "version": "0.8.0",
+      "tag": "@kcws/web-rig_v0.8.0",
+      "date": "Tue, 06 Jun 2023 15:25:54 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade @rushstack/heft from v0.50.6 to 0.51.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "upgrade typescript from v4.9.5 to 5.0.4",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "upgrade jest-junit from v15.0.0 to 16.0.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "update some configs for better use and cached",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "upgrade stylelint from v14.16.1 to 15.6.3",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "upgrade stylelint-config-standard-scss from v6.1.0 to 9.0.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "add several new @types (e.g. @types/heft-jest)",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "remove sass package and use web-rig instead",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          }
+        ],
+        "none": [
+          {
+            "comment": "migrate new typedoc config",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.7.0",
       "tag": "@kcws/web-rig_v0.7.0",
       "date": "Sun, 05 Mar 2023 06:58:38 GMT",

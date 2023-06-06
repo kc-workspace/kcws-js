@@ -2,6 +2,67 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "0.9.0",
+      "tag": "@kcws/lintstaged-config_v0.9.0",
+      "date": "Tue, 06 Jun 2023 15:25:54 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "upgrade @rushstack/heft from v0.50.6 to 0.51.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          }
+        ],
+        "none": [
+          {
+            "comment": "patch eslint module resolution",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "add typedoc config for generate docs",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "upgrade @kcws/node-rig new riggable config",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "remove unused @types/* packages",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "upgrade @kcws/node-rig new riggable config",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "upgrade @kcws/node-rig new riggable config",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.8.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.7.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.8.0",
       "tag": "@kcws/lintstaged-config_v0.8.0",
       "date": "Sun, 05 Mar 2023 06:58:38 GMT",

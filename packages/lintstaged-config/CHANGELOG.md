@@ -1,6 +1,21 @@
 # Change Log - @kcws/lintstaged-config
 
-This log was last generated on Sun, 05 Mar 2023 06:58:38 GMT and should not be manually modified.
+This log was last generated on Tue, 06 Jun 2023 15:25:54 GMT and should not be manually modified.
+
+## 0.9.0
+Tue, 06 Jun 2023 15:25:54 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+- upgrade @rushstack/heft from v0.50.6 to 0.51.0
+
+### Patches
+
+- upgrade @kcws/node-rig new riggable config
+- remove unused @types/* packages
+- upgrade @kcws/node-rig new riggable config
+- upgrade @kcws/node-rig new riggable config
 
 ## 0.8.0
 Sun, 05 Mar 2023 06:58:38 GMT

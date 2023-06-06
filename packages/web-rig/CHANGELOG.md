@@ -1,6 +1,23 @@
 # Change Log - @kcws/web-rig
 
-This log was last generated on Sun, 05 Mar 2023 06:58:38 GMT and should not be manually modified.
+This log was last generated on Tue, 06 Jun 2023 15:25:54 GMT and should not be manually modified.
+
+## 0.8.0
+Tue, 06 Jun 2023 15:25:54 GMT
+
+### Minor changes
+
+- upgrade @rushstack/heft from v0.50.6 to 0.51.0
+- upgrade typescript from v4.9.5 to 5.0.4
+- upgrade jest-junit from v15.0.0 to 16.0.0
+- update some configs for better use and cached
+- upgrade stylelint from v14.16.1 to 15.6.3
+- upgrade stylelint-config-standard-scss from v6.1.0 to 9.0.0
+
+### Patches
+
+- add several new @types (e.g. @types/heft-jest)
+- remove sass package and use web-rig instead
 
 ## 0.7.0
 Sun, 05 Mar 2023 06:58:38 GMT

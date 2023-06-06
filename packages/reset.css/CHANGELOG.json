@@ -2,6 +2,52 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "0.3.0",
+      "tag": "@kcws/reset.css_v0.3.0",
+      "date": "Tue, 06 Jun 2023 15:25:54 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade stylelint from v14.16.1 to 15.6.3",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "upgrade stylelint-config-standard-scss from v6.1.0 to 9.0.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          },
+          {
+            "comment": "upgrade @rushstack/heft from v0.50.6 to 0.51.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "remove sass package and use web-rig instead",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          }
+        ],
+        "none": [
+          {
+            "comment": "migrate new typedoc config",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "010a11ac9beef7227a70937d302dc6212912faa6"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.8.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.9.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.2.0",
       "tag": "@kcws/reset.css_v0.2.0",
       "date": "Sun, 05 Mar 2023 06:58:38 GMT",
