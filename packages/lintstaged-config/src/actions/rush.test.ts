@@ -11,7 +11,7 @@ import { rush, rushOn } from "./rush";
 
 type SpawnSyncFn = (
   command: string,
-  options?: SpawnSyncOptionsWithStringEncoding
+  options: SpawnSyncOptionsWithStringEncoding
 ) => Partial<SpawnSyncReturns<string>>;
 
 type StatSyncFn = (path: string) => {
@@ -75,18 +75,8 @@ describe("Rush actions", () => {
         ["/test/hello/world.ts"],
         "/bin/rush test --only @kcws/root",
       ],
-      [
-        "test",
-        [],
-        ["/unknown/path/to/code.ts"],
-        "/bin/rush test",
-      ],
-      [
-        "test",
-        [],
-        ["/unknown.me/path.to/code.ts"],
-        "/bin/rush test",
-      ],
+      ["test", [], ["/unknown/path/to/code.ts"], "/bin/rush test"],
+      ["test", [], ["/unknown.me/path.to/code.ts"], "/bin/rush test"],
     ])("using rush command", (cmd, args, changes, expected) => {
       mocked<SpawnSyncFn>(spawnSync).mockImplementation(() => ({
         status: 0,
