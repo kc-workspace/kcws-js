@@ -2,6 +2,20 @@
   "name": "@kcws/dtcheck",
   "entries": [
     {
+      "version": "0.6.1",
+      "tag": "@kcws/dtcheck_v0.6.1",
+      "date": "Tue, 06 Jun 2023 15:54:15 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "empty version increase for testing",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "641f12c234033e5e508951f19c08219455378322"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.6.0",
       "tag": "@kcws/dtcheck_v0.6.0",
       "date": "Tue, 06 Jun 2023 15:25:54 GMT",
