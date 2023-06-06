@@ -1,0 +1,36 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "upgrade dependencies [auto]",
+      "type": "minor"
+    },
+    {
+      "packageName": "@kcws/random",
+      "comment": "patch eslint module resolution",
+      "type": "none"
+    },
+    {
+      "packageName": "@kcws/random",
+      "comment": "upgrade @rushstack/heft from v0.50.6 to 0.51.0",
+      "type": "minor"
+    },
+    {
+      "packageName": "@kcws/random",
+      "comment": "upgrade @kcws/node-rig new riggable config",
+      "type": "patch"
+    },
+    {
+      "packageName": "@kcws/random",
+      "comment": "remove unused @types/* packages",
+      "type": "patch"
+    },
+    {
+      "packageName": "@kcws/random",
+      "comment": "add typedoc config for generate docs",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/random",
+  "email": "14089557+kamontat@users.noreply.github.com"
+}

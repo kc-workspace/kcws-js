@@ -1,0 +1,41 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "upgrade dependencies [auto]",
+      "type": "minor"
+    },
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "upgrade @rushstack/heft from v0.50.6 to 0.51.0",
+      "type": "minor"
+    },
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "upgrade typescript from v4.9.5 to 5.0.4",
+      "type": "minor"
+    },
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "upgrade jest-junit from v15.0.0 to 16.0.0",
+      "type": "minor"
+    },
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "remove @rushstack/heft-node-rig from dependencies",
+      "type": "minor"
+    },
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "add several new @types (e.g. @types/node)",
+      "type": "patch"
+    },
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "update some configs for better use and cached",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/node-rig",
+  "email": "14089557+kamontat@users.noreply.github.com"
+}
