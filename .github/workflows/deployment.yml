@@ -1,4 +1,4 @@
-name: Deploy packages
+name: Deployment
 
 on:
   schedule:
@@ -11,6 +11,8 @@ defaults:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: deployment
@@ -34,6 +36,7 @@ jobs:
         uses: ./.github/actions/setup-rush
         with:
           install: true
+          with-hook: false
       - name: Checking for missing changelogs
         uses: ./.github/actions/run-rush
         with:
@@ -77,10 +80,21 @@ jobs:
         uses: ./.github/actions/setup-rush
         with:
           install: true
+          with-hook: false
       - name: Building packages
         uses: ./.github/actions/run-rush
         with:
-          command: build
+          command: rebuild
+      - name: Building documentation
+        uses: ./.github/actions/run-rush
+        with:
+          command: docs:${{ env.DOCS_VERSION }}
+      - name: Compiling documentation
+        if: env.DOCS_VERSION == 'v1'
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./_docs
+          destination: ./_site
       - name: Deploying packages
         uses: ./.github/actions/run-rush
         with:
@@ -92,6 +106,11 @@ jobs:
             --add-commit-details
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Uploading document
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./_site
+          retention-days: "1"
       - name: Syncback active branch
         uses: ./.github/actions/sync-git
         with:
@@ -103,13 +122,14 @@ jobs:
         with:
           gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}
 
-  document:
-    if: github.ref == 'refs/heads/main'
+  deploying-docs:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     needs:
       - deploying
     steps:
-      - name: Checkout source code
-        uses: actions/checkout@v3
-      - name: Deploying documentation website
-        uses: ./.github/workflows/deploy-docs.yml
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
