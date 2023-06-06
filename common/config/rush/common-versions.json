@@ -24,10 +24,6 @@
      * instead of the latest version.
      */
     // "some-library": "1.2.3"
-
-    // FIXME: Because Segmentation fault (core dumped) issue
-    // https://github.com/stylelint/stylelint/issues/6898
-    "cosmiconfig": "8.1.3"
   },
 
   /**
