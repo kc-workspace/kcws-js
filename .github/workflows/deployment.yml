@@ -36,7 +36,6 @@ jobs:
         uses: ./.github/actions/setup-rush
         with:
           install: true
-          with-hook: false
       - name: Checking for missing changelogs
         uses: ./.github/actions/run-rush
         with:
@@ -80,11 +79,10 @@ jobs:
         uses: ./.github/actions/setup-rush
         with:
           install: true
-          with-hook: false
       - name: Building packages
         uses: ./.github/actions/run-rush
         with:
-          command: rebuild
+          command: build
       - name: Building documentation
         uses: ./.github/actions/run-rush
         with:
