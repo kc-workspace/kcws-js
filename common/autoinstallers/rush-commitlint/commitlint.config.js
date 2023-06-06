@@ -29,6 +29,7 @@ const config = {
         "rush-commitlint",
         "rush-dependencies-updater",
         "rush-lintstaged",
+        "deps",
         "config",
       ],
     ],
@@ -153,6 +154,10 @@ const config = {
           "rush-lintstaged": {
             description: "rush-lintstaged autoinstaller",
             title: "Rush lintstaged",
+          },
+          deps: {
+            description: "Multiple dependencies across multiple packages",
+            title: "Dependencies",
           },
           config: {
             description: "Monorepo configuration",
