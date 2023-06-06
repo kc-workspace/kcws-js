@@ -94,6 +94,14 @@
     },
     {
       "commandKind": "global",
+      "name": "hooks:commitlint",
+      "summary": "Used by the commit-msg Git hook. This command invokes linting commit message.",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "rush-commitlint",
+      "shellCommand": "sh common/autoinstallers/rush-commitlint/index.sh"
+    },
+    {
+      "commandKind": "global",
       "name": "docs:v1",
       "summary": "invokes api-extractor to create document markdown.",
       "safeForSimultaneousRushProcesses": false,
@@ -159,6 +167,15 @@
         }
       ],
       "associatedCommands": ["upgrade"]
+    },
+    {
+       "parameterKind": "string",
+       "longName": "--edit",
+       "shortName": "-e",
+       "argumentName": "MESSAGE",
+       "description": "Commit message to verify on commitlint",
+       "required": true,
+       "associatedCommands": ["hooks:commitlint"]
     }
   ]
 }

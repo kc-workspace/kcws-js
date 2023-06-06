@@ -65,6 +65,11 @@ jobs:
         with:
           command: update-autoinstaller
           args: --name "rush-lintstaged"
+      - name: Upgrade autoinstaller [rush-commitlint]
+        uses: ./.github/actions/run-rush
+        with:
+          command: update-autoinstaller
+          args: --name "rush-commitlint"
       - name: Upgrade dependencies
         uses: ./.github/actions/run-rush
         with:
