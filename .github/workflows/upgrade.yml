@@ -38,6 +38,7 @@ jobs:
         uses: ./.github/actions/setup-rush
         with:
           install: true
+          cache-build: false
       - name: Setup git
         uses: ./.github/actions/setup-git
         with:
