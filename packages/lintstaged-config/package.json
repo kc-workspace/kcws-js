@@ -58,7 +58,7 @@
   "devDependencies": {
     "@kcws/node-rig": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.51.0",
+    "@rushstack/heft": "0.53.1",
     "@types/micromatch": "4.0.2"
   }
 }
