@@ -16,8 +16,11 @@ if ! command -v "$cmd" >/dev/null 2>&1; then
 fi
 
 if ! command -v "$cmd" >/dev/null 2>&1; then
-  echo "This script require autoinstallers dependencies
-Please run 'rush update-autoinstaller --name rush-commitlint' first." >&2
+  printf "This script require autoinstaller dependencies (%s),
+Please run 'rush %s %s' before execute this script." \
+    "$cmd_name" \
+    "update-autoinstaller" \
+    "--name rush-commitlint" >&2
   exit 1
 fi
 

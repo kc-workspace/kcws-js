@@ -16,8 +16,11 @@ if ! command -v "$cmd" >/dev/null 2>&1; then
 fi
 
 if ! command -v "$cmd" >/dev/null 2>&1; then
-  echo "This script require autoinstallers dependencies,
-Please run 'rush update-autoinstaller --name rush-dependencies-updater' first." >&2
+  printf "This script require autoinstaller dependencies (%s),
+Please run 'rush %s %s' before execute this script." \
+    "$cmd_name" \
+    "update-autoinstaller" \
+    "--name rush-dependencies-updater" >&2
   exit 1
 fi
 
@@ -27,7 +30,7 @@ if test -n "$CI"; then
 fi
 
 pkg="package.json"
-config="$autoinstallers/.ncurc.yml"
+config="$autoinstallers/.ncurc.json"
 tmp="$(mktemp)"
 
 find "$root" \
