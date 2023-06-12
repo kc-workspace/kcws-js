@@ -27,7 +27,7 @@ if test -n "$CI"; then
 fi
 
 pkg="package.json"
-config="$autoinstallers/.ncurc.yml"
+config="$autoinstallers/.ncurc.json"
 tmp="$(mktemp)"
 
 find "$root" \

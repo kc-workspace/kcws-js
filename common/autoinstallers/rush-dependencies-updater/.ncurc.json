@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/raineorshine/npm-check-updates/main/src/types/RunOptions.json",
+  "upgrade": false,
+  "interactive": false,
+  "verbose": false,
+  // Remove version ranges from the final package version.
+  "removeRange": false,
+  // Not update peerDependencies version.
+  "peer": false,
+
+  // Modify the output formatting or show additional
+  // information. Specify one or more comma-delimited
+  // choices: group, ownerChanged, repo.
+  "format": ["group"],
+
+  // Because Rush using pnpm by default
+  "packageManager": "pnpm",
+
+  // FIXME: filter cause local `rush upgrade` to be failed with error:
+  // ```
+  // Cannot specify a filter using both --filter and args.
+  // Did you forget to quote an argument?
+  // ```
+  "filter": ["*"],
+
+  "reject": [
+    // Jest environment will upgrade based on heft-jest-plugin
+    "jest-environment-jsdom",
+    "jest-environment-node",
+    // This depends on Heft to upgrade
+    "typescript",
+    // This should be pin to oldest version we supported
+    "@types/node",
+    // This should be pin at v8 as commitlint required
+    "inquirer"
+  ]
+}
