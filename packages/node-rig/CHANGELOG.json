@@ -2,6 +2,20 @@
   "name": "@kcws/node-rig",
   "entries": [
     {
+      "version": "0.9.0",
+      "tag": "@kcws/node-rig_v0.9.0",
+      "date": "Tue, 13 Jun 2023 22:37:32 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "d40501ec560f1cf0a4a1f3922ba417236b51cca1"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.8.0",
       "tag": "@kcws/node-rig_v0.8.0",
       "date": "Tue, 06 Jun 2023 15:25:54 GMT",
