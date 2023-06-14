@@ -85,16 +85,6 @@ jobs:
         uses: ./.github/actions/run-rush
         with:
           command: build
-      - name: Building documentation
-        uses: ./.github/actions/run-rush
-        with:
-          command: docs:${{ env.DOCS_VERSION }}
-      - name: Compiling documentation
-        if: env.DOCS_VERSION == 'v1'
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./_docs
-          destination: ./_site
       - name: Deploying packages
         uses: ./.github/actions/run-rush
         with:
@@ -106,6 +96,16 @@ jobs:
             --add-commit-details
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Building documentation
+        uses: ./.github/actions/run-rush
+        with:
+          command: docs:${{ env.DOCS_VERSION }}
+      - name: Compiling documentation
+        if: env.DOCS_VERSION == 'v1'
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./_docs
+          destination: ./_site
       - name: Uploading document
         uses: actions/upload-pages-artifact@v1
         with:
