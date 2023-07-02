@@ -41,6 +41,6 @@
     "@kcws/lintstaged-config": "workspace:*",
     "@rushstack/heft": "0.56.0",
     "stylelint": "15.9.0",
-    "stylelint-config-standard-scss": "9.0.0"
+    "stylelint-config-standard-scss": "10.0.0"
   }
 }
