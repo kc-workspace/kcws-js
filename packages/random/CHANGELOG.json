@@ -2,6 +2,31 @@
   "name": "@kcws/random",
   "entries": [
     {
+      "version": "0.13.0",
+      "tag": "@kcws/random_v0.13.0",
+      "date": "Tue, 11 Jul 2023 22:39:40 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "5f4696298b719bec456d417941903e6d0a24dfec"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.13.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.13.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.12.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.12.1",
       "tag": "@kcws/random_v0.12.1",
       "date": "Tue, 04 Jul 2023 22:40:04 GMT",
