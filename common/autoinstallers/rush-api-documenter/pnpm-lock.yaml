@@ -1,14 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@microsoft/api-documenter': 7.22.24
+  '@microsoft/api-documenter': 7.22.28
   typedoc: 0.24.8
   typedoc-plugin-extras: 2.3.3
   typedoc-plugin-missing-exports: 2.0.0
   typedoc-theme-hierarchy: 4.0.0
 
 dependencies:
-  '@microsoft/api-documenter': 7.22.24
+  '@microsoft/api-documenter': 7.22.28
   typedoc: 0.24.8_typescript@5.1.6
   typedoc-plugin-extras: 2.3.3_typedoc@0.24.8
   typedoc-plugin-missing-exports: 2.0.0_typedoc@0.24.8
@@ -16,8 +16,8 @@ dependencies:
 
 packages:
 
-  /@microsoft/api-documenter/7.22.24:
-    resolution: {integrity: sha512-KdO7p/weirR/po0SqwWsbqoPUTqLv0QVvxqopysxF2PVdBpeKx4eOrII1VGw0rL0QY6WVvttIOJwD/JpYv9oWw==}
+  /@microsoft/api-documenter/7.22.28:
+    resolution: {integrity: sha512-UTrCSZ0tWn4AXJ9yDY+9MmCXKOGFcSzpN++DKgsON4Kx9QH2X/1b9McTAY6w1kgTEQhat3Gr27xg90YwCeGVdw==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.27.4
