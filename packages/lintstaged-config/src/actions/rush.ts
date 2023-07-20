@@ -2,16 +2,16 @@ import { existsSync, readFileSync, statSync } from "fs";
 import { resolve, dirname } from "path";
 import { ConfigFn } from "../models/IConfig";
 import { getCommand } from "../utils/cmd";
-import { WithUndefined } from "../types/generic";
+import { _WithUndefined } from "../types/generic";
 
 const ROOT: string = "/";
 
 /**
  * @internal
  */
-export type WalkCallback = (dir: string) => WithUndefined<string>;
+export type _WalkCallback = (dir: string) => _WithUndefined<string>;
 
-const walkDir = (file: string, cb: WalkCallback): WithUndefined<string> => {
+const walkDir = (file: string, cb: _WalkCallback): _WithUndefined<string> => {
   const next = dirname(file);
   if (next === ROOT) return undefined;
 
@@ -34,7 +34,7 @@ const resolveRushCommand = (): Array<string> => {
   return [rush];
 };
 
-const resolvePackageName = (files: Array<string>): WithUndefined<string> => {
+const resolvePackageName = (files: Array<string>): _WithUndefined<string> => {
   for (const file of files) {
     const name = walkDir(file, (dir) => {
       const pkg = resolve(dir, "package.json");
@@ -60,7 +60,7 @@ const resolvePackageName = (files: Array<string>): WithUndefined<string> => {
  * @beta
  */
 export const rushOn = (
-  pkg: WithUndefined<string>,
+  pkg: string | undefined,
   cmd: string,
   ...args: Array<string>
 ): string => {
