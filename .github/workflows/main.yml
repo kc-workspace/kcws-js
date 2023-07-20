@@ -73,8 +73,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: Linting
-        # https://github.com/github/super-linter#slim-image
-        uses: github/super-linter/slim@v4
+        ## https://github.com/super-linter/super-linter#slim-image
+        uses: super-linter/super-linter/slim@v5
         env:
           DEFAULT_BRANCH: ${{ env.DEFAULT_BRANCH }}
           VALIDATE_ALL_CODEBASE: false
