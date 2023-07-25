@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 ## Do NOT run on CI machine
 if test -n "$CI"; then
   exit 0
@@ -9,9 +11,9 @@ action="change"
 arg="-v"
 
 if command -v "rush" >/dev/null 2>&1; then
-  rush "$action" "$arg" || exit $?
+  rush "$action" "$arg"
 else
-  node common/scripts/install-run-rush.js "$action" "$arg" || exit $?
+  node common/scripts/install-run-rush.js "$action" "$arg"
 fi
 
 unset action arg

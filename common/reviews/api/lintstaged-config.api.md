@@ -111,18 +111,17 @@ export const prettier: BaseActionFn<IPrettierOptions>;
 // @beta
 export const rush: (cmd: string, ...args: Array<string>) => ConfigFn;
 
-// Warning: (ae-forgotten-export) The symbol "WithUndefined" needs to be exported by the entry point index.d.ts
-//
 // @beta
-export const rushOn: (pkg: WithUndefined<string>, cmd: string, ...args: Array<string>) => string;
+export const rushOn: (pkg: string | undefined, cmd: string, ...args: Array<string>) => string;
 
 // @beta
 export const shellcheck: BaseActionFn<IShellcheckOptions>;
 
-// Warning: (ae-internal-missing-underscore) The name "WalkCallback" should be prefixed with an underscore because the declaration is marked as @internal
-//
 // @internal (undocumented)
-export type WalkCallback = (dir: string) => WithUndefined<string>;
+export type _WalkCallback = (dir: string) => _WithUndefined<string>;
+
+// @internal
+export type _WithUndefined<T> = T | undefined;
 
 // @beta
 export const yamllint: BaseActionFn<IYamllintOptions>;
