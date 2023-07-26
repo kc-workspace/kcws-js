@@ -19,7 +19,7 @@
    *
    * The latest version can found here: https://github.com/microsoft/rushstack/blob/main/apps/rush/CHANGELOG.md
    */
-  "rushVersion": "5.99.0",
+  "rushVersion": "5.100.2",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -30,11 +30,8 @@
    * for details about these alternatives.
    *
    * The latest version can found here: https://github.com/pnpm/pnpm/releases
-   *
-   * Pnpm8 is not supported by Rush yet:
-   * https://github.com/microsoft/rushstack/issues/4033
    */
-  "pnpmVersion": "7.33.0",
+  "pnpmVersion": "8.6.10",
 
   /**
    * Older releases of the Node.js engine may be missing features required by your system.
