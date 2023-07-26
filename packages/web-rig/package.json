@@ -40,7 +40,7 @@
     "@rushstack/heft-typescript-plugin": "0.1.19",
     "@types/heft-jest": "1.0.3",
     "eslint": "8.45.0",
-    "jest-environment-jsdom": "29.5.0",
+    "jest-environment-jsdom": "29.6.0",
     "jest-html-reporters": "3.1.4",
     "jest-junit": "16.0.0",
     "typescript": "5.0.4"
