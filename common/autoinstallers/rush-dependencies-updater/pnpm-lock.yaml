@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   npm-check-updates:
-    specifier: 16.10.16
-    version: 16.10.16
+    specifier: 16.10.17
+    version: 16.10.17
 
 packages:
 
@@ -1350,8 +1350,8 @@ packages:
       npm-normalize-package-bin: 3.0.0
     dev: false
 
-  /npm-check-updates@16.10.16:
-    resolution: {integrity: sha512-d8mNYce/l8o5RHPE5ZUp2P1zj9poI7KWQCh5AsTIP3EhicONEhc63mLQQv4/nkCsMb3wCrikx6YOo4BOwN4+1w==}
+  /npm-check-updates@16.10.17:
+    resolution: {integrity: sha512-ZoIbWYJhlgMDoByq1WC6Ys3E76IvNCxgS54tPUFbK5J/nqf/BCJt6xiMPAEa7G1HuyAruG+orUF9uTsTGUZl8g==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
