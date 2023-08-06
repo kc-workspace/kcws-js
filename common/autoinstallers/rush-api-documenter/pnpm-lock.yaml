@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@microsoft/api-documenter':
-    specifier: 7.22.31
-    version: 7.22.31
+    specifier: 7.22.32
+    version: 7.22.32
   typedoc:
     specifier: 0.24.8
     version: 0.24.8(typescript@5.1.6)
@@ -23,8 +23,8 @@ dependencies:
 
 packages:
 
-  /@microsoft/api-documenter@7.22.31:
-    resolution: {integrity: sha512-epPl0YmpHFdtHMQhdwGqrof090frWNIUw4bQx9ftdEDSOkvyHm/u4Z6kdBO1yBMB4lksKCPb4niOsWjB2zKqfA==}
+  /@microsoft/api-documenter@7.22.32:
+    resolution: {integrity: sha512-JePSgTg3qz5SiqcINQO52EKNh15DTbnvUpnx1qcrBlpR9gX0TmCw5g5uGPegIHJzIeif4uYe15nEUynrYDT2nw==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.27.5
@@ -33,7 +33,7 @@ packages:
       '@rushstack/ts-command-line': 4.15.1
       colors: 1.2.5
       js-yaml: 3.13.1
-      resolve: 1.22.2
+      resolve: 1.22.4
     transitivePeerDependencies:
       - '@types/node'
     dev: false
@@ -73,7 +73,7 @@ packages:
       fs-extra: 7.0.1
       import-lazy: 4.0.0
       jju: 1.4.0
-      resolve: 1.22.2
+      resolve: 1.22.4
       semver: 7.5.4
       z-schema: 5.0.5
     dev: false
@@ -184,8 +184,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /is-core-module@2.12.1:
-    resolution: {integrity: sha512-Q4ZuBAe2FUsKtyQJoQHlvP8OvBERxO3jEmy1I7hcRXcJBGGHFh/aJBswbXuS9sgrDH2QUO8ilkwNPHvHMd8clg==}
+  /is-core-module@2.13.0:
+    resolution: {integrity: sha512-Z7dk6Qo8pOCp3l4tsX2C5ZVas4V+UxwQodwZhLopL91TX8UyyHEXafPcyoeeWuLrwzHcr3igO78wNLwHJHsMCQ==}
     dependencies:
       has: 1.0.3
     dev: false
@@ -268,15 +268,15 @@ packages:
   /resolve@1.19.0:
     resolution: {integrity: sha512-rArEXAgsBG4UgRGcynxWIWKFvh/XZCcS8UJdHhwy91zwAvCZIbcs+vAbflgBnNjYMs/i/i+/Ux6IZhML1yPvxg==}
     dependencies:
-      is-core-module: 2.12.1
+      is-core-module: 2.13.0
       path-parse: 1.0.7
     dev: false
 
-  /resolve@1.22.2:
-    resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
+  /resolve@1.22.4:
+    resolution: {integrity: sha512-PXNdCiPqDqeUou+w1C2eTQbNfxKSuMxqTCuvlmmMsk1NWHL5fRrhY6Pl0qEYYc6+QqGClco1Qj8XnjPego4wfg==}
     hasBin: true
     dependencies:
-      is-core-module: 2.12.1
+      is-core-module: 2.13.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
     dev: false
@@ -373,8 +373,8 @@ packages:
       punycode: 2.3.0
     dev: false
 
-  /validator@13.9.0:
-    resolution: {integrity: sha512-B+dGG8U3fdtM0/aNK4/X8CXq/EcxU2WPrPEkJGslb47qyHsxmbggTWK0yEA4qnYVNF+nxNlN88o14hIcPmSIEA==}
+  /validator@13.11.0:
+    resolution: {integrity: sha512-Ii+sehpSfZy+At5nPdnyMhx78fEoPDkR2XW/zimHEL3MyGJQOCQ7WeP20jPYRz7ZCpcKLB21NxuXHF3bxjStBQ==}
     engines: {node: '>= 0.10'}
     dev: false
 
@@ -397,7 +397,7 @@ packages:
     dependencies:
       lodash.get: 4.4.2
       lodash.isequal: 4.5.0
-      validator: 13.9.0
+      validator: 13.11.0
     optionalDependencies:
       commander: 9.5.0
     dev: false
