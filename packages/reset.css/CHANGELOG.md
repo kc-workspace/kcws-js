@@ -1,6 +1,11 @@
 # Change Log - @kcws/reset.css
 
-This log was last generated on Tue, 01 Aug 2023 22:37:37 GMT and should not be manually modified.
+This log was last generated on Tue, 08 Aug 2023 22:38:05 GMT and should not be manually modified.
+
+## 0.11.1
+Tue, 08 Aug 2023 22:38:05 GMT
+
+_Version update only_
 
 ## 0.11.0
 Tue, 01 Aug 2023 22:37:37 GMT
