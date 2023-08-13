@@ -58,7 +58,7 @@
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.58.1",
+    "@rushstack/heft": "0.58.2",
     "@types/generic": "workspace:*",
     "tslib": "2.6.1"
   }
