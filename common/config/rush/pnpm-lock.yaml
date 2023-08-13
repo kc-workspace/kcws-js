@@ -137,7 +137,7 @@ importers:
         version: 0.1.18(@rushstack/heft@0.58.2)(@types/node@16.18.37)
       '@rushstack/heft-jest-plugin':
         specifier: 0.8.1
-        version: 0.8.1(@rushstack/heft@0.58.2)(@types/node@16.18.37)(jest-environment-node@29.5.0)
+        version: 0.8.1(@rushstack/heft@0.58.2)(@types/node@16.18.37)(jest-environment-node@29.6.0)
       '@rushstack/heft-lint-plugin':
         specifier: 0.1.22
         version: 0.1.22(@rushstack/heft@0.58.2)(@types/node@16.18.37)
@@ -154,8 +154,8 @@ importers:
         specifier: 8.47.0
         version: 8.47.0
       jest-environment-node:
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.6.0
+        version: 29.6.0
       jest-html-reporters:
         specifier: 3.1.4
         version: 3.1.4
@@ -216,7 +216,7 @@ importers:
         version: 0.1.18(@rushstack/heft@0.58.2)(@types/node@16.18.37)
       '@rushstack/heft-jest-plugin':
         specifier: 0.8.1
-        version: 0.8.1(@rushstack/heft@0.58.2)(jest-environment-jsdom@29.5.0)
+        version: 0.8.1(@rushstack/heft@0.58.2)(jest-environment-jsdom@29.6.0)
       '@rushstack/heft-lint-plugin':
         specifier: 0.1.22
         version: 0.1.22(@rushstack/heft@0.58.2)(@types/node@16.18.37)
@@ -233,8 +233,8 @@ importers:
         specifier: 8.47.0
         version: 8.47.0
       jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.6.0
+        version: 29.6.0
       jest-html-reporters:
         specifier: 3.1.4
         version: 3.1.4
@@ -1247,7 +1247,7 @@ packages:
     transitivePeerDependencies:
       - '@types/node'
 
-  /@rushstack/heft-jest-plugin@0.8.1(@rushstack/heft@0.58.2)(@types/node@16.18.37)(jest-environment-node@29.5.0):
+  /@rushstack/heft-jest-plugin@0.8.1(@rushstack/heft@0.58.2)(@types/node@16.18.37)(jest-environment-node@29.6.0):
     resolution: {integrity: sha512-AeOOjryWO8FSIX3MCp+bZh6FjYwUo+ONk9rDpTsI6/s6nBLb2iM2DlTP6cFLmMlJq+Kmtqxn6hYALa0vJ2Spfg==}
     peerDependencies:
       '@rushstack/heft': ^0.58.2
@@ -1266,7 +1266,7 @@ packages:
       '@rushstack/heft-config-file': 0.13.3(@types/node@16.18.37)
       '@rushstack/node-core-library': 3.59.7(@types/node@16.18.37)
       jest-config: 29.5.0(@types/node@16.18.37)
-      jest-environment-node: 29.5.0
+      jest-environment-node: 29.6.0
       jest-resolve: 29.5.0
       jest-snapshot: 29.5.0
       lodash: 4.17.21
@@ -1278,7 +1278,7 @@ packages:
       - ts-node
     dev: false
 
-  /@rushstack/heft-jest-plugin@0.8.1(@rushstack/heft@0.58.2)(jest-environment-jsdom@29.5.0):
+  /@rushstack/heft-jest-plugin@0.8.1(@rushstack/heft@0.58.2)(jest-environment-jsdom@29.6.0):
     resolution: {integrity: sha512-AeOOjryWO8FSIX3MCp+bZh6FjYwUo+ONk9rDpTsI6/s6nBLb2iM2DlTP6cFLmMlJq+Kmtqxn6hYALa0vJ2Spfg==}
     peerDependencies:
       '@rushstack/heft': ^0.58.2
@@ -1297,7 +1297,7 @@ packages:
       '@rushstack/heft-config-file': 0.13.3(@types/node@16.18.37)
       '@rushstack/node-core-library': 3.59.7(@types/node@16.18.37)
       jest-config: 29.5.0(@types/node@16.18.37)
-      jest-environment-jsdom: 29.5.0
+      jest-environment-jsdom: 29.6.0
       jest-resolve: 29.5.0
       jest-snapshot: 29.5.0
       lodash: 4.17.21
@@ -3944,7 +3944,7 @@ packages:
       glob: 7.2.3
       graceful-fs: 4.2.11
       jest-circus: 29.6.2
-      jest-environment-node: 29.5.0
+      jest-environment-node: 29.6.0
       jest-get-type: 29.4.3
       jest-regex-util: 29.4.3
       jest-resolve: 29.5.0
@@ -3989,8 +3989,8 @@ packages:
       pretty-format: 29.6.2
     dev: false
 
-  /jest-environment-jsdom@29.5.0:
-    resolution: {integrity: sha512-/KG8yEK4aN8ak56yFVdqFDzKNHgF4BAymCx2LbPNPsUshUlfAl0eX402Xm1pt+eoG9SLZEUVifqXtX8SK74KCw==}
+  /jest-environment-jsdom@29.6.0:
+    resolution: {integrity: sha512-/cOhoyv+uMbOh4nQPyqtkPas/uUxr5AbK6TPqMMFyj1qEJURY78RhqgBjOFIX02+Lvu5V0RWLq2qKY1dHubFOQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
       canvas: ^2.5.0
@@ -4012,8 +4012,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /jest-environment-node@29.5.0:
-    resolution: {integrity: sha512-ExxuIK/+yQ+6PRGaHkKewYtg6hto2uGCgvKdb2nfJfKXgZ17DfXjvbZ+jA1Qt9A8EQSfPnt5FKIfnOO3u1h9qw==}
+  /jest-environment-node@29.6.0:
+    resolution: {integrity: sha512-BOf5Q2/nFCdBOnyBM5c5/6DbdQYgc+0gyUQ8l8qhUAB8O7pM+4QJXIXJsRZJaxd5SHV6y5VArTVhOfogoqcP8Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/environment': 29.6.2
