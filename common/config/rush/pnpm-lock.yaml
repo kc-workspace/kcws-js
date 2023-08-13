@@ -3944,7 +3944,7 @@ packages:
       glob: 7.2.3
       graceful-fs: 4.2.11
       jest-circus: 29.6.2
-      jest-environment-node: 29.6.0
+      jest-environment-node: 29.6.2
       jest-get-type: 29.4.3
       jest-regex-util: 29.4.3
       jest-resolve: 29.5.0
@@ -4010,18 +4010,6 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: false
-
-  /jest-environment-node@29.6.0:
-    resolution: {integrity: sha512-BOf5Q2/nFCdBOnyBM5c5/6DbdQYgc+0gyUQ8l8qhUAB8O7pM+4QJXIXJsRZJaxd5SHV6y5VArTVhOfogoqcP8Q==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/environment': 29.6.2
-      '@jest/fake-timers': 29.6.2
-      '@jest/types': 29.6.1
-      '@types/node': 16.18.37
-      jest-mock: 29.6.2
-      jest-util: 29.6.2
     dev: false
 
   /jest-environment-node@29.6.2:
