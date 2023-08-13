@@ -40,7 +40,7 @@ class Builder<K extends string> implements IConfigBuilder {
    *
    * @public
    */
-  public debugMode(): Builder<K> {
+  public debugMode(): this {
     this._settings.set(DEBUG_MODE, "true");
     return this;
   }
