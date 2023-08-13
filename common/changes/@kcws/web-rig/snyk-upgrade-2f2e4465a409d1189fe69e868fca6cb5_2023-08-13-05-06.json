@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/web-rig",
+      "comment": "upgrade jest-environment-jsdom from 29.5.0 to 29.6.0",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/web-rig"
+}

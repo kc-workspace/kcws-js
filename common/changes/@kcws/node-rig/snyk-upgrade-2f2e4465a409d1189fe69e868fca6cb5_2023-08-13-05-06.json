@@ -2,7 +2,7 @@
   "changes": [
     {
       "packageName": "@kcws/node-rig",
-      "comment": "upgrade @types/node from v16.18.35 to v16.18.37",
+      "comment": "upgrade jest-environment-node from 29.5.0 to 29.6.0",
       "type": "patch"
     }
   ],

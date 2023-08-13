@@ -19,7 +19,7 @@
    *
    * The latest version can found here: https://github.com/microsoft/rushstack/blob/main/apps/rush/CHANGELOG.md
    */
-  "rushVersion": "5.100.2",
+  "rushVersion": "5.101.1",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -31,7 +31,7 @@
    *
    * The latest version can found here: https://github.com/pnpm/pnpm/releases
    */
-  "pnpmVersion": "8.6.10",
+  "pnpmVersion": "8.6.12",
 
   /**
    * Older releases of the Node.js engine may be missing features required by your system.
