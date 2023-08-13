@@ -1,6 +1,6 @@
 {
   "name": "@kcws/eslint-config",
-  "version": "0.14.0",
+  "version": "0.16.0",
   "description": "kamontat's eslint config",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/eslint-config",
@@ -32,8 +32,8 @@
     "_phase:clean": ""
   },
   "dependencies": {
-    "@rushstack/eslint-config": "3.3.2",
-    "@typescript-eslint/eslint-plugin": "6.1.0",
-    "@typescript-eslint/parser": "6.1.0"
+    "@rushstack/eslint-config": "3.3.3",
+    "@typescript-eslint/eslint-plugin": "6.3.0",
+    "@typescript-eslint/parser": "6.3.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@kcws/lintstaged-config",
-  "version": "0.15.0",
+  "version": "0.16.1",
   "description": "a lint-staged configuration for kcws-js",
   "type": "commonjs",
   "main": "lib/index.js",
@@ -58,7 +58,7 @@
   "devDependencies": {
     "@kcws/node-rig": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.58.0",
+    "@rushstack/heft": "0.58.2",
     "@types/micromatch": "4.0.2"
   }
 }

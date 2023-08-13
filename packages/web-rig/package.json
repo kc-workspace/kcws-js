@@ -1,6 +1,6 @@
 {
   "name": "@kcws/web-rig",
-  "version": "0.15.0",
+  "version": "0.17.0",
   "description": "a rig package for web environment projects using heft",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/web-rig",
@@ -32,22 +32,22 @@
     "_phase:clean": ""
   },
   "dependencies": {
-    "@microsoft/api-extractor": "7.36.3",
-    "@rushstack/heft-api-extractor-plugin": "0.1.16",
-    "@rushstack/heft-jest-plugin": "0.7.17",
-    "@rushstack/heft-lint-plugin": "0.1.20",
-    "@rushstack/heft-sass-plugin": "0.11.23",
-    "@rushstack/heft-typescript-plugin": "0.1.19",
+    "@microsoft/api-extractor": "7.36.4",
+    "@rushstack/heft-api-extractor-plugin": "0.1.18",
+    "@rushstack/heft-jest-plugin": "0.8.1",
+    "@rushstack/heft-lint-plugin": "0.1.22",
+    "@rushstack/heft-sass-plugin": "0.11.28",
+    "@rushstack/heft-typescript-plugin": "0.1.21",
     "@types/heft-jest": "1.0.3",
-    "eslint": "8.45.0",
+    "eslint": "8.47.0",
     "jest-environment-jsdom": "29.5.0",
     "jest-html-reporters": "3.1.4",
     "jest-junit": "16.0.0",
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@rushstack/heft": "0.58.0",
-    "tslib": "2.6.0"
+    "@rushstack/heft": "0.58.2",
+    "tslib": "2.6.1"
   },
   "peerDependencies": {
     "@rushstack/heft": "^0.51.0",
