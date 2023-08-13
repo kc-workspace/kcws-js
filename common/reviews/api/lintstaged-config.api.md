@@ -12,7 +12,7 @@ export class Builder<K extends string> implements IConfigBuilder {
     constructor();
     append<EK extends string>(key: EK, value: Partial<Exclude<IConfigValue, "actionFn">>): Builder<K | EK>;
     build(): Config<K>;
-    debugMode(): Builder<K>;
+    debugMode(): this;
     default(): Builder<K | DefaultKey>;
     delete<EK extends K>(key: EK): Builder<Exclude<K, EK>>;
     set<EK extends string>(key: EK, value: Partial<IConfigValue>): Builder<K | EK>;
