@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@microsoft/api-documenter':
-    specifier: 7.22.32
-    version: 7.22.32
+    specifier: 7.22.33
+    version: 7.22.33
   typedoc:
     specifier: 0.24.8
     version: 0.24.8(typescript@5.1.6)
@@ -18,19 +18,19 @@ dependencies:
     specifier: 2.0.1
     version: 2.0.1(typedoc@0.24.8)
   typedoc-theme-hierarchy:
-    specifier: 4.0.0
-    version: 4.0.0(typedoc@0.24.8)
+    specifier: 4.1.0
+    version: 4.1.0(typedoc@0.24.8)
 
 packages:
 
-  /@microsoft/api-documenter@7.22.32:
-    resolution: {integrity: sha512-JePSgTg3qz5SiqcINQO52EKNh15DTbnvUpnx1qcrBlpR9gX0TmCw5g5uGPegIHJzIeif4uYe15nEUynrYDT2nw==}
+  /@microsoft/api-documenter@7.22.33:
+    resolution: {integrity: sha512-9UUe5Z/vbTlMQy3kbSqPaJN7e3CT4LsfNFyP8szfdQEHXiO6BV2ZwwYIUtbQObgaKt7foL4A/cqRMKqhRIi7VQ==}
     hasBin: true
     dependencies:
-      '@microsoft/api-extractor-model': 7.27.5
+      '@microsoft/api-extractor-model': 7.27.6
       '@microsoft/tsdoc': 0.14.2
-      '@rushstack/node-core-library': 3.59.6
-      '@rushstack/ts-command-line': 4.15.1
+      '@rushstack/node-core-library': 3.59.7
+      '@rushstack/ts-command-line': 4.15.2
       colors: 1.2.5
       js-yaml: 3.13.1
       resolve: 1.22.4
@@ -38,12 +38,12 @@ packages:
       - '@types/node'
     dev: false
 
-  /@microsoft/api-extractor-model@7.27.5:
-    resolution: {integrity: sha512-9/tBzYMJitR+o+zkPr1lQh2+e8ClcaTF6eZo7vZGDqRt2O5XmXWPbYJZmxyM3wb5at6lfJNEeGZrQXLjsQ0Nbw==}
+  /@microsoft/api-extractor-model@7.27.6:
+    resolution: {integrity: sha512-eiCnlayyum1f7fS2nA9pfIod5VCNR1G+Tq84V/ijDrKrOFVa598BLw145nCsGDMoFenV6ajNi2PR5WCwpAxW6Q==}
     dependencies:
       '@microsoft/tsdoc': 0.14.2
       '@microsoft/tsdoc-config': 0.16.2
-      '@rushstack/node-core-library': 3.59.6
+      '@rushstack/node-core-library': 3.59.7
     transitivePeerDependencies:
       - '@types/node'
     dev: false
@@ -61,8 +61,8 @@ packages:
     resolution: {integrity: sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==}
     dev: false
 
-  /@rushstack/node-core-library@3.59.6:
-    resolution: {integrity: sha512-bMYJwNFfWXRNUuHnsE9wMlW/mOB4jIwSUkRKtu02CwZhQdmzMsUbxE0s1xOLwTpNIwlzfW/YT7OnOHgDffLgYg==}
+  /@rushstack/node-core-library@3.59.7:
+    resolution: {integrity: sha512-ln1Drq0h+Hwa1JVA65x5mlSgUrBa1uHL+V89FqVWQgXd1vVIMhrtqtWGQrhTnFHxru5ppX+FY39VWELF/FjQCw==}
     peerDependencies:
       '@types/node': '*'
     peerDependenciesMeta:
@@ -78,8 +78,8 @@ packages:
       z-schema: 5.0.5
     dev: false
 
-  /@rushstack/ts-command-line@4.15.1:
-    resolution: {integrity: sha512-EL4jxZe5fhb1uVL/P/wQO+Z8Rc8FMiWJ1G7VgnPDvdIt5GVjRfK7vwzder1CZQiX3x0PY6uxENYLNGTFd1InRQ==}
+  /@rushstack/ts-command-line@4.15.2:
+    resolution: {integrity: sha512-5+C2uoJY8b+odcZD6coEe2XNC4ZjGB4vCMESbqW/8DHRWC/qIHfANdmN9F1wz/lAgxz72i7xRoVtPY2j7e4gpQ==}
     dependencies:
       '@types/argparse': 1.0.38
       argparse: 1.0.10
@@ -328,8 +328,8 @@ packages:
       typedoc: 0.24.8(typescript@5.1.6)
     dev: false
 
-  /typedoc-theme-hierarchy@4.0.0(typedoc@0.24.8):
-    resolution: {integrity: sha512-/y8QfmkLN+NS57hoxsS/vD1fdAPdkd7JtC7xWp2Lk3rE6/cRweFdEfaKD6GJCQMD3CuSD7Ldcc5vjwwrF4UqyQ==}
+  /typedoc-theme-hierarchy@4.1.0(typedoc@0.24.8):
+    resolution: {integrity: sha512-23qYZ1JzFWcU8Zy50NfLN8LWuPXud1pirsqySyUJW+kOYJpSF5lPa1dqA/0WnpJhnuSI2YBu2qDlpmmXiuGsKQ==}
     peerDependencies:
       typedoc: ^0.24.0
     dependencies:
