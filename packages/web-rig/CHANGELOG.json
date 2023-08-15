@@ -2,6 +2,27 @@
   "name": "@kcws/web-rig",
   "entries": [
     {
+      "version": "0.18.0",
+      "tag": "@kcws/web-rig_v0.18.0",
+      "date": "Tue, 15 Aug 2023 22:37:11 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "9bbb0186402ca07e2a63051a95029aa565cdc7db"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "upgrade jest-environment-jsdom from 29.5.0 to 29.6.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "14f3abd9430a2a7fffcdca5d1b02fbaa2fabd56a"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.17.0",
       "tag": "@kcws/web-rig_v0.17.0",
       "date": "Tue, 08 Aug 2023 22:38:05 GMT",

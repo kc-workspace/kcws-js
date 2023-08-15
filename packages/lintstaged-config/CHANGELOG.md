@@ -1,6 +1,17 @@
 # Change Log - @kcws/lintstaged-config
 
-This log was last generated on Tue, 08 Aug 2023 22:38:05 GMT and should not be manually modified.
+This log was last generated on Tue, 15 Aug 2023 22:37:11 GMT and should not be manually modified.
+
+## 0.17.0
+Tue, 15 Aug 2023 22:37:11 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+### Patches
+
+- update return type of debugMode() in Config model
 
 ## 0.16.1
 Tue, 08 Aug 2023 22:38:05 GMT
