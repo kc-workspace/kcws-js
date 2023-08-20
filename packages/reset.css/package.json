@@ -40,7 +40,7 @@
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@rushstack/heft": "0.58.2",
-    "stylelint": "15.10.2",
+    "stylelint": "15.10.3",
     "stylelint-config-standard-scss": "10.0.0"
   }
 }
