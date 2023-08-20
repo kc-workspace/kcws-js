@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   npm-check-updates:
-    specifier: 16.11.1
-    version: 16.11.1
+    specifier: 16.12.2
+    version: 16.12.2
 
 packages:
 
@@ -1350,8 +1350,8 @@ packages:
       npm-normalize-package-bin: 3.0.0
     dev: false
 
-  /npm-check-updates@16.11.1:
-    resolution: {integrity: sha512-FgfhQc/LpY1u2BZpg+Y/FVoa8XxTjTpnAuSGdHM6CRqOO9pSPFrQ618HS9zf71ox7hPUQqpPvTaIuCpa4px38Q==}
+  /npm-check-updates@16.12.2:
+    resolution: {integrity: sha512-N0jeEcak3/+PS1O5JzwJ2+fvmQVv+084O4iRnDtcMBLcr9S7vPOBxwWgsEuNfj3shKFZRYOuh4NHB9nMenCHXA==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
@@ -1369,6 +1369,7 @@ packages:
       json-parse-helpfulerror: 1.0.3
       jsonlines: 0.1.1
       lodash: 4.17.21
+      make-fetch-happen: 11.1.1
       minimatch: 9.0.3
       p-map: 4.0.0
       pacote: 15.2.0
