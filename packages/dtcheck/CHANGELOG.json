@@ -2,6 +2,31 @@
   "name": "@kcws/dtcheck",
   "entries": [
     {
+      "version": "0.16.0",
+      "tag": "@kcws/dtcheck_v0.16.0",
+      "date": "Tue, 22 Aug 2023 22:38:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "35ad9150ed99434ba15baca7ca5ed5f7a12738a9"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.19.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.17.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.18.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.15.0",
       "tag": "@kcws/dtcheck_v0.15.0",
       "date": "Tue, 15 Aug 2023 22:37:11 GMT",

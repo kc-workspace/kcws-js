@@ -2,6 +2,20 @@
   "name": "@kcws/web-rig",
   "entries": [
     {
+      "version": "0.19.0",
+      "tag": "@kcws/web-rig_v0.19.0",
+      "date": "Tue, 22 Aug 2023 22:38:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "35ad9150ed99434ba15baca7ca5ed5f7a12738a9"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.18.0",
       "tag": "@kcws/web-rig_v0.18.0",
       "date": "Tue, 15 Aug 2023 22:37:11 GMT",
