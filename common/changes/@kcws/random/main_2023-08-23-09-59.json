@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "Add definition types for newest node",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/random"
+}

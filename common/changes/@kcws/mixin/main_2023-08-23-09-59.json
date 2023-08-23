@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "Add definition types for newest node",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}
