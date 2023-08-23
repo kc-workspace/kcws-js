@@ -1,6 +1,13 @@
 # Change Log - @kcws/node-rig
 
-This log was last generated on Tue, 15 Aug 2023 22:37:11 GMT and should not be manually modified.
+This log was last generated on Wed, 23 Aug 2023 10:34:29 GMT and should not be manually modified.
+
+## 0.18.1
+Wed, 23 Aug 2023 10:34:29 GMT
+
+### Patches
+
+- Upgrade @types/node from v16.18.37 to v16.18.43
 
 ## 0.18.0
 Tue, 15 Aug 2023 22:37:11 GMT

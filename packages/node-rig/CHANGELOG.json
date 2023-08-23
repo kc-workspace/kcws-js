@@ -2,6 +2,20 @@
   "name": "@kcws/node-rig",
   "entries": [
     {
+      "version": "0.18.1",
+      "tag": "@kcws/node-rig_v0.18.1",
+      "date": "Wed, 23 Aug 2023 10:34:29 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Upgrade @types/node from v16.18.37 to v16.18.43",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "41ad1c1aa078f1e6b503b965efaecaa99a4893e0"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.18.0",
       "tag": "@kcws/node-rig_v0.18.0",
       "date": "Tue, 15 Aug 2023 22:37:11 GMT",
