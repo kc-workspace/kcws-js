@@ -4,12 +4,14 @@
   "description": "a lint-staged configuration for kcws-js",
   "type": "commonjs",
   "main": "lib/index.js",
+  "module": "./lib/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./lib/index.js",
       "import": "./lib/index.mjs",
-      "default": "./lib-umd/index.js"
+      "default": "./lib-umd/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "license": "SEE LICENSE IN LICENSE",
