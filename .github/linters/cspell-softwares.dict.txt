@@ -9,3 +9,4 @@ pnpmfile
 randomizer
 esmodule
 estree
+dtslint
