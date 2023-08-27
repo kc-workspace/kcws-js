@@ -32,8 +32,9 @@
     "_phase:clean": ""
   },
   "dependencies": {
+    "@definitelytyped/eslint-plugin": "0.0.169",
     "@rushstack/eslint-config": "3.3.3",
-    "@typescript-eslint/eslint-plugin": "6.4.1",
-    "@typescript-eslint/parser": "6.4.1"
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0"
   }
 }
