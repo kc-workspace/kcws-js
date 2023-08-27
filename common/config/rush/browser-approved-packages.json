@@ -7,6 +7,10 @@
       "allowedCategories": [ "typings" ]
     },
     {
+      "name": "@definitelytyped/eslint-plugin",
+      "allowedCategories": [ "configs" ]
+    },
+    {
       "name": "@kcws/dtcheck",
       "allowedCategories": [ "libraries" ]
     },
@@ -65,10 +69,6 @@
     {
       "name": "@typescript-eslint/parser",
       "allowedCategories": [ "configs" ]
-    },
-    {
-      "name": "@typescript-eslint/typescript-estree",
-      "allowedCategories": [ "typings" ]
     },
     {
       "name": "eslint",
