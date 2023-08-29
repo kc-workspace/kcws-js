@@ -2,6 +2,21 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "0.13.2",
+      "tag": "@kcws/reset.css_v0.13.2",
+      "date": "Tue, 29 Aug 2023 22:37:59 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.20.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.17.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.13.1",
       "tag": "@kcws/reset.css_v0.13.1",
       "date": "Wed, 23 Aug 2023 10:34:29 GMT",

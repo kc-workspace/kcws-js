@@ -1,6 +1,14 @@
 # Change Log - @kcws/eslint-config
 
-This log was last generated on Tue, 22 Aug 2023 22:38:20 GMT and should not be manually modified.
+This log was last generated on Tue, 29 Aug 2023 22:37:59 GMT and should not be manually modified.
+
+## 0.19.0
+Tue, 29 Aug 2023 22:37:59 GMT
+
+### Minor changes
+
+- Add @definitelytyped/eslint-plugin on profiles/types to support with dtslint
+- upgrade dependencies [auto]
 
 ## 0.18.0
 Tue, 22 Aug 2023 22:38:20 GMT
