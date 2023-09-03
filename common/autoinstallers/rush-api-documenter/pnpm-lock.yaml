@@ -18,8 +18,8 @@ dependencies:
     specifier: 2.1.0
     version: 2.1.0(typedoc@0.25.0)
   typedoc-theme-hierarchy:
-    specifier: 4.1.0
-    version: 4.1.0(typedoc@0.25.0)
+    specifier: 4.1.1
+    version: 4.1.1(typedoc@0.25.0)
 
 packages:
 
@@ -146,9 +146,9 @@ packages:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
     dev: false
 
-  /fs-extra@10.1.0:
-    resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
-    engines: {node: '>=12'}
+  /fs-extra@11.1.1:
+    resolution: {integrity: sha512-MGIE4HOvQCeUCzmlHs0vXpih4ysz4wg9qiSAu6cd42lVwPbTM1TjV7RusoyQqMmk/95gdQZX72u+YW+c3eEpFQ==}
+    engines: {node: '>=14.14'}
     dependencies:
       graceful-fs: 4.2.11
       jsonfile: 6.1.0
@@ -289,8 +289,8 @@ packages:
       lru-cache: 6.0.0
     dev: false
 
-  /shiki@0.14.3:
-    resolution: {integrity: sha512-U3S/a+b0KS+UkTyMjoNojvTgrBHjgp7L6ovhFVZsXmBGnVdQ4K4U9oK0z63w538S91ATngv1vXigHCSWOwnr+g==}
+  /shiki@0.14.4:
+    resolution: {integrity: sha512-IXCRip2IQzKwxArNNq1S+On4KPML3Yyn8Zzs/xRgcgOWIr8ntIK3IKzjFPfjy/7kt9ZMjc+FItfqHRBg8b6tNQ==}
     dependencies:
       ansi-sequence-parser: 1.1.1
       jsonc-parser: 3.2.0
@@ -328,12 +328,12 @@ packages:
       typedoc: 0.25.0(typescript@5.2.2)
     dev: false
 
-  /typedoc-theme-hierarchy@4.1.0(typedoc@0.25.0):
-    resolution: {integrity: sha512-23qYZ1JzFWcU8Zy50NfLN8LWuPXud1pirsqySyUJW+kOYJpSF5lPa1dqA/0WnpJhnuSI2YBu2qDlpmmXiuGsKQ==}
+  /typedoc-theme-hierarchy@4.1.1(typedoc@0.25.0):
+    resolution: {integrity: sha512-0xwHh23VCyUMarPkXYW3BYv0DYJgVXc1xByXBC0XdxHDF1ju4aozaD62uo+ToM2bU36lGECAU3ciaHTVpUUjwA==}
     peerDependencies:
-      typedoc: ^0.24.0
+      typedoc: '>=0.24.0'
     dependencies:
-      fs-extra: 10.1.0
+      fs-extra: 11.1.1
       typedoc: 0.25.0(typescript@5.2.2)
     dev: false
 
@@ -347,7 +347,7 @@ packages:
       lunr: 2.3.9
       marked: 4.3.0
       minimatch: 9.0.3
-      shiki: 0.14.3
+      shiki: 0.14.4
       typescript: 5.2.2
     dev: false
 

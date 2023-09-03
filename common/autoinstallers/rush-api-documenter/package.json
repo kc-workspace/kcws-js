@@ -7,6 +7,6 @@
     "typedoc": "0.25.0",
     "typedoc-plugin-missing-exports": "2.1.0",
     "typedoc-plugin-extras": "2.3.3",
-    "typedoc-theme-hierarchy": "4.1.0"
+    "typedoc-theme-hierarchy": "4.1.1"
   }
 }
