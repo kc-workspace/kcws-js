@@ -2,6 +2,21 @@
   "name": "@kcws/random",
   "entries": [
     {
+      "version": "0.17.4",
+      "tag": "@kcws/random_v0.17.4",
+      "date": "Tue, 05 Sep 2023 22:38:21 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.17.4`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.20.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.17.3",
       "tag": "@kcws/random_v0.17.3",
       "date": "Tue, 29 Aug 2023 22:37:59 GMT",
