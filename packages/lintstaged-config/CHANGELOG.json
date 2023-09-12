@@ -2,6 +2,21 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "0.17.5",
+      "tag": "@kcws/lintstaged-config_v0.17.5",
+      "date": "Tue, 12 Sep 2023 22:37:27 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.20.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.21.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.17.4",
       "tag": "@kcws/lintstaged-config_v0.17.4",
       "date": "Tue, 05 Sep 2023 22:38:21 GMT",

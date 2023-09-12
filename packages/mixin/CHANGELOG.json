@@ -2,6 +2,24 @@
   "name": "@kcws/mixin",
   "entries": [
     {
+      "version": "0.14.5",
+      "tag": "@kcws/mixin_v0.14.5",
+      "date": "Tue, 12 Sep 2023 22:37:27 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.21.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.17.5`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.21.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.14.4",
       "tag": "@kcws/mixin_v0.14.4",
       "date": "Tue, 05 Sep 2023 22:38:21 GMT",
