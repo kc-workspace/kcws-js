@@ -59,7 +59,7 @@
     "@kcws/node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.59.0",
+    "@rushstack/heft": "0.61.0",
     "@types/generic": "workspace:*"
   }
 }
