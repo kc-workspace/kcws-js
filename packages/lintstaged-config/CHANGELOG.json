@@ -2,6 +2,28 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "0.20.0",
+      "tag": "@kcws/lintstaged-config_v0.20.0",
+      "date": "Tue, 03 Oct 2023 22:38:03 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "892bafa22381b1c348f88d4111f3872c66816b97"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.23.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.24.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.19.0",
       "tag": "@kcws/lintstaged-config_v0.19.0",
       "date": "Tue, 26 Sep 2023 22:37:58 GMT",
