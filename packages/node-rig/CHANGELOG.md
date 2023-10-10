@@ -1,6 +1,13 @@
 # Change Log - @kcws/node-rig
 
-This log was last generated on Tue, 03 Oct 2023 22:38:03 GMT and should not be manually modified.
+This log was last generated on Tue, 10 Oct 2023 22:38:47 GMT and should not be manually modified.
+
+## 0.24.0
+Tue, 10 Oct 2023 22:38:47 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.23.0
 Tue, 03 Oct 2023 22:38:03 GMT

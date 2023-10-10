@@ -1,6 +1,11 @@
 # Change Log - @kcws/dtcheck
 
-This log was last generated on Tue, 03 Oct 2023 22:38:03 GMT and should not be manually modified.
+This log was last generated on Tue, 10 Oct 2023 22:38:47 GMT and should not be manually modified.
+
+## 0.19.1
+Tue, 10 Oct 2023 22:38:47 GMT
+
+_Version update only_
 
 ## 0.19.0
 Tue, 03 Oct 2023 22:38:03 GMT
