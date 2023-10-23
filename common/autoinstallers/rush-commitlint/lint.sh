@@ -25,12 +25,16 @@ Please run 'rush %s %s' before execute this script." \
 fi
 
 config="$autoinstallers/commitlint.config.js"
-
+code=0
 if test -n "$CI" || test -n "$DEBUG"; then
-  "$cmd" --config "$config" --verbose "$@" || exit $?
+  "$cmd" --config "$config" --verbose "$@"
+  code=$?
 else
   "$cmd" --config "$config" "$@"
+  code=$?
 fi
 
 unset root autoinstallers cmd cmd_name
 unset config
+
+exit $code

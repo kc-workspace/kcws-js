@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/dtcheck",
+      "comment": "Add node 12 as minimum engine",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/dtcheck"
+}
