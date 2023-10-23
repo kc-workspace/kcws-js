@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "Add missing hoist dependency tslib",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}
