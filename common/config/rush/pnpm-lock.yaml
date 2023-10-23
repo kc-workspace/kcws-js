@@ -129,6 +129,9 @@ importers:
       '@rushstack/heft':
         specifier: 0.62.3
         version: 0.62.3(@types/node@16.18.43)
+      tslib:
+        specifier: 2.6.2
+        version: 2.6.2
 
   ../../packages/node-rig:
     dependencies:
