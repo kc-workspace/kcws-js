@@ -60,5 +60,8 @@
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.62.3"
+  },
+  "engines": {
+    "node": ">=12"
   }
 }
