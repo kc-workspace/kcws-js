@@ -19,7 +19,7 @@
    *
    * The latest version can found here: https://github.com/microsoft/rushstack/blob/main/apps/rush/CHANGELOG.md
    */
-  "rushVersion": "5.101.1",
+  "rushVersion": "5.108.0",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
