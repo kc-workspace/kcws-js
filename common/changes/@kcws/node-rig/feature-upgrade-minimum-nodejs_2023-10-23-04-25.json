@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "Add node 18 as minimum engine",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}
