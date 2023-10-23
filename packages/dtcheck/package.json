@@ -63,5 +63,8 @@
     "@rushstack/heft": "0.62.3",
     "@types/generic": "workspace:*",
     "tslib": "2.6.2"
+  },
+  "engines": {
+    "node": ">=12"
   }
 }

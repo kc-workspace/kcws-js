@@ -62,5 +62,8 @@
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.62.3",
     "@types/micromatch": "4.0.4"
+  },
+  "engines": {
+    "node": ">=12"
   }
 }
