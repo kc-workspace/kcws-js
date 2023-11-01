@@ -1,6 +1,13 @@
 # Change Log - @kcws/dtcheck
 
-This log was last generated on Wed, 01 Nov 2023 06:08:33 GMT and should not be manually modified.
+This log was last generated on Wed, 01 Nov 2023 06:38:13 GMT and should not be manually modified.
+
+## 0.20.0
+Wed, 01 Nov 2023 06:38:13 GMT
+
+### Minor changes
+
+- Remove tslib need
 
 ## 0.19.4
 Wed, 01 Nov 2023 06:08:33 GMT

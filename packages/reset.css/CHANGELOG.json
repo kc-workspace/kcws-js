@@ -2,6 +2,18 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "0.18.2",
+      "tag": "@kcws/reset.css_v0.18.2",
+      "date": "Wed, 01 Nov 2023 06:38:13 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.27.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.18.1",
       "tag": "@kcws/reset.css_v0.18.1",
       "date": "Wed, 01 Nov 2023 05:52:06 GMT",
