@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/dtcheck",
+      "comment": "Remove esm import allow esm to use commonjs instead",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/dtcheck"
+}

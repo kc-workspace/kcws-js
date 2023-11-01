@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "Remove esm import; it will allow esm to use commonjs instead",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/random"
+}
