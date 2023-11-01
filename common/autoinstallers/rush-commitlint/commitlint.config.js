@@ -31,6 +31,7 @@ const config = {
         "rush-lintstaged",
         "deps",
         "config",
+        "script",
       ],
     ],
     "subject-max-length": [1, "always", 80],

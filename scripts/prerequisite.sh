@@ -36,6 +36,9 @@ checking "node" \
 checking "rush" \
   "$require_mode" "https://rushjs.io/pages/intro/get_started"
 
+checking "eslint" \
+  "$require_mode" "https://www.npmjs.com/package/eslint"
+
 checking "shellcheck" \
   "$optional_mode" "https://github.com/koalaman/shellcheck"
 
