@@ -2,6 +2,144 @@
   "name": "@kcws/mixin",
   "entries": [
     {
+      "version": "0.17.2",
+      "tag": "@kcws/mixin_v0.17.2",
+      "date": "Wed, 01 Nov 2023 03:50:58 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Add node 12 as minimum engine",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "bd92fdb2ea9c23b07a78f85abea51d8a3c29fb70"
+          },
+          {
+            "comment": "Add missing hoist dependency tslib",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "e1c365981da06278173fa16208777ecae307935f"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.26.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.21.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.25.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.17.1",
+      "tag": "@kcws/mixin_v0.17.1",
+      "date": "Tue, 10 Oct 2023 22:38:47 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.25.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.20.1`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.17.0",
+      "tag": "@kcws/mixin_v0.17.0",
+      "date": "Tue, 03 Oct 2023 22:38:03 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "892bafa22381b1c348f88d4111f3872c66816b97"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.24.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.20.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.24.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.16.0",
+      "tag": "@kcws/mixin_v0.16.0",
+      "date": "Tue, 26 Sep 2023 22:37:58 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "11a0da4cee1f1655f724120708735000fefb51b0"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.23.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.19.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.23.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.15.0",
+      "tag": "@kcws/mixin_v0.15.0",
+      "date": "Tue, 19 Sep 2023 22:37:42 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "d8ce7305fd1e377621f9c1c09b87f2986ff4dc77"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.22.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.18.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.22.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.14.5",
+      "tag": "@kcws/mixin_v0.14.5",
+      "date": "Tue, 12 Sep 2023 22:37:27 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.21.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.17.5`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.21.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.14.4",
       "tag": "@kcws/mixin_v0.14.4",
       "date": "Tue, 05 Sep 2023 22:38:21 GMT",

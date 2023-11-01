@@ -1,6 +1,6 @@
 {
   "name": "@kcws/reset.css",
-  "version": "0.13.3",
+  "version": "0.18.0",
   "description": "css reseting package",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/reset.css",
@@ -46,8 +46,11 @@
   "devDependencies": {
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
-    "@rushstack/heft": "0.58.2",
-    "stylelint": "15.10.3",
+    "@rushstack/heft": "0.62.3",
+    "stylelint": "15.11.0",
     "stylelint-config-standard-scss": "11.0.0"
+  },
+  "engines": {
+    "node": ">=12"
   }
 }

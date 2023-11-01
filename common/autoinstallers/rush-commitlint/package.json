@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@commitlint/cli": "17.7.1",
-    "@commitlint/config-conventional": "17.7.0",
-    "@commitlint/cz-commitlint": "17.7.1",
+    "@commitlint/cli": "18.2.0",
+    "@commitlint/config-conventional": "18.1.0",
+    "@commitlint/cz-commitlint": "18.2.0",
     "commitizen": "4.3.0",
     "inquirer": "8.2.6"
   },
   "devDependencies": {
-    "@commitlint/types": "17.4.4"
+    "@commitlint/types": "18.1.0"
   },
   "config": {
     "commitizen": {

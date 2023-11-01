@@ -3,10 +3,6 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
-      "name": "@definitelytyped/dtslint",
-      "allowedCategories": [ "typings" ]
-    },
-    {
       "name": "@definitelytyped/eslint-plugin",
       "allowedCategories": [ "configs" ]
     },
@@ -101,6 +97,10 @@
     {
       "name": "stylelint-config-standard-scss",
       "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "tsd",
+      "allowedCategories": [ "typings" ]
     },
     {
       "name": "tslib",

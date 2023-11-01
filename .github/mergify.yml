@@ -11,7 +11,6 @@ shared:
     - check-success=spellcheck
     - check-success=licensecheck
     - check-success=testing
-    - check-success=alternative-testing (16)
     - check-success=alternative-testing (18)
     - check-success=alternative-testing (20)
 

@@ -194,7 +194,7 @@
       "shortName": "-e",
       "argumentName": "MESSAGE",
       "description": "Commit message to verify on commitlint",
-      "required": true,
+      "required": false,
       "associatedCommands": ["hooks:commitlint"]
     }
   ]
