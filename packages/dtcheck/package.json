@@ -56,13 +56,15 @@
     "_phase:test": "heft test",
     "_phase:clean": "heft clean"
   },
+  "dependencies": {
+    "tslib": "2.6.2"
+  },
   "devDependencies": {
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.62.3",
-    "@types/generic": "workspace:*",
-    "tslib": "2.6.2"
+    "@types/generic": "workspace:*"
   },
   "engines": {
     "node": ">=12"
