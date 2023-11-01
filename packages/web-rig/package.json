@@ -46,12 +46,10 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@rushstack/heft": "0.62.3",
-    "tslib": "2.6.2"
+    "@rushstack/heft": "0.62.3"
   },
   "peerDependencies": {
-    "@rushstack/heft": "^0.51.0",
-    "tslib": "^2.4.1"
+    "@rushstack/heft": "^0.51.0"
   },
   "engines": {
     "node": ">=12"

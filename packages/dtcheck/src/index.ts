@@ -1,7 +1,7 @@
-export * from "./array";
-export * from "./boolean";
-export * from "./empty";
-export * from "./exist";
-export * from "./number";
-export * from "./object";
-export * from "./string";
+export { isArray } from "./array";
+export { isBoolean } from "./boolean";
+export { isEmpty, isNotEmpty } from "./empty";
+export { isExist, isNotExist } from "./exist";
+export { isFloat, isInteger, isNumber } from "./number";
+export { isObject } from "./object";
+export { isString } from "./string";
