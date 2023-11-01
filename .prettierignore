@@ -80,9 +80,11 @@ common/autoinstallers/*/.npmrc
 lib
 lib-commonjs
 lib-es6
+lib-es2015
 lib-esnext
 lib-umd
 lib-amd
+lib-system
 lib-css
 temp
 dist
