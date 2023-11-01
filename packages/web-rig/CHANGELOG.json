@@ -2,6 +2,32 @@
   "name": "@kcws/web-rig",
   "entries": [
     {
+      "version": "0.26.0",
+      "tag": "@kcws/web-rig_v0.26.0",
+      "date": "Wed, 01 Nov 2023 03:50:58 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Add node 12 as minimum engine",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "bd92fdb2ea9c23b07a78f85abea51d8a3c29fb70"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "457478d89911f7ab8d0b5903dbb23f5f9ebe285a"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "eccff88509a9aa669d9c3ab0ca5f5358536c567f"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.25.0",
       "tag": "@kcws/web-rig_v0.25.0",
       "date": "Tue, 10 Oct 2023 22:38:47 GMT",

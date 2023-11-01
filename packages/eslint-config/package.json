@@ -1,6 +1,6 @@
 {
   "name": "@kcws/eslint-config",
-  "version": "0.24.0",
+  "version": "0.25.0",
   "description": "kamontat's eslint config",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/eslint-config",
