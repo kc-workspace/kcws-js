@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/dtcheck",
+      "comment": "Move tslib to dependencies instead of dev",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/dtcheck"
+}
