@@ -2,6 +2,31 @@
   "name": "@kcws/dtcheck",
   "entries": [
     {
+      "version": "0.19.2",
+      "tag": "@kcws/dtcheck_v0.19.2",
+      "date": "Wed, 01 Nov 2023 03:50:58 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Add node 12 as minimum engine",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "bd92fdb2ea9c23b07a78f85abea51d8a3c29fb70"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.26.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.21.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.25.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.19.1",
       "tag": "@kcws/dtcheck_v0.19.1",
       "date": "Tue, 10 Oct 2023 22:38:47 GMT",

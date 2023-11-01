@@ -2,6 +2,36 @@
   "name": "@kcws/mixin",
   "entries": [
     {
+      "version": "0.17.2",
+      "tag": "@kcws/mixin_v0.17.2",
+      "date": "Wed, 01 Nov 2023 03:50:58 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Add node 12 as minimum engine",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "bd92fdb2ea9c23b07a78f85abea51d8a3c29fb70"
+          },
+          {
+            "comment": "Add missing hoist dependency tslib",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "e1c365981da06278173fa16208777ecae307935f"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.26.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.21.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.25.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.17.1",
       "tag": "@kcws/mixin_v0.17.1",
       "date": "Tue, 10 Oct 2023 22:38:47 GMT",

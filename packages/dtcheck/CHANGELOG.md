@@ -1,6 +1,13 @@
 # Change Log - @kcws/dtcheck
 
-This log was last generated on Tue, 10 Oct 2023 22:38:47 GMT and should not be manually modified.
+This log was last generated on Wed, 01 Nov 2023 03:50:58 GMT and should not be manually modified.
+
+## 0.19.2
+Wed, 01 Nov 2023 03:50:58 GMT
+
+### Patches
+
+- Add node 12 as minimum engine
 
 ## 0.19.1
 Tue, 10 Oct 2023 22:38:47 GMT
