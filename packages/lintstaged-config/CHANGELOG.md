@@ -1,6 +1,13 @@
 # Change Log - @kcws/lintstaged-config
 
-This log was last generated on Wed, 01 Nov 2023 05:52:06 GMT and should not be manually modified.
+This log was last generated on Wed, 01 Nov 2023 08:16:51 GMT and should not be manually modified.
+
+## 0.21.2
+Wed, 01 Nov 2023 08:16:51 GMT
+
+### Patches
+
+- Remove esm import; it will allow esm to use commonjs instead
 
 ## 0.21.1
 Wed, 01 Nov 2023 05:52:06 GMT

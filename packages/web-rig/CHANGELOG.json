@@ -2,6 +2,20 @@
   "name": "@kcws/web-rig",
   "entries": [
     {
+      "version": "0.28.0",
+      "tag": "@kcws/web-rig_v0.28.0",
+      "date": "Wed, 01 Nov 2023 08:16:51 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Remove esm import; it will allow esm to use commonjs instead",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "6db88aa977b9be5be3bff07aa7ee75fe5f17d9e1"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.27.0",
       "tag": "@kcws/web-rig_v0.27.0",
       "date": "Wed, 01 Nov 2023 06:38:13 GMT",
