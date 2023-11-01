@@ -134,11 +134,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # Support backward 'LTS' version
-        # and 'current' version
+        # Support backward 'LTS' version and 'current' version
         # https://github.com/nodejs/release#release-schedule
         # https://nodejs.org/en/blog/release
-        node-version: [16, 18, 20]
+        node-version: [18, 20]
     needs:
       - testing
     steps:

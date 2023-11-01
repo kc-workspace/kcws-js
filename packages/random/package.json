@@ -1,6 +1,6 @@
 {
   "name": "@kcws/random",
-  "version": "0.17.4",
+  "version": "0.20.2",
   "description": "random number generator",
   "type": "commonjs",
   "main": "lib/index.js",
@@ -59,7 +59,10 @@
     "@kcws/node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.58.2",
+    "@rushstack/heft": "0.62.3",
     "@types/generic": "workspace:*"
+  },
+  "engines": {
+    "node": ">=12"
   }
 }

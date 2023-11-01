@@ -1,6 +1,45 @@
 # Change Log - @kcws/mixin
 
-This log was last generated on Tue, 05 Sep 2023 22:38:21 GMT and should not be manually modified.
+This log was last generated on Wed, 01 Nov 2023 03:50:58 GMT and should not be manually modified.
+
+## 0.17.2
+Wed, 01 Nov 2023 03:50:58 GMT
+
+### Patches
+
+- Add node 12 as minimum engine
+- Add missing hoist dependency tslib
+
+## 0.17.1
+Tue, 10 Oct 2023 22:38:47 GMT
+
+_Version update only_
+
+## 0.17.0
+Tue, 03 Oct 2023 22:38:03 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+## 0.16.0
+Tue, 26 Sep 2023 22:37:58 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+## 0.15.0
+Tue, 19 Sep 2023 22:37:42 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+## 0.14.5
+Tue, 12 Sep 2023 22:37:27 GMT
+
+_Version update only_
 
 ## 0.14.4
 Tue, 05 Sep 2023 22:38:21 GMT

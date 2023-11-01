@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "Upgrade jest-environment-node from 29.6.2 to 29.6.3",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}

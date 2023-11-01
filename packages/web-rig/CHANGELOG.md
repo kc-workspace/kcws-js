@@ -1,6 +1,53 @@
 # Change Log - @kcws/web-rig
 
-This log was last generated on Tue, 29 Aug 2023 22:37:59 GMT and should not be manually modified.
+This log was last generated on Wed, 01 Nov 2023 03:50:58 GMT and should not be manually modified.
+
+## 0.26.0
+Wed, 01 Nov 2023 03:50:58 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+- upgrade dependencies [auto]
+
+### Patches
+
+- Add node 12 as minimum engine
+
+## 0.25.0
+Tue, 10 Oct 2023 22:38:47 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+## 0.24.0
+Tue, 03 Oct 2023 22:38:03 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+## 0.23.0
+Tue, 26 Sep 2023 22:37:58 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+## 0.22.0
+Tue, 19 Sep 2023 22:37:42 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+## 0.21.0
+Tue, 12 Sep 2023 22:37:27 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.20.0
 Tue, 29 Aug 2023 22:37:59 GMT

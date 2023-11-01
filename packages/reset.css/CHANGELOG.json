@@ -2,6 +2,131 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "0.18.0",
+      "tag": "@kcws/reset.css_v0.18.0",
+      "date": "Wed, 01 Nov 2023 03:50:58 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "457478d89911f7ab8d0b5903dbb23f5f9ebe285a"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.26.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.21.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.17.1",
+      "tag": "@kcws/reset.css_v0.17.1",
+      "date": "Tue, 10 Oct 2023 22:38:47 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.25.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.20.1`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.17.0",
+      "tag": "@kcws/reset.css_v0.17.0",
+      "date": "Tue, 03 Oct 2023 22:38:03 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "892bafa22381b1c348f88d4111f3872c66816b97"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.24.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.20.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.16.0",
+      "tag": "@kcws/reset.css_v0.16.0",
+      "date": "Tue, 26 Sep 2023 22:37:58 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "11a0da4cee1f1655f724120708735000fefb51b0"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.23.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.19.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.15.0",
+      "tag": "@kcws/reset.css_v0.15.0",
+      "date": "Tue, 19 Sep 2023 22:37:42 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "d8ce7305fd1e377621f9c1c09b87f2986ff4dc77"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.22.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.18.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.14.0",
+      "tag": "@kcws/reset.css_v0.14.0",
+      "date": "Tue, 12 Sep 2023 22:37:27 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "10f027bb06e9a59e7a59a972afca4adaaf0c85ee"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.21.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.17.5`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.13.3",
       "tag": "@kcws/reset.css_v0.13.3",
       "date": "Tue, 05 Sep 2023 22:38:21 GMT",
