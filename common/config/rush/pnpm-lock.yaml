@@ -143,7 +143,7 @@ importers:
         version: 0.2.9(@rushstack/heft@0.62.3)(@types/node@18.18.6)
       '@rushstack/heft-jest-plugin':
         specifier: 0.10.1
-        version: 0.10.1(@rushstack/heft@0.62.3)(@types/node@18.18.6)(jest-environment-node@29.6.2)
+        version: 0.10.1(@rushstack/heft@0.62.3)(@types/node@18.18.6)(jest-environment-node@29.6.3)
       '@rushstack/heft-lint-plugin':
         specifier: 0.2.9
         version: 0.2.9(@rushstack/heft@0.62.3)(@types/node@18.18.6)
@@ -160,8 +160,8 @@ importers:
         specifier: 8.52.0
         version: 8.52.0
       jest-environment-node:
-        specifier: 29.6.2
-        version: 29.6.2
+        specifier: 29.6.3
+        version: 29.6.3
       jest-html-reporters:
         specifier: 3.1.4
         version: 3.1.4
@@ -222,7 +222,7 @@ importers:
         version: 0.2.9(@rushstack/heft@0.62.3)(@types/node@18.18.6)
       '@rushstack/heft-jest-plugin':
         specifier: 0.10.1
-        version: 0.10.1(@rushstack/heft@0.62.3)(jest-environment-jsdom@29.6.2)
+        version: 0.10.1(@rushstack/heft@0.62.3)(jest-environment-jsdom@29.6.3)
       '@rushstack/heft-lint-plugin':
         specifier: 0.2.9
         version: 0.2.9(@rushstack/heft@0.62.3)(@types/node@18.18.6)
@@ -239,8 +239,8 @@ importers:
         specifier: 8.52.0
         version: 8.52.0
       jest-environment-jsdom:
-        specifier: 29.6.2
-        version: 29.6.2
+        specifier: 29.6.3
+        version: 29.6.3
       jest-html-reporters:
         specifier: 3.1.4
         version: 3.1.4
@@ -1244,7 +1244,7 @@ packages:
     transitivePeerDependencies:
       - '@types/node'
 
-  /@rushstack/heft-jest-plugin@0.10.1(@rushstack/heft@0.62.3)(@types/node@18.18.6)(jest-environment-node@29.6.2):
+  /@rushstack/heft-jest-plugin@0.10.1(@rushstack/heft@0.62.3)(@types/node@18.18.6)(jest-environment-node@29.6.3):
     resolution: {integrity: sha512-o6LI6RZ//N1m5rhNMawxF4ri5PFWRp1VrXOiiqVWPWLCDfWE9oIrGQTJEznXrwTed9cF8ghohBJ2WICXJ9Ifkg==}
     peerDependencies:
       '@rushstack/heft': ^0.62.3
@@ -1263,7 +1263,7 @@ packages:
       '@rushstack/heft-config-file': 0.14.2(@types/node@18.18.6)
       '@rushstack/node-core-library': 3.61.0(@types/node@18.18.6)
       jest-config: 29.5.0(@types/node@18.18.6)
-      jest-environment-node: 29.6.2
+      jest-environment-node: 29.6.3
       jest-resolve: 29.5.0
       jest-snapshot: 29.5.0
       lodash: 4.17.21
@@ -1275,7 +1275,7 @@ packages:
       - ts-node
     dev: false
 
-  /@rushstack/heft-jest-plugin@0.10.1(@rushstack/heft@0.62.3)(jest-environment-jsdom@29.6.2):
+  /@rushstack/heft-jest-plugin@0.10.1(@rushstack/heft@0.62.3)(jest-environment-jsdom@29.6.3):
     resolution: {integrity: sha512-o6LI6RZ//N1m5rhNMawxF4ri5PFWRp1VrXOiiqVWPWLCDfWE9oIrGQTJEznXrwTed9cF8ghohBJ2WICXJ9Ifkg==}
     peerDependencies:
       '@rushstack/heft': ^0.62.3
@@ -1294,7 +1294,7 @@ packages:
       '@rushstack/heft-config-file': 0.14.2(@types/node@18.18.6)
       '@rushstack/node-core-library': 3.61.0(@types/node@18.18.6)
       jest-config: 29.5.0(@types/node@18.18.6)
-      jest-environment-jsdom: 29.6.2
+      jest-environment-jsdom: 29.6.3
       jest-resolve: 29.5.0
       jest-snapshot: 29.5.0
       lodash: 4.17.21
@@ -1494,12 +1494,12 @@ packages:
   /@types/eslint@7.29.0:
     resolution: {integrity: sha512-VNcvioYDH8/FxaeTKkM4/TiTwt6pBV9E3OfGmvaw8tPl0rrHCJ4Ll15HRT+pMiFAf/MLQvAzC+6RzUMEL9Ceng==}
     dependencies:
-      '@types/estree': 1.0.3
+      '@types/estree': 1.0.4
       '@types/json-schema': 7.0.14
     dev: true
 
-  /@types/estree@1.0.3:
-    resolution: {integrity: sha512-CS2rOaoQ/eAgAfcTfq6amKG7bsN+EMcgGY4FAFQdvSj2y1ixvOZTUA9mOtCai7E1SYu283XNw7urKK30nP3wkQ==}
+  /@types/estree@1.0.4:
+    resolution: {integrity: sha512-2JwWnHK9H+wUZNorf2Zr6ves96WHoWDJIftkcxPKsS7Djta6Zu519LarhRNljPXkpsZR2ZMwNCPeW7omW07BJw==}
     dev: true
 
   /@types/graceful-fs@4.1.8:
@@ -1511,7 +1511,7 @@ packages:
   /@types/heft-jest@1.0.5:
     resolution: {integrity: sha512-JaDeH7u5YmO8OS427ZmlffJuJpFSnQh98TG0aRD86WEQlrObG2S2xvrJOLe8jdPySmtHqd9sV2dLqm62wcQyeA==}
     dependencies:
-      '@types/jest': 29.5.6
+      '@types/jest': 29.5.7
     dev: false
 
   /@types/istanbul-lib-coverage@2.0.5:
@@ -1530,8 +1530,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.2
     dev: false
 
-  /@types/jest@29.5.6:
-    resolution: {integrity: sha512-/t9NnzkOpXb4Nfvg17ieHE6EeSjDS2SGSpNYfoLbUAeL/EOueU/RSdOWFpfQTXBEM7BguYW1XQ0EbM+6RlIh6w==}
+  /@types/jest@29.5.7:
+    resolution: {integrity: sha512-HLyetab6KVPSiF+7pFcUyMeLsx25LDNDemw9mGsJBkai/oouwrjTycocSDYopMEwFhN2Y4s9oPyOCZNofgSt2g==}
     dependencies:
       expect: 29.7.0
       pretty-format: 29.7.0
@@ -2218,8 +2218,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001557
-      electron-to-chromium: 1.4.569
+      caniuse-lite: 1.0.30001559
+      electron-to-chromium: 1.4.572
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
     dev: false
@@ -2288,8 +2288,8 @@ packages:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
 
-  /caniuse-lite@1.0.30001557:
-    resolution: {integrity: sha512-91oR7hLNUP3gG6MLU+n96em322a8Xzes8wWdBKhLgUoiJsAF5irZnxSUCbc+qUZXNnPCfUwLOi9ZCZpkvjQajw==}
+  /caniuse-lite@1.0.30001559:
+    resolution: {integrity: sha512-cPiMKZgqgkg5LY3/ntGeLFUpi6tzddBNS58A4tnTgQw1zON7u2sZMU7SzOeVH4tj20++9ggL+V6FDOFMTaFFYA==}
     dev: false
 
   /caseless@0.12.0:
@@ -2672,8 +2672,8 @@ packages:
       safer-buffer: 2.1.2
     dev: false
 
-  /electron-to-chromium@1.4.569:
-    resolution: {integrity: sha512-LsrJjZ0IbVy12ApW3gpYpcmHS3iRxH4bkKOW98y1/D+3cvDUWGcbzbsFinfUS8knpcZk/PG/2p/RnkMCYN7PVg==}
+  /electron-to-chromium@1.4.572:
+    resolution: {integrity: sha512-RlFobl4D3ieetbnR+2EpxdzFl9h0RAJkPK3pfiwMug2nhBin2ZCsGIAJWdpNniLz43sgXam/CgipOmvTA+rUiA==}
     dev: false
 
   /emittery@0.13.1:
@@ -3909,7 +3909,7 @@ packages:
       glob: 7.2.3
       graceful-fs: 4.2.11
       jest-circus: 29.7.0
-      jest-environment-node: 29.6.2
+      jest-environment-node: 29.6.3
       jest-get-type: 29.6.3
       jest-regex-util: 29.6.3
       jest-resolve: 29.5.0
@@ -3953,8 +3953,8 @@ packages:
       pretty-format: 29.7.0
     dev: false
 
-  /jest-environment-jsdom@29.6.2:
-    resolution: {integrity: sha512-7oa/+266AAEgkzae8i1awNEfTfjwawWKLpiw2XesZmaoVVj9u9t8JOYx18cG29rbPNtkUlZ8V4b5Jb36y/VxoQ==}
+  /jest-environment-jsdom@29.6.3:
+    resolution: {integrity: sha512-nMJz/i27Moit9bv8Z323/13Melj4FEQH93yRu7GnilvBmPBMH4EGEkEfBTJXYuubyzhMO7w/VHzljIDV+Q/SeQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
       canvas: ^2.5.0
@@ -3976,8 +3976,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /jest-environment-node@29.6.2:
-    resolution: {integrity: sha512-YGdFeZ3T9a+/612c5mTQIllvWkddPbYcN2v95ZH24oWMbGA4GGS2XdIF92QMhUhvrjjuQWYgUGW2zawOyH63MQ==}
+  /jest-environment-node@29.6.3:
+    resolution: {integrity: sha512-PKl7upfPJXMYbWpD+60o4HP86KvFO2c9dZ+Zr6wUzsG5xcPx/65o3ArNgHW5M0RFvLYdW4/aieR4JSooD0a2ew==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/environment': 29.7.0
@@ -5134,8 +5134,8 @@ packages:
     resolution: {integrity: sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==}
     dev: false
 
-  /punycode@2.3.0:
-    resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
+  /punycode@2.3.1:
+    resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
   /pure-rand@6.0.4:
@@ -6037,7 +6037,7 @@ packages:
     engines: {node: '>=0.8'}
     dependencies:
       psl: 1.9.0
-      punycode: 2.3.0
+      punycode: 2.3.1
     dev: false
 
   /tough-cookie@4.1.3:
@@ -6045,7 +6045,7 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       psl: 1.9.0
-      punycode: 2.3.0
+      punycode: 2.3.1
       universalify: 0.2.0
       url-parse: 1.5.10
     dev: false
@@ -6054,7 +6054,7 @@ packages:
     resolution: {integrity: sha512-l7FvfAHlcmulp8kr+flpQZmVwtu7nfRV7NZujtN0OqES8EL4O4e0qqzL0DC5gAvx/ZC/9lk6rhcUwYvkBnBnYA==}
     engines: {node: '>=12'}
     dependencies:
-      punycode: 2.3.0
+      punycode: 2.3.1
     dev: false
 
   /trim-newlines@3.0.1:
@@ -6236,7 +6236,7 @@ packages:
   /uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
-      punycode: 2.3.0
+      punycode: 2.3.1
 
   /url-parse@1.5.10:
     resolution: {integrity: sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==}
