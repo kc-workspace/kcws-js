@@ -1,6 +1,13 @@
 # Change Log - @kcws/node-rig
 
-This log was last generated on Wed, 01 Nov 2023 03:50:58 GMT and should not be manually modified.
+This log was last generated on Wed, 01 Nov 2023 05:52:06 GMT and should not be manually modified.
+
+## 0.25.1
+Wed, 01 Nov 2023 05:52:06 GMT
+
+### Patches
+
+- Upgrade jest-environment-node from 29.6.2 to 29.6.3
 
 ## 0.25.0
 Wed, 01 Nov 2023 03:50:58 GMT

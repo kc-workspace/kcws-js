@@ -1,6 +1,13 @@
 # Change Log - @kcws/web-rig
 
-This log was last generated on Wed, 01 Nov 2023 03:50:58 GMT and should not be manually modified.
+This log was last generated on Wed, 01 Nov 2023 05:52:06 GMT and should not be manually modified.
+
+## 0.26.1
+Wed, 01 Nov 2023 05:52:06 GMT
+
+### Patches
+
+- Upgrade jest-environment-jsdom from 29.6.2 to 29.6.3
 
 ## 0.26.0
 Wed, 01 Nov 2023 03:50:58 GMT

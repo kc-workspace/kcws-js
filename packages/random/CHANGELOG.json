@@ -2,6 +2,21 @@
   "name": "@kcws/random",
   "entries": [
     {
+      "version": "0.20.3",
+      "tag": "@kcws/random_v0.20.3",
+      "date": "Wed, 01 Nov 2023 05:52:06 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.25.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.21.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.20.2",
       "tag": "@kcws/random_v0.20.2",
       "date": "Wed, 01 Nov 2023 03:50:58 GMT",

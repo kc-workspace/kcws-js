@@ -2,6 +2,20 @@
   "name": "@kcws/node-rig",
   "entries": [
     {
+      "version": "0.25.1",
+      "tag": "@kcws/node-rig_v0.25.1",
+      "date": "Wed, 01 Nov 2023 05:52:06 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Upgrade jest-environment-node from 29.6.2 to 29.6.3",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "133ddec7b9ca096e17f36100ea9620e36ea7b8f1"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.25.0",
       "tag": "@kcws/node-rig_v0.25.0",
       "date": "Wed, 01 Nov 2023 03:50:58 GMT",
