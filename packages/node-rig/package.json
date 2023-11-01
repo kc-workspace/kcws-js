@@ -32,15 +32,6 @@
     "_phase:clean": ""
   },
   "dependencies": {
-    "@microsoft/api-extractor": "7.36.4",
-    "@rushstack/heft-api-extractor-plugin": "0.1.18",
-    "@rushstack/heft-jest-plugin": "0.8.1",
-    "@rushstack/heft-lint-plugin": "0.1.22",
-    "@rushstack/heft-typescript-plugin": "0.1.21",
-    "@types/heft-jest": "1.0.3",
-    "@types/node": "16.18.43",
-    "eslint": "8.49.0",
-    "jest-environment-node": "29.6.3",
     "@microsoft/api-extractor": "7.38.0",
     "@rushstack/heft-api-extractor-plugin": "0.2.9",
     "@rushstack/heft-jest-plugin": "0.10.1",
