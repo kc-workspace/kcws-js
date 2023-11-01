@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "Remove tslib need",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}
