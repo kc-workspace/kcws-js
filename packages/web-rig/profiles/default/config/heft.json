@@ -16,15 +16,16 @@
       "cleanFiles": [
         { "sourcePath": "lib" },
         { "sourcePath": "lib-commonjs" },
-        { "sourcePath": "lib-es6" },
+        { "sourcePath": "lib-es2015" },
         { "sourcePath": "lib-esnext" },
         { "sourcePath": "lib-umd" },
         { "sourcePath": "lib-amd" },
+        { "sourcePath": "lib-system" },
         { "sourcePath": "lib-css" },
-        { "sourcePath": ".rush" },
-        { "sourcePath": "rush-logs" },
         { "sourcePath": "temp" },
         { "sourcePath": "dist" },
+        { "sourcePath": ".rush" },
+        { "sourcePath": "rush-logs" },
         { "sourcePath": "*.log" }
       ],
       "tasksByName": {
