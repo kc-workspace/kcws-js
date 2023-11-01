@@ -10,7 +10,7 @@
   "exports": {
     ".": {
       "require": "./lib/reset.scss.css",
-      "import": "./lib/reset.scss.css",
+      "default": "./lib/reset.scss.css",
       "types": "./lib/types/reset.scss.d.ts"
     }
   },

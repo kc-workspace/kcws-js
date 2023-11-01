@@ -9,7 +9,6 @@
   "exports": {
     ".": {
       "require": "./lib/index.js",
-      "import": "./lib/index.mjs",
       "default": "./lib-umd/index.js",
       "types": "./dist/index.d.ts"
     }
