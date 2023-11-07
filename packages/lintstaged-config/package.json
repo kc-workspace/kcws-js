@@ -1,6 +1,6 @@
 {
   "name": "@kcws/lintstaged-config",
-  "version": "0.21.2",
+  "version": "0.22.0",
   "description": "a lint-staged configuration for kcws-js",
   "type": "commonjs",
   "main": "lib/index.js",
