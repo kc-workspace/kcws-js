@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@microsoft/api-documenter':
-    specifier: 7.23.11
-    version: 7.23.11
+    specifier: 7.23.12
+    version: 7.23.12
   typedoc:
     specifier: 0.25.3
     version: 0.25.3(typescript@5.2.2)
@@ -23,8 +23,8 @@ dependencies:
 
 packages:
 
-  /@microsoft/api-documenter@7.23.11:
-    resolution: {integrity: sha512-lrtB1DDN3xlvadGPKtR+Rdo3Dn6039D7URrHtINCG8o4bUdrRrMidU3WNWjAXktM94XLa58nxeoKCscOmEqVtQ==}
+  /@microsoft/api-documenter@7.23.12:
+    resolution: {integrity: sha512-ZFQGHNs8fSe3KoSCNa+jt/HLTN8IdTRGd0TZqmSeHpz2cSvUYHJeyQKhv8s7yi2flr1LezBq5/ig65ITZPSSqw==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.28.2
