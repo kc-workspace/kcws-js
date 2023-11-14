@@ -1,6 +1,13 @@
 # Change Log - @kcws/web-rig
 
-This log was last generated on Tue, 07 Nov 2023 22:37:29 GMT and should not be manually modified.
+This log was last generated on Tue, 14 Nov 2023 22:37:43 GMT and should not be manually modified.
+
+## 0.30.0
+Tue, 14 Nov 2023 22:37:43 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.29.0
 Tue, 07 Nov 2023 22:37:29 GMT
