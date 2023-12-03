@@ -39,9 +39,9 @@
     "@rushstack/heft-sass-plugin": "0.12.12",
     "@rushstack/heft-typescript-plugin": "0.2.12",
     "@types/heft-jest": "1.0.6",
-    "eslint": "8.54.0",
-    "jest-environment-jsdom": "29.6.3",
-    "jest-html-reporters": "3.1.4",
+    "eslint": "8.55.0",
+    "jest-environment-jsdom": "29.6.4",
+    "jest-html-reporters": "3.1.5",
     "jest-junit": "16.0.0",
     "typescript": "5.0.4"
   },

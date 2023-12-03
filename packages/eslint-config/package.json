@@ -32,10 +32,10 @@
     "_phase:clean": ""
   },
   "dependencies": {
-    "@definitelytyped/eslint-plugin": "0.0.191",
-    "@rushstack/eslint-config": "3.4.1",
-    "@typescript-eslint/eslint-plugin": "5.62.0",
-    "@typescript-eslint/parser": "5.62.0"
+    "@definitelytyped/eslint-plugin": "0.0.195",
+    "@rushstack/eslint-config": "3.5.0",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "6.11.0"
   },
   "engines": {
     "node": ">=12"
