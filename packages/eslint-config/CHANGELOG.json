@@ -2,6 +2,20 @@
   "name": "@kcws/eslint-config",
   "entries": [
     {
+      "version": "0.28.1",
+      "tag": "@kcws/eslint-config_v0.28.1",
+      "date": "Tue, 05 Dec 2023 22:37:36 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Upgrade @typescript-eslint/* to v6",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "e6a8200ab86476f5357eb16568fbbef2d70b1958"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.28.0",
       "tag": "@kcws/eslint-config_v0.28.0",
       "date": "Tue, 21 Nov 2023 22:37:59 GMT",

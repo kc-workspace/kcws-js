@@ -2,6 +2,21 @@
   "name": "@kcws/dtcheck",
   "entries": [
     {
+      "version": "0.23.2",
+      "tag": "@kcws/dtcheck_v0.23.2",
+      "date": "Tue, 05 Dec 2023 22:37:36 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.23.2`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.28.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.23.1",
       "tag": "@kcws/dtcheck_v0.23.1",
       "date": "Tue, 21 Nov 2023 22:37:59 GMT",
