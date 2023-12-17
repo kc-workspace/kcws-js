@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@microsoft/api-documenter": "7.23.12",
+    "@microsoft/api-documenter": "7.23.14",
     "typedoc": "0.25.4",
     "typedoc-plugin-missing-exports": "2.1.0",
     "typedoc-plugin-extras": "3.0.0",
