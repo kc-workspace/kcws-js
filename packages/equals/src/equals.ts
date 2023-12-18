@@ -6,6 +6,24 @@ import { isBooleanEquals } from "./boolean";
 import { isNumberEquals } from "./number";
 import { isStringEquals } from "./string";
 import { isSymbolEquals } from "./symbol";
+import { EquivalentValue } from "./types";
+
+const toBoolean = (v: EquivalentValue): boolean | undefined => {
+  if (v === EquivalentValue.EQUAL) return true;
+  else if (v === EquivalentValue.DIFF_VALUE) return false;
+  return undefined;
+};
+
+/**
+ * check only type of input using `typeof`
+ *
+ * @param a - first input
+ * @param b - second input
+ * @returns true if first and second has a same type
+ */
+export const checkType = (a: unknown, b: unknown): boolean => {
+  return typeof a === typeof b;
+};
 
 /**
  * check is inputs equal or not
@@ -17,25 +35,30 @@ import { isSymbolEquals } from "./symbol";
  *
  * @beta
  */
-export const equals = <T>(a: T, b: T, setting: ISettings): boolean => {
-  // failure case
-  if (typeof a !== typeof b) return false;
-
-  // success case
+export const equals = (a: unknown, b: unknown, setting: ISettings): boolean => {
+  // If not same type, equals always return false;
+  if (!checkType(a, b)) return false;
+  // If null or undefined, equals return true;
   if (a === null && b === null) return true;
   if (a === undefined && b === undefined) return true;
-  if (typeof a === "bigint" && typeof b === "bigint")
-    return isBigIntEquals(a, b);
-  if (typeof a === "boolean" && typeof b === "boolean")
-    return isBooleanEquals(a, b);
-  if (typeof a === "number" && typeof b === "number")
-    return isNumberEquals(a, b);
-  if (typeof a === "string" && typeof b === "string")
-    return isStringEquals(a, b);
-  if (typeof a === "symbol" && typeof b === "symbol")
-    return isSymbolEquals(a, b);
 
-  // TODO: implement equals for before types
+  let result: boolean | undefined;
+
+  result = toBoolean(isBigIntEquals(a, b));
+  if (result !== undefined) return result;
+
+  result = toBoolean(isNumberEquals(a, b));
+  if (result !== undefined) return result;
+
+  result = toBoolean(isBooleanEquals(a, b));
+  if (result !== undefined) return result;
+
+  result = toBoolean(isStringEquals(a, b));
+  if (result !== undefined) return result;
+
+  result = toBoolean(isSymbolEquals(a, b));
+  if (result !== undefined) return result;
+
   if (typeof a === "function") return false;
   if (isArray(a) && isArray(b)) return false;
   if (typeof a === "object") return false;
