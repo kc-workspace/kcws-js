@@ -4,7 +4,7 @@
 
 ```ts
 
-// @public
+// @beta
 export const checkType: (a: unknown, b: unknown) => boolean;
 
 // Warning: (ae-forgotten-export) The symbol "ISettings" needs to be exported by the entry point index.d.ts

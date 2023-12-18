@@ -25,9 +25,7 @@
             "lib-amd",
             "lib-system",
             "lib-css",
-            "temp",
             "dist",
-            ".rush",
             "rush-logs",
             "*.log"
           ]

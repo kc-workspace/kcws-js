@@ -20,6 +20,8 @@ const toBoolean = (v: EquivalentValue): boolean | undefined => {
  * @param a - first input
  * @param b - second input
  * @returns true if first and second has a same type
+ *
+ * @beta
  */
 export const checkType = (a: unknown, b: unknown): boolean => {
   return typeof a === typeof b;
