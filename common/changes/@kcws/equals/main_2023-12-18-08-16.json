@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/equals",
+      "comment": "Release first version with web-rig config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/equals"
+}
