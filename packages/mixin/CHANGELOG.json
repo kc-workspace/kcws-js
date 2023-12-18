@@ -2,6 +2,31 @@
   "name": "@kcws/mixin",
   "entries": [
     {
+      "version": "0.22.0",
+      "tag": "@kcws/mixin_v0.22.0",
+      "date": "Mon, 18 Dec 2023 10:48:31 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "bfcb9643db62cd110958f8f214f74e189f0b350e"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.32.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.24.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.29.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.21.2",
       "tag": "@kcws/mixin_v0.21.2",
       "date": "Tue, 05 Dec 2023 22:37:36 GMT",

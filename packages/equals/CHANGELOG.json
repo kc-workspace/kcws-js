@@ -1,0 +1,33 @@
+{
+  "name": "@kcws/equals",
+  "entries": [
+    {
+      "version": "0.0.2",
+      "tag": "@kcws/equals_v0.0.2",
+      "date": "Mon, 18 Dec 2023 10:48:31 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Release first version with web-rig config",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "eca6b01d3b73461a9004a9b71130b9306863e4c1"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/dtcheck\" to `0.24.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.32.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.24.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.29.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

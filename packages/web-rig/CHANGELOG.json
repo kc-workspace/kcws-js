@@ -2,6 +2,25 @@
   "name": "@kcws/web-rig",
   "entries": [
     {
+      "version": "0.32.0",
+      "tag": "@kcws/web-rig_v0.32.0",
+      "date": "Mon, 18 Dec 2023 10:48:31 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "bfcb9643db62cd110958f8f214f74e189f0b350e"
+          },
+          {
+            "comment": "Produce ESM module by default",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "94f37ab8ec13f035f2524251dd79e4e2e3d14623"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.31.0",
       "tag": "@kcws/web-rig_v0.31.0",
       "date": "Tue, 21 Nov 2023 22:37:59 GMT",

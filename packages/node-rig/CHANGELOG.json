@@ -2,6 +2,32 @@
   "name": "@kcws/node-rig",
   "entries": [
     {
+      "version": "0.30.0",
+      "tag": "@kcws/node-rig_v0.30.0",
+      "date": "Mon, 18 Dec 2023 10:48:31 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "bfcb9643db62cd110958f8f214f74e189f0b350e"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Upgrade `@types/node` from 18.18.6 to 18.19.3",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "aa22aaca745f6fc5c97df4f9a55a3260de9a990a"
+          },
+          {
+            "comment": "Produce esnext on lib-esnext directory",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "db95c90a2dcff75e242993b6d6c98cb8eea6c0ff"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.29.0",
       "tag": "@kcws/node-rig_v0.29.0",
       "date": "Tue, 21 Nov 2023 22:37:59 GMT",
