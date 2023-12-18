@@ -1,6 +1,6 @@
 {
   "extends": "@rushstack/heft-jest-plugin/includes/jest-shared.config.json",
-  "testEnvironment": "node",
+  "testEnvironment": "jest-environment-node",
   "reporters": [
     "default",
     [
