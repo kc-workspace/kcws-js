@@ -4,11 +4,12 @@
   "description": "a lint-staged configuration for kcws-js",
   "type": "commonjs",
   "main": "lib/index.js",
-  "module": "./lib/index.mjs",
+  "module": "lib-esnext/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./lib/index.js",
+      "import": "./lib-esnext/index.js",
       "default": "./lib-umd/index.js",
       "types": "./dist/index.d.ts"
     }
