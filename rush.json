@@ -19,7 +19,7 @@
    *
    * The latest version can found here: https://github.com/microsoft/rushstack/blob/main/apps/rush/CHANGELOG.md
    */
-  "rushVersion": "5.112.1",
+  "rushVersion": "5.112.2",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -31,7 +31,7 @@
    *
    * The latest version can found here: https://github.com/pnpm/pnpm/releases
    */
-  "pnpmVersion": "8.11.0",
+  "pnpmVersion": "8.12.1",
 
   /**
    * Older releases of the Node.js engine may be missing features required by your system.
@@ -41,11 +41,10 @@
    * Specify a SemVer range to ensure developers use a Node.js version that is appropriate
    * for your repo.
    *
-   * LTS schedule: https://nodejs.org/en/about/releases/
-   * LTS versions: https://nodejs.org/en/download/releases/
+   * LTS schedule: https://github.com/nodejs/release#release-schedule
    * LTS versions: https://nodejs.org/en/blog/release
    */
-  "nodeSupportedVersionRange": ">=18.12.0 <19.0.0 || >=20 || >=21",
+  "nodeSupportedVersionRange": ">=18.12.0 <19.0.0 || >=20.9.0 <21.0.0 || >=21",
 
   /**
    * If the version check above fails, Rush will display a message showing the current
@@ -53,15 +52,7 @@
    * additional instructions that will display below the warning, if there's a specific
    * tool or script you'd like the user to use to get in line with the expected version.
    */
-  // "nodeSupportedVersionInstructions": "Run 'nvs use' to switch to the expected node version.",
-
-  /**
-   * If the version check above fails, Rush will display a message showing the current
-   * node version and the supported version range. You can use this setting to provide
-   * additional instructions that will display below the warning, if there's a specific
-   * tool or script you'd like the user to use to get in line with the expected version.
-   */
-  // "nodeSupportedVersionInstructions": "Run 'nvs use' to switch to the expected node version.",
+  "nodeSupportedVersionInstructions": "asdf install",
 
   /**
    * Odd-numbered major versions of Node.js are experimental.  Even-numbered releases

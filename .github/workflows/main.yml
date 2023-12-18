@@ -137,7 +137,7 @@ jobs:
         # Support backward 'LTS' version and 'current' version
         # https://github.com/nodejs/release#release-schedule
         # https://nodejs.org/en/blog/release
-        node-version: [18, 20]
+        node-version: [18, 20, 21]
     needs:
       - testing
     steps:
