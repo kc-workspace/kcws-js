@@ -357,7 +357,7 @@
       "packageName": "@kcws/equals",
       "projectFolder": "packages/equals",
       "reviewCategory": "libraries",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@kcws/reset.css",
