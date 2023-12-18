@@ -3,12 +3,13 @@
   "version": "0.23.2",
   "description": "random number generator",
   "type": "commonjs",
-  "main": "lib/index.js",
-  "module": "./lib/index.mjs",
+  "main": "lib-commonjs/index.js",
+  "module": "lib/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./lib/index.js",
+      "require": "./lib-commonjs/index.js",
+      "import": "./lib/index.js",
       "default": "./lib-umd/index.js",
       "types": "./dist/index.d.ts"
     }
@@ -40,10 +41,10 @@
     "lib/**/*.js.map",
     "!lib/**/*.test.js",
     "!lib/**/*.test.js.map",
-    "lib/**/*.mjs",
-    "lib/**/*.mjs.map",
-    "!lib/**/*.test.mjs",
-    "!lib/**/*.test.mjs.map",
+    "lib-commonjs/**/*.js",
+    "lib-commonjs/**/*.js.map",
+    "!lib-commonjs/**/*.test.js",
+    "!lib-commonjs/**/*.test.js.map",
     "lib-umd/**/*.js",
     "lib-umd/**/*.js.map",
     "!lib-umd/**/*.test.js",
@@ -55,7 +56,7 @@
     "_phase:clean": "heft clean"
   },
   "devDependencies": {
-    "@kcws/node-rig": "workspace:*",
+    "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.63.4",

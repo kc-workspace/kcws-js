@@ -2,6 +2,6 @@
 require("@kcws/eslint-config/patch/modern-module-resolution");
 
 module.exports = {
-  extends: ["@kcws/eslint-config/profiles/node"],
+  extends: ["@kcws/eslint-config/profiles/web"],
   parserOptions: { tsconfigRootDir: __dirname },
 };
