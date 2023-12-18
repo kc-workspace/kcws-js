@@ -175,9 +175,9 @@ importers:
       '@kcws/lintstaged-config':
         specifier: workspace:*
         version: link:../lintstaged-config
-      '@kcws/node-rig':
+      '@kcws/web-rig':
         specifier: workspace:*
-        version: link:../node-rig
+        version: link:../web-rig
       '@rushstack/heft':
         specifier: 0.63.4
         version: 0.63.4(@types/node@18.19.3)

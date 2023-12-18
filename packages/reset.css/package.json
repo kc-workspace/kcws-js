@@ -2,18 +2,19 @@
   "name": "@kcws/reset.css",
   "version": "0.21.2",
   "description": "css reseting package",
-  "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/reset.css",
   "main": "lib/reset.scss.css",
   "style": "lib/reset.scss.css",
   "types": "lib/types/reset.scss.d.ts",
   "exports": {
     ".": {
       "require": "./lib/reset.scss.css",
+      "import": "./lib/reset.scss.css",
       "default": "./lib/reset.scss.css",
       "types": "./lib/types/reset.scss.d.ts"
     }
   },
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/reset.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/kc-workspace/kcws-js.git",
