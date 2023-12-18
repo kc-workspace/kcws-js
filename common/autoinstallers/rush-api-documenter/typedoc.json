@@ -11,6 +11,7 @@
     "../../../packages/mixin",
     "../../../packages/random",
     "../../../packages/reset.css",
+    "../../../packages/eslint-config",
     "../../../packages/lintstaged-config",
     "../../../typings/*"
   ],
