@@ -31,14 +31,6 @@
   "emitMjsExtensionForESModule": false,
 
   /**
-   * Specifies the intermediary folder that tests will use.  Because Jest uses the
-   * Node.js runtime to execute tests, the module format must be CommonJS.
-   *
-   * The default value is "lib".
-   */
-  // "emitFolderNameForTests": "lib-commonjs",
-
-  /**
    * If true and "isolatedModules" is configured in tsconfig.json, use a worker thread to run transpilation concurrently with type checking and declaration emit.
    */
   // "useTranspilerWorker": true

@@ -41,6 +41,10 @@
     //   "outFolderName": "lib-amd"
     // },
     {
+      "moduleKind": "commonjs",
+      "outFolderName": "lib-commonjs"
+    },
+    {
       "moduleKind": "umd",
       "outFolderName": "lib-umd"
     }
@@ -58,7 +62,7 @@
    * compiler option with the .mjs extension alongside (or instead of, if tsconfig.js
    * specifies ESNext) the default compilation output.
    */
-  "emitMjsExtensionForESModule": true,
+  // "emitMjsExtensionForESModule": true,
 
   /**
    * If true, enable behavior analogous to the "tsc --build" command. Will build projects
