@@ -1,4 +1,3 @@
-import { alphanumeric } from "../constants/whitelist";
 import {
   getRandomDynamicStringOption,
   getRandomFixedStringOption,
@@ -7,7 +6,6 @@ import {
   getRandomNumberOption,
 } from "../utils/option";
 import { RandomWeightedOption } from "./IOptions";
-import { IRandom } from "./IRandom";
 import { ISeed } from "./ISeed";
 import { Random } from "./Random";
 import { SeedFixed } from "./seeds";
@@ -121,8 +119,8 @@ describe("Random", () => {
           [options, i / divider, i === 99 ? 1 : 0] as [
             Array<RandomWeightedOption<number>>,
             number,
-            number
-          ]
+            number,
+          ],
       );
 
     it.each(cases)(
@@ -130,7 +128,7 @@ describe("Random", () => {
       (opts, seed, output) => {
         const rand = baseRand.copy(new SeedFixed(seed));
         expect(rand.weighted(...opts)).toEqual(output);
-      }
+      },
     );
   });
 });
