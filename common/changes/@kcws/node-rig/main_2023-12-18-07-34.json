@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "Upgrade `@types/node` from 18.18.6 to 18.19.3",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}
