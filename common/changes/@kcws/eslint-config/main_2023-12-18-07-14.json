@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "Add to document website",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}
