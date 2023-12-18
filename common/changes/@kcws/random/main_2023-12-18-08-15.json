@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "Move riggable from node-rig to web-rig",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/random"
+}

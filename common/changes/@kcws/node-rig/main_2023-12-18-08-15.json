@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "Produce esnext on lib-esnext directory",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}
