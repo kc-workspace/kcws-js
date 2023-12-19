@@ -2,18 +2,9 @@
   "name": "@kcws/random",
   "version": "0.24.0",
   "description": "random number generator",
-  "type": "commonjs",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./lib-commonjs/index.js",
-      "import": "./lib/index.js",
-      "default": "./lib-umd/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/random",
   "repository": {

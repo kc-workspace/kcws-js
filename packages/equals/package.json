@@ -2,18 +2,9 @@
   "name": "@kcws/equals",
   "version": "0.0.2",
   "description": "object equivalent",
-  "type": "commonjs",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./lib-commonjs/index.js",
-      "import": "./lib/index.js",
-      "default": "./lib-umd/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/equals",
   "repository": {

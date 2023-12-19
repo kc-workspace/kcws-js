@@ -2,18 +2,9 @@
   "name": "@kcws/color",
   "version": "0.0.1",
   "description": "color management",
-  "type": "commonjs",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./lib-commonjs/index.js",
-      "import": "./lib/index.js",
-      "default": "./lib-umd/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/random",
   "repository": {
