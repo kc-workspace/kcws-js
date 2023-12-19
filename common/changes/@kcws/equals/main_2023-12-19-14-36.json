@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/equals",
+      "comment": "Update configs for esm import failed",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/equals"
+}
