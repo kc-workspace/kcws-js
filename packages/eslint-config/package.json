@@ -33,14 +33,14 @@
     "_phase:clean": "heft clean"
   },
   "dependencies": {
-    "@definitelytyped/eslint-plugin": "0.0.203",
+    "@definitelytyped/eslint-plugin": "0.0.204",
     "@rushstack/eslint-config": "3.5.1",
     "@typescript-eslint/eslint-plugin": "6.11.0",
     "@typescript-eslint/parser": "6.11.0"
   },
   "devDependencies": {
     "@kcws/web-rig": "workspace:*",
-    "@rushstack/heft": "0.63.4",
+    "@rushstack/heft": "0.63.5",
     "@types/eslint": "8.56.0"
   },
   "peerDependencies": {
