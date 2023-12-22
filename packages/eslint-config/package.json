@@ -25,6 +25,7 @@
   "files": [
     "CHANGELOG.json",
     "CHANGELOG.md",
+    "dist",
     "patch",
     "profiles"
   ],
