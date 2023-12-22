@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "Support typedocs and fix package is missing files",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}
