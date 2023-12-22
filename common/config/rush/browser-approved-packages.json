@@ -24,7 +24,7 @@
     },
     {
       "name": "@kcws/web-rig",
-      "allowedCategories": [ "libraries", "prototypes" ]
+      "allowedCategories": [ "configs", "libraries", "prototypes" ]
     },
     {
       "name": "@microsoft/api-extractor",

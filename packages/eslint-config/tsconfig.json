@@ -1,0 +1,7 @@
+{
+  "extends": "./node_modules/@kcws/web-rig/profiles/js/tsconfig.base.json",
+  "include": ["./profiles/**/*.js"],
+  "compilerOptions": {
+    "rootDir": "./profiles",
+  }
+}

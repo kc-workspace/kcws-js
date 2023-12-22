@@ -1,10 +1,13 @@
-// This is a workaround for https://github.com/eslint/eslint/issues/3458
-require("@rushstack/eslint-config/patch/modern-module-resolution");
-
-/** @type {import('eslint').Linter.Config} */
-module.exports = {
-  root: true,
-  rules: {
+/**
+ * define rules with input additional rules
+ * @param  {Partial<import('eslint').Linter.RulesRecord>[]} rules - additional rules
+ * @returns {import('eslint').Linter.RulesRecord}
+ *
+ * @beta
+ */
+module.exports = (...rules) => {
+  /** @type {import('eslint').Linter.RulesRecord} */
+  const base = {
     semi: ["error", "always"],
     quotes: [
       "error",
@@ -98,5 +101,7 @@ module.exports = {
         varsIgnorePattern: "^_*",
       },
     ],
-  },
+  };
+
+  return Object.assign(base, ...rules.filter((r) => r !== undefined));
 };

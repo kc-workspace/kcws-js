@@ -74,6 +74,19 @@ importers:
       '@typescript-eslint/parser':
         specifier: 6.11.0
         version: 6.11.0(eslint@8.56.0)(typescript@5.0.4)
+      eslint:
+        specifier: ^8.0.0
+        version: 8.56.0
+    devDependencies:
+      '@kcws/web-rig':
+        specifier: workspace:*
+        version: link:../web-rig
+      '@rushstack/heft':
+        specifier: 0.63.4
+        version: 0.63.4(@types/node@18.19.3)
+      '@types/eslint':
+        specifier: 8.56.0
+        version: 8.56.0
 
   ../../packages/example:
     devDependencies:
@@ -1514,6 +1527,13 @@ packages:
 
   /@types/eslint@7.29.0:
     resolution: {integrity: sha512-VNcvioYDH8/FxaeTKkM4/TiTwt6pBV9E3OfGmvaw8tPl0rrHCJ4Ll15HRT+pMiFAf/MLQvAzC+6RzUMEL9Ceng==}
+    dependencies:
+      '@types/estree': 1.0.5
+      '@types/json-schema': 7.0.15
+    dev: true
+
+  /@types/eslint@8.56.0:
+    resolution: {integrity: sha512-FlsN0p4FhuYRjIxpbdXovvHQhtlG05O1GG/RNWvdAxTboR438IOTwmrY/vLA+Xfgg06BTkP045M3vpFwTMv1dg==}
     dependencies:
       '@types/estree': 1.0.5
       '@types/json-schema': 7.0.15

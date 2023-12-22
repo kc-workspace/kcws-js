@@ -1,13 +1,3 @@
-const base = require("./_base");
+const defineConfig = require("./common");
 
-/** @type {import('eslint').Linter.Config} */
-module.exports = {
-  root: base.root,
-  extends: [
-    "@rushstack/eslint-config/profile/web-app",
-    "@rushstack/eslint-config/mixins/tsdoc",
-  ],
-  rules: {
-    ...base.rules,
-  },
-};
+module.exports = defineConfig("web-app", {});
