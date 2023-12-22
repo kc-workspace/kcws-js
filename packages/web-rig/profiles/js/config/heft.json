@@ -16,6 +16,7 @@
       "cleanFiles": [
         {
           "includeGlobs": [
+            "lib",
             "dist",
             "rush-logs",
             "*.log"

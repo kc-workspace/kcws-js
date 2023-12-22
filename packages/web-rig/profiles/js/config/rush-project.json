@@ -3,6 +3,10 @@
 
   "operationSettings": [
     {
+      "operationName": "_phase:build",
+      "outputFolderNames": ["lib", "dist"]
+    },
+    {
       "operationName": "_phase:test",
       "outputFolderNames": ["temp/test.jest", "temp/test", "temp/coverage"]
     }
