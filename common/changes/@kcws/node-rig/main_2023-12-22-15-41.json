@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "Improve api-extractor configs templates and documents",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}

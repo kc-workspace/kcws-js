@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "Refactor config waiting for improve on next version",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}

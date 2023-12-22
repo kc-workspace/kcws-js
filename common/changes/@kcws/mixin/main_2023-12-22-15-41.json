@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "Fix import esm failed on es5 or above",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}
