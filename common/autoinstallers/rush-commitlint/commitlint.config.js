@@ -22,6 +22,7 @@ const config = {
         "reset.css",
         "node-rig",
         "web-rig",
+        "types-rig",
         "eslint-config",
         "lintstaged-config",
         "types",

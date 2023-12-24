@@ -384,6 +384,12 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/types-rig",
+      "projectFolder": "packages/types-rig",
+      "reviewCategory": "configs",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@kcws/lintstaged-config",
       "projectFolder": "packages/lintstaged-config",
       "reviewCategory": "configs",

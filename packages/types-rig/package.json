@@ -1,0 +1,51 @@
+{
+  "name": "@kcws/types-rig",
+  "version": "0.32.0",
+  "description": "a rig package for @types projects using heft",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/types-rig",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "packages/types-rig"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "heft",
+    "rig",
+    "rushjs"
+  ],
+  "files": [
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "profiles"
+  ],
+  "scripts": {
+    "_phase:build": "",
+    "_phase:clean": ""
+  },
+  "dependencies": {
+    "@microsoft/api-extractor": "7.39.0",
+    "@rushstack/heft-api-extractor-plugin": "0.2.15",
+    "@rushstack/heft-lint-plugin": "0.2.15",
+    "@rushstack/heft-typescript-plugin": "0.2.15",
+    "eslint": "8.56.0",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@rushstack/heft": "0.63.5"
+  },
+  "peerDependencies": {
+    "@rushstack/heft": "^0.51.0"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}

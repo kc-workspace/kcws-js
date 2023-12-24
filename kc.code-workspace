@@ -33,6 +33,10 @@
       "path": "packages/web-rig"
     },
     {
+      "name": "@kcws/types-rig",
+      "path": "packages/types-rig"
+    },
+    {
       "name": "@kcws/eslint-config",
       "path": "packages/eslint-config"
     },
