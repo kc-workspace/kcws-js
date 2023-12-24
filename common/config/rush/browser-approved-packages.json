@@ -20,7 +20,11 @@
     },
     {
       "name": "@kcws/node-rig",
-      "allowedCategories": [ "configs", "libraries", "prototypes" ]
+      "allowedCategories": [ "configs", "libraries", "prototypes", "typings" ]
+    },
+    {
+      "name": "@kcws/types-rig",
+      "allowedCategories": [ "typings" ]
     },
     {
       "name": "@kcws/web-rig",
@@ -44,7 +48,7 @@
     },
     {
       "name": "@rushstack/heft",
-      "allowedCategories": [ "configs", "libraries", "prototypes" ]
+      "allowedCategories": [ "configs", "libraries", "prototypes", "typings" ]
     },
     {
       "name": "@rushstack/heft-api-extractor-plugin",

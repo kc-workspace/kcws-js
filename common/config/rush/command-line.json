@@ -11,11 +11,11 @@
       "allowWarningsOnSuccess": false
     },
     {
+      // Required phase
       "name": "_phase:build",
       "dependencies": {
         "upstream": ["_phase:build"]
       },
-      // Required phase
       "ignoreMissingScript": false,
       "allowWarningsOnSuccess": false
     },
@@ -28,8 +28,8 @@
       "allowWarningsOnSuccess": false
     },
     {
-      "name": "_phase:clean",
       // Required phase
+      "name": "_phase:clean",
       "ignoreMissingScript": false,
       "allowWarningsOnSuccess": false
     }
@@ -82,19 +82,6 @@
       "phases": ["_phase:clean"],
       "enableParallelism": true,
       "incremental": false
-    },
-    {
-      "commandKind": "bulk",
-      // This cannot use test phase because test can be parallelism, but test:types cannot
-      "name": "test:types",
-      "summary": "Testing typing packages with dtslint configure",
-      // test:types using dtslint which not support parallelism
-      "enableParallelism": false,
-      "incremental": true,
-      "safeForSimultaneousRushProcesses": true,
-      "allowWarningsInSuccessfulBuild": true,
-      "ignoreMissingScript": true,
-      "ignoreDependencyOrder": true
     },
     {
       "commandKind": "global",
