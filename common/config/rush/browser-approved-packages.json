@@ -31,7 +31,15 @@
       "allowedCategories": [ "configs" ]
     },
     {
-      "name": "@rushstack/eslint-config",
+      "name": "@rushstack/eslint-patch",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "@rushstack/eslint-plugin",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "@rushstack/eslint-plugin-security",
       "allowedCategories": [ "configs" ]
     },
     {
@@ -68,6 +76,50 @@
     },
     {
       "name": "eslint",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-config-prettier",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-import-resolver-typescript",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-plugin-deprecation",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-plugin-i",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-plugin-import",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-plugin-jest",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-plugin-n",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-plugin-promise",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-plugin-react",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-plugin-tsdoc",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-plugin-unicorn",
       "allowedCategories": [ "configs" ]
     },
     {

@@ -1,4 +1,4 @@
 {
   "extends": ["../../common/autoinstallers/rush-api-documenter/typedoc.base.json"],
-  "entryPoints": ["profiles/index.js"]
+  "entryPoints": ["src/index.js"]
 }

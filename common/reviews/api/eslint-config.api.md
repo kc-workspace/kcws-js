@@ -4,16 +4,6 @@
 
 ```ts
 
-import nodeConfig = require('./node');
-import typesConfig = require('./types');
-import webConfig = require('./web');
-
-export { nodeConfig }
-
-export { typesConfig }
-
-export { webConfig }
-
 // (No @packageDocumentation comment for this package)
 
 ```

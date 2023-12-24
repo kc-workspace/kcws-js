@@ -2,7 +2,8 @@
   "name": "@kcws/eslint-config",
   "version": "0.30.0",
   "description": "kamontat's eslint config",
-  "types": "dist/index.d.ts",
+  "main": "src/index.js",
+  "types": "lib/index.d.ts",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/eslint-config",
   "repository": {
@@ -25,8 +26,8 @@
   "files": [
     "CHANGELOG.json",
     "CHANGELOG.md",
-    "dist",
-    "patch",
+    "src",
+    "lib",
     "profiles"
   ],
   "scripts": {
@@ -35,9 +36,21 @@
   },
   "dependencies": {
     "@definitelytyped/eslint-plugin": "0.0.204",
-    "@rushstack/eslint-config": "3.5.1",
+    "@rushstack/eslint-patch": "1.6.1",
+    "@rushstack/eslint-plugin": "0.13.1",
+    "@rushstack/eslint-plugin-security": "0.7.1",
     "@typescript-eslint/eslint-plugin": "6.11.0",
-    "@typescript-eslint/parser": "6.11.0"
+    "@typescript-eslint/parser": "6.11.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-deprecation": "2.0.0",
+    "eslint-plugin-import": "npm:eslint-plugin-i@2.29.1",
+    "eslint-plugin-jest": "27.6.0",
+    "eslint-plugin-n": "16.5.0",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-tsdoc": "0.2.17",
+    "eslint-plugin-unicorn": "50.0.1"
   },
   "devDependencies": {
     "@kcws/web-rig": "workspace:*",
