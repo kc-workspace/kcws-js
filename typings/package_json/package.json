@@ -38,7 +38,7 @@
   "devDependencies": {
     "@kcws/eslint-config": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
-    "tsd": "0.29.0",
+    "tsd": "0.30.0",
     "typescript": "5.0.4"
   },
   "peerDependencies": {
