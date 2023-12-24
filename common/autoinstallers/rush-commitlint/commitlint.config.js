@@ -129,6 +129,10 @@ const config = {
             description: "@kcws/web-rig package",
             title: "Web Rig Package",
           },
+          "types-rig": {
+            description: "@kcws/types-rig package",
+            title: "Types Rig Package",
+          },
           "eslint-config": {
             description: "@kcws/eslint-config package",
             title: "Eslint config",
