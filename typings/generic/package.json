@@ -30,14 +30,16 @@
     "types/index.d.ts"
   ],
   "scripts": {
-    "test:types": "tsd",
-    "_phase:build": "",
-    "_phase:clean": ""
+    "_phase:build": "heft build",
+    "_phase:test": "tsd",
+    "_phase:clean": "heft clean"
   },
   "dependencies": {},
   "devDependencies": {
     "@kcws/eslint-config": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
+    "@kcws/types-rig": "workspace:*",
+    "@rushstack/heft": "0.63.5",
     "tsd": "0.30.0",
     "typescript": "5.0.4"
   },

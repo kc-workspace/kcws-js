@@ -1,6 +1,14 @@
-// This is a workaround for https://github.com/eslint/eslint/issues/3458
-require("@kcws/eslint-config/patch/modern-module-resolution");
-
-module.exports = {
-  extends: ["@kcws/eslint-config/profiles/types"],
-};
+const createConfig = require("@kcws/eslint-config");
+module.exports = createConfig(
+  {
+    cwd: __dirname,
+    profile: "common",
+    dtyped: true,
+  },
+  {
+    rules: {
+      // This false positive global types as unused vars
+      "no-unused-vars": "off",
+    },
+  }
+);

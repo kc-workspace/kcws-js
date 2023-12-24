@@ -71,5 +71,9 @@ declare global {
   type OptionalReadonlyPackage = Readonly<OptionalPackage>;
 }
 
-declare const pkg: Package;
+/**
+ * @internal
+ */
+// eslint-disable-next-line unicorn/prevent-abbreviations
+declare const pkg: globalThis.Package;
 export default pkg;
