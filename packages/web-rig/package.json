@@ -28,8 +28,7 @@
     "profiles"
   ],
   "scripts": {
-    "_phase:build": "",
-    "_phase:clean": ""
+    "_phase:build": ""
   },
   "dependencies": {
     "@microsoft/api-extractor": "7.39.0",

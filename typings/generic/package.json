@@ -31,8 +31,7 @@
   ],
   "scripts": {
     "_phase:build": "heft build",
-    "_phase:test": "tsd",
-    "_phase:clean": "heft clean"
+    "_phase:test": "tsd"
   },
   "dependencies": {},
   "devDependencies": {

@@ -31,8 +31,7 @@
     "profiles"
   ],
   "scripts": {
-    "_phase:build": "heft build",
-    "_phase:clean": "heft clean"
+    "_phase:build": "heft build"
   },
   "dependencies": {
     "@definitelytyped/eslint-plugin": "0.0.204",

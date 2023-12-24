@@ -26,12 +26,6 @@
       },
       "ignoreMissingScript": true,
       "allowWarningsOnSuccess": false
-    },
-    {
-      // Required phase
-      "name": "_phase:clean",
-      "ignoreMissingScript": false,
-      "allowWarningsOnSuccess": false
     }
   ],
   "commands": [
@@ -55,7 +49,7 @@
       "commandKind": "phased",
       "name": "rebuild",
       "summary": "Rebuild packages using phase block",
-      "phases": ["_phase:clean", "_phase:lint", "_phase:build"],
+      "phases": ["_phase:lint", "_phase:build"],
       "enableParallelism": true,
       "incremental": false
     },
@@ -71,17 +65,19 @@
       "commandKind": "phased",
       "name": "retest",
       "summary": "Retest packages using phase block",
-      "phases": ["_phase:clean", "_phase:lint", "_phase:build", "_phase:test"],
+      "phases": ["_phase:lint", "_phase:build", "_phase:test"],
       "enableParallelism": true,
       "incremental": false
     },
     {
-      "commandKind": "phased",
+      "commandKind": "bulk",
       "name": "clean",
       "summary": "Clean packages using phase block",
-      "phases": ["_phase:clean"],
-      "enableParallelism": true,
-      "incremental": false
+      "enableParallelism": false,
+      "safeForSimultaneousRushProcesses": false,
+      "incremental": false,
+      "ignoreMissingScript": true,
+      "ignoreDependencyOrder": true
     },
     {
       "commandKind": "global",
