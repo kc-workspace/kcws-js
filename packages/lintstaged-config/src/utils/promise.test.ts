@@ -1,21 +1,21 @@
 import { toPromise } from "./promise";
 
 describe("promise utilities", () => {
-  it("wrap undefined to promise", () => {
+  it("undefined input", () => {
     return expect(toPromise(undefined)).resolves.toEqual(undefined);
   });
 
-  it("wrap array to promise", () => {
+  it("array input", () => {
     return expect(toPromise(["test", "hello"])).resolves.toEqual([
       "test",
       "hello",
     ]);
   });
 
-  it("wrap array to promise", () => {
-    const err = new Error("hello world");
+  it("error promise", () => {
+    const error = new Error("hello world");
     return expect(
-      toPromise(new Promise<string>((resolve, reject) => reject(err)))
-    ).rejects.toEqual(err);
+      toPromise(new Promise<string>((resolve, reject) => reject(error)))
+    ).rejects.toEqual(error);
   });
 });
