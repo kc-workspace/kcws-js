@@ -57,4 +57,4 @@ export type { DefaultKey } from "./constants/default";
 export type { Builder } from "./models/Config";
 
 export type { _WithUndefined } from "./types/generic";
-export type { _WalkCallback } from "./actions/rush";
+export type { WalkCallback } from "./actions/rush";

@@ -142,8 +142,8 @@ class Builder<K extends string> implements IConfigBuilder {
     );
 
     return {
-      regexs: value.regexs.concat(...(addon.regexs ?? [])),
-      actions: a.concat(...b),
+      regexs: [...value.regexs, ...addon.regexs ?? []],
+      actions: [...a, ...b],
       actionFn: addon.actionFn ?? value.actionFn,
     };
   }
@@ -236,8 +236,7 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
         if (this._isDebug)
           console.log(`dynamic action: [${dynamicActions.join(",")}]`);
 
-        results.push(...staticActions);
-        results.push(...dynamicActions);
+        results.push(...staticActions, ...dynamicActions);
       }
     }
 
@@ -295,7 +294,7 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
     );
 
     // Resolve to promise of list of string
-    return Promise.all(promises).then((v) => v.flatMap((v) => v));
+    return Promise.all(promises).then((v) => v.flat());
   }
 }
 

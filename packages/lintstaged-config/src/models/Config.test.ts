@@ -62,8 +62,7 @@ describe("Config", () => {
 
     return expect(
       config.getCommands((regex) => {
-        if (regex[0] === input) return ["found"];
-        else return [];
+        return regex[0] === input ? ["found"] : [];
       })
     ).resolves.toEqual([action]);
   });

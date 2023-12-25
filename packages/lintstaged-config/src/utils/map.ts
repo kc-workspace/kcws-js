@@ -5,7 +5,7 @@ export const isSameMap = <K, V>(
 ): boolean => {
   return (
     map1.size === map2.size &&
-    !Array.from(map1.entries()).some(([key, value]) => {
+    ![...map1.entries()].some(([key, value]) => {
       return !map2.has(key) || !compareFn(map2.get(key)!, value);
     })
   );

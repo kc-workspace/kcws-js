@@ -30,7 +30,7 @@ describe("Yamllint action", () => {
       option({ config: "example/.yamllint" }),
       `yamllint --config-file example/.yamllint --strict .`,
     ],
-  ])("options: %p, return '%s'", (opts, output) => {
-    expect(yamllint(opts)).toEqual(output);
+  ])("options: %p, return '%s'", (options, output) => {
+    expect(yamllint(options)).toEqual(output);
   });
 });

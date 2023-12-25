@@ -96,9 +96,9 @@ describe("index", () => {
 
       // We use contain because default config get absolute path of command
       // which is different on different machine
-      expected.forEach((val, ind) => {
-        expect(actual[ind]).toContain(val);
-      });
+      for (const [index, value] of expected.entries()) {
+        expect(actual[index]).toContain(value);
+      }
     }
   );
 });

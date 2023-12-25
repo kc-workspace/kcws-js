@@ -7,7 +7,7 @@ jest.mock("child_process", () => {
   };
 });
 
-import { spawnSync } from "child_process";
+import { spawnSync } from "node:child_process";
 import { getCommand } from "./cmd";
 
 beforeEach(() => {

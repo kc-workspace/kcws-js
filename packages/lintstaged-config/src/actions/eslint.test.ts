@@ -24,7 +24,7 @@ describe("Eslint action", () => {
       option({ files: ["test.js", "world.ts"] }),
       "eslint --fix --max-warnings 0 test.js world.ts",
     ],
-  ])("options: %p, return '%s'", (opts, output) => {
-    expect(eslint(opts)).toEqual(output);
+  ])("options: %p, return '%s'", (options, output) => {
+    expect(eslint(options)).toEqual(output);
   });
 });

@@ -1,5 +1,5 @@
-import { existsSync, readFileSync, statSync } from "fs";
-import { resolve, dirname } from "path";
+import { existsSync, readFileSync, statSync } from "node:fs";
+import path from "node:path";
 import { ConfigFn } from "../models/IConfig";
 import { getCommand } from "../utils/cmd";
 import { _WithUndefined } from "../types/generic";
@@ -9,19 +9,20 @@ const ROOT: string = "/";
 /**
  * @internal
  */
-export type _WalkCallback = (dir: string) => _WithUndefined<string>;
+export type WalkCallback = (directory: string) => _WithUndefined<string>;
 
-const walkDir = (file: string, cb: _WalkCallback): _WithUndefined<string> => {
-  const next = dirname(file);
+const walkDirectory = (
+  file: string,
+  cb: WalkCallback
+): _WithUndefined<string> => {
+  const next = path.dirname(file);
   if (next === ROOT) return undefined;
 
   const nextStat = statSync(next);
   if (nextStat.isDirectory()) {
     const result = cb(next);
-    if (!result) return walkDir(next, cb);
-    else return result;
+    return result ?? walkDirectory(next, cb);
   }
-
   return undefined;
 };
 
@@ -36,8 +37,8 @@ const resolveRushCommand = (): Array<string> => {
 
 const resolvePackageName = (files: Array<string>): _WithUndefined<string> => {
   for (const file of files) {
-    const name = walkDir(file, (dir) => {
-      const pkg = resolve(dir, "package.json");
+    const name = walkDirectory(file, (directory) => {
+      const pkg = path.resolve(directory, "package.json");
       if (existsSync(pkg)) {
         const content = readFileSync(pkg);
         const json = JSON.parse(content.toString("utf8"));
@@ -64,7 +65,7 @@ export const rushOn = (
   cmd: string,
   ...args: Array<string>
 ): string => {
-  const base = resolveRushCommand().concat(cmd);
+  const base = [...resolveRushCommand(), cmd];
   if (pkg) base.push("--only", pkg);
   base.push(...args);
 

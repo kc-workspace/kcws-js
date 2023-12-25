@@ -18,7 +18,7 @@ describe("Shellcheck action", () => {
 
   it.each([
     [option({ files: ["test.js", "world.ts"] }), "shellcheck test.js world.ts"],
-  ])("options: %p, return '%s'", (opts, output) => {
-    expect(shellcheck(opts)).toEqual(output);
+  ])("options: %p, return '%s'", (options, output) => {
+    expect(shellcheck(options)).toEqual(output);
   });
 });

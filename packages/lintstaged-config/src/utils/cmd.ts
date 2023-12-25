@@ -1,4 +1,4 @@
-import { spawnSync } from "child_process";
+import { spawnSync } from "node:child_process";
 
 /**
  * Find command on the system path, and return the absolute path to the command;
@@ -11,9 +11,8 @@ import { spawnSync } from "child_process";
  */
 export const getCommand = (name: string): string => {
   // Remove spaces and symbols from input
-  const _name = name.replace(/[!@#$%^&*+ ]/g, "");
+  const _name = name.replaceAll(/[ !#$%&*+@^]/, "");
   const checking = ["command", "-v", _name].join(" ");
   const output = spawnSync(checking, { shell: true, encoding: "utf8" });
-  if (output.status === 0) return output.stdout.trim();
-  else return name;
+  return output.status === 0 ? output.stdout.trim() : name;
 };

@@ -1,8 +1,8 @@
 jest.mock("child_process", () => {
   return {
-    spawnSync: jest.fn().mockImplementation((cmd: string) => ({
+    spawnSync: jest.fn().mockImplementation((command: string) => ({
       status: 0,
-      stdout: cmd.split(" ")[2],
+      stdout: command.split(" ")[2],
     })),
   };
 });
@@ -22,7 +22,7 @@ describe("Prettier action", () => {
       option({ files: ["test.js", "world.ts"] }),
       "prettier --write test.js world.ts",
     ],
-  ])("options: %p, return '%s'", (opts, output) => {
-    expect(prettier(opts)).toEqual(output);
+  ])("options: %p, return '%s'", (options, output) => {
+    expect(prettier(options)).toEqual(output);
   });
 });

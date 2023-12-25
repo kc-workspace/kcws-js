@@ -10,5 +10,5 @@ import { getCommand } from "../utils/cmd";
  * @beta
  */
 export const generic = (cmd: string, ...args: Array<string>): string => {
-  return [getCommand(cmd)].concat(...args).join(" ");
+  return [getCommand(cmd), ...args].join(" ");
 };

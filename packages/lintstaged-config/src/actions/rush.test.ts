@@ -1,12 +1,12 @@
 jest.mock("fs");
 jest.mock("child_process");
 
-import { existsSync, readFileSync, statSync } from "fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import {
   spawnSync,
   type SpawnSyncOptionsWithStringEncoding,
   type SpawnSyncReturns,
-} from "child_process";
+} from "node:child_process";
 import { rush, rushOn } from "./rush";
 
 type SpawnSyncFn = (
