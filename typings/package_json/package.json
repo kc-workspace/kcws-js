@@ -24,13 +24,15 @@
     "package.json"
   ],
   "files": [
-    "README.md",
     "CHANGELOG.json",
     "CHANGELOG.md",
     "types/index.d.ts"
   ],
   "scripts": {
-    "_phase:build": "heft build",
+    "build": "heft build",
+    "test": "tsd",
+    "clean": "heft clean",
+    "_phase:build": "heft run --only build",
     "_phase:test": "tsd"
   },
   "dependencies": {},
