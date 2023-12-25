@@ -7,13 +7,15 @@ import { _WithUndefined } from "../types/generic";
 const ROOT: string = "/";
 
 /**
+ * A walking callback with walk nested directory
+ *
  * @internal
  */
-export type WalkCallback = (directory: string) => _WithUndefined<string>;
+export type _WalkCallback = (directory: string) => _WithUndefined<string>;
 
 const walkDirectory = (
   file: string,
-  cb: WalkCallback
+  cb: _WalkCallback
 ): _WithUndefined<string> => {
   const next = path.dirname(file);
   if (next === ROOT) return undefined;

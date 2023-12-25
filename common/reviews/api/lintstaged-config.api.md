@@ -117,8 +117,8 @@ export const rushOn: (pkg: string | undefined, cmd: string, ...args: Array<strin
 // @beta
 export const shellcheck: BaseActionFn<IShellcheckOptions>;
 
-// @internal (undocumented)
-export type _WalkCallback = (dir: string) => _WithUndefined<string>;
+// @internal
+export type _WalkCallback = (directory: string) => _WithUndefined<string>;
 
 // @internal
 export type _WithUndefined<T> = T | undefined;
