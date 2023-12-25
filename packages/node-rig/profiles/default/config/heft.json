@@ -27,7 +27,8 @@
             "lib-css",
             "dist",
             "rush-logs",
-            "*.log"
+            "*.log",
+            "coverage"
           ]
         }
       ],
@@ -37,7 +38,7 @@
             "pluginPackage": "@rushstack/heft-typescript-plugin"
           }
         },
-        "lint": {
+        "eslint": {
           "taskDependencies": ["typescript"],
           "taskPlugin": {
             "pluginPackage": "@rushstack/heft-lint-plugin"
