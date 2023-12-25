@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/types-rig",
+      "comment": "Add new riggable package for types (e.g. @types package)",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/types-rig"
+}

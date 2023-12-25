@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/web-rig",
+      "comment": "Disable tsdoc metadata on js profile to fix incompatible",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/web-rig"
+}

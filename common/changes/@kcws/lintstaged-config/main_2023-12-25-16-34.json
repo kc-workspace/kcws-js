@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "comment": "Support new eslint-config rules",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config"
+}

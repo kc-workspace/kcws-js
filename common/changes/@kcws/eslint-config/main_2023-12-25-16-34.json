@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "Add eslint-unicorn for additional rules on js/ts languages",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}
