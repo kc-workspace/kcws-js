@@ -74,7 +74,6 @@
       "name": "clean",
       "summary": "Clean packages using phase block",
       "enableParallelism": false,
-      "safeForSimultaneousRushProcesses": false,
       "incremental": false,
       "ignoreMissingScript": true,
       "ignoreDependencyOrder": true
@@ -83,7 +82,6 @@
       "commandKind": "global",
       "name": "hooks:format",
       "summary": "Used by the pre-commit Git hook. This command invokes code styles to reformat staged changes.",
-      "safeForSimultaneousRushProcesses": true,
       "autoinstallerName": "rush-lintstaged",
       "shellCommand": "sh common/autoinstallers/rush-lintstaged/index.sh"
     },
@@ -91,7 +89,6 @@
       "commandKind": "global",
       "name": "hooks:commitlint",
       "summary": "Used by the commit-msg Git hook. This command invokes linting commit message.",
-      "safeForSimultaneousRushProcesses": true,
       "autoinstallerName": "rush-commitlint",
       "shellCommand": "sh common/autoinstallers/rush-commitlint/lint.sh"
     },
@@ -99,7 +96,6 @@
       "commandKind": "global",
       "name": "docs:v1",
       "summary": "invokes api-extractor to create document markdown.",
-      "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-api-documenter",
       "shellCommand": "sh common/autoinstallers/rush-api-documenter/index.sh"
     },
@@ -107,7 +103,6 @@
       "commandKind": "global",
       "name": "docs:v2",
       "summary": "invokes typedocs to create document markdown.",
-      "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-api-documenter",
       "shellCommand": "sh common/autoinstallers/rush-api-documenter/index-v2.sh"
     },
@@ -115,7 +110,6 @@
       "commandKind": "global",
       "name": "upgrade",
       "summary": "Upgrade dependencies of each packages (including autoinstallers)",
-      "safeForSimultaneousRushProcesses": false,
       "autoinstallerName": "rush-dependencies-updater",
       "shellCommand": "sh common/autoinstallers/rush-dependencies-updater/index.sh"
     },
