@@ -20,14 +20,14 @@ function createConfig(data, override) {
     },
     extends: mergeExtends(
       "eslint:recommended",
-      whatIf(profile.length > 0, resolveProfile(profile)),
-      whatIf(data.typescript ?? true, resolveMixin("typescript")),
-      whatIf(data.dtyped ?? false, resolveMixin("definitelytyped")),
-      whatIf(data.tsdoc ?? false, resolveMixin("tsdoc")),
-      whatIf(data.react ?? false, resolveMixin("react")),
-      whatIf(data.jest ?? false, resolveMixin("jest")),
-      whatIf(data.rushstack ?? false, resolveMixin("rushstack")),
-      whatIf(data.prettier ?? true, resolveMixin("prettier"))
+      whatIf(profile.length > 0, resolveProfile(profile, data.local)),
+      whatIf(data.typescript ?? true, resolveMixin("typescript", data.local)),
+      whatIf(data.dtyped ?? false, resolveMixin("definitelytyped", data.local)),
+      whatIf(data.tsdoc ?? false, resolveMixin("tsdoc", data.local)),
+      whatIf(data.react ?? false, resolveMixin("react", data.local)),
+      whatIf(data.jest ?? false, resolveMixin("jest", data.local)),
+      whatIf(data.rushstack ?? false, resolveMixin("rushstack", data.local)),
+      whatIf(data.prettier ?? true, resolveMixin("prettier", data.local))
     ),
     ignorePatterns: ["dist/**", "temp/**", "lib/**", "lib-*/**", ".rush/**"],
   });
