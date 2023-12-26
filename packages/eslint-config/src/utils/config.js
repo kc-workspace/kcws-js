@@ -44,17 +44,17 @@ function mergeParserOptions(...options) {
  * @returns {EslintPlugins} merged eslint plugins
  */
 function mergePlugins(...plugins) {
-  return flatObject(...plugins.map(toArray));
+  return flatObject(...plugins.map((p) => toArray(p)));
 }
 
 /**
  * Merge input extends value and flatten them
  *
- * @param {Optional<string | EslintExtends>[]} exts - eslint extends list
+ * @param {Optional<string | EslintExtends>[]} data - eslint extends list
  * @returns {EslintExtends} merged eslint extends
  */
-function mergeExtends(...exts) {
-  return flatObject(...exts.map(toArray));
+function mergeExtends(...data) {
+  return flatObject(...data.map((p) => toArray(p)));
 }
 
 /**
@@ -103,7 +103,7 @@ function mergeOverrides(...overrides) {
  * @returns {EslintIgnorePatterns} merged eslint ignore pattern
  */
 function mergeIgnorePatterns(...ignorePatterns) {
-  return flatObject(...ignorePatterns.map(toArray));
+  return flatObject(...ignorePatterns.map((p) => toArray(p)));
 }
 
 /**
@@ -129,8 +129,8 @@ function mergeConfig(a, b) {
   const plugins = mergePlugins(a?.plugins, b?.plugins);
   if (!isEmpty(plugins)) config.plugins = plugins;
 
-  const exts = mergeExtends(a?.extends, b?.extends);
-  if (!isEmpty(exts)) config.extends = exts;
+  const extend = mergeExtends(a?.extends, b?.extends);
+  if (!isEmpty(extend)) config.extends = extend;
 
   const settings = mergeSettings(a?.settings, b?.settings);
   if (!isEmpty(settings)) config.settings = settings;

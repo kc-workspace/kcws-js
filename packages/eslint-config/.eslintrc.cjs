@@ -1,8 +1,9 @@
 const createConfig = require("./src");
 module.exports = createConfig({
   cwd: __dirname,
-  profile: "web",
+  profile: "node",
   typescript: false,
   commonjs: true,
+  rushstack: true,
   local: true,
 });

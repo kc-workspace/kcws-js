@@ -17,7 +17,7 @@
  * @property {boolean} [react=false]     - enabled react feature
  * @property {boolean} [jest=false]      - enabled jest feature
  * @property {boolean} [rushstack=false] - enabled rushstack feature
- * @property {boolean} [local=false]     - all extends will use local relative path instead
+ * @property {boolean} [local=false]     - only for lint itself
  */
 
-export {};
+module.exports = {};

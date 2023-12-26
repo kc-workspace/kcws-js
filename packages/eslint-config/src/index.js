@@ -27,6 +27,7 @@ function createConfig(data, override) {
       whatIf(data.react ?? false, resolveMixin("react", data.local)),
       whatIf(data.jest ?? false, resolveMixin("jest", data.local)),
       whatIf(data.rushstack ?? false, resolveMixin("rushstack", data.local)),
+      whatIf(data.commonjs ?? false, resolveMixin("commonjs", data.local)),
       whatIf(data.prettier ?? true, resolveMixin("prettier", data.local))
     ),
     ignorePatterns: ["dist/**", "temp/**", "lib/**", "lib-*/**", ".rush/**"],

@@ -32,6 +32,7 @@ function toArray(input) {
  * @returns {T[]} a flatten array
  */
 function flatObject(...inputs) {
+  // eslint-disable-next-line unicorn/no-array-callback-reference
   return inputs.flat().filter(isValid);
 }
 
