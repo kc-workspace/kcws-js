@@ -137,7 +137,6 @@ module.exports = defineConfig({
     "import/newline-after-import": "warn",
     "import/no-empty-named-blocks": "warn",
     "import/no-namespace": "warn",
-    "import/prefer-default-export": ["warn", { target: "single" }],
     "import/order": [
       "warn",
       {
