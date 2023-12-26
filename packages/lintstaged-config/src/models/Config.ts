@@ -142,7 +142,7 @@ class Builder<K extends string> implements IConfigBuilder {
     );
 
     return {
-      regexs: [...value.regexs, ...addon.regexs ?? []],
+      regexs: [...value.regexs, ...(addon.regexs ?? [])],
       actions: [...a, ...b],
       actionFn: addon.actionFn ?? value.actionFn,
     };
