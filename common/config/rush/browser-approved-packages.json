@@ -87,6 +87,10 @@
       "allowedCategories": [ "configs" ]
     },
     {
+      "name": "eslint-import-resolver-node",
+      "allowedCategories": [ "configs" ]
+    },
+    {
       "name": "eslint-import-resolver-typescript",
       "allowedCategories": [ "configs" ]
     },

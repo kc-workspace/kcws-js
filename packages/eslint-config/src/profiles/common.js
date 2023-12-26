@@ -7,7 +7,10 @@ module.exports = defineConfig({
     "eslint-plugin-import",
     "eslint-plugin-promise"
   ),
-  extends: ["plugin:eslint-plugin-unicorn/recommended"],
+  extends: [
+    "plugin:eslint-plugin-unicorn/recommended",
+    "plugin:import/recommended",
+  ],
   rules: {
     "@rushstack/security/no-unsafe-regexp": "warn",
     "unicorn/filename-case": [
@@ -122,6 +125,30 @@ module.exports = defineConfig({
         // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md#allowlist
         // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/ae844593e62bd98a50a4e54a80a0566495f64c3b/rules/shared/abbreviations.js#L231C16-L231C32
         allowList: {},
+      },
+    ],
+    // Already use deprecation/deprecation rules
+    "import/no-deprecated": "off",
+    "import/first": "error",
+    // NOTES: Expensive rules with comparatively computationally
+    "import/no-cycle": ["error", { ignoreExternal: true }],
+    "import/no-absolute-path": "error",
+    "import/no-self-import": "error",
+    "import/newline-after-import": "warn",
+    "import/no-empty-named-blocks": "warn",
+    "import/no-namespace": "warn",
+    "import/prefer-default-export": ["warn", { target: "single" }],
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        groups: [
+          "type",
+          ["builtin", "external", "internal"],
+          ["parent", "sibling", "index"],
+          "object",
+          "unknown",
+        ],
       },
     ],
   },

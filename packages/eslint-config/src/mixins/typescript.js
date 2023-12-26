@@ -1,4 +1,4 @@
-const { typescripts, dts, javascripts } = require("../constants");
+const { typescripts, dts, javascripts, lang } = require("../constants");
 const { defineConfig } = require("../utils/config");
 
 module.exports = defineConfig({
@@ -23,6 +23,20 @@ module.exports = defineConfig({
         // Disable this when using with typescript
         // ref: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-syntax.md
         "n/no-unsupported-features/es-syntax": "off",
+
+        // TypeScript compilation already ensures that named imports exist in the referenced module
+        "import/named": "off",
+      },
+      settings: {
+        "import/extensions": lang(typescripts, javascripts),
+        "import/external-module-folders": [
+          "node_modules",
+          "node_modules/@types",
+        ],
+        "import/resolver": {
+          [require.resolve("eslint-import-resolver-typescript")]: true,
+          [require.resolve("eslint-import-resolver-node")]: true,
+        },
       },
     },
     {
