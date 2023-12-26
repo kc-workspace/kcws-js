@@ -2,6 +2,40 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "0.23.0",
+      "tag": "@kcws/reset.css_v0.23.0",
+      "date": "Tue, 26 Dec 2023 22:37:17 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update configs for esm import failed",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "db432f98aaee7912031617caa40168637b373bdc"
+          },
+          {
+            "comment": "Fix import esm failed on es5 or above",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "ac7ca4c6fbfb2b0da6b041157843f138b75344cc"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "19d5b06db49e4df1638b98a4f0e96917b3fb109f"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.33.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.25.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.22.0",
       "tag": "@kcws/reset.css_v0.22.0",
       "date": "Mon, 18 Dec 2023 10:48:31 GMT",

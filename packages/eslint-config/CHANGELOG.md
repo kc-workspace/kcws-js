@@ -1,6 +1,18 @@
 # Change Log - @kcws/eslint-config
 
-This log was last generated on Mon, 18 Dec 2023 10:48:31 GMT and should not be manually modified.
+This log was last generated on Tue, 26 Dec 2023 22:37:17 GMT and should not be manually modified.
+
+## 0.30.0
+Tue, 26 Dec 2023 22:37:17 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+### Patches
+
+- Refactor config waiting for improve on next version
+- Support typedocs and fix package is missing files
 
 ## 0.29.0
 Mon, 18 Dec 2023 10:48:31 GMT

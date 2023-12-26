@@ -1,6 +1,18 @@
 # Change Log - @kcws/mixin
 
-This log was last generated on Mon, 18 Dec 2023 10:48:31 GMT and should not be manually modified.
+This log was last generated on Tue, 26 Dec 2023 22:37:17 GMT and should not be manually modified.
+
+## 0.23.0
+Tue, 26 Dec 2023 22:37:17 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+### Patches
+
+- Update configs for esm import failed
+- Fix import esm failed on es5 or above
 
 ## 0.22.0
 Mon, 18 Dec 2023 10:48:31 GMT

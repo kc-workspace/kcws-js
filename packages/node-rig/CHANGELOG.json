@@ -2,6 +2,27 @@
   "name": "@kcws/node-rig",
   "entries": [
     {
+      "version": "0.31.0",
+      "tag": "@kcws/node-rig_v0.31.0",
+      "date": "Tue, 26 Dec 2023 22:37:17 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Improve api-extractor configs templates and documents",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "ac7ca4c6fbfb2b0da6b041157843f138b75344cc"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "19d5b06db49e4df1638b98a4f0e96917b3fb109f"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.30.0",
       "tag": "@kcws/node-rig_v0.30.0",
       "date": "Mon, 18 Dec 2023 10:48:31 GMT",
