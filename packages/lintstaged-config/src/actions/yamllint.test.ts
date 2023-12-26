@@ -1,4 +1,4 @@
-jest.mock("child_process", () => {
+jest.mock("node:child_process", () => {
   return {
     spawnSync: jest.fn().mockImplementation((cmd: string) => ({
       status: 0,

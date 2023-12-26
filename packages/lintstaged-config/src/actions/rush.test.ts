@@ -1,5 +1,5 @@
-jest.mock("fs");
-jest.mock("child_process");
+jest.mock("node:fs");
+jest.mock("node:child_process");
 
 import { existsSync, readFileSync, statSync } from "node:fs";
 import {
