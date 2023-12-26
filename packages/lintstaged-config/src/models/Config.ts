@@ -7,7 +7,6 @@ import type {
 } from "./IConfig";
 
 import { defineDefaultConfig, type DefaultKey } from "../constants/default";
-
 import { toArray } from "../utils/array";
 import { toPromise } from "../utils/promise";
 import { isSameMap } from "../utils/map";

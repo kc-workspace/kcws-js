@@ -1,6 +1,7 @@
+import type { IConfigValue } from ".";
+
 import defineConfig, { Config } from ".";
 
-import type { IConfigValue } from ".";
 
 describe("index", () => {
   it("exported defineConfig function", () => {

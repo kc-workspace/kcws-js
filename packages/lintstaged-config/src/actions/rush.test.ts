@@ -7,6 +7,7 @@ import {
   type SpawnSyncOptionsWithStringEncoding,
   type SpawnSyncReturns,
 } from "node:child_process";
+
 import { rush, rushOn } from "./rush";
 
 type SpawnSyncFn = (
