@@ -114,9 +114,9 @@ importers:
         specifier: 50.0.1
         version: 50.0.1(eslint@8.56.0)
     devDependencies:
-      '@kcws/web-rig':
+      '@kcws/node-rig':
         specifier: workspace:*
-        version: link:../web-rig
+        version: link:../node-rig
       '@rushstack/heft':
         specifier: 0.63.5
         version: 0.63.5(@types/node@18.19.3)
