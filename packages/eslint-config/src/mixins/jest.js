@@ -1,3 +1,4 @@
+const { tests } = require("../constants");
 const { defineConfig } = require("../utils/config");
 
 module.exports = defineConfig({
@@ -6,33 +7,7 @@ module.exports = defineConfig({
   },
   overrides: [
     {
-      files: [
-        // Test files
-        "*.test.ts",
-        "*.test.tsx",
-        "*.test.js",
-        "*.test.jsx",
-        "*.spec.ts",
-        "*.spec.tsx",
-        "*.spec.js",
-        "*.spec.jsx",
-
-        // Facebook convention
-        "**/__mocks__/*.ts",
-        "**/__mocks__/*.tsx",
-        "**/__mocks__/*.js",
-        "**/__mocks__/*.jsx",
-        "**/__tests__/*.ts",
-        "**/__tests__/*.tsx",
-        "**/__tests__/*.js",
-        "**/__tests__/*.jsx",
-
-        // Microsoft convention
-        "**/test/*.ts",
-        "**/test/*.tsx",
-        "**/test/*.js",
-        "**/test/*.jsx",
-      ],
+      files: tests,
       plugins: ["jest"],
       extends: ["plugin:jest/recommended"],
       rules: {

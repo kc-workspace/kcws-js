@@ -1,3 +1,4 @@
+const { typescripts, dts, javascripts } = require("../constants");
 const { defineConfig } = require("../utils/config");
 
 module.exports = defineConfig({
@@ -8,8 +9,8 @@ module.exports = defineConfig({
   },
   overrides: [
     {
-      files: ["*.ts", "*.tsx"],
-      excludedFiles: ["*.d.ts"],
+      files: typescripts,
+      excludedFiles: dts,
       plugins: [
         "@typescript-eslint/eslint-plugin",
         "eslint-plugin-deprecation",
@@ -25,7 +26,7 @@ module.exports = defineConfig({
       },
     },
     {
-      files: ["*.js", "*.jsx"],
+      files: javascripts,
       extends: [
         "plugin:@typescript-eslint/base",
         "plugin:eslint-plugin-deprecation/recommended",

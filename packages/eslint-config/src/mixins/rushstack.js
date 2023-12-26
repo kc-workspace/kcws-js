@@ -1,3 +1,4 @@
+const { typescripts } = require("../constants");
 const { defineConfig } = require("../utils/config");
 
 module.exports = defineConfig({
@@ -13,7 +14,7 @@ module.exports = defineConfig({
   },
   overrides: [
     {
-      files: ["*.ts", "*.tsx"],
+      files: typescripts,
       rules: {
         // RATIONALE:         See the @rushstack/eslint-plugin documentation
         "@rushstack/typedef-var": "warn",
