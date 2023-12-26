@@ -43,7 +43,7 @@
             "pluginPackage": "@rushstack/heft-typescript-plugin"
           }
         },
-        "lint": {
+        "eslint": {
           "taskDependencies": ["typescript"],
           "taskPlugin": {
             "pluginPackage": "@rushstack/heft-lint-plugin"
