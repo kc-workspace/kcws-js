@@ -1,6 +1,7 @@
 import type { ISettings } from "./interfaces";
 
 import { isArray } from "@kcws/dtcheck";
+
 import { isBigIntEquals } from "./bigint";
 import { isBooleanEquals } from "./boolean";
 import { isNumberEquals } from "./number";
@@ -32,12 +33,16 @@ export const checkType = (a: unknown, b: unknown): boolean => {
  *
  * @param a - first input
  * @param b - second input
- * @param setting - equal setting
+ * @param _setting - equal setting
  * @returns true if input is matches; otherwise, return false
  *
  * @beta
  */
-export const equals = (a: unknown, b: unknown, setting: ISettings): boolean => {
+export const equals = (
+  a: unknown,
+  b: unknown,
+  _setting: ISettings
+): boolean => {
   // If not same type, equals always return false;
   if (!checkType(a, b)) return false;
   // If null or undefined, equals return true;

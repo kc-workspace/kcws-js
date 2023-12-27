@@ -1,7 +1,8 @@
-// This is a workaround for https://github.com/eslint/eslint/issues/3458
-require("@kcws/eslint-config/patch/modern-module-resolution");
-
-module.exports = {
-  extends: ["@kcws/eslint-config/profiles/web"],
-  parserOptions: { tsconfigRootDir: __dirname },
-};
+const createConfig = require("@kcws/eslint-config");
+module.exports = createConfig({
+  cwd: __dirname,
+  profile: "web",
+  tsdoc: true,
+  jest: true,
+  rushstack: true,
+});

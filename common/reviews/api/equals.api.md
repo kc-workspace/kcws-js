@@ -10,7 +10,7 @@ export const checkType: (a: unknown, b: unknown) => boolean;
 // Warning: (ae-forgotten-export) The symbol "ISettings" needs to be exported by the entry point index.d.ts
 //
 // @beta
-export const equals: (a: unknown, b: unknown, setting: ISettings) => boolean;
+export const equals: (a: unknown, b: unknown, _setting: ISettings) => boolean;
 
 // (No @packageDocumentation comment for this package)
 

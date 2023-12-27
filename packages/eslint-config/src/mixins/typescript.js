@@ -26,6 +26,18 @@ module.exports = defineConfig({
 
         // TypeScript compilation already ensures that named imports exist in the referenced module
         "import/named": "off",
+
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            vars: "all",
+            args: "after-used",
+            argsIgnorePattern: "^_",
+            caughtErrors: "all",
+            caughtErrorsIgnorePattern: "^_",
+            destructuredArrayIgnorePattern: "^_",
+          },
+        ],
       },
       settings: {
         "import/extensions": lang(typescripts, javascripts),
