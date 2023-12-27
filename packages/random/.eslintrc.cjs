@@ -5,4 +5,16 @@ module.exports = createConfig({
   tsdoc: true,
   jest: true,
   rushstack: true,
+  custom: {
+    rules: {
+      "unicorn/prefer-code-point": "off",
+      "unicorn/filename-case": [
+        "error",
+        {
+          cases: { kebabCase: true, pascalCase: true },
+          ignore: [/^Random.*/, /^Seed.*/],
+        },
+      ],
+    },
+  },
 });
