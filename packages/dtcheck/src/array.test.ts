@@ -18,11 +18,6 @@ describe("Array", () => {
     [new Object([]), true],
     [Symbol(""), false],
   ])("is '%p' array? %s", (input, output) => {
-    if (isArray<unknown>(input)) {
-      expect(true).toEqual(output);
-      expect(input.length).toBeGreaterThanOrEqual(0);
-    } else {
-      expect(false).toEqual(output);
-    }
+    expect(isArray<unknown>(input)).toEqual(output);
   });
 });

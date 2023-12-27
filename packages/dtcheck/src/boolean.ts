@@ -2,7 +2,7 @@ import { isNotExist } from "./exist";
 
 const trueBigInt: bigint = BigInt(1);
 const falseBigInt: bigint = BigInt(0);
-const possibleBooleanStrings: Array<string> = [
+const possibleBooleanStrings: Set<string> = new Set([
   "true",
   "false",
   "True",
@@ -15,7 +15,7 @@ const possibleBooleanStrings: Array<string> = [
   "f",
   "T",
   "F",
-];
+]);
 
 const isLooseBoolean = (input: Optional<unknown>): input is boolean => {
   if (isNotExist(input)) return false;
@@ -25,7 +25,7 @@ const isLooseBoolean = (input: Optional<unknown>): input is boolean => {
     case "number":
       return input === 0 || input === 1;
     case "string":
-      return possibleBooleanStrings.includes(input);
+      return possibleBooleanStrings.has(input);
     case "bigint":
       return input === trueBigInt || input === falseBigInt;
     case "symbol":
