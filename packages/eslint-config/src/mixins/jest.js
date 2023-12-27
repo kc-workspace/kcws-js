@@ -13,6 +13,8 @@ module.exports = defineConfig({
       rules: {
         // Disable this rules because sometimes we will testing with undefined
         "unicorn/no-useless-undefined": "off",
+        // Disable null on test because sometimes we will testing on null value
+        "unicorn/no-null": "off",
         // This is when using jest.mock must come before import statement
         "import/first": "off",
       },

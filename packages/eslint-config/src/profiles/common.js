@@ -14,6 +14,7 @@ module.exports = defineConfig({
   ],
   rules: {
     "@rushstack/security/no-unsafe-regexp": "warn",
+    "unicorn/switch-case-braces": ["error", "avoid"],
     "unicorn/filename-case": [
       "error",
       {
