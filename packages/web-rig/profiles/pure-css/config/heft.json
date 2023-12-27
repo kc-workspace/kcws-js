@@ -19,9 +19,7 @@
             "lib-amd",
             "lib-system",
             "lib-css",
-            "dist",
-            "rush-logs",
-            "*.log"
+            "dist"
           ]
         }
       ],
