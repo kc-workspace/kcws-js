@@ -28,10 +28,9 @@ function createRules(data) {
 
 /**
  * @param {import('./types').Data} data - a config data
- * @param {import('eslint').Linter.Config} override - a override eslint config
  * @returns {import('eslint').Linter.Config} a eslint config
  */
-function createConfig(data, override) {
+function createConfig(data) {
   require("./patch");
 
   const profile = data.profile ?? "";
@@ -57,7 +56,7 @@ function createConfig(data, override) {
     ignorePatterns: ["dist/**", "temp/**", "lib/**", "lib-*/**", ".rush/**"],
   });
 
-  return mergeConfig(base, override);
+  return mergeConfig(base, data.custom);
 }
 
 module.exports = createConfig;

@@ -6,6 +6,7 @@
 /**
  * @typedef {"node" | "web" | "types" | "common"} DataProfile
  * @typedef {import('eslint').Linter.ParserOptions["ecmaVersion"]} EcmaVersion
+ * @typedef {import('eslint').Linter.Config} EslintConfig
  *
  * @typedef {object} Data                - a data for generate eslint configs
  * @property {string} cwd                - working directory (__dirname)
@@ -20,6 +21,7 @@
  * @property {boolean} [jest=false]      - enabled jest feature
  * @property {boolean} [rushstack=false] - enabled rushstack feature
  * @property {boolean} [local=false]     - only for lint itself
+ * @property {EslintConfig} [custom]     - custom config
  */
 
 module.exports = {};

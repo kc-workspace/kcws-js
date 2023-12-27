@@ -129,12 +129,13 @@ function mergeIgnorePatterns(...ignorePatterns) {
 /**
  * Merge 2 inputs config to single config
  *
- * @param {...import('eslint').Linter.Config} configs - a config
+ * @param {...Optional<import('eslint').Linter.Config>} configs - a config
  * @returns {import('eslint').Linter.Config} a merged config
  */
 function mergeConfig(...configs) {
   /** @type {import('eslint').Linter.Config} */
   const config = {};
+  if (configs === undefined) return config;
 
   const root = mergeRoot(...configs.map(c => c?.root));
   if (typeof root === "boolean") config.root = root;
