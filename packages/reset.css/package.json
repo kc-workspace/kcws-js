@@ -32,8 +32,11 @@
     "lib/types/*.d.ts"
   ],
   "scripts": {
+    "lint": "stylelint **/*.scss",
+    "build": "heft build",
+    "clean": "heft clean",
     "_phase:lint": "stylelint **/*.scss",
-    "_phase:build": "heft build"
+    "_phase:build": "heft run --only build -- --clean"
   },
   "devDependencies": {
     "@kcws/web-rig": "workspace:*",
