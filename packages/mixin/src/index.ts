@@ -44,13 +44,13 @@ class Mixin<BC> {
    * @beta
    */
   public apply<C>(ctor: Constructor<C>): Mixin<BC & C> {
-    Object.getOwnPropertyNames(ctor.prototype).forEach((name) => {
+    for (const name of Object.getOwnPropertyNames(ctor.prototype)) {
       const property =
         Object.getOwnPropertyDescriptor(ctor.prototype, name) ??
         Object.create(null);
 
       Object.defineProperty(this._baseCtor.prototype, name, property);
-    });
+    }
 
     return this as Mixin<BC & C>;
   }
