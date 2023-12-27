@@ -1,4 +1,5 @@
 import type { ISeed } from "../ISeed";
+
 import { Random } from "../Random";
 
 /**
@@ -9,7 +10,7 @@ import { Random } from "../Random";
  * @public
  */
 export class RandomAlea extends Random {
-  private _n: number = 4022871197;
+  private _n: number = 4_022_871_197;
   private _a: number = this._mash(" ");
   private _b: number = this._mash(" ");
   private _c: number = this._mash(" ");
@@ -31,10 +32,10 @@ export class RandomAlea extends Random {
   }
 
   public pseudo(): number {
-    this._y = this._x * 2.3283064365386963e-10 + this._a * 2091639;
+    this._y = this._x * 2.328_306_436_538_696_3e-10 + this._a * 2_091_639;
     this._a = this._b;
     this._b = this._c;
-    this._x = this._y | 0;
+    this._x = Math.trunc(this._y);
     this._c = this._y - this._x;
 
     return this._c;
@@ -54,14 +55,14 @@ export class RandomAlea extends Random {
     let t;
     let s;
     let f;
-    const e = 0.02519603282416938;
+    const magic = 0.025_196_032_824_169_38;
     for (let u = 0; u < seed.length; u++) {
       s = seed.charCodeAt(u);
       this._n += s;
-      f = e * this._n - ((this._n * e) | 0);
-      t = f * ((e * this._n) | 0);
-      this._n = 4294967296 * (t - (t | 0)) + (t | 0);
+      f = magic * this._n - Math.trunc(this._n * magic);
+      t = f * Math.trunc(magic * this._n);
+      this._n = 4_294_967_296 * (t - Math.trunc(t)) + Math.trunc(t);
     }
-    return (this._n | 0) * 2.3283064365386963e-10;
+    return Math.trunc(this._n) * 2.328_306_436_538_696_3e-10;
   }
 }

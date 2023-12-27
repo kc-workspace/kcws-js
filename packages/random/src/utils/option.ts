@@ -7,10 +7,10 @@ import {
   RandomNumberOption,
 } from "../models/IOptions";
 
-const toInt = (i: number): number => Math.floor(i);
+const toInt = (index: number): number => Math.floor(index);
 
-const onlyBetween = (i: number, min: number, max: number): number =>
-  Math.min(Math.max(i, min), max);
+const onlyBetween = (index: number, min: number, max: number): number =>
+  Math.min(Math.max(index, min), max);
 
 export const getRandomIntOption = (
   input?: Partial<RandomIntOption>
@@ -39,18 +39,16 @@ export const getRandomNumberOption = (
   input?: Partial<RandomNumberOption>
 ): RandomNumberOption => {
   const integerMode = input?.integerMode ?? false;
-  if (integerMode) {
-    return {
-      ...getRandomIntOption(input),
-      integerMode,
-    };
-  } else {
-    return {
-      ...getRandomFloatOption(input),
-      maxInclusive: false,
-      integerMode,
-    };
-  }
+  return integerMode
+    ? {
+        ...getRandomIntOption(input),
+        integerMode,
+      }
+    : {
+        ...getRandomFloatOption(input),
+        maxInclusive: false,
+        integerMode,
+      };
 };
 
 export const getRandomFixedStringOption = (

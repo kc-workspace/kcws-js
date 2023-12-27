@@ -1,4 +1,5 @@
 import type { ISeed } from "../ISeed";
+
 import { Random } from "../Random";
 
 /**
@@ -34,7 +35,7 @@ export class RandomXoshiro128PP extends Random {
     this._c = this._c ^ t;
     /* eslint-disable-next-line no-bitwise */
     this._d = (this._d << 11) | (this._d >>> 21);
-    return (r >>> 0) / 4294967296;
+    return (r >>> 0) / 4_294_967_296;
   }
 
   public copy(s?: ISeed): Random {

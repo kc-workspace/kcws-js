@@ -1,27 +1,29 @@
 import { Seed } from "./Seed";
 
+const const1 = () => 1;
+
 describe("Seed", () => {
   it("constant seed", () => {
-    const seed = new Seed("", () => () => 1);
+    const seed = new Seed("", () => const1);
     expect(seed.value()).toEqual(1);
     expect(seed.value()).toEqual(1);
   });
 
   it("constant seed with patch", () => {
-    const seed = new Seed("", () => () => 1);
+    const seed = new Seed("", () => const1);
     expect(seed.value()).toEqual(1);
-    expect(seed.value((i) => i + 1)).toEqual(2);
-    expect(seed.value((i) => i + 1)).toEqual(2);
+    expect(seed.value(index => index + 1)).toEqual(2);
+    expect(seed.value(index => index + 1)).toEqual(2);
   });
 
   it("dynamic seed", () => {
     const seed = new Seed("", () => {
       const array = [1, 2, 3, 4, 5, 6];
-      let i = 0;
+      let index = 0;
 
       return () => {
-        const out = array[i];
-        i = i < array.length - 1 ? i + 1 : 0;
+        const out = array[index];
+        index = index < array.length - 1 ? index + 1 : 0;
         return out;
       };
     });
@@ -36,7 +38,7 @@ describe("Seed", () => {
   });
 
   it("copy seed", () => {
-    const seed = new Seed("123", (i) => () => parseInt(i));
+    const seed = new Seed("123", index => () => Number.parseInt(index));
     expect(seed.value()).toEqual(123);
 
     const newSeed = seed.copy("555");
@@ -44,10 +46,10 @@ describe("Seed", () => {
   });
 
   it("full copy vs seed constructor", () => {
-    const baseSeed = new Seed("123", (i) => () => parseInt(i));
+    const baseSeed = new Seed("123", index => () => Number.parseInt(index));
 
-    const newSeed = new Seed("a", (i) => () => i.charCodeAt(0));
-    const copiedSeed = baseSeed.copy("a", (i) => () => i.charCodeAt(0));
+    const newSeed = new Seed("a", index => () => index.charCodeAt(0));
+    const copiedSeed = baseSeed.copy("a", index => () => index.charCodeAt(0));
 
     expect(newSeed.value()).toEqual(copiedSeed.value());
   });

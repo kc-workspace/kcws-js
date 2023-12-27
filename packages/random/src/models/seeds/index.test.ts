@@ -11,24 +11,24 @@ describe("Predefined seed", () => {
     [1.112, 1.112],
     [123, 123],
     [123.99, 123.99],
-  ])("Fixed: Fixed(%s).getSeed() return %s", (i, j) => {
-    const f = new SeedFixed(i);
-    expect(f.value()).toBeCloseTo(j, 5);
+  ])("Fixed: Fixed(%s).getSeed() return %s", (index, expected) => {
+    const f = new SeedFixed(index);
+    expect(f.value()).toBeCloseTo(expected, 5);
   });
 
   test.each([
-    ["text", 824417223, 1684408431],
-    ["string", 3903872657, 3114980239],
-    ["number", 1793145994, 4017401038],
-    ["", 1493338014, 2822906736],
-    ["boolean", 4108559831, 723513985],
-  ])("XFNV1A: Xfnv1a(%s).getSeed() return %s", (i, j, k) => {
-    const x = new SeedXfnv1a(i);
-    expect(x.value()).toBeCloseTo(j, 4);
+    ["text", 824_417_223, 1_684_408_431],
+    ["string", 3_903_872_657, 3_114_980_239],
+    ["number", 1_793_145_994, 4_017_401_038],
+    ["", 1_493_338_014, 2_822_906_736],
+    ["boolean", 4_108_559_831, 723_513_985],
+  ])("XFNV1A: Xfnv1a(%s).getSeed() return %s", (index, expected, k) => {
+    const x = new SeedXfnv1a(index);
+    expect(x.value()).toBeCloseTo(expected, 4);
     expect(x.value()).toBeCloseTo(k, 4);
 
-    const y = new SeedXfnv1a(i);
-    expect(y.value()).toBeCloseTo(j, 4);
+    const y = new SeedXfnv1a(index);
+    expect(y.value()).toBeCloseTo(expected, 4);
   });
 
   test("XFNV1A: Average of result random number will be the sum (approximately +- 1000)", () => {
@@ -39,13 +39,13 @@ truly understands my stamp-collecting obsession.`;
     /**
      * This magic number depend on input string for hashing and recursive size
      */
-    const magicNumber = 2155928635;
+    const magicNumber = 2_155_928_635;
     const round = 1;
 
     const a = new SeedXfnv1a(inputString);
 
     let sum = 0;
-    for (let i = 0; i < size; i++) {
+    for (let index = 0; index < size; index++) {
       sum += a.value();
     }
     const result = sum / size;
@@ -55,18 +55,18 @@ truly understands my stamp-collecting obsession.`;
   });
 
   test.each([
-    ["text", 549197882, 228113408],
-    ["string", 3171331317, 2532059804],
-    ["number", 2173514142, 3761507789],
-    ["", 167010153, 2610615433],
-    ["boolean", 2579961042, 19056677],
-  ])("XMUR3: Xmur3(%s).getSeed() return %s", (i, j, k) => {
-    const x = new SeedXmur3(i);
-    expect(x.value()).toBeCloseTo(j, 4);
+    ["text", 549_197_882, 228_113_408],
+    ["string", 3_171_331_317, 2_532_059_804],
+    ["number", 2_173_514_142, 3_761_507_789],
+    ["", 167_010_153, 2_610_615_433],
+    ["boolean", 2_579_961_042, 19_056_677],
+  ])("XMUR3: Xmur3(%s).getSeed() return %s", (index, expected, k) => {
+    const x = new SeedXmur3(index);
+    expect(x.value()).toBeCloseTo(expected, 4);
     expect(x.value()).toBeCloseTo(k, 4);
 
-    const y = new SeedXmur3(i);
-    expect(y.value()).toBeCloseTo(j, 4);
+    const y = new SeedXmur3(index);
+    expect(y.value()).toBeCloseTo(expected, 4);
   });
 
   test("XMUR3: Average of result random number will be the sum (approximately +- 1000)", () => {
@@ -77,13 +77,13 @@ teenagers of using frisbees as go-cart wheels.`;
     /**
      * This magic number depend on input string for hashing and recursive size
      */
-    const magicNumber = 2132101816;
+    const magicNumber = 2_132_101_816;
     const round = 1;
 
     const a = new SeedXmur3(inputString);
 
     let sum = 0;
-    for (let i = 0; i < size; i++) {
+    for (let index = 0; index < size; index++) {
       sum += a.value();
     }
     const result = sum / size;

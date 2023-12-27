@@ -1,4 +1,5 @@
 import type { SeedBuilder } from "../ISeed";
+
 import { Seed } from "../Seed";
 
 /**
@@ -22,8 +23,8 @@ export class SeedFixed extends Seed {
    *
    * @public
    */
-  public static Builder: SeedBuilder = (input) => {
-    return () => parseFloat(input);
+  public static Builder: SeedBuilder = input => {
+    return () => Number.parseFloat(input);
   };
 
   /**

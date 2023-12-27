@@ -93,20 +93,22 @@ export const numeric: Array<string> = [
  *
  * @public
  */
-export const lowerAlphanumeric: Array<string> = lowerAlphabet.concat(numeric);
+export const lowerAlphanumeric: Array<string> = [...lowerAlphabet, ...numeric];
 /**
  * List of alphabet on upper case + number from 0-9.
  * This can use as whitelist array on random option.
  *
  * @public
  */
-export const upperAlphanumeric: Array<string> = upperAlphabet.concat(numeric);
+export const upperAlphanumeric: Array<string> = [...upperAlphabet, ...numeric];
 /**
  * List of alphabet on all cases + number from 0-9.
  * This can use as whitelist array on random option.
  *
  * @public
  */
-export const alphanumeric: Array<string> = lowerAlphabet
-  .concat(upperAlphabet)
-  .concat(numeric);
+export const alphanumeric: Array<string> = [
+  ...lowerAlphabet,
+  ...upperAlphabet,
+  ...numeric,
+];

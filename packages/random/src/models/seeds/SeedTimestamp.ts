@@ -1,4 +1,5 @@
 import type { SeedBuilder } from "../ISeed";
+
 import { Seed } from "../Seed";
 
 /**

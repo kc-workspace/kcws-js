@@ -98,8 +98,7 @@ export abstract class Random implements IRandom {
    * @beta
    */
   public number(option?: Partial<RandomNumberOption>): number {
-    if (option?.integerMode) return this.int(option);
-    else return this.float(option);
+    return option?.integerMode ? this.int(option) : this.float(option);
   }
 
   /**
@@ -114,7 +113,7 @@ export abstract class Random implements IRandom {
     const _option = getRandomFixedStringOption(option);
 
     let result = "";
-    for (let i = 0; i < _option.length; i++) {
+    for (let index = 0; index < _option.length; index++) {
       result += this.select(_option);
     }
     return result;
@@ -158,10 +157,13 @@ export abstract class Random implements IRandom {
    */
   public shuffle<T>(option: RandomMultipleValueOption<T>): Array<T> {
     const length = option.whitelist.length;
-    const output = option.whitelist.slice();
-    for (let i = length - 1; i > 0; i--) {
-      const j = this.int({ max: i + 1 });
-      [output[i], output[j]] = [output[j], output[i]];
+    const output = [...option.whitelist];
+    for (let index = length - 1; index > 0; index--) {
+      const randomIndex = this.int({ max: index + 1 });
+      [output[index], output[randomIndex]] = [
+        output[randomIndex],
+        output[index],
+      ];
     }
 
     return output;

@@ -107,28 +107,28 @@ describe("Random", () => {
   });
 
   describe("Weighted random", () => {
-    const options = [
+    const data = [
       { weight: 99, value: 0 },
       { weight: 1, value: 1 },
     ];
 
-    const cases = new Array(100)
+    const cases = Array.from<number>({ length: 100 })
       .fill(100)
       .map(
-        (divider, i) =>
-          [options, i / divider, i === 99 ? 1 : 0] as [
+        (divider, index) =>
+          [data, index / divider, index === 99 ? 1 : 0] as [
             Array<RandomWeightedOption<number>>,
             number,
             number,
-          ],
+          ]
       );
 
     it.each(cases)(
       "random value by weight options %p (s=%d)",
-      (opts, seed, output) => {
+      (options, seed, output) => {
         const rand = baseRand.copy(new SeedFixed(seed));
-        expect(rand.weighted(...opts)).toEqual(output);
-      },
+        expect(rand.weighted(...options)).toEqual(output);
+      }
     );
   });
 });
