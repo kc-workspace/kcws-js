@@ -10,6 +10,7 @@ module.exports = defineConfig({
   extends: [
     "plugin:eslint-plugin-unicorn/recommended",
     "plugin:import/recommended",
+    "plugin:promise/recommended",
   ],
   rules: {
     "@rushstack/security/no-unsafe-regexp": "warn",
@@ -150,5 +151,6 @@ module.exports = defineConfig({
         ],
       },
     ],
+    "promise/prefer-await-to-then": "warn",
   },
 });

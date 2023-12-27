@@ -5,10 +5,12 @@
 
 /**
  * @typedef {"node" | "web" | "types" | "common"} DataProfile
+ * @typedef {import('eslint').Linter.ParserOptions["ecmaVersion"]} EcmaVersion
  *
  * @typedef {object} Data                - a data for generate eslint configs
  * @property {string} cwd                - working directory (__dirname)
  * @property {DataProfile} [profile]     - a pre-defined profile
+ * @property {EcmaVersion} [ecma=latest] - a ecma version of javascript files
  * @property {boolean} [typescript=true] - enabled typescript feature
  * @property {boolean} [dtyped=false]    - enabled definitelytyped feature
  * @property {boolean} [tsdoc=false]     - enabled tsdoc feature

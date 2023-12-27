@@ -28,6 +28,26 @@ function defineConfig(config) {
 }
 
 /**
+ * Merge input roots
+ *
+ * @param  {...Optional<boolean>} roots eslint root field
+ * @returns merged root config
+ */
+function mergeRoot(...roots) {
+  return roots.includes(true);
+}
+
+/**
+ * Merge input parsers
+ *
+ * @param  {...Optional<string>} parsers eslint parser field
+ * @returns merged parser config
+ */
+function mergeParser(...parsers) {
+  return parsers.findLast(p => typeof p === "string" && p.length > 0);
+}
+
+/**
  * Merge input options and flatten them
  *
  * @param  {...Optional<EslintParserOptions>} options - eslint parser options
@@ -44,7 +64,7 @@ function mergeParserOptions(...options) {
  * @returns {EslintPlugins} merged eslint plugins
  */
 function mergePlugins(...plugins) {
-  return flatObject(...plugins.map((p) => toArray(p)));
+  return flatObject(...plugins.map(p => toArray(p)));
 }
 
 /**
@@ -54,7 +74,7 @@ function mergePlugins(...plugins) {
  * @returns {EslintExtends} merged eslint extends
  */
 function mergeExtends(...data) {
-  return flatObject(...data.map((p) => toArray(p)));
+  return flatObject(...data.map(p => toArray(p)));
 }
 
 /**
@@ -103,50 +123,50 @@ function mergeOverrides(...overrides) {
  * @returns {EslintIgnorePatterns} merged eslint ignore pattern
  */
 function mergeIgnorePatterns(...ignorePatterns) {
-  return flatObject(...ignorePatterns.map((p) => toArray(p)));
+  return flatObject(...ignorePatterns.map(p => toArray(p)));
 }
 
 /**
  * Merge 2 inputs config to single config
  *
- * @param {import('eslint').Linter.Config} a - First config
- * @param {import('eslint').Linter.Config} b - First config
+ * @param {...import('eslint').Linter.Config} configs - a config
  * @returns {import('eslint').Linter.Config} a merged config
  */
-function mergeConfig(a, b) {
+function mergeConfig(...configs) {
   /** @type {import('eslint').Linter.Config} */
   const config = {};
 
-  const root = a?.root || b?.root;
+  const root = mergeRoot(...configs.map(c => c?.root));
   if (typeof root === "boolean") config.root = root;
 
-  const parser = b?.parser ?? a?.parser;
+  const parser = mergeParser(...configs.map(c => c?.parser));
   if (typeof parser === "string") config.parser = parser;
 
-  const parserOptions = mergeParserOptions(a?.parserOptions, b?.parserOptions);
+  const parserOptions = mergeParserOptions(
+    ...configs.map(c => c?.parserOptions)
+  );
   if (!isEmpty(parserOptions)) config.parserOptions = parserOptions;
 
-  const plugins = mergePlugins(a?.plugins, b?.plugins);
+  const plugins = mergePlugins(...configs.map(c => c?.plugins));
   if (!isEmpty(plugins)) config.plugins = plugins;
 
-  const extend = mergeExtends(a?.extends, b?.extends);
+  const extend = mergeExtends(...configs.map(c => c?.extends));
   if (!isEmpty(extend)) config.extends = extend;
 
-  const settings = mergeSettings(a?.settings, b?.settings);
+  const settings = mergeSettings(...configs.map(c => c?.settings));
   if (!isEmpty(settings)) config.settings = settings;
 
-  const env = mergeEnvironment(a?.env, b?.env);
+  const env = mergeEnvironment(...configs.map(c => c?.env));
   if (!isEmpty(env)) config.env = env;
 
-  const rules = mergeRules(a?.rules, b?.rules);
+  const rules = mergeRules(...configs.map(c => c?.rules));
   if (!isEmpty(rules)) config.rules = rules;
 
-  const overrides = mergeOverrides(a?.overrides, b?.overrides);
+  const overrides = mergeOverrides(...configs.map(c => c?.overrides));
   if (!isEmpty(overrides)) config.overrides = overrides;
 
   const ignorePatterns = mergeIgnorePatterns(
-    a?.ignorePatterns,
-    b?.ignorePatterns
+    ...configs.map(c => c?.ignorePatterns)
   );
   if (!isEmpty(ignorePatterns)) config.ignorePatterns = ignorePatterns;
 
