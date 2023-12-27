@@ -53,7 +53,15 @@ function createConfig(data) {
       whatIf(data.prettier ?? true, resolveMixin("prettier", data.local))
     ),
     rules: createRules(data),
-    ignorePatterns: ["dist/**", "temp/**", "lib/**", "lib-*/**", ".rush/**"],
+    ignorePatterns: [
+      ".eslintrc.cjs",
+      "dist/**",
+      "temp/**",
+      "lib/**",
+      "lib-*/**",
+      ".rush/**",
+      "coverage/**",
+    ],
   });
 
   return mergeConfig(base, data.custom);
