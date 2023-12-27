@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/dtcheck",
+      "comment": "Apply new eslint rules",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/dtcheck"
+}

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "Apply new eslint rules",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}

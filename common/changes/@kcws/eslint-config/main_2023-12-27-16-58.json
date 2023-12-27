@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "Add several plugins and rules for my personal styles",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}

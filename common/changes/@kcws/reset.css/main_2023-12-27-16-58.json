@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/reset.css",
+      "comment": "Apply new eslint rules",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/reset.css"
+}

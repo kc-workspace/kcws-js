@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "Prepare for new type packages and add new profile called `js`",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}

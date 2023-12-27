@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "Apply new eslint rules",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/random"
+}
