@@ -33,6 +33,7 @@ const config = {
         "deps",
         "config",
         "script",
+        "example",
       ],
     ],
     "subject-max-length": [1, "always", 80],
@@ -168,6 +169,10 @@ const config = {
           config: {
             description: "Monorepo configuration",
             title: "Configuration",
+          },
+          example: {
+            description: "@kcws/example or @kcws/tool-example packages",
+            title: "Example Packages",
           },
         },
       },
