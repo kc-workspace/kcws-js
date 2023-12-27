@@ -21,6 +21,7 @@ module.exports = defineConfig({
           kebabCase: true,
           pascalCase: true,
         },
+        ignore: [/\.md$/],
       },
     ],
     "unicorn/prevent-abbreviations": [
