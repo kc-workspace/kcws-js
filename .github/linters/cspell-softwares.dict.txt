@@ -10,3 +10,4 @@ randomizer
 esmodule
 estree
 dtslint
+dtyped

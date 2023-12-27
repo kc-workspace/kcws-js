@@ -11,3 +11,4 @@ mxssfd
 dtcheck
 dtconvert
 kcutils
+kctypes
