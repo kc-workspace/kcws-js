@@ -2,7 +2,7 @@
  * Filter only exist value
  *
  * @template T
- * @param {T | undefined} value - input
+ * @param {T | undefined | null} value - input
  * @return {value is T}
  */
 function isValid(value) {

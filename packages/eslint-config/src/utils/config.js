@@ -135,7 +135,6 @@ function mergeIgnorePatterns(...ignorePatterns) {
 function mergeConfig(...configs) {
   /** @type {import('eslint').Linter.Config} */
   const config = {};
-  if (configs === undefined) return config;
 
   const root = mergeRoot(...configs.map(c => c?.root));
   if (typeof root === "boolean") config.root = root;
