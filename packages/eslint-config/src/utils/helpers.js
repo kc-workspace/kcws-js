@@ -7,8 +7,7 @@
  */
 function isValid(value) {
   if (value === undefined || value === null) return false;
-  if (typeof value === "string" && value.length <= 0) return false;
-  return true;
+  return typeof value !== "string" || value.length > 0;
 }
 
 /**
@@ -38,7 +37,7 @@ function flatObject(...inputs) {
 
 /**
  * Check is input object/array is empty
- * @param {object|any[]} input - input data
+ * @param {null|object|any[]} input - input data
  * @returns {boolean} true if input is empty
  */
 function isEmpty(input) {

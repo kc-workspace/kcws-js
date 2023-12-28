@@ -111,12 +111,9 @@ export abstract class Random implements IRandom {
    */
   public fixedString(option?: Partial<RandomFixedStringOption>): string {
     const _option = getRandomFixedStringOption(option);
-
-    let result = "";
-    for (let index = 0; index < _option.length; index++) {
-      result += this.select(_option);
-    }
-    return result;
+    return Array.from({ length: _option.length })
+      .map(() => this.select(_option))
+      .join("");
   }
 
   /**

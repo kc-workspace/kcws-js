@@ -90,11 +90,11 @@ function mergeSettings(...settings) {
 /**
  * Merge input environment value and flatten them
  *
- * @param {Optional<EslintEnvironment>[]} envs - eslint environments list
+ * @param {Optional<EslintEnvironment>[]} environments - eslint environments list
  * @returns {EslintEnvironment} merged eslint environments
  */
-function mergeEnvironment(...envs) {
-  return Object.assign({}, ...envs);
+function mergeEnvironment(...environments) {
+  return Object.assign({}, ...environments);
 }
 
 /**
@@ -156,8 +156,8 @@ function mergeConfig(...configs) {
   const settings = mergeSettings(...configs.map(c => c?.settings));
   if (!isEmpty(settings)) config.settings = settings;
 
-  const env = mergeEnvironment(...configs.map(c => c?.env));
-  if (!isEmpty(env)) config.env = env;
+  const environment = mergeEnvironment(...configs.map(c => c?.env));
+  if (!isEmpty(environment)) config.env = environment;
 
   const rules = mergeRules(...configs.map(c => c?.rules));
   if (!isEmpty(rules)) config.rules = rules;
