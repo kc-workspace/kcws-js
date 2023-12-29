@@ -1,0 +1,19 @@
+{
+  "name": "@kcws/types-rig",
+  "entries": [
+    {
+      "version": "0.2.0",
+      "tag": "@kcws/types-rig_v0.2.0",
+      "date": "Fri, 29 Dec 2023 17:11:31 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add new riggable package for types (e.g. @types package)",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "99a769d0d001ff7965fbbb57dc1bda7b1e132ead"
+          }
+        ]
+      }
+    }
+  ]
+}

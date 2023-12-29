@@ -1,6 +1,14 @@
 # Change Log - @kcws/node-rig
 
-This log was last generated on Tue, 26 Dec 2023 22:37:17 GMT and should not be manually modified.
+This log was last generated on Fri, 29 Dec 2023 17:11:31 GMT and should not be manually modified.
+
+## 0.31.1
+Fri, 29 Dec 2023 17:11:31 GMT
+
+### Patches
+
+- Support clean up coverage directory when --clean was passed
+- Prepare for new type packages and add new profile called `js`
 
 ## 0.31.0
 Tue, 26 Dec 2023 22:37:17 GMT

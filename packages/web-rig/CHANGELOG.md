@@ -1,6 +1,14 @@
 # Change Log - @kcws/web-rig
 
-This log was last generated on Tue, 26 Dec 2023 22:37:17 GMT and should not be manually modified.
+This log was last generated on Fri, 29 Dec 2023 17:11:31 GMT and should not be manually modified.
+
+## 0.33.1
+Fri, 29 Dec 2023 17:11:31 GMT
+
+### Patches
+
+- Disable tsdoc metadata on js profile to fix incompatible
+- Prepare for new type packages and add `js` profile
 
 ## 0.33.0
 Tue, 26 Dec 2023 22:37:17 GMT

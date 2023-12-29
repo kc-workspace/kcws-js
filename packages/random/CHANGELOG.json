@@ -2,6 +2,31 @@
   "name": "@kcws/random",
   "entries": [
     {
+      "version": "0.25.1",
+      "tag": "@kcws/random_v0.25.1",
+      "date": "Fri, 29 Dec 2023 17:11:31 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Apply new eslint rules",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "cf3c8aeb6efb4fcd6a2ebb49902d67dca7b99a33"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.33.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.25.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `0.31.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.25.0",
       "tag": "@kcws/random_v0.25.0",
       "date": "Tue, 26 Dec 2023 22:37:17 GMT",

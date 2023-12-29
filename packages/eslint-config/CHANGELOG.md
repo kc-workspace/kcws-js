@@ -1,6 +1,14 @@
 # Change Log - @kcws/eslint-config
 
-This log was last generated on Tue, 26 Dec 2023 22:37:17 GMT and should not be manually modified.
+This log was last generated on Fri, 29 Dec 2023 17:11:31 GMT and should not be manually modified.
+
+## 0.31.0
+Fri, 29 Dec 2023 17:11:31 GMT
+
+### Minor changes
+
+- Add eslint-unicorn for additional rules on js/ts languages
+- Add several plugins and rules for my personal styles
 
 ## 0.30.0
 Tue, 26 Dec 2023 22:37:17 GMT
