@@ -82,6 +82,7 @@
       "commandKind": "global",
       "name": "hooks:format",
       "summary": "Used by the pre-commit Git hook. This command invokes code styles to reformat staged changes.",
+      "safeForSimultaneousRushProcesses": true,
       "autoinstallerName": "rush-lintstaged",
       "shellCommand": "sh common/autoinstallers/rush-lintstaged/index.sh"
     },
@@ -89,6 +90,7 @@
       "commandKind": "global",
       "name": "hooks:commitlint",
       "summary": "Used by the commit-msg Git hook. This command invokes linting commit message.",
+      "safeForSimultaneousRushProcesses": true,
       "autoinstallerName": "rush-commitlint",
       "shellCommand": "sh common/autoinstallers/rush-commitlint/lint.sh"
     },
