@@ -2,7 +2,7 @@
   "changes": [
     {
       "packageName": "@kcws/eslint-config",
-      "comment": "Upgrade @typescript-eslint/* from v6.11.x to v6.14.0",
+      "comment": "Upgrade @typescript-eslint/* from v6.11.x to v6.16.0",
       "type": "patch"
     }
   ],
