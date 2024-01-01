@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/types-rig",
+      "comment": "Update heft peer dependencies",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/types-rig"
+}
