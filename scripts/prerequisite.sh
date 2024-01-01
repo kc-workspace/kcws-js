@@ -45,4 +45,7 @@ checking "shellcheck" \
 checking "yamllint" \
   "$optional_mode" "https://yamllint.readthedocs.io/en/stable/quickstart.html"
 
+checking "git-chglog" \
+  "$optional_mode" "https://pkg.go.dev/github.com/git-chglog/git-chglog"
+
 completed
