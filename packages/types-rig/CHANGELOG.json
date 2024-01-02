@@ -2,6 +2,20 @@
   "name": "@kcws/types-rig",
   "entries": [
     {
+      "version": "0.2.1",
+      "tag": "@kcws/types-rig_v0.2.1",
+      "date": "Tue, 02 Jan 2024 22:37:20 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update heft peer dependencies",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "e102b9f6e865cf8cc7aaafeba9498f5102e16314"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.2.0",
       "tag": "@kcws/types-rig_v0.2.0",
       "date": "Fri, 29 Dec 2023 17:11:31 GMT",

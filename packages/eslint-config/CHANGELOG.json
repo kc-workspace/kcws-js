@@ -2,6 +2,32 @@
   "name": "@kcws/eslint-config",
   "entries": [
     {
+      "version": "0.32.0",
+      "tag": "@kcws/eslint-config_v0.32.0",
+      "date": "Tue, 02 Jan 2024 22:37:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "ab92898c534ef7b314f8ab0bf2d11b2039c5d853"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Upgrade @typescript-eslint/* from v6.11.x to v6.16.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "c5841fc1b4653cd69bdfc8000b29e0fe595393dd"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.32.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.31.0",
       "tag": "@kcws/eslint-config_v0.31.0",
       "date": "Fri, 29 Dec 2023 17:11:31 GMT",

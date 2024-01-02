@@ -2,6 +2,27 @@
   "name": "@kcws/node-rig",
   "entries": [
     {
+      "version": "0.32.0",
+      "tag": "@kcws/node-rig_v0.32.0",
+      "date": "Tue, 02 Jan 2024 22:37:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "ab92898c534ef7b314f8ab0bf2d11b2039c5d853"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Update heft peer dependencies",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "e102b9f6e865cf8cc7aaafeba9498f5102e16314"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.31.1",
       "tag": "@kcws/node-rig_v0.31.1",
       "date": "Fri, 29 Dec 2023 17:11:31 GMT",

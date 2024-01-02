@@ -1,6 +1,17 @@
 # Change Log - @kcws/eslint-config
 
-This log was last generated on Fri, 29 Dec 2023 17:11:31 GMT and should not be manually modified.
+This log was last generated on Tue, 02 Jan 2024 22:37:20 GMT and should not be manually modified.
+
+## 0.32.0
+Tue, 02 Jan 2024 22:37:20 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+### Patches
+
+- Upgrade @typescript-eslint/* from v6.11.x to v6.16.0
 
 ## 0.31.0
 Fri, 29 Dec 2023 17:11:31 GMT

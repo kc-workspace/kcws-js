@@ -2,6 +2,28 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "0.24.0",
+      "tag": "@kcws/reset.css_v0.24.0",
+      "date": "Tue, 02 Jan 2024 22:37:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "ab92898c534ef7b314f8ab0bf2d11b2039c5d853"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.34.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.25.2`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.23.1",
       "tag": "@kcws/reset.css_v0.23.1",
       "date": "Fri, 29 Dec 2023 17:11:31 GMT",
