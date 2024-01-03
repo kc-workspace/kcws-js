@@ -20,8 +20,7 @@
       "ScriptHost",
       "ES2015.Collection",
       "ES2015.Promise",
-      "ES2015.Iterable",
-      "DOM"
+      "ES2015.Iterable"
     ],                                                   /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     // "jsx": "react",                                   /* Specify what JSX code is generated. */
     "experimentalDecorators": true,                      /* Enable experimental support for TC39 stage 2 draft decorators. */
@@ -37,7 +36,7 @@
     /* Modules */
     "module": "ESNext",                                  /* Specify what module code is generated. */
     "rootDir": "../../../../../src",                     /* Specify the root folder within your source files. */
-    "moduleResolution": "node",                          /* Specify how TypeScript looks up a file from a given module specifier. */
+    "moduleResolution": "Node16",                        /* Specify how TypeScript looks up a file from a given module specifier. */
     // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
     // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     "rootDirs": [
@@ -46,7 +45,11 @@
     ],                                                   /* Allow multiple folders to be treated as one when resolving modules. */
     "typeRoots": [
       "../../../../../node_modules/@types",
-      "../../node_modules/@types"
+      "../../node_modules/@types",
+      "../node_modules/@types",
+      "../../../../../node_modules/@kctypes",
+      "../../node_modules/@kctypes",
+      "../node_modules/@kctypes"
     ],                                                   /* Specify multiple folders that act like './node_modules/@types'. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */

@@ -37,6 +37,7 @@
     "@rushstack/heft-lint-plugin": "0.2.15",
     "@rushstack/heft-typescript-plugin": "0.2.15",
     "@types/heft-jest": "1.0.6",
+    "@types/node": "18.19.3",
     "eslint": "8.56.0",
     "jest-environment-node": "29.7.0",
     "jest-html-reporters": "3.1.7",
