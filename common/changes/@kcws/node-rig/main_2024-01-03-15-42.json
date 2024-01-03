@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "Update default profile typescript to support packages outside rushstack",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}
