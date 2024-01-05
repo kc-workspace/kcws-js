@@ -348,14 +348,20 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@kcws/mixin",
-      "projectFolder": "packages/mixin",
+      "packageName": "@kcws/equals",
+      "projectFolder": "packages/equals",
       "reviewCategory": "libraries",
       "shouldPublish": true
     },
     {
-      "packageName": "@kcws/equals",
-      "projectFolder": "packages/equals",
+      "packageName": "@kcws/error",
+      "projectFolder": "packages/error",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/mixin",
+      "projectFolder": "packages/mixin",
       "reviewCategory": "libraries",
       "shouldPublish": true
     },
@@ -369,23 +375,23 @@
       "packageName": "@kcws/color",
       "projectFolder": "packages/color",
       "reviewCategory": "libraries",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@kcws/node-rig",
-      "projectFolder": "packages/node-rig",
+      "projectFolder": "packages-rig/node-rig",
       "reviewCategory": "configs",
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/web-rig",
-      "projectFolder": "packages/web-rig",
+      "projectFolder": "packages-rig/web-rig",
       "reviewCategory": "configs",
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/types-rig",
-      "projectFolder": "packages/types-rig",
+      "projectFolder": "packages-rig/types-rig",
       "reviewCategory": "configs",
       "shouldPublish": true
     },
@@ -402,13 +408,13 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@types/package_json",
+      "packageName": "@kctypes/package_json",
       "projectFolder": "typings/package_json",
       "reviewCategory": "typings",
       "shouldPublish": false
     },
     {
-      "packageName": "@types/generic",
+      "packageName": "@kctypes/generic",
       "projectFolder": "typings/generic",
       "reviewCategory": "typings",
       "shouldPublish": false
