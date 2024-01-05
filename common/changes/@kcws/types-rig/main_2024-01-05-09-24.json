@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/types-rig",
+      "comment": "Update project directory",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/types-rig"
+}

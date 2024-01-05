@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kctypes/generic",
+      "comment": "Prepare for first types release",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kctypes/generic"
+}

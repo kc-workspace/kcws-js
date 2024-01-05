@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/dtcheck",
+      "comment": "Change private types package to public @kctypes",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/dtcheck"
+}
