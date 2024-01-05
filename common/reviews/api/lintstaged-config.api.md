@@ -4,6 +4,8 @@
 
 ```ts
 
+/// <reference types="generic" />
+
 // @public
 export type BaseActionFn<O extends IBaseActionOptions> = (options?: O) => string;
 

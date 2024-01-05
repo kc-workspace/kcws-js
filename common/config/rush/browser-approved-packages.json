@@ -8,7 +8,7 @@
     },
     {
       "name": "@kctypes/generic",
-      "allowedCategories": [ "configs", "libraries" ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@kcws/dtcheck",
