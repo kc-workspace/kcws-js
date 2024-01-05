@@ -79,5 +79,9 @@
       "EditorConfig.EditorConfig",
       "esbenp.prettier-vscode"
     ]
+  },
+  "settings": {
+    "eslint.packageManager": "pnpm",
+    "npm.packageManager": "pnpm"
   }
 }
