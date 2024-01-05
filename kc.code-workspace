@@ -13,6 +13,10 @@
       "path": "packages/equals"
     },
     {
+      "name": "@kcws/error",
+      "path": "packages/error"
+    },
+    {
       "name": "@kcws/mixin",
       "path": "packages/mixin"
     },
@@ -26,15 +30,15 @@
     },
     {
       "name": "@kcws/node-rig",
-      "path": "packages/node-rig"
+      "path": "packages-rig/node-rig"
     },
     {
       "name": "@kcws/web-rig",
-      "path": "packages/web-rig"
+      "path": "packages-rig/web-rig"
     },
     {
       "name": "@kcws/types-rig",
-      "path": "packages/types-rig"
+      "path": "packages-rig/types-rig"
     },
     {
       "name": "@kcws/eslint-config",
@@ -45,11 +49,11 @@
       "path": "packages/lintstaged-config"
     },
     {
-      "name": "@types/package_json",
+      "name": "@kctypes/package_json",
       "path": "typings/package_json"
     },
     {
-      "name": "@types/generic",
+      "name": "@kctypes/generic",
       "path": "typings/generic"
     },
     {

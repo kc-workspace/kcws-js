@@ -4,6 +4,8 @@
 
 ```ts
 
+/// <reference types="generic" />
+
 // @public
 export type BaseActionFn<O extends IBaseActionOptions> = (options?: O) => string;
 
@@ -118,10 +120,7 @@ export const rushOn: (pkg: string | undefined, cmd: string, ...args: Array<strin
 export const shellcheck: BaseActionFn<IShellcheckOptions>;
 
 // @internal
-export type _WalkCallback = (directory: string) => _WithUndefined<string>;
-
-// @internal
-export type _WithUndefined<T> = T | undefined;
+export type _WalkCallback = (directory: string) => WithUndefined<string>;
 
 // @beta
 export const yamllint: BaseActionFn<IYamllintOptions>;

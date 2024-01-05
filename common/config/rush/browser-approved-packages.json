@@ -7,6 +7,10 @@
       "allowedCategories": [ "configs" ]
     },
     {
+      "name": "@kctypes/generic",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
       "name": "@kcws/dtcheck",
       "allowedCategories": [ "libraries" ]
     },
