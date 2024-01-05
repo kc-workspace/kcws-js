@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/error",
+      "comment": "Migrated source code from @kcutils/error",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/error"
+}

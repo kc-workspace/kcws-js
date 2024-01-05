@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/web-rig",
+      "comment": "Update project directory",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/web-rig"
+}

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "Change private types package to public @kctypes",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/random"
+}
