@@ -3,7 +3,6 @@ import path from "node:path";
 
 import { ConfigFn } from "../models/IConfig";
 import { getCommand } from "../utils/cmd";
-import { _WithUndefined } from "../types/generic";
 
 const ROOT: string = "/";
 
@@ -12,12 +11,12 @@ const ROOT: string = "/";
  *
  * @internal
  */
-export type _WalkCallback = (directory: string) => _WithUndefined<string>;
+export type _WalkCallback = (directory: string) => WithUndefined<string>;
 
 const walkDirectory = (
   file: string,
   cb: _WalkCallback
-): _WithUndefined<string> => {
+): WithUndefined<string> => {
   const next = path.dirname(file);
   if (next === ROOT) return undefined;
 
@@ -38,7 +37,7 @@ const resolveRushCommand = (): Array<string> => {
   return [rush];
 };
 
-const resolvePackageName = (files: Array<string>): _WithUndefined<string> => {
+const resolvePackageName = (files: Array<string>): WithUndefined<string> => {
   for (const file of files) {
     const name = walkDirectory(file, (directory) => {
       const pkg = path.resolve(directory, "package.json");
