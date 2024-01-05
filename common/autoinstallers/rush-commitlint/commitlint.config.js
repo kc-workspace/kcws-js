@@ -17,6 +17,7 @@ const config = {
         "color",
         "dtcheck",
         "equals",
+        "error",
         "mixin",
         "random",
         "reset.css",
