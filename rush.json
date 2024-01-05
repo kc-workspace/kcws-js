@@ -411,13 +411,13 @@
       "packageName": "@kctypes/package_json",
       "projectFolder": "typings/package_json",
       "reviewCategory": "typings",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@kctypes/generic",
       "projectFolder": "typings/generic",
       "reviewCategory": "typings",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@kcws/example",
