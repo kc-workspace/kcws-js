@@ -5,6 +5,12 @@
 ```ts
 
 // @public
+export type DataType<T extends string> = "undefined" | "null" | "string" | "number" | "bigint" | "boolean" | "function" | "object" | "array" | "symbol" | T;
+
+// @public
+export const getDataType: <T extends string = "">(data: unknown, settings?: ISettings<T> | undefined) => DataType<T>;
+
+// @public
 export const isArray: <T>(input: Optional<unknown>) => input is T[];
 
 // @beta
@@ -12,6 +18,11 @@ export const isBoolean: (input: Optional<unknown>, looseMode?: boolean) => input
 
 // @public
 export const isEmpty: <T = unknown>(input: Optional<T>) => input is Null;
+
+// @public
+export interface ISettings<T extends string = ""> {
+    mapper?: TMapFn<T>;
+}
 
 // @public
 export const isExist: <T = unknown>(input: Optional<T>) => input is T;
@@ -36,6 +47,9 @@ export const isObject: <T = unknown>(input: Optional<T>) => input is T;
 
 // @public
 export const isString: (input: Optional<unknown>) => input is string;
+
+// @public
+export type TMapFn<T extends string> = (input: unknown) => DataType<T> | undefined;
 
 // (No @packageDocumentation comment for this package)
 
