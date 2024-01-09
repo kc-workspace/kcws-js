@@ -2,6 +2,25 @@
   "name": "@kcws/node-rig",
   "entries": [
     {
+      "version": "0.33.0",
+      "tag": "@kcws/node-rig_v0.33.0",
+      "date": "Tue, 09 Jan 2024 22:38:10 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Update default profile typescript to support packages outside rushstack",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "94e368abf53c9399b3224c315d9de92343290192"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "698423820783a4ddb915d75f26f6ecdbb86189b6"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.32.0",
       "tag": "@kcws/node-rig_v0.32.0",
       "date": "Tue, 02 Jan 2024 22:37:20 GMT",

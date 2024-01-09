@@ -1,6 +1,13 @@
 # Change Log - @kcws/types-rig
 
-This log was last generated on Tue, 02 Jan 2024 22:37:20 GMT and should not be manually modified.
+This log was last generated on Tue, 09 Jan 2024 22:38:10 GMT and should not be manually modified.
+
+## 0.3.0
+Tue, 09 Jan 2024 22:38:10 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.2.1
 Tue, 02 Jan 2024 22:37:20 GMT
