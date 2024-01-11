@@ -17,7 +17,9 @@ module.exports = defineConfig({
       files: typescripts,
       rules: {
         // RATIONALE:         See the @rushstack/eslint-plugin documentation
-        "@rushstack/typedef-var": "warn",
+        //                    This is disabled by default as const might contains
+        //                    complex data type so we would not like to defined.
+        "@rushstack/typedef-var": "off",
       },
     },
   ],
