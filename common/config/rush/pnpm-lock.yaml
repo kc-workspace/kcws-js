@@ -11,20 +11,20 @@ importers:
   ../../packages-rig/node-rig:
     dependencies:
       '@microsoft/api-extractor':
-        specifier: 7.39.0
-        version: 7.39.0(@types/node@18.19.3)
+        specifier: 7.39.1
+        version: 7.39.1(@types/node@18.19.3)
       '@rushstack/heft-api-extractor-plugin':
-        specifier: 0.2.15
-        version: 0.2.15(@rushstack/heft@0.63.5)(@types/node@18.19.3)
+        specifier: 0.2.16
+        version: 0.2.16(@rushstack/heft@0.63.6)(@types/node@18.19.3)
       '@rushstack/heft-jest-plugin':
-        specifier: 0.10.7
-        version: 0.10.7(@rushstack/heft@0.63.5)(@types/node@18.19.3)(jest-environment-node@29.7.0)
+        specifier: 0.10.8
+        version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@18.19.3)(jest-environment-node@29.7.0)
       '@rushstack/heft-lint-plugin':
-        specifier: 0.2.15
-        version: 0.2.15(@rushstack/heft@0.63.5)(@types/node@18.19.3)
+        specifier: 0.2.16
+        version: 0.2.16(@rushstack/heft@0.63.6)(@types/node@18.19.3)
       '@rushstack/heft-typescript-plugin':
-        specifier: 0.2.15
-        version: 0.2.15(@rushstack/heft@0.63.5)(@types/node@18.19.3)
+        specifier: 0.2.16
+        version: 0.2.16(@rushstack/heft@0.63.6)(@types/node@18.19.3)
       '@types/heft-jest':
         specifier: 1.0.6
         version: 1.0.6
@@ -48,23 +48,23 @@ importers:
         version: 5.0.4
     devDependencies:
       '@rushstack/heft':
-        specifier: 0.63.5
-        version: 0.63.5(@types/node@18.19.3)
+        specifier: 0.63.6
+        version: 0.63.6(@types/node@18.19.3)
 
   ../../packages-rig/types-rig:
     dependencies:
       '@microsoft/api-extractor':
-        specifier: 7.39.0
-        version: 7.39.0(@types/node@18.19.3)
+        specifier: 7.39.1
+        version: 7.39.1(@types/node@18.19.3)
       '@rushstack/heft-api-extractor-plugin':
-        specifier: 0.2.15
-        version: 0.2.15(@rushstack/heft@0.63.5)(@types/node@18.19.3)
+        specifier: 0.2.16
+        version: 0.2.16(@rushstack/heft@0.63.6)(@types/node@18.19.3)
       '@rushstack/heft-lint-plugin':
-        specifier: 0.2.15
-        version: 0.2.15(@rushstack/heft@0.63.5)(@types/node@18.19.3)
+        specifier: 0.2.16
+        version: 0.2.16(@rushstack/heft@0.63.6)(@types/node@18.19.3)
       '@rushstack/heft-typescript-plugin':
-        specifier: 0.2.15
-        version: 0.2.15(@rushstack/heft@0.63.5)(@types/node@18.19.3)
+        specifier: 0.2.16
+        version: 0.2.16(@rushstack/heft@0.63.6)(@types/node@18.19.3)
       eslint:
         specifier: 8.56.0
         version: 8.56.0
@@ -73,29 +73,29 @@ importers:
         version: 5.0.4
     devDependencies:
       '@rushstack/heft':
-        specifier: 0.63.5
-        version: 0.63.5(@types/node@18.19.3)
+        specifier: 0.63.6
+        version: 0.63.6(@types/node@18.19.3)
 
   ../../packages-rig/web-rig:
     dependencies:
       '@microsoft/api-extractor':
-        specifier: 7.39.0
-        version: 7.39.0(@types/node@18.19.3)
+        specifier: 7.39.1
+        version: 7.39.1(@types/node@18.19.3)
       '@rushstack/heft-api-extractor-plugin':
-        specifier: 0.2.15
-        version: 0.2.15(@rushstack/heft@0.63.5)(@types/node@18.19.3)
+        specifier: 0.2.16
+        version: 0.2.16(@rushstack/heft@0.63.6)(@types/node@18.19.3)
       '@rushstack/heft-jest-plugin':
-        specifier: 0.10.7
-        version: 0.10.7(@rushstack/heft@0.63.5)(jest-environment-jsdom@29.7.0)
+        specifier: 0.10.8
+        version: 0.10.8(@rushstack/heft@0.63.6)(jest-environment-jsdom@29.7.0)
       '@rushstack/heft-lint-plugin':
-        specifier: 0.2.15
-        version: 0.2.15(@rushstack/heft@0.63.5)(@types/node@18.19.3)
+        specifier: 0.2.16
+        version: 0.2.16(@rushstack/heft@0.63.6)(@types/node@18.19.3)
       '@rushstack/heft-sass-plugin':
-        specifier: 0.13.1
-        version: 0.13.1(@rushstack/heft@0.63.5)
+        specifier: 0.13.2
+        version: 0.13.2(@rushstack/heft@0.63.6)
       '@rushstack/heft-typescript-plugin':
-        specifier: 0.2.15
-        version: 0.2.15(@rushstack/heft@0.63.5)(@types/node@18.19.3)
+        specifier: 0.2.16
+        version: 0.2.16(@rushstack/heft@0.63.6)(@types/node@18.19.3)
       '@types/heft-jest':
         specifier: 1.0.6
         version: 1.0.6
@@ -116,8 +116,8 @@ importers:
         version: 5.0.4
     devDependencies:
       '@rushstack/heft':
-        specifier: 0.63.5
-        version: 0.63.5(@types/node@18.19.3)
+        specifier: 0.63.6
+        version: 0.63.6(@types/node@18.19.3)
 
   ../../packages/color:
     devDependencies:
@@ -149,8 +149,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-rig/web-rig
       '@rushstack/heft':
-        specifier: 0.63.5
-        version: 0.63.5(@types/node@18.19.3)
+        specifier: 0.63.6
+        version: 0.63.6(@types/node@18.19.3)
 
   ../../packages/equals:
     dependencies:
@@ -168,8 +168,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-rig/web-rig
       '@rushstack/heft':
-        specifier: 0.63.5
-        version: 0.63.5(@types/node@18.19.3)
+        specifier: 0.63.6
+        version: 0.63.6(@types/node@18.19.3)
 
   ../../packages/error:
     devDependencies:
@@ -317,8 +317,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-rig/web-rig
       '@rushstack/heft':
-        specifier: 0.63.5
-        version: 0.63.5(@types/node@18.19.3)
+        specifier: 0.63.6
+        version: 0.63.6(@types/node@18.19.3)
 
   ../../packages/reset.css:
     devDependencies:

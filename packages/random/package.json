@@ -53,7 +53,7 @@
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.63.6",
-    "@types/generic": "workspace:*"
+    "@kctypes/generic": "workspace:*"
   },
   "engines": {
     "node": ">=12"
