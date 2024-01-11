@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/equals",
+      "comment": "Refactor to use dtcheck package for checking datatypes and make it expendable",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/equals"
+}

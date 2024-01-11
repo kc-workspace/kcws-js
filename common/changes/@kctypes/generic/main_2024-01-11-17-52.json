@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kctypes/generic",
+      "comment": "Change @types package to @kctypes",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kctypes/generic"
+}

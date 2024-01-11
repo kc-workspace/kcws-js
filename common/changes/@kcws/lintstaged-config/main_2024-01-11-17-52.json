@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "comment": "Update docs name matched to actual code",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config"
+}
