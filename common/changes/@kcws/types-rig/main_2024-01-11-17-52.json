@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/types-rig",
+      "comment": "Fix publish d",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/types-rig"
+}

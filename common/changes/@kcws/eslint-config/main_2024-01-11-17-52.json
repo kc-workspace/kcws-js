@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "disable typedef-var by default",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}

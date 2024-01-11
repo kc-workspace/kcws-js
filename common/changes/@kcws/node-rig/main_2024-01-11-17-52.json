@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "Fix publish docs failed because module type incompatible",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}

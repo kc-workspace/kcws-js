@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kctypes/package_json",
+      "comment": "Change @types",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kctypes/package_json"
+}
