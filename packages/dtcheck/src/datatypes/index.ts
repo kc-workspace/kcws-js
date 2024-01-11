@@ -30,8 +30,14 @@ export type TMapFn<T extends string> = (
 
 /**
  * Equaivalent settings
+ * @public
  */
 export interface ISettings<T extends string = ""> {
+  /**
+   * Force data types to be this, regardless of resolver.
+   */
+  override?: DataType<T>;
+
   /**
    * Mapping data to type string;
    * This function should return name of input data type
@@ -59,6 +65,10 @@ export const getDataType = <T extends string = "">(
   data: unknown,
   settings?: ISettings<T>
 ): DataType<T> => {
+  if (typeof settings?.override === "string") {
+    return settings.override;
+  }
+
   const dtype = settings?.mapper?.(data);
   return dtype ?? _defaultMapper<T>(data);
 };

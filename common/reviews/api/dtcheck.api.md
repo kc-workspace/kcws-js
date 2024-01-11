@@ -13,6 +13,9 @@ export const getDataType: <T extends string = "">(data: unknown, settings?: ISet
 // @public
 export const isArray: <T>(input: Optional<unknown>) => input is T[];
 
+// @public
+export const isBigInteger: (input: Optional<unknown>) => input is bigint;
+
 // @beta
 export const isBoolean: (input: Optional<unknown>, looseMode?: boolean) => input is boolean;
 
@@ -22,6 +25,7 @@ export const isEmpty: <T = unknown>(input: Optional<T>) => input is Null;
 // @public
 export interface ISettings<T extends string = ""> {
     mapper?: TMapFn<T>;
+    override?: DataType<T>;
 }
 
 // @public
@@ -29,6 +33,9 @@ export const isExist: <T = unknown>(input: Optional<T>) => input is T;
 
 // @public
 export const isFloat: (input: Optional<unknown>) => input is number;
+
+// @public
+export const isFunction: (input: Optional<unknown>) => input is Function;
 
 // @public
 export const isInteger: (input: Optional<unknown>) => input is number;
@@ -47,6 +54,9 @@ export const isObject: <T = unknown>(input: Optional<T>) => input is T;
 
 // @public
 export const isString: (input: Optional<unknown>) => input is string;
+
+// @public
+export const isSymbol: (input: Optional<unknown>) => input is symbol;
 
 // @public
 export type TMapFn<T extends string> = (input: unknown) => DataType<T> | undefined;
