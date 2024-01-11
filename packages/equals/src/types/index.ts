@@ -29,7 +29,7 @@ export type EqualFnMapper<T extends string> = Partial<
   Record<T, VEqualFn<unknown>>;
 
 /**
- * Equaivalent settings
+ * Equivalent settings
  *
  * @public
  */
