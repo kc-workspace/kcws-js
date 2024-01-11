@@ -418,7 +418,8 @@
       "packageName": "@kctypes/generic",
       "projectFolder": "typings/generic",
       "reviewCategory": "typings",
-      "shouldPublish": true
+      "shouldPublish": true,
+      "decoupledLocalDependencies": ["@kcws/lintstaged-config"]
     },
     {
       "packageName": "@kcws/example",
