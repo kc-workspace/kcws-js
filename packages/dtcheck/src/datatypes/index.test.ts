@@ -21,6 +21,7 @@ describe("Datatype", () => {
   it.each([
     ["hello", {} satisfies ISettings, "string"],
     ["hello", { mapper: undefined } satisfies ISettings, "string"],
+    ["hello", { override: "a" } satisfies ISettings<"a">, "a"],
     ["hello", settings, "string"],
     ["123", settings, "number"],
   ])(

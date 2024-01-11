@@ -4,6 +4,10 @@ import { isArray } from "./array";
 /**
  * check input is object or not.
  *
+ * @remarks
+ *
+ * null considers to NOT be an object.
+ *
  * @param input - any input
  * @returns true if input is valid object; otherwise, return false
  *

@@ -6,10 +6,13 @@ import {
   isNumber,
   isString,
   isObject,
+  isFunction,
   isExist,
   isNotExist,
   isEmpty,
   isNotEmpty,
+  isBigInteger,
+  isSymbol,
 } from ".";
 
 describe("Index", () => {
@@ -40,10 +43,19 @@ describe("Index", () => {
   it("check number", () => {
     expect(isNumber(9999)).toEqual(true);
   });
+  it("check big integer", () => {
+    expect(isBigInteger(123n)).toEqual(true);
+  });
   it("check array", () => {
     expect(isArray([1, 2, 3])).toEqual(true);
   });
   it("check object", () => {
     expect(isObject({ hello: "world" })).toEqual(true);
+  });
+  it("check function", () => {
+    expect(isFunction(new Function())).toEqual(true);
+  });
+  it("check symbol", () => {
+    expect(isSymbol(Symbol(123))).toEqual(true);
   });
 });
