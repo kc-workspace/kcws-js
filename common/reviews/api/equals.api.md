@@ -4,13 +4,18 @@
 
 ```ts
 
-// @beta
-export const checkType: (a: unknown, b: unknown) => boolean;
+import type { DataType } from '@kcws/dtcheck';
+import type { ISettings as ISettings_2 } from '@kcws/dtcheck';
 
 // Warning: (ae-forgotten-export) The symbol "ISettings" needs to be exported by the entry point index.d.ts
 //
+// @public
+export const equals: (a: unknown, b: unknown, setting?: ISettings) => boolean;
+
+// Warning: (ae-forgotten-export) The symbol "EqualFn" needs to be exported by the entry point index.d.ts
+//
 // @beta
-export const equals: (a: unknown, b: unknown, _setting: ISettings) => boolean;
+export const isArrayEquals: EqualFn;
 
 // (No @packageDocumentation comment for this package)
 

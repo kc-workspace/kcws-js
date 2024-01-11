@@ -1,74 +1,30 @@
-import type { ISettings } from "./interfaces";
+import type { ISettings } from "./types";
 
-import { isArray } from "@kcws/dtcheck";
+import { getDataType } from "@kcws/dtcheck";
 
-import { isBigIntEquals } from "./bigint";
-import { isBooleanEquals } from "./boolean";
-import { isNumberEquals } from "./number";
-import { isStringEquals } from "./string";
-import { isSymbolEquals } from "./symbol";
-import { EquivalentValue } from "./types";
-
-const toBoolean = (v: EquivalentValue): boolean | undefined => {
-  if (v === EquivalentValue.EQUAL) return true;
-  else if (v === EquivalentValue.DIFF_VALUE) return false;
-  return undefined;
-};
+import { getEqualFn } from "./utils";
 
 /**
- * check only type of input using `typeof`
+ * check input equivalent result.
  *
- * @param a - first input
- * @param b - second input
- * @returns true if first and second has a same type
+ * @param a - first input data
+ * @param b - second input data
+ * @param setting - equivalent settings
+ * @returns true if inputs are equal; otherwise return false
  *
- * @beta
- */
-export const checkType = (a: unknown, b: unknown): boolean => {
-  return typeof a === typeof b;
-};
-
-/**
- * check is inputs equal or not
- *
- * @param a - first input
- * @param b - second input
- * @param _setting - equal setting
- * @returns true if input is matches; otherwise, return false
- *
- * @beta
+ * @public
  */
 export const equals = (
   a: unknown,
   b: unknown,
-  _setting: ISettings
+  setting?: ISettings
 ): boolean => {
+  const aType = getDataType(a, setting?.dataTypes);
+  const bType = getDataType(b, setting?.dataTypes);
+
   // If not same type, equals always return false;
-  if (!checkType(a, b)) return false;
-  // If null or undefined, equals return true;
-  if (a === null && b === null) return true;
-  if (a === undefined && b === undefined) return true;
+  if (aType !== bType) return false;
 
-  let result: boolean | undefined;
-
-  result = toBoolean(isBigIntEquals(a, b));
-  if (result !== undefined) return result;
-
-  result = toBoolean(isNumberEquals(a, b));
-  if (result !== undefined) return result;
-
-  result = toBoolean(isBooleanEquals(a, b));
-  if (result !== undefined) return result;
-
-  result = toBoolean(isStringEquals(a, b));
-  if (result !== undefined) return result;
-
-  result = toBoolean(isSymbolEquals(a, b));
-  if (result !== undefined) return result;
-
-  if (typeof a === "function") return false;
-  if (isArray(a) && isArray(b)) return false;
-  if (typeof a === "object") return false;
-
-  return false;
+  const equalFn = getEqualFn(aType, setting?.equalFnMapper);
+  return equalFn(a, b, setting);
 };

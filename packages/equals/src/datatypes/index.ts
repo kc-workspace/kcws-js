@@ -1,0 +1,10 @@
+export { isArrayEquals, isArrayVEquals } from "./array";
+export { isBigIntEquals, isBigIntVEquals } from "./bigint";
+export { isBooleanEquals, isBooleanVEquals } from "./boolean";
+export { isFunctionEquals, isFunctionVEquals } from "./functions";
+export { isNumberEquals, isNumberVEquals } from "./number";
+export { isObjectEquals, isObjectVEquals } from "./objects";
+export { isStringEquals, isStringVEquals } from "./string";
+export { isSymbolEquals, isSymbolVEquals } from "./symbol";
+export { isNullEquals, isNullVEquals } from "./null";
+export { isUndefinedEquals, isUndefinedVEquals } from "./undefined";
