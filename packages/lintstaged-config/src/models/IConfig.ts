@@ -81,7 +81,7 @@ export interface IConfig {
    * any config group that regex return non-empty array.
    * and execute action to get command and merge them together.
    *
-   * @param cond - condition to select specify config values
+   * @param condition - condition to select specify config values
    * @returns commands to execute on terminal
    *
    * @public
