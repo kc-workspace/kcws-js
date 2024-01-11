@@ -29,7 +29,7 @@ export type TMapFn<T extends string> = (
 ) => DataType<T> | undefined;
 
 /**
- * Equaivalent settings
+ * Equivalent settings
  * @public
  */
 export interface ISettings<T extends string = ""> {
@@ -69,6 +69,6 @@ export const getDataType = <T extends string = "">(
     return settings.override;
   }
 
-  const dtype = settings?.mapper?.(data);
-  return dtype ?? _defaultMapper<T>(data);
+  const dataType = settings?.mapper?.(data);
+  return dataType ?? _defaultMapper<T>(data);
 };
