@@ -31,7 +31,7 @@
    *
    * The latest version can found here: https://github.com/pnpm/pnpm/releases
    */
-  "pnpmVersion": "8.12.1",
+  "pnpmVersion": "8.14.1",
 
   /**
    * Older releases of the Node.js engine may be missing features required by your system.
