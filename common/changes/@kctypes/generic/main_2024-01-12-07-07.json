@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kctypes/generic",
+      "comment": "Force upgrade version to clean failed release",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kctypes/generic"
+}
