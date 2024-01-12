@@ -1,6 +1,19 @@
 # Change Log - @kcws/node-rig
 
-This log was last generated on Tue, 02 Jan 2024 22:37:20 GMT and should not be manually modified.
+This log was last generated on Fri, 12 Jan 2024 10:45:35 GMT and should not be manually modified.
+
+## 0.35.0
+Fri, 12 Jan 2024 10:45:35 GMT
+
+### Minor changes
+
+- Update default profile typescript to support packages outside rushstack
+- upgrade dependencies [auto]
+
+### Patches
+
+- Fix publish docs failed because module type incompatible
+- Force upgrade version to clean failed release
 
 ## 0.32.0
 Tue, 02 Jan 2024 22:37:20 GMT
