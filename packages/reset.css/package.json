@@ -1,6 +1,6 @@
 {
   "name": "@kcws/reset.css",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "css reseting package",
   "main": "lib/reset.scss.css",
   "style": "lib/reset.scss.css",

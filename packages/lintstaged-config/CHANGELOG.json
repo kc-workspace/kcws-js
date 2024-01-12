@@ -2,6 +2,45 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "0.27.0",
+      "tag": "@kcws/lintstaged-config_v0.27.0",
+      "date": "Fri, 12 Jan 2024 07:15:15 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Change private types package to public @kctypes",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "01df82094dd338e1d663f5cffc7ea4e4cc67af54"
+          },
+          {
+            "comment": "Update docs name matched to actual code",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "25baf9decafab8062ee5a2728b515f343286f1f2"
+          },
+          {
+            "comment": "Force upgrade version to clean failed release",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "59416545f2148a061985048cd151c78c20fa5929"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "698423820783a4ddb915d75f26f6ecdbb86189b6"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.34.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.1.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.25.2",
       "tag": "@kcws/lintstaged-config_v0.25.2",
       "date": "Tue, 02 Jan 2024 22:37:20 GMT",

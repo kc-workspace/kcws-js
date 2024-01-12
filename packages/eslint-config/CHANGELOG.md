@@ -1,6 +1,17 @@
 # Change Log - @kcws/eslint-config
 
-This log was last generated on Tue, 02 Jan 2024 22:37:20 GMT and should not be manually modified.
+This log was last generated on Fri, 12 Jan 2024 07:15:15 GMT and should not be manually modified.
+
+## 1.1.0
+Fri, 12 Jan 2024 07:15:15 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+### Patches
+
+- disable typedef-var by default
 
 ## 0.32.0
 Tue, 02 Jan 2024 22:37:20 GMT
