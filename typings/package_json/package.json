@@ -16,6 +16,9 @@
     "email": "kcws@kc.in.th",
     "url": "https://github.com/kamontat"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "typescript",
     "tsd",
