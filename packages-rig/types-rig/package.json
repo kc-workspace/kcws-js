@@ -1,6 +1,6 @@
 {
   "name": "@kcws/types-rig",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "a rig package for @types projects using heft",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/types-rig",
