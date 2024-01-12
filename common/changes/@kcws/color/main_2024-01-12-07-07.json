@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/color",
+      "comment": "Force upgrade version to clean failed release",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/color"
+}
