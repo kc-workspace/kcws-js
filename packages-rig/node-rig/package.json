@@ -1,6 +1,6 @@
 {
   "name": "@kcws/node-rig",
-  "version": "0.32.0",
+  "version": "0.33.0",
   "description": "a rig package for node environment projects using heft",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/node-rig",
