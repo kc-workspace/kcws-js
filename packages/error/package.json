@@ -1,6 +1,6 @@
 {
   "name": "@kcws/error",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "error management",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
