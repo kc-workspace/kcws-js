@@ -11,12 +11,12 @@ const ROOT: string = "/";
  *
  * @internal
  */
-export type _WalkCallback = (directory: string) => WithUndefined<string>;
+export type _WalkCallback = (directory: string) => string | undefined;
 
 const walkDirectory = (
   file: string,
   cb: _WalkCallback
-): WithUndefined<string> => {
+): string | undefined => {
   const next = path.dirname(file);
   if (next === ROOT) return undefined;
 
@@ -37,7 +37,7 @@ const resolveRushCommand = (): Array<string> => {
   return [rush];
 };
 
-const resolvePackageName = (files: Array<string>): WithUndefined<string> => {
+const resolvePackageName = (files: Array<string>): string | undefined => {
   for (const file of files) {
     const name = walkDirectory(file, (directory) => {
       const pkg = path.resolve(directory, "package.json");
