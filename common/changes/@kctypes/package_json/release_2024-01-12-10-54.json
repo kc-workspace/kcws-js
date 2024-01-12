@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kctypes/package_json",
+      "comment": "Resolve deployment failed and state invalid",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kctypes/package_json"
+}
