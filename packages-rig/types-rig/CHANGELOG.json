@@ -2,6 +2,37 @@
   "name": "@kcws/types-rig",
   "entries": [
     {
+      "version": "0.5.1",
+      "tag": "@kcws/types-rig_v0.5.1",
+      "date": "Fri, 12 Jan 2024 10:59:31 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Update project directory",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "01df82094dd338e1d663f5cffc7ea4e4cc67af54"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Fix publish d",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "25baf9decafab8062ee5a2728b515f343286f1f2"
+          },
+          {
+            "comment": "Force upgrade version to clean failed release",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "59416545f2148a061985048cd151c78c20fa5929"
+          },
+          {
+            "comment": "Resolve deployment failed and state invalid",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "53bd7181cd280a772d85338b55d1b33ffa943709"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.5.0",
       "tag": "@kcws/types-rig_v0.5.0",
       "date": "Fri, 12 Jan 2024 10:45:35 GMT",

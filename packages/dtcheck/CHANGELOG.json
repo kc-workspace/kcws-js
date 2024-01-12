@@ -2,6 +2,56 @@
   "name": "@kcws/dtcheck",
   "entries": [
     {
+      "version": "0.29.0",
+      "tag": "@kcws/dtcheck_v0.29.0",
+      "date": "Fri, 12 Jan 2024 10:59:31 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Change private types package to public @kctypes",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "01df82094dd338e1d663f5cffc7ea4e4cc67af54"
+          },
+          {
+            "comment": "Force upgrade version to clean failed release",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "59416545f2148a061985048cd151c78c20fa5929"
+          },
+          {
+            "comment": "Resolve deployment failed and state invalid",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "53bd7181cd280a772d85338b55d1b33ffa943709"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Add new getDatatype(input) return data type of input with custom settings support",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "eb34c208301e63d5aa0268ff14652c9e5cab9577"
+          },
+          {
+            "comment": "Add more apis for checking datatypes in javascript and/or getting datatypes",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "25baf9decafab8062ee5a2728b515f343286f1f2"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/web-rig\" to `0.37.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.28.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.2.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kctypes/generic\" to `1.1.2`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.28.0",
       "tag": "@kcws/dtcheck_v0.28.0",
       "date": "Fri, 12 Jan 2024 10:45:35 GMT",

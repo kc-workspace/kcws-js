@@ -1,6 +1,15 @@
 # Change Log - @kcws/types-rig
 
-This log was last generated on Fri, 12 Jan 2024 10:45:35 GMT and should not be manually modified.
+This log was last generated on Fri, 12 Jan 2024 10:59:31 GMT and should not be manually modified.
+
+## 0.5.1
+Fri, 12 Jan 2024 10:59:31 GMT
+
+### Patches
+
+- Fix publish d
+- Force upgrade version to clean failed release
+- Resolve deployment failed and state invalid
 
 ## 0.5.0
 Fri, 12 Jan 2024 10:45:35 GMT

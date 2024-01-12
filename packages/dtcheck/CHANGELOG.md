@@ -1,6 +1,20 @@
 # Change Log - @kcws/dtcheck
 
-This log was last generated on Fri, 12 Jan 2024 10:45:35 GMT and should not be manually modified.
+This log was last generated on Fri, 12 Jan 2024 10:59:31 GMT and should not be manually modified.
+
+## 0.29.0
+Fri, 12 Jan 2024 10:59:31 GMT
+
+### Minor changes
+
+- Add new getDatatype(input) return data type of input with custom settings support
+- Add more apis for checking datatypes in javascript and/or getting datatypes
+
+### Patches
+
+- Change private types package to public @kctypes
+- Force upgrade version to clean failed release
+- Resolve deployment failed and state invalid
 
 ## 0.28.0
 Fri, 12 Jan 2024 10:45:35 GMT
