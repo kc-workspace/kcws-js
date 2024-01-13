@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/prettier-config",
+      "comment": "Initiate new package for shared prettier config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/prettier-config"
+}
