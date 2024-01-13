@@ -25,6 +25,7 @@ const config = {
         "web-rig",
         "types-rig",
         "eslint-config",
+        "prettier-config",
         "lintstaged-config",
         "types",
         "rush-api-documenter",
@@ -138,6 +139,10 @@ const config = {
           "eslint-config": {
             description: "@kcws/eslint-config package",
             title: "Eslint config",
+          },
+          "prettier-config": {
+            description: "@kcws/prettier-config package",
+            title: "Prettier config",
           },
           "lintstaged-config": {
             description: "@kcws/lintstaged-config package",

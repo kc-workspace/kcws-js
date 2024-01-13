@@ -1,0 +1,4 @@
+{
+  "extends": ["../../common/autoinstallers/rush-api-documenter/typedoc.base.json"],
+  "entryPoints": ["src/index.js"]
+}

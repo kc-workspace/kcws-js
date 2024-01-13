@@ -5,41 +5,24 @@
 [![libsio@latest][img:libsio@latest]][link:libsio@latest]
 ![snyk@latest][img:snyk@latest]
 
-This is `kc` eslint config extends from rushstack configuration.
-This contains multiple configuration called profile.
+This is `kc` eslint config customize for personal reusable.
+This contains multiple configuration setting.
 
 ## Usage
 
 1. Install this package via `npm install @kcws/eslint-config`
 2. Create javascript eslint config at root (**.eslintrc.js**)
-3. Select your profile and place to extends field
+3. Place below code with customize settings
 
 ```js
-module.exports = {
-  extends: ["@kcws/eslint-config/profiles/<profile_name>"],
-};
-```
-
-### Profiles
-
-1. `node` - for node application, you need to add `parserOptions`
-2. `web` - for website application, you need to add `parserOptions`
-
-```js
-module.exports = {
-  extends: ["@kcws/eslint-config/profiles/node"],
-  // Where tsconfigRootDir should path
-  // to your tsconfig.json directory
-  parserOptions: { tsconfigRootDir: __dirname },
-};
-```
-
-3. `types` - for typing package (`@types/*`).
-
-```js
-module.exports = {
-  extends: ["@kcws/eslint-config/profiles/types"],
-};
+const createConfig = require("@kcws/eslint-config");
+module.exports = createConfig({
+  cwd: __dirname,
+  // your application profile
+  profile: "web",
+  // additional settings
+  // ...
+});
 ```
 
 <!-- LINKS SECTION -->

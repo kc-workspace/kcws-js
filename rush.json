@@ -408,6 +408,12 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/prettier-config",
+      "projectFolder": "packages/prettier-config",
+      "reviewCategory": "configs",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@kctypes/package_json",
       "projectFolder": "typings/package_json",
       "reviewCategory": "typings",

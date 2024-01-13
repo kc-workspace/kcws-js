@@ -27,8 +27,7 @@
     "CHANGELOG.json",
     "CHANGELOG.md",
     "src",
-    "lib",
-    "profiles"
+    "lib"
   ],
   "scripts": {
     "build": "heft build",

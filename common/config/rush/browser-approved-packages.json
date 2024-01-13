@@ -20,7 +20,7 @@
     },
     {
       "name": "@kcws/lintstaged-config",
-      "allowedCategories": [ "libraries", "prototypes", "typings" ]
+      "allowedCategories": [ "configs", "libraries", "prototypes", "typings" ]
     },
     {
       "name": "@kcws/node-rig",
@@ -152,6 +152,10 @@
     },
     {
       "name": "micromatch",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "prettier",
       "allowedCategories": [ "configs" ]
     },
     {
