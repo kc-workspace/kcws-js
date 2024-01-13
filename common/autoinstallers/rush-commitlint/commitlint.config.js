@@ -27,6 +27,7 @@ const config = {
         "eslint-config",
         "prettier-config",
         "lintstaged-config",
+        "rspack-config",
         "types",
         "rush-api-documenter",
         "rush-commitlint",
@@ -147,6 +148,10 @@ const config = {
           "lintstaged-config": {
             description: "@kcws/lintstaged-config package",
             title: "Lint-staged config",
+          },
+          "rspack-config": {
+            description: "@kcws/rspack-config package",
+            title: "rspack config",
           },
           types: {
             description: "All @types/* packages",

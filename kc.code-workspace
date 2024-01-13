@@ -53,6 +53,10 @@
       "path": "packages/lintstaged-config"
     },
     {
+      "name": "@kcws/rspack-config",
+      "path": "packages/rspack-config"
+    },
+    {
       "name": "@kctypes/package_json",
       "path": "typings/package_json"
     },

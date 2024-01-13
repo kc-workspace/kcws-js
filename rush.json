@@ -414,6 +414,12 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/rspack-config",
+      "projectFolder": "packages/rspack-config",
+      "reviewCategory": "configs",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@kctypes/package_json",
       "projectFolder": "typings/package_json",
       "reviewCategory": "typings",

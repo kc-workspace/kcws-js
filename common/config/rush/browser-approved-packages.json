@@ -39,6 +39,14 @@
       "allowedCategories": [ "configs" ]
     },
     {
+      "name": "@rspack/cli",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "@rspack/core",
+      "allowedCategories": [ "configs" ]
+    },
+    {
       "name": "@rushstack/eslint-patch",
       "allowedCategories": [ "configs" ]
     },
@@ -156,6 +164,10 @@
     },
     {
       "name": "prettier",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "rspack",
       "allowedCategories": [ "configs" ]
     },
     {
