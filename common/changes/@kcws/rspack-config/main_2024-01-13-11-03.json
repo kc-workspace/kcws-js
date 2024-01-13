@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/rspack-config",
+      "comment": "Initiate new package for build rspack config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/rspack-config"
+}
