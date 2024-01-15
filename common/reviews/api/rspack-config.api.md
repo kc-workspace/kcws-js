@@ -4,18 +4,19 @@
 
 ```ts
 
-import type { Configuration } from '@rspack/cli';
-import type { Configuration as Configuration_2 } from '@rspack/core';
+import type { Configuration } from '@rspack/core';
+import type { RspackPluginFunction } from '@rspack/core';
+import type { RspackPluginInstance } from '@rspack/core';
 
 // @beta (undocumented)
 export class ConfigBuilder<Transformers extends ConfigTransformers> {
-    constructor(config: Configuration_2, transformers: Transformers);
+    constructor(config: Configuration, transformers: Transformers);
     // (undocumented)
-    add(config: Configuration_2): this;
+    add(config: Configuration): this;
     // (undocumented)
-    build(): Configuration_2;
+    build(): Configuration;
     // (undocumented)
-    set(config: Configuration_2): this;
+    set(config: Configuration): this;
     // Warning: (ae-forgotten-export) The symbol "TransformerParams" needs to be exported by the entry point index.d.ts
     //
     // (undocumented)
@@ -27,11 +28,11 @@ export class ConfigService<Transformers extends ConfigTransformers> {
     // Warning: (ae-incompatible-release-tags) The symbol "builder" is marked as @public, but its signature references "ConfigBuilder" which is marked as @beta
     //
     // (undocumented)
-    static builder(config?: Configuration_2): ConfigBuilder<{}>;
+    static builder(config?: Configuration): ConfigBuilder<{}>;
     // Warning: (ae-incompatible-release-tags) The symbol "builder" is marked as @public, but its signature references "ConfigBuilder" which is marked as @beta
     //
     // (undocumented)
-    builder(config?: Configuration_2): ConfigBuilder<Transformers>;
+    builder(config?: Configuration): ConfigBuilder<Transformers>;
     // (undocumented)
     static define<Name extends string, Params extends unknown[], Transformer extends ConfigTransformer<Params> = ConfigTransformer<Params>>(name: Name, transformer: Transformer): ConfigService<{ [name in Name]: Transformer; }>;
     // Warning: (ae-forgotten-export) The symbol "Merge" needs to be exported by the entry point index.d.ts
