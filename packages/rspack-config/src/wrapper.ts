@@ -1,9 +1,17 @@
-import type { Configuration } from "@rspack/cli";
+import type {
+  Configuration,
+  RspackPluginFunction,
+  RspackPluginInstance,
+} from "@rspack/core";
+
+type Condition = () => boolean;
 
 type Entry = Exclude<Configuration["entry"], undefined>;
 type EntryRecord = Exclude<Entry, string | string[]>;
 type EntryRecordValue = EntryRecord[string];
-type EntryCondition = () => boolean;
+
+type Plugin = RspackPluginInstance | RspackPluginFunction;
+type Plugins = Exclude<Configuration["plugins"], undefined>;
 
 export class ConfigWrapper {
   constructor(private base: Configuration) {}
@@ -20,13 +28,13 @@ export class ConfigWrapper {
     return new ConfigWrapper({ ...this.base, ...config });
   }
 
-  setEntry(input: Entry, condition?: EntryCondition): ConfigWrapper {
+  setEntry(input: Entry, condition?: Condition): ConfigWrapper {
     if (condition === undefined || condition())
       return this.merge({ entry: input });
     return this;
   }
 
-  addEntry(input: EntryRecord, condition?: EntryCondition): ConfigWrapper {
+  addEntry(input: EntryRecord, condition?: Condition): ConfigWrapper {
     const entry = {
       ...this.convertEntryRecord(this.base.entry),
       ...input,
@@ -37,10 +45,21 @@ export class ConfigWrapper {
   addEntryByName(
     name: string,
     value: EntryRecordValue,
-    condition?: EntryCondition
+    condition?: Condition
   ): ConfigWrapper {
     const record = { [name]: value };
     return this.addEntry(record, condition);
+  }
+
+  setPlugins(plugins: Plugins, condition?: Condition) {
+    if (condition === undefined || condition())
+      return this.merge({ plugins: plugins });
+    return this;
+  }
+
+  addPlugins(plugin: Plugin, condition?: Condition) {
+    const plugins = this.base.plugins ?? [];
+    return this.setPlugins([...plugins, plugin], condition);
   }
 
   private convertEntryRecord(entry: Entry | undefined): EntryRecord {
