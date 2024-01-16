@@ -2,6 +2,18 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "0.28.2",
+      "tag": "@kcws/lintstaged-config_v0.28.2",
+      "date": "Tue, 16 Jan 2024 22:38:05 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.3.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.28.1",
       "tag": "@kcws/lintstaged-config_v0.28.1",
       "date": "Fri, 12 Jan 2024 10:59:31 GMT",

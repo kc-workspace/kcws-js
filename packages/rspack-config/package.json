@@ -1,6 +1,6 @@
 {
   "name": "@kcws/rspack-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "shared rspack configuration builder",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",

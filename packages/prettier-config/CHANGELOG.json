@@ -1,0 +1,34 @@
+{
+  "name": "@kcws/prettier-config",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@kcws/prettier-config_v0.1.0",
+      "date": "Tue, 16 Jan 2024 22:38:05 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Initiate new package for shared prettier config",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "23ccdc77db1c5d6973f407187e55676e637e6e43"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "dc14c14d3cfd77c8dacd8ff4241676a4bc69f231"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.28.2`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.3.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

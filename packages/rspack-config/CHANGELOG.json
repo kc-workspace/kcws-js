@@ -1,0 +1,34 @@
+{
+  "name": "@kcws/rspack-config",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@kcws/rspack-config_v0.1.0",
+      "date": "Tue, 16 Jan 2024 22:38:05 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Initiate new package for build rspack config",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "f713da18e18cd6f1196a775f279ce4fa74441c5c"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "dc14c14d3cfd77c8dacd8ff4241676a4bc69f231"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.28.2`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.3.0`"
+          }
+        ]
+      }
+    }
+  ]
+}
