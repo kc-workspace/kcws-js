@@ -35,10 +35,10 @@
     "_phase:build": "heft run --only build -- --clean"
   },
   "dependencies": {
-    "@definitelytyped/eslint-plugin": "0.0.207",
-    "@rushstack/eslint-patch": "1.6.1",
-    "@rushstack/eslint-plugin": "0.13.1",
-    "@rushstack/eslint-plugin-security": "0.7.1",
+    "@definitelytyped/eslint-plugin": "0.1.0",
+    "@rushstack/eslint-patch": "1.7.0",
+    "@rushstack/eslint-plugin": "0.14.0",
+    "@rushstack/eslint-plugin-security": "0.8.0",
     "@typescript-eslint/eslint-plugin": "6.16.0",
     "@typescript-eslint/parser": "6.16.0",
     "eslint-config-prettier": "9.1.0",
@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@kcws/node-rig": "workspace:*",
-    "@rushstack/heft": "0.63.6",
+    "@rushstack/heft": "0.64.0",
     "@types/eslint": "8.56.2"
   },
   "peerDependencies": {
