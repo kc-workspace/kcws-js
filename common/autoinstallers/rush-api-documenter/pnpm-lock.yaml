@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@microsoft/api-documenter':
-    specifier: 7.23.16
-    version: 7.23.16
+    specifier: 7.23.17
+    version: 7.23.17
   typedoc:
     specifier: 0.25.7
     version: 0.25.7(typescript@5.3.3)
@@ -15,16 +15,16 @@ dependencies:
     specifier: 3.0.0
     version: 3.0.0(typedoc@0.25.7)
   typedoc-plugin-missing-exports:
-    specifier: 2.1.0
-    version: 2.1.0(typedoc@0.25.7)
+    specifier: 2.2.0
+    version: 2.2.0(typedoc@0.25.7)
   typedoc-theme-hierarchy:
     specifier: 4.1.2
     version: 4.1.2(typedoc@0.25.7)
 
 packages:
 
-  /@microsoft/api-documenter@7.23.16:
-    resolution: {integrity: sha512-B8Vr9oBwzbtNt5uyhbFLymEpzSYKWkQ5WED59zjEXY4981qcBLXprQoTZYdyrhokVwzUxLIcqrS0uvZag39QlQ==}
+  /@microsoft/api-documenter@7.23.17:
+    resolution: {integrity: sha512-9AaEo0LaVdx5qljF4wX1kjZmWRcFDM9OAdW5HXEdapuIyCq8/uAJ4W9q5ee0ntJuJ+Z0g8ynfA3/WEyAuQt/Rw==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.28.4
@@ -320,8 +320,8 @@ packages:
       typedoc: 0.25.7(typescript@5.3.3)
     dev: false
 
-  /typedoc-plugin-missing-exports@2.1.0(typedoc@0.25.7):
-    resolution: {integrity: sha512-+1DhqZCEu7Vu5APnrqpPwl31D+hXpt1fV0Le9ycCRL1eLVdatdl6KVt4SEVwPxnEpKwgOn2dNX6I9+0F1aO2aA==}
+  /typedoc-plugin-missing-exports@2.2.0(typedoc@0.25.7):
+    resolution: {integrity: sha512-2+XR1IcyQ5UwXZVJe9NE6HrLmNufT9i5OwoIuuj79VxuA3eYq+Y6itS9rnNV1D7UeQnUSH8kISYD73gHE5zw+w==}
     peerDependencies:
       typedoc: 0.24.x || 0.25.x
     dependencies:
