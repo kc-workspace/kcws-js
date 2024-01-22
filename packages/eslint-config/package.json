@@ -39,7 +39,7 @@
     "@rushstack/eslint-patch": "1.7.0",
     "@rushstack/eslint-plugin": "0.14.0",
     "@rushstack/eslint-plugin-security": "0.8.0",
-    "@typescript-eslint/eslint-plugin": "6.16.0",
+    "@typescript-eslint/eslint-plugin": "6.17.0",
     "@typescript-eslint/parser": "6.16.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-node": "0.3.9",
