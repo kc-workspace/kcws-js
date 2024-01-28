@@ -1,6 +1,6 @@
 {
   "name": "@kcws/web-rig",
-  "version": "0.37.1",
+  "version": "0.38.0",
   "description": "a rig package for web environment projects using heft",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/web-rig",
@@ -31,12 +31,12 @@
     "_phase:build": ""
   },
   "dependencies": {
-    "@microsoft/api-extractor": "7.39.1",
-    "@rushstack/heft-api-extractor-plugin": "0.3.0",
-    "@rushstack/heft-jest-plugin": "0.11.0",
-    "@rushstack/heft-lint-plugin": "0.3.0",
-    "@rushstack/heft-sass-plugin": "0.13.3",
-    "@rushstack/heft-typescript-plugin": "0.3.0",
+    "@microsoft/api-extractor": "7.39.4",
+    "@rushstack/heft-api-extractor-plugin": "0.3.3",
+    "@rushstack/heft-jest-plugin": "0.11.3",
+    "@rushstack/heft-lint-plugin": "0.3.3",
+    "@rushstack/heft-sass-plugin": "0.13.6",
+    "@rushstack/heft-typescript-plugin": "0.3.3",
     "@types/heft-jest": "1.0.6",
     "eslint": "8.56.0",
     "jest-environment-jsdom": "29.7.0",
@@ -45,7 +45,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@rushstack/heft": "0.64.0"
+    "@rushstack/heft": "0.64.3"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.63.5"

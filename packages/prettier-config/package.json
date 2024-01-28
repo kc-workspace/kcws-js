@@ -1,6 +1,6 @@
 {
   "name": "@kcws/prettier-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "prettier configuration",
   "main": "src/index.js",
   "types": "lib/index.d.ts",
@@ -40,7 +40,7 @@
     "@kcws/node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.64.0",
+    "@rushstack/heft": "0.64.3",
     "prettier": "3.2.4"
   },
   "peerDependencies": {

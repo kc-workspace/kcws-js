@@ -1,6 +1,6 @@
 {
   "name": "@kcws/mixin",
-  "version": "0.26.2",
+  "version": "0.27.0",
   "description": "typescript mixin helpers",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
@@ -52,7 +52,7 @@
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.64.0"
+    "@rushstack/heft": "0.64.3"
   },
   "engines": {
     "node": ">=12"

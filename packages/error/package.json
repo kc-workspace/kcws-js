@@ -1,6 +1,6 @@
 {
   "name": "@kcws/error",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "error management",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
@@ -51,7 +51,7 @@
     "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.64.0"
+    "@rushstack/heft": "0.64.3"
   },
   "engines": {
     "node": ">=12"
