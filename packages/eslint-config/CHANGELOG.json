@@ -2,6 +2,25 @@
   "name": "@kcws/eslint-config",
   "entries": [
     {
+      "version": "1.5.0",
+      "tag": "@kcws/eslint-config_v1.5.0",
+      "date": "Tue, 30 Jan 2024 22:37:56 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "4578dcb7bc0a095b900761b066e20f7df989b409"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.37.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.4.0",
       "tag": "@kcws/eslint-config_v1.4.0",
       "date": "Tue, 23 Jan 2024 22:38:38 GMT",
