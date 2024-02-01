@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/equals",
+      "comment": "Remove unused function and reduce output size",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/equals"
+}

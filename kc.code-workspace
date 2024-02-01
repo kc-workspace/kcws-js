@@ -73,6 +73,10 @@
       "path": "common/config/rush"
     },
     {
+      "name": "@common/changes",
+      "path": "common/changes"
+    },
+    {
       "name": ".github",
       "path": ".github"
     },

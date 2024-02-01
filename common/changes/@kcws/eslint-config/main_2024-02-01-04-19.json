@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "Disable forbidden any on test files",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}
