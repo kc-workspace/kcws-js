@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "Mark Seed.Builder to be readonly",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/random"
+}
