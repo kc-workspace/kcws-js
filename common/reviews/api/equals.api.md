@@ -7,15 +7,84 @@
 import type { DataType } from '@kcws/dtcheck';
 import type { ISettings as ISettings_2 } from '@kcws/dtcheck';
 
-// Warning: (ae-forgotten-export) The symbol "ISettings" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "EquivalentValue" needs to be exported by the entry point index.d.ts
 //
+// @public
+export type EqualFn<A = unknown, B = unknown> = (a: A, b: B, setting?: ISettings) => EquivalentValue;
+
 // @public
 export const equals: (a: unknown, b: unknown, setting?: ISettings) => boolean;
 
-// Warning: (ae-forgotten-export) The symbol "EqualFn" needs to be exported by the entry point index.d.ts
-//
 // @beta
 export const isArrayEquals: EqualFn;
+
+// @beta
+export const isArrayVEquals: VEqualFn<unknown[]>;
+
+// @beta
+export const isBigIntEquals: EqualFn;
+
+// @beta
+export const isBigIntVEquals: VEqualFn<bigint>;
+
+// @beta
+export const isBooleanEquals: EqualFn;
+
+// @beta
+export const isBooleanVEquals: VEqualFn<boolean>;
+
+// @public
+export interface ISettings<T extends string = ""> {
+    dataTypes?: ISettings_2<T>;
+    // Warning: (ae-forgotten-export) The symbol "EqualFnMapper" needs to be exported by the entry point index.d.ts
+    equalFnMapper?: EqualFnMapper<T>;
+    order?: boolean;
+}
+
+// @beta
+export const isFunctionEquals: EqualFn;
+
+// @beta
+export const isFunctionVEquals: VEqualFn<Function>;
+
+// @beta
+export const isNullEquals: EqualFn;
+
+// @beta
+export const isNullVEquals: VEqualFn<object | null>;
+
+// @beta
+export const isNumberEquals: EqualFn;
+
+// @beta
+export const isNumberVEquals: VEqualFn<number>;
+
+// @beta
+export const isObjectEquals: EqualFn;
+
+// @beta
+export const isObjectVEquals: VEqualFn<object>;
+
+// @beta
+export const isStringEquals: EqualFn;
+
+// @beta
+export const isStringVEquals: VEqualFn<string>;
+
+// @beta
+export const isSymbolEquals: EqualFn;
+
+// @beta
+export const isSymbolVEquals: VEqualFn<symbol>;
+
+// @beta
+export const isUndefinedEquals: EqualFn;
+
+// @beta
+export const isUndefinedVEquals: VEqualFn<unknown>;
+
+// @public
+export type VEqualFn<T> = (a: T, b: T, setting?: ISettings) => boolean;
 
 // (No @packageDocumentation comment for this package)
 
