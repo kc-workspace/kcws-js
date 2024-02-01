@@ -11,6 +11,8 @@ module.exports = defineConfig({
       plugins: ["jest"],
       extends: ["plugin:jest/recommended"],
       rules: {
+        // Disable this rules because sometimes we will testing with any type
+        "@typescript-eslint/no-explicit-any": "off",
         // Disable this rules because sometimes we will testing with undefined
         "unicorn/no-useless-undefined": "off",
         // Disable null on test because sometimes we will testing on null value
