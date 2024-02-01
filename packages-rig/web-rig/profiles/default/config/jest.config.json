@@ -19,5 +19,14 @@
   // Enabled code coverage by default
   "collectCoverage": true,
   "coverageReporters": ["text", ["lcov", { "projectRoot": "../.." }]],
-  "coverageProvider": "v8"
+  "collectCoverageFrom": [
+    "lib/**/*.{cjs,js}",
+    "!lib/**/*.d.ts",
+    "!lib/**/*.test.{cjs,js}",
+    "!lib/**/*.type.{cjs,js}",
+    "!lib/**/test/**",
+    "!lib/**/__tests__/**",
+    "!lib/**/__fixtures__/**",
+    "!lib/**/__mocks__/**"
+  ]
 }
