@@ -1,4 +1,4 @@
-import type { EqualFnMapper } from "../types";
+import type { EqualFnMapper } from "../index.type";
 
 import {
   isArrayVEquals,

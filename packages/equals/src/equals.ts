@@ -1,4 +1,4 @@
-import type { ISettings } from "./types";
+import type { ISettings } from "./index.type";
 
 import { getDataType } from "@kcws/dtcheck";
 

@@ -1,5 +1,5 @@
 import type { DataType } from "@kcws/dtcheck";
-import type { EqualFnMapper, VEqualFn } from "../types";
+import type { EqualFnMapper, VEqualFn } from "../index.type";
 
 import { EquivalentValue, defaultEqualFnMapper } from "../constants";
 

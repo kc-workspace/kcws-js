@@ -1,4 +1,4 @@
-import type { EqualFn, VEqualFn } from "../types";
+import type { EqualFn, VEqualFn } from "../index.type";
 
 import { EquivalentValue } from "../constants";
 

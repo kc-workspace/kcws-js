@@ -1,6 +1,6 @@
 import type { DataType, ISettings as DataTypeISettings } from "@kcws/dtcheck";
 
-import { EquivalentValue } from "../constants";
+import { EquivalentValue } from "./constants";
 
 /**
  * A equivalent check function with settings.
@@ -26,7 +26,7 @@ export type EqualFnMapper<T extends string> = Partial<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Record<DataType<T>, VEqualFn<any>>
 > &
-  Record<T, VEqualFn<unknown>>;
+  Record<T extends "" ? never : T, VEqualFn<unknown>>;
 
 /**
  * Equivalent settings
