@@ -144,7 +144,7 @@ export type SeedBuilder = (input: string) => SeedFn;
 // @public
 export class SeedFixed extends Seed {
     constructor(input: number);
-    static Builder: SeedBuilder;
+    static readonly Builder: SeedBuilder;
 }
 
 // @public
@@ -156,19 +156,19 @@ export type SeedPatch = (n: number) => number;
 // @public
 export class SeedTimestamp extends Seed {
     constructor();
-    static Builder: SeedBuilder;
+    static readonly Builder: SeedBuilder;
 }
 
 // @public
 export class SeedXfnv1a extends Seed {
     constructor(input: string);
-    static Builder: SeedBuilder;
+    static readonly Builder: SeedBuilder;
 }
 
 // @public
 export class SeedXmur3 extends Seed {
     constructor(input: string);
-    static Builder: SeedBuilder;
+    static readonly Builder: SeedBuilder;
 }
 
 // @public
