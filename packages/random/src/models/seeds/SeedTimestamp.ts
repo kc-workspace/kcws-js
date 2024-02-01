@@ -16,7 +16,7 @@ export class SeedTimestamp extends Seed {
    *
    * @public
    */
-  public static Builder: SeedBuilder = () => {
+  public static readonly Builder: SeedBuilder = () => {
     return () => Date.now();
   };
 

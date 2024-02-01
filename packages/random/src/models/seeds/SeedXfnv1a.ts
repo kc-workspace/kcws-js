@@ -18,7 +18,7 @@ export class SeedXfnv1a extends Seed {
    *
    * @public
    */
-  public static Builder: SeedBuilder = input => {
+  public static readonly Builder: SeedBuilder = input => {
     let h = 2_166_136_261 >>> 0;
     for (let index = 0; index < input.length; index++)
       h = Math.imul(h ^ input.charCodeAt(index), 16_777_619);

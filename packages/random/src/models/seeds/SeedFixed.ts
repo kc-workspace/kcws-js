@@ -23,7 +23,7 @@ export class SeedFixed extends Seed {
    *
    * @public
    */
-  public static Builder: SeedBuilder = input => {
+  public static readonly Builder: SeedBuilder = input => {
     return () => Number.parseFloat(input);
   };
 

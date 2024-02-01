@@ -18,7 +18,7 @@ export class SeedXmur3 extends Seed {
    *
    * @public
    */
-  public static Builder: SeedBuilder = input => {
+  public static readonly Builder: SeedBuilder = input => {
     let h = 1_779_033_703 ^ input.length;
     for (let index = 0; index < input.length; index++) {
       h = Math.imul(h ^ input.charCodeAt(index), 3_432_918_353);
