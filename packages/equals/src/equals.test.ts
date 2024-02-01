@@ -8,7 +8,7 @@ describe("Equals function", () => {
     [true, true, true],
     [1, true, false],
     ["123", 123, false],
-  ])("Are '%p' and '%p' equals? %t", (a, b, expected) => {
+  ])("Are '%p' and '%p' equals? %s", (a, b, expected) => {
     expect(equals(a, b)).toEqual(expected);
   });
 
@@ -24,7 +24,7 @@ describe("Equals function", () => {
       } satisfies ISettings,
       true,
     ],
-  ])("Are '%p' and '%p' equals (%p)? %t", (a, b, setting, expected) => {
+  ])("Are '%p' and '%p' equals (%p)? %s", (a, b, setting, expected) => {
     expect(equals(a, b, setting)).toEqual(expected);
   });
 });
