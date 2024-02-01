@@ -1,22 +1,7 @@
 import type { DataType } from "@kcws/dtcheck";
 import type { EqualFnMapper, VEqualFn } from "../index.type";
 
-import { EquivalentValue, defaultEqualFnMapper } from "../constants";
-
-/**
- * mapping equivalent value to boolean
- *
- * @param v - input equivalent value
- * @returns boolean based on equivalent value
- *
- * @internal
- * @deprecated This is from old version of equals logic
- */
-export const toBoolean = (v: EquivalentValue): boolean | undefined => {
-  if (v === EquivalentValue.EQUAL) return true;
-  else if (v === EquivalentValue.DIFF_VALUE) return false;
-  return undefined;
-};
+import { defaultEqualFnMapper } from "../constants";
 
 /**
  * find equal function based on input data type
