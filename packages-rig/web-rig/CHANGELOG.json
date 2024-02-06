@@ -2,6 +2,25 @@
   "name": "@kcws/web-rig",
   "entries": [
     {
+      "version": "0.40.0",
+      "tag": "@kcws/web-rig_v0.40.0",
+      "date": "Tue, 06 Feb 2024 22:37:35 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Ignore type-only files by using *.type.ts regex",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "4307376d1b2b858ccce38f9e35356bcd69189f14"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "6859261a8b5e2b6383312dac401085bdda59a0d6"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.39.0",
       "tag": "@kcws/web-rig_v0.39.0",
       "date": "Tue, 30 Jan 2024 22:37:56 GMT",

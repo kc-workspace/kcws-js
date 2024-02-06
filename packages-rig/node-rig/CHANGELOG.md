@@ -1,6 +1,14 @@
 # Change Log - @kcws/node-rig
 
-This log was last generated on Tue, 30 Jan 2024 22:37:56 GMT and should not be manually modified.
+This log was last generated on Tue, 06 Feb 2024 22:37:35 GMT and should not be manually modified.
+
+## 0.38.0
+Tue, 06 Feb 2024 22:37:35 GMT
+
+### Minor changes
+
+- Ignore type-only files by using *.type.ts regex
+- upgrade dependencies [auto]
 
 ## 0.37.0
 Tue, 30 Jan 2024 22:37:56 GMT

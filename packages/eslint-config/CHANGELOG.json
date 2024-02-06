@@ -2,6 +2,32 @@
   "name": "@kcws/eslint-config",
   "entries": [
     {
+      "version": "1.6.0",
+      "tag": "@kcws/eslint-config_v1.6.0",
+      "date": "Tue, 06 Feb 2024 22:37:35 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Disable forbidden any on test files",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "4307376d1b2b858ccce38f9e35356bcd69189f14"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "6859261a8b5e2b6383312dac401085bdda59a0d6"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.38.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.5.0",
       "tag": "@kcws/eslint-config_v1.5.0",
       "date": "Tue, 30 Jan 2024 22:37:56 GMT",
