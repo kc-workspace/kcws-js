@@ -41,7 +41,7 @@
     "@kcws/eslint-config": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/types-rig": "workspace:*",
-    "@rushstack/heft": "0.64.3",
+    "@rushstack/heft": "0.64.6",
     "tsd": "0.30.4",
     "typescript": "5.0.4"
   },
