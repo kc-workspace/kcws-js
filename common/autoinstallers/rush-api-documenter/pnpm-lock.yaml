@@ -6,30 +6,30 @@ settings:
 
 dependencies:
   '@microsoft/api-documenter':
-    specifier: 7.23.20
-    version: 7.23.20
+    specifier: 7.23.23
+    version: 7.23.23
   typedoc:
-    specifier: 0.25.7
-    version: 0.25.7(typescript@5.3.3)
+    specifier: 0.25.8
+    version: 0.25.8(typescript@5.3.3)
   typedoc-plugin-extras:
     specifier: 3.0.0
-    version: 3.0.0(typedoc@0.25.7)
+    version: 3.0.0(typedoc@0.25.8)
   typedoc-plugin-missing-exports:
     specifier: 2.2.0
-    version: 2.2.0(typedoc@0.25.7)
+    version: 2.2.0(typedoc@0.25.8)
   typedoc-theme-hierarchy:
     specifier: 4.1.2
-    version: 4.1.2(typedoc@0.25.7)
+    version: 4.1.2(typedoc@0.25.8)
 
 packages:
 
-  /@microsoft/api-documenter@7.23.20:
-    resolution: {integrity: sha512-61V6sukyYZ5jQEdyvDFzInaIRTd0wgT2ECKPanr2ba0fc+Mien+KIr5shz9EAqJMZz0GifTnw9HmJqsfR688xA==}
+  /@microsoft/api-documenter@7.23.23:
+    resolution: {integrity: sha512-77upYNmm6h9+8hdNWL7R1+vW1QaExkwKuOuSWR2v3Tdk2JHCVf+s341jybgYEnxRhIQIIxtLeiwQ/xzMFOizwQ==}
     hasBin: true
     dependencies:
-      '@microsoft/api-extractor-model': 7.28.7
+      '@microsoft/api-extractor-model': 7.28.9
       '@microsoft/tsdoc': 0.14.2
-      '@rushstack/node-core-library': 3.64.2
+      '@rushstack/node-core-library': 3.66.0
       '@rushstack/ts-command-line': 4.17.1
       colors: 1.2.5
       js-yaml: 3.13.1
@@ -38,12 +38,12 @@ packages:
       - '@types/node'
     dev: false
 
-  /@microsoft/api-extractor-model@7.28.7:
-    resolution: {integrity: sha512-4gCGGEQGHmbQmarnDcEWS2cjj0LtNuD3D6rh3ZcAyAYTkceAugAk2eyQHGdTcGX8w3qMjWCTU1TPb8xHnMM+Kg==}
+  /@microsoft/api-extractor-model@7.28.9:
+    resolution: {integrity: sha512-lM77dV+VO46MGp5lu4stUBnO3jyr+CrDzU+DtapcOQEZUqJxPYUoK5zjeD+gRZ9ckgGMZC94ch6FBkpmsjwQgw==}
     dependencies:
       '@microsoft/tsdoc': 0.14.2
       '@microsoft/tsdoc-config': 0.16.2
-      '@rushstack/node-core-library': 3.64.2
+      '@rushstack/node-core-library': 3.66.0
     transitivePeerDependencies:
       - '@types/node'
     dev: false
@@ -61,8 +61,8 @@ packages:
     resolution: {integrity: sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==}
     dev: false
 
-  /@rushstack/node-core-library@3.64.2:
-    resolution: {integrity: sha512-n1S2VYEklONiwKpUyBq/Fym6yAsfsCXrqFabuOMcCuj4C+zW+HyaspSHXJCKqkMxfjviwe/c9+DUqvRWIvSN9Q==}
+  /@rushstack/node-core-library@3.66.0:
+    resolution: {integrity: sha512-nXyddNe3T9Ph14TrIfjtLZ+GDzC7HL/wF+ZKC18qmRVtz2xXLd1ZzreVgiAgGDwn8ZUWZ/7q//gQJk96iWjSrg==}
     peerDependencies:
       '@types/node': '*'
     peerDependenciesMeta:
@@ -312,33 +312,33 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /typedoc-plugin-extras@3.0.0(typedoc@0.25.7):
+  /typedoc-plugin-extras@3.0.0(typedoc@0.25.8):
     resolution: {integrity: sha512-eiAe3qtm2WbV5owdncpt0zHZPqsNZH2mzNGILPd4zqrvEZie3Et9es4cpGZ+8lHO/SI0pVKwsAj7IuMxPNOdYg==}
     peerDependencies:
       typedoc: 0.25.x
     dependencies:
-      typedoc: 0.25.7(typescript@5.3.3)
+      typedoc: 0.25.8(typescript@5.3.3)
     dev: false
 
-  /typedoc-plugin-missing-exports@2.2.0(typedoc@0.25.7):
+  /typedoc-plugin-missing-exports@2.2.0(typedoc@0.25.8):
     resolution: {integrity: sha512-2+XR1IcyQ5UwXZVJe9NE6HrLmNufT9i5OwoIuuj79VxuA3eYq+Y6itS9rnNV1D7UeQnUSH8kISYD73gHE5zw+w==}
     peerDependencies:
       typedoc: 0.24.x || 0.25.x
     dependencies:
-      typedoc: 0.25.7(typescript@5.3.3)
+      typedoc: 0.25.8(typescript@5.3.3)
     dev: false
 
-  /typedoc-theme-hierarchy@4.1.2(typedoc@0.25.7):
+  /typedoc-theme-hierarchy@4.1.2(typedoc@0.25.8):
     resolution: {integrity: sha512-X3H+zaDkg7wLNoaPJoqXs3rnMfZ9BZjmlXRwplWDciaPfn2hojHxJJ+yVKdqqmojgiHJgg7MYWGDVpOfNlOJ5A==}
     peerDependencies:
       typedoc: ^0.24.0 || ^0.25.0
     dependencies:
       fs-extra: 11.1.1
-      typedoc: 0.25.7(typescript@5.3.3)
+      typedoc: 0.25.8(typescript@5.3.3)
     dev: false
 
-  /typedoc@0.25.7(typescript@5.3.3):
-    resolution: {integrity: sha512-m6A6JjQRg39p2ZVRIN3NKXgrN8vzlHhOS+r9ymUYtcUP/TIQPvWSq7YgE5ZjASfv5Vd5BW5xrir6Gm2XNNcOow==}
+  /typedoc@0.25.8(typescript@5.3.3):
+    resolution: {integrity: sha512-mh8oLW66nwmeB9uTa0Bdcjfis+48bAjSH3uqdzSuSawfduROQLlXw//WSNZLYDdhmMVB7YcYZicq6e8T0d271A==}
     engines: {node: '>= 16'}
     hasBin: true
     peerDependencies:
