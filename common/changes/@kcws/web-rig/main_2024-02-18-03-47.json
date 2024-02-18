@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/web-rig",
+      "comment": "upgrade dependencies [manually]",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/web-rig"
+}

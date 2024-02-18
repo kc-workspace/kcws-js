@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/error",
+      "comment": "upgrade dependencies [manually]",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/error"
+}

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/rspack-config",
+      "comment": "upgrade dependencies [manually]",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/rspack-config"
+}

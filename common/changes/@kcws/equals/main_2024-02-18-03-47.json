@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/equals",
+      "comment": "upgrade dependencies [manually]",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/equals"
+}

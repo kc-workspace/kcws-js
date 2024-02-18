@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "upgrade dependencies [manually]",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}
