@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/prettier-config",
+      "comment": "change default semi config to false",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/prettier-config"
+}
