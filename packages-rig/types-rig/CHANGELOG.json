@@ -2,6 +2,20 @@
   "name": "@kcws/types-rig",
   "entries": [
     {
+      "version": "0.10.0",
+      "tag": "@kcws/types-rig_v0.10.0",
+      "date": "Tue, 27 Feb 2024 15:58:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "0816f6ca70857713a5dd3076cdc68fcee4e08beb"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.9.0",
       "tag": "@kcws/types-rig_v0.9.0",
       "date": "Tue, 20 Feb 2024 22:38:04 GMT",

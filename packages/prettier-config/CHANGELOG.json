@@ -2,6 +2,43 @@
   "name": "@kcws/prettier-config",
   "entries": [
     {
+      "version": "0.6.0",
+      "tag": "@kcws/prettier-config_v0.6.0",
+      "date": "Tue, 27 Feb 2024 15:58:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "0816f6ca70857713a5dd3076cdc68fcee4e08beb"
+          },
+          {
+            "comment": "Fix createConfig function export incorrectly and add input data",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "e3071792b42cf85059821fd955921e8acc7ee0c0"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "change default semi config to false",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "5ff33cb9f3c3ec882ac4b6fa2fc003003bc7d6cd"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.41.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.33.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.9.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.5.0",
       "tag": "@kcws/prettier-config_v0.5.0",
       "date": "Tue, 20 Feb 2024 22:38:04 GMT",

@@ -1,6 +1,18 @@
 # Change Log - @kcws/prettier-config
 
-This log was last generated on Tue, 20 Feb 2024 22:38:04 GMT and should not be manually modified.
+This log was last generated on Tue, 27 Feb 2024 15:58:20 GMT and should not be manually modified.
+
+## 0.6.0
+Tue, 27 Feb 2024 15:58:20 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+- Fix createConfig function export incorrectly and add input data
+
+### Patches
+
+- change default semi config to false
 
 ## 0.5.0
 Tue, 20 Feb 2024 22:38:04 GMT
