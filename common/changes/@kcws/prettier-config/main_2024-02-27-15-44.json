@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/prettier-config",
+      "comment": "Fix createConfig function export incorrectly and add input data",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/prettier-config"
+}
