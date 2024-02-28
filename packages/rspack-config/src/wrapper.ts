@@ -4,11 +4,15 @@ import type {
   RspackPluginInstance,
 } from "@rspack/core";
 
+import { relative } from "./utils";
+
 type Condition = () => boolean;
 
 type Entry = Exclude<Configuration["entry"], undefined>;
 type EntryRecord = Exclude<Entry, string | string[]>;
 type EntryRecordValue = EntryRecord[string];
+type EntryStringRecordValue = Extract<EntryRecordValue, string | string[]>;
+type EntryStringRecord = Record<string, EntryStringRecordValue>;
 
 type Plugin = RspackPluginInstance | RspackPluginFunction;
 type Plugins = Exclude<Configuration["plugins"], undefined>;
@@ -42,6 +46,18 @@ export class ConfigWrapper {
     return this.setEntry(entry, condition);
   }
 
+  addRelativeEntry(
+    input: EntryStringRecord,
+    condition?: Condition
+  ): ConfigWrapper {
+    const record: EntryRecord = {};
+    for (const key in input) {
+      record[key] = relative(input[key]);
+    }
+
+    return this.addEntry(record, condition);
+  }
+
   addEntryByName(
     name: string,
     value: EntryRecordValue,
@@ -49,6 +65,14 @@ export class ConfigWrapper {
   ): ConfigWrapper {
     const record = { [name]: value };
     return this.addEntry(record, condition);
+  }
+
+  addRelativeEntryByName(
+    name: string,
+    value: EntryStringRecordValue,
+    condition?: Condition
+  ): ConfigWrapper {
+    return this.addEntryByName(name, relative(value), condition);
   }
 
   setPlugins(plugins: Plugins, condition?: Condition) {
