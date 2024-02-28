@@ -28,10 +28,10 @@
     //    */
     //    "outFolderName": "lib-amd"
     // }
-    {
-      "moduleKind": "esnext",
-      "outFolderName": "lib-esnext"
-    },
+    // {
+    //   "moduleKind": "esnext",
+    //   "outFolderName": "lib-esnext"
+    // },
     // {
     //   "moduleKind": "es2015",
     //   "outFolderName": "lib-es2015"
@@ -40,10 +40,10 @@
     //   "moduleKind": "amd",
     //   "outFolderName": "lib-amd"
     // },
-    {
-      "moduleKind": "umd",
-      "outFolderName": "lib-umd"
-    }
+    // {
+    //   "moduleKind": "umd",
+    //   "outFolderName": "lib-umd"
+    // }
   ],
 
   /**

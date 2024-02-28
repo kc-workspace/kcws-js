@@ -5,6 +5,12 @@
 [![libsio@latest][img:libsio@latest]][link:libsio@latest]
 ![snyk@latest][img:snyk@latest]
 
+## Profiles
+
+- `default` - For library package (output on both commonjs and esmodule)
+- `app` - For application package (output only commonjs)
+- `js` - For any javascript package (disabled all typescript feature)
+
 ## Typescript
 
 Using `Typescript` module in heft to build and compile typescript
