@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "Add app profile for application package",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}
