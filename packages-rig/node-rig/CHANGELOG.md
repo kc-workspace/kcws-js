@@ -1,6 +1,13 @@
 # Change Log - @kcws/node-rig
 
-This log was last generated on Tue, 27 Feb 2024 15:58:20 GMT and should not be manually modified.
+This log was last generated on Wed, 28 Feb 2024 10:53:57 GMT and should not be manually modified.
+
+## 0.42.0
+Wed, 28 Feb 2024 10:53:57 GMT
+
+### Minor changes
+
+- Add app profile for application package
 
 ## 0.41.0
 Tue, 27 Feb 2024 15:58:20 GMT
