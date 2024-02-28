@@ -368,9 +368,9 @@ importers:
       '@kcws/lintstaged-config':
         specifier: workspace:*
         version: link:../lintstaged-config
-      '@kcws/web-rig':
+      '@kcws/node-rig':
         specifier: workspace:*
-        version: link:../../packages-rig/web-rig
+        version: link:../../packages-rig/node-rig
       '@rspack/core':
         specifier: 0.5.4
         version: 0.5.4
