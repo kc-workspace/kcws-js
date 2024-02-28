@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/rspack-config",
+      "comment": "Add relative entry support with nodejs",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/rspack-config"
+}
