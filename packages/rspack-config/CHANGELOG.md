@@ -1,6 +1,13 @@
 # Change Log - @kcws/rspack-config
 
-This log was last generated on Wed, 28 Feb 2024 10:53:57 GMT and should not be manually modified.
+This log was last generated on Wed, 28 Feb 2024 11:30:17 GMT and should not be manually modified.
+
+## 0.8.0
+Wed, 28 Feb 2024 11:30:17 GMT
+
+### Minor changes
+
+- Add relative entry support with nodejs
 
 ## 0.7.1
 Wed, 28 Feb 2024 10:53:57 GMT

@@ -2,6 +2,20 @@
   "name": "@kcws/rspack-config",
   "entries": [
     {
+      "version": "0.8.0",
+      "tag": "@kcws/rspack-config_v0.8.0",
+      "date": "Wed, 28 Feb 2024 11:30:17 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add relative entry support with nodejs",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "bc9613ec2efd197a107fb478a767f5155a879aab"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.7.1",
       "tag": "@kcws/rspack-config_v0.7.1",
       "date": "Wed, 28 Feb 2024 10:53:57 GMT",
