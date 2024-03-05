@@ -1,6 +1,6 @@
 {
   "name": "@kcws/lintstaged-config",
-  "version": "0.33.1",
+  "version": "0.34.0",
   "description": "a lint-staged configuration for kcws-js",
   "main": "lib/index.js",
   "module": "lib-esnext/index.js",

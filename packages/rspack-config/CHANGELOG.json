@@ -2,6 +2,31 @@
   "name": "@kcws/rspack-config",
   "entries": [
     {
+      "version": "0.9.0",
+      "tag": "@kcws/rspack-config_v0.9.0",
+      "date": "Tue, 05 Mar 2024 22:38:08 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "0ab5901546f202d99e604808be9ae42a48c3ed2b"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/node-rig\" to `0.43.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.34.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.10.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.8.0",
       "tag": "@kcws/rspack-config_v0.8.0",
       "date": "Wed, 28 Feb 2024 11:30:17 GMT",
