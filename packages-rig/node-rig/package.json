@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@microsoft/api-extractor": "7.42.2",
+    "@kcws/heft-esbuild-plugin": "workspace:*",
     "@rushstack/heft-api-extractor-plugin": "0.3.18",
     "@rushstack/heft-jest-plugin": "0.11.19",
     "@rushstack/heft-lint-plugin": "0.3.18",

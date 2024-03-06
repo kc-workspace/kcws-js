@@ -135,6 +135,7 @@
       "configs", // configuration packages
       "typings", // internal typescripts type packages
       "tools", // internal tools as part of the developer toolchain
+      "example", // example libraries/applications for start new packages easier
       "prototypes" // experiments that should mostly be ignored by the review process
     ],
     /**
@@ -143,9 +144,7 @@
      * if the underlying package was already approved, this would imply that the typings
      * are also approved.
      */
-    "ignoredNpmScopes": [
-      "@types"
-    ]
+    "ignoredNpmScopes": ["@types"]
   },
   /**
    * If you use Git as your version control system, this section has some additional
@@ -359,6 +358,12 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/local-node-rig",
+      "projectFolder": "packages-rig/local-node-rig",
+      "reviewCategory": "configs",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@kcws/web-rig",
       "projectFolder": "packages-rig/web-rig",
       "reviewCategory": "configs",
@@ -368,6 +373,12 @@
       "packageName": "@kcws/types-rig",
       "projectFolder": "packages-rig/types-rig",
       "reviewCategory": "configs",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/heft-esbuild-plugin",
+      "projectFolder": "packages/heft-esbuild-plugin",
+      "reviewCategory": "tools",
       "shouldPublish": true
     },
     {
@@ -407,15 +418,21 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@kcws/example",
-      "projectFolder": "packages/example",
-      "reviewCategory": "prototypes",
+      "packageName": "@kcws-example/local-web-lib",
+      "projectFolder": "packages-example/local-web-lib",
+      "reviewCategory": "example",
       "shouldPublish": false
     },
     {
-      "packageName": "@kcws/tool-example",
-      "projectFolder": "tools/example",
-      "reviewCategory": "prototypes",
+      "packageName": "@kcws-example/node-app",
+      "projectFolder": "packages-example/node-app",
+      "reviewCategory": "example",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcws-example/local-node-tools",
+      "projectFolder": "packages-example/local-node-tools",
+      "reviewCategory": "example",
       "shouldPublish": false
     }
   ]

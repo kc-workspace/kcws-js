@@ -36,6 +36,12 @@
             "pluginPackage": "@rushstack/heft-typescript-plugin"
           }
         },
+        "esbuild": {
+          "taskDependencies": ["typescript"],
+          "taskPlugin": {
+            "pluginPackage": "@kcws/heft-esbuild-plugin"
+          }
+        },
         "eslint": {
           "taskDependencies": ["typescript"],
           "taskPlugin": {

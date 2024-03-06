@@ -33,12 +33,20 @@
       "path": "packages-rig/node-rig"
     },
     {
+      "name": "@kcws/local-node-rig",
+      "path": "packages-rig/local-node-rig"
+    },
+    {
       "name": "@kcws/web-rig",
       "path": "packages-rig/web-rig"
     },
     {
       "name": "@kcws/types-rig",
       "path": "packages-rig/types-rig"
+    },
+    {
+      "name": "@kcws/heft-esbuild-plugin",
+      "path": "packages/heft-esbuild-plugin"
     },
     {
       "name": "@kcws/eslint-config",
