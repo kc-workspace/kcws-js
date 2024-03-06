@@ -8,7 +8,52 @@ importers:
 
   .: {}
 
-  ../../packages-rig/node-rig:
+  ../../packages-example/local-node-tools:
+    devDependencies:
+      '@kcws/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@kcws/lintstaged-config':
+        specifier: workspace:*
+        version: link:../../packages/lintstaged-config
+      '@kcws/local-node-rig':
+        specifier: workspace:*
+        version: link:../../packages-rig/local-node-rig
+      '@rushstack/heft':
+        specifier: 0.65.9
+        version: 0.65.9(@types/node@18.19.3)
+
+  ../../packages-example/local-web-lib:
+    devDependencies:
+      '@kcws/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@kcws/lintstaged-config':
+        specifier: workspace:*
+        version: link:../../packages/lintstaged-config
+      '@kcws/web-rig':
+        specifier: workspace:*
+        version: link:../../packages-rig/web-rig
+      '@rushstack/heft':
+        specifier: 0.65.9
+        version: 0.65.9(@types/node@18.19.3)
+
+  ../../packages-example/node-app:
+    devDependencies:
+      '@kcws/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@kcws/lintstaged-config':
+        specifier: workspace:*
+        version: link:../../packages/lintstaged-config
+      '@kcws/node-rig':
+        specifier: workspace:*
+        version: link:../../packages-rig/node-rig
+      '@rushstack/heft':
+        specifier: 0.65.9
+        version: 0.65.9(@types/node@18.19.3)
+
+  ../../packages-rig/local-node-rig:
     dependencies:
       '@microsoft/api-extractor':
         specifier: 7.42.2
@@ -313,6 +358,9 @@ importers:
       '@rushstack/heft':
         specifier: 0.65.9
         version: 0.65.9(@types/node@18.19.3)
+      esbuild:
+        specifier: 0.20.1
+        version: 0.20.1
 
   ../../packages/lintstaged-config:
     dependencies:
@@ -406,7 +454,7 @@ importers:
     dependencies:
       '@rspack/cli':
         specifier: ^0.5.0
-        version: 0.5.5(@rspack/core@0.5.5)(webpack@5.90.3)
+        version: 0.5.6(@rspack/core@0.5.5)(webpack@5.90.3)
     devDependencies:
       '@kcws/eslint-config':
         specifier: workspace:*
@@ -420,21 +468,6 @@ importers:
       '@rspack/core':
         specifier: 0.5.5
         version: 0.5.5
-      '@rushstack/heft':
-        specifier: 0.65.9
-        version: 0.65.9(@types/node@18.19.3)
-
-  ../../tools/example:
-    devDependencies:
-      '@kcws/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@kcws/lintstaged-config':
-        specifier: workspace:*
-        version: link:../../packages/lintstaged-config
-      '@kcws/node-rig':
-        specifier: workspace:*
-        version: link:../../packages-rig/node-rig
       '@rushstack/heft':
         specifier: 0.65.9
         version: 0.65.9(@types/node@18.19.3)
@@ -1212,7 +1245,7 @@ packages:
       '@jest/console': 29.7.0
       '@jest/reporters': 29.5.0
       '@jest/test-result': 29.7.0
-      '@jest/transform': 29.7.0
+      '@jest/transform': 29.5.0
       '@jest/types': 29.6.3
       '@types/node': 18.19.3
       ansi-escapes: 4.3.2
@@ -1225,11 +1258,11 @@ packages:
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
-      jest-resolve: 29.7.0
+      jest-resolve: 29.5.0
       jest-resolve-dependencies: 29.7.0
       jest-runner: 29.7.0
       jest-runtime: 29.7.0
-      jest-snapshot: 29.7.0
+      jest-snapshot: 29.5.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
       jest-watcher: 29.7.0
@@ -1306,7 +1339,7 @@ packages:
       '@bcoe/v8-coverage': 0.2.3
       '@jest/console': 29.7.0
       '@jest/test-result': 29.7.0
-      '@jest/transform': 29.7.0
+      '@jest/transform': 29.5.0
       '@jest/types': 29.6.3
       '@jridgewell/trace-mapping': 0.3.25
       '@types/node': 18.19.3
@@ -1645,15 +1678,15 @@ packages:
       '@rspack/binding-win32-ia32-msvc': 0.5.5
       '@rspack/binding-win32-x64-msvc': 0.5.5
 
-  /@rspack/cli@0.5.5(@rspack/core@0.5.5)(webpack@5.90.3):
-    resolution: {integrity: sha512-3+OxCfxSSMgaJsUt4rZ7cXe14U7/Hhg/5hE/OOKO1WVybcS+psw8MsxoXRuYesEl4wOHL0armzIK2osbbUsjkA==}
+  /@rspack/cli@0.5.6(@rspack/core@0.5.5)(webpack@5.90.3):
+    resolution: {integrity: sha512-uYTA0yvPKANoCW+sonC6q19HdR4LliuImPgx4yGnkrZPx5iyuTiPcxgOpg0iB72OMmWqp6LawwPXh8D10kudhA==}
     hasBin: true
     peerDependencies:
       '@rspack/core': '>=0.4.0'
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
       '@rspack/core': 0.5.5
-      '@rspack/dev-server': 0.5.5(@rspack/core@0.5.5)(webpack@5.90.3)
+      '@rspack/dev-server': 0.5.6(@rspack/core@0.5.5)(webpack@5.90.3)
       colorette: 2.0.19
       exit-hook: 3.2.0
       interpret: 3.1.1
@@ -1695,8 +1728,8 @@ packages:
       zod: 3.22.4
       zod-validation-error: 1.3.1(zod@3.22.4)
 
-  /@rspack/dev-server@0.5.5(@rspack/core@0.5.5)(webpack@5.90.3):
-    resolution: {integrity: sha512-dPi3icKaJ8kmdB3p1gYD2rVm9QCb9h9ZPHD/Jsqy+alGuNnBnZf5U4DhNBI6pKfmar8WXrHVPrMTd2QR6ntpng==}
+  /@rspack/dev-server@0.5.6(@rspack/core@0.5.5)(webpack@5.90.3):
+    resolution: {integrity: sha512-8aJHL7QI7fyU6+MXVXoITs+Vok65fCj/b7hKevOi5WzghCrpH8XSgFTS9/TS36EXRwU8saemRxJnSGHf7yutYA==}
     peerDependencies:
       '@rspack/core': '*'
     dependencies:
@@ -3123,8 +3156,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001591
-      electron-to-chromium: 1.4.690
+      caniuse-lite: 1.0.30001594
+      electron-to-chromium: 1.4.693
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
 
@@ -3205,8 +3238,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /caniuse-lite@1.0.30001591:
-    resolution: {integrity: sha512-PCzRMei/vXjJyL5mJtzNiUCKP59dm8Apqc3PH8gJkMnMXZGox93RbE76jHsmLwmIo6/3nsYIpJtx0O7u5PqFuQ==}
+  /caniuse-lite@1.0.30001594:
+    resolution: {integrity: sha512-VblSX6nYqyJVs8DKFMldE2IVCJjZ225LW00ydtUWwh5hk9IfkTOffO6r8gJNsH0qqqeAF8KrbMYA2VEwTlGW5g==}
 
   /caseless@0.12.0:
     resolution: {integrity: sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==}
@@ -3710,8 +3743,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /electron-to-chromium@1.4.690:
-    resolution: {integrity: sha512-+2OAGjUx68xElQhydpcbqH50hE8Vs2K6TkAeLhICYfndb67CVH0UsZaijmRUE3rHlIxU1u0jxwhgVe6fK3YANA==}
+  /electron-to-chromium@1.4.693:
+    resolution: {integrity: sha512-/if4Ueg0GUQlhCrW2ZlXwDAm40ipuKo+OgeHInlL8sbjt+hzISxZK949fZeJaVsheamrzANXvw1zQTvbxTvSHw==}
 
   /emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==}
@@ -4900,8 +4933,8 @@ packages:
       whatwg-encoding: 2.0.0
     dev: false
 
-  /html-entities@2.4.0:
-    resolution: {integrity: sha512-igBTJcNNNhvZFRtm8uA6xMY6xYleeDwn3PeBCkDz7tHttv4F2hsDI2aPgNERWzvRcNYHNT3ymRaQzllmXj4YsQ==}
+  /html-entities@2.5.2:
+    resolution: {integrity: sha512-K//PSRMQk4FZ78Kyau+mZurHn3FH0Vwr+H36eE0rPbeYkRRi9YxceYPhuN60UwWorxyKHhqoAJl2OFKa4BVtaA==}
     dev: false
 
   /html-escaper@2.0.2:
@@ -5481,7 +5514,7 @@ packages:
       jest-environment-node: 29.7.0
       jest-get-type: 29.6.3
       jest-regex-util: 29.6.3
-      jest-resolve: 29.7.0
+      jest-resolve: 29.5.0
       jest-runner: 29.7.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
@@ -5778,7 +5811,7 @@ packages:
       '@babel/traverse': 7.24.0
       '@babel/types': 7.24.0
       '@jest/expect-utils': 29.7.0
-      '@jest/transform': 29.7.0
+      '@jest/transform': 29.5.0
       '@jest/types': 29.6.3
       '@types/babel__traverse': 7.20.5
       '@types/prettier': 2.7.3
@@ -7724,7 +7757,7 @@ packages:
       postcss-scss: 4.0.9(postcss@8.4.35)
       stylelint: 16.2.1
       stylelint-config-recommended: 14.0.0(stylelint@16.2.1)
-      stylelint-scss: 6.1.0(stylelint@16.2.1)
+      stylelint-scss: 6.2.1(stylelint@16.2.1)
     dev: true
 
   /stylelint-config-recommended@14.0.0(stylelint@16.2.1):
@@ -7762,8 +7795,8 @@ packages:
       stylelint-config-recommended: 14.0.0(stylelint@16.2.1)
     dev: true
 
-  /stylelint-scss@6.1.0(stylelint@16.2.1):
-    resolution: {integrity: sha512-kCfK8TQzthGwb4vaZniZgxRsVbCM4ZckmT1b/H5m4FU3I8Dz0id9llKsy1NMp3XXqC8+OPD4rVKtUbSxXlJb5g==}
+  /stylelint-scss@6.2.1(stylelint@16.2.1):
+    resolution: {integrity: sha512-ZoGLbVb1keZYRVGQlhB8G6sZOoNqw61whzzzGFWp05N12ErqLFfBv3JPrXiMLZaW98sBS7K/vUQhRnvUj4vwdw==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: ^16.0.2
@@ -7935,12 +7968,12 @@ packages:
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
-      terser: 5.28.1
+      terser: 5.29.1
       webpack: 5.90.3
     dev: false
 
-  /terser@5.28.1:
-    resolution: {integrity: sha512-wM+bZp54v/E9eRRGXb5ZFDvinrJIOaTapx3WUokyVGZu5ucVCK55zEgGd5Dl2fSr3jUo5sDiERErUWLY6QPFyA==}
+  /terser@5.29.1:
+    resolution: {integrity: sha512-lZQ/fyaIGxsbGxApKmoPTODIzELy3++mXhS5hOqaAWZjQtpq/hFHAc+rm29NND1rYRxRWKcjuARNwULNXa5RtQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -8407,7 +8440,7 @@ packages:
       default-gateway: 6.0.3
       express: 4.18.1
       graceful-fs: 4.2.11
-      html-entities: 2.4.0
+      html-entities: 2.5.2
       http-proxy-middleware: 2.0.6(@types/express@4.17.21)
       ipaddr.js: 2.1.0
       launch-editor: 2.6.1
