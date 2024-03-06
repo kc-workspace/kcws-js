@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "Update node-rig to use local-node-rig instead",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/node-rig",
+      "comment": "Add esbuild on app profile",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/node-rig"
+}
