@@ -8,7 +8,52 @@ importers:
 
   .: {}
 
-  ../../packages-rig/node-rig:
+  ../../packages-example/local-node-tools:
+    devDependencies:
+      '@kcws/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@kcws/lintstaged-config':
+        specifier: workspace:*
+        version: link:../../packages/lintstaged-config
+      '@kcws/local-node-rig':
+        specifier: workspace:*
+        version: link:../../packages-rig/local-node-rig
+      '@rushstack/heft':
+        specifier: 0.65.9
+        version: 0.65.9(@types/node@18.19.3)
+
+  ../../packages-example/local-web-lib:
+    devDependencies:
+      '@kcws/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@kcws/lintstaged-config':
+        specifier: workspace:*
+        version: link:../../packages/lintstaged-config
+      '@kcws/web-rig':
+        specifier: workspace:*
+        version: link:../../packages-rig/web-rig
+      '@rushstack/heft':
+        specifier: 0.65.9
+        version: 0.65.9(@types/node@18.19.3)
+
+  ../../packages-example/node-app:
+    devDependencies:
+      '@kcws/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@kcws/lintstaged-config':
+        specifier: workspace:*
+        version: link:../../packages/lintstaged-config
+      '@kcws/node-rig':
+        specifier: workspace:*
+        version: link:../../packages-rig/node-rig
+      '@rushstack/heft':
+        specifier: 0.65.9
+        version: 0.65.9(@types/node@18.19.3)
+
+  ../../packages-rig/local-node-rig:
     dependencies:
       '@microsoft/api-extractor':
         specifier: 7.42.3
@@ -1212,7 +1257,7 @@ packages:
       '@jest/console': 29.7.0
       '@jest/reporters': 29.5.0
       '@jest/test-result': 29.7.0
-      '@jest/transform': 29.7.0
+      '@jest/transform': 29.5.0
       '@jest/types': 29.6.3
       '@types/node': 18.19.3
       ansi-escapes: 4.3.2
@@ -1225,11 +1270,11 @@ packages:
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
-      jest-resolve: 29.7.0
+      jest-resolve: 29.5.0
       jest-resolve-dependencies: 29.7.0
       jest-runner: 29.7.0
       jest-runtime: 29.7.0
-      jest-snapshot: 29.7.0
+      jest-snapshot: 29.5.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
       jest-watcher: 29.7.0
@@ -1306,7 +1351,7 @@ packages:
       '@bcoe/v8-coverage': 0.2.3
       '@jest/console': 29.7.0
       '@jest/test-result': 29.7.0
-      '@jest/transform': 29.7.0
+      '@jest/transform': 29.5.0
       '@jest/types': 29.6.3
       '@jridgewell/trace-mapping': 0.3.25
       '@types/node': 18.19.3
@@ -5508,7 +5553,7 @@ packages:
       jest-environment-node: 29.7.0
       jest-get-type: 29.6.3
       jest-regex-util: 29.6.3
-      jest-resolve: 29.7.0
+      jest-resolve: 29.5.0
       jest-runner: 29.7.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
@@ -5805,7 +5850,7 @@ packages:
       '@babel/traverse': 7.24.0
       '@babel/types': 7.24.0
       '@jest/expect-utils': 29.7.0
-      '@jest/transform': 29.7.0
+      '@jest/transform': 29.5.0
       '@jest/types': 29.6.3
       '@types/babel__traverse': 7.20.5
       '@types/prettier': 2.7.3
