@@ -9,31 +9,31 @@
 
 - `default` - For library package (output on both commonjs and esmodule)
 - `app` - For application package (output only commonjs)
-- `js` - For any javascript package (disabled all typescript feature)
+- `js` - For any JavaScript package (disabled all TypeScript feature)
 
-## Typescript
+## TypeScript
 
-Using `Typescript` module in heft to build and compile typescript
+Using `typescript` module in heft to build and compile TypeScript
 via [TypescriptTask][link:heft-ts] ([source][gh:heft-ts]).
 
 - [tsconfig.json][local:tsconfig] - tsconfig used for compile project
-- [typescript.json][local:ts-config] - custom typescript config used by heft for addition feature
+- [typescript.json][local:ts-config] - custom TypeScript config used by heft for addition feature
 
 ### Output
 
 This will generate output on multiple directories,
 
 1. **lib** - a main directory contains compiled code.
-  - `commonjs` (**.js**) - compiled code using commonjs type.
-  - `esmodule` (**.mjs**) - compiled code using esmodule/es5 type.
-  - `mapping` (**.js.map** or **.mjs.map**) - file mapping for commonjs or esmodule.
-  - `typings` (**.d.ts**) - typescript definition created by `tsc` cli.
-2. **dist** - a main typescript definition single file. it's separated to 4 files.
-  - **index.d.ts** is a aggregated type of a project.
-  - **index-alpha.d.ts** is a alpha-only type of a project.
-  - **index-beta.d.ts** is a beta-only type of a project.
-  - **index-public.d.ts** is a public-only type of a project.
-3. **lib-umd** - a compiled [umd][umd-gh] code.
+    - `commonjs` (**.js**) - compiled code using commonjs type.
+    - `esmodule` (**.mjs**) - compiled code using esmodule/es5 type.
+    - `mapping` (**.js.map** or **.mjs.map**) - file mapping for commonjs or esmodule.
+    - `typings` (**.d.ts**) - TypeScript definition created by `tsc` cli.
+2. **dist** - a main TypeScript definition single file. it's separated to 4 files.
+    - **index.d.ts** is a aggregated type of a project.
+    - **index-alpha.d.ts** is a alpha-only type of a project.
+    - **index-beta.d.ts** is a beta-only type of a project.
+    - **index-public.d.ts** is a public-only type of a project.
+3. **lib-umd** - a compiled UMD code format.
 
 ## Jest
 

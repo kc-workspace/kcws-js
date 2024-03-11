@@ -5,7 +5,7 @@
 [![libsio@latest][img:libsio@latest]][link:libsio@latest]
 ![snyk@latest][img:snyk@latest]
 
-This is for bundled javascript files together.
+This is for bundled JavaScript files together.
 
 <!-- LINKS SECTION -->
 

@@ -1,4 +1,4 @@
-# Change Log - @kcws/node-rig
+# Changelog - @kcws/node-rig
 
 This log was last generated on Wed, 28 Feb 2024 10:53:57 GMT and should not be manually modified.
 
@@ -35,7 +35,7 @@ Tue, 06 Feb 2024 22:37:35 GMT
 
 ### Minor changes
 
-- Ignore type-only files by using *.type.ts regex
+- Ignore type-only files by using *.type.ts regular expression
 - upgrade dependencies [auto]
 
 ## 0.37.0
@@ -66,7 +66,7 @@ Fri, 12 Jan 2024 10:45:35 GMT
 
 ### Minor changes
 
-- Update default profile typescript to support packages outside rushstack
+- Update default profile TypeScript to support packages outside rushstack
 - upgrade dependencies [auto]
 
 ### Patches
@@ -293,10 +293,10 @@ Tue, 06 Jun 2023 15:25:54 GMT
 ### Minor changes
 
 - upgrade dependencies [auto]
-- upgrade @rushstack/heft from v0.50.6 to 0.51.0
-- upgrade typescript from v4.9.5 to 5.0.4
-- upgrade jest-junit from v15.0.0 to 16.0.0
-- remove @rushstack/heft-node-rig from dependencies
+- upgrade `@rushstack/heft` from v0.50.6 to 0.51.0
+- upgrade `typescript` from v4.9.5 to 5.0.4
+- upgrade `jest-junit` from v15.0.0 to 16.0.0
+- remove `@rushstack/heft-node-rig` from dependencies
 - update some configs for better use and cached
 - drop nodejs v14 support
 
@@ -370,8 +370,8 @@ Fri, 04 Nov 2022 18:42:44 GMT
 
 ### Minor changes
 
-- add api-extractor config to enable api-document markdown
-- add new html-reports and fix lcov relative path
+- add api-extractor config to enable api-document Markdown
+- add new `html-reports` and fix lcov relative path
 - upgrade all dependencies [auto]
 - enable code coverage by default
 
