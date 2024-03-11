@@ -1,3 +1,5 @@
+import { PACKAGE_NAME } from "./constants";
+
 /**
  * say hello
  *
@@ -6,6 +8,6 @@
  *
  * @alpha
  */
-export const hello = (name: string): string => {
+export const hello = (name: string = PACKAGE_NAME): string => {
   return `hello ${name}`;
 };
