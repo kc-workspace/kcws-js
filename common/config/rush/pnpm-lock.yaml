@@ -358,9 +358,6 @@ importers:
       '@rushstack/heft':
         specifier: 0.66.0
         version: 0.66.0(@types/node@18.19.3)
-      esbuild:
-        specifier: 0.20.1
-        version: 0.20.1
 
   ../../packages/lintstaged-config:
     dependencies:
@@ -468,6 +465,21 @@ importers:
       '@rspack/core':
         specifier: 0.5.6
         version: 0.5.6
+      '@rushstack/heft':
+        specifier: 0.66.0
+        version: 0.66.0(@types/node@18.19.3)
+
+  ../../tools/example:
+    devDependencies:
+      '@kcws/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@kcws/lintstaged-config':
+        specifier: workspace:*
+        version: link:../../packages/lintstaged-config
+      '@kcws/node-rig':
+        specifier: workspace:*
+        version: link:../../packages-rig/node-rig
       '@rushstack/heft':
         specifier: 0.66.0
         version: 0.66.0(@types/node@18.19.3)
@@ -3175,7 +3187,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001597
+      caniuse-lite: 1.0.30001596
       electron-to-chromium: 1.4.699
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
@@ -3257,8 +3269,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /caniuse-lite@1.0.30001597:
-    resolution: {integrity: sha512-7LjJvmQU6Sj7bL0j5b5WY/3n7utXUJvAe1lxhsHDbLmwX9mdL86Yjtr+5SRCyf8qME4M7pU2hswj0FpyBVCv9w==}
+  /caniuse-lite@1.0.30001596:
+    resolution: {integrity: sha512-zpkZ+kEr6We7w63ORkoJ2pOfBwBkY/bJrG/UZ90qNb45Isblu8wzDgevEOrRL1r9dWayHjYiiyCMEXPn4DweGQ==}
 
   /caseless@0.12.0:
     resolution: {integrity: sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==}
@@ -8584,7 +8596,7 @@ packages:
       isarray: 2.0.5
       which-boxed-primitive: 1.0.2
       which-collection: 1.0.2
-      which-typed-array: 1.1.15
+      which-typed-array: 1.1.14
     dev: false
 
   /which-collection@1.0.2:
