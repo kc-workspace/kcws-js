@@ -24,6 +24,7 @@
             "lib-umd",
             "lib-amd",
             "lib-system",
+            "lib-bundle",
             "lib-css",
             "dist",
             "coverage"
@@ -39,7 +40,15 @@
         "esbuild": {
           "taskDependencies": ["typescript"],
           "taskPlugin": {
-            "pluginPackage": "@kcws/heft-esbuild-plugin"
+            "pluginPackage": "@kcws/heft-esbuild-plugin",
+            "options": {
+              "output": "lib-bundle",
+              "bundle": true,
+              "minify": true,
+              "sourcemap": true,
+              "platform": "node",
+              "target": "node16"
+            }
           }
         },
         "eslint": {

@@ -4,21 +4,62 @@ import type {
   IHeftTaskSession,
 } from "@rushstack/heft";
 
-import { build } from "esbuild";
+import { join } from "node:path";
+import { BuildOptions, build } from "esbuild";
 
-export interface IEsbuildOption {}
+import { PLUGIN_NAME } from "./shared";
+
+type EsBuildOptionWhitelist =
+  | "bundle"
+  | "minify"
+  | "sourcemap"
+  | "platform"
+  | "target";
+
+export interface IEsbuildOption
+  extends Pick<BuildOptions, EsBuildOptionWhitelist> {
+  /** The default entrypoint (default to main field on package.json file) */
+  entrypoint?: string;
+  /** The entrypoints list that overrides default value */
+  entrypoints?: string[];
+  /** Output directory name (default is 'lib-bundle') */
+  output?: string;
+}
 
 class EsbuildPlugin implements IHeftTaskPlugin<IEsbuildOption> {
-  accessor?: object | undefined;
+  public get accessor(): undefined {
+    return;
+  }
 
-  apply(
-    _session: IHeftTaskSession,
-    _heftConfiguration: HeftConfiguration,
-    _pluginOptions?: IEsbuildOption | undefined
+  public apply(
+    session: IHeftTaskSession,
+    heftConfiguration: HeftConfiguration,
+    options?: IEsbuildOption | undefined
   ): void {
-    build({});
+    if (session.parameters.watch) {
+      throw new Error(
+        `Esbuild is only available when running without watch mode.`
+      );
+    }
 
-    throw new Error("Method not implemented.");
+    session.hooks.run.tapPromise(PLUGIN_NAME, async () => {
+      const entry = join(
+        heftConfiguration.buildFolderPath,
+        heftConfiguration.projectPackageJson.main ?? ""
+      );
+
+      const output = options?.output ?? "lib-bundle";
+      const outdir = join(heftConfiguration.buildFolderPath, output);
+      await build({
+        entryPoints: [entry],
+        outdir: outdir,
+        bundle: options?.bundle ?? true,
+        minify: options?.minify ?? true,
+        sourcemap: options?.sourcemap ?? false,
+        platform: options?.platform,
+        target: options?.target,
+      });
+    });
   }
 }
 

@@ -10,7 +10,56 @@
     "$schema": {
       "description": "Part of the JSON Schema standard, this optional keyword declares the URL of the schema that the file conforms to. Editors may download the schema and use it to perform syntax highlighting.",
       "type": "string"
+    },
+    "entrypoint": {
+      "description": "The default entrypoint (default to main field on package.json file)",
+      "type": "string"
+    },
+    "entrypoints": {
+      "description": "The entrypoints list that overrides default value",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "description": "Output directory name (default is 'lib-bundle')",
+      "type": "string",
+      "default": "lib-bundle"
+    },
+    "bundle": {
+      "description": "Documentation: https://esbuild.github.io/api/#bundle",
+      "type": "boolean",
+      "default": "true"
+    },
+    "minify": {
+      "description": "Documentation: https://esbuild.github.io/api/#minify",
+      "type": "boolean",
+      "default": "true"
+    },
+    "sourcemap": {
+      "description": "Documentation: https://esbuild.github.io/api/#sourcemap",
+      "type": "boolean",
+      "default": "false"
+    },
+    "platform": {
+      "description": "Documentation: https://esbuild.github.io/api/#platform",
+      "type": "string",
+      "enum": ["browser", "node", "neutral"]
+    },
+    "target": {
+      "description": "Documentation: https://esbuild.github.io/api/#sourcemap",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
     }
-    // TODO: Add additation config schemas
   }
 }
