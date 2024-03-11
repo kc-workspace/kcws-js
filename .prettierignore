@@ -85,6 +85,7 @@ lib-esnext
 lib-umd
 lib-amd
 lib-system
+lib-bundle
 lib-css
 temp
 dist

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/heft-plugin.schema.json",
+
+  "taskPlugins": [
+    {
+      "pluginName": "esbuild-plugin",
+      "entryPoint": "./lib/EsbuildPlugin",
+      "optionsSchema": "./lib/schemas/heft-esbuild-plugin.schema.json",
+
+      "parameterScope": "esbuild",
+      "parameters": []
+    }
+  ]
+}

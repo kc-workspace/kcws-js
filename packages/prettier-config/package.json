@@ -37,7 +37,7 @@
     "_phase:build": "heft run --only build -- --clean"
   },
   "devDependencies": {
-    "@kcws/node-rig": "workspace:*",
+    "@kcws/local-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.66.0",

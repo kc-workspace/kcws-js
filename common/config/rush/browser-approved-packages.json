@@ -16,15 +16,23 @@
     },
     {
       "name": "@kcws/eslint-config",
-      "allowedCategories": [ "configs", "libraries", "prototypes", "typings" ]
+      "allowedCategories": [ "configs", "example", "libraries", "prototypes", "tools", "typings" ]
+    },
+    {
+      "name": "@kcws/heft-esbuild-plugin",
+      "allowedCategories": [ "configs" ]
     },
     {
       "name": "@kcws/lintstaged-config",
-      "allowedCategories": [ "configs", "libraries", "prototypes", "typings" ]
+      "allowedCategories": [ "configs", "example", "libraries", "prototypes", "tools", "typings" ]
+    },
+    {
+      "name": "@kcws/local-node-rig",
+      "allowedCategories": [ "configs", "example", "prototypes", "tools" ]
     },
     {
       "name": "@kcws/node-rig",
-      "allowedCategories": [ "configs", "libraries", "prototypes", "typings" ]
+      "allowedCategories": [ "configs", "example", "libraries", "prototypes", "tools", "typings" ]
     },
     {
       "name": "@kcws/types-rig",
@@ -32,7 +40,7 @@
     },
     {
       "name": "@kcws/web-rig",
-      "allowedCategories": [ "configs", "libraries", "prototypes" ]
+      "allowedCategories": [ "configs", "example", "libraries", "prototypes" ]
     },
     {
       "name": "@microsoft/api-extractor",
@@ -60,7 +68,7 @@
     },
     {
       "name": "@rushstack/heft",
-      "allowedCategories": [ "configs", "libraries", "prototypes", "typings" ]
+      "allowedCategories": [ "configs", "example", "libraries", "prototypes", "tools", "typings" ]
     },
     {
       "name": "@rushstack/heft-api-extractor-plugin",
@@ -83,12 +91,20 @@
       "allowedCategories": [ "configs" ]
     },
     {
+      "name": "@rushstack/node-core-library",
+      "allowedCategories": [ "tools" ]
+    },
+    {
       "name": "@typescript-eslint/eslint-plugin",
       "allowedCategories": [ "configs" ]
     },
     {
       "name": "@typescript-eslint/parser",
       "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "esbuild",
+      "allowedCategories": [ "tools" ]
     },
     {
       "name": "eslint",

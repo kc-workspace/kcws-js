@@ -24,6 +24,7 @@ const config = {
         "node-rig",
         "web-rig",
         "types-rig",
+        "heft-esbuild-plugin",
         "eslint-config",
         "prettier-config",
         "lintstaged-config",
@@ -126,8 +127,8 @@ const config = {
             title: "Reset CSS",
           },
           "node-rig": {
-            description: "@kcws/node-rig package",
-            title: "Node Rig Package",
+            description: "@kcws/node-rig & @kcws/local-node-rig package",
+            title: "Node Rig Package (Included local rig)",
           },
           "web-rig": {
             description: "@kcws/web-rig package",
@@ -136,6 +137,10 @@ const config = {
           "types-rig": {
             description: "@kcws/types-rig package",
             title: "Types Rig Package",
+          },
+          "heft-esbuild-plugin": {
+            description: "@kcws/heft-esbuild-plugin package",
+            title: "Heft plugin: esbuild",
           },
           "eslint-config": {
             description: "@kcws/eslint-config package",

@@ -1,16 +1,16 @@
 {
-  "name": "@kcws/tool-example",
+  "name": "@kcws-example/local-web-lib",
   "version": "0.0.1",
-  "description": "example tooling for kcws",
-  "main": "lib/index.js",
-  "module": "lib-esnext/index.js",
+  "description": "example web libraries (for internal usage)",
+  "main": "lib-commonjs/index.js",
+  "module": "lib/index.js",
   "types": "dist/index.d.ts",
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/tools/example",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-example/local-web-lib",
   "repository": {
     "type": "git",
     "url": "https://github.com/kc-workspace/kcws-js.git",
-    "directory": "tools/example"
+    "directory": "packages-example/local-web-lib"
   },
   "author": {
     "name": "Kamontat Chantrachirathumrong",
@@ -21,9 +21,8 @@
     "access": "public"
   },
   "keywords": [
-    "tooling",
-    "tools",
-    "example"
+    "example",
+    "testing"
   ],
   "files": [
     "CHANGELOG.json",
@@ -33,10 +32,10 @@
     "lib/**/*.js.map",
     "!lib/**/*.test.js",
     "!lib/**/*.test.js.map",
-    "lib-esnext/**/*.js",
-    "lib-esnext/**/*.js.map",
-    "!lib-esnext/**/*.test.js",
-    "!lib-esnext/**/*.test.js.map",
+    "lib-commonjs/**/*.js",
+    "lib-commonjs/**/*.js.map",
+    "!lib-commonjs/**/*.test.js",
+    "!lib-commonjs/**/*.test.js.map",
     "lib-umd/**/*.js",
     "lib-umd/**/*.js.map",
     "!lib-umd/**/*.test.js",
@@ -50,7 +49,7 @@
     "_phase:test": "heft run --only test"
   },
   "devDependencies": {
-    "@kcws/node-rig": "workspace:*",
+    "@kcws/web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.66.0"

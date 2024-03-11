@@ -1,0 +1,855 @@
+{
+  "name": "@kcws/node-rig",
+  "entries": [
+    {
+      "version": "0.42.0",
+      "tag": "@kcws/node-rig_v0.42.0",
+      "date": "Wed, 28 Feb 2024 10:53:57 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add app profile for application package",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "f79b972729d01700017fbb07b7cee7565d2531fb"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.41.0",
+      "tag": "@kcws/node-rig_v0.41.0",
+      "date": "Tue, 27 Feb 2024 15:58:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "0816f6ca70857713a5dd3076cdc68fcee4e08beb"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.40.0",
+      "tag": "@kcws/node-rig_v0.40.0",
+      "date": "Tue, 20 Feb 2024 22:38:04 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [manually]",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "bf9550eca2b73bd8612f7038b166910eaecff917"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.39.0",
+      "tag": "@kcws/node-rig_v0.39.0",
+      "date": "Tue, 13 Feb 2024 22:37:44 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "a8f40e74ccc28e0278ec170772b1cc527b1c758c"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.38.0",
+      "tag": "@kcws/node-rig_v0.38.0",
+      "date": "Tue, 06 Feb 2024 22:37:35 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Ignore type-only files by using *.type.ts regex",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "4307376d1b2b858ccce38f9e35356bcd69189f14"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "6859261a8b5e2b6383312dac401085bdda59a0d6"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.37.0",
+      "tag": "@kcws/node-rig_v0.37.0",
+      "date": "Tue, 30 Jan 2024 22:37:56 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "4578dcb7bc0a095b900761b066e20f7df989b409"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.36.0",
+      "tag": "@kcws/node-rig_v0.36.0",
+      "date": "Tue, 23 Jan 2024 22:38:38 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "33d2121bd2ad7fb755dd9352c162598b9afdb9c3"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.35.1",
+      "tag": "@kcws/node-rig_v0.35.1",
+      "date": "Fri, 12 Jan 2024 10:59:31 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix publish docs failed because module type incompatible",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "25baf9decafab8062ee5a2728b515f343286f1f2"
+          },
+          {
+            "comment": "Force upgrade version to clean failed release",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "59416545f2148a061985048cd151c78c20fa5929"
+          },
+          {
+            "comment": "Resolve deployment failed and state invalid",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "53bd7181cd280a772d85338b55d1b33ffa943709"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.35.0",
+      "tag": "@kcws/node-rig_v0.35.0",
+      "date": "Fri, 12 Jan 2024 10:45:35 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Update default profile typescript to support packages outside rushstack",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "94e368abf53c9399b3224c315d9de92343290192"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "698423820783a4ddb915d75f26f6ecdbb86189b6"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Fix publish docs failed because module type incompatible",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "25baf9decafab8062ee5a2728b515f343286f1f2"
+          },
+          {
+            "comment": "Force upgrade version to clean failed release",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "59416545f2148a061985048cd151c78c20fa5929"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.32.0",
+      "tag": "@kcws/node-rig_v0.32.0",
+      "date": "Tue, 02 Jan 2024 22:37:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "ab92898c534ef7b314f8ab0bf2d11b2039c5d853"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Update heft peer dependencies",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "e102b9f6e865cf8cc7aaafeba9498f5102e16314"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.31.1",
+      "tag": "@kcws/node-rig_v0.31.1",
+      "date": "Fri, 29 Dec 2023 17:11:31 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Support clean up coverage directory when --clean was passed",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "99a769d0d001ff7965fbbb57dc1bda7b1e132ead"
+          },
+          {
+            "comment": "Prepare for new type packages and add new profile called `js`",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "cf3c8aeb6efb4fcd6a2ebb49902d67dca7b99a33"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.31.0",
+      "tag": "@kcws/node-rig_v0.31.0",
+      "date": "Tue, 26 Dec 2023 22:37:17 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Improve api-extractor configs templates and documents",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "ac7ca4c6fbfb2b0da6b041157843f138b75344cc"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "19d5b06db49e4df1638b98a4f0e96917b3fb109f"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.30.0",
+      "tag": "@kcws/node-rig_v0.30.0",
+      "date": "Mon, 18 Dec 2023 10:48:31 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "bfcb9643db62cd110958f8f214f74e189f0b350e"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Upgrade `@types/node` from 18.18.6 to 18.19.3",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "aa22aaca745f6fc5c97df4f9a55a3260de9a990a"
+          },
+          {
+            "comment": "Produce esnext on lib-esnext directory",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "db95c90a2dcff75e242993b6d6c98cb8eea6c0ff"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.29.0",
+      "tag": "@kcws/node-rig_v0.29.0",
+      "date": "Tue, 21 Nov 2023 22:37:59 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "cb7be24d44b8d1d43c63d741995b78b3c781516b"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.28.0",
+      "tag": "@kcws/node-rig_v0.28.0",
+      "date": "Tue, 14 Nov 2023 22:37:43 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "b69531196da9de5b698978da67a6c670b0f6887b"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.27.0",
+      "tag": "@kcws/node-rig_v0.27.0",
+      "date": "Tue, 07 Nov 2023 22:37:29 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "7a7231ae58c7d3c87a15ae0aa32746d1c12e9b08"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.26.0",
+      "tag": "@kcws/node-rig_v0.26.0",
+      "date": "Wed, 01 Nov 2023 08:16:51 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Remove esm import; it will allow esm to use commonjs instead",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "6db88aa977b9be5be3bff07aa7ee75fe5f17d9e1"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.25.1",
+      "tag": "@kcws/node-rig_v0.25.1",
+      "date": "Wed, 01 Nov 2023 05:52:06 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Upgrade jest-environment-node from 29.6.2 to 29.6.3",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "133ddec7b9ca096e17f36100ea9620e36ea7b8f1"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.25.0",
+      "tag": "@kcws/node-rig_v0.25.0",
+      "date": "Wed, 01 Nov 2023 03:50:58 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Add node 18 as minimum engine",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "bd92fdb2ea9c23b07a78f85abea51d8a3c29fb70"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "457478d89911f7ab8d0b5903dbb23f5f9ebe285a"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "eccff88509a9aa669d9c3ab0ca5f5358536c567f"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.24.0",
+      "tag": "@kcws/node-rig_v0.24.0",
+      "date": "Tue, 10 Oct 2023 22:38:47 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "7dca7929a1a2109d91422fa9387b4829d87ea38b"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.23.0",
+      "tag": "@kcws/node-rig_v0.23.0",
+      "date": "Tue, 03 Oct 2023 22:38:03 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "892bafa22381b1c348f88d4111f3872c66816b97"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.22.0",
+      "tag": "@kcws/node-rig_v0.22.0",
+      "date": "Tue, 26 Sep 2023 22:37:58 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "11a0da4cee1f1655f724120708735000fefb51b0"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.21.0",
+      "tag": "@kcws/node-rig_v0.21.0",
+      "date": "Tue, 19 Sep 2023 22:37:42 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "d8ce7305fd1e377621f9c1c09b87f2986ff4dc77"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.20.0",
+      "tag": "@kcws/node-rig_v0.20.0",
+      "date": "Tue, 12 Sep 2023 22:37:27 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "10f027bb06e9a59e7a59a972afca4adaaf0c85ee"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.19.0",
+      "tag": "@kcws/node-rig_v0.19.0",
+      "date": "Tue, 29 Aug 2023 22:37:59 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "ac34e15bd75572417d6e72c2e3e83f93a36157ec"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.18.1",
+      "tag": "@kcws/node-rig_v0.18.1",
+      "date": "Wed, 23 Aug 2023 10:34:29 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Upgrade @types/node from v16.18.37 to v16.18.43",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "41ad1c1aa078f1e6b503b965efaecaa99a4893e0"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.18.0",
+      "tag": "@kcws/node-rig_v0.18.0",
+      "date": "Tue, 15 Aug 2023 22:37:11 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "9bbb0186402ca07e2a63051a95029aa565cdc7db"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "upgrade @types/node from v16.18.35 to v16.18.37",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "14f3abd9430a2a7fffcdca5d1b02fbaa2fabd56a"
+          },
+          {
+            "comment": "upgrade jest-environment-node from 29.5.0 to 29.6.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "14f3abd9430a2a7fffcdca5d1b02fbaa2fabd56a"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.17.0",
+      "tag": "@kcws/node-rig_v0.17.0",
+      "date": "Tue, 08 Aug 2023 22:38:05 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "556268feb7ac2584f2862501ef86ebd05b879a85"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.16.0",
+      "tag": "@kcws/node-rig_v0.16.0",
+      "date": "Tue, 01 Aug 2023 22:37:37 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "71de08a8761b38e1dc0590120272b81dc32d372c"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.15.0",
+      "tag": "@kcws/node-rig_v0.15.0",
+      "date": "Tue, 25 Jul 2023 22:37:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "8ae6708484173a05fcd5c3606f81a26a96823f27"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.14.0",
+      "tag": "@kcws/node-rig_v0.14.0",
+      "date": "Tue, 18 Jul 2023 22:37:57 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "80f855b0994a36e6d0744e1945f95a8b494a5205"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.13.0",
+      "tag": "@kcws/node-rig_v0.13.0",
+      "date": "Tue, 11 Jul 2023 22:39:40 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "5f4696298b719bec456d417941903e6d0a24dfec"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.12.0",
+      "tag": "@kcws/node-rig_v0.12.0",
+      "date": "Tue, 04 Jul 2023 22:40:04 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "722eb72a11e2d7b4cec3e13af02f28e649ca65d3"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.11.0",
+      "tag": "@kcws/node-rig_v0.11.0",
+      "date": "Tue, 27 Jun 2023 22:38:45 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "d2a79b562c47fd86fc2c5727019b7bb807aafba1"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.10.0",
+      "tag": "@kcws/node-rig_v0.10.0",
+      "date": "Tue, 20 Jun 2023 22:37:17 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "a53b7f53943b0d35ca1ca286bac0ac56da263f19"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.9.0",
+      "tag": "@kcws/node-rig_v0.9.0",
+      "date": "Tue, 13 Jun 2023 22:37:32 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "d40501ec560f1cf0a4a1f3922ba417236b51cca1"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.8.0",
+      "tag": "@kcws/node-rig_v0.8.0",
+      "date": "Tue, 06 Jun 2023 15:25:54 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "19310cd7eb6c3b06c093ba5b2c7c56b64712e91f"
+          },
+          {
+            "comment": "upgrade @rushstack/heft from v0.50.6 to 0.51.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "19310cd7eb6c3b06c093ba5b2c7c56b64712e91f"
+          },
+          {
+            "comment": "upgrade typescript from v4.9.5 to 5.0.4",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "19310cd7eb6c3b06c093ba5b2c7c56b64712e91f"
+          },
+          {
+            "comment": "upgrade jest-junit from v15.0.0 to 16.0.0",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "19310cd7eb6c3b06c093ba5b2c7c56b64712e91f"
+          },
+          {
+            "comment": "remove @rushstack/heft-node-rig from dependencies",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "19310cd7eb6c3b06c093ba5b2c7c56b64712e91f"
+          },
+          {
+            "comment": "update some configs for better use and cached",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "19310cd7eb6c3b06c093ba5b2c7c56b64712e91f"
+          },
+          {
+            "comment": "drop nodejs v14 support",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "19310cd7eb6c3b06c093ba5b2c7c56b64712e91f"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "add several new @types (e.g. @types/node)",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "19310cd7eb6c3b06c093ba5b2c7c56b64712e91f"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.7.0",
+      "tag": "@kcws/node-rig_v0.7.0",
+      "date": "Sun, 05 Mar 2023 06:58:38 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "89149824b29f7a927dace9de1a2de45c13893bfa"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "04e60c6c418343943a1d53bab49ef23bd4d1bde4"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "d66273cf4f806b050469f2a9f98885eca319e10b"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "c7ddfd0effd9a41a11ad3bc103fab49e54046df4"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "445ac9915c1f33d82c2757cd754f31aa73632e0e"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "89f1e13d08a77df6a021d74a4366da8527cad30b"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.6.0",
+      "tag": "@kcws/node-rig_v0.6.0",
+      "date": "Tue, 24 Jan 2023 02:31:17 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "enable importsNotUsedAsValues by default to omit import if not use as value",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "b2109affef2ce8191f84929acf97e596ae0a6504"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "388d0a138e1f9a89f712682eee9b31a000fc14bc"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "b6287f5b863451d5f7a55cba10158995f74a8fbd"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "e83de362e12c1cf5814be481a4b16a18dcc70c09"
+          }
+        ],
+        "none": [
+          {
+            "comment": "update readme",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "b32c4bc3597d01cf6a273a8e20f2acf5dee3ecb9"
+          },
+          {
+            "comment": "migrate to phased command",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "f1388ff1a2fe4ce533c28279754fc77fa85e4686"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.5.0",
+      "tag": "@kcws/node-rig_v0.5.0",
+      "date": "Mon, 02 Jan 2023 18:55:50 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "fa51c1bada136d5f8360333888e000ee563c419c"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "cbed06c4bf632b6c3dd860ace1c7d4481662fedd"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "973f900c1553b3bcbbaef5e92de3037aea36ef28"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.4.0",
+      "tag": "@kcws/node-rig_v0.4.0",
+      "date": "Tue, 13 Dec 2022 15:18:50 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "selected files to publish, and fix main path",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "36f6fb907c1f496c84ccdbc576254d6c3ac3e075"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "30a60a90f1afe49d4e047f446900861e0a0fcc64"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.3.0",
+      "tag": "@kcws/node-rig_v0.3.0",
+      "date": "Wed, 07 Dec 2022 16:52:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "3ba9e73b1a6e3792f843cee08aae59f5b2aa34d4"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.2.0",
+      "tag": "@kcws/node-rig_v0.2.0",
+      "date": "Mon, 21 Nov 2022 08:39:34 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "update dependencies",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "3b85884b87cea3fc32ae77ebafe6a87e850b371a"
+          }
+        ],
+        "none": [
+          {
+            "comment": "improve liability",
+            "author": "Kamontat Chantrachirathumrong <developer@kamontat.net>",
+            "commit": "d116e684c7fca1740073c11a62c9e2156ead17ef"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2ee487b2cd7929f77e52a220b24140e90bb72fd5"
+          },
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "0b5e8f508638cc932ce6d63398b0a4856e977a2d"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.1.0",
+      "tag": "@kcws/node-rig_v0.1.0",
+      "date": "Fri, 04 Nov 2022 18:42:44 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "add api-extractor config to enable api-document markdown",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "df45c75f8c88bec5ee83006ef1e76a0289b79d89"
+          },
+          {
+            "comment": "add new html-reports and fix lcov relative path",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "8fcfd514a0ab1969f2a7c2de000269296f0f5ed7"
+          },
+          {
+            "comment": "upgrade all dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "4a23be17b025c17e498a66a5e6fd826810ae3285"
+          },
+          {
+            "comment": "enable code coverage by default",
+            "author": "Kamontat Chantrachirathumrong <github@kc.in.th>",
+            "commit": "9ededd2d6ab91c30bceb2798465d56a04d6a5a15"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "downgrade jest-environment-node from v29 to v27",
+            "author": "Kamontat Chantrachirathumrong <kcws@kc.in.th>",
+            "commit": "773dc134f3b70aa877afa7e766406dd51160c1ab"
+          }
+        ]
+      }
+    }
+  ]
+}

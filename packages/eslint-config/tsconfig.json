@@ -1,3 +1,3 @@
 {
-  "extends": "./node_modules/@kcws/node-rig/profiles/js/tsconfig.base.json"
+  "extends": "./node_modules/@kcws/local-node-rig/profiles/js/tsconfig.base.json"
 }
