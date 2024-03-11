@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/heft-esbuild-plugin",
+      "comment": "Support bundle typescript output to single file",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/heft-esbuild-plugin"
+}
