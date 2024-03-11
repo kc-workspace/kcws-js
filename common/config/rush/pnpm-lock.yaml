@@ -20,8 +20,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-rig/local-node-rig
       '@rushstack/heft':
-        specifier: 0.65.9
-        version: 0.65.9(@types/node@18.19.3)
+        specifier: 0.66.0
+        version: 0.66.0(@types/node@18.19.3)
 
   ../../packages-example/local-web-lib:
     devDependencies:
@@ -35,8 +35,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-rig/web-rig
       '@rushstack/heft':
-        specifier: 0.65.9
-        version: 0.65.9(@types/node@18.19.3)
+        specifier: 0.66.0
+        version: 0.66.0(@types/node@18.19.3)
 
   ../../packages-example/node-app:
     devDependencies:
@@ -50,8 +50,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-rig/node-rig
       '@rushstack/heft':
-        specifier: 0.65.9
-        version: 0.65.9(@types/node@18.19.3)
+        specifier: 0.66.0
+        version: 0.66.0(@types/node@18.19.3)
 
   ../../packages-rig/local-node-rig:
     dependencies:
@@ -334,9 +334,9 @@ importers:
         specifier: 51.0.1
         version: 51.0.1(eslint@8.57.0)
     devDependencies:
-      '@kcws/local-node-rig':
+      '@kcws/node-rig':
         specifier: workspace:*
-        version: link:../../packages-rig/local-node-rig
+        version: link:../../packages-rig/node-rig
       '@rushstack/heft':
         specifier: 0.66.0
         version: 0.66.0(@types/node@18.19.3)
@@ -358,6 +358,9 @@ importers:
       '@rushstack/heft':
         specifier: 0.66.0
         version: 0.66.0(@types/node@18.19.3)
+      esbuild:
+        specifier: 0.20.1
+        version: 0.20.1
 
   ../../packages/lintstaged-config:
     dependencies:
@@ -465,21 +468,6 @@ importers:
       '@rspack/core':
         specifier: 0.5.6
         version: 0.5.6
-      '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
-
-  ../../tools/example:
-    devDependencies:
-      '@kcws/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@kcws/lintstaged-config':
-        specifier: workspace:*
-        version: link:../../packages/lintstaged-config
-      '@kcws/node-rig':
-        specifier: workspace:*
-        version: link:../../packages-rig/node-rig
       '@rushstack/heft':
         specifier: 0.66.0
         version: 0.66.0(@types/node@18.19.3)
@@ -3794,7 +3782,7 @@ packages:
     resolution: {integrity: sha512-QHTXI/sZQmko1cbDoNAa3mJ5qhWUUNAq3vR0/YiD379fWQrcfuoX1+HW2S0MTt7XmoPLapdaDKUtelUSPic7hQ==}
     engines: {node: '>=10.13.0'}
     dependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       tapable: 2.2.1
 
   /enhanced-resolve@5.15.1:
@@ -5553,7 +5541,7 @@ packages:
       jest-environment-node: 29.7.0
       jest-get-type: 29.6.3
       jest-regex-util: 29.6.3
-      jest-resolve: 29.5.0
+      jest-resolve: 29.7.0
       jest-runner: 29.7.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
