@@ -1,6 +1,14 @@
 # Change Log - @kcws/node-rig
 
-This log was last generated on Tue, 05 Mar 2024 22:38:08 GMT and should not be manually modified.
+This log was last generated on Tue, 12 Mar 2024 22:37:31 GMT and should not be manually modified.
+
+## 0.44.0
+Tue, 12 Mar 2024 22:37:31 GMT
+
+### Minor changes
+
+- Add esbuild on app profile
+- upgrade dependencies [auto]
 
 ## 0.43.0
 Tue, 05 Mar 2024 22:38:08 GMT

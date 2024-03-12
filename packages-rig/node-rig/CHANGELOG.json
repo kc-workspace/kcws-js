@@ -2,6 +2,30 @@
   "name": "@kcws/node-rig",
   "entries": [
     {
+      "version": "0.44.0",
+      "tag": "@kcws/node-rig_v0.44.0",
+      "date": "Tue, 12 Mar 2024 22:37:31 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add esbuild on app profile",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "f2f9463aefab8b97baa1d620d52703ed53cc70e2"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "ce644be7f812f17ed5208133a63d459d50b793aa"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/heft-esbuild-plugin\" to `0.1.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.43.0",
       "tag": "@kcws/node-rig_v0.43.0",
       "date": "Tue, 05 Mar 2024 22:38:08 GMT",

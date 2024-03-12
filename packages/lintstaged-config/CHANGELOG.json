@@ -2,6 +2,32 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "0.35.0",
+      "tag": "@kcws/lintstaged-config_v0.35.0",
+      "date": "Tue, 12 Mar 2024 22:37:31 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update node-rig to use local-node-rig instead",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "f2f9463aefab8b97baa1d620d52703ed53cc70e2"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "ce644be7f812f17ed5208133a63d459d50b793aa"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.11.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.34.0",
       "tag": "@kcws/lintstaged-config_v0.34.0",
       "date": "Tue, 05 Mar 2024 22:38:08 GMT",
