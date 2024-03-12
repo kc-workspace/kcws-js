@@ -1,0 +1,30 @@
+# https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml
+
+# Default state for all rules
+default: true
+
+# MD007/ul-indent : Unordered list indentation
+# https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md007.md
+MD007:
+  # Spaces for indent
+  indent: 4
+
+# MD013/line-length : Line length
+# https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md013.md
+MD013:
+  # Number of characters
+  line_length: 300
+  # Number of characters for headings
+  heading_line_length: 80
+  # Number of characters for code blocks
+  code_block_line_length: 80
+  # Include code blocks
+  code_blocks: true
+  # Include tables
+  tables: false
+
+# MD024/no-duplicate-heading : Multiple headings with the same content
+# https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md024.md
+MD024:
+  # Only check sibling headings
+  siblings_only: true

@@ -41,9 +41,9 @@ Using [heft-jest-plugin][link:heft-jest] module to configure jest.
 There are several config we overwritten to meet our need.
 
 1. Enabled code coverage by default
-2. Produce lcov report for **analysis code coverage** at [sonarcloud][link:sonarcloud]
-3. Produce html report for test result using [jest-html-reporters][npm:jest-html]
-4. Produce junit report for test result using [jest-junit][npm:jest-junit]
+2. Produce LCov report for **analysis code coverage** at [sonarcloud][link:sonarcloud]
+3. Produce HTML report for test result using [jest-html-reporters][npm:jest-html]
+4. Produce JUnit report for test result using [jest-junit][npm:jest-junit]
 
 <!-- LINKS SECTION -->
 

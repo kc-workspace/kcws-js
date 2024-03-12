@@ -27,8 +27,10 @@ export interface IEsbuildOption
 }
 
 class EsbuildPlugin implements IHeftTaskPlugin<IEsbuildOption> {
+  private _accessor: undefined;
+
   public get accessor(): undefined {
-    return;
+    return this._accessor;
   }
 
   public apply(
