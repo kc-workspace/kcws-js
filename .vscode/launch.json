@@ -10,8 +10,16 @@
       "name": "Debug rush command",
       "program": "${env:PNPM_HOME}/global/5/node_modules/@microsoft/rush/lib/start.js",
       "skipFiles": ["<node_internals>/**"],
-      "args": ["rebuild", "--only", "@kcws/heft-esbuild-plugin", "--only", "@kcws-example/node-app"],
-      "console": "integratedTerminal"
+      "args": ["rebuild", "--only", "@kcws/heft-esbuild-plugin", "--only", "@kcws-example/node-app"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug heft command",
+      "program": "${workspaceFolder}/packages/heft-esbuild-plugin/node_modules/@rushstack/heft/lib/start.js",
+      "skipFiles": ["<node_internals>/**"],
+      "args": ["test"],
+      "cwd": "${workspaceFolder}/packages/heft-esbuild-plugin"
     }
   ]
 }
