@@ -95,6 +95,10 @@
       "allowedCategories": [ "tools" ]
     },
     {
+      "name": "@rushstack/terminal",
+      "allowedCategories": [ "tools" ]
+    },
+    {
       "name": "@typescript-eslint/eslint-plugin",
       "allowedCategories": [ "configs" ]
     },
@@ -193,6 +197,10 @@
     {
       "name": "stylelint-config-standard-scss",
       "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "tapable",
+      "allowedCategories": [ "tools" ]
     },
     {
       "name": "tsd",
