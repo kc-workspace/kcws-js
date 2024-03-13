@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/random",
+      "comment": "Update tests description",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/random"
+}

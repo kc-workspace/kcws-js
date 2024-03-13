@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/heft-esbuild-plugin",
+      "comment": "Update dependencies and improve esbuild options",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/heft-esbuild-plugin"
+}
