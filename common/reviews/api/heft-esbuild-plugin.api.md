@@ -4,7 +4,18 @@
 
 ```ts
 
-// @public (undocumented)
+import { BuildOptions } from 'esbuild';
+
+// Warning: (ae-forgotten-export) The symbol "EsBuildOptionWhitelist" needs to be exported by the entry point index.d.ts
+//
+// @public
+export interface IEsbuildOption extends Pick<BuildOptions, EsBuildOptionWhitelist> {
+    entrypoint?: string;
+    entrypoints?: string[];
+    output?: string;
+}
+
+// @public
 export const PluginName: "esbuild-plugin";
 
 // (No @packageDocumentation comment for this package)
