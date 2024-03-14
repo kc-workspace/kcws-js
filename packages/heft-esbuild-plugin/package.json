@@ -26,6 +26,7 @@
     "esbuild"
   ],
   "files": [
+    "heft-plugin.json",
     "CHANGELOG.json",
     "CHANGELOG.md",
     "dist/**/*.d.ts",
