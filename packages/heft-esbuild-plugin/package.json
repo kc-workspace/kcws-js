@@ -3,7 +3,6 @@
   "version": "0.1.1",
   "description": "esbuild plugin for heft cli",
   "main": "lib/index.js",
-  "module": "lib-esnext/index.js",
   "types": "dist/index.d.ts",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/heft-esbuild-plugin",
@@ -30,18 +29,11 @@
     "CHANGELOG.json",
     "CHANGELOG.md",
     "dist/**/*.d.ts",
+    "lib/**/*.json",
     "lib/**/*.js",
     "lib/**/*.js.map",
     "!lib/**/*.test.js",
-    "!lib/**/*.test.js.map",
-    "lib-esnext/**/*.js",
-    "lib-esnext/**/*.js.map",
-    "!lib-esnext/**/*.test.js",
-    "!lib-esnext/**/*.test.js.map",
-    "lib-umd/**/*.js",
-    "lib-umd/**/*.js.map",
-    "!lib-umd/**/*.test.js",
-    "!lib-umd/**/*.test.js.map"
+    "!lib/**/*.test.js.map"
   ],
   "scripts": {
     "build": "heft build",
