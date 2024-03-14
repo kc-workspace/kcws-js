@@ -6,7 +6,8 @@
   "NoColor": false,
   "Exclude": [
     "\\.[tj]s[x]?$",
-    "\\.schema\\.json"
+    "\\.schema\\.json",
+    "\\.github/workflows/.*\\.yml"
   ],
   "AllowedContentTypes": [],
   "PassedFiles": [],
