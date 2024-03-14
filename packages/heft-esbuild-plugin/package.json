@@ -1,6 +1,6 @@
 {
   "name": "@kcws/heft-esbuild-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "esbuild plugin for heft cli",
   "main": "lib/index.js",
   "module": "lib-esnext/index.js",

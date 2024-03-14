@@ -2,6 +2,20 @@
   "name": "@kcws/heft-esbuild-plugin",
   "entries": [
     {
+      "version": "0.1.1",
+      "tag": "@kcws/heft-esbuild-plugin_v0.1.1",
+      "date": "Thu, 14 Mar 2024 11:53:08 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update dependencies and improve esbuild options",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "7355e2ed813813781904e5388f71f300555dc752"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.0",
       "tag": "@kcws/heft-esbuild-plugin_v0.1.0",
       "date": "Tue, 12 Mar 2024 22:37:31 GMT",

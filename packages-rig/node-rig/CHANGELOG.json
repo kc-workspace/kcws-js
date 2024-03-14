@@ -2,6 +2,18 @@
   "name": "@kcws/node-rig",
   "entries": [
     {
+      "version": "0.44.1",
+      "tag": "@kcws/node-rig_v0.44.1",
+      "date": "Thu, 14 Mar 2024 11:53:08 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/heft-esbuild-plugin\" to `0.1.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.44.0",
       "tag": "@kcws/node-rig_v0.44.0",
       "date": "Tue, 12 Mar 2024 22:37:31 GMT",
