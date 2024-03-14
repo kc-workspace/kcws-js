@@ -1,6 +1,11 @@
 # Change Log - @kcws/node-rig
 
-This log was last generated on Thu, 14 Mar 2024 11:53:08 GMT and should not be manually modified.
+This log was last generated on Thu, 14 Mar 2024 12:12:11 GMT and should not be manually modified.
+
+## 0.44.2
+Thu, 14 Mar 2024 12:12:11 GMT
+
+_Version update only_
 
 ## 0.44.1
 Thu, 14 Mar 2024 11:53:08 GMT

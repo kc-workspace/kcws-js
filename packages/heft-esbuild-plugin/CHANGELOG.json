@@ -2,6 +2,32 @@
   "name": "@kcws/heft-esbuild-plugin",
   "entries": [
     {
+      "version": "0.2.0",
+      "tag": "@kcws/heft-esbuild-plugin_v0.2.0",
+      "date": "Thu, 14 Mar 2024 12:12:11 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Forget to include heft-plugin.json file to package directory",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "00b10b3c06b0869039cc1560206bc75de5be7ed1"
+          },
+          {
+            "comment": "Fix json schema not found when run on heft",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "32f8310a29379b30e29dde8c485e6d52d053fd32"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Reduce package size by remove esnext and umd target",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "32f8310a29379b30e29dde8c485e6d52d053fd32"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.1",
       "tag": "@kcws/heft-esbuild-plugin_v0.1.1",
       "date": "Thu, 14 Mar 2024 11:53:08 GMT",
