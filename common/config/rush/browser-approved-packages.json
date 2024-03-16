@@ -7,8 +7,8 @@
       "allowedCategories": [ "configs" ]
     },
     {
-      "name": "@kcinternal/node-rig",
-      "allowedCategories": [ "configs", "example", "prototypes", "tools" ]
+      "name": "@kcinternals/heft-esbuild-plugin",
+      "allowedCategories": [ "tools" ]
     },
     {
       "name": "@kcinternals/heft-node-rig",
@@ -19,8 +19,12 @@
       "allowedCategories": [ "types" ]
     },
     {
+      "name": "@kcinternals/heft-web-rig",
+      "allowedCategories": [ "examples", "libraries" ]
+    },
+    {
       "name": "@kctypes/generic",
-      "allowedCategories": [ "configs", "libraries" ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@kcws/dtcheck",
@@ -28,31 +32,23 @@
     },
     {
       "name": "@kcws/eslint-config",
-      "allowedCategories": [ "configs", "example", "examples", "internals", "libraries", "prototypes", "tools", "types", "typings" ]
+      "allowedCategories": [ "configs", "examples", "internals", "libraries", "types" ]
     },
     {
-      "name": "@kcws/heft-esbuild-plugin",
-      "allowedCategories": [ "configs" ]
+      "name": "@kcws/heft-node-rig",
+      "allowedCategories": [ "examples" ]
+    },
+    {
+      "name": "@kcws/heft-web-rig",
+      "allowedCategories": [ "examples" ]
     },
     {
       "name": "@kcws/lintstaged-config",
-      "allowedCategories": [ "configs", "example", "examples", "internals", "libraries", "prototypes", "tools", "types", "typings" ]
-    },
-    {
-      "name": "@kcws/node-rig",
-      "allowedCategories": [ "configs", "example", "libraries", "prototypes", "tools", "typings" ]
-    },
-    {
-      "name": "@kcws/types-rig",
-      "allowedCategories": [ "typings" ]
-    },
-    {
-      "name": "@kcws/web-rig",
-      "allowedCategories": [ "configs", "example", "libraries", "prototypes" ]
+      "allowedCategories": [ "configs", "examples", "internals", "libraries", "types" ]
     },
     {
       "name": "@microsoft/api-extractor",
-      "allowedCategories": [ "configs", "internals" ]
+      "allowedCategories": [ "internals", "tools" ]
     },
     {
       "name": "@rspack/cli",
@@ -76,35 +72,31 @@
     },
     {
       "name": "@rushstack/heft",
-      "allowedCategories": [ "configs", "example", "examples", "internals", "libraries", "prototypes", "tools", "types", "typings" ]
+      "allowedCategories": [ "configs", "examples", "internals", "libraries", "tools", "types" ]
     },
     {
       "name": "@rushstack/heft-api-extractor-plugin",
-      "allowedCategories": [ "configs", "internals" ]
+      "allowedCategories": [ "internals", "tools" ]
     },
     {
       "name": "@rushstack/heft-jest-plugin",
-      "allowedCategories": [ "configs", "internals" ]
+      "allowedCategories": [ "internals", "tools" ]
     },
     {
       "name": "@rushstack/heft-lint-plugin",
-      "allowedCategories": [ "configs", "internals" ]
+      "allowedCategories": [ "internals", "tools" ]
     },
     {
       "name": "@rushstack/heft-sass-plugin",
-      "allowedCategories": [ "configs", "internals" ]
+      "allowedCategories": [ "internals", "tools" ]
     },
     {
       "name": "@rushstack/heft-typescript-plugin",
-      "allowedCategories": [ "configs", "internals" ]
-    },
-    {
-      "name": "@rushstack/node-core-library",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "internals", "tools" ]
     },
     {
       "name": "@rushstack/terminal",
-      "allowedCategories": [ "examples", "internals", "tools" ]
+      "allowedCategories": [ "examples", "internals" ]
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
@@ -116,11 +108,11 @@
     },
     {
       "name": "esbuild",
-      "allowedCategories": [ "internals", "tools" ]
+      "allowedCategories": [ "internals" ]
     },
     {
       "name": "eslint",
-      "allowedCategories": [ "configs", "internals" ]
+      "allowedCategories": [ "configs", "internals", "tools" ]
     },
     {
       "name": "eslint-config-prettier",
@@ -136,10 +128,6 @@
     },
     {
       "name": "eslint-plugin-deprecation",
-      "allowedCategories": [ "configs" ]
-    },
-    {
-      "name": "eslint-plugin-i",
       "allowedCategories": [ "configs" ]
     },
     {
@@ -172,19 +160,19 @@
     },
     {
       "name": "jest-environment-jsdom",
-      "allowedCategories": [ "configs", "internals" ]
+      "allowedCategories": [ "internals", "tools" ]
     },
     {
       "name": "jest-environment-node",
-      "allowedCategories": [ "configs", "internals" ]
+      "allowedCategories": [ "internals", "tools" ]
     },
     {
       "name": "jest-html-reporters",
-      "allowedCategories": [ "configs", "internals" ]
+      "allowedCategories": [ "internals", "tools" ]
     },
     {
       "name": "jest-junit",
-      "allowedCategories": [ "configs", "internals" ]
+      "allowedCategories": [ "internals", "tools" ]
     },
     {
       "name": "micromatch",
@@ -192,10 +180,6 @@
     },
     {
       "name": "prettier",
-      "allowedCategories": [ "configs" ]
-    },
-    {
-      "name": "rspack",
       "allowedCategories": [ "configs" ]
     },
     {
@@ -208,15 +192,15 @@
     },
     {
       "name": "tapable",
-      "allowedCategories": [ "examples", "internals", "tools" ]
+      "allowedCategories": [ "examples", "internals" ]
     },
     {
       "name": "tsd",
-      "allowedCategories": [ "types", "typings" ]
+      "allowedCategories": [ "types" ]
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "configs", "example", "internals", "types", "typings" ]
+      "allowedCategories": [ "examples", "internals", "tools", "types" ]
     }
   ]
 }

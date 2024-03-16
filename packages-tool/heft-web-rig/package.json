@@ -1,13 +1,13 @@
 {
-  "name": "@kcws/web-rig",
-  "version": "0.45.0",
-  "description": "a rig package for web environment projects using heft",
-  "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/web-rig",
+  "name": "@kcws/heft-web-rig",
+  "version": "0.1.0",
+  "description": "a rig package for web development",
+  "license": "AGPL-3.0-only",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-tool/heft-web-rig",
   "repository": {
     "type": "git",
     "url": "https://github.com/kc-workspace/kcws-js.git",
-    "directory": "packages/web-rig"
+    "directory": "packages-tool/heft-web-rig"
   },
   "author": {
     "name": "Kamontat Chantrachirathumrong",
@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@microsoft/api-extractor": "7.42.3",
+    "@kcinternals/heft-esbuild-plugin": "workspace:*",
     "@rushstack/heft-api-extractor-plugin": "0.3.20",
     "@rushstack/heft-jest-plugin": "0.11.21",
     "@rushstack/heft-lint-plugin": "0.3.20",
@@ -51,6 +52,6 @@
     "@rushstack/heft": ">=0.63.5"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=18"
   }
 }

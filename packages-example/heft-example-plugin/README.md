@@ -1,4 +1,4 @@
-# Heft example plugin
+# Example node library
 
 [![license@latest][img:license@latest]][link:license@latest]
 [![npm@latest][img:npm@latest]][link:npm@latest]

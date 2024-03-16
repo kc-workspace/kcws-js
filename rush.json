@@ -310,48 +310,48 @@
    */
   "projects": [
     /* @kcws packages */
-    // {
-    //   "packageName": "@kcws/color",
-    //   "projectFolder": "packages/color",
-    //   "reviewCategory": "libraries",
-    //   "shouldPublish": true
-    // },
-    // {
-    //   "packageName": "@kcws/dtcheck",
-    //   "projectFolder": "packages/dtcheck",
-    //   "reviewCategory": "libraries",
-    //   "shouldPublish": true
-    // },
-    // {
-    //   "packageName": "@kcws/equals",
-    //   "projectFolder": "packages/equals",
-    //   "reviewCategory": "libraries",
-    //   "shouldPublish": true
-    // },
-    // {
-    //   "packageName": "@kcws/error",
-    //   "projectFolder": "packages/error",
-    //   "reviewCategory": "libraries",
-    //   "shouldPublish": true
-    // },
-    // {
-    //   "packageName": "@kcws/mixin",
-    //   "projectFolder": "packages/mixin",
-    //   "reviewCategory": "libraries",
-    //   "shouldPublish": true
-    // },
-    // {
-    //   "packageName": "@kcws/random",
-    //   "projectFolder": "packages/random",
-    //   "reviewCategory": "libraries",
-    //   "shouldPublish": true
-    // },
-    // {
-    //   "packageName": "@kcws/reset.css",
-    //   "projectFolder": "packages/reset.css",
-    //   "reviewCategory": "libraries",
-    //   "shouldPublish": true
-    // },
+    {
+      "packageName": "@kcws/color",
+      "projectFolder": "packages/color",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/dtcheck",
+      "projectFolder": "packages/dtcheck",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/equals",
+      "projectFolder": "packages/equals",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/error",
+      "projectFolder": "packages/error",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/mixin",
+      "projectFolder": "packages/mixin",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/random",
+      "projectFolder": "packages/random",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/reset.css",
+      "projectFolder": "packages/reset.css",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
     {
       "packageName": "@kcws/eslint-config",
       "projectFolder": "packages-config/eslint-config",
@@ -376,18 +376,18 @@
       "reviewCategory": "configs",
       "shouldPublish": true
     },
-    // {
-    //   "packageName": "@kcws/heft-node-rig",
-    //   "projectFolder": "packages-tool/heft-node-rig",
-    //   "reviewCategory": "tools",
-    //   "shouldPublish": true
-    // },
-    // {
-    //   "packageName": "@kcws/heft-web-rig",
-    //   "projectFolder": "packages-tool/heft-web-rig",
-    //   "reviewCategory": "tools",
-    //   "shouldPublish": true
-    // },
+    {
+      "packageName": "@kcws/heft-node-rig",
+      "projectFolder": "packages-tool/heft-node-rig",
+      "reviewCategory": "tools",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/heft-web-rig",
+      "projectFolder": "packages-tool/heft-web-rig",
+      "reviewCategory": "tools",
+      "shouldPublish": true
+    },
     /* @kctypes packages */
     {
       "packageName": "@kctypes/package_json",
@@ -438,24 +438,42 @@
       "projectFolder": "packages-example/heft-example-plugin",
       "reviewCategory": "examples",
       "shouldPublish": false
+    },
+    {
+      "packageName": "@kcexamples/local-web-lib",
+      "projectFolder": "packages-example/local-web-lib",
+      "reviewCategory": "examples",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcexamples/local-node-lib",
+      "projectFolder": "packages-example/local-node-lib",
+      "reviewCategory": "examples",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcexamples/node-lib",
+      "projectFolder": "packages-example/node-lib",
+      "reviewCategory": "examples",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcexamples/node-app",
+      "projectFolder": "packages-example/node-app",
+      "reviewCategory": "examples",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcexamples/web-lib",
+      "projectFolder": "packages-example/web-lib",
+      "reviewCategory": "examples",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcexamples/web-app",
+      "projectFolder": "packages-example/web-app",
+      "reviewCategory": "examples",
+      "shouldPublish": false
     }
-    // {
-    //   "packageName": "@kcexamples/local-web-lib",
-    //   "projectFolder": "packages-example/local-web-lib",
-    //   "reviewCategory": "examples",
-    //   "shouldPublish": false
-    // },
-    // {
-    //   "packageName": "@kcexamples/local-node-tools",
-    //   "projectFolder": "packages-example/local-node-tools",
-    //   "reviewCategory": "examples",
-    //   "shouldPublish": false
-    // },
-    // {
-    //   "packageName": "@kcexamples/node-app",
-    //   "projectFolder": "packages-example/node-app",
-    //   "reviewCategory": "examples",
-    //   "shouldPublish": false
-    // }
   ]
 }

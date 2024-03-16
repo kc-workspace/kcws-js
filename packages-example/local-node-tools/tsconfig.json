@@ -1,3 +1,0 @@
-{
-  "extends": "./node_modules/@kcinternal/node-rig/profiles/default/tsconfig.base.json"
-}

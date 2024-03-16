@@ -1,7 +1,7 @@
 {
   "name": "@kcws/heft-node-rig",
   "version": "0.1.0",
-  "description": "a rig packages for node development",
+  "description": "a rig package for node development",
   "license": "AGPL-3.0-only",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-tool/heft-node-rig",
   "repository": {
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@microsoft/api-extractor": "7.42.3",
-    "@kcws/heft-esbuild-plugin": "workspace:*",
+    "@kcinternals/heft-esbuild-plugin": "workspace:*",
     "@rushstack/heft-api-extractor-plugin": "0.3.20",
     "@rushstack/heft-jest-plugin": "0.11.21",
     "@rushstack/heft-lint-plugin": "0.3.20",

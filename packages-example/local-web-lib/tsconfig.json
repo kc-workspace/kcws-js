@@ -1,3 +1,3 @@
 {
-  "extends": "./node_modules/@kcws/web-rig/profiles/default/tsconfig.base.json"
+  "extends": "./node_modules/@kcinternals/heft-web-rig/profiles/default/tsconfig.base.json"
 }

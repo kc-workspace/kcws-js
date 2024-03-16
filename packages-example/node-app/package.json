@@ -1,12 +1,11 @@
 {
   "name": "@kcexamples/node-app",
-  "version": "0.0.1",
-  "description": "example node application (for external usage)",
+  "version": "0.1.0",
+  "description": "example node application",
   "main": "lib/index.js",
   "module": "lib-esnext/index.js",
-  "browser": "lib-bundle/index.js",
-  "types": "dist/index.d.ts",
-  "license": "SEE LICENSE IN LICENSE",
+  "types": "lib/index.d.ts",
+  "license": "AGPL-3.0-only",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-example/node-app",
   "repository": {
     "type": "git",
@@ -23,24 +22,19 @@
   },
   "keywords": [
     "example",
-    "testing"
+    "node",
+    "application",
+    "node-application"
   ],
   "files": [
     "CHANGELOG.json",
     "CHANGELOG.md",
     "dist/**/*.d.ts",
-    "lib/**/*.js",
-    "lib/**/*.js.map",
-    "!lib/**/*.test.js",
-    "!lib/**/*.test.js.map",
-    "lib-commonjs/**/*.js",
-    "lib-commonjs/**/*.js.map",
-    "!lib-commonjs/**/*.test.js",
-    "!lib-commonjs/**/*.test.js.map",
-    "lib-umd/**/*.js",
-    "lib-umd/**/*.js.map",
-    "!lib-umd/**/*.test.js",
-    "!lib-umd/**/*.test.js.map"
+    "lib",
+    "lib-esnext",
+    "lib-bundle",
+    "!**/*.test.js",
+    "!**/*.test.js.map"
   ],
   "scripts": {
     "build": "heft build",
@@ -50,7 +44,7 @@
     "_phase:test": "heft run --only test"
   },
   "devDependencies": {
-    "@kcws/node-rig": "workspace:*",
+    "@kcws/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.66.0",
@@ -58,7 +52,10 @@
     "@types/node": "18.19.3",
     "typescript": "5.0.4"
   },
+  "peerDependencies": {
+    "@rushstack/heft": ">=0.65.5"
+  },
   "engines": {
-    "node": ">=12"
+    "node": ">=18"
   }
 }

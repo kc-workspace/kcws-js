@@ -9,7 +9,7 @@
     "build": {
       "cleanFiles": [
         {
-          "includeGlobs": ["lib", "lib-umd", "lib-esnext", "dist"]
+          "includeGlobs": ["lib", "lib-esnext", "dist"]
         }
       ],
       "tasksByName": {

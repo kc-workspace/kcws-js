@@ -5,7 +5,7 @@
   "main": "lib/reset.scss.css",
   "style": "lib/reset.scss.css",
   "types": "lib/types/reset.scss.d.ts",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "AGPL-3.0-only",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/reset.css",
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
     "_phase:build": "heft run --only build -- --clean"
   },
   "devDependencies": {
-    "@kcws/web-rig": "workspace:*",
+    "@kcinternals/heft-web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@rushstack/heft": "0.66.0",
     "stylelint": "16.2.1",

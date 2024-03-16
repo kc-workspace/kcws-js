@@ -4,8 +4,8 @@
   "description": "random number generator",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
-  "types": "dist/index.d.ts",
-  "license": "SEE LICENSE IN LICENSE",
+  "types": "lib/index.d.ts",
+  "license": "AGPL-3.0-only",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/random",
   "repository": {
     "type": "git",
@@ -28,18 +28,12 @@
     "CHANGELOG.json",
     "CHANGELOG.md",
     "dist/**/*.d.ts",
-    "lib/**/*.js",
-    "lib/**/*.js.map",
-    "!lib/**/*.test.js",
-    "!lib/**/*.test.js.map",
-    "lib-commonjs/**/*.js",
-    "lib-commonjs/**/*.js.map",
-    "!lib-commonjs/**/*.test.js",
-    "!lib-commonjs/**/*.test.js.map",
-    "lib-umd/**/*.js",
-    "lib-umd/**/*.js.map",
-    "!lib-umd/**/*.test.js",
-    "!lib-umd/**/*.test.js.map"
+    "lib",
+    "lib-commonjs",
+    "lib-umd",
+    "lib-css",
+    "!**/*.test.js",
+    "!**/*.test.js.map"
   ],
   "scripts": {
     "build": "heft build",
@@ -49,11 +43,11 @@
     "_phase:test": "heft run --only test"
   },
   "devDependencies": {
-    "@kcws/web-rig": "workspace:*",
+    "@kcinternals/heft-web-rig": "workspace:*",
+    "@kctypes/generic": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.66.0",
-    "@kctypes/generic": "workspace:*"
+    "@rushstack/heft": "0.66.0"
   },
   "engines": {
     "node": ">=12"

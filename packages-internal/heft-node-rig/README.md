@@ -24,7 +24,6 @@ This will generate multiple modules output listed below:
 
 - `lib` - The base module contains `CommonJS` javascript code
 - `lib-esnext` - contains `ESNext` module code
-- `lib-umd` - contains `UMD` module code
 - `dist` - contains aggregated typescript definitions
   - **index.d.ts** contains all exported types
   - **index-alpha.d.ts** contains only alpha exported types

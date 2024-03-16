@@ -220,12 +220,12 @@ config
   .addNewScope({
     key: "heft-esbuild-plugin",
     title: "Heft esbuild plugin",
-    description: "@kcws/heft-esbuild-plugin package",
+    description: "@kcinternals/heft-esbuild-plugin package",
   })
   .addNewScope({
     key: "heft-stryker-plugin",
     title: "Heft stryker plugin",
-    description: "@kcws/heft-stryker-plugin package",
+    description: "@kcinternals/heft-stryker-plugin package",
   })
   .addNewScope({
     key: "eslint-config",

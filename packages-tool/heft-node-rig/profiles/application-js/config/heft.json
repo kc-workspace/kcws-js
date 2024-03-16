@@ -21,7 +21,7 @@
         "esbuild": {
           "taskDependencies": ["typescript"],
           "taskPlugin": {
-            "pluginPackage": "@kcws/heft-esbuild-plugin",
+            "pluginPackage": "@kcinternals/heft-esbuild-plugin",
             "options": {
               "output": "lib-bundle",
               "bundle": true,

@@ -14,10 +14,6 @@
     {
       "moduleKind": "esnext",
       "outFolderName": "lib-esnext"
-    },
-    {
-      "moduleKind": "umd",
-      "outFolderName": "lib-umd"
     }
   ],
 

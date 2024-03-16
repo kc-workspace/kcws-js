@@ -10,7 +10,7 @@
       "name": "Debug rush command",
       "program": "${env:PNPM_HOME}/global/5/node_modules/@microsoft/rush/lib/start.js",
       "skipFiles": ["<node_internals>/**"],
-      "args": ["rebuild", "--only", "@kcws/heft-esbuild-plugin", "--only", "@kcws-example/node-app"]
+      "args": ["rebuild", "--only", "@kcinternals/heft-esbuild-plugin", "--only", "@kcws-example/node-app"]
     },
     {
       "type": "node",

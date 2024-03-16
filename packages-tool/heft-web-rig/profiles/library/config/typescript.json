@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/typescript.schema.json",
+  "extends": "../../_base/config/typescript.json",
+  "additionalModuleKindsToEmit": [
+    {
+      "moduleKind": "commonjs",
+      "outFolderName": "lib-commonjs"
+    },
+    {
+      "moduleKind": "es2015",
+      "outFolderName": "lib-es2015"
+    },
+    {
+      "moduleKind": "umd",
+      "outFolderName": "lib-umd"
+    }
+  ]
+}
