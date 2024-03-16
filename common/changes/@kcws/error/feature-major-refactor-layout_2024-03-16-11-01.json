@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/error",
+      "comment": "Refactor project and riggable profile",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/error"
+}

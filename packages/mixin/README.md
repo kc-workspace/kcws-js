@@ -1,16 +1,20 @@
 # TypeScript Mixin
 
+[![license@latest][img:license@latest]][link:license@latest]
 [![npm@latest][img:npm@latest]][link:npm@latest]
-[![bundle@latest][img:bundle@latest]][link:bundle@latest]
 [![libsio@latest][img:libsio@latest]][link:libsio@latest]
-![snyk@latest][img:snyk@latest]
+[![bundle@latest][img:bundle@latest]][link:bundle@latest]
 
 <!-- LINKS SECTION -->
 
+[img:license@latest]: https://img.shields.io/npm/l/%40kcws%2Fmixin?style=flat-square
+[link:license@latest]: ../../LICENSE
+
 [img:npm@latest]: https://img.shields.io/npm/v/@kcws/mixin/latest?style=flat-square
+[link:npm@latest]: https://www.npmjs.com/package/@kcws/mixin/v/latest
+
 [img:libsio@latest]: https://img.shields.io/librariesio/release/npm/@kcws/mixin?style=flat-square
 [link:libsio@latest]: https://libraries.io/npm/@kcws%2Fmixin
-[link:npm@latest]: https://www.npmjs.com/package/@kcws/mixin/v/latest
-[img:snyk@latest]: https://img.shields.io/snyk/vulnerabilities/npm/@kcws/mixin?style=flat-square
+
 [img:bundle@latest]: https://img.shields.io/bundlephobia/min/@kcws/mixin/latest?style=flat-square&label=size
 [link:bundle@latest]: https://bundlephobia.com/result?p=@kcws/mixin@latest

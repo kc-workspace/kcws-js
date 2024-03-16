@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/heft-plugin.schema.json",
+
+  "taskPlugins": [
+    {
+      "pluginName": "example-plugin",
+      "entryPoint": "./lib/ExamplePlugin",
+      "optionsSchema": "./lib/schemas/heft-example-plugin.schema.json",
+
+      "parameterScope": "example",
+      "parameters": []
+    }
+  ]
+}

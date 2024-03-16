@@ -1,0 +1,6 @@
+{
+  "extends": "./node_modules/@kcinternals/heft-node-rig/profiles/default/tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2016"
+  }
+}

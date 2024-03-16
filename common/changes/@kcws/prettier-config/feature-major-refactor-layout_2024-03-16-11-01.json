@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/prettier-config",
+      "comment": "Refactor project and riggable profile",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/prettier-config"
+}

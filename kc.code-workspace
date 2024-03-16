@@ -29,48 +29,40 @@
       "path": "packages/reset.css"
     },
     {
-      "name": "@kcws/node-rig",
-      "path": "packages-rig/node-rig"
-    },
-    {
-      "name": "@kcws/local-node-rig",
-      "path": "packages-rig/local-node-rig"
-    },
-    {
-      "name": "@kcws/web-rig",
-      "path": "packages-rig/web-rig"
-    },
-    {
-      "name": "@kcws/types-rig",
-      "path": "packages-rig/types-rig"
-    },
-    {
-      "name": "@kcws/heft-esbuild-plugin",
-      "path": "packages/heft-esbuild-plugin"
-    },
-    {
       "name": "@kcws/eslint-config",
-      "path": "packages/eslint-config"
-    },
-    {
-      "name": "@kcws/prettier-config",
-      "path": "packages/prettier-config"
+      "path": "packages-config/eslint-config"
     },
     {
       "name": "@kcws/lintstaged-config",
-      "path": "packages/lintstaged-config"
+      "path": "packages-config/lintstaged-config"
+    },
+    {
+      "name": "@kcws/prettier-config",
+      "path": "packages-config/prettier-config"
     },
     {
       "name": "@kcws/rspack-config",
-      "path": "packages/rspack-config"
+      "path": "packages-config/rspack-config"
     },
     {
-      "name": "@kctypes/package_json",
-      "path": "typings/package_json"
+      "name": "@kcws/heft-node-rig",
+      "path": "packages-tool/heft-node-rig"
     },
     {
-      "name": "@kctypes/generic",
-      "path": "typings/generic"
+      "name": "@kcws/heft-web-rig",
+      "path": "packages-tool/heft-web-rig"
+    },
+    {
+      "name": "@kctypes/all",
+      "path": "packages-type"
+    },
+    {
+      "name": "@kcinternals/all",
+      "path": "packages-internal"
+    },
+    {
+      "name": "@kcexamples/all",
+      "path": "packages-example"
     },
     {
       "name": "@common/autoinstallers",

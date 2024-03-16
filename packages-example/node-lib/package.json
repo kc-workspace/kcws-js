@@ -1,0 +1,60 @@
+{
+  "name": "@kcexamples/node-lib",
+  "version": "0.1.0",
+  "description": "example node library",
+  "main": "lib/index.js",
+  "module": "lib-esnext/index.js",
+  "types": "lib/index.d.ts",
+  "license": "AGPL-3.0-only",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-example/node-lib",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "packages-example/node-lib"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "example",
+    "node",
+    "library",
+    "node-library"
+  ],
+  "files": [
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "dist/**/*.d.ts",
+    "lib",
+    "lib-esnext",
+    "!**/*.test.js",
+    "!**/*.test.js.map"
+  ],
+  "scripts": {
+    "build": "heft build",
+    "test": "heft test",
+    "clean": "heft clean",
+    "_phase:build": "heft run --only build -- --clean",
+    "_phase:test": "heft run --only test"
+  },
+  "devDependencies": {
+    "@kcws/heft-node-rig": "workspace:*",
+    "@kcws/lintstaged-config": "workspace:*",
+    "@kcws/eslint-config": "workspace:*",
+    "@rushstack/heft": "0.66.0",
+    "@types/heft-jest": "1.0.6",
+    "@types/node": "18.19.3",
+    "typescript": "5.0.4"
+  },
+  "peerDependencies": {
+    "@rushstack/heft": ">=0.65.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

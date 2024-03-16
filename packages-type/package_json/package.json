@@ -1,0 +1,54 @@
+{
+  "name": "@kctypes/package_json",
+  "version": "1.8.0",
+  "description": "typescript definitions for package.json file",
+  "main": "types/index.d.ts",
+  "types": "types/index.d.ts",
+  "license": "AGPL-3.0-only",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-type/package_json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "packages-type/package_json"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "typescript",
+    "tsd",
+    "definitions",
+    "package.json"
+  ],
+  "files": [
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "types/**/*.d.ts"
+  ],
+  "scripts": {
+    "build": "heft build",
+    "test": "tsd",
+    "clean": "heft clean",
+    "_phase:build": "heft run --only build",
+    "_phase:test": "tsd"
+  },
+  "devDependencies": {
+    "@kcws/eslint-config": "workspace:*",
+    "@kcws/lintstaged-config": "workspace:*",
+    "@kcinternals/heft-types-rig": "workspace:*",
+    "@rushstack/heft": "0.66.0",
+    "tsd": "0.30.7",
+    "typescript": "5.0.4"
+  },
+  "peerDependencies": {
+    "typescript": ">=2.0.0"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}

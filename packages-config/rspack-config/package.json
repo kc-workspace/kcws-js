@@ -1,0 +1,59 @@
+{
+  "name": "@kcws/rspack-config",
+  "version": "0.10.0",
+  "description": "rspack configuration builder",
+  "main": "lib/index.js",
+  "module": "lib-esnext/index.js",
+  "types": "lib/index.d.ts",
+  "license": "AGPL-3.0-only",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-config/rspack-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "packages-config/rspack-config"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "config",
+    "config-builder",
+    "rspack",
+    "rspack-config",
+    "rspack-config-builder"
+  ],
+  "files": [
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "dist/**/*.d.ts",
+    "lib",
+    "lib-esnext",
+    "!**/*.test.js",
+    "!**/*.test.js.map"
+  ],
+  "scripts": {
+    "build": "heft build",
+    "test": "heft test",
+    "clean": "heft clean",
+    "_phase:build": "heft run --only build -- --clean",
+    "_phase:test": "heft run --only test"
+  },
+  "devDependencies": {
+    "@kcinternals/heft-node-rig": "workspace:*",
+    "@kcws/lintstaged-config": "workspace:*",
+    "@kcws/eslint-config": "workspace:*",
+    "@rushstack/heft": "0.66.0",
+    "@rspack/core": "0.5.6"
+  },
+  "peerDependencies": {
+    "@rspack/cli": "^0.5.0"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}

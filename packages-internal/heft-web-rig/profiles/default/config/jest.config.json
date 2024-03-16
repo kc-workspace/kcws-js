@@ -1,0 +1,35 @@
+{
+  "extends": "@rushstack/heft-jest-plugin/includes/jest-web.config.json",
+  "testMatch": ["<rootDir>/lib-commonjs/**/*.test.js"],
+  "testPathIgnorePatterns": ["/node_modules/"],
+  "reporters": [
+    "default",
+    [
+      "jest-html-reporters",
+      {
+        "publicPath": "temp/test/html"
+      }
+    ],
+    [
+      "jest-junit",
+      {
+        "outputDirectory": "temp/test",
+        "outputName": "junit.xml"
+      }
+    ]
+  ],
+  // Enabled code coverage by default
+  "collectCoverage": true,
+  "coverageDirectory": "<rootDir>/temp/coverage",
+  "coverageReporters": ["text", ["lcov", { "projectRoot": "../.." }]],
+  "collectCoverageFrom": [
+    "lib-commonjs/**/*.{cjs,js}",
+    "!lib-commonjs/**/*.d.ts",
+    "!lib-commonjs/**/*.test.{cjs,js}",
+    "!lib-commonjs/**/*.type.{cjs,js}",
+    "!lib-commonjs/**/test/**",
+    "!lib-commonjs/**/__tests__/**",
+    "!lib-commonjs/**/__fixtures__/**",
+    "!lib-commonjs/**/__mocks__/**"
+  ]
+}

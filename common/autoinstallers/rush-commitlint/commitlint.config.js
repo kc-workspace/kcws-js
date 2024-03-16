@@ -1,226 +1,291 @@
-/**
- * @type {import("@commitlint/types").UserConfig}
- */
-const config = {
+import { RuleConfigSeverity } from "@commitlint/types";
+
+class CommitlintConfig {
+  /** @param {import("@commitlint/types").UserConfig} config */
+  constructor(config) {
+    this.config = config;
+  }
+
+  /**
+   *
+   * @param {(config: import("@commitlint/types").UserConfig) => import("@commitlint/types").UserConfig} fn
+   */
+  update(fn) {
+    this.config = fn(this.config);
+    return this;
+  }
+
+  /**
+   * @param {{
+   *    key: string,
+   *    title: string,
+   *    description: string,
+   *    emoji: string,
+   * }} options - type options
+   */
+  addNewType(options) {
+    this.config.rules["type-enum"][2].push(options.key);
+    this.config.prompt.questions.type.enum[options.key] = {
+      title: options.title,
+      description: options.description,
+      emoji: options.emoji,
+    };
+    return this;
+  }
+
+  /**
+   * @param {{
+   *    key: string,
+   *    title: string,
+   *    description: string,
+   * }} options - scope options
+   */
+  addNewScope(options) {
+    this.config.rules["scope-enum"][2].push(options.key);
+    this.config.prompt.questions.scope.enum[options.key] = {
+      title: options.title,
+      description: options.description,
+    };
+    return this;
+  }
+
+  build() {
+    return this.config;
+  }
+}
+
+const RuleConfigCondition = {
+  Always: "always",
+  Never: "never",
+};
+
+const RuleConfigCaseType = {
+  CamelCase: "camel-case",
+  KebabCase: "kebab-case",
+  SnakeCase: "snake-case",
+  PascalCase: "pascal-case",
+  StartCase: "start-case",
+  UpperCase: "upper-case",
+  SentenceCase: "sentence-case",
+  LowerCase: "lower-case",
+};
+
+const config = new CommitlintConfig({
   extends: ["@commitlint/config-conventional"],
   rules: {
-    "type-enum": [
-      2,
-      "always",
-      ["feat", "perf", "fix", "test", "ci", "docs", "refactor", "chore"],
+    "type-enum": [RuleConfigSeverity.Error, RuleConfigCondition.Always, []],
+    "scope-enum": [RuleConfigSeverity.Error, RuleConfigCondition.Always, []],
+    "subject-max-length": [
+      RuleConfigSeverity.Warning,
+      RuleConfigCondition.Always,
+      80,
     ],
-    "scope-enum": [
-      2,
-      "always",
-      [
-        "core",
-        "color",
-        "dtcheck",
-        "equals",
-        "error",
-        "mixin",
-        "random",
-        "reset.css",
-        "node-rig",
-        "web-rig",
-        "types-rig",
-        "heft-esbuild-plugin",
-        "eslint-config",
-        "prettier-config",
-        "lintstaged-config",
-        "rspack-config",
-        "types",
-        "rush-api-documenter",
-        "rush-commitlint",
-        "rush-dependencies-updater",
-        "rush-lintstaged",
-        "deps",
-        "config",
-        "script",
-        "example",
-      ],
+    "subject-case": [
+      RuleConfigSeverity.Error,
+      RuleConfigCondition.Always,
+      RuleConfigCaseType.LowerCase,
     ],
-    "subject-max-length": [1, "always", 80],
-    "subject-case": [2, "always", "lower-case"],
-    "body-case": [2, "always", ["sentence-case", "lower-case"]],
-    "body-max-line-length": [1, "always", 80],
+    "body-case": [
+      RuleConfigSeverity.Error,
+      RuleConfigCondition.Always,
+      [RuleConfigCaseType.SentenceCase, RuleConfigCaseType.LowerCase],
+    ],
+    "body-max-line-length": [
+      RuleConfigSeverity.Warning,
+      RuleConfigCondition.Always,
+      120,
+    ],
   },
   prompt: {
     questions: {
       type: {
-        description: "Select the type of change that you're committing",
-        enum: {
-          feat: {
-            description: "A new feature",
-            title: "Features",
-            emoji: "✨",
-          },
-          perf: {
-            description: "A code change that improves performance",
-            title: "Performance Improvements",
-            emoji: "🚀",
-          },
-          fix: {
-            description: "A bug fix",
-            title: "Bug Fixes",
-            emoji: "🐛",
-          },
-          test: {
-            description: "Adding missing tests or correcting existing tests",
-            title: "Tests",
-            emoji: "🚨",
-          },
-          ci: {
-            description:
-              "Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)",
-            title: "Continuous Integrations",
-            emoji: "⚙️",
-          },
-          docs: {
-            description: "Documentation only changes",
-            title: "Documentation",
-            emoji: "📚",
-          },
-          refactor: {
-            description:
-              "A code change that neither fixes a bug nor adds a feature",
-            title: "Code Refactoring",
-            emoji: "📦",
-          },
-          chore: {
-            description: "Other changes that don't modify src or test files",
-            title: "Chores",
-            emoji: "♻️",
-          },
-        },
+        enum: {},
       },
       scope: {
-        description:
-          "What is the scope of this change (e.g. component or file name)",
-        enum: {
-          core: {
-            description: "Core rush package",
-            title: "Core",
-          },
-          color: {
-            description: "@kcws/color package",
-            title: "Color",
-          },
-          dtcheck: {
-            description: "@kcws/dtcheck package",
-            title: "Datatype Check",
-          },
-          equals: {
-            description: "@kcws/equals package",
-            title: "Equals",
-          },
-          mixin: {
-            description: "@kcws/mixin package",
-            title: "Mixin",
-          },
-          random: {
-            description: "@kcws/random package",
-            title: "Random",
-          },
-          "reset.css": {
-            description: "@kcws/reset.css package",
-            title: "Reset CSS",
-          },
-          "node-rig": {
-            description: "@kcws/node-rig & @kcws/local-node-rig package",
-            title: "Node Rig Package (Included local rig)",
-          },
-          "web-rig": {
-            description: "@kcws/web-rig package",
-            title: "Web Rig Package",
-          },
-          "types-rig": {
-            description: "@kcws/types-rig package",
-            title: "Types Rig Package",
-          },
-          "heft-esbuild-plugin": {
-            description: "@kcws/heft-esbuild-plugin package",
-            title: "Heft plugin: esbuild",
-          },
-          "eslint-config": {
-            description: "@kcws/eslint-config package",
-            title: "Eslint config",
-          },
-          "prettier-config": {
-            description: "@kcws/prettier-config package",
-            title: "Prettier config",
-          },
-          "lintstaged-config": {
-            description: "@kcws/lintstaged-config package",
-            title: "Lint-staged config",
-          },
-          "rspack-config": {
-            description: "@kcws/rspack-config package",
-            title: "rspack config",
-          },
-          types: {
-            description: "All @types/* packages",
-            title: "Typings",
-          },
-          "rush-api-documenter": {
-            description: "rush-api-documenter autoinstaller",
-            title: "Rush api-documenter",
-          },
-          "rush-commitlint": {
-            description: "rush-commitlint autoinstaller",
-            title: "Rush commitlint",
-          },
-          "rush-dependencies-updater": {
-            description: "rush-dependencies-updater autoinstaller",
-            title: "Rush dependencies-updater",
-          },
-          "rush-lintstaged": {
-            description: "rush-lintstaged autoinstaller",
-            title: "Rush lintstaged",
-          },
-          deps: {
-            description: "Multiple dependencies across multiple packages",
-            title: "Dependencies",
-          },
-          config: {
-            description: "Monorepo configuration",
-            title: "Configuration",
-          },
-          example: {
-            description: "@kcws/example or @kcws/tool-example packages",
-            title: "Example Packages",
-          },
-        },
-      },
-      subject: {
-        description:
-          "Write a short, imperative tense description of the change",
-      },
-      body: {
-        description: "Provide a longer description of the change",
-      },
-      isBreaking: {
-        description: "Are there any breaking changes?",
-      },
-      breakingBody: {
-        description:
-          "A BREAKING CHANGE commit requires a body. Please enter a longer description of the commit itself",
-      },
-      breaking: {
-        description: "Describe the breaking changes",
-      },
-      isIssueAffected: {
-        description: "Does this change affect any open issues?",
-      },
-      issuesBody: {
-        description:
-          "If issues are closed, the commit requires a body. Please enter a longer description of the commit itself",
-      },
-      issues: {
-        description: 'Add issue references (e.g. "fix #123", "re #123".)',
+        enum: {},
       },
     },
+    settings: {
+      enableMultipleScopes: false,
+    },
   },
-};
+});
 
-module.exports = config;
+config
+  .addNewType({
+    key: "feat",
+    title: "Features",
+    description: "A new feature",
+    emoji: "✨",
+  })
+  .addNewType({
+    key: "perf",
+    title: "Performance Improvements",
+    description: "A code change that improves performance",
+    emoji: "🚀",
+  })
+  .addNewType({
+    key: "fix",
+    title: "Bug Fixes",
+    description: "A bug fix",
+    emoji: "🐛",
+  })
+  .addNewType({
+    key: "test",
+    title: "Tests",
+    description: "Adding missing tests or correcting existing tests",
+    emoji: "🚨",
+  })
+  .addNewType({
+    key: "ci",
+    title: "Continuous Integrations",
+    description: "Changes to our CI configuration files and scripts",
+    emoji: "⚙️",
+  })
+  .addNewType({
+    key: "docs",
+    title: "Documentation",
+    description: "Documentation only changes",
+    emoji: "📚",
+  })
+  .addNewType({
+    key: "refactor",
+    title: "Code Refactoring",
+    description: "A code change that neither fixes a bug nor adds a feature",
+    emoji: "📦",
+  })
+  .addNewType({
+    key: "chore",
+    title: "Chores",
+    description: "Other changes that don't modify src or test files",
+    emoji: "♻️",
+  });
+
+config
+  .addNewScope({
+    key: "core",
+    title: "Core",
+    description: "Core rush package",
+  })
+  .addNewScope({
+    key: "color",
+    title: "Color package",
+    description: "@kcws/color package",
+  })
+  .addNewScope({
+    key: "dtcheck",
+    title: "Datatype checker package",
+    description: "@kcws/dtcheck package",
+  })
+  .addNewScope({
+    key: "equals",
+    title: "Equals package",
+    description: "@kcws/equals package",
+  })
+  .addNewScope({
+    key: "error",
+    title: "Errors package",
+    description: "@kcws/error package",
+  })
+  .addNewScope({
+    key: "mixin",
+    title: "Mixin package",
+    description: "@kcws/mixin package",
+  })
+  .addNewScope({
+    key: "random",
+    title: "Random package",
+    description: "@kcws/random package",
+  })
+  .addNewScope({
+    key: "reset.css",
+    title: "ResetCSS package",
+    description: "@kcws/reset.css package",
+  })
+  .addNewScope({
+    key: "heft-node-rig",
+    title: "Heft node riggable package",
+    description: "@kcws/heft-node-rig & @kcinternals/heft-node-rig package",
+  })
+  .addNewScope({
+    key: "heft-web-rig",
+    title: "Heft web riggable package",
+    description: "@kcws/heft-web-rig & @kcinternals/heft-web-rig package",
+  })
+  .addNewScope({
+    key: "heft-types-rig",
+    title: "Heft types riggable package",
+    description: "@kcinternals/heft-types-rig package",
+  })
+  .addNewScope({
+    key: "heft-esbuild-plugin",
+    title: "Heft esbuild plugin",
+    description: "@kcinternals/heft-esbuild-plugin package",
+  })
+  .addNewScope({
+    key: "heft-stryker-plugin",
+    title: "Heft stryker plugin",
+    description: "@kcinternals/heft-stryker-plugin package",
+  })
+  .addNewScope({
+    key: "eslint-config",
+    title: "Eslint config",
+    description: "@kcws/eslint-config package",
+  })
+  .addNewScope({
+    key: "prettier-config",
+    title: "Prettier config",
+    description: "@kcws/prettier-config package",
+  })
+  .addNewScope({
+    key: "lintstaged-config",
+    title: "Lintstaged config",
+    description: "@kcws/lintstaged-config package",
+  })
+  .addNewScope({
+    key: "rspack-config",
+    title: "RSPack config",
+    description: "@kcws/rspack-config package",
+  })
+  .addNewScope({
+    key: "types",
+    title: "Types definition",
+    description: "all @types/* packages",
+  })
+  .addNewScope({
+    key: "rush-api-documenter",
+    title: "Rush api-documenter",
+    description: "rush-api-documenter autoinstaller",
+  })
+  .addNewScope({
+    key: "rush-commitlint",
+    title: "Rush commitlint",
+    description: "rush-commitlint autoinstaller",
+  })
+  .addNewScope({
+    key: "rush-dependencies-updater",
+    title: "Rush dependencies-updater",
+    description: "rush-dependencies-updater autoinstaller",
+  })
+  .addNewScope({
+    key: "rush-lintstaged",
+    title: "Rush lintstaged",
+    description: "rush-lintstaged autoinstaller",
+  })
+  .addNewScope({
+    key: "deps",
+    title: "Dependencies",
+    description: "add or upgrade dependencies",
+  })
+  .addNewScope({
+    key: "config",
+    title: "Configuration",
+    description: "any configurations on both core and in packages",
+  })
+  .addNewScope({
+    key: "example",
+    title: "Example",
+    description: "@kcexamples/* packages",
+  });
+
+export default config.build();

@@ -133,10 +133,10 @@
     "reviewCategories": [
       "libraries", // external shipping packages
       "configs", // configuration packages
-      "typings", // internal typescripts type packages
-      "tools", // internal tools as part of the developer toolchain
-      "example", // example libraries/applications for start new packages easier
-      "prototypes" // experiments that should mostly be ignored by the review process
+      "types", // internal typescripts type packages
+      "tools", // reusable development tools
+      "internals", // internal packages for local development
+      "examples" // example libraries/applications for start new packages easier
     ],
     /**
      * A list of NPM package scopes that will be excluded from review.
@@ -309,9 +309,10 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
+    /* @kcws packages */
     {
-      "packageName": "@kcws/random",
-      "projectFolder": "packages/random",
+      "packageName": "@kcws/color",
+      "projectFolder": "packages/color",
       "reviewCategory": "libraries",
       "shouldPublish": true
     },
@@ -340,99 +341,138 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/random",
+      "projectFolder": "packages/random",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@kcws/reset.css",
       "projectFolder": "packages/reset.css",
       "reviewCategory": "libraries",
       "shouldPublish": true
     },
     {
-      "packageName": "@kcws/color",
-      "projectFolder": "packages/color",
-      "reviewCategory": "libraries",
-      "shouldPublish": true
-    },
-    {
-      "packageName": "@kcws/node-rig",
-      "projectFolder": "packages-rig/node-rig",
+      "packageName": "@kcws/eslint-config",
+      "projectFolder": "packages-config/eslint-config",
       "reviewCategory": "configs",
-      "shouldPublish": true
-    },
-    {
-      "packageName": "@kcws/local-node-rig",
-      "projectFolder": "packages-rig/local-node-rig",
-      "reviewCategory": "configs",
-      "shouldPublish": false
-    },
-    {
-      "packageName": "@kcws/web-rig",
-      "projectFolder": "packages-rig/web-rig",
-      "reviewCategory": "configs",
-      "shouldPublish": true
-    },
-    {
-      "packageName": "@kcws/types-rig",
-      "projectFolder": "packages-rig/types-rig",
-      "reviewCategory": "configs",
-      "shouldPublish": true
-    },
-    {
-      "packageName": "@kcws/heft-esbuild-plugin",
-      "projectFolder": "packages/heft-esbuild-plugin",
-      "reviewCategory": "tools",
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/lintstaged-config",
-      "projectFolder": "packages/lintstaged-config",
-      "reviewCategory": "configs",
-      "shouldPublish": true
-    },
-    {
-      "packageName": "@kcws/eslint-config",
-      "projectFolder": "packages/eslint-config",
+      "projectFolder": "packages-config/lintstaged-config",
       "reviewCategory": "configs",
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/prettier-config",
-      "projectFolder": "packages/prettier-config",
+      "projectFolder": "packages-config/prettier-config",
       "reviewCategory": "configs",
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/rspack-config",
-      "projectFolder": "packages/rspack-config",
+      "projectFolder": "packages-config/rspack-config",
       "reviewCategory": "configs",
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/heft-node-rig",
+      "projectFolder": "packages-tool/heft-node-rig",
+      "reviewCategory": "tools",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/heft-web-rig",
+      "projectFolder": "packages-tool/heft-web-rig",
+      "reviewCategory": "tools",
+      "shouldPublish": true
+    },
+    /* @kctypes packages */
+    {
       "packageName": "@kctypes/package_json",
-      "projectFolder": "typings/package_json",
-      "reviewCategory": "typings",
+      "projectFolder": "packages-type/package_json",
+      "reviewCategory": "types",
       "shouldPublish": true
     },
     {
       "packageName": "@kctypes/generic",
-      "projectFolder": "typings/generic",
-      "reviewCategory": "typings",
+      "projectFolder": "packages-type/generic",
+      "reviewCategory": "types",
+      "shouldPublish": true
+    },
+    /* @kcinternals packages */
+    {
+      "packageName": "@kcinternals/heft-node-rig",
+      "projectFolder": "packages-internal/heft-node-rig",
+      "reviewCategory": "internals",
       "shouldPublish": true
     },
     {
-      "packageName": "@kcws-example/local-web-lib",
+      "packageName": "@kcinternals/heft-web-rig",
+      "projectFolder": "packages-internal/heft-web-rig",
+      "reviewCategory": "internals",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcinternals/heft-types-rig",
+      "projectFolder": "packages-internal/heft-types-rig",
+      "reviewCategory": "internals",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcinternals/heft-esbuild-plugin",
+      "projectFolder": "packages-internal/heft-esbuild-plugin",
+      "reviewCategory": "internals",
+      "shouldPublish": true
+    },
+    // {
+    //   "packageName": "@kcinternals/heft-stryker-plugin",
+    //   "projectFolder": "packages-internal/heft-stryker-plugin",
+    //   "reviewCategory": "internals",
+    //   "shouldPublish": false
+    // },
+    /* @kcexamples packages */
+    {
+      "packageName": "@kcexamples/heft-example-plugin",
+      "projectFolder": "packages-example/heft-example-plugin",
+      "reviewCategory": "examples",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcexamples/local-web-lib",
       "projectFolder": "packages-example/local-web-lib",
-      "reviewCategory": "example",
+      "reviewCategory": "examples",
       "shouldPublish": false
     },
     {
-      "packageName": "@kcws-example/node-app",
+      "packageName": "@kcexamples/local-node-lib",
+      "projectFolder": "packages-example/local-node-lib",
+      "reviewCategory": "examples",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcexamples/node-lib",
+      "projectFolder": "packages-example/node-lib",
+      "reviewCategory": "examples",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcexamples/node-app",
       "projectFolder": "packages-example/node-app",
-      "reviewCategory": "example",
+      "reviewCategory": "examples",
       "shouldPublish": false
     },
     {
-      "packageName": "@kcws-example/local-node-tools",
-      "projectFolder": "packages-example/local-node-tools",
-      "reviewCategory": "example",
+      "packageName": "@kcexamples/web-lib",
+      "projectFolder": "packages-example/web-lib",
+      "reviewCategory": "examples",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@kcexamples/web-app",
+      "projectFolder": "packages-example/web-app",
+      "reviewCategory": "examples",
       "shouldPublish": false
     }
   ]

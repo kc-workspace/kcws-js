@@ -3,6 +3,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rig-package/rig.schema.json",
 
-  "rigPackageName": "@kcws/web-rig",
-  "rigProfile": "pure-css"
+  "rigPackageName": "@kcinternals/heft-web-rig",
+  "rigProfile": "css"
 }

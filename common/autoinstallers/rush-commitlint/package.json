@@ -2,6 +2,7 @@
   "name": "rush-commitlint",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@commitlint/cli": "19.0.3",
     "@commitlint/config-conventional": "19.0.3",
