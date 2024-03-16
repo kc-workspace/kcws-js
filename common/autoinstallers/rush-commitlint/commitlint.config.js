@@ -285,7 +285,7 @@ config
   .addNewScope({
     key: "example",
     title: "Example",
-    description: "@kcexample/* packages",
+    description: "@kcexamples/* packages",
   });
 
 export default config.build();

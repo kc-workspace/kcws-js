@@ -20,6 +20,8 @@ dtcheck
 dtconvert
 kcutils
 kctypes
+kcexamples
+kcinternals
 webp
 webm
 jsts
