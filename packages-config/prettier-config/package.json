@@ -1,0 +1,52 @@
+{
+  "name": "@kcws/prettier-config",
+  "version": "0.8.0",
+  "description": "kamontat's prettier configuration",
+  "main": "src/index.js",
+  "types": "lib/index.d.ts",
+  "license": "AGPL-3.0-only",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-config/prettier-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "packages-config/prettier-config"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "config",
+    "prettier",
+    "prettierconfig",
+    "prettier-config"
+  ],
+  "files": [
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "src",
+    "lib"
+  ],
+  "scripts": {
+    "build": "heft build",
+    "clean": "heft clean",
+    "_phase:build": "heft run --only build -- --clean"
+  },
+  "devDependencies": {
+    "@kcinternals/heft-node-rig": "workspace:*",
+    "@kcws/lintstaged-config": "workspace:*",
+    "@kcws/eslint-config": "workspace:*",
+    "@rushstack/heft": "0.66.0",
+    "prettier": "3.2.5"
+  },
+  "peerDependencies": {
+    "prettier": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}

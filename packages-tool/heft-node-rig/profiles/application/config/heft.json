@@ -1,0 +1,60 @@
+/**
+ * Defines configuration used by core Heft.
+ */
+{
+  // "$schema": "https://developer.microsoft.com/json-schemas/heft/heft.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/rushstack/main/apps/heft/src/schemas/heft.schema.json",
+
+  "phasesByName": {
+    "build": {
+      "cleanFiles": [
+        {
+          "includeGlobs": ["lib", "lib-esnext", "lib-bundle", "dist"]
+        }
+      ],
+      "tasksByName": {
+        "typescript": {
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-typescript-plugin"
+          }
+        },
+        "esbuild": {
+          "taskDependencies": ["typescript"],
+          "taskPlugin": {
+            "pluginPackage": "@kcws/heft-esbuild-plugin",
+            "options": {
+              "output": "lib-bundle",
+              "bundle": true,
+              "minify": true,
+              "sourcemap": true,
+              "platform": "node",
+              "target": "node18"
+            }
+          }
+        },
+        "eslint": {
+          "taskDependencies": ["typescript"],
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-lint-plugin"
+          }
+        },
+        "api-extractor": {
+          "taskDependencies": ["typescript"],
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-api-extractor-plugin"
+          }
+        }
+      }
+    },
+    "test": {
+      "phaseDependencies": ["build"],
+      "tasksByName": {
+        "jest": {
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-jest-plugin"
+          }
+        }
+      }
+    }
+  }
+}

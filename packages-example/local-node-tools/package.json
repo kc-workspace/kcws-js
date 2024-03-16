@@ -1,5 +1,5 @@
 {
-  "name": "@kcws-example/local-node-tools",
+  "name": "@kcexamples/local-node-tools",
   "version": "0.0.1",
   "description": "example node tools (for internal usage)",
   "main": "lib/index.js",
@@ -50,7 +50,7 @@
     "_phase:test": "heft run --only test"
   },
   "devDependencies": {
-    "@kcws/local-node-rig": "workspace:*",
+    "@kcinternal/node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.66.0"

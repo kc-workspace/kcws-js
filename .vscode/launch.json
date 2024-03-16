@@ -18,7 +18,7 @@
       "name": "Debug heft command",
       "program": "${workspaceFolder}/packages/heft-esbuild-plugin/node_modules/@rushstack/heft/lib/start.js",
       "skipFiles": ["<node_internals>/**"],
-      "args": ["test"],
+      "args": ["clean"],
       "cwd": "${workspaceFolder}/packages/heft-esbuild-plugin"
     }
   ]

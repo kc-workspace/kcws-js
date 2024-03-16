@@ -1,0 +1,56 @@
+{
+  "name": "@kcinternals/heft-web-rig",
+  "version": "0.1.0",
+  "description": "a rig package for web development (internal usage)",
+  "license": "AGPL-3.0-only",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-internal/heft-web-rig",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "packages-internal/heft-web-rig"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "heft",
+    "rig",
+    "rushjs"
+  ],
+  "files": [
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "profiles"
+  ],
+  "scripts": {
+    "_phase:build": ""
+  },
+  "dependencies": {
+    "@microsoft/api-extractor": "7.42.3",
+    "@rushstack/heft-api-extractor-plugin": "0.3.20",
+    "@rushstack/heft-jest-plugin": "0.11.21",
+    "@rushstack/heft-lint-plugin": "0.3.20",
+    "@rushstack/heft-sass-plugin": "0.13.23",
+    "@rushstack/heft-typescript-plugin": "0.3.20",
+    "@types/heft-jest": "1.0.6",
+    "eslint": "8.57.0",
+    "jest-environment-jsdom": "29.7.0",
+    "jest-html-reporters": "3.1.7",
+    "jest-junit": "16.0.0",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@rushstack/heft": "0.66.0"
+  },
+  "peerDependencies": {
+    "@rushstack/heft": ">=0.63.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

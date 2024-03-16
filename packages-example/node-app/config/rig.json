@@ -4,5 +4,5 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rig-package/rig.schema.json",
 
   "rigPackageName": "@kcws/node-rig",
-  "rigProfile": "app"
+  "rigProfile": "application"
 }

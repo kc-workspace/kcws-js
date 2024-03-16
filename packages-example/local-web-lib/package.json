@@ -1,5 +1,5 @@
 {
-  "name": "@kcws-example/local-web-lib",
+  "name": "@kcexamples/local-web-lib",
   "version": "0.0.1",
   "description": "example web libraries (for internal usage)",
   "main": "lib-commonjs/index.js",

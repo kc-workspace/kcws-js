@@ -1,9 +1,10 @@
 {
-  "name": "@kcws-example/node-app",
+  "name": "@kcexamples/node-app",
   "version": "0.0.1",
   "description": "example node application (for external usage)",
   "main": "lib/index.js",
   "module": "lib-esnext/index.js",
+  "browser": "lib-bundle/index.js",
   "types": "dist/index.d.ts",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-example/node-app",
@@ -52,7 +53,10 @@
     "@kcws/node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.66.0"
+    "@rushstack/heft": "0.66.0",
+    "@types/heft-jest": "1.0.6",
+    "@types/node": "18.19.3",
+    "typescript": "5.0.4"
   },
   "engines": {
     "node": ">=12"

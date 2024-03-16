@@ -1,0 +1,6 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/heft-sass-plugin.schema.json",
+  "extends": "../../_base/config/sass.json",
+  "generatedTsFolder": "lib/types/",
+  "cssOutputFolders": ["lib"]
+}
