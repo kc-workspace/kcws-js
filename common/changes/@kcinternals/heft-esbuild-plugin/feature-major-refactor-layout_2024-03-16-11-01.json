@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcinternals/heft-esbuild-plugin",
+      "comment": "Move scope from @kcws to @kcinternals",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcinternals/heft-esbuild-plugin"
+}

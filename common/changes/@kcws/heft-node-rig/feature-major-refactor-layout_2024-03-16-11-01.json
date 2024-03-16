@@ -1,0 +1,15 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/heft-node-rig",
+      "comment": "Seperate external riggable profile to this package",
+      "type": "minor"
+    },
+    {
+      "packageName": "@kcws/heft-node-rig",
+      "comment": "Change package from @kcws/node-rig",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/heft-node-rig"
+}

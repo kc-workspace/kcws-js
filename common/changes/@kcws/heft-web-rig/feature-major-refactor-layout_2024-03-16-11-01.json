@@ -1,0 +1,15 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/heft-web-rig",
+      "comment": "Seperate external riggable profile to this package",
+      "type": "minor"
+    },
+    {
+      "packageName": "@kcws/heft-web-rig",
+      "comment": "Change package from @kcws/web-rig",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/heft-web-rig"
+}

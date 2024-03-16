@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/rspack-config",
+      "comment": "Refactor project and riggable profile",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/rspack-config"
+}

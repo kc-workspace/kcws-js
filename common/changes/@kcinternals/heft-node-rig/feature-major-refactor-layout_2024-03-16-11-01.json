@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcinternals/heft-node-rig",
+      "comment": "Move internal riggable profiles to this package",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcinternals/heft-node-rig"
+}
