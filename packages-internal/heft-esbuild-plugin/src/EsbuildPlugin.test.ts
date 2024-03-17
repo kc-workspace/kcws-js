@@ -81,6 +81,7 @@ const buildDefaultOptions = (option?: BuildOptions): BuildOptions => {
   return Object.assign(defaults, option);
 };
 
+/* jscpd:ignore-start */
 describe("Esbuild heft-plugin", () => {
   it("should create with parameterless constructor", () => {
     const plugin = new EsbuildPlugin();
@@ -199,3 +200,4 @@ describe("Esbuild heft-plugin", () => {
     }).toThrow(UNSUPPORTED_WATCH_MODE);
   });
 });
+/* jscpd:ignore-end */
