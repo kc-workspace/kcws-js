@@ -36,7 +36,7 @@
     "@rushstack/heft-lint-plugin": "0.3.21",
     "@rushstack/heft-typescript-plugin": "0.3.21",
     "eslint": "8.57.0",
-    "typescript": "5.0.4"
+    "typescript": "5.3.3"
   },
   "devDependencies": {
     "@rushstack/heft": "0.66.1"

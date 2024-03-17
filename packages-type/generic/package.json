@@ -43,7 +43,7 @@
     "@kcinternals/heft-types-rig": "workspace:*",
     "@rushstack/heft": "0.66.1",
     "tsd": "0.30.7",
-    "typescript": "5.0.4"
+    "typescript": "5.3.3"
   },
   "peerDependencies": {
     "typescript": ">=2.0.0"
