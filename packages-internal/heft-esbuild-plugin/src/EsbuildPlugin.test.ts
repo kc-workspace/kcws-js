@@ -3,19 +3,34 @@ jest.mock("esbuild");
 import type {
   HeftConfiguration,
   IHeftParameters,
+  IHeftTaskFileOperations,
   IHeftTaskHooks,
   IHeftTaskRunHookOptions,
   IHeftTaskRunIncrementalHookOptions,
   IHeftTaskSession,
 } from "@rushstack/heft";
 
-import { AsyncParallelHook } from "tapable";
+import { AsyncParallelHook, AsyncSeriesWaterfallHook } from "tapable";
 import { build } from "esbuild";
 import { StringBufferTerminalProvider, Terminal } from "@rushstack/terminal";
 import { MockScopedLogger } from "@rushstack/heft/lib/pluginFramework/logging/MockScopedLogger";
 
 import EsbuildPlugin, { IEsbuildOption } from "./EsbuildPlugin";
 import { UNSUPPORTED_WATCH_MODE } from "./shared";
+
+const mockTaskHooks = (): IHeftTaskHooks => {
+  const run = new AsyncParallelHook<IHeftTaskRunHookOptions>();
+  const runIncremental =
+    new AsyncParallelHook<IHeftTaskRunIncrementalHookOptions>();
+  const registerFileOperations =
+    new AsyncSeriesWaterfallHook<IHeftTaskFileOperations>(["register"]);
+
+  return {
+    run,
+    runIncremental,
+    registerFileOperations,
+  };
+};
 
 const mockTaskSession = (
   parameters?: Partial<IHeftParameters>
@@ -32,11 +47,7 @@ const mockTaskSession = (
   return {
     logger,
     parameters: _parameters,
-    hooks: {
-      run: new AsyncParallelHook<IHeftTaskRunHookOptions>(),
-      runIncremental:
-        new AsyncParallelHook<IHeftTaskRunIncrementalHookOptions>(),
-    } as IHeftTaskHooks,
+    hooks: mockTaskHooks(),
     parsedCommandLine: undefined!,
     requestAccessToPluginByName: undefined!,
     taskName: "esbuild",
