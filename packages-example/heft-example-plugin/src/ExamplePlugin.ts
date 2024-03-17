@@ -17,7 +17,7 @@ export interface IExampleOption {
 }
 
 class ExamplePlugin implements IHeftTaskPlugin<IExampleOption> {
-  public static DEFAULT_MESSAGE: string = `Using example to do nothing`;
+  public static readonly DEFAULT_MESSAGE: string = `Using example to do nothing`;
   private _accessor: undefined;
 
   public get accessor(): undefined {
