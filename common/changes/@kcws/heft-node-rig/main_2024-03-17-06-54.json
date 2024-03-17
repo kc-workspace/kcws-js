@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/heft-node-rig",
+      "comment": "Fix tsconfig always return compile error",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/heft-node-rig"
+}
