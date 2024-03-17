@@ -10,9 +10,7 @@
   // Modify the output formatting or show additional
   // information. Specify one or more comma-delimited
   // choices: group, ownerChanged, repo.
-  "format": [
-    "group"
-  ],
+  "format": ["group"],
   // Because Rush using pnpm by default
   "packageManager": "pnpm",
   // FIXME: filter cause local `rush upgrade` to be failed with error:
@@ -20,9 +18,7 @@
   // Cannot specify a filter using both --filter and args.
   // Did you forget to quote an argument?
   // ```
-  "filter": [
-    "*"
-  ],
+  "filter": ["*"],
   "reject": [
     // This should be pin to oldest version we supported
     "@types/node",
@@ -44,6 +40,11 @@
 
     // This depends on @commitlint/cz-commitlint
     // https://github.com/conventional-changelog/commitlint/blob/master/@commitlint/cz-commitlint/package.json
-    "inquirer"
+    "inquirer",
+
+    // This depends on @rushstack/heft
+    // https://github.com/microsoft/rushstack/blob/main/apps/heft/package.json
+    "@types/tapable",
+    "tapable"
   ]
 }
