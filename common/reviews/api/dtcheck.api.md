@@ -4,6 +4,8 @@
 
 ```ts
 
+/// <reference types="generic" />
+
 // @public
 export type DataType<T extends string> = "undefined" | "null" | "string" | "number" | "bigint" | "boolean" | "function" | "object" | "array" | "symbol" | T;
 
