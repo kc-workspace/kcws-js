@@ -17,3 +17,6 @@ dtyped
 tsdoc
 esmodule
 estree
+sonar
+sonarqube
+sonarcloud
