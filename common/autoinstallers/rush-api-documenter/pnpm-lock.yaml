@@ -6,25 +6,25 @@ settings:
 
 dependencies:
   '@microsoft/api-documenter':
-    specifier: 7.23.37
-    version: 7.23.37
+    specifier: 7.24.0
+    version: 7.24.0
   typedoc:
-    specifier: 0.25.11
-    version: 0.25.11(typescript@5.3.3)
+    specifier: 0.25.12
+    version: 0.25.12(typescript@5.4.2)
   typedoc-plugin-extras:
     specifier: 3.0.0
-    version: 3.0.0(typedoc@0.25.11)
+    version: 3.0.0(typedoc@0.25.12)
   typedoc-plugin-missing-exports:
     specifier: 2.2.0
-    version: 2.2.0(typedoc@0.25.11)
+    version: 2.2.0(typedoc@0.25.12)
   typedoc-theme-hierarchy:
     specifier: 4.1.2
-    version: 4.1.2(typedoc@0.25.11)
+    version: 4.1.2(typedoc@0.25.12)
 
 packages:
 
-  /@microsoft/api-documenter@7.23.37:
-    resolution: {integrity: sha512-8StaLn4tLGllcgXCNGnqQRLFcWT9JILv5dHm2rYDdMWDQulInNKJnc2P9rpcI5mrO+cKcIRl75kdq4QrI9zunw==}
+  /@microsoft/api-documenter@7.24.0:
+    resolution: {integrity: sha512-t+4PhJWXW/SM5OPl20ANt8BKbQ1QMYHd9gsJp/FshvhyyNU1iYlMW3gKufE7z1y/Rwm7sWngp5M7VYZ1CborQw==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.28.13
@@ -185,8 +185,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /hasown@2.0.1:
-    resolution: {integrity: sha512-1/th4MHjnwncwXsIW6QMzlvYL9kG5e/CpVvLRZe4XPa8TOUNbCELqmvhDmnkNsAjwaG4+I8gJJL0JBvTTLO9qA==}
+  /hasown@2.0.2:
+    resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
     dependencies:
       function-bind: 1.1.2
@@ -200,7 +200,7 @@ packages:
   /is-core-module@2.13.1:
     resolution: {integrity: sha512-hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==}
     dependencies:
-      hasown: 2.0.1
+      hasown: 2.0.2
     dev: false
 
   /jju@1.4.0:
@@ -332,47 +332,47 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /typedoc-plugin-extras@3.0.0(typedoc@0.25.11):
+  /typedoc-plugin-extras@3.0.0(typedoc@0.25.12):
     resolution: {integrity: sha512-eiAe3qtm2WbV5owdncpt0zHZPqsNZH2mzNGILPd4zqrvEZie3Et9es4cpGZ+8lHO/SI0pVKwsAj7IuMxPNOdYg==}
     peerDependencies:
       typedoc: 0.25.x
     dependencies:
-      typedoc: 0.25.11(typescript@5.3.3)
+      typedoc: 0.25.12(typescript@5.4.2)
     dev: false
 
-  /typedoc-plugin-missing-exports@2.2.0(typedoc@0.25.11):
+  /typedoc-plugin-missing-exports@2.2.0(typedoc@0.25.12):
     resolution: {integrity: sha512-2+XR1IcyQ5UwXZVJe9NE6HrLmNufT9i5OwoIuuj79VxuA3eYq+Y6itS9rnNV1D7UeQnUSH8kISYD73gHE5zw+w==}
     peerDependencies:
       typedoc: 0.24.x || 0.25.x
     dependencies:
-      typedoc: 0.25.11(typescript@5.3.3)
+      typedoc: 0.25.12(typescript@5.4.2)
     dev: false
 
-  /typedoc-theme-hierarchy@4.1.2(typedoc@0.25.11):
+  /typedoc-theme-hierarchy@4.1.2(typedoc@0.25.12):
     resolution: {integrity: sha512-X3H+zaDkg7wLNoaPJoqXs3rnMfZ9BZjmlXRwplWDciaPfn2hojHxJJ+yVKdqqmojgiHJgg7MYWGDVpOfNlOJ5A==}
     peerDependencies:
       typedoc: ^0.24.0 || ^0.25.0
     dependencies:
       fs-extra: 11.1.1
-      typedoc: 0.25.11(typescript@5.3.3)
+      typedoc: 0.25.12(typescript@5.4.2)
     dev: false
 
-  /typedoc@0.25.11(typescript@5.3.3):
-    resolution: {integrity: sha512-5MbI1W/FOG6oXsd8bdssQidSTeKh8Kt3xA5uKVzI+K99uzP8EGN45uPnPvQesyaWdD+89s4wCQdtWEd8QUbiRg==}
+  /typedoc@0.25.12(typescript@5.4.2):
+    resolution: {integrity: sha512-F+qhkK2VoTweDXd1c42GS/By2DvI2uDF4/EpG424dTexSHdtCH52C6IcAvMA6jR3DzAWZjHpUOW+E02kyPNUNw==}
     engines: {node: '>= 16'}
     hasBin: true
     peerDependencies:
-      typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x
+      typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x
     dependencies:
       lunr: 2.3.9
       marked: 4.3.0
       minimatch: 9.0.3
       shiki: 0.14.7
-      typescript: 5.3.3
+      typescript: 5.4.2
     dev: false
 
-  /typescript@5.3.3:
-    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+  /typescript@5.4.2:
+    resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: false

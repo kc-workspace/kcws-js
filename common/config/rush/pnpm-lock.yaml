@@ -56,8 +56,8 @@ importers:
         specifier: 6.1.1
         version: 6.1.1(eslint@8.57.0)
       eslint-plugin-react:
-        specifier: 7.34.0
-        version: 7.34.0(eslint@8.57.0)
+        specifier: 7.34.1
+        version: 7.34.1(eslint@8.57.0)
       eslint-plugin-tsdoc:
         specifier: 0.2.17
         version: 0.2.17
@@ -69,8 +69,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-internal/heft-node-rig
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       '@types/eslint':
         specifier: 8.56.5
         version: 8.56.5
@@ -88,8 +88,8 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       '@types/micromatch':
         specifier: 4.0.6
         version: 4.0.6
@@ -106,8 +106,8 @@ importers:
         specifier: workspace:*
         version: link:../lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       prettier:
         specifier: 3.2.5
         version: 3.2.5
@@ -116,7 +116,7 @@ importers:
     dependencies:
       '@rspack/cli':
         specifier: ^0.5.0
-        version: 0.5.7(@rspack/core@0.5.6)(webpack@5.90.3)
+        version: 0.5.7(@rspack/core@0.5.7)(webpack@5.90.3)
     devDependencies:
       '@kcinternals/heft-node-rig':
         specifier: workspace:*
@@ -128,11 +128,11 @@ importers:
         specifier: workspace:*
         version: link:../lintstaged-config
       '@rspack/core':
-        specifier: 0.5.6
-        version: 0.5.6
+        specifier: 0.5.7
+        version: 0.5.7
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages-example/heft-example-plugin:
     devDependencies:
@@ -146,17 +146,17 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       '@rushstack/terminal':
         specifier: 0.10.0
         version: 0.10.0(@types/node@18.19.3)
       '@types/tapable':
-        specifier: 1.0.6
-        version: 1.0.6
+        specifier: 2.2.7
+        version: 2.2.7
       tapable:
-        specifier: 1.1.3
-        version: 1.1.3
+        specifier: 2.2.1
+        version: 2.2.1
 
   ../../packages-example/local-node-lib:
     devDependencies:
@@ -170,8 +170,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages-example/local-web-lib:
     devDependencies:
@@ -185,8 +185,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages-example/node-app:
     devDependencies:
@@ -200,8 +200,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       '@types/heft-jest':
         specifier: 1.0.6
         version: 1.0.6
@@ -224,8 +224,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       '@types/heft-jest':
         specifier: 1.0.6
         version: 1.0.6
@@ -248,8 +248,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       '@types/heft-jest':
         specifier: 1.0.6
         version: 1.0.6
@@ -272,8 +272,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       '@types/heft-jest':
         specifier: 1.0.6
         version: 1.0.6
@@ -287,8 +287,8 @@ importers:
   ../../packages-internal/heft-esbuild-plugin:
     dependencies:
       esbuild:
-        specifier: 0.20.1
-        version: 0.20.1
+        specifier: 0.20.2
+        version: 0.20.2
     devDependencies:
       '@kcinternals/heft-node-rig':
         specifier: workspace:*
@@ -300,17 +300,17 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       '@rushstack/terminal':
         specifier: 0.10.0
         version: 0.10.0(@types/node@18.19.3)
       '@types/tapable':
-        specifier: 1.0.6
-        version: 1.0.6
+        specifier: 2.2.7
+        version: 2.2.7
       tapable:
-        specifier: 1.1.3
-        version: 1.1.3
+        specifier: 2.2.1
+        version: 2.2.1
 
   ../../packages-internal/heft-node-rig:
     dependencies:
@@ -318,17 +318,17 @@ importers:
         specifier: 7.42.3
         version: 7.42.3(@types/node@18.19.3)
       '@rushstack/heft-api-extractor-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@rushstack/heft-jest-plugin':
-        specifier: 0.11.21
-        version: 0.11.21(@rushstack/heft@0.66.0)(@types/node@18.19.3)(jest-environment-node@29.7.0)
+        specifier: 0.11.22
+        version: 0.11.22(@rushstack/heft@0.66.1)(@types/node@18.19.3)(jest-environment-node@29.7.0)
       '@rushstack/heft-lint-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@rushstack/heft-typescript-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@types/heft-jest':
         specifier: 1.0.6
         version: 1.0.6
@@ -352,8 +352,8 @@ importers:
         version: 5.0.4
     devDependencies:
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages-internal/heft-types-rig:
     dependencies:
@@ -361,14 +361,14 @@ importers:
         specifier: 7.42.3
         version: 7.42.3(@types/node@18.19.3)
       '@rushstack/heft-api-extractor-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@rushstack/heft-lint-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@rushstack/heft-typescript-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -377,8 +377,8 @@ importers:
         version: 5.0.4
     devDependencies:
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages-internal/heft-web-rig:
     dependencies:
@@ -386,20 +386,20 @@ importers:
         specifier: 7.42.3
         version: 7.42.3(@types/node@18.19.3)
       '@rushstack/heft-api-extractor-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@rushstack/heft-jest-plugin':
-        specifier: 0.11.21
-        version: 0.11.21(@rushstack/heft@0.66.0)(jest-environment-jsdom@29.7.0)
+        specifier: 0.11.22
+        version: 0.11.22(@rushstack/heft@0.66.1)(jest-environment-jsdom@29.7.0)
       '@rushstack/heft-lint-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@rushstack/heft-sass-plugin':
-        specifier: 0.13.23
-        version: 0.13.23(@rushstack/heft@0.66.0)
+        specifier: 0.13.24
+        version: 0.13.24(@rushstack/heft@0.66.1)
       '@rushstack/heft-typescript-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@types/heft-jest':
         specifier: 1.0.6
         version: 1.0.6
@@ -420,8 +420,8 @@ importers:
         version: 5.0.4
     devDependencies:
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages-tool/heft-node-rig:
     dependencies:
@@ -432,17 +432,17 @@ importers:
         specifier: 7.42.3
         version: 7.42.3(@types/node@18.19.3)
       '@rushstack/heft-api-extractor-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@rushstack/heft-jest-plugin':
-        specifier: 0.11.21
-        version: 0.11.21(@rushstack/heft@0.66.0)(@types/node@18.19.3)(jest-environment-node@29.7.0)
+        specifier: 0.11.22
+        version: 0.11.22(@rushstack/heft@0.66.1)(@types/node@18.19.3)(jest-environment-node@29.7.0)
       '@rushstack/heft-lint-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@rushstack/heft-typescript-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@types/heft-jest':
         specifier: 1.0.6
         version: 1.0.6
@@ -466,8 +466,8 @@ importers:
         version: 5.0.4
     devDependencies:
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages-tool/heft-web-rig:
     dependencies:
@@ -478,20 +478,20 @@ importers:
         specifier: 7.42.3
         version: 7.42.3(@types/node@18.19.3)
       '@rushstack/heft-api-extractor-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@rushstack/heft-jest-plugin':
-        specifier: 0.11.21
-        version: 0.11.21(@rushstack/heft@0.66.0)(jest-environment-jsdom@29.7.0)
+        specifier: 0.11.22
+        version: 0.11.22(@rushstack/heft@0.66.1)(jest-environment-jsdom@29.7.0)
       '@rushstack/heft-lint-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@rushstack/heft-sass-plugin':
-        specifier: 0.13.23
-        version: 0.13.23(@rushstack/heft@0.66.0)
+        specifier: 0.13.24
+        version: 0.13.24(@rushstack/heft@0.66.1)
       '@rushstack/heft-typescript-plugin':
-        specifier: 0.3.20
-        version: 0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3)
+        specifier: 0.3.21
+        version: 0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3)
       '@types/heft-jest':
         specifier: 1.0.6
         version: 1.0.6
@@ -512,8 +512,8 @@ importers:
         version: 5.0.4
     devDependencies:
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages-type/generic:
     devDependencies:
@@ -527,8 +527,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       tsd:
         specifier: 0.30.7
         version: 0.30.7
@@ -548,8 +548,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       tsd:
         specifier: 0.30.7
         version: 0.30.7
@@ -569,8 +569,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages/dtcheck:
     devDependencies:
@@ -587,8 +587,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages/equals:
     dependencies:
@@ -606,8 +606,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages/error:
     devDependencies:
@@ -621,8 +621,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages/mixin:
     devDependencies:
@@ -636,8 +636,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages/random:
     devDependencies:
@@ -654,8 +654,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
 
   ../../packages/reset.css:
     devDependencies:
@@ -666,8 +666,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
-        specifier: 0.66.0
-        version: 0.66.0(@types/node@18.19.3)
+        specifier: 0.66.1
+        version: 0.66.1(@types/node@18.19.3)
       stylelint:
         specifier: 16.2.1
         version: 16.2.1
@@ -1014,8 +1014,8 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: false
 
-  /@bufbuild/protobuf@1.7.2:
-    resolution: {integrity: sha512-i5GE2Dk5ekdlK1TR7SugY4LWRrKSfb5T1Qn4unpIMbfxoeGKERKQ59HG3iYewacGD10SR7UzevfPnh6my4tNmQ==}
+  /@bufbuild/protobuf@1.8.0:
+    resolution: {integrity: sha512-qR9FwI8QKIveDnUYutvfzbC21UZJJryYrLuZGjeZ/VGz+vXelUkK+xgkOHsvPEdYEdxtgUUq4313N8QtOehJ1Q==}
     dev: false
 
   /@csstools/css-parser-algorithms@2.6.1(@csstools/css-tokenizer@2.2.4):
@@ -1043,13 +1043,13 @@ packages:
       '@csstools/css-tokenizer': 2.2.4
     dev: true
 
-  /@csstools/selector-specificity@3.0.2(postcss-selector-parser@6.0.15):
+  /@csstools/selector-specificity@3.0.2(postcss-selector-parser@6.0.16):
     resolution: {integrity: sha512-RpHaZ1h9LE7aALeQXmXrJkRG84ZxIsctEN2biEUmFyKpzFM3zZ35eUMcIzZFsw/2olQE6v69+esEqU2f1MKycg==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss-selector-parser: ^6.0.13
     dependencies:
-      postcss-selector-parser: 6.0.15
+      postcss-selector-parser: 6.0.16
     dev: true
 
   /@definitelytyped/eslint-plugin@0.1.11(@typescript-eslint/eslint-plugin@6.21.0)(@typescript-eslint/parser@6.21.0)(eslint-plugin-jsdoc@44.2.7)(eslint@8.57.0)(typescript@5.0.4):
@@ -1102,8 +1102,8 @@ packages:
       jsdoc-type-pratt-parser: 4.0.0
     dev: false
 
-  /@esbuild/aix-ppc64@0.20.1:
-    resolution: {integrity: sha512-m55cpeupQ2DbuRGQMMZDzbv9J9PgVelPjlcmM5kxHnrBdBx6REaEd7LamYV7Dm8N7rCyR/XwU6rVP8ploKtIkA==}
+  /@esbuild/aix-ppc64@0.20.2:
+    resolution: {integrity: sha512-D+EBOJHXdNZcLJRBkhENNG8Wji2kgc9AZ9KiPr1JuZjsNtyHzrsfLRrY0tk2H2aoFu6RANO1y1iPPUCDYWkb5g==}
     engines: {node: '>=12'}
     cpu: [ppc64]
     os: [aix]
@@ -1111,8 +1111,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/android-arm64@0.20.1:
-    resolution: {integrity: sha512-hCnXNF0HM6AjowP+Zou0ZJMWWa1VkD77BXe959zERgGJBBxB+sV+J9f/rcjeg2c5bsukD/n17RKWXGFCO5dD5A==}
+  /@esbuild/android-arm64@0.20.2:
+    resolution: {integrity: sha512-mRzjLacRtl/tWU0SvD8lUEwb61yP9cqQo6noDZP/O8VkwafSYwZ4yWy24kan8jE/IMERpYncRt2dw438LP3Xmg==}
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [android]
@@ -1120,8 +1120,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/android-arm@0.20.1:
-    resolution: {integrity: sha512-4j0+G27/2ZXGWR5okcJi7pQYhmkVgb4D7UKwxcqrjhvp5TKWx3cUjgB1CGj1mfdmJBQ9VnUGgUhign+FPF2Zgw==}
+  /@esbuild/android-arm@0.20.2:
+    resolution: {integrity: sha512-t98Ra6pw2VaDhqNWO2Oph2LXbz/EJcnLmKLGBJwEwXX/JAN83Fym1rU8l0JUWK6HkIbWONCSSatf4sf2NBRx/w==}
     engines: {node: '>=12'}
     cpu: [arm]
     os: [android]
@@ -1129,8 +1129,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/android-x64@0.20.1:
-    resolution: {integrity: sha512-MSfZMBoAsnhpS+2yMFYIQUPs8Z19ajwfuaSZx+tSl09xrHZCjbeXXMsUF/0oq7ojxYEpsSo4c0SfjxOYXRbpaA==}
+  /@esbuild/android-x64@0.20.2:
+    resolution: {integrity: sha512-btzExgV+/lMGDDa194CcUQm53ncxzeBrWJcncOBxuC6ndBkKxnHdFJn86mCIgTELsooUmwUm9FkhSp5HYu00Rg==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [android]
@@ -1138,8 +1138,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/darwin-arm64@0.20.1:
-    resolution: {integrity: sha512-Ylk6rzgMD8klUklGPzS414UQLa5NPXZD5tf8JmQU8GQrj6BrFA/Ic9tb2zRe1kOZyCbGl+e8VMbDRazCEBqPvA==}
+  /@esbuild/darwin-arm64@0.20.2:
+    resolution: {integrity: sha512-4J6IRT+10J3aJH3l1yzEg9y3wkTDgDk7TSDFX+wKFiWjqWp/iCfLIYzGyasx9l0SAFPT1HwSCR+0w/h1ES/MjA==}
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [darwin]
@@ -1147,8 +1147,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/darwin-x64@0.20.1:
-    resolution: {integrity: sha512-pFIfj7U2w5sMp52wTY1XVOdoxw+GDwy9FsK3OFz4BpMAjvZVs0dT1VXs8aQm22nhwoIWUmIRaE+4xow8xfIDZA==}
+  /@esbuild/darwin-x64@0.20.2:
+    resolution: {integrity: sha512-tBcXp9KNphnNH0dfhv8KYkZhjc+H3XBkF5DKtswJblV7KlT9EI2+jeA8DgBjp908WEuYll6pF+UStUCfEpdysA==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [darwin]
@@ -1156,8 +1156,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/freebsd-arm64@0.20.1:
-    resolution: {integrity: sha512-UyW1WZvHDuM4xDz0jWun4qtQFauNdXjXOtIy7SYdf7pbxSWWVlqhnR/T2TpX6LX5NI62spt0a3ldIIEkPM6RHw==}
+  /@esbuild/freebsd-arm64@0.20.2:
+    resolution: {integrity: sha512-d3qI41G4SuLiCGCFGUrKsSeTXyWG6yem1KcGZVS+3FYlYhtNoNgYrWcvkOoaqMhwXSMrZRl69ArHsGJ9mYdbbw==}
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [freebsd]
@@ -1165,8 +1165,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/freebsd-x64@0.20.1:
-    resolution: {integrity: sha512-itPwCw5C+Jh/c624vcDd9kRCCZVpzpQn8dtwoYIt2TJF3S9xJLiRohnnNrKwREvcZYx0n8sCSbvGH349XkcQeg==}
+  /@esbuild/freebsd-x64@0.20.2:
+    resolution: {integrity: sha512-d+DipyvHRuqEeM5zDivKV1KuXn9WeRX6vqSqIDgwIfPQtwMP4jaDsQsDncjTDDsExT4lR/91OLjRo8bmC1e+Cw==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [freebsd]
@@ -1174,8 +1174,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/linux-arm64@0.20.1:
-    resolution: {integrity: sha512-cX8WdlF6Cnvw/DO9/X7XLH2J6CkBnz7Twjpk56cshk9sjYVcuh4sXQBy5bmTwzBjNVZze2yaV1vtcJS04LbN8w==}
+  /@esbuild/linux-arm64@0.20.2:
+    resolution: {integrity: sha512-9pb6rBjGvTFNira2FLIWqDk/uaf42sSyLE8j1rnUpuzsODBq7FvpwHYZxQ/It/8b+QOS1RYfqgGFNLRI+qlq2A==}
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [linux]
@@ -1183,8 +1183,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/linux-arm@0.20.1:
-    resolution: {integrity: sha512-LojC28v3+IhIbfQ+Vu4Ut5n3wKcgTu6POKIHN9Wpt0HnfgUGlBuyDDQR4jWZUZFyYLiz4RBBBmfU6sNfn6RhLw==}
+  /@esbuild/linux-arm@0.20.2:
+    resolution: {integrity: sha512-VhLPeR8HTMPccbuWWcEUD1Az68TqaTYyj6nfE4QByZIQEQVWBB8vup8PpR7y1QHL3CpcF6xd5WVBU/+SBEvGTg==}
     engines: {node: '>=12'}
     cpu: [arm]
     os: [linux]
@@ -1192,8 +1192,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/linux-ia32@0.20.1:
-    resolution: {integrity: sha512-4H/sQCy1mnnGkUt/xszaLlYJVTz3W9ep52xEefGtd6yXDQbz/5fZE5dFLUgsPdbUOQANcVUa5iO6g3nyy5BJiw==}
+  /@esbuild/linux-ia32@0.20.2:
+    resolution: {integrity: sha512-o10utieEkNPFDZFQm9CoP7Tvb33UutoJqg3qKf1PWVeeJhJw0Q347PxMvBgVVFgouYLGIhFYG0UGdBumROyiig==}
     engines: {node: '>=12'}
     cpu: [ia32]
     os: [linux]
@@ -1201,8 +1201,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/linux-loong64@0.20.1:
-    resolution: {integrity: sha512-c0jgtB+sRHCciVXlyjDcWb2FUuzlGVRwGXgI+3WqKOIuoo8AmZAddzeOHeYLtD+dmtHw3B4Xo9wAUdjlfW5yYA==}
+  /@esbuild/linux-loong64@0.20.2:
+    resolution: {integrity: sha512-PR7sp6R/UC4CFVomVINKJ80pMFlfDfMQMYynX7t1tNTeivQ6XdX5r2XovMmha/VjR1YN/HgHWsVcTRIMkymrgQ==}
     engines: {node: '>=12'}
     cpu: [loong64]
     os: [linux]
@@ -1210,8 +1210,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/linux-mips64el@0.20.1:
-    resolution: {integrity: sha512-TgFyCfIxSujyuqdZKDZ3yTwWiGv+KnlOeXXitCQ+trDODJ+ZtGOzLkSWngynP0HZnTsDyBbPy7GWVXWaEl6lhA==}
+  /@esbuild/linux-mips64el@0.20.2:
+    resolution: {integrity: sha512-4BlTqeutE/KnOiTG5Y6Sb/Hw6hsBOZapOVF6njAESHInhlQAghVVZL1ZpIctBOoTFbQyGW+LsVYZ8lSSB3wkjA==}
     engines: {node: '>=12'}
     cpu: [mips64el]
     os: [linux]
@@ -1219,8 +1219,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/linux-ppc64@0.20.1:
-    resolution: {integrity: sha512-b+yuD1IUeL+Y93PmFZDZFIElwbmFfIKLKlYI8M6tRyzE6u7oEP7onGk0vZRh8wfVGC2dZoy0EqX1V8qok4qHaw==}
+  /@esbuild/linux-ppc64@0.20.2:
+    resolution: {integrity: sha512-rD3KsaDprDcfajSKdn25ooz5J5/fWBylaaXkuotBDGnMnDP1Uv5DLAN/45qfnf3JDYyJv/ytGHQaziHUdyzaAg==}
     engines: {node: '>=12'}
     cpu: [ppc64]
     os: [linux]
@@ -1228,8 +1228,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/linux-riscv64@0.20.1:
-    resolution: {integrity: sha512-wpDlpE0oRKZwX+GfomcALcouqjjV8MIX8DyTrxfyCfXxoKQSDm45CZr9fanJ4F6ckD4yDEPT98SrjvLwIqUCgg==}
+  /@esbuild/linux-riscv64@0.20.2:
+    resolution: {integrity: sha512-snwmBKacKmwTMmhLlz/3aH1Q9T8v45bKYGE3j26TsaOVtjIag4wLfWSiZykXzXuE1kbCE+zJRmwp+ZbIHinnVg==}
     engines: {node: '>=12'}
     cpu: [riscv64]
     os: [linux]
@@ -1237,8 +1237,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/linux-s390x@0.20.1:
-    resolution: {integrity: sha512-5BepC2Au80EohQ2dBpyTquqGCES7++p7G+7lXe1bAIvMdXm4YYcEfZtQrP4gaoZ96Wv1Ute61CEHFU7h4FMueQ==}
+  /@esbuild/linux-s390x@0.20.2:
+    resolution: {integrity: sha512-wcWISOobRWNm3cezm5HOZcYz1sKoHLd8VL1dl309DiixxVFoFe/o8HnwuIwn6sXre88Nwj+VwZUvJf4AFxkyrQ==}
     engines: {node: '>=12'}
     cpu: [s390x]
     os: [linux]
@@ -1246,8 +1246,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/linux-x64@0.20.1:
-    resolution: {integrity: sha512-5gRPk7pKuaIB+tmH+yKd2aQTRpqlf1E4f/mC+tawIm/CGJemZcHZpp2ic8oD83nKgUPMEd0fNanrnFljiruuyA==}
+  /@esbuild/linux-x64@0.20.2:
+    resolution: {integrity: sha512-1MdwI6OOTsfQfek8sLwgyjOXAu+wKhLEoaOLTjbijk6E2WONYpH9ZU2mNtR+lZ2B4uwr+usqGuVfFT9tMtGvGw==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [linux]
@@ -1255,8 +1255,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/netbsd-x64@0.20.1:
-    resolution: {integrity: sha512-4fL68JdrLV2nVW2AaWZBv3XEm3Ae3NZn/7qy2KGAt3dexAgSVT+Hc97JKSZnqezgMlv9x6KV0ZkZY7UO5cNLCg==}
+  /@esbuild/netbsd-x64@0.20.2:
+    resolution: {integrity: sha512-K8/DhBxcVQkzYc43yJXDSyjlFeHQJBiowJ0uVL6Tor3jGQfSGHNNJcWxNbOI8v5k82prYqzPuwkzHt3J1T1iZQ==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [netbsd]
@@ -1264,8 +1264,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/openbsd-x64@0.20.1:
-    resolution: {integrity: sha512-GhRuXlvRE+twf2ES+8REbeCb/zeikNqwD3+6S5y5/x+DYbAQUNl0HNBs4RQJqrechS4v4MruEr8ZtAin/hK5iw==}
+  /@esbuild/openbsd-x64@0.20.2:
+    resolution: {integrity: sha512-eMpKlV0SThJmmJgiVyN9jTPJ2VBPquf6Kt/nAoo6DgHAoN57K15ZghiHaMvqjCye/uU4X5u3YSMgVBI1h3vKrQ==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [openbsd]
@@ -1273,8 +1273,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/sunos-x64@0.20.1:
-    resolution: {integrity: sha512-ZnWEyCM0G1Ex6JtsygvC3KUUrlDXqOihw8RicRuQAzw+c4f1D66YlPNNV3rkjVW90zXVsHwZYWbJh3v+oQFM9Q==}
+  /@esbuild/sunos-x64@0.20.2:
+    resolution: {integrity: sha512-2UyFtRC6cXLyejf/YEld4Hajo7UHILetzE1vsRcGL3earZEW77JxrFjH4Ez2qaTiEfMgAXxfAZCm1fvM/G/o8w==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [sunos]
@@ -1282,8 +1282,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/win32-arm64@0.20.1:
-    resolution: {integrity: sha512-QZ6gXue0vVQY2Oon9WyLFCdSuYbXSoxaZrPuJ4c20j6ICedfsDilNPYfHLlMH7vGfU5DQR0czHLmJvH4Nzis/A==}
+  /@esbuild/win32-arm64@0.20.2:
+    resolution: {integrity: sha512-GRibxoawM9ZCnDxnP3usoUDO9vUkpAxIIZ6GQI+IlVmr5kP3zUq+l17xELTHMWTWzjxa2guPNyrpq1GWmPvcGQ==}
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [win32]
@@ -1291,8 +1291,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/win32-ia32@0.20.1:
-    resolution: {integrity: sha512-HzcJa1NcSWTAU0MJIxOho8JftNp9YALui3o+Ny7hCh0v5f90nprly1U3Sj1Ldj/CvKKdvvFsCRvDkpsEMp4DNw==}
+  /@esbuild/win32-ia32@0.20.2:
+    resolution: {integrity: sha512-HfLOfn9YWmkSKRQqovpnITazdtquEW8/SoHW7pWpuEeguaZI4QnCRW6b+oZTztdBnZOS2hqJ6im/D5cPzBTTlQ==}
     engines: {node: '>=12'}
     cpu: [ia32]
     os: [win32]
@@ -1300,8 +1300,8 @@ packages:
     dev: false
     optional: true
 
-  /@esbuild/win32-x64@0.20.1:
-    resolution: {integrity: sha512-0MBh53o6XtI6ctDnRMeQ+xoCN8kD2qI1rY1KgF/xdWQwoFeKou7puvDfV8/Wv4Ctx2rRpET/gGdz3YlNtNACSA==}
+  /@esbuild/win32-x64@0.20.2:
+    resolution: {integrity: sha512-N49X4lJX27+l9jbLKSqZ6bKNjzQvHaT8IIFUy+YIqmXQdjYCToGWwOItDrfby14c78aDd5NHQl29xingXfCdLQ==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
@@ -1406,7 +1406,7 @@ packages:
       '@jest/console': 29.7.0
       '@jest/reporters': 29.5.0
       '@jest/test-result': 29.7.0
-      '@jest/transform': 29.7.0
+      '@jest/transform': 29.5.0
       '@jest/types': 29.6.3
       '@types/node': 18.19.3
       ansi-escapes: 4.3.2
@@ -1419,11 +1419,11 @@ packages:
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
-      jest-resolve: 29.7.0
+      jest-resolve: 29.5.0
       jest-resolve-dependencies: 29.7.0
       jest-runner: 29.7.0
       jest-runtime: 29.7.0
-      jest-snapshot: 29.7.0
+      jest-snapshot: 29.5.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
       jest-watcher: 29.7.0
@@ -1499,7 +1499,7 @@ packages:
       '@bcoe/v8-coverage': 0.2.3
       '@jest/console': 29.7.0
       '@jest/test-result': 29.7.0
-      '@jest/transform': 29.7.0
+      '@jest/transform': 29.5.0
       '@jest/types': 29.6.3
       '@jridgewell/trace-mapping': 0.3.25
       '@types/node': 18.19.3
@@ -1761,91 +1761,91 @@ packages:
       npmlog: 4.1.2
     dev: false
 
-  /@rspack/binding-darwin-arm64@0.5.6:
-    resolution: {integrity: sha512-Aafs4gjzFeJW3DeTHVjom7NpSGeLNOoCtipJlCYCPp2C0J2Bz/uVxQC7xG+CPwL/RDIQOAZTa0jcLiWytBRwzA==}
+  /@rspack/binding-darwin-arm64@0.5.7:
+    resolution: {integrity: sha512-zYTMILRyrON25MW7ifEhkZ6jL33mz8bAHTOhgR8yMpYVJjrKu60+s1qPa+t+GkaH7nNnVmzkTVGECCvaA75hJQ==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     optional: true
 
-  /@rspack/binding-darwin-x64@0.5.6:
-    resolution: {integrity: sha512-W+WgYpdN5WboR2y36189MnJeuGJwCxAIgxYOM9LH4pXW8nhb+EANqUNPet5725AOeFX74tj1gl19lnbxOVSTcw==}
+  /@rspack/binding-darwin-x64@0.5.7:
+    resolution: {integrity: sha512-4THSPWVKPMSSD/y3/TWZ5xlSeh1B33I+YnBu/Y3lDFcFrFPtc3ojIDHw3is6l2wcACX6Rro4RgN6zcUij7eEmQ==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     optional: true
 
-  /@rspack/binding-linux-arm64-gnu@0.5.6:
-    resolution: {integrity: sha512-pAWIBeuO2OiIToNNi7oL7FDiBE4QxwLzeUpRAJnNwnARHuPSfMyJ6TXljJyTqUpkEi+NCRi4DBjUkQh7Sa1evw==}
+  /@rspack/binding-linux-arm64-gnu@0.5.7:
+    resolution: {integrity: sha512-JB9FAYWjYAeNCPFh0mQu3SZdFHiA+EY37z1AktLDl789SoEec2HPGkvvOs+OIET1pKWgjUGD4Z4Uq4P/r5JFNA==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@rspack/binding-linux-arm64-musl@0.5.6:
-    resolution: {integrity: sha512-fB0P2C2w9A+FV2u9X40ZXnnCMelypsFmZqllavXKAkK77eCXp0lKsNG1+h4uDoeFZSmoQPeNhgjVcdqQJsSWBA==}
+  /@rspack/binding-linux-arm64-musl@0.5.7:
+    resolution: {integrity: sha512-3fNhPvA9Kj/L7rwr2Pj1bvxWBLBgqfkqSvt91iUxPbxgfTiSBQh0Tfb9+hkHv2VCTyNQI/vytkOH+4i4DNXCBw==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@rspack/binding-linux-x64-gnu@0.5.6:
-    resolution: {integrity: sha512-HAV1ki2/IHQD5LrqVJ7Dh2QeSL3S9AZ1vvI0u8+wGMoF9vR6qyz+NFqUNlvZdsojVSs5bE0a7NOQ+0ao4l3sDg==}
+  /@rspack/binding-linux-x64-gnu@0.5.7:
+    resolution: {integrity: sha512-y/GnXt1hhbKSqzBSy+ALWwievlejQhIIF8FPXL1kKFh60zl7DE+iYHSJ128jIJiph9dQkBnHw0ABJ5D+vbSqdA==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@rspack/binding-linux-x64-musl@0.5.6:
-    resolution: {integrity: sha512-N/j4b+i+O/ZX8UlHt9OEcVcVZDXuBfm9Fj9xbPrJPPQM5xCSVH9vYEsCcsNZ9Rt05Q4IdZXlUgzju7kGND5sDg==}
+  /@rspack/binding-linux-x64-musl@0.5.7:
+    resolution: {integrity: sha512-US/FUv6cvbxbe4nymINwer/EQTvGEgCaAIrvKuAP0yAfK0eyqIHYZj/zCBM2qOS69Mpc2FWVMC/ftRyCvAz/xw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@rspack/binding-win32-arm64-msvc@0.5.6:
-    resolution: {integrity: sha512-lWs1FZ/ZVLPBDSuk5NjY7jCUfZ6vilJwDYefEueYzVo97jvJMxP3p095doaBWW6bb8qMfrtFh2o77ESHVwmgiw==}
+  /@rspack/binding-win32-arm64-msvc@0.5.7:
+    resolution: {integrity: sha512-g7NWXa5EGvh6j1VPXGOFaWuOVxdPYYLh3wpUl46Skrd6qFZKB2r+yNhuXo6lqezwYvbtHEDrmFOHF2S6epXO5g==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     optional: true
 
-  /@rspack/binding-win32-ia32-msvc@0.5.6:
-    resolution: {integrity: sha512-5zz2XkM0PI13D98ErtMCkheMTzLNnuKFIlCqKemDjYOK9msC3lGU6/1Wp7/1YV/ll+wezD/4Kjzn51rq3bqiig==}
+  /@rspack/binding-win32-ia32-msvc@0.5.7:
+    resolution: {integrity: sha512-5Udt4pYpPSd1wlbVKTdWzjha8oV+FQ/EXILHhoS9G7l9rbpqhMs6oIqAgEavQS3t6fKtQU837b+MSBNprudTtw==}
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
     optional: true
 
-  /@rspack/binding-win32-x64-msvc@0.5.6:
-    resolution: {integrity: sha512-CmRr2yfTZvs4koVbmElNcT31JS0tAx2nvd0nXE8RPs/CSnC9liXtDLctcF3dQekAXzQVM2NtGn9JfMJ9mXUppw==}
+  /@rspack/binding-win32-x64-msvc@0.5.7:
+    resolution: {integrity: sha512-tB/SB27BBDVV0+GpEUHkl2uanCP4Jk/hlnbvl5u6lSGcIxCFm+da4OsyiGDRE24bSEdMc91dmyWVlx5425je+A==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     optional: true
 
-  /@rspack/binding@0.5.6:
-    resolution: {integrity: sha512-FXqLqovSDxbibpQtOri5QVd9sEe6YtRH1rCUKJ4n5Wly7fCublUSKDtq6pmt9UP3cG2ZG0faHva7R1eb1b7XEg==}
+  /@rspack/binding@0.5.7:
+    resolution: {integrity: sha512-47MX6wNF1lP/LdShPVhbg689FX1W96Zji7QgbxhRhXmkpOKor7gdajhxqszFHxHYJtqNTLA9BSG38rpIGxJ+fw==}
     optionalDependencies:
-      '@rspack/binding-darwin-arm64': 0.5.6
-      '@rspack/binding-darwin-x64': 0.5.6
-      '@rspack/binding-linux-arm64-gnu': 0.5.6
-      '@rspack/binding-linux-arm64-musl': 0.5.6
-      '@rspack/binding-linux-x64-gnu': 0.5.6
-      '@rspack/binding-linux-x64-musl': 0.5.6
-      '@rspack/binding-win32-arm64-msvc': 0.5.6
-      '@rspack/binding-win32-ia32-msvc': 0.5.6
-      '@rspack/binding-win32-x64-msvc': 0.5.6
+      '@rspack/binding-darwin-arm64': 0.5.7
+      '@rspack/binding-darwin-x64': 0.5.7
+      '@rspack/binding-linux-arm64-gnu': 0.5.7
+      '@rspack/binding-linux-arm64-musl': 0.5.7
+      '@rspack/binding-linux-x64-gnu': 0.5.7
+      '@rspack/binding-linux-x64-musl': 0.5.7
+      '@rspack/binding-win32-arm64-msvc': 0.5.7
+      '@rspack/binding-win32-ia32-msvc': 0.5.7
+      '@rspack/binding-win32-x64-msvc': 0.5.7
 
-  /@rspack/cli@0.5.7(@rspack/core@0.5.6)(webpack@5.90.3):
+  /@rspack/cli@0.5.7(@rspack/core@0.5.7)(webpack@5.90.3):
     resolution: {integrity: sha512-pav4JOqesPqsxS7IsikVALib6QRlBjERDD6KpZMdQY+PzGQ8ahBFxpof08RAgjUYsVV44xCe29Pq/c3OZEgdsw==}
     hasBin: true
     peerDependencies:
       '@rspack/core': '>=0.4.0'
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
-      '@rspack/core': 0.5.6
-      '@rspack/dev-server': 0.5.7(@rspack/core@0.5.6)(webpack@5.90.3)
+      '@rspack/core': 0.5.7
+      '@rspack/dev-server': 0.5.7(@rspack/core@0.5.7)(webpack@5.90.3)
       colorette: 2.0.19
       exit-hook: 3.2.0
       interpret: 3.1.1
@@ -1863,8 +1863,8 @@ packages:
       - webpack-cli
     dev: false
 
-  /@rspack/core@0.5.6:
-    resolution: {integrity: sha512-VH5IyYSdTpNLeoxTc9Vm+fgqzUJMa19sGVjuas7eTNNNZTrevxV0k9e/QGMHzUV9QzlNvLHLOVY/U4LfcZerYA==}
+  /@rspack/core@0.5.7:
+    resolution: {integrity: sha512-gUF0PcanPrC2cVfFA4e+qmG66X7FkEKlRbnaUfB4LKw9JQuwiMOXCAtrBdveDjB89KE/3cw/nuYVQwd106uqWA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@swc/helpers': '>=0.5.1'
@@ -1873,7 +1873,7 @@ packages:
         optional: true
     dependencies:
       '@module-federation/runtime-tools': 0.0.8
-      '@rspack/binding': 0.5.6
+      '@rspack/binding': 0.5.7
       browserslist: 4.23.0
       enhanced-resolve: 5.12.0
       events: 3.3.0
@@ -1881,17 +1881,17 @@ packages:
       json-parse-even-better-errors: 3.0.1
       neo-async: 2.6.2
       tapable: 2.2.1
-      watchpack: 2.4.0
+      watchpack: 2.4.1
       webpack-sources: 3.2.3
       zod: 3.22.4
       zod-validation-error: 1.3.1(zod@3.22.4)
 
-  /@rspack/dev-server@0.5.7(@rspack/core@0.5.6)(webpack@5.90.3):
+  /@rspack/dev-server@0.5.7(@rspack/core@0.5.7)(webpack@5.90.3):
     resolution: {integrity: sha512-CqPZLRq7QCr6EQqYIBFeIeWemXh1TM2RPc3ZZ1Gap+6/KJuRTMIYv/Q3mSQqLET7dn+HQYSWPSoTciJmPu6zCw==}
     peerDependencies:
       '@rspack/core': '*'
     dependencies:
-      '@rspack/core': 0.5.6
+      '@rspack/core': 0.5.7
       chokidar: 3.5.3
       connect-history-api-fallback: 2.0.0
       express: 4.18.1
@@ -1940,12 +1940,12 @@ packages:
       - typescript
     dev: false
 
-  /@rushstack/heft-api-extractor-plugin@0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3):
-    resolution: {integrity: sha512-trIQbXhCggLE99zEnX+IfFfKHcVBFSYbxwYtOQF0F1ii/HgT0KArPwEC29CkhdrpYF6qTqt4stXAxmZFRUgpBg==}
+  /@rushstack/heft-api-extractor-plugin@0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3):
+    resolution: {integrity: sha512-bVjpE3TSyWYSMBoJiQEXcrOUh+VsaKOtdNX9N55ZtVZaaEZ6n3kZ2/Y4cyCRzjCZEK6qRHirQh3wtgvZgHkEPw==}
     peerDependencies:
-      '@rushstack/heft': 0.66.0
+      '@rushstack/heft': 0.66.1
     dependencies:
-      '@rushstack/heft': 0.66.0(@types/node@18.19.3)
+      '@rushstack/heft': 0.66.1(@types/node@18.19.3)
       '@rushstack/heft-config-file': 0.14.14(@types/node@18.19.3)
       '@rushstack/node-core-library': 4.0.2(@types/node@18.19.3)
       semver: 7.5.4
@@ -1964,10 +1964,10 @@ packages:
     transitivePeerDependencies:
       - '@types/node'
 
-  /@rushstack/heft-jest-plugin@0.11.21(@rushstack/heft@0.66.0)(@types/node@18.19.3)(jest-environment-node@29.7.0):
-    resolution: {integrity: sha512-9H0qWzdbrB0869JoF5IRVGRq4ovgImKAmHa9O6mkg3E7jg7NghsK9zRqwp5skj0Se/AokuV327BOmAqPXBeB+A==}
+  /@rushstack/heft-jest-plugin@0.11.22(@rushstack/heft@0.66.1)(@types/node@18.19.3)(jest-environment-node@29.7.0):
+    resolution: {integrity: sha512-llm5BJRKpNAef+vdNsmFKPVQ90Gw6hjqHiLhQ1h4zZoMmf+p0KEvEqs4ImD9rYdPFzPmWEwkvpuEvhHXROCDzg==}
     peerDependencies:
-      '@rushstack/heft': ^0.66.0
+      '@rushstack/heft': ^0.66.1
       jest-environment-jsdom: ^29.5.0
       jest-environment-node: ^29.5.0
     peerDependenciesMeta:
@@ -1979,7 +1979,7 @@ packages:
       '@jest/core': 29.5.0
       '@jest/reporters': 29.5.0
       '@jest/transform': 29.5.0
-      '@rushstack/heft': 0.66.0(@types/node@18.19.3)
+      '@rushstack/heft': 0.66.1(@types/node@18.19.3)
       '@rushstack/heft-config-file': 0.14.14(@types/node@18.19.3)
       '@rushstack/node-core-library': 4.0.2(@types/node@18.19.3)
       '@rushstack/terminal': 0.10.0(@types/node@18.19.3)
@@ -1996,10 +1996,10 @@ packages:
       - ts-node
     dev: false
 
-  /@rushstack/heft-jest-plugin@0.11.21(@rushstack/heft@0.66.0)(jest-environment-jsdom@29.7.0):
-    resolution: {integrity: sha512-9H0qWzdbrB0869JoF5IRVGRq4ovgImKAmHa9O6mkg3E7jg7NghsK9zRqwp5skj0Se/AokuV327BOmAqPXBeB+A==}
+  /@rushstack/heft-jest-plugin@0.11.22(@rushstack/heft@0.66.1)(jest-environment-jsdom@29.7.0):
+    resolution: {integrity: sha512-llm5BJRKpNAef+vdNsmFKPVQ90Gw6hjqHiLhQ1h4zZoMmf+p0KEvEqs4ImD9rYdPFzPmWEwkvpuEvhHXROCDzg==}
     peerDependencies:
-      '@rushstack/heft': ^0.66.0
+      '@rushstack/heft': ^0.66.1
       jest-environment-jsdom: ^29.5.0
       jest-environment-node: ^29.5.0
     peerDependenciesMeta:
@@ -2011,7 +2011,7 @@ packages:
       '@jest/core': 29.5.0
       '@jest/reporters': 29.5.0
       '@jest/transform': 29.5.0
-      '@rushstack/heft': 0.66.0(@types/node@18.19.3)
+      '@rushstack/heft': 0.66.1(@types/node@18.19.3)
       '@rushstack/heft-config-file': 0.14.14(@types/node@18.19.3)
       '@rushstack/node-core-library': 4.0.2(@types/node@18.19.3)
       '@rushstack/terminal': 0.10.0(@types/node@18.19.3)
@@ -2028,27 +2028,27 @@ packages:
       - ts-node
     dev: false
 
-  /@rushstack/heft-lint-plugin@0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3):
-    resolution: {integrity: sha512-cr2Ab40QvkyKUJMn4GpKq5adbxzh7FKXkJ+0ZSNFtXMDoAFTdy7FJkhHiw04y8WKipGLCw1LBkAIYe5GN8IpGA==}
+  /@rushstack/heft-lint-plugin@0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3):
+    resolution: {integrity: sha512-wOlK/20EjxVJkZsIrhv+MHXm3UACydmlSonXQIuEN5vTgLFM2AHDxJLaaYiSLL08At+5oEZTty/76z4/M+bHuA==}
     peerDependencies:
-      '@rushstack/heft': 0.66.0
+      '@rushstack/heft': 0.66.1
     dependencies:
-      '@rushstack/heft': 0.66.0(@types/node@18.19.3)
+      '@rushstack/heft': 0.66.1(@types/node@18.19.3)
       '@rushstack/node-core-library': 4.0.2(@types/node@18.19.3)
       semver: 7.5.4
     transitivePeerDependencies:
       - '@types/node'
     dev: false
 
-  /@rushstack/heft-sass-plugin@0.13.23(@rushstack/heft@0.66.0):
-    resolution: {integrity: sha512-soN3p7k+Gy8cQMMrq7Mg1VenaUgGlhZnMQkIqQwRwOOhyaQrdCPoMlT/NwEY9Yj9w6B1C2IBZkxYk5ljHQkbag==}
+  /@rushstack/heft-sass-plugin@0.13.24(@rushstack/heft@0.66.1):
+    resolution: {integrity: sha512-MGPKAw5DqPvHUWBbfyF0YxdSrzJJhcrHCUnj1vjqppeVvfWcZyX4CtiUoE1vzG120PhSXebfnwiZalQ18hVWJA==}
     peerDependencies:
-      '@rushstack/heft': ^0.66.0
+      '@rushstack/heft': ^0.66.1
     dependencies:
-      '@rushstack/heft': 0.66.0(@types/node@18.19.3)
+      '@rushstack/heft': 0.66.1(@types/node@18.19.3)
       '@rushstack/heft-config-file': 0.14.14(@types/node@18.19.3)
       '@rushstack/node-core-library': 4.0.2(@types/node@18.19.3)
-      '@rushstack/typings-generator': 0.12.37
+      '@rushstack/typings-generator': 0.12.38
       postcss: 8.4.35
       postcss-modules: 6.0.0(postcss@8.4.35)
       sass-embedded: 1.62.0
@@ -2056,12 +2056,12 @@ packages:
       - '@types/node'
     dev: false
 
-  /@rushstack/heft-typescript-plugin@0.3.20(@rushstack/heft@0.66.0)(@types/node@18.19.3):
-    resolution: {integrity: sha512-ayXT1jRqOHQtVLmVcahbb5cAqBanRUGkdj98JEPmIWhuI78aV4j5oLYcfX7sIBiG4vF5b7UahmN4eX4qwz9pIQ==}
+  /@rushstack/heft-typescript-plugin@0.3.21(@rushstack/heft@0.66.1)(@types/node@18.19.3):
+    resolution: {integrity: sha512-cYatoPUWDnzjwagEWHaVfUZd+Vk7MBN/9eznfahflaYdwjOwzvIICzebACWk5BxzUZQ1lsLPIMNC8JLfxzvCPw==}
     peerDependencies:
-      '@rushstack/heft': 0.66.0
+      '@rushstack/heft': 0.66.1
     dependencies:
-      '@rushstack/heft': 0.66.0(@types/node@18.19.3)
+      '@rushstack/heft': 0.66.1(@types/node@18.19.3)
       '@rushstack/heft-config-file': 0.14.14(@types/node@18.19.3)
       '@rushstack/node-core-library': 4.0.2(@types/node@18.19.3)
       '@types/tapable': 1.0.6
@@ -2071,8 +2071,8 @@ packages:
       - '@types/node'
     dev: false
 
-  /@rushstack/heft@0.66.0(@types/node@18.19.3):
-    resolution: {integrity: sha512-PFEmH5rYv/Fa5jfeBmsp/TcADQL/cmwnjoEDb4tl06zVDt2EC8l63N1AFPQGkgiSmWLnq6Yg/MMsH5X5sT9iYw==}
+  /@rushstack/heft@0.66.1(@types/node@18.19.3):
+    resolution: {integrity: sha512-n96icOKWsz5TbXXgeCKey0bTTCwZBJvZ/C4AV5HBzjtDAly0HvSRnMy6Pdd0bY0jSmNJBwRLzocjytusOB0aKA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dependencies:
@@ -2152,8 +2152,8 @@ packages:
     transitivePeerDependencies:
       - '@types/node'
 
-  /@rushstack/typings-generator@0.12.37:
-    resolution: {integrity: sha512-emX7QoZCStg/39zuZLinLrIhUIv+XbBt53lLdnByTwcud/3Eo8A52hQc6LKQIj1+LlUfye/VpyJ7rBbTnPKvCg==}
+  /@rushstack/typings-generator@0.12.38:
+    resolution: {integrity: sha512-E4uBiyyVsqIsAG5xn5EFQ2/C8web9hBY0UzM+EC1mzZeAZc1OMsX3PH5tx7r7/0ReU9yYwbET3fhGkXQF2p7tA==}
     peerDependencies:
       '@types/node': '*'
     peerDependenciesMeta:
@@ -2439,6 +2439,12 @@ packages:
 
   /@types/tapable@1.0.6:
     resolution: {integrity: sha512-W+bw9ds02rAQaMvaLYxAbJ6cvguW/iJXNT6lTssS1ps6QdrMKttqEAMEG/b5CR8TZl3/L7/lH0ZV5nNR1LXikA==}
+
+  /@types/tapable@2.2.7:
+    resolution: {integrity: sha512-D6QzACV9vNX3r8HQQNTOnpG+Bv1rko+yEA82wKs3O9CQ5+XW7HI7TED17/UE7+5dIxyxZIWTxKbsBeF6uKFCwA==}
+    dependencies:
+      tapable: 2.2.1
+    dev: true
 
   /@types/tough-cookie@4.0.5:
     resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
@@ -3266,8 +3272,8 @@ packages:
       tweetnacl: 0.14.5
     dev: false
 
-  /binary-extensions@2.2.0:
-    resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
+  /binary-extensions@2.3.0:
+    resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
     dev: false
 
@@ -3320,8 +3326,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001596
-      electron-to-chromium: 1.4.699
+      caniuse-lite: 1.0.30001598
+      electron-to-chromium: 1.4.708
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
 
@@ -3402,8 +3408,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /caniuse-lite@1.0.30001596:
-    resolution: {integrity: sha512-zpkZ+kEr6We7w63ORkoJ2pOfBwBkY/bJrG/UZ90qNb45Isblu8wzDgevEOrRL1r9dWayHjYiiyCMEXPn4DweGQ==}
+  /caniuse-lite@1.0.30001598:
+    resolution: {integrity: sha512-j8mQRDziG94uoBfeFuqsJUNECW37DXpnvhcMJMdlH2u3MRkq1sAI0LJcXP1i/Py0KbSIC4UDj8YHPrTn5YsL+Q==}
 
   /caseless@0.12.0:
     resolution: {integrity: sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==}
@@ -3766,7 +3772,7 @@ packages:
   /debug@3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
     dependencies:
-      ms: 2.1.2
+      ms: 2.1.3
     dev: false
 
   /debug@4.3.4:
@@ -3934,8 +3940,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /electron-to-chromium@1.4.699:
-    resolution: {integrity: sha512-I7q3BbQi6e4tJJN5CRcyvxhK0iJb34TV8eJQcgh+fR2fQ8miMgZcEInckCo1U9exDHbfz7DLDnFn8oqH/VcRKw==}
+  /electron-to-chromium@1.4.708:
+    resolution: {integrity: sha512-iWgEEvREL4GTXXHKohhh33+6Y8XkPI5eHihDmm8zUk5Zo7HICEW+wI/j5kJ2tbuNUCXJ/sNXa03ajW635DiJXA==}
 
   /emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==}
@@ -3954,7 +3960,7 @@ packages:
     resolution: {integrity: sha512-QHTXI/sZQmko1cbDoNAa3mJ5qhWUUNAq3vR0/YiD379fWQrcfuoX1+HW2S0MTt7XmoPLapdaDKUtelUSPic7hQ==}
     engines: {node: '>=10.13.0'}
     dependencies:
-      graceful-fs: 4.2.11
+      graceful-fs: 4.2.10
       tapable: 2.2.1
 
   /enhanced-resolve@5.16.0:
@@ -4142,35 +4148,35 @@ packages:
       is-symbol: 1.0.4
     dev: false
 
-  /esbuild@0.20.1:
-    resolution: {integrity: sha512-OJwEgrpWm/PCMsLVWXKqvcjme3bHNpOgN7Tb6cQnR5n0TPbQx1/Xrn7rqM+wn17bYeT6MGB5sn1Bh5YiGi70nA==}
+  /esbuild@0.20.2:
+    resolution: {integrity: sha512-WdOOppmUNU+IbZ0PaDiTst80zjnrOkyJNHoKupIcVyU8Lvla3Ugx94VzkQ32Ijqd7UhHJy75gNWDMUekcrSJ6g==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      '@esbuild/aix-ppc64': 0.20.1
-      '@esbuild/android-arm': 0.20.1
-      '@esbuild/android-arm64': 0.20.1
-      '@esbuild/android-x64': 0.20.1
-      '@esbuild/darwin-arm64': 0.20.1
-      '@esbuild/darwin-x64': 0.20.1
-      '@esbuild/freebsd-arm64': 0.20.1
-      '@esbuild/freebsd-x64': 0.20.1
-      '@esbuild/linux-arm': 0.20.1
-      '@esbuild/linux-arm64': 0.20.1
-      '@esbuild/linux-ia32': 0.20.1
-      '@esbuild/linux-loong64': 0.20.1
-      '@esbuild/linux-mips64el': 0.20.1
-      '@esbuild/linux-ppc64': 0.20.1
-      '@esbuild/linux-riscv64': 0.20.1
-      '@esbuild/linux-s390x': 0.20.1
-      '@esbuild/linux-x64': 0.20.1
-      '@esbuild/netbsd-x64': 0.20.1
-      '@esbuild/openbsd-x64': 0.20.1
-      '@esbuild/sunos-x64': 0.20.1
-      '@esbuild/win32-arm64': 0.20.1
-      '@esbuild/win32-ia32': 0.20.1
-      '@esbuild/win32-x64': 0.20.1
+      '@esbuild/aix-ppc64': 0.20.2
+      '@esbuild/android-arm': 0.20.2
+      '@esbuild/android-arm64': 0.20.2
+      '@esbuild/android-x64': 0.20.2
+      '@esbuild/darwin-arm64': 0.20.2
+      '@esbuild/darwin-x64': 0.20.2
+      '@esbuild/freebsd-arm64': 0.20.2
+      '@esbuild/freebsd-x64': 0.20.2
+      '@esbuild/linux-arm': 0.20.2
+      '@esbuild/linux-arm64': 0.20.2
+      '@esbuild/linux-ia32': 0.20.2
+      '@esbuild/linux-loong64': 0.20.2
+      '@esbuild/linux-mips64el': 0.20.2
+      '@esbuild/linux-ppc64': 0.20.2
+      '@esbuild/linux-riscv64': 0.20.2
+      '@esbuild/linux-s390x': 0.20.2
+      '@esbuild/linux-x64': 0.20.2
+      '@esbuild/netbsd-x64': 0.20.2
+      '@esbuild/openbsd-x64': 0.20.2
+      '@esbuild/sunos-x64': 0.20.2
+      '@esbuild/win32-arm64': 0.20.2
+      '@esbuild/win32-ia32': 0.20.2
+      '@esbuild/win32-x64': 0.20.2
     dev: false
 
   /escalade@3.1.2:
@@ -4401,8 +4407,8 @@ packages:
       eslint: 8.57.0
     dev: false
 
-  /eslint-plugin-react@7.34.0(eslint@8.57.0):
-    resolution: {integrity: sha512-MeVXdReleBTdkz/bvcQMSnCXGi+c9kvy51IpinjnJgutl3YTHWsDdke7Z1ufZpGfDG8xduBDKyjtB9JH1eBKIQ==}
+  /eslint-plugin-react@7.34.1(eslint@8.57.0):
+    resolution: {integrity: sha512-N97CxlouPT1AHt8Jn0mhhN2RrADlUAsk1/atcT2KyA/l9Q/E6ll7OIGwNumFmWfZ9skV3XXccYS19h80rHtgkw==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
@@ -5411,7 +5417,7 @@ packages:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
     dependencies:
-      binary-extensions: 2.2.0
+      binary-extensions: 2.3.0
     dev: false
 
   /is-boolean-object@1.1.2:
@@ -5767,7 +5773,7 @@ packages:
       jest-environment-node: 29.7.0
       jest-get-type: 29.6.3
       jest-regex-util: 29.6.3
-      jest-resolve: 29.7.0
+      jest-resolve: 29.5.0
       jest-runner: 29.7.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
@@ -6062,7 +6068,7 @@ packages:
       '@babel/traverse': 7.24.0
       '@babel/types': 7.24.0
       '@jest/expect-utils': 29.7.0
-      '@jest/transform': 29.7.0
+      '@jest/transform': 29.5.0
       '@jest/types': 29.6.3
       '@types/babel__traverse': 7.20.5
       '@types/prettier': 2.7.3
@@ -7002,7 +7008,7 @@ packages:
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.35)
       postcss: 8.4.35
-      postcss-selector-parser: 6.0.15
+      postcss-selector-parser: 6.0.16
       postcss-value-parser: 4.2.0
     dev: false
 
@@ -7013,7 +7019,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       postcss: 8.4.35
-      postcss-selector-parser: 6.0.15
+      postcss-selector-parser: 6.0.16
     dev: false
 
   /postcss-modules-values@4.0.0(postcss@8.4.35):
@@ -7064,8 +7070,8 @@ packages:
       postcss: 8.4.35
     dev: true
 
-  /postcss-selector-parser@6.0.15:
-    resolution: {integrity: sha512-rEYkQOMUCEMhsKbK66tbEU9QVIxbhN18YiniAwA7XQYTVBqrBy+P2p5JcdqsHgKM2zWylp8d7J6eszocfds5Sw==}
+  /postcss-selector-parser@6.0.16:
+    resolution: {integrity: sha512-A0RVJrX+IUkVZbW3ClroRWurercFhieevHB38sr2+l9eUClMqome3LmEmnhlNy+5Mr2EYN6B2Kaw9wYdd+VHiw==}
     engines: {node: '>=4'}
     dependencies:
       cssesc: 3.0.0
@@ -7209,7 +7215,6 @@ packages:
 
   /readable-stream@2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==}
-    requiresBuild: true
     dependencies:
       core-util-is: 1.0.3
       inherits: 2.0.4
@@ -7418,7 +7423,6 @@ packages:
 
   /safe-buffer@5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
-    requiresBuild: true
     dev: false
 
   /safe-buffer@5.2.1:
@@ -7514,7 +7518,7 @@ packages:
     resolution: {integrity: sha512-SwTIG6UmrMiT94/v8G+2pPf6i+XwY4hOQxm8HZl0ld0st2KdGDj/SBXDznFl7+sJ6tFq6hvVvrB9rW5Nj7EhuQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
-      '@bufbuild/protobuf': 1.7.2
+      '@bufbuild/protobuf': 1.8.0
       buffer-builder: 0.2.0
       immutable: 4.3.5
       rxjs: 7.8.1
@@ -8057,7 +8061,7 @@ packages:
       known-css-properties: 0.29.0
       postcss-media-query-parser: 0.2.3
       postcss-resolve-nested-selector: 0.1.1
-      postcss-selector-parser: 6.0.15
+      postcss-selector-parser: 6.0.16
       postcss-value-parser: 4.2.0
       stylelint: 16.2.1
     dev: true
@@ -8070,7 +8074,7 @@ packages:
       '@csstools/css-parser-algorithms': 2.6.1(@csstools/css-tokenizer@2.2.4)
       '@csstools/css-tokenizer': 2.2.4
       '@csstools/media-query-list-parser': 2.1.9(@csstools/css-parser-algorithms@2.6.1)(@csstools/css-tokenizer@2.2.4)
-      '@csstools/selector-specificity': 3.0.2(postcss-selector-parser@6.0.15)
+      '@csstools/selector-specificity': 3.0.2(postcss-selector-parser@6.0.16)
       balanced-match: 2.0.0
       colord: 2.9.3
       cosmiconfig: 9.0.0
@@ -8096,7 +8100,7 @@ packages:
       postcss: 8.4.35
       postcss-resolve-nested-selector: 0.1.1
       postcss-safe-parser: 7.0.0(postcss@8.4.35)
-      postcss-selector-parser: 6.0.15
+      postcss-selector-parser: 6.0.16
       postcss-value-parser: 4.2.0
       resolve-from: 5.0.0
       string-width: 4.2.3
@@ -8597,6 +8601,13 @@ packages:
       glob-to-regexp: 0.4.1
       graceful-fs: 4.2.11
 
+  /watchpack@2.4.1:
+    resolution: {integrity: sha512-8wrBCMtVhqcXP2Sup1ctSkga6uc2Bx0IIvKyT7yTFier5AXHooSI+QyQQAtTb7+E0IUCCKyTFmXqdqgum2XWGg==}
+    engines: {node: '>=10.13.0'}
+    dependencies:
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.10
+
   /wbuf@1.7.3:
     resolution: {integrity: sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==}
     dependencies:
@@ -8745,7 +8756,7 @@ packages:
       schema-utils: 3.3.0
       tapable: 2.2.1
       terser-webpack-plugin: 5.3.10(webpack@5.90.3)
-      watchpack: 2.4.0
+      watchpack: 2.4.1
       webpack-sources: 3.2.3
     transitivePeerDependencies:
       - '@swc/core'

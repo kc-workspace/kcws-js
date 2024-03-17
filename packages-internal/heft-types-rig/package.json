@@ -32,14 +32,14 @@
   },
   "dependencies": {
     "@microsoft/api-extractor": "7.42.3",
-    "@rushstack/heft-api-extractor-plugin": "0.3.20",
-    "@rushstack/heft-lint-plugin": "0.3.20",
-    "@rushstack/heft-typescript-plugin": "0.3.20",
+    "@rushstack/heft-api-extractor-plugin": "0.3.21",
+    "@rushstack/heft-lint-plugin": "0.3.21",
+    "@rushstack/heft-typescript-plugin": "0.3.21",
     "eslint": "8.57.0",
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@rushstack/heft": "0.66.0"
+    "@rushstack/heft": "0.66.1"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.63.5"
