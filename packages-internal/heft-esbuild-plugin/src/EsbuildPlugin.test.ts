@@ -3,19 +3,34 @@ jest.mock("esbuild");
 import type {
   HeftConfiguration,
   IHeftParameters,
+  IHeftTaskFileOperations,
   IHeftTaskHooks,
   IHeftTaskRunHookOptions,
   IHeftTaskRunIncrementalHookOptions,
   IHeftTaskSession,
 } from "@rushstack/heft";
 
-import { AsyncParallelHook } from "tapable";
-import { build } from "esbuild";
+import { AsyncParallelHook, AsyncSeriesWaterfallHook } from "tapable";
+import { BuildOptions, build } from "esbuild";
 import { StringBufferTerminalProvider, Terminal } from "@rushstack/terminal";
 import { MockScopedLogger } from "@rushstack/heft/lib/pluginFramework/logging/MockScopedLogger";
 
 import EsbuildPlugin, { IEsbuildOption } from "./EsbuildPlugin";
 import { UNSUPPORTED_WATCH_MODE } from "./shared";
+
+const mockTaskHooks = (): IHeftTaskHooks => {
+  const run = new AsyncParallelHook<IHeftTaskRunHookOptions>();
+  const runIncremental =
+    new AsyncParallelHook<IHeftTaskRunIncrementalHookOptions>();
+  const registerFileOperations =
+    new AsyncSeriesWaterfallHook<IHeftTaskFileOperations>(["register"]);
+
+  return {
+    run,
+    runIncremental,
+    registerFileOperations,
+  };
+};
 
 const mockTaskSession = (
   parameters?: Partial<IHeftParameters>
@@ -32,11 +47,7 @@ const mockTaskSession = (
   return {
     logger,
     parameters: _parameters,
-    hooks: {
-      run: new AsyncParallelHook<IHeftTaskRunHookOptions>(),
-      runIncremental:
-        new AsyncParallelHook<IHeftTaskRunIncrementalHookOptions>(),
-    } as IHeftTaskHooks,
+    hooks: mockTaskHooks(),
     parsedCommandLine: undefined!,
     requestAccessToPluginByName: undefined!,
     taskName: "esbuild",
@@ -58,6 +69,19 @@ const mockHeftConfiguration = (
   return Object.assign(base, config);
 };
 
+const buildDefaultOptions = (option?: BuildOptions): BuildOptions => {
+  const defaults = {
+    bundle: true,
+    entryPoints: ["/tmp/build"],
+    minify: true,
+    outdir: "/tmp/build/lib-bundle",
+    sourcemap: false,
+  };
+
+  return Object.assign(defaults, option);
+};
+
+/* jscpd:ignore-start */
 describe("Esbuild heft-plugin", () => {
   it("should create with parameterless constructor", () => {
     const plugin = new EsbuildPlugin();
@@ -80,13 +104,7 @@ describe("Esbuild heft-plugin", () => {
     await session.hooks.run.promise(undefined!);
 
     expect(build).toHaveBeenCalledTimes(1);
-    expect(build).toHaveBeenCalledWith({
-      bundle: true,
-      entryPoints: ["/tmp/build"],
-      minify: true,
-      outdir: "/tmp/build/lib-bundle",
-      sourcemap: false,
-    });
+    expect(build).toHaveBeenCalledWith(buildDefaultOptions());
   });
 
   it("should call build() when applied plugin with main field", async () => {
@@ -106,82 +124,68 @@ describe("Esbuild heft-plugin", () => {
     await session.hooks.run.promise(undefined!);
 
     expect(build).toHaveBeenCalledTimes(1);
-    expect(build).toHaveBeenCalledWith({
-      bundle: true,
-      entryPoints: ["/tmp/build/lib/start.js"],
-      minify: true,
-      outdir: "/tmp/build/lib-bundle",
-      sourcemap: false,
-    });
+    expect(build).toHaveBeenCalledWith(
+      buildDefaultOptions({ entryPoints: ["/tmp/build/lib/start.js"] })
+    );
   });
 
   it("should call build() when platform and target exist", async () => {
     const plugin = new EsbuildPlugin();
 
     const session = mockTaskSession();
-    const config = mockHeftConfiguration();
     const options: IEsbuildOption = {
       platform: "browser",
       target: ["node12", "chrome"],
     };
 
-    plugin.apply(session, config, options);
+    plugin.apply(session, mockHeftConfiguration(), options);
     await session.hooks.run.promise(undefined!);
 
     expect(build).toHaveBeenCalledTimes(1);
-    expect(build).toHaveBeenCalledWith({
-      bundle: true,
-      entryPoints: ["/tmp/build"],
-      minify: true,
-      outdir: "/tmp/build/lib-bundle",
-      sourcemap: false,
-      platform: "browser",
-      target: ["node12", "chrome"],
-    });
+    expect(build).toHaveBeenCalledWith(
+      buildDefaultOptions({
+        platform: "browser",
+        target: ["node12", "chrome"],
+      })
+    );
   });
 
   it("should call build() when override entrypoint", async () => {
     const plugin = new EsbuildPlugin();
 
     const session = mockTaskSession();
-    const config = mockHeftConfiguration();
     const options: IEsbuildOption = {
-      entrypoint: "lib/index.js",
+      entrypoint: "hello.js",
     };
 
-    plugin.apply(session, config, options);
+    plugin.apply(session, mockHeftConfiguration(), options);
     await session.hooks.run.promise(undefined!);
 
     expect(build).toHaveBeenCalledTimes(1);
-    expect(build).toHaveBeenCalledWith({
-      bundle: true,
-      entryPoints: ["/tmp/build/lib/index.js"],
-      minify: true,
-      outdir: "/tmp/build/lib-bundle",
-      sourcemap: false,
-    });
+    expect(build).toHaveBeenCalledWith(
+      buildDefaultOptions({
+        entryPoints: ["/tmp/build/hello.js"],
+      })
+    );
   });
 
   it("should call build() when override entrypoints", async () => {
     const plugin = new EsbuildPlugin();
 
     const session = mockTaskSession();
-    const config = mockHeftConfiguration();
     const options: IEsbuildOption = {
       entrypoints: ["lib/index.js", "lib/start.js"],
     };
 
-    plugin.apply(session, config, options);
+    plugin.apply(session, mockHeftConfiguration(), options);
     await session.hooks.run.promise(undefined!);
 
     expect(build).toHaveBeenCalledTimes(1);
-    expect(build).toHaveBeenCalledWith({
-      bundle: true,
-      entryPoints: ["lib/index.js", "lib/start.js"],
-      minify: true,
-      outdir: "/tmp/build/lib-bundle",
-      sourcemap: false,
-    });
+    expect(build).toHaveBeenCalledWith(
+      buildDefaultOptions({
+        entryPoints: ["lib/index.js", "lib/start.js"],
+      })
+    );
   });
 
   it("should error when watch mode enabled", async () => {
@@ -196,3 +200,4 @@ describe("Esbuild heft-plugin", () => {
     }).toThrow(UNSUPPORTED_WATCH_MODE);
   });
 });
+/* jscpd:ignore-end */

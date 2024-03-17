@@ -34,12 +34,10 @@
       "../../../../../dist"
     ],                                                   /* Allow multiple folders to be treated as one when resolving modules. */
     "typeRoots": [
-      "../../../../../../../node_modules/@types",
-      "../../../../../node_modules/@types",
-      "../../node_modules/@types",
-      "../../../../../../../node_modules/@kctypes",
-      "../../../../../node_modules/@kctypes",
-      "../../node_modules/@kctypes"
+      "../../../../../node_modules/@types",              // For locally installed @types/* packages
+      "../../node_modules/@types",                       // For internally installed @types/* packages
+      "../../../../../node_modules/@kctypes",            // For locally installed @kctypes/* packages
+      "../../node_modules/@kctypes",                     // For internally installed @kctypes/* packages
     ],                                                   /* Specify multiple folders that act like './node_modules/@types'. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
