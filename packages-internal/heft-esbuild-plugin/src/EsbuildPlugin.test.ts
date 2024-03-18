@@ -34,7 +34,7 @@ const mockTaskHooks = (): IHeftTaskHooks => {
 
 const mockTaskSession = (
   parameters?: Partial<IHeftParameters>
-): IHeftTaskSession => {
+): { session: IHeftTaskSession; terminal: StringBufferTerminalProvider } => {
   const terminalProvider = new StringBufferTerminalProvider(false);
   const terminal = new Terminal(terminalProvider);
   const logger = new MockScopedLogger(terminal);
@@ -44,7 +44,7 @@ const mockTaskSession = (
     parameters
   ) as IHeftParameters;
 
-  return {
+  const session = {
     logger,
     parameters: _parameters,
     hooks: mockTaskHooks(),
@@ -53,6 +53,7 @@ const mockTaskSession = (
     taskName: "esbuild",
     tempFolderPath: "/tmp/test",
   };
+  return { session, terminal: terminalProvider };
 };
 
 const mockHeftConfiguration = (
@@ -96,7 +97,7 @@ describe("Esbuild heft-plugin", () => {
   it("should call build(<default>) when applied plugin", async () => {
     const plugin = new EsbuildPlugin();
 
-    const session = mockTaskSession();
+    const { session } = mockTaskSession();
     const config = mockHeftConfiguration();
     const options: IEsbuildOption = {};
 
@@ -110,7 +111,7 @@ describe("Esbuild heft-plugin", () => {
   it("should call build() when applied plugin with main field", async () => {
     const plugin = new EsbuildPlugin();
 
-    const session = mockTaskSession();
+    const { session } = mockTaskSession();
     const config = mockHeftConfiguration({
       projectPackageJson: {
         name: "example",
@@ -132,7 +133,7 @@ describe("Esbuild heft-plugin", () => {
   it("should call build() when platform and target exist", async () => {
     const plugin = new EsbuildPlugin();
 
-    const session = mockTaskSession();
+    const { session } = mockTaskSession();
     const options: IEsbuildOption = {
       platform: "browser",
       target: ["node12", "chrome"],
@@ -153,7 +154,7 @@ describe("Esbuild heft-plugin", () => {
   it("should call build() when override entrypoint", async () => {
     const plugin = new EsbuildPlugin();
 
-    const session = mockTaskSession();
+    const { session } = mockTaskSession();
     const options: IEsbuildOption = {
       entrypoint: "hello.js",
     };
@@ -172,7 +173,7 @@ describe("Esbuild heft-plugin", () => {
   it("should call build() when override entrypoints", async () => {
     const plugin = new EsbuildPlugin();
 
-    const session = mockTaskSession();
+    const { session, terminal } = mockTaskSession();
     const options: IEsbuildOption = {
       entrypoints: ["lib/index.js", "lib/start.js"],
     };
@@ -183,15 +184,16 @@ describe("Esbuild heft-plugin", () => {
     expect(build).toHaveBeenCalledTimes(1);
     expect(build).toHaveBeenCalledWith(
       buildDefaultOptions({
-        entryPoints: ["lib/index.js", "lib/start.js"],
+        entryPoints: ["lib/index.js"],
       })
     );
+    expect(terminal.getWarningOutput()).toMatchSnapshot();
   });
 
   it("should error when watch mode enabled", async () => {
     const plugin = new EsbuildPlugin();
 
-    const session = mockTaskSession({ watch: true });
+    const { session } = mockTaskSession({ watch: true });
     const config = mockHeftConfiguration();
     const options: IEsbuildOption = {};
 

@@ -5,6 +5,7 @@ import type {
 } from "@rushstack/heft";
 
 import { join } from "node:path";
+import { existsSync } from "node:fs";
 import { BuildOptions, build, version } from "esbuild";
 
 import { PLUGIN_NAME, UNSUPPORTED_WATCH_MODE } from "./shared";
@@ -50,15 +51,33 @@ class EsbuildPlugin implements IHeftTaskPlugin<IEsbuildOption> {
     session.hooks.run.tapPromise(PLUGIN_NAME, async () => {
       session.logger.terminal.writeLine(`Using esbuild version ${version}`);
 
-      const entry = join(
-        heftConfiguration.buildFolderPath,
-        heftConfiguration.projectPackageJson.main ?? options?.entrypoint ?? ""
-      );
+      const basePath = heftConfiguration.buildFolderPath;
+      const entries = [];
+      if (options?.entrypoints?.length ?? 0 > 0) {
+        entries.push(
+          ...options!
+            .entrypoints!.map(p => {
+              const output = p.replace("<pwd>", basePath);
+              if (existsSync(output)) return output;
+              session.logger.terminal.writeWarningLine(
+                `Remove '${p}' entrypoint from list because file is missing`
+              );
+              return "";
+            })
+            .filter(p => p !== "")
+        );
+      } else {
+        const main =
+          heftConfiguration.projectPackageJson.main ??
+          options?.entrypoint ??
+          "";
+        entries.push(join(basePath, main));
+      }
 
       const output = options?.output ?? "lib-bundle";
-      const outdir = join(heftConfiguration.buildFolderPath, output);
+      const outdir = join(basePath, output);
       const buildOptions: BuildOptions = {
-        entryPoints: options?.entrypoints ?? [entry],
+        entryPoints: entries,
         outdir: outdir,
         bundle: options?.bundle ?? true,
         minify: options?.minify ?? true,

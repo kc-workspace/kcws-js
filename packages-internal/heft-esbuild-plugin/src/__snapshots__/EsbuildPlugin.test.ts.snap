@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Esbuild heft-plugin should call build() when override entrypoints 1`] = `"Remove 'lib/start.js' entrypoint from list because file is missing[n]"`;
