@@ -1,6 +1,14 @@
-# Change Log - @kcws/heft-esbuild-plugin
+# Change Log - @kcinternals/heft-esbuild-plugin
 
-This log was last generated on Thu, 14 Mar 2024 12:12:11 GMT and should not be manually modified.
+This log was last generated on Mon, 18 Mar 2024 04:47:14 GMT and should not be manually modified.
+
+## 0.3.0
+Mon, 18 Mar 2024 04:47:14 GMT
+
+### Minor changes
+
+- Move scope from @kcws to @kcinternals
+- upgrade dependencies [auto]
 
 ## 0.2.0
 Thu, 14 Mar 2024 12:12:11 GMT

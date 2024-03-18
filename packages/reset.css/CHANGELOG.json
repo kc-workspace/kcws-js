@@ -2,6 +2,33 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "1.11.0",
+      "tag": "@kcws/reset.css_v1.11.0",
+      "date": "Mon, 18 Mar 2024 04:47:14 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Refactor project and riggable profile",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "d0402093ef70b3245f5017ad8bc6e21d9627b18d"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "9eed8926abf293ab433e11c585d8ef76020587b9"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.2.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.36.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.10.0",
       "tag": "@kcws/reset.css_v1.10.0",
       "date": "Tue, 12 Mar 2024 22:37:31 GMT",

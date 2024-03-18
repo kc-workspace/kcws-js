@@ -1,6 +1,14 @@
 # Change Log - @kcws/equals
 
-This log was last generated on Tue, 12 Mar 2024 22:37:31 GMT and should not be manually modified.
+This log was last generated on Mon, 18 Mar 2024 04:47:14 GMT and should not be manually modified.
+
+## 0.14.0
+Mon, 18 Mar 2024 04:47:14 GMT
+
+### Minor changes
+
+- Refactor project and riggable profile
+- upgrade dependencies [auto]
 
 ## 0.13.0
 Tue, 12 Mar 2024 22:37:31 GMT
