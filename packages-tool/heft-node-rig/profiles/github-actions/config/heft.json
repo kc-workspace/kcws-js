@@ -1,0 +1,71 @@
+/**
+ * Defines configuration used by core Heft.
+ */
+{
+  // "$schema": "https://developer.microsoft.com/json-schemas/heft/heft.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/rushstack/main/apps/heft/src/schemas/heft.schema.json",
+
+  "phasesByName": {
+    "build": {
+      "cleanFiles": [
+        {
+          "includeGlobs": ["lib", "lib-bundle", "dist"]
+        }
+      ],
+      "tasksByName": {
+        "typescript": {
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-typescript-plugin"
+          }
+        },
+        "esbuild": {
+          "taskDependencies": ["typescript"],
+          "taskPlugin": {
+            "pluginPackage": "@kcinternals/heft-esbuild-plugin",
+            "options": {
+              "entrypoints": ["<pwd>/lib/index.js", "<pwd>/lib/pre.js", "<pwd>/lib/post.js"],
+              "output": "lib-bundle",
+              "bundle": true,
+              "minify": true,
+              "sourcemap": true,
+              "platform": "node",
+              "target": "node20"
+            }
+          }
+        },
+        "resources": {
+          "taskDependencies": ["esbuild"],
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft",
+            "pluginName": "copy-files-plugin",
+            "options": {
+              "copyOperations": [
+                {
+                  "sourcePath": "src",
+                  "destinationFolders": ["lib-bundle"],
+                  "fileExtensions": [".md", ".yaml", ".yml"]
+                }
+              ]
+            }
+          }
+        },
+        "eslint": {
+          "taskDependencies": ["typescript"],
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-lint-plugin"
+          }
+        }
+      }
+    },
+    "test": {
+      "phaseDependencies": ["build"],
+      "tasksByName": {
+        "jest": {
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-jest-plugin"
+          }
+        }
+      }
+    }
+  }
+}
