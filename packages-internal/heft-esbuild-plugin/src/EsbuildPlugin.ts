@@ -53,7 +53,8 @@ class EsbuildPlugin implements IHeftTaskPlugin<IEsbuildOption> {
 
       const basePath = heftConfiguration.buildFolderPath;
       const entries = [];
-      if (options?.entrypoints?.length ?? 0 > 0) {
+      const length = options?.entrypoints?.length ?? 0;
+      if (length > 0) {
         entries.push(
           ...options!
             .entrypoints!.map(p => {
