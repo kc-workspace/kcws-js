@@ -452,6 +452,12 @@
       "shouldPublish": false
     },
     {
+      "packageName": "@kcexamples/github-action",
+      "projectFolder": "packages-example/github-action",
+      "reviewCategory": "examples",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@kcexamples/node-lib",
       "projectFolder": "packages-example/node-lib",
       "reviewCategory": "examples",

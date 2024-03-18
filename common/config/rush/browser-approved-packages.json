@@ -3,6 +3,30 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
+      "name": "@actions/cache",
+      "allowedCategories": [ "examples" ]
+    },
+    {
+      "name": "@actions/core",
+      "allowedCategories": [ "examples" ]
+    },
+    {
+      "name": "@actions/exec",
+      "allowedCategories": [ "examples" ]
+    },
+    {
+      "name": "@actions/github",
+      "allowedCategories": [ "examples" ]
+    },
+    {
+      "name": "@actions/http-client",
+      "allowedCategories": [ "examples" ]
+    },
+    {
+      "name": "@actions/io",
+      "allowedCategories": [ "examples" ]
+    },
+    {
       "name": "@definitelytyped/eslint-plugin",
       "allowedCategories": [ "configs" ]
     },
