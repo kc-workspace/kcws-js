@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcinternals/heft-esbuild-plugin",
+      "comment": "remove entrypoints if it missing from file system",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcinternals/heft-esbuild-plugin"
+}

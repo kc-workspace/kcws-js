@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/heft-node-rig",
+      "comment": "add new github-actions profile for github action package",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/heft-node-rig"
+}
