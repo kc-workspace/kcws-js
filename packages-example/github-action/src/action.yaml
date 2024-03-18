@@ -1,0 +1,20 @@
+name: Typescript Example
+description: Example actions written on Typescript
+author: Kamontat Chantrachirathumrong
+
+inputs:
+  name:
+    description: example name
+  dryrun:
+    description: dry-run the command instead executes
+    required: false
+
+# outputs:
+#   output:
+#     description: Output description
+
+runs:
+  using: node20
+  pre: pre.js
+  main: index.js
+  post: post.js
