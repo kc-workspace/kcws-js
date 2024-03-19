@@ -1,6 +1,14 @@
-# Change Log - @kcws/types-rig
+# Change Log - @kcinternals/heft-types-rig
 
-This log was last generated on Tue, 12 Mar 2024 22:37:31 GMT and should not be manually modified.
+This log was last generated on Tue, 19 Mar 2024 22:38:08 GMT and should not be manually modified.
+
+## 0.3.0
+Tue, 19 Mar 2024 22:38:08 GMT
+
+### Minor changes
+
+- Move internal riggable profiles to this package
+- upgrade dependencies [auto]
 
 ## 0.12.0
 Tue, 12 Mar 2024 22:37:31 GMT

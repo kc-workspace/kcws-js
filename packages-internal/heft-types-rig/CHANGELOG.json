@@ -1,6 +1,25 @@
 {
-  "name": "@kcws/types-rig",
+  "name": "@kcinternals/heft-types-rig",
   "entries": [
+    {
+      "version": "0.3.0",
+      "tag": "@kcinternals/heft-types-rig_v0.3.0",
+      "date": "Tue, 19 Mar 2024 22:38:08 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Move internal riggable profiles to this package",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "d0402093ef70b3245f5017ad8bc6e21d9627b18d"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "9eed8926abf293ab433e11c585d8ef76020587b9"
+          }
+        ]
+      }
+    },
     {
       "version": "0.12.0",
       "tag": "@kcws/types-rig_v0.12.0",

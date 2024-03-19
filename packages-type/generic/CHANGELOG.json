@@ -2,6 +2,24 @@
   "name": "@kctypes/generic",
   "entries": [
     {
+      "version": "1.9.1",
+      "tag": "@kctypes/generic_v1.9.1",
+      "date": "Tue, 19 Mar 2024 22:38:08 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.12.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.36.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-types-rig\" to `0.3.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.9.0",
       "tag": "@kctypes/generic_v1.9.0",
       "date": "Mon, 18 Mar 2024 04:47:14 GMT",
