@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@microsoft/api-documenter':
-    specifier: 7.24.0
-    version: 7.24.0
+    specifier: 7.24.1
+    version: 7.24.1
   typedoc:
     specifier: 0.25.12
-    version: 0.25.12(typescript@5.4.2)
+    version: 0.25.12(typescript@5.4.3)
   typedoc-plugin-extras:
     specifier: 3.0.0
     version: 3.0.0(typedoc@0.25.12)
@@ -23,8 +23,8 @@ dependencies:
 
 packages:
 
-  /@microsoft/api-documenter@7.24.0:
-    resolution: {integrity: sha512-t+4PhJWXW/SM5OPl20ANt8BKbQ1QMYHd9gsJp/FshvhyyNU1iYlMW3gKufE7z1y/Rwm7sWngp5M7VYZ1CborQw==}
+  /@microsoft/api-documenter@7.24.1:
+    resolution: {integrity: sha512-DX332aznb5SWpOLGuymvzg2OZsQ5+dCbSm8yvVYqTylDgSAiPouvKrdlWPoEeicuLU8wzxSl3xv7DMb6xgYwPw==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.28.13
@@ -337,7 +337,7 @@ packages:
     peerDependencies:
       typedoc: 0.25.x
     dependencies:
-      typedoc: 0.25.12(typescript@5.4.2)
+      typedoc: 0.25.12(typescript@5.4.3)
     dev: false
 
   /typedoc-plugin-missing-exports@2.2.0(typedoc@0.25.12):
@@ -345,7 +345,7 @@ packages:
     peerDependencies:
       typedoc: 0.24.x || 0.25.x
     dependencies:
-      typedoc: 0.25.12(typescript@5.4.2)
+      typedoc: 0.25.12(typescript@5.4.3)
     dev: false
 
   /typedoc-theme-hierarchy@4.1.2(typedoc@0.25.12):
@@ -354,10 +354,10 @@ packages:
       typedoc: ^0.24.0 || ^0.25.0
     dependencies:
       fs-extra: 11.1.1
-      typedoc: 0.25.12(typescript@5.4.2)
+      typedoc: 0.25.12(typescript@5.4.3)
     dev: false
 
-  /typedoc@0.25.12(typescript@5.4.2):
+  /typedoc@0.25.12(typescript@5.4.3):
     resolution: {integrity: sha512-F+qhkK2VoTweDXd1c42GS/By2DvI2uDF4/EpG424dTexSHdtCH52C6IcAvMA6jR3DzAWZjHpUOW+E02kyPNUNw==}
     engines: {node: '>= 16'}
     hasBin: true
@@ -368,11 +368,11 @@ packages:
       marked: 4.3.0
       minimatch: 9.0.3
       shiki: 0.14.7
-      typescript: 5.4.2
+      typescript: 5.4.3
     dev: false
 
-  /typescript@5.4.2:
-    resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
+  /typescript@5.4.3:
+    resolution: {integrity: sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: false
