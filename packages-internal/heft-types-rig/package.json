@@ -31,15 +31,15 @@
     "_phase:build": ""
   },
   "dependencies": {
-    "@microsoft/api-extractor": "7.42.3",
-    "@rushstack/heft-api-extractor-plugin": "0.3.21",
-    "@rushstack/heft-lint-plugin": "0.3.21",
-    "@rushstack/heft-typescript-plugin": "0.3.21",
+    "@microsoft/api-extractor": "7.43.0",
+    "@rushstack/heft-api-extractor-plugin": "0.3.22",
+    "@rushstack/heft-lint-plugin": "0.3.22",
+    "@rushstack/heft-typescript-plugin": "0.4.0",
     "eslint": "8.57.0",
     "typescript": "5.3.3"
   },
   "devDependencies": {
-    "@rushstack/heft": "0.66.1"
+    "@rushstack/heft": "0.66.2"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.63.5"
