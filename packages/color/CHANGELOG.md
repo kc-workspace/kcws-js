@@ -1,6 +1,13 @@
 # Change Log - @kcws/color
 
-This log was last generated on Tue, 19 Mar 2024 22:38:08 GMT and should not be manually modified.
+This log was last generated on Tue, 26 Mar 2024 22:38:16 GMT and should not be manually modified.
+
+## 0.10.0
+Tue, 26 Mar 2024 22:38:16 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.9.1
 Tue, 19 Mar 2024 22:38:08 GMT
