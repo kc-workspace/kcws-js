@@ -3,7 +3,7 @@
  * More documentation is available on the Rush website: https://rushjs.io
  */
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/pnpm-config.schema.json",
+  "$schema": "https://github.com/microsoft/rushstack/raw/main/libraries/rush-lib/src/schemas/pnpm-config.schema.json",
 
   /**
    * If true, then `rush install` and `rush update` will use the PNPM workspaces feature
@@ -118,6 +118,32 @@
    * The default value is false.
    */
   "preventManualShrinkwrapChanges": true,
+
+  /**
+   * Defines the policies to be checked for the `pnpm-lock.yaml` file.
+   */
+   "pnpmLockfilePolicies": {
+
+    /**
+     * This policy will cause "rush update" to report an error if `pnpm-lock.yaml` contains
+     * any SHA1 integrity hashes.
+     *
+     * For each NPM dependency, `pnpm-lock.yaml` normally stores an `integrity` hash.  Although
+     * its main purpose is to detect corrupted or truncated network requests, this hash can also
+     * serve as a security fingerprint to protect against attacks that would substitute a
+     * malicious tarball, for example if a misconfigured .npmrc caused a machine to accidentally
+     * download a matching package name+version from npmjs.com instead of the private NPM registry.
+     * NPM originally used a SHA1 hash; this was insecure because an attacker can too easily craft
+     * a tarball with a matching fingerprint.  For this reason, NPM later deprecated SHA1 and
+     * instead adopted a cryptographically strong SHA512 hash.  Nonetheless, SHA1 hashes can
+     * occasionally reappear during "rush update", for example due to missing metadata fallbacks
+     * (https://github.com/orgs/pnpm/discussions/6194) or an incompletely migrated private registry.
+     * Enable `disallowInsecureSha1` to avoid security/compliance alerts about this issue.
+     *
+     * The default value is false.
+     */
+    // "disallowInsecureSha1": true
+  },
 
   /**
    * The "globalOverrides" setting provides a simple mechanism for overriding version selections

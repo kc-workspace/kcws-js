@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@definitelytyped/eslint-plugin": "0.1.11",
-    "@rushstack/eslint-patch": "1.8.0",
+    "@rushstack/eslint-patch": "1.10.1",
     "@rushstack/eslint-plugin": "0.15.1",
     "@rushstack/eslint-plugin-security": "0.8.1",
     "@typescript-eslint/eslint-plugin": "6.21.0",

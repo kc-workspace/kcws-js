@@ -1,0 +1,205 @@
+globalExcludedGlobs:
+  - common/autoinstallers/**
+projects:
+  '@kcexamples/github-action':
+    includedGlobs:
+      - packages-example/github-action/**
+    dependentProjects:
+      - '@kcexamples/github-action'
+  '@kcexamples/heft-example-plugin':
+    includedGlobs:
+      - packages-example/heft-example-plugin/**
+    dependentProjects:
+      - '@kcexamples/heft-example-plugin'
+  '@kcexamples/local-node-lib':
+    includedGlobs:
+      - packages-example/local-node-lib/**
+    dependentProjects:
+      - '@kcexamples/local-node-lib'
+  '@kcexamples/local-web-lib':
+    includedGlobs:
+      - packages-example/local-web-lib/**
+    dependentProjects:
+      - '@kcexamples/local-web-lib'
+  '@kcexamples/node-app':
+    includedGlobs:
+      - packages-example/node-app/**
+    dependentProjects:
+      - '@kcexamples/node-app'
+  '@kcexamples/node-lib':
+    includedGlobs:
+      - packages-example/node-lib/**
+    dependentProjects:
+      - '@kcexamples/node-lib'
+  '@kcexamples/web-app':
+    includedGlobs:
+      - packages-example/web-app/**
+    dependentProjects:
+      - '@kcexamples/web-app'
+  '@kcexamples/web-lib':
+    includedGlobs:
+      - packages-example/web-lib/**
+    dependentProjects:
+      - '@kcexamples/web-lib'
+  '@kcinternals/heft-esbuild-plugin':
+    includedGlobs:
+      - packages-internal/heft-esbuild-plugin/**
+    dependentProjects:
+      - '@kcinternals/heft-esbuild-plugin'
+      - '@kcws/heft-node-rig'
+      - '@kcws/heft-web-rig'
+  '@kcinternals/heft-node-rig':
+    includedGlobs:
+      - packages-internal/heft-node-rig/**
+    dependentProjects:
+      - '@kcexamples/heft-example-plugin'
+      - '@kcexamples/local-node-lib'
+      - '@kcinternals/heft-esbuild-plugin'
+      - '@kcinternals/heft-node-rig'
+      - '@kcws/eslint-config'
+      - '@kcws/lintstaged-config'
+      - '@kcws/prettier-config'
+      - '@kcws/rspack-config'
+  '@kcinternals/heft-types-rig':
+    includedGlobs:
+      - packages-internal/heft-types-rig/**
+    dependentProjects:
+      - '@kcinternals/heft-types-rig'
+      - '@kctypes/generic'
+      - '@kctypes/package_json'
+  '@kcinternals/heft-web-rig':
+    includedGlobs:
+      - packages-internal/heft-web-rig/**
+    dependentProjects:
+      - '@kcexamples/local-web-lib'
+      - '@kcinternals/heft-web-rig'
+      - '@kcws/color'
+      - '@kcws/dtcheck'
+      - '@kcws/equals'
+      - '@kcws/error'
+      - '@kcws/mixin'
+      - '@kcws/random'
+      - '@kcws/reset.css'
+  '@kctypes/generic':
+    includedGlobs:
+      - packages-type/generic/**
+    dependentProjects:
+      - '@kctypes/generic'
+      - '@kcws/dtcheck'
+      - '@kcws/random'
+  '@kctypes/package_json':
+    includedGlobs:
+      - packages-type/package_json/**
+    dependentProjects:
+      - '@kctypes/package_json'
+  '@kcws/color':
+    includedGlobs:
+      - packages/color/**
+    dependentProjects:
+      - '@kcws/color'
+  '@kcws/dtcheck':
+    includedGlobs:
+      - packages/dtcheck/**
+    dependentProjects:
+      - '@kcws/dtcheck'
+      - '@kcws/equals'
+  '@kcws/equals':
+    includedGlobs:
+      - packages/equals/**
+    dependentProjects:
+      - '@kcws/equals'
+  '@kcws/error':
+    includedGlobs:
+      - packages/error/**
+    dependentProjects:
+      - '@kcws/error'
+  '@kcws/eslint-config':
+    includedGlobs:
+      - packages-config/eslint-config/**
+    dependentProjects:
+      - '@kcexamples/github-action'
+      - '@kcexamples/heft-example-plugin'
+      - '@kcexamples/local-node-lib'
+      - '@kcexamples/local-web-lib'
+      - '@kcexamples/node-app'
+      - '@kcexamples/node-lib'
+      - '@kcexamples/web-app'
+      - '@kcexamples/web-lib'
+      - '@kcinternals/heft-esbuild-plugin'
+      - '@kctypes/generic'
+      - '@kctypes/package_json'
+      - '@kcws/color'
+      - '@kcws/dtcheck'
+      - '@kcws/equals'
+      - '@kcws/error'
+      - '@kcws/eslint-config'
+      - '@kcws/lintstaged-config'
+      - '@kcws/mixin'
+      - '@kcws/prettier-config'
+      - '@kcws/random'
+      - '@kcws/rspack-config'
+  '@kcws/heft-node-rig':
+    includedGlobs:
+      - packages-tool/heft-node-rig/**
+    dependentProjects:
+      - '@kcexamples/github-action'
+      - '@kcexamples/node-app'
+      - '@kcexamples/node-lib'
+      - '@kcws/heft-node-rig'
+  '@kcws/heft-web-rig':
+    includedGlobs:
+      - packages-tool/heft-web-rig/**
+    dependentProjects:
+      - '@kcexamples/web-app'
+      - '@kcexamples/web-lib'
+      - '@kcws/heft-web-rig'
+  '@kcws/lintstaged-config':
+    includedGlobs:
+      - packages-config/lintstaged-config/**
+    dependentProjects:
+      - '@kcexamples/github-action'
+      - '@kcexamples/heft-example-plugin'
+      - '@kcexamples/local-node-lib'
+      - '@kcexamples/local-web-lib'
+      - '@kcexamples/node-app'
+      - '@kcexamples/node-lib'
+      - '@kcexamples/web-app'
+      - '@kcexamples/web-lib'
+      - '@kcinternals/heft-esbuild-plugin'
+      - '@kctypes/generic'
+      - '@kctypes/package_json'
+      - '@kcws/color'
+      - '@kcws/dtcheck'
+      - '@kcws/equals'
+      - '@kcws/error'
+      - '@kcws/lintstaged-config'
+      - '@kcws/mixin'
+      - '@kcws/prettier-config'
+      - '@kcws/random'
+      - '@kcws/reset.css'
+      - '@kcws/rspack-config'
+  '@kcws/mixin':
+    includedGlobs:
+      - packages/mixin/**
+    dependentProjects:
+      - '@kcws/mixin'
+  '@kcws/prettier-config':
+    includedGlobs:
+      - packages-config/prettier-config/**
+    dependentProjects:
+      - '@kcws/prettier-config'
+  '@kcws/random':
+    includedGlobs:
+      - packages/random/**
+    dependentProjects:
+      - '@kcws/random'
+  '@kcws/reset.css':
+    includedGlobs:
+      - packages/reset.css/**
+    dependentProjects:
+      - '@kcws/reset.css'
+  '@kcws/rspack-config':
+    includedGlobs:
+      - packages-config/rspack-config/**
+    dependentProjects:
+      - '@kcws/rspack-config'
