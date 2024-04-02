@@ -402,6 +402,3 @@ _site
 docs/*.md
 
 .stryker-tmp
-
-## Based on generateProjectImpactGraphDuringRushUpdate experiments
-project-impact-graph.yaml
