@@ -9,8 +9,9 @@ import { relative } from "./utils";
 type Condition = () => boolean;
 
 type Entry = Exclude<Configuration["entry"], undefined>;
-type EntryRecord = Exclude<Entry, string | string[]>;
-type EntryRecordValue = EntryRecord[string];
+// eslint-disable-next-line @typescript-eslint/ban-types
+type EntryRecord = Extract<Entry, Record<string, unknown> | Function>;
+type EntryRecordValue = Extract<Entry, Record<string, unknown>>[string];
 type EntryStringRecordValue = Extract<EntryRecordValue, string | string[]>;
 type EntryStringRecord = Record<string, EntryStringRecordValue>;
 
