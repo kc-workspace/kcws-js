@@ -2,6 +2,24 @@
   "name": "@kcws/rspack-config",
   "entries": [
     {
+      "version": "0.13.1",
+      "tag": "@kcws/rspack-config_v0.13.1",
+      "date": "Tue, 09 Apr 2024 22:39:57 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.6.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.37.2`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.14.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.13.0",
       "tag": "@kcws/rspack-config_v0.13.0",
       "date": "Tue, 02 Apr 2024 22:38:50 GMT",
