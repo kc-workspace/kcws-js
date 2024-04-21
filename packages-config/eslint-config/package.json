@@ -37,8 +37,8 @@
     "_phase:build": "heft run --only build -- --clean"
   },
   "dependencies": {
-    "@definitelytyped/eslint-plugin": "0.1.11",
-    "@rushstack/eslint-patch": "1.10.1",
+    "@definitelytyped/eslint-plugin": "0.1.12",
+    "@rushstack/eslint-patch": "1.10.2",
     "@rushstack/eslint-plugin": "0.15.1",
     "@rushstack/eslint-plugin-security": "0.8.1",
     "@typescript-eslint/eslint-plugin": "6.21.0",
@@ -48,17 +48,17 @@
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-deprecation": "2.0.0",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-jest": "27.9.0",
-    "eslint-plugin-n": "16.6.2",
+    "eslint-plugin-jest": "28.2.0",
+    "eslint-plugin-n": "17.2.1",
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-react": "7.34.1",
     "eslint-plugin-tsdoc": "0.2.17",
-    "eslint-plugin-unicorn": "51.0.1"
+    "eslint-plugin-unicorn": "52.0.0"
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
-    "@rushstack/heft": "0.66.2",
-    "@types/eslint": "8.56.6"
+    "@rushstack/heft": "0.66.3",
+    "@types/eslint": "8.56.10"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
