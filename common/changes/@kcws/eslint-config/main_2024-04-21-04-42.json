@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "prepare for flat config after rushstack support",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}
