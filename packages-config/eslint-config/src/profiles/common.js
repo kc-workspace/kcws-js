@@ -25,6 +25,33 @@ module.exports = defineConfig({
         ignore: [/\.md$/],
       },
     ],
+    "unicorn/import-style": [
+      "warn",
+      {
+        extendDefaultStyles: false,
+        // checkExportFrom: true,
+        styles: {
+          util: {
+            named: true,
+          },
+          "node:util": {
+            named: true,
+          },
+          path: {
+            default: true,
+            named: true,
+          },
+          "node:path": {
+            default: true,
+            named: true,
+          },
+          chalk: {
+            default: true,
+            named: true,
+          },
+        },
+      },
+    ],
     "unicorn/prevent-abbreviations": [
       "error",
       {

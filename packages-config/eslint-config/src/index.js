@@ -2,6 +2,7 @@
 
 const { whatIf } = require("./utils/condition");
 const { mergeConfig, defineConfig, mergeExtends } = require("./utils/config");
+const { defineFlatConfig } = require("./utils/flat-config");
 const { resolveMixin, resolveProfile } = require("./utils/resolver");
 
 /**
@@ -27,44 +28,58 @@ function createRules(data) {
 }
 
 /**
- * @param {import('./types').Data} data - a config data
- * @returns {import('eslint').Linter.Config} a eslint config
+ * @param {import('./types').Data & (import('./types').CustomEslintConfig | import('./types').CustomEslintFlatConfig)} data - a config data
+ * @returns {import('./types').EslintConfig | import('./types').EslintFlatConfig | undefined} a eslint config
  */
 function createConfig(data) {
-  require("./patch");
+  if (!data.config) data.config = "legacy";
 
-  const profile = data.profile ?? "";
-  const base = defineConfig({
-    root: true,
-    parserOptions: {
-      tsconfigRootDir: data.cwd,
-      ecmaVersion: data.ecma ?? "latest",
-    },
-    extends: mergeExtends(
-      "eslint:recommended",
-      whatIf(profile.length > 0, resolveProfile(profile, data.local)),
-      whatIf(data.typescript ?? true, resolveMixin("typescript", data.local)),
-      whatIf(data.dtyped ?? false, resolveMixin("definitelytyped", data.local)),
-      whatIf(data.tsdoc ?? false, resolveMixin("tsdoc", data.local)),
-      whatIf(data.react ?? false, resolveMixin("react", data.local)),
-      whatIf(data.jest ?? false, resolveMixin("jest", data.local)),
-      whatIf(data.rushstack ?? false, resolveMixin("rushstack", data.local)),
-      whatIf(data.commonjs ?? false, resolveMixin("commonjs", data.local)),
-      whatIf(data.prettier ?? true, resolveMixin("prettier", data.local))
-    ),
-    rules: createRules(data),
-    ignorePatterns: [
-      ".eslintrc.cjs",
-      "dist/**",
-      "temp/**",
-      "lib/**",
-      "lib-*/**",
-      ".rush/**",
-      "coverage/**",
-    ],
-  });
+  if (data.config === "legacy") {
+    require("./patch");
 
-  return mergeConfig(base, data.custom);
+    const profile = data.profile ?? "";
+    const base = defineConfig({
+      root: true,
+      parserOptions: {
+        tsconfigRootDir: data.cwd,
+        ecmaVersion: data.ecma ?? "latest",
+      },
+      extends: mergeExtends(
+        "eslint:recommended",
+        whatIf(profile.length > 0, resolveProfile(profile, data.local)),
+        whatIf(data.typescript ?? true, resolveMixin("typescript", data.local)),
+        whatIf(
+          data.dtyped ?? false,
+          resolveMixin("definitelytyped", data.local)
+        ),
+        whatIf(data.tsdoc ?? false, resolveMixin("tsdoc", data.local)),
+        whatIf(data.react ?? false, resolveMixin("react", data.local)),
+        whatIf(data.jest ?? false, resolveMixin("jest", data.local)),
+        whatIf(data.rushstack ?? false, resolveMixin("rushstack", data.local)),
+        whatIf(data.commonjs ?? false, resolveMixin("commonjs", data.local)),
+        whatIf(data.prettier ?? true, resolveMixin("prettier", data.local))
+      ),
+      rules: createRules(data),
+      ignorePatterns: [
+        ".eslintrc.cjs",
+        "dist/**",
+        "temp/**",
+        "lib/**",
+        "lib-*/**",
+        ".rush/**",
+        "coverage/**",
+      ],
+    });
+
+    return mergeConfig(base, data.custom);
+  }
+
+  if (data.config === "flat") {
+    // TODO: Implement eslint flat config builder
+    return defineFlatConfig({
+      name: "hello world",
+    });
+  }
 }
 
 module.exports = createConfig;
