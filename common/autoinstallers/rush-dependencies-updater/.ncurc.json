@@ -40,11 +40,18 @@
 
     // This depends on @commitlint/cz-commitlint
     // https://github.com/conventional-changelog/commitlint/blob/master/@commitlint/cz-commitlint/package.json
-    "inquirer",
+    // "inquirer",
 
     // This depends on @rushstack/heft
     // https://github.com/microsoft/rushstack/blob/main/apps/heft/package.json
     "@types/tapable",
-    "tapable"
+    "tapable",
+
+    // This depends on @rushstack/heft-lint-plugin and @rushstack/eslint-patch
+    // NOTE: Those two modules didn't support eslint 9 (flat config).
+    // https://github.com/microsoft/rushstack/issues/4635
+    // https://github.com/microsoft/rushstack/tree/main/heft-plugins/heft-lint-plugin
+    // https://github.com/microsoft/rushstack/tree/main/eslint/eslint-patch
+    "eslint"
   ]
 }
