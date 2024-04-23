@@ -1,6 +1,6 @@
 {
   "name": "@kcws/mixin",
-  "version": "0.35.3",
+  "version": "0.35.4",
   "description": "typescript mixin helpers",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
