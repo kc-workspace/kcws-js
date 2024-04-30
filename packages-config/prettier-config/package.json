@@ -1,6 +1,6 @@
 {
   "name": "@kcws/prettier-config",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "description": "kamontat's prettier configuration",
   "main": "src/index.js",
   "types": "lib/index.d.ts",

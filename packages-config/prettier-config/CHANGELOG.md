@@ -1,6 +1,11 @@
 # Change Log - @kcws/prettier-config
 
-This log was last generated on Tue, 23 Apr 2024 22:39:13 GMT and should not be manually modified.
+This log was last generated on Tue, 30 Apr 2024 22:38:52 GMT and should not be manually modified.
+
+## 0.10.5
+Tue, 30 Apr 2024 22:38:52 GMT
+
+_Version update only_
 
 ## 0.10.4
 Tue, 23 Apr 2024 22:39:13 GMT
