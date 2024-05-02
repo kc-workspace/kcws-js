@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/prettier-config",
+      "comment": "Update default config and change `singleQuote` to `true`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/prettier-config"
+}
