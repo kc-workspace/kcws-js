@@ -14,9 +14,16 @@ function createConfig(data) {
   const base = {
     semi: false,
     trailingComma: "es5",
-    singleQuote: false,
+    singleQuote: true,
+    jsxSingleQuote: true,
     arrowParens: "avoid",
+    quoteProps: "consistent",
     htmlWhitespaceSensitivity: "css",
+    bracketSpacing: true,
+    bracketSameLine: false,
+    singleAttributePerLine: true,
+    endOfLine: "lf",
+    printWidth: 120,
   };
 
   return { ...base, ...data.custom };
