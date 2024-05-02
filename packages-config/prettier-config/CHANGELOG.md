@@ -1,6 +1,13 @@
 # Change Log - @kcws/prettier-config
 
-This log was last generated on Tue, 30 Apr 2024 22:38:52 GMT and should not be manually modified.
+This log was last generated on Thu, 02 May 2024 06:26:48 GMT and should not be manually modified.
+
+## 0.11.0
+Thu, 02 May 2024 06:26:48 GMT
+
+### Minor changes
+
+- Update default config and change `singleQuote` to `true`
 
 ## 0.10.5
 Tue, 30 Apr 2024 22:38:52 GMT

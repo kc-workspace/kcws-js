@@ -2,6 +2,24 @@
   "name": "@kctypes/package_json",
   "entries": [
     {
+      "version": "1.11.5",
+      "tag": "@kctypes/package_json_v1.11.5",
+      "date": "Thu, 02 May 2024 06:26:49 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.15.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.37.6`"
+          },
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-types-rig\" to `0.10.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.11.4",
       "tag": "@kctypes/package_json_v1.11.4",
       "date": "Tue, 30 Apr 2024 22:38:52 GMT",

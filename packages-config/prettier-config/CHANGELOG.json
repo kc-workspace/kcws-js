@@ -2,6 +2,31 @@
   "name": "@kcws/prettier-config",
   "entries": [
     {
+      "version": "0.11.0",
+      "tag": "@kcws/prettier-config_v0.11.0",
+      "date": "Thu, 02 May 2024 06:26:48 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Update default config and change `singleQuote` to `true`",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "d764e70a3f0f9596e382539c7314c441bf99f038"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.10.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.37.6`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.15.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.10.5",
       "tag": "@kcws/prettier-config_v0.10.5",
       "date": "Tue, 30 Apr 2024 22:38:52 GMT",
