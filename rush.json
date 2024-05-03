@@ -353,6 +353,24 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/astro-decap-cms",
+      "projectFolder": "packages/astro-decap-cms",
+      "reviewCategory": "tools",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/heft-node-rig",
+      "projectFolder": "packages/heft-node-rig",
+      "reviewCategory": "tools",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@kcws/heft-web-rig",
+      "projectFolder": "packages/heft-web-rig",
+      "reviewCategory": "tools",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@kcws/eslint-config",
       "projectFolder": "packages-config/eslint-config",
       "reviewCategory": "configs",
@@ -374,18 +392,6 @@
       "packageName": "@kcws/rspack-config",
       "projectFolder": "packages-config/rspack-config",
       "reviewCategory": "configs",
-      "shouldPublish": true
-    },
-    {
-      "packageName": "@kcws/heft-node-rig",
-      "projectFolder": "packages/heft-node-rig",
-      "reviewCategory": "tools",
-      "shouldPublish": true
-    },
-    {
-      "packageName": "@kcws/heft-web-rig",
-      "projectFolder": "packages/heft-web-rig",
-      "reviewCategory": "tools",
       "shouldPublish": true
     },
     /* @kctypes packages */

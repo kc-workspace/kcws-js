@@ -56,6 +56,7 @@ projects:
       - '@kcexamples/local-node-lib'
       - '@kcinternals/heft-esbuild-plugin'
       - '@kcinternals/heft-node-rig'
+      - '@kcws/astro-decap-cms'
       - '@kcws/eslint-config'
       - '@kcws/lintstaged-config'
       - '@kcws/prettier-config'
@@ -92,6 +93,11 @@ projects:
       - packages-type/package_json/**
     dependentProjects:
       - '@kctypes/package_json'
+  '@kcws/astro-decap-cms':
+    includedGlobs:
+      - packages/astro-decap-cms/**
+    dependentProjects:
+      - '@kcws/astro-decap-cms'
   '@kcws/color':
     includedGlobs:
       - packages/color/**
@@ -128,6 +134,7 @@ projects:
       - '@kcinternals/heft-esbuild-plugin'
       - '@kctypes/generic'
       - '@kctypes/package_json'
+      - '@kcws/astro-decap-cms'
       - '@kcws/color'
       - '@kcws/dtcheck'
       - '@kcws/equals'
@@ -168,6 +175,7 @@ projects:
       - '@kcinternals/heft-esbuild-plugin'
       - '@kctypes/generic'
       - '@kctypes/package_json'
+      - '@kcws/astro-decap-cms'
       - '@kcws/color'
       - '@kcws/dtcheck'
       - '@kcws/equals'

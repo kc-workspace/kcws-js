@@ -213,6 +213,11 @@ config
     description: "@kcws/heft-web-rig & @kcinternals/heft-web-rig package",
   })
   .addNewScope({
+    key: "astro-decap-cms",
+    title: "Astro with decap CMS",
+    description: "Integrate Decap CMS to Astro repository",
+  })
+  .addNewScope({
     key: "heft-types-rig",
     title: "Heft types riggable package",
     description: "@kcinternals/heft-types-rig package",

@@ -28,3 +28,5 @@ jsts
 regexs
 pjson
 cobuild
+astro
+decap

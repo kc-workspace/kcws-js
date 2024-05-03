@@ -36,7 +36,7 @@
     },
     {
       "name": "@kcinternals/heft-node-rig",
-      "allowedCategories": [ "configs", "examples", "internals" ]
+      "allowedCategories": [ "configs", "examples", "internals", "tools" ]
     },
     {
       "name": "@kcinternals/heft-types-rig",
@@ -56,7 +56,7 @@
     },
     {
       "name": "@kcws/eslint-config",
-      "allowedCategories": [ "configs", "examples", "internals", "libraries", "types" ]
+      "allowedCategories": [ "configs", "examples", "internals", "libraries", "tools", "types" ]
     },
     {
       "name": "@kcws/heft-node-rig",
@@ -68,7 +68,7 @@
     },
     {
       "name": "@kcws/lintstaged-config",
-      "allowedCategories": [ "configs", "examples", "internals", "libraries", "types" ]
+      "allowedCategories": [ "configs", "examples", "internals", "libraries", "tools", "types" ]
     },
     {
       "name": "@microsoft/api-extractor",

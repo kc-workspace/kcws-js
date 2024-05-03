@@ -15,6 +15,7 @@
     "../../../packages/random",
     "../../../packages/reset.css",
     "../../../packages/heft-esbuild-plugin",
+    "../../../packages/astro-decap-cms",
     "../../../typings/*"
   ],
   "name": "@kcws/js",

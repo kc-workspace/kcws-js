@@ -1,0 +1,61 @@
+{
+  "name": "@kcws/astro-decap-cms",
+  "version": "0.1.0",
+  "description": "add decap cms to astro repository",
+  "main": "lib/index.js",
+  "module": "lib-esnext/index.js",
+  "types": "lib/index.d.ts",
+  "license": "AGPL-3.0-only",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/astro-decap-cms",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "packages/astro-decap-cms"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "kcws-js",
+    "astro",
+    "astro-integration",
+    "astro-component",
+    "cms",
+    "decap-cms",
+    "netlify-cms",
+    "git-based-cms"
+  ],
+  "files": [
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "dist/**/*.d.ts",
+    "lib",
+    "lib-esnext",
+    "!**/*.test.js",
+    "!**/*.test.js.map"
+  ],
+  "scripts": {
+    "build": "heft build",
+    "test": "heft test",
+    "clean": "heft clean",
+    "_phase:build": "heft run --only build -- --clean",
+    "_phase:test": "heft run --only test"
+  },
+  "devDependencies": {
+    "@kcinternals/heft-node-rig": "workspace:*",
+    "@kcws/lintstaged-config": "workspace:*",
+    "@kcws/eslint-config": "workspace:*",
+    "@rushstack/heft": "0.66.3"
+  },
+  "peerDependencies": {
+    "@rushstack/heft": ">=0.65.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

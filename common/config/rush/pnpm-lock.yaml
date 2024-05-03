@@ -160,7 +160,7 @@ importers:
         version: link:../../packages-config/eslint-config
       '@kcws/heft-node-rig':
         specifier: workspace:*
-        version: link:../../packages-tool/heft-node-rig
+        version: link:../../packages/heft-node-rig
       '@kcws/lintstaged-config':
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
@@ -238,7 +238,7 @@ importers:
         version: link:../../packages-config/eslint-config
       '@kcws/heft-node-rig':
         specifier: workspace:*
-        version: link:../../packages-tool/heft-node-rig
+        version: link:../../packages/heft-node-rig
       '@kcws/lintstaged-config':
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
@@ -262,7 +262,7 @@ importers:
         version: link:../../packages-config/eslint-config
       '@kcws/heft-node-rig':
         specifier: workspace:*
-        version: link:../../packages-tool/heft-node-rig
+        version: link:../../packages/heft-node-rig
       '@kcws/lintstaged-config':
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
@@ -286,7 +286,7 @@ importers:
         version: link:../../packages-config/eslint-config
       '@kcws/heft-web-rig':
         specifier: workspace:*
-        version: link:../../packages-tool/heft-web-rig
+        version: link:../../packages/heft-web-rig
       '@kcws/lintstaged-config':
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
@@ -310,7 +310,7 @@ importers:
         version: link:../../packages-config/eslint-config
       '@kcws/heft-web-rig':
         specifier: workspace:*
-        version: link:../../packages-tool/heft-web-rig
+        version: link:../../packages/heft-web-rig
       '@kcws/lintstaged-config':
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
@@ -466,98 +466,6 @@ importers:
         specifier: 0.66.3
         version: 0.66.3(@types/node@18.19.3)
 
-  ../../packages-tool/heft-node-rig:
-    dependencies:
-      '@kcinternals/heft-esbuild-plugin':
-        specifier: workspace:*
-        version: link:../../packages-internal/heft-esbuild-plugin
-      '@microsoft/api-extractor':
-        specifier: 7.43.1
-        version: 7.43.1(@types/node@18.19.3)
-      '@rushstack/heft-api-extractor-plugin':
-        specifier: 0.3.23
-        version: 0.3.23(@rushstack/heft@0.66.3)(@types/node@18.19.3)
-      '@rushstack/heft-jest-plugin':
-        specifier: 0.11.24
-        version: 0.11.24(@rushstack/heft@0.66.3)(@types/node@18.19.3)(jest-environment-node@29.7.0)
-      '@rushstack/heft-lint-plugin':
-        specifier: 0.3.24
-        version: 0.3.24(@rushstack/heft@0.66.3)(@types/node@18.19.3)
-      '@rushstack/heft-typescript-plugin':
-        specifier: 0.5.1
-        version: 0.5.1(@rushstack/heft@0.66.3)(@types/node@18.19.3)
-      '@types/heft-jest':
-        specifier: 1.0.6
-        version: 1.0.6
-      '@types/node':
-        specifier: 18.19.3
-        version: 18.19.3
-      eslint:
-        specifier: 8.57.0
-        version: 8.57.0
-      jest-environment-node:
-        specifier: 29.7.0
-        version: 29.7.0
-      jest-html-reporters:
-        specifier: 3.1.7
-        version: 3.1.7
-      jest-junit:
-        specifier: 16.0.0
-        version: 16.0.0
-      typescript:
-        specifier: 5.3.3
-        version: 5.3.3
-    devDependencies:
-      '@rushstack/heft':
-        specifier: 0.66.3
-        version: 0.66.3(@types/node@18.19.3)
-
-  ../../packages-tool/heft-web-rig:
-    dependencies:
-      '@kcinternals/heft-esbuild-plugin':
-        specifier: workspace:*
-        version: link:../../packages-internal/heft-esbuild-plugin
-      '@microsoft/api-extractor':
-        specifier: 7.43.1
-        version: 7.43.1(@types/node@18.19.3)
-      '@rushstack/heft-api-extractor-plugin':
-        specifier: 0.3.23
-        version: 0.3.23(@rushstack/heft@0.66.3)(@types/node@18.19.3)
-      '@rushstack/heft-jest-plugin':
-        specifier: 0.11.24
-        version: 0.11.24(@rushstack/heft@0.66.3)(jest-environment-jsdom@29.7.0)
-      '@rushstack/heft-lint-plugin':
-        specifier: 0.3.24
-        version: 0.3.24(@rushstack/heft@0.66.3)(@types/node@18.19.3)
-      '@rushstack/heft-sass-plugin':
-        specifier: 0.13.26
-        version: 0.13.26(@rushstack/heft@0.66.3)
-      '@rushstack/heft-typescript-plugin':
-        specifier: 0.5.1
-        version: 0.5.1(@rushstack/heft@0.66.3)(@types/node@18.19.3)
-      '@types/heft-jest':
-        specifier: 1.0.6
-        version: 1.0.6
-      eslint:
-        specifier: 8.57.0
-        version: 8.57.0
-      jest-environment-jsdom:
-        specifier: 29.7.0
-        version: 29.7.0
-      jest-html-reporters:
-        specifier: 3.1.7
-        version: 3.1.7
-      jest-junit:
-        specifier: 16.0.0
-        version: 16.0.0
-      typescript:
-        specifier: 5.3.3
-        version: 5.3.3
-    devDependencies:
-      '@rushstack/heft':
-        specifier: 0.66.3
-        version: 0.66.3(@types/node@18.19.3)
-
   ../../packages-type/generic:
     devDependencies:
       '@kcinternals/heft-types-rig':
@@ -599,6 +507,21 @@ importers:
       typescript:
         specifier: 5.3.3
         version: 5.3.3
+
+  ../../packages/astro-decap-cms:
+    devDependencies:
+      '@kcinternals/heft-node-rig':
+        specifier: workspace:*
+        version: link:../../packages-internal/heft-node-rig
+      '@kcws/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages-config/eslint-config
+      '@kcws/lintstaged-config':
+        specifier: workspace:*
+        version: link:../../packages-config/lintstaged-config
+      '@rushstack/heft':
+        specifier: 0.66.3
+        version: 0.66.3(@types/node@18.19.3)
 
   ../../packages/color:
     devDependencies:
@@ -663,6 +586,98 @@ importers:
       '@kcws/lintstaged-config':
         specifier: workspace:*
         version: link:../../packages-config/lintstaged-config
+      '@rushstack/heft':
+        specifier: 0.66.3
+        version: 0.66.3(@types/node@18.19.3)
+
+  ../../packages/heft-node-rig:
+    dependencies:
+      '@kcinternals/heft-esbuild-plugin':
+        specifier: workspace:*
+        version: link:../../packages-internal/heft-esbuild-plugin
+      '@microsoft/api-extractor':
+        specifier: 7.43.1
+        version: 7.43.1(@types/node@18.19.3)
+      '@rushstack/heft-api-extractor-plugin':
+        specifier: 0.3.23
+        version: 0.3.23(@rushstack/heft@0.66.3)(@types/node@18.19.3)
+      '@rushstack/heft-jest-plugin':
+        specifier: 0.11.24
+        version: 0.11.24(@rushstack/heft@0.66.3)(@types/node@18.19.3)(jest-environment-node@29.7.0)
+      '@rushstack/heft-lint-plugin':
+        specifier: 0.3.24
+        version: 0.3.24(@rushstack/heft@0.66.3)(@types/node@18.19.3)
+      '@rushstack/heft-typescript-plugin':
+        specifier: 0.5.1
+        version: 0.5.1(@rushstack/heft@0.66.3)(@types/node@18.19.3)
+      '@types/heft-jest':
+        specifier: 1.0.6
+        version: 1.0.6
+      '@types/node':
+        specifier: 18.19.3
+        version: 18.19.3
+      eslint:
+        specifier: 8.57.0
+        version: 8.57.0
+      jest-environment-node:
+        specifier: 29.7.0
+        version: 29.7.0
+      jest-html-reporters:
+        specifier: 3.1.7
+        version: 3.1.7
+      jest-junit:
+        specifier: 16.0.0
+        version: 16.0.0
+      typescript:
+        specifier: 5.3.3
+        version: 5.3.3
+    devDependencies:
+      '@rushstack/heft':
+        specifier: 0.66.3
+        version: 0.66.3(@types/node@18.19.3)
+
+  ../../packages/heft-web-rig:
+    dependencies:
+      '@kcinternals/heft-esbuild-plugin':
+        specifier: workspace:*
+        version: link:../../packages-internal/heft-esbuild-plugin
+      '@microsoft/api-extractor':
+        specifier: 7.43.1
+        version: 7.43.1(@types/node@18.19.3)
+      '@rushstack/heft-api-extractor-plugin':
+        specifier: 0.3.23
+        version: 0.3.23(@rushstack/heft@0.66.3)(@types/node@18.19.3)
+      '@rushstack/heft-jest-plugin':
+        specifier: 0.11.24
+        version: 0.11.24(@rushstack/heft@0.66.3)(jest-environment-jsdom@29.7.0)
+      '@rushstack/heft-lint-plugin':
+        specifier: 0.3.24
+        version: 0.3.24(@rushstack/heft@0.66.3)(@types/node@18.19.3)
+      '@rushstack/heft-sass-plugin':
+        specifier: 0.13.26
+        version: 0.13.26(@rushstack/heft@0.66.3)
+      '@rushstack/heft-typescript-plugin':
+        specifier: 0.5.1
+        version: 0.5.1(@rushstack/heft@0.66.3)(@types/node@18.19.3)
+      '@types/heft-jest':
+        specifier: 1.0.6
+        version: 1.0.6
+      eslint:
+        specifier: 8.57.0
+        version: 8.57.0
+      jest-environment-jsdom:
+        specifier: 29.7.0
+        version: 29.7.0
+      jest-html-reporters:
+        specifier: 3.1.7
+        version: 3.1.7
+      jest-junit:
+        specifier: 16.0.0
+        version: 16.0.0
+      typescript:
+        specifier: 5.3.3
+        version: 5.3.3
+    devDependencies:
       '@rushstack/heft':
         specifier: 0.66.3
         version: 0.66.3(@types/node@18.19.3)
@@ -1627,7 +1642,7 @@ packages:
       '@jest/console': 29.7.0
       '@jest/reporters': 29.5.0
       '@jest/test-result': 29.7.0
-      '@jest/transform': 29.5.0
+      '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
       '@types/node': 18.19.3
       ansi-escapes: 4.3.2
@@ -1640,11 +1655,11 @@ packages:
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
-      jest-resolve: 29.5.0
+      jest-resolve: 29.7.0
       jest-resolve-dependencies: 29.7.0
       jest-runner: 29.7.0
       jest-runtime: 29.7.0
-      jest-snapshot: 29.5.0
+      jest-snapshot: 29.7.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
       jest-watcher: 29.7.0
@@ -1720,7 +1735,7 @@ packages:
       '@bcoe/v8-coverage': 0.2.3
       '@jest/console': 29.7.0
       '@jest/test-result': 29.7.0
-      '@jest/transform': 29.5.0
+      '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
       '@jridgewell/trace-mapping': 0.3.25
       '@types/node': 18.19.3
@@ -3918,6 +3933,7 @@ packages:
 
   /core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+    requiresBuild: true
     dev: false
 
   /cosmiconfig@9.0.0:
@@ -5869,6 +5885,7 @@ packages:
 
   /isarray@1.0.0:
     resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
+    requiresBuild: true
     dev: false
 
   /isarray@2.0.5:
@@ -6007,7 +6024,7 @@ packages:
       jest-environment-node: 29.7.0
       jest-get-type: 29.6.3
       jest-regex-util: 29.6.3
-      jest-resolve: 29.5.0
+      jest-resolve: 29.7.0
       jest-runner: 29.7.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
@@ -6302,7 +6319,7 @@ packages:
       '@babel/traverse': 7.24.1
       '@babel/types': 7.24.0
       '@jest/expect-utils': 29.7.0
-      '@jest/transform': 29.5.0
+      '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
       '@types/babel__traverse': 7.20.5
       '@types/prettier': 2.7.3
@@ -7368,6 +7385,7 @@ packages:
 
   /process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
+    requiresBuild: true
     dev: false
 
   /process@0.11.10:
@@ -8215,6 +8233,7 @@ packages:
 
   /string_decoder@1.1.1:
     resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==}
+    requiresBuild: true
     dependencies:
       safe-buffer: 5.1.2
     dev: false

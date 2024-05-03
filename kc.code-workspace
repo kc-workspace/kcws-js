@@ -29,6 +29,22 @@
       "path": "packages/reset.css"
     },
     {
+      "name": "@kcws/astro-decap-cms",
+      "path": "packages/astro-decap-cms"
+    },
+    {
+      "name": "@kcws/heft-node-rig",
+      "path": "packages/heft-node-rig"
+    },
+    {
+      "name": "@kcws/heft-web-rig",
+      "path": "packages/heft-web-rig"
+    },
+    {
+      "name": "@kcws/rspack-config",
+      "path": "packages-config/rspack-config"
+    },
+    {
       "name": "@kcws/eslint-config",
       "path": "packages-config/eslint-config"
     },
@@ -39,18 +55,6 @@
     {
       "name": "@kcws/prettier-config",
       "path": "packages-config/prettier-config"
-    },
-    {
-      "name": "@kcws/rspack-config",
-      "path": "packages-config/rspack-config"
-    },
-    {
-      "name": "@kcws/heft-node-rig",
-      "path": "packages/heft-node-rig"
-    },
-    {
-      "name": "@kcws/heft-web-rig",
-      "path": "packages/heft-web-rig"
     },
     {
       "name": "@kctypes/all",
