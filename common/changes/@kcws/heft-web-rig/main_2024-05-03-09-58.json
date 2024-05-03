@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/heft-web-rig",
+      "comment": "Move out from tools directory",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/heft-web-rig"
+}
