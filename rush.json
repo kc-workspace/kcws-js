@@ -378,13 +378,13 @@
     },
     {
       "packageName": "@kcws/heft-node-rig",
-      "projectFolder": "packages-tool/heft-node-rig",
+      "projectFolder": "packages/heft-node-rig",
       "reviewCategory": "tools",
       "shouldPublish": true
     },
     {
       "packageName": "@kcws/heft-web-rig",
-      "projectFolder": "packages-tool/heft-web-rig",
+      "projectFolder": "packages/heft-web-rig",
       "reviewCategory": "tools",
       "shouldPublish": true
     },

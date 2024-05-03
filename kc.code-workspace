@@ -46,11 +46,11 @@
     },
     {
       "name": "@kcws/heft-node-rig",
-      "path": "packages-tool/heft-node-rig"
+      "path": "packages/heft-node-rig"
     },
     {
       "name": "@kcws/heft-web-rig",
-      "path": "packages-tool/heft-web-rig"
+      "path": "packages/heft-web-rig"
     },
     {
       "name": "@kctypes/all",

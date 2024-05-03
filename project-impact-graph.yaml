@@ -140,7 +140,7 @@ projects:
       - '@kcws/rspack-config'
   '@kcws/heft-node-rig':
     includedGlobs:
-      - packages-tool/heft-node-rig/**
+      - packages/heft-node-rig/**
     dependentProjects:
       - '@kcexamples/github-action'
       - '@kcexamples/node-app'
@@ -148,7 +148,7 @@ projects:
       - '@kcws/heft-node-rig'
   '@kcws/heft-web-rig':
     includedGlobs:
-      - packages-tool/heft-web-rig/**
+      - packages/heft-web-rig/**
     dependentProjects:
       - '@kcexamples/web-app'
       - '@kcexamples/web-lib'
