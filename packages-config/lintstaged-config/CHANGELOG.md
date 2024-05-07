@@ -1,6 +1,14 @@
 # Change Log - @kcws/lintstaged-config
 
-This log was last generated on Thu, 02 May 2024 06:26:49 GMT and should not be manually modified.
+This log was last generated on Tue, 07 May 2024 22:38:44 GMT and should not be manually modified.
+
+## 0.38.0
+Tue, 07 May 2024 22:38:44 GMT
+
+### Minor changes
+
+- Increase minimum nodejs version support
+- upgrade dependencies [auto]
 
 ## 0.37.6
 Thu, 02 May 2024 06:26:49 GMT

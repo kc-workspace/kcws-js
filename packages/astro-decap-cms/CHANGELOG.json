@@ -1,0 +1,37 @@
+{
+  "name": "@kcws/astro-decap-cms",
+  "entries": [
+    {
+      "version": "0.2.0",
+      "tag": "@kcws/astro-decap-cms_v0.2.0",
+      "date": "Tue, 07 May 2024 22:38:44 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Initiate empty project for astro integration",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "b906741c4ed80a65293b340af47189fb88f899f1"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "e9963eb2fcdf4149402e414886ea843efa2bea78"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.11.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.38.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.16.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

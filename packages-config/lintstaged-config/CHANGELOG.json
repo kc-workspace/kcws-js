@@ -2,6 +2,33 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "0.38.0",
+      "tag": "@kcws/lintstaged-config_v0.38.0",
+      "date": "Tue, 07 May 2024 22:38:44 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Increase minimum nodejs version support",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "aba2dd4539f826cf83afc5bc637d9d4671ea7351"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "e9963eb2fcdf4149402e414886ea843efa2bea78"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.11.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.16.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.37.6",
       "tag": "@kcws/lintstaged-config_v0.37.6",
       "date": "Thu, 02 May 2024 06:26:49 GMT",

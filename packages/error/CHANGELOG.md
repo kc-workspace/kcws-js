@@ -1,6 +1,13 @@
 # Change Log - @kcws/error
 
-This log was last generated on Thu, 02 May 2024 06:26:49 GMT and should not be manually modified.
+This log was last generated on Tue, 07 May 2024 22:38:44 GMT and should not be manually modified.
+
+## 0.10.0
+Tue, 07 May 2024 22:38:44 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.9.6
 Thu, 02 May 2024 06:26:49 GMT
