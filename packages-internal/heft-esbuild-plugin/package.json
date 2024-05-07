@@ -58,6 +58,6 @@
     "@rushstack/heft": ">=0.65.5"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14.13.1"
   }
 }
