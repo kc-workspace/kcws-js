@@ -47,12 +47,12 @@
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.66.3"
+    "@rushstack/heft": "0.66.4"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.65.5"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14.13.1"
   }
 }
