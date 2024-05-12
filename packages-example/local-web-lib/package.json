@@ -49,7 +49,7 @@
     "@kcinternals/heft-web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.66.4"
+    "@rushstack/heft": "0.66.6"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.65.5"
