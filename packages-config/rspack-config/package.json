@@ -1,6 +1,6 @@
 {
   "name": "@kcws/rspack-config",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "rspack configuration builder",
   "main": "lib/index.js",
   "module": "lib-esnext/index.js",

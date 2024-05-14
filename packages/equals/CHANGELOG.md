@@ -1,6 +1,13 @@
 # Change Log - @kcws/equals
 
-This log was last generated on Tue, 07 May 2024 22:38:44 GMT and should not be manually modified.
+This log was last generated on Tue, 14 May 2024 22:38:41 GMT and should not be manually modified.
+
+## 0.17.0
+Tue, 14 May 2024 22:38:41 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.16.0
 Tue, 07 May 2024 22:38:44 GMT
