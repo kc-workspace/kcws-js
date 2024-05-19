@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@microsoft/api-documenter':
-        specifier: 7.24.5
-        version: 7.24.5
+        specifier: 7.24.8
+        version: 7.24.8
       typedoc:
         specifier: 0.25.13
         version: 0.25.13(typescript@5.4.5)
@@ -26,12 +26,12 @@ importers:
 
 packages:
 
-  '@microsoft/api-documenter@7.24.5':
-    resolution: {integrity: sha512-ta+4H/B2bYvZARZYMqnJuFN0FlQ77uMUY3xqVJtaQHO5VYnKA5XtV4H/ltCMr5b/MZcg+z0NTjMtOnvR/Q7W0g==}
+  '@microsoft/api-documenter@7.24.8':
+    resolution: {integrity: sha512-5gTlnaeRWp4qY1LyWfzPi9NTsFdxW/+/nWpSMlHGPuYoPuQ5x8pm7LdTbBcLnisY7Gj/+o0+VwC+47mKtQdPZQ==}
     hasBin: true
 
-  '@microsoft/api-extractor-model@7.28.16':
-    resolution: {integrity: sha512-4/5gbW9zazr7hHHdv32QoCFDQl4vsrMOFp7g9k/uIQR2mn7AqQVN6NvNOAnFi1xwCM6X3K1BN1ZWf9ARF5hUmA==}
+  '@microsoft/api-extractor-model@7.28.17':
+    resolution: {integrity: sha512-b2AfLP33oEVtWLeNavSBRdyDa8sKlXjN4pdhBnC4HLontOtjILhL1ERAmZObF4PWSyChnnC2vjb47C9WKCFRGg==}
 
   '@microsoft/tsdoc-config@0.16.2':
     resolution: {integrity: sha512-OGiIzzoBLgWWR0UdRJX98oYO+XKGf7tiK4Zk6tQ/E4IJqGCe7dvkTvgDZV5cFJUzLGDOjeAXrnZoA6QkVySuxw==}
@@ -39,24 +39,24 @@ packages:
   '@microsoft/tsdoc@0.14.2':
     resolution: {integrity: sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==}
 
-  '@rushstack/node-core-library@4.2.1':
-    resolution: {integrity: sha512-jO8tR7ySxwy2c34QXSQDT9C22EfyisQruKT39FpipPOJAwKejug86eM+FL0QmkqbWGwpmfzkp3pyV71I5ZD9FA==}
+  '@rushstack/node-core-library@4.3.0':
+    resolution: {integrity: sha512-JuNZ7lwaYQ4R1TugpryyWBn4lIxK+L7fF+muibFp0by5WklG22nsvH868fuBoZMLo5FqAs6WFOifNos4PJjWSA==}
     peerDependencies:
       '@types/node': '*'
     peerDependenciesMeta:
       '@types/node':
         optional: true
 
-  '@rushstack/terminal@0.10.3':
-    resolution: {integrity: sha512-4wEPvn9bTD4cixW+FQxlCtZmVIp73gUEAFutPXDo7Nik5bqmbP+fkZcd3Zjr+hOQyyu85d6+1R1DOPcchJX5ww==}
+  '@rushstack/terminal@0.11.0':
+    resolution: {integrity: sha512-LKz7pv0G9Py5uULahNSixK1pTqIIKd103pAGhDW51YfzPojvmO5wfITe0PEUNAJZjuufN/KgeRW83dJo1gL2rQ==}
     peerDependencies:
       '@types/node': '*'
     peerDependenciesMeta:
       '@types/node':
         optional: true
 
-  '@rushstack/ts-command-line@4.19.5':
-    resolution: {integrity: sha512-0baDWdyMeB2LFHn1T8PKmy2rGclJoDruOjxwARrM4Oe66YjO9GfVZYwpM8ePdzJprWhkCnYLSxGUKJiWmUpapg==}
+  '@rushstack/ts-command-line@4.21.0':
+    resolution: {integrity: sha512-z38FLUCn8M9FQf19gJ9eltdwkvc47PxvJmVZS6aKwbBAa3Pis3r3A+ZcBCVPNb9h/Tbga+i0tHdzoSGUoji9GQ==}
 
   '@types/argparse@1.0.38':
     resolution: {integrity: sha512-ebDJ9b0e702Yr7pWgB0jzm+CX4Srzz8RcXtLJDJB+BSccqMa36uyH/zUsSYao5+BD1ytv3k3rPYCq4mAE1hsXA==}
@@ -256,23 +256,23 @@ packages:
 
 snapshots:
 
-  '@microsoft/api-documenter@7.24.5':
+  '@microsoft/api-documenter@7.24.8':
     dependencies:
-      '@microsoft/api-extractor-model': 7.28.16
+      '@microsoft/api-extractor-model': 7.28.17
       '@microsoft/tsdoc': 0.14.2
-      '@rushstack/node-core-library': 4.2.1
-      '@rushstack/terminal': 0.10.3
-      '@rushstack/ts-command-line': 4.19.5
+      '@rushstack/node-core-library': 4.3.0
+      '@rushstack/terminal': 0.11.0
+      '@rushstack/ts-command-line': 4.21.0
       js-yaml: 3.13.1
       resolve: 1.22.8
     transitivePeerDependencies:
       - '@types/node'
 
-  '@microsoft/api-extractor-model@7.28.16':
+  '@microsoft/api-extractor-model@7.28.17':
     dependencies:
       '@microsoft/tsdoc': 0.14.2
       '@microsoft/tsdoc-config': 0.16.2
-      '@rushstack/node-core-library': 4.2.1
+      '@rushstack/node-core-library': 4.3.0
     transitivePeerDependencies:
       - '@types/node'
 
@@ -285,7 +285,7 @@ snapshots:
 
   '@microsoft/tsdoc@0.14.2': {}
 
-  '@rushstack/node-core-library@4.2.1':
+  '@rushstack/node-core-library@4.3.0':
     dependencies:
       fs-extra: 7.0.1
       import-lazy: 4.0.0
@@ -294,14 +294,14 @@ snapshots:
       semver: 7.5.4
       z-schema: 5.0.5
 
-  '@rushstack/terminal@0.10.3':
+  '@rushstack/terminal@0.11.0':
     dependencies:
-      '@rushstack/node-core-library': 4.2.1
+      '@rushstack/node-core-library': 4.3.0
       supports-color: 8.1.1
 
-  '@rushstack/ts-command-line@4.19.5':
+  '@rushstack/ts-command-line@4.21.0':
     dependencies:
-      '@rushstack/terminal': 0.10.3
+      '@rushstack/terminal': 0.11.0
       '@types/argparse': 1.0.38
       argparse: 1.0.10
       string-argv: 0.3.2
