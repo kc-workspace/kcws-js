@@ -44,12 +44,12 @@
     "_phase:test": "heft run --only test"
   },
   "dependencies": {
-    "micromatch": "4.0.5"
+    "micromatch": "4.0.7"
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.66.9",
+    "@rushstack/heft": "0.66.12",
     "@types/micromatch": "4.0.7"
   },
   "engines": {
