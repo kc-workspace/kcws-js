@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
-    "@rushstack/heft": "0.66.9",
+    "@rushstack/heft": "0.66.12",
     "@types/eslint": "8.56.10"
   },
   "peerDependencies": {
