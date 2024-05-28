@@ -2,6 +2,31 @@
   "name": "@kcws/mixin",
   "entries": [
     {
+      "version": "0.39.0",
+      "tag": "@kcws/mixin_v0.39.0",
+      "date": "Tue, 28 May 2024 22:39:42 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "fe897fb155f04adfb8526a29c3610c709abbd8f6"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.14.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.41.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.19.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.38.0",
       "tag": "@kcws/mixin_v0.38.0",
       "date": "Tue, 21 May 2024 22:38:53 GMT",
