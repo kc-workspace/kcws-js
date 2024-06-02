@@ -49,7 +49,7 @@
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.66.12",
+    "@rushstack/heft": "0.66.17",
     "@types/micromatch": "4.0.7"
   },
   "engines": {
