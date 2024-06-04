@@ -1,6 +1,13 @@
 # Change Log - @kcws/rspack-config
 
-This log was last generated on Tue, 28 May 2024 22:39:42 GMT and should not be manually modified.
+This log was last generated on Tue, 04 Jun 2024 22:40:22 GMT and should not be manually modified.
+
+## 0.19.0
+Tue, 04 Jun 2024 22:40:22 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.18.0
 Tue, 28 May 2024 22:39:42 GMT
