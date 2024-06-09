@@ -46,7 +46,7 @@
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.66.17",
+    "@rushstack/heft": "0.66.18",
     "@rushstack/terminal": "0.13.0",
     "@types/tapable": "1.0.6",
     "tapable": "1.1.3"
