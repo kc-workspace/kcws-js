@@ -5,7 +5,7 @@
     {
       "pluginName": "example-plugin",
       "entryPoint": "./lib/ExamplePlugin",
-      "optionsSchema": "./lib/schemas/heft-example-plugin.schema.json",
+      "optionsSchema": "./schemas/heft-example-plugin.schema.json",
 
       "parameterScope": "example",
       "parameters": []

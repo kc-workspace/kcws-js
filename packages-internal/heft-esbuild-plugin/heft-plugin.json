@@ -5,7 +5,7 @@
     {
       "pluginName": "esbuild-plugin",
       "entryPoint": "./lib/EsbuildPlugin",
-      "optionsSchema": "./lib/schemas/heft-esbuild-plugin.schema.json",
+      "optionsSchema": "./schemas/heft-esbuild-plugin.schema.json",
 
       "parameterScope": "esbuild",
       "parameters": []
