@@ -12,7 +12,7 @@ export interface BaseContext {
 }
 
 /**
- * A base plugin class for extends context functionility
+ * A base plugin class for extends context functionality
  * @public
  */
 export interface ContextPlugin<NAME extends string> {
