@@ -1,0 +1,62 @@
+{
+  "name": "@kcws/github-actions",
+  "version": "0.1.0",
+  "description": "github actions utilities",
+  "main": "lib/index.js",
+  "module": "lib-esnext/index.js",
+  "types": "lib/index.d.ts",
+  "license": "AGPL-3.0-only",
+  "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages/github-actions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kc-workspace/kcws-js.git",
+    "directory": "packages/github-actions"
+  },
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kcws@kc.in.th",
+    "url": "https://github.com/kamontat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "github-actions",
+    "github",
+    "actions",
+    "utilities"
+  ],
+  "files": [
+    "CHANGELOG.json",
+    "CHANGELOG.md",
+    "dist/**/*.d.ts",
+    "lib",
+    "lib-esnext",
+    "!**/*.test.js",
+    "!**/*.test.js.map"
+  ],
+  "scripts": {
+    "build": "heft build",
+    "test": "heft test",
+    "clean": "heft clean",
+    "_phase:build": "heft run --only build -- --clean",
+    "_phase:test": "heft run --only test"
+  },
+  "dependencies": {
+    "@actions/cache": "3.2.4",
+    "@actions/core": "1.10.1",
+    "@actions/exec": "1.1.1"
+  },
+  "devDependencies": {
+    "@kcinternals/heft-node-rig": "workspace:*",
+    "@kcws/lintstaged-config": "workspace:*",
+    "@kcws/eslint-config": "workspace:*",
+    "@rushstack/heft": "0.66.18"
+  },
+  "peerDependencies": {
+    "@rushstack/heft": ">=0.65.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
