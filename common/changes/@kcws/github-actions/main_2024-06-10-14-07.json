@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Migrate actions helpers from GitHub Actions repository",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}

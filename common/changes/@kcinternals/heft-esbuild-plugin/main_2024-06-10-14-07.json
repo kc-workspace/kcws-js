@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcinternals/heft-esbuild-plugin",
+      "comment": "Fix heft clean cause schemas deleted",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcinternals/heft-esbuild-plugin"
+}
