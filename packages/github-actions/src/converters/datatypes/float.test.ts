@@ -2,7 +2,7 @@ import { convert, convertToFloat, toFloat } from "..";
 
 type Testcases = [unknown, number | Error][];
 
-describe("converters.dtypes.float", () => {
+describe("converters.datatypes.float", () => {
   const cases: Testcases = [
     [
       "hello",

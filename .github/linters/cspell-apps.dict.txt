@@ -20,3 +20,4 @@ estree
 sonar
 sonarqube
 sonarcloud
+astrojs

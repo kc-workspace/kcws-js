@@ -2,7 +2,7 @@ import { convert, convertToBool, toBool } from "..";
 
 type Testcases = [unknown, boolean | Error][];
 
-describe("converters.dtypes.boolean", () => {
+describe("converters.datatypes.boolean", () => {
   const cases: Testcases = [
     [
       "hello",

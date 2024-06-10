@@ -2,7 +2,7 @@ import { convert, convertToInt, toInt } from "..";
 
 type Testcases = [unknown, number | Error][];
 
-describe("converters.dtypes.int", () => {
+describe("converters.datatypes.int", () => {
   const cases: Testcases = [
     [
       "hello",

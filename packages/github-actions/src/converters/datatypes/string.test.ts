@@ -2,7 +2,7 @@ import { convert, convertToString, toString } from "..";
 
 type Testcases = [unknown, string | Error][];
 
-describe("converters.dtypes.string", () => {
+describe("converters.datatypes.string", () => {
   const cases: Testcases = [
     ["hello", "hello"],
     [123, "123"],
