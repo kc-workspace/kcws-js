@@ -323,9 +323,15 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@kcws/github-actions",
+      "projectFolder": "packages/github-actions",
+      "reviewCategory": "libraries",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@kcws/astro-decap-cms",
       "projectFolder": "packages/astro-decap-cms",
-      "reviewCategory": "tools",
+      "reviewCategory": "libraries",
       "shouldPublish": true
     },
     {

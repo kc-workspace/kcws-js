@@ -218,6 +218,11 @@ config
     description: "Integrate Decap CMS to Astro repository",
   })
   .addNewScope({
+    key: "github-actions",
+    title: "Github Actions Utilities",
+    description: "Utilities function for create Github Actions",
+  })
+  .addNewScope({
     key: "heft-types-rig",
     title: "Heft types riggable package",
     description: "@kcinternals/heft-types-rig package",

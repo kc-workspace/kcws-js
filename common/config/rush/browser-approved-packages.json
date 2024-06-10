@@ -4,15 +4,15 @@
   "packages": [
     {
       "name": "@actions/cache",
-      "allowedCategories": [ "examples" ]
+      "allowedCategories": [ "examples", "libraries" ]
     },
     {
       "name": "@actions/core",
-      "allowedCategories": [ "examples" ]
+      "allowedCategories": [ "examples", "libraries" ]
     },
     {
       "name": "@actions/exec",
-      "allowedCategories": [ "examples" ]
+      "allowedCategories": [ "examples", "libraries" ]
     },
     {
       "name": "@actions/github",
@@ -28,7 +28,7 @@
     },
     {
       "name": "@astrojs/check",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "libraries", "tools" ]
     },
     {
       "name": "@definitelytyped/eslint-plugin",
@@ -40,7 +40,7 @@
     },
     {
       "name": "@kcinternals/heft-node-rig",
-      "allowedCategories": [ "configs", "examples", "internals", "tools" ]
+      "allowedCategories": [ "configs", "examples", "internals", "libraries", "tools" ]
     },
     {
       "name": "@kcinternals/heft-types-rig",
@@ -64,7 +64,7 @@
     },
     {
       "name": "@kcws/heft-node-rig",
-      "allowedCategories": [ "examples" ]
+      "allowedCategories": [ "examples", "libraries" ]
     },
     {
       "name": "@kcws/heft-web-rig",
@@ -136,7 +136,7 @@
     },
     {
       "name": "astro",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "libraries", "tools" ]
     },
     {
       "name": "decap-cms-app",
@@ -144,7 +144,7 @@
     },
     {
       "name": "decap-server",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "libraries", "tools" ]
     },
     {
       "name": "esbuild",
@@ -240,7 +240,7 @@
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "examples", "internals", "tools", "types" ]
+      "allowedCategories": [ "examples", "internals", "libraries", "tools", "types" ]
     }
   ]
 }

@@ -29,6 +29,10 @@
       "path": "packages/reset.css"
     },
     {
+      "name": "@kcws/github-actions",
+      "path": "packages/github-actions"
+    },
+    {
       "name": "@kcws/astro-decap-cms",
       "path": "packages/astro-decap-cms"
     },

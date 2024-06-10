@@ -58,6 +58,7 @@ projects:
       - '@kcinternals/heft-node-rig'
       - '@kcws/astro-decap-cms'
       - '@kcws/eslint-config'
+      - '@kcws/github-actions'
       - '@kcws/lintstaged-config'
       - '@kcws/prettier-config'
       - '@kcws/rspack-config'
@@ -140,11 +141,17 @@ projects:
       - '@kcws/equals'
       - '@kcws/error'
       - '@kcws/eslint-config'
+      - '@kcws/github-actions'
       - '@kcws/lintstaged-config'
       - '@kcws/mixin'
       - '@kcws/prettier-config'
       - '@kcws/random'
       - '@kcws/rspack-config'
+  '@kcws/github-actions':
+    includedGlobs:
+      - packages/github-actions/**
+    dependentProjects:
+      - '@kcws/github-actions'
   '@kcws/heft-node-rig':
     includedGlobs:
       - packages/heft-node-rig/**
@@ -180,6 +187,7 @@ projects:
       - '@kcws/dtcheck'
       - '@kcws/equals'
       - '@kcws/error'
+      - '@kcws/github-actions'
       - '@kcws/lintstaged-config'
       - '@kcws/mixin'
       - '@kcws/prettier-config'
