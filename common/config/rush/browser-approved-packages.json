@@ -27,6 +27,10 @@
       "allowedCategories": [ "examples" ]
     },
     {
+      "name": "@astrojs/check",
+      "allowedCategories": [ "tools" ]
+    },
+    {
       "name": "@definitelytyped/eslint-plugin",
       "allowedCategories": [ "configs" ]
     },
@@ -129,6 +133,18 @@
     {
       "name": "@typescript-eslint/parser",
       "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "astro",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "decap-cms-app",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "decap-server",
+      "allowedCategories": [ "tools" ]
     },
     {
       "name": "esbuild",
