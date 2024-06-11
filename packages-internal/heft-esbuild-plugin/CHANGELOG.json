@@ -2,6 +2,36 @@
   "name": "@kcinternals/heft-esbuild-plugin",
   "entries": [
     {
+      "version": "0.11.0",
+      "tag": "@kcinternals/heft-esbuild-plugin_v0.11.0",
+      "date": "Tue, 11 Jun 2024 09:04:30 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "c62823e621dd9c391166d9bbac69b19f9e3dc02b"
+          },
+          {
+            "comment": "Fix heft clean cause schemas deleted",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "cee3261c5c10f153856174ddef87a4afed33ca5d"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.16.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.43.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.21.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.10.0",
       "tag": "@kcinternals/heft-esbuild-plugin_v0.10.0",
       "date": "Tue, 04 Jun 2024 22:40:22 GMT",

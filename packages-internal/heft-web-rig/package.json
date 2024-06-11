@@ -1,6 +1,6 @@
 {
   "name": "@kcinternals/heft-web-rig",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "a rig package for web development (internal usage)",
   "license": "AGPL-3.0-only",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-internal/heft-web-rig",

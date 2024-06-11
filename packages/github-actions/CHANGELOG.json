@@ -1,0 +1,30 @@
+{
+  "name": "@kcws/github-actions",
+  "entries": [
+    {
+      "version": "0.2.0",
+      "tag": "@kcws/github-actions_v0.2.0",
+      "date": "Tue, 11 Jun 2024 09:04:30 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Migrate actions helpers from GitHub Actions repository",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "cee3261c5c10f153856174ddef87a4afed33ca5d"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.16.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.43.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.21.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

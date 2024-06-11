@@ -1,6 +1,14 @@
 # Change Log - @kcinternals/heft-esbuild-plugin
 
-This log was last generated on Tue, 04 Jun 2024 22:40:22 GMT and should not be manually modified.
+This log was last generated on Tue, 11 Jun 2024 09:04:30 GMT and should not be manually modified.
+
+## 0.11.0
+Tue, 11 Jun 2024 09:04:30 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+- Fix heft clean cause schemas deleted
 
 ## 0.10.0
 Tue, 04 Jun 2024 22:40:22 GMT
