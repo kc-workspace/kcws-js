@@ -1,6 +1,13 @@
 # Change Log - @kcws/lintstaged-config
 
-This log was last generated on Tue, 11 Jun 2024 09:11:17 GMT and should not be manually modified.
+This log was last generated on Tue, 11 Jun 2024 10:36:12 GMT and should not be manually modified.
+
+## 0.43.2
+Tue, 11 Jun 2024 10:36:12 GMT
+
+### Patches
+
+- Ignore *.test.* files when publish package
 
 ## 0.43.1
 Tue, 11 Jun 2024 09:11:17 GMT

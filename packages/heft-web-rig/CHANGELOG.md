@@ -1,6 +1,11 @@
-# Change Log - @kcws/web-rig
+# Change Log - @kcws/heft-web-rig
 
-This log was last generated on Tue, 12 Mar 2024 22:37:31 GMT and should not be manually modified.
+This log was last generated on Tue, 11 Jun 2024 10:36:12 GMT and should not be manually modified.
+
+## 0.17.1
+Tue, 11 Jun 2024 10:36:12 GMT
+
+_Version update only_
 
 ## 0.45.0
 Tue, 12 Mar 2024 22:37:31 GMT
