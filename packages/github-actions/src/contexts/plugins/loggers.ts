@@ -22,28 +22,75 @@ export class LogContextPlugin implements ContextPlugin<"log"> {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   init() {}
 
+  /**
+   * Log notice message
+   *
+   * {@inheritDoc LogContextPlugin.format}
+   *
+   * @param format - format message
+   * @param data - message data
+   * @see {@link LogContextPlugin.format}
+   */
   notice(message: string | Error, properties?: AnnotationProperties) {
     notice(message, properties);
   }
 
+  /**
+   * Log error message
+   *
+   * {@inheritDoc LogContextPlugin.format}
+   *
+   * @param format - format message
+   * @param data - message data
+   * @see {@link LogContextPlugin.format}
+   */
   error(message: string | Error, properties?: AnnotationProperties) {
     error(message, properties);
   }
 
+  /**
+   * Log warning message
+   *
+   * {@inheritDoc LogContextPlugin.format}
+   *
+   * @param format - format message
+   * @param data - message data
+   * @see {@link LogContextPlugin.format}
+   */
   warn(message: string | Error, properties?: AnnotationProperties) {
     warning(message, properties);
   }
 
+  /**
+   * Log info message
+   *
+   * {@inheritDoc LogContextPlugin.format}
+   *
+   * @param format - format message
+   * @param data - message data
+   * @see {@link LogContextPlugin.format}
+   */
   info(format: string, ...data: LogData) {
     info(this.format(format, ...data));
   }
 
+  /**
+   * Log debug message
+   *
+   * {@inheritDoc LogContextPlugin.format}
+   *
+   * @param format - format message
+   * @param data - message data
+   * @see {@link LogContextPlugin.format}
+   */
   debug(format: string, ...data: LogData) {
     debug(this.format(format, ...data));
   }
 
   /**
-   * formatting string. The formatting should be 'hello \{world\}'
+   * Formatting string. This support 2 types of input data:
+   *   - Input object: it will use key to match (e.g. format('hello \{key\}', \{'key': 'world'\})),
+   *   - Input primitive: it will use index to match (e.g. format('hello \{0\}'), 'world')
    *
    * @param format - format message
    * @param data - message data

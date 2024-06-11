@@ -15,6 +15,23 @@ describe("contexts.plugins.loggers", () => {
     expect(context.use("log").name).toEqual("log");
   });
 
+  test.each([
+    ["", [""], ""],
+    ["hello world", [""], "hello world"],
+    ["hello {0}", ["world"], "hello world"],
+    ["{0} {1}", ["hello", "world"], "hello world"],
+    ["{0} {1}", [["hello", "world"]], "hello world"],
+    ["{0} {1}", ["{1}", "world"], "world world"],
+    ["{0} {1}", ["hello", "{0}"], "hello {0}"],
+    ["{0} {0} {1}", ["hello", "world"], "hello hello world"],
+    ["{0} {2} {1}", [false, 99, "world"], "false world 99"],
+    ["{key} {value}", [{ key: "hello", value: "world" }], "hello world"],
+    ["{key} {key} {value}", [{ key: "1", value: "world" }], "1 1 world"],
+    ["{0} {1} {2}", [[1, 2, 3]] as any, "1 2 3"],
+  ])("format(%s, %p) should returns %s", (format, data, expected) => {
+    expect(context.use("log").format(format, ...data)).toEqual(expected);
+  });
+
   test("print debug logs", () => {
     asMock(debug).mockReturnValueOnce();
     context.use("log").debug("hello {name}", { name: "world" });
