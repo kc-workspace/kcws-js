@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Improve TSDocs for context",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
