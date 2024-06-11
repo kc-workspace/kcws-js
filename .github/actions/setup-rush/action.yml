@@ -4,7 +4,9 @@ author: Kamontat Chantrachirathumrong
 inputs:
   node-version:
     description: Install nodejs version
-    default: "lts/*"
+    ## TODO: rushjs is not fully support latest lts (20) yet.
+    ## I have problem with publish flow where it failed to get NPM information
+    default: lts/hydrogen
   install:
     description: Install dependencies after setup rush repository
     default: "true"
