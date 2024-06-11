@@ -77,6 +77,8 @@ export class ContextBuilder<PS extends Plugins = NonNullable<unknown>> {
     build(): DefaultContext<PS>;
     // (undocumented)
     static builder(name?: string, version?: string): ContextBuilder<{}>;
+    static fromPackageJson(path?: string): ContextBuilder<{}>;
+    fromPackageJson(path?: string): this;
     // (undocumented)
     setName(name: string): this;
     // (undocumented)

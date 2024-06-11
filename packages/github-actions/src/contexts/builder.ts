@@ -1,5 +1,8 @@
 import type { BaseContext, ContextPlugin, Plugins } from "./builder.type";
 
+import { resolve } from "node:path";
+import { readFileSync, existsSync } from "node:fs";
+
 /**
  * For create Context builder
  * @beta
@@ -9,6 +12,16 @@ export class ContextBuilder<PS extends Plugins = NonNullable<unknown>> {
 
   static builder(name?: string, version?: string) {
     return new ContextBuilder(name ?? "", version ?? "v0.0.0-dev");
+  }
+
+  /**
+   * create context builder from package.json file
+   *
+   * @param path - custom package.json path
+   * @returns context from package.json file
+   */
+  static fromPackageJson(path?: string) {
+    return this.builder().fromPackageJson(path);
   }
 
   private constructor(
@@ -25,6 +38,24 @@ export class ContextBuilder<PS extends Plugins = NonNullable<unknown>> {
 
   setVersion(version: string): this {
     this.version = version;
+    return this;
+  }
+
+  /**
+   * fetch application name and version from package.json file
+   *
+   * @param path - custom package.json file path
+   * @returns this
+   */
+  fromPackageJson(path?: string): this {
+    const fullpath = path ?? resolve(process.cwd(), "package.json");
+    if (existsSync(fullpath)) {
+      const content = readFileSync(fullpath, { encoding: "utf8" });
+      const pkg = JSON.parse(content);
+
+      return this.setName(pkg.name ?? "").setVersion(pkg.version ?? "");
+    }
+
     return this;
   }
 

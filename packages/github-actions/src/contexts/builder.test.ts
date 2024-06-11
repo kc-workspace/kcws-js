@@ -19,6 +19,12 @@ describe("context.builder", () => {
     expect(context.version).toEqual("v1.0.0");
   });
 
+  test("create context from package.json", () => {
+    const context = ContextBuilder.fromPackageJson().build();
+    expect(context.name).toEqual("@kcws/github-actions");
+    expect(context.version).not.toEqual("");
+  });
+
   test("custom builder name", () => {
     const builder = ContextBuilder.builder().setName("example");
 
