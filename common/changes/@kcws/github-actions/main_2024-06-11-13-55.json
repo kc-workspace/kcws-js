@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Improve search environment variable works with scoped npm package",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
