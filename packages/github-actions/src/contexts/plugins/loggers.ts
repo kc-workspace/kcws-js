@@ -23,9 +23,8 @@ export class LogContextPlugin implements ContextPlugin<"log"> {
   init() {}
 
   /**
-   * Log notice message
-   *
-   * {@inheritDoc LogContextPlugin.format}
+   * Log notice message.
+   * Check {@link LogContextPlugin.format} for formatting syntax.
    *
    * @param format - format message
    * @param data - message data
@@ -36,9 +35,8 @@ export class LogContextPlugin implements ContextPlugin<"log"> {
   }
 
   /**
-   * Log error message
-   *
-   * {@inheritDoc LogContextPlugin.format}
+   * Log error message.
+   * Check {@link LogContextPlugin.format} for formatting syntax.
    *
    * @param format - format message
    * @param data - message data
@@ -49,9 +47,8 @@ export class LogContextPlugin implements ContextPlugin<"log"> {
   }
 
   /**
-   * Log warning message
-   *
-   * {@inheritDoc LogContextPlugin.format}
+   * Log warning message.
+   * Check {@link LogContextPlugin.format} for formatting syntax.
    *
    * @param format - format message
    * @param data - message data
@@ -62,9 +59,8 @@ export class LogContextPlugin implements ContextPlugin<"log"> {
   }
 
   /**
-   * Log info message
-   *
-   * {@inheritDoc LogContextPlugin.format}
+   * Log info message.
+   * Check {@link LogContextPlugin.format} for formatting syntax.
    *
    * @param format - format message
    * @param data - message data
@@ -75,9 +71,8 @@ export class LogContextPlugin implements ContextPlugin<"log"> {
   }
 
   /**
-   * Log debug message
-   *
-   * {@inheritDoc LogContextPlugin.format}
+   * Log debug message.
+   * Check {@link LogContextPlugin.format} for formatting syntax.
    *
    * @param format - format message
    * @param data - message data
