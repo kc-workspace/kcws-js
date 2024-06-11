@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Add new APIs to fetch context metadata from package.json file",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
