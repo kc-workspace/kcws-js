@@ -16,10 +16,10 @@
       "type": "node",
       "request": "launch",
       "name": "Debug heft command",
-      "program": "${workspaceFolder}/packages/heft-esbuild-plugin/node_modules/@rushstack/heft/lib/start.js",
+      "program": "${workspaceFolder}/packages/github-actions/node_modules/@rushstack/heft/lib/start.js",
       "skipFiles": ["<node_internals>/**"],
-      "args": ["clean"],
-      "cwd": "${workspaceFolder}/packages/heft-esbuild-plugin"
+      "args": ["test", "--test-path-pattern", "environments.test"],
+      "cwd": "${workspaceFolder}/packages/github-actions"
     }
   ]
 }

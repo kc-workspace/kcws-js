@@ -1,3 +1,22 @@
+const normalizeKey = (key: string) => {
+  const emptySeparator = "";
+  const nameSeparator = "_";
+  const keySeparator = "__";
+
+  let output = key;
+
+  // When key is npm package name with scope (e.g. @example/name)
+  if (output.includes("/")) output = output.slice(output.lastIndexOf("/") + 1);
+  // Convert `-` to `_` for environment variable name
+  if (output.includes("-")) output = output.replaceAll("-", nameSeparator);
+  // Convert ` ` to `_` for environment variable name
+  if (output.includes(" ")) output = output.replaceAll(" ", nameSeparator);
+  // Convert `.` to `__` for environment variable name
+  if (output.includes(".")) output = output.replaceAll(".", keySeparator);
+
+  return output.replaceAll(/[!#$%&()*@[\]^{}]/g, emptySeparator).toUpperCase();
+};
+
 /**
  * Build keys combinations.
  *
@@ -8,24 +27,26 @@
  */
 const buildKeys = (...data: (string | undefined | null)[]) => {
   return data
-    .filter(v => (v?.length ?? 0) > 0)
-    .map(v => v?.replace("-", "_")?.replace(" ", "_")?.toUpperCase())
+    .filter(v => typeof v === "string")
     .map((_, index, a) => a.slice(index).join("."))
-    .map(v => v.replace(".", "__"));
+    .map(v => normalizeKey(v!));
 };
 
 export const findEnvironment = (
   data: string[],
   defaults?: string,
-  environment: Record<string, string | undefined | null> = process.env
+  environments: Record<string, string | undefined | null> = process.env
 ): string | undefined => {
   const keys = buildKeys(...data);
-  for (const key of keys) {
-    const value = environment[key];
-    if (value !== undefined && value !== null) {
-      return value;
-    }
-  }
+  return getEnvironment(keys, environments) ?? defaults;
+};
 
-  return defaults;
+export const getEnvironment = (
+  keys: string[],
+  environments: Record<string, string | undefined | null> = process.env
+) => {
+  for (const key of keys) {
+    const value = environments[key];
+    if (typeof value === "string") return value;
+  }
 };
