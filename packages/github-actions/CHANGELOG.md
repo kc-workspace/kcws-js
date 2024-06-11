@@ -1,6 +1,13 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Tue, 11 Jun 2024 11:23:07 GMT and should not be manually modified.
+This log was last generated on Tue, 11 Jun 2024 13:57:56 GMT and should not be manually modified.
+
+## 0.4.0
+Tue, 11 Jun 2024 13:57:56 GMT
+
+### Minor changes
+
+- Improve search environment variable works with scoped npm package
 
 ## 0.3.0
 Tue, 11 Jun 2024 11:23:07 GMT

@@ -2,6 +2,20 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.4.0",
+      "tag": "@kcws/github-actions_v0.4.0",
+      "date": "Tue, 11 Jun 2024 13:57:56 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Improve search environment variable works with scoped npm package",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "69d0aadd244b8b4faa34abb84cb2173fecc9172c"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.3.0",
       "tag": "@kcws/github-actions_v0.3.0",
       "date": "Tue, 11 Jun 2024 11:23:07 GMT",
