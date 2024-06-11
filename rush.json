@@ -18,7 +18,7 @@
    *
    * The latest version can found here: https://github.com/microsoft/rushstack/blob/main/apps/rush/CHANGELOG.md
    */
-  "rushVersion": "5.128.0",
+  "rushVersion": "5.125.1",
   /**
    * The next field selects which package manager should be installed and determines its version.
    * Rush installs its own local copy of the package manager to ensure that your build process
