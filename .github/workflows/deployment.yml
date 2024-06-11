@@ -25,28 +25,6 @@ env:
   DOCS_VERSION: v2
 
 jobs:
-  verifying:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Setup rushjs
-        uses: ./.github/actions/setup-rush
-        with:
-          install: true
-          cache-build: false
-      - name: Checking for missing changelogs
-        uses: ./.github/actions/run-rush
-        with:
-          command: change
-          args: --verify
-      - name: Deployment summary
-        uses: ./.github/actions/run-rush
-        with:
-          command: publish
-
   deploying:
     # This will enforce deploy applications from main branch only
     # however, developer still able to dry-run
@@ -60,8 +38,6 @@ jobs:
     environment:
       name: npm-registry
       url: https://www.npmjs.com/org/kcws
-    needs:
-      - verifying
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
@@ -81,10 +57,19 @@ jobs:
         with:
           install: true
           cache-build: false
+      - name: Checking for missing changelogs
+        uses: ./.github/actions/run-rush
+        with:
+          command: change
+          args: --verify
       - name: Building packages
         uses: ./.github/actions/run-rush
         with:
           command: build
+      - name: Deployment summary
+        uses: ./.github/actions/run-rush
+        with:
+          command: publish
       - name: Deploying packages
         uses: ./.github/actions/run-rush
         with:
