@@ -173,22 +173,16 @@ export class InputContextPlugin implements ContextPlugin<"input"> {
 
 // @public
 export class LogContextPlugin implements ContextPlugin<"log"> {
-    // (undocumented)
     debug(format: string, ...data: LogData): void;
-    // (undocumented)
     error(message: string | Error, properties?: AnnotationProperties): void;
     format(format: string, ...data: LogData): string;
     // Warning: (ae-forgotten-export) The symbol "LogData" needs to be exported by the entry point index.d.ts
-    //
-    // (undocumented)
     info(format: string, ...data: LogData): void;
     // (undocumented)
     init(): void;
     // (undocumented)
     readonly name = "log";
-    // (undocumented)
     notice(message: string | Error, properties?: AnnotationProperties): void;
-    // (undocumented)
     warn(message: string | Error, properties?: AnnotationProperties): void;
 }
 
