@@ -33,8 +33,7 @@
     "dist/**/*.d.ts",
     "lib",
     "lib-esnext",
-    "!**/*.test.js",
-    "!**/*.test.js.map"
+    "!**/*.test.*"
   ],
   "scripts": {
     "build": "heft build",

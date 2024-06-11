@@ -35,8 +35,7 @@
     "lib-commonjs",
     "lib-umd",
     "lib-css",
-    "!**/*.test.js",
-    "!**/*.test.js.map"
+    "!**/*.test.*"
   ],
   "scripts": {
     "build": "heft build",

@@ -33,8 +33,7 @@
     "lib",
     "lib-commonjs",
     "lib-bundle",
-    "!**/*.test.js",
-    "!**/*.test.js.map"
+    "!**/*.test.*"
   ],
   "scripts": {
     "build": "heft build",
