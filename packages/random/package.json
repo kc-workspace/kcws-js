@@ -1,6 +1,6 @@
 {
   "name": "@kcws/random",
-  "version": "0.44.0",
+  "version": "0.44.1",
   "description": "random number generator",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
