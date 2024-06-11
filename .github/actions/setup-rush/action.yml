@@ -4,7 +4,7 @@ author: Kamontat Chantrachirathumrong
 inputs:
   node-version:
     description: Install nodejs version
-    default: "lts/*"
+    default: ''
   install:
     description: Install dependencies after setup rush repository
     default: "true"
@@ -24,6 +24,7 @@ runs:
     - uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
+        node-version-file: .tool-versions
     - name: Caching rush
       if: inputs.cache-rush == 'true'
       uses: actions/cache@v4
