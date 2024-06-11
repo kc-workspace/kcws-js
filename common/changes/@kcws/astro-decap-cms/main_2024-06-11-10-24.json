@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/astro-decap-cms",
+      "comment": "Ignore *.test.* files when publish package",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/astro-decap-cms"
+}

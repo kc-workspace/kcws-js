@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/color",
+      "comment": "Ignore *.test.* files when publish package",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/color"
+}

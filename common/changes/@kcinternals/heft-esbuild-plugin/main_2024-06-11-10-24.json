@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcinternals/heft-esbuild-plugin",
+      "comment": "Ignore *.test.* files when publish package",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcinternals/heft-esbuild-plugin"
+}
