@@ -2,6 +2,20 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.3.0",
+      "tag": "@kcws/github-actions_v0.3.0",
+      "date": "Tue, 11 Jun 2024 11:23:07 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add new APIs to fetch context metadata from package.json file",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "209ce323ef73200c14225d0f9617b61b6e0d39bb"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.2.2",
       "tag": "@kcws/github-actions_v0.2.2",
       "date": "Tue, 11 Jun 2024 10:36:12 GMT",

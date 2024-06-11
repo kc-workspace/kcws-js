@@ -1,6 +1,13 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Tue, 11 Jun 2024 10:36:12 GMT and should not be manually modified.
+This log was last generated on Tue, 11 Jun 2024 11:23:07 GMT and should not be manually modified.
+
+## 0.3.0
+Tue, 11 Jun 2024 11:23:07 GMT
+
+### Minor changes
+
+- Add new APIs to fetch context metadata from package.json file
 
 ## 0.2.2
 Tue, 11 Jun 2024 10:36:12 GMT
