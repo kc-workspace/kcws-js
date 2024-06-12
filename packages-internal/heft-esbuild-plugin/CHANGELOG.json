@@ -2,6 +2,20 @@
   "name": "@kcinternals/heft-esbuild-plugin",
   "entries": [
     {
+      "version": "0.11.3",
+      "tag": "@kcinternals/heft-esbuild-plugin_v0.11.3",
+      "date": "Wed, 12 Jun 2024 08:33:27 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Cannot run because Schema file not found",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "6aa9107fb2f1a1a82d035e282d0ee6da8a28fd16"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.11.2",
       "tag": "@kcinternals/heft-esbuild-plugin_v0.11.2",
       "date": "Tue, 11 Jun 2024 10:36:12 GMT",
