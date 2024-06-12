@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Context plugin supports dependency to other plugins",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}

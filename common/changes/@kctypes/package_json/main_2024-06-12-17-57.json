@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kctypes/package_json",
+      "comment": "Fix test coverage incorrectly report when run with cache",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kctypes/package_json"
+}

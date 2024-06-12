@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/mixin",
+      "comment": "Fix test coverage incorrectly report when run with cache",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/mixin"
+}
