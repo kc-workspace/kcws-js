@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/heft-node-rig",
+      "comment": "github-actions profile will copy package.json to target",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/heft-node-rig"
+}
