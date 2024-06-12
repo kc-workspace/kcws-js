@@ -40,10 +40,10 @@
   ],
   "scripts": {
     "build": "heft build",
-    "test": "heft test",
+    "test": "heft test --clean",
     "clean": "heft clean",
     "_phase:build": "heft run --only build -- --clean",
-    "_phase:test": "heft run --only test"
+    "_phase:test": "heft run --only test -- --clean"
   },
   "dependencies": {
     "decap-server": "3.0.4"
