@@ -2,13 +2,12 @@ jest.mock("@actions/core");
 
 import { debug, error, info, notice, warning } from "@actions/core";
 
-import { asMock } from "../../utils/mocker";
 import { ContextBuilder } from "..";
 import { LogContextPlugin } from ".";
 
 describe("contexts.plugins.loggers", () => {
   const log = new LogContextPlugin();
-  const context = ContextBuilder.builder().addPlugin(log).build();
+  const context = ContextBuilder.fromInput().addPlugin(log).build();
 
   test("add plugin should usable with use()", () => {
     expect(context.use("log")).toEqual(log);
@@ -33,7 +32,7 @@ describe("contexts.plugins.loggers", () => {
   });
 
   test("print debug logs", () => {
-    asMock(debug).mockReturnValueOnce();
+    mocked(debug).mockReturnValueOnce();
     context.use("log").debug("hello {name}", { name: "world" });
 
     expect(debug).toHaveBeenCalledTimes(1);
@@ -41,7 +40,7 @@ describe("contexts.plugins.loggers", () => {
   });
 
   test("print info logs", () => {
-    asMock(info).mockReturnValueOnce();
+    mocked(info).mockReturnValueOnce();
     context.use("log").info("hello {0}", "world");
 
     expect(info).toHaveBeenCalledTimes(1);
@@ -50,7 +49,7 @@ describe("contexts.plugins.loggers", () => {
 
   test("print warn logs", () => {
     const error_ = new Error("hello world");
-    asMock(warning).mockReturnValueOnce();
+    mocked(warning).mockReturnValueOnce();
     context.use("log").warn(error_);
 
     expect(warning).toHaveBeenCalledTimes(1);
@@ -59,7 +58,7 @@ describe("contexts.plugins.loggers", () => {
 
   test("print error logs", () => {
     const error_ = new Error("hello world");
-    asMock(error).mockReturnValueOnce();
+    mocked(error).mockReturnValueOnce();
     context.use("log").error(error_);
 
     expect(error).toHaveBeenCalledTimes(1);
@@ -68,7 +67,7 @@ describe("contexts.plugins.loggers", () => {
 
   test("print notice logs", () => {
     const error_ = new Error("hello world");
-    asMock(notice).mockReturnValueOnce();
+    mocked(notice).mockReturnValueOnce();
     context.use("log").notice(error_);
 
     expect(notice).toHaveBeenCalledTimes(1);

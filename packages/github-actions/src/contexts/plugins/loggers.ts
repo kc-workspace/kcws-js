@@ -1,5 +1,5 @@
 import type { ContextPlugin } from "..";
-import type { PrimitiveType } from "../builder.type";
+import type { BaseContext, PrimitiveType } from "../builder.type";
 
 import {
   type AnnotationProperties,
@@ -16,8 +16,9 @@ export type LogData = (Record<string, PrimitiveType> | PrimitiveType)[];
  * Context Plugin allows user to create logs output to actions console
  * @public
  */
-export class LogContextPlugin implements ContextPlugin<"log"> {
+export class LogContextPlugin implements ContextPlugin<BaseContext, "log"> {
   readonly name = "log";
+  readonly dependencies = [];
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   init() {}

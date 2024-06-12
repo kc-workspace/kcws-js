@@ -15,14 +15,19 @@ export interface BaseContext {
  * A base plugin class for extends context functionality
  * @public
  */
-export interface ContextPlugin<NAME extends string> {
+export interface ContextPlugin<
+  CONTEXT extends BaseContext,
+  NAME extends string,
+  DEPS extends string[] = never[],
+> {
+  readonly dependencies: DEPS;
   readonly name: NAME;
 
-  init: (context: BaseContext) => void;
+  init: (context: CONTEXT) => void;
 }
 
 /**
  * A collection of plugins in Context class
  * @internal
  */
-export type Plugins = Record<string, ContextPlugin<string>>;
+export type Plugins = Record<string, ContextPlugin<BaseContext, string>>;

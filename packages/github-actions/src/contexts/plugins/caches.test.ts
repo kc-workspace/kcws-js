@@ -7,7 +7,7 @@ import { CacheContextPlugin } from ".";
 
 describe("contexts.plugins.caches", () => {
   const plugin = new CacheContextPlugin();
-  const context = ContextBuilder.builder("name").addPlugin(plugin).build();
+  const context = ContextBuilder.fromInput("name").addPlugin(plugin).build();
 
   test("add plugin should usable with use()", () => {
     expect(context.use("cache")).toEqual(plugin);

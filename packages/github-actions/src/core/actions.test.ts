@@ -4,9 +4,9 @@ import { setFailed } from "@actions/core";
 
 import { Actions, AppRunner } from ".";
 import { ContextBuilder } from "../contexts";
-import { mockRunner } from "../utils/mocker";
+import { mockRunner } from "../tests/mocker";
 
-const context = ContextBuilder.builder("", "").build();
+const context = ContextBuilder.empty().build();
 const input = { a: "animal", b: "bee", c: 123, d: false };
 const action = Actions.builder(context, () => input);
 

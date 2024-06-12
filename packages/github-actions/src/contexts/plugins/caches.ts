@@ -12,8 +12,9 @@ import {
  * Context Plugin allows user to caching their results
  * @public
  */
-export class CacheContextPlugin implements ContextPlugin<"cache"> {
+export class CacheContextPlugin implements ContextPlugin<BaseContext, "cache"> {
   readonly name = "cache";
+  readonly dependencies = [];
 
   private actionName = "";
 

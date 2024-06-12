@@ -1,19 +1,37 @@
-import type { BaseContext, ContextPlugin } from "..";
-
-import { info } from "@actions/core";
 import { exec, type ExecOptions } from "@actions/exec";
 
+import {
+  ContextPlugin,
+  DefaultContext,
+  InputContextPlugin,
+  LogContextPlugin,
+} from "..";
 import { toBool } from "../../converters";
-import { findInputs } from "../../utils/inputs";
+
+type IExecContext = DefaultContext<
+  {
+    [key in LogContextPlugin["name"]]: LogContextPlugin;
+  } & {
+    [key in InputContextPlugin["name"]]: InputContextPlugin;
+  }
+>;
+
+export type IExecContextPlugin = ContextPlugin<
+  IExecContext,
+  "exec",
+  (keyof IExecContext["plugins"])[]
+>;
 
 /**
  * Context Plugin allows user to execute commandline
  * @public
  */
-export class ExecContextPlugin implements ContextPlugin<"exec"> {
+export class ExecContextPlugin implements IExecContextPlugin {
   readonly name = "exec";
+  readonly dependencies: IExecContextPlugin["dependencies"] = ["log", "input"];
 
   private options: ExecOptions | undefined;
+  private context: IExecContext | undefined;
   private dryrun: boolean;
 
   constructor() {
@@ -21,8 +39,9 @@ export class ExecContextPlugin implements ContextPlugin<"exec"> {
     this.dryrun = false;
   }
 
-  init(context: BaseContext) {
-    this.dryrun = findInputs(context.name, "dryrun", toBool) ?? false;
+  init(context: IExecContext) {
+    this.context = context;
+    this.dryrun = context.use("input").optional("dryrun", toBool) ?? false;
   }
 
   /**
@@ -69,7 +88,8 @@ export class ExecContextPlugin implements ContextPlugin<"exec"> {
   ) {
     if (this.dryrun) {
       const message = `[DRY] $ ${cmd} '${arguments_.join(" ")}'`;
-      info(message);
+      this.context?.use("log").info(message);
+
       return 0;
     }
 

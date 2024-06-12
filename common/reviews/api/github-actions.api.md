@@ -47,7 +47,9 @@ export interface BaseData<Input> {
 }
 
 // @public
-export class CacheContextPlugin implements ContextPlugin<"cache"> {
+export class CacheContextPlugin implements ContextPlugin<BaseContext, "cache"> {
+    // (undocumented)
+    readonly dependencies: never[];
     // (undocumented)
     init(context: BaseContext): void;
     // (undocumented)
@@ -72,23 +74,35 @@ export interface CacheKeyOption {
 // @beta
 export class ContextBuilder<PS extends Plugins = NonNullable<unknown>> {
     // (undocumented)
-    addPlugin<P extends ContextPlugin<string>>(plugin: P): ContextBuilder<PS & Record<P["name"], P>>;
+    addPlugin<P extends ContextPlugin<DefaultContext<PS>, string, (keyof PS extends string ? keyof PS : never)[]>>(plugin: P): ContextBuilder<PS & { [key in P["name"]]: P; }>;
     // (undocumented)
     build(): DefaultContext<PS>;
     // (undocumented)
-    static builder(name?: string, version?: string): ContextBuilder<{}>;
+    static readonly defaultVersion: string;
+    // @public
+    static empty(): ContextBuilder<{}>;
+    // @public
+    static fromBaseContext(context: BaseContext): ContextBuilder<{}>;
+    // @public
+    static fromContext<Context extends DefaultContext>(context: Context): ContextBuilder<Context["plugins"]>;
+    // @public
+    static fromInput(name?: string, version?: string): ContextBuilder<{}>;
+    // @public
     static fromPackageJson(basedir?: string, filename?: string): ContextBuilder<{}>;
-    fromPackageJson(basedir?: string, filename?: string): this;
     // (undocumented)
     setName(name: string): this;
+    // (undocumented)
+    setPlugins<NPS extends Plugins = NonNullable<unknown>>(plugins: NPS): ContextBuilder<NPS>;
     // (undocumented)
     setVersion(version: string): this;
 }
 
 // @public
-export interface ContextPlugin<NAME extends string> {
+export interface ContextPlugin<CONTEXT extends BaseContext, NAME extends string, DEPS extends string[] = never[]> {
     // (undocumented)
-    init: (context: BaseContext) => void;
+    readonly dependencies: DEPS;
+    // (undocumented)
+    init: (context: CONTEXT) => void;
     // (undocumented)
     readonly name: NAME;
 }
@@ -124,21 +138,30 @@ export const convertToString: Convert_5;
 // Warning: (ae-incompatible-release-tags) The symbol "DefaultContext" is marked as @public, but its signature references "Plugins" which is marked as @internal
 //
 // @public
-export class DefaultContext<PLUGINS extends Plugins = {}> implements BaseContext {
-    constructor(name: string, version: string, plugins: PLUGINS);
-    // (undocumented)
+export class DefaultContext<PLUGINS extends Plugins = NonNullable<unknown>> implements BaseContext {
+    constructor(
+    name: string,
+    version: string,
+    plugins: PLUGINS);
     readonly name: string;
+    // @internal
+    readonly plugins: PLUGINS;
     // (undocumented)
     use<N extends keyof PLUGINS>(name: N): PLUGINS[N];
-    // (undocumented)
     readonly version: string;
 }
 
+// Warning: (ae-forgotten-export) The symbol "IExecContextPlugin" needs to be exported by the entry point index.d.ts
+//
 // @public
-export class ExecContextPlugin implements ContextPlugin<"exec"> {
+export class ExecContextPlugin implements IExecContextPlugin {
     constructor();
     // (undocumented)
-    init(context: BaseContext): void;
+    readonly dependencies: IExecContextPlugin["dependencies"];
+    // Warning: (ae-forgotten-export) The symbol "IExecContext" needs to be exported by the entry point index.d.ts
+    //
+    // (undocumented)
+    init(context: IExecContext): void;
     // (undocumented)
     readonly name = "exec";
     rerun(cmd: string, ...arguments_: string[]): Promise<number>;
@@ -152,13 +175,39 @@ export const getRestoreCacheKeys: (option: CacheKeyOption, actionName: string) =
 // @public
 export const getSaveCacheKey: (option: CacheKeyOption, actionName: string) => string;
 
+// Warning: (ae-forgotten-export) The symbol "IHelperContextPlugin" needs to be exported by the entry point index.d.ts
+//
+// @public
+export class HelperContextPlugin implements IHelperContextPlugin {
+    // (undocumented)
+    static defaultInfoMissingErr: string;
+    // (undocumented)
+    static defaultUnknownNameErr: string;
+    // (undocumented)
+    static defaultUnknownVersionErr: string;
+    // (undocumented)
+    readonly dependencies: IHelperContextPlugin["dependencies"];
+    // (undocumented)
+    getActionInfo(): string;
+    // Warning: (ae-forgotten-export) The symbol "IHelperContext" needs to be exported by the entry point index.d.ts
+    //
+    // (undocumented)
+    init(context: IHelperContext): void;
+    // (undocumented)
+    logActionInfo(): void;
+    // (undocumented)
+    readonly name = "helper";
+}
+
 // Warning: (ae-internal-missing-underscore) The name "InputBuilder" should be prefixed with an underscore because the declaration is marked as @internal
 //
 // @internal
 export type InputBuilder<Input, Context extends BaseContext = DefaultContext> = (context: Context) => Input;
 
 // @public
-export class InputContextPlugin implements ContextPlugin<"input"> {
+export class InputContextPlugin implements ContextPlugin<BaseContext, "input"> {
+    // (undocumented)
+    readonly dependencies: never[];
     // (undocumented)
     init(context: BaseContext): void;
     // (undocumented)
@@ -174,8 +223,10 @@ export class InputContextPlugin implements ContextPlugin<"input"> {
 }
 
 // @public
-export class LogContextPlugin implements ContextPlugin<"log"> {
+export class LogContextPlugin implements ContextPlugin<BaseContext, "log"> {
     debug(format: string, ...data: LogData): void;
+    // (undocumented)
+    readonly dependencies: never[];
     error(message: string | Error, properties?: AnnotationProperties): void;
     format(format: string, ...data: LogData): string;
     // Warning: (ae-forgotten-export) The symbol "LogData" needs to be exported by the entry point index.d.ts
@@ -191,7 +242,7 @@ export class LogContextPlugin implements ContextPlugin<"log"> {
 // Warning: (ae-internal-missing-underscore) The name "Plugins" should be prefixed with an underscore because the declaration is marked as @internal
 //
 // @internal
-export type Plugins = Record<string, ContextPlugin<string>>;
+export type Plugins = Record<string, ContextPlugin<BaseContext, string>>;
 
 // Warning: (ae-incompatible-release-tags) The symbol "Runner" is marked as @public, but its signature references "BaseData" which is marked as @internal
 //

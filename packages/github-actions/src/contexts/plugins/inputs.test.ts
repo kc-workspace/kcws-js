@@ -5,11 +5,11 @@ import { getInput } from "@actions/core";
 import { ContextBuilder } from "..";
 import { InputContextPlugin } from ".";
 import { toBool, toString } from "../../converters";
-import { asMock, mockEnvironment } from "../../utils/mocker";
+import { mockEnvironment } from "../../tests/mocker";
 
 describe("contexts.plugins.inputs", () => {
   const inputs = new InputContextPlugin();
-  const context = ContextBuilder.builder().addPlugin(inputs).build();
+  const context = ContextBuilder.fromInput().addPlugin(inputs).build();
 
   test("add plugin should usable with use()", () => {
     expect(context.use("input")).toEqual(inputs);
@@ -17,7 +17,7 @@ describe("contexts.plugins.inputs", () => {
   });
 
   test("cannot found input on optional()", () => {
-    asMock(getInput).mockReturnValueOnce("");
+    mocked(getInput).mockReturnValueOnce("");
 
     const environment = {};
     mockEnvironment(environment, () => {
@@ -26,7 +26,7 @@ describe("contexts.plugins.inputs", () => {
   });
 
   test("cannot found input on required()", () => {
-    asMock(getInput).mockReturnValueOnce("");
+    mocked(getInput).mockReturnValueOnce("");
 
     const environment = {};
     mockEnvironment(environment, () => {
@@ -37,7 +37,7 @@ describe("contexts.plugins.inputs", () => {
   });
 
   test("found input from getInput", () => {
-    asMock(getInput).mockReturnValueOnce("hello");
+    mocked(getInput).mockReturnValueOnce("hello");
 
     const environment = {};
     mockEnvironment(environment, () => {

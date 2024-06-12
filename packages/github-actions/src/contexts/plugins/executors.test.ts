@@ -3,13 +3,17 @@ jest.mock("@actions/core");
 
 import { exec } from "@actions/exec";
 
-import { mockEnvironment } from "../../utils/mocker";
+import { mockEnvironment } from "../../tests/mocker";
 import { ContextBuilder } from "..";
-import { ExecContextPlugin } from ".";
+import { ExecContextPlugin, InputContextPlugin, LogContextPlugin } from ".";
 
 describe("contexts.plugins.executors", () => {
   const plugin = new ExecContextPlugin();
-  const context = ContextBuilder.builder().addPlugin(plugin).build();
+  const context = ContextBuilder.fromInput()
+    .addPlugin(new InputContextPlugin())
+    .addPlugin(new LogContextPlugin())
+    .addPlugin(plugin)
+    .build();
 
   test("add plugin should usable with use()", () => {
     expect(context.use("exec")).toEqual(plugin);
@@ -48,7 +52,11 @@ describe("contexts.plugins.executors", () => {
     };
 
     await mockEnvironment(environment, async () => {
-      const context_ = ContextBuilder.builder().addPlugin(plugin).build();
+      const context_ = ContextBuilder.fromInput()
+        .addPlugin(new InputContextPlugin())
+        .addPlugin(new LogContextPlugin())
+        .addPlugin(plugin)
+        .build();
 
       await context_.use("exec").run("ls", "-la");
       // Because dry-run is enabled

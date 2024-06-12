@@ -1,4 +1,4 @@
-import { mockEnvironment } from "./mocker";
+import { mockEnvironment } from "../tests/mocker";
 // eslint-disable-next-line import/no-namespace
 import * as env from "./environments";
 

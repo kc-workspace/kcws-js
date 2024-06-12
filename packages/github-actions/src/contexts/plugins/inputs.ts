@@ -8,8 +8,10 @@ import { findInputs } from "../../utils/inputs";
  * Context Plugin allows user to request input from action consumer
  * @public
  */
-export class InputContextPlugin implements ContextPlugin<"input"> {
+export class InputContextPlugin implements ContextPlugin<BaseContext, "input"> {
   readonly name = "input";
+  readonly dependencies = [];
+
   private key = "";
 
   init(context: BaseContext) {

@@ -2,13 +2,13 @@ jest.mock("@actions/core");
 
 import { getInput } from "@actions/core";
 
-import { asMock, mockEnvironment } from "./mocker";
 import { findInputs, parseInputs } from "./inputs";
 import { toString } from "../converters";
+import { mockEnvironment } from "../tests/mocker";
 
 describe("utils.inputs.finder", () => {
   test("impossible case: getInput return null", () => {
-    asMock(getInput).mockReturnValueOnce(undefined as unknown as string);
+    mocked(getInput).mockReturnValueOnce(undefined as unknown as string);
     mockEnvironment({}, () => {
       const input = findInputs("", "test", toString);
       expect(input).toBeUndefined();
@@ -16,7 +16,7 @@ describe("utils.inputs.finder", () => {
   });
 
   test("if inputs is missing", () => {
-    asMock(getInput).mockReturnValueOnce("");
+    mocked(getInput).mockReturnValueOnce("");
     mockEnvironment({}, () => {
       const input = findInputs("", "test", toString);
       expect(input).toBeUndefined();
@@ -24,7 +24,7 @@ describe("utils.inputs.finder", () => {
   });
 
   test("if found inputs on env", () => {
-    asMock(getInput).mockReturnValueOnce("");
+    mocked(getInput).mockReturnValueOnce("");
     mockEnvironment({ TEST: "hello" }, () => {
       const input = findInputs("", "test", toString);
       expect(input).toEqual("hello");
@@ -32,7 +32,7 @@ describe("utils.inputs.finder", () => {
   });
 
   test("if found inputs on input", () => {
-    asMock(getInput).mockImplementationOnce(name => {
+    mocked(getInput).mockImplementationOnce(name => {
       switch (name) {
         case "test":
           return "hello";
