@@ -44,15 +44,20 @@ export class ContextBuilder<PS extends Plugins = NonNullable<unknown>> {
   /**
    * fetch application name and version from package.json file
    *
-   * @param path - custom package.json file path
+   * @param basedir - custom base directory for resolve package.json file
+   * @param filename - custom package.json file name
    * @returns this
    */
-  fromPackageJson(path?: string): this {
-    const fullpath = path ?? resolve(process.cwd(), "package.json");
+  fromPackageJson(
+    basedir: string = __dirname,
+    filename: string = "package.json"
+  ): this {
+    const fullpath = resolve(basedir, filename);
     if (existsSync(fullpath)) {
-      const content = readFileSync(fullpath, { encoding: "utf8" });
+      const content = readFileSync(fullpath, {
+        encoding: "utf8",
+      });
       const pkg = JSON.parse(content);
-
       return this.setName(pkg.name ?? "").setVersion(pkg.version ?? "");
     }
 
