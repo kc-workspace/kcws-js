@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcinternals/heft-esbuild-plugin",
+      "comment": "Cannot run because Schema file not found",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcinternals/heft-esbuild-plugin"
+}
