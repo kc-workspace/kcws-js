@@ -29,6 +29,7 @@
     "heft-plugin.json",
     "CHANGELOG.json",
     "CHANGELOG.md",
+    "schemas",
     "dist/**/*.d.ts",
     "lib",
     "lib-esnext",
