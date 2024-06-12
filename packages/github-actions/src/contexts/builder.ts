@@ -20,8 +20,11 @@ export class ContextBuilder<PS extends Plugins = NonNullable<unknown>> {
    * @param path - custom package.json path
    * @returns context from package.json file
    */
-  static fromPackageJson(path?: string) {
-    return this.builder().fromPackageJson(path);
+  static fromPackageJson(
+    basedir: string = __dirname,
+    filename: string = "package.json"
+  ) {
+    return this.builder().fromPackageJson(basedir, filename);
   }
 
   private constructor(

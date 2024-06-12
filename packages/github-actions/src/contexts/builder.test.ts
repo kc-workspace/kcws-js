@@ -20,7 +20,7 @@ describe("context.builder", () => {
   });
 
   test("create context from package.json", () => {
-    const context = ContextBuilder.fromPackageJson().build();
+    const context = ContextBuilder.fromPackageJson(process.cwd()).build();
     expect(context.name).toEqual("@kcws/github-actions");
     expect(context.version).not.toEqual("");
   });
