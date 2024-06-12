@@ -203,7 +203,6 @@ projects:
     includedGlobs:
       - packages-config/prettier-config/**
     dependentProjects:
-      - '@kcexamples/github-action'
       - '@kcws/prettier-config'
   '@kcws/random':
     includedGlobs:

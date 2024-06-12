@@ -166,9 +166,6 @@ importers:
       '@kcws/heft-node-rig':
         specifier: workspace:*
         version: link:../../packages/heft-node-rig
-      '@kcws/prettier-config':
-        specifier: workspace:*
-        version: link:../../packages-config/prettier-config
       '@rushstack/heft':
         specifier: 0.66.18
         version: 0.66.18(@types/node@20.14.2)
