@@ -43,7 +43,11 @@
                 {
                   "sourcePath": "src",
                   "destinationFolders": ["lib-bundle"],
-                  "fileExtensions": [".md", ".yaml", ".yml"]
+                  "fileExtensions": [".md", ".json", ".yaml", ".yml"]
+                },
+                {
+                  "destinationFolders": ["lib-bundle"],
+                  "includeGlobs": ["package.json"]
                 }
               ]
             }
