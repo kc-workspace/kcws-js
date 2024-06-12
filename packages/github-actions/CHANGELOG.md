@@ -1,6 +1,13 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Tue, 11 Jun 2024 13:57:56 GMT and should not be manually modified.
+This log was last generated on Wed, 12 Jun 2024 11:00:41 GMT and should not be manually modified.
+
+## 0.5.0
+Wed, 12 Jun 2024 11:00:41 GMT
+
+### Minor changes
+
+- fromPackageJson() will find package.json from code directory instead of current directory by default
 
 ## 0.4.0
 Tue, 11 Jun 2024 13:57:56 GMT
