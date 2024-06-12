@@ -151,6 +151,7 @@ projects:
     includedGlobs:
       - packages/github-actions/**
     dependentProjects:
+      - '@kcexamples/github-action'
       - '@kcws/github-actions'
   '@kcws/heft-node-rig':
     includedGlobs:
@@ -171,7 +172,6 @@ projects:
     includedGlobs:
       - packages-config/lintstaged-config/**
     dependentProjects:
-      - '@kcexamples/github-action'
       - '@kcexamples/heft-example-plugin'
       - '@kcexamples/local-node-lib'
       - '@kcexamples/local-web-lib'
@@ -203,6 +203,7 @@ projects:
     includedGlobs:
       - packages-config/prettier-config/**
     dependentProjects:
+      - '@kcexamples/github-action'
       - '@kcws/prettier-config'
   '@kcws/random':
     includedGlobs:

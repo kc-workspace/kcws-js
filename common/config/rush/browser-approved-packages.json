@@ -63,6 +63,10 @@
       "allowedCategories": [ "configs", "examples", "internals", "libraries", "tools", "types" ]
     },
     {
+      "name": "@kcws/github-actions",
+      "allowedCategories": [ "examples" ]
+    },
+    {
       "name": "@kcws/heft-node-rig",
       "allowedCategories": [ "examples", "libraries" ]
     },
@@ -73,6 +77,10 @@
     {
       "name": "@kcws/lintstaged-config",
       "allowedCategories": [ "configs", "examples", "internals", "libraries", "tools", "types" ]
+    },
+    {
+      "name": "@kcws/prettier-config",
+      "allowedCategories": [ "examples" ]
     },
     {
       "name": "@microsoft/api-extractor",

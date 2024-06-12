@@ -1,1 +1,4 @@
-console.log("post-action");
+import app from "./app";
+import runner from "./runners/post";
+
+app.exec(runner);
