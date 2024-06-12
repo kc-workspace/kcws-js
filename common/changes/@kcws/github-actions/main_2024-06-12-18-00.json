@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Change static function name on ContextBuilder using `from*()` and `empty()` and update when default value might use if metadata is missing",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
