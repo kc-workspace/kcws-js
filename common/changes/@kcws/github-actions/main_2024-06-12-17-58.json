@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "New HelperContextPlugin for helper functions",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
