@@ -3,6 +3,17 @@ import { HelperContextPlugin } from "./helpers";
 import { LogContextPlugin } from "./loggers";
 
 describe("contexts.plugins.helpers", () => {
+  const helpers = new HelperContextPlugin();
+  const context = ContextBuilder.fromInput()
+    .addPlugin(new LogContextPlugin())
+    .addPlugin(helpers)
+    .build();
+
+  test("add plugin should usable with use()", () => {
+    expect(context.use("helper")).toEqual(helpers);
+    expect(context.use("helper").name).toEqual("helper");
+  });
+
   describe("getActionInfo", () => {
     test.each([
       [ContextBuilder.empty(), HelperContextPlugin.defaultInfoMissingErr],

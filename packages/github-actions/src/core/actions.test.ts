@@ -3,10 +3,13 @@ jest.mock("@actions/core");
 import { setFailed } from "@actions/core";
 
 import { Actions, AppRunner } from ".";
-import { ContextBuilder } from "../contexts";
+import { ContextBuilder, LogContextPlugin } from "../contexts";
 import { mockRunner } from "../tests/mocker";
+import { AppContext } from "./actions.type";
 
-const context = ContextBuilder.empty().build();
+const context = ContextBuilder.empty()
+  .addPlugin(new LogContextPlugin())
+  .build();
 const input = { a: "animal", b: "bee", c: 123, d: false };
 const action = Actions.builder(context, () => input);
 
@@ -64,5 +67,10 @@ describe("core.actions", () => {
 
     expect(setFailed).toHaveBeenCalledTimes(1);
     expect(setFailed).toHaveBeenCalledWith(exampleError);
+  });
+
+  test("use AppContext to get context value from Actions type", () => {
+    const newContext: AppContext<typeof action> = context;
+    expect(newContext).toEqual(context);
   });
 });
