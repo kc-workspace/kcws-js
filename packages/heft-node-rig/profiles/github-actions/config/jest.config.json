@@ -1,3 +1,18 @@
 {
-  "extends": "../../_base/config/jest.config.json"
+  "extends": "../../_base/config/jest.config.json",
+  "collectCoverageFrom": [
+    "lib/**/*.{cjs,js}",
+    "!lib/**/*.d.ts",
+    "!lib/**/*.test.{cjs,js}",
+    "!lib/**/*.type.{cjs,js}",
+    "!lib/**/test/**",
+    "!lib/**/__tests__/**",
+    "!lib/**/__fixtures__/**",
+    "!lib/**/__mocks__/**",
+    // Additional blacklist for NOT collect coverage
+    // because those are executable files used by github-action
+    "!lib/pre.{cjs,mjs,js}",
+    "!lib/index.{cjs,mjs,js}",
+    "!lib/post.{cjs,mjs,js}"
+  ]
 }
