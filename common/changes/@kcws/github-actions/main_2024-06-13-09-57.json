@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Add captureRerun and captureRun on ExecutorContextPlugin for capture stdout and stderr automatically after finish",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
