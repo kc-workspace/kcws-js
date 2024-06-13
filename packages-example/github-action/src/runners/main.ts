@@ -1,6 +1,6 @@
-import { AppRunner } from "@kcws/github-actions";
+import type app from "../app";
 
-import app from "../app";
+import { AppRunner } from "@kcws/github-actions";
 
 const runner: AppRunner<typeof app> = (data, context) => {
   const logger = context.use("log");
