@@ -2,6 +2,20 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.8.1",
+      "tag": "@kcws/github-actions_v0.8.1",
+      "date": "Thu, 13 Jun 2024 10:31:33 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "CacheContextPlugin will check feature availablity first",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "db0339f9fddd89df43469ae2873d4a336096186f"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.8.0",
       "tag": "@kcws/github-actions_v0.8.0",
       "date": "Thu, 13 Jun 2024 10:01:32 GMT",

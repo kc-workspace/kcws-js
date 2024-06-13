@@ -1,6 +1,13 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Thu, 13 Jun 2024 10:01:32 GMT and should not be manually modified.
+This log was last generated on Thu, 13 Jun 2024 10:31:33 GMT and should not be manually modified.
+
+## 0.8.1
+Thu, 13 Jun 2024 10:31:33 GMT
+
+### Patches
+
+- CacheContextPlugin will check feature availablity first
 
 ## 0.8.0
 Thu, 13 Jun 2024 10:01:32 GMT
