@@ -46,21 +46,53 @@ describe("contexts.plugins.executors", () => {
     expect(exec).toHaveBeenNthCalledWith(2, "ls", ["-la"], { cwd: "/tmp" });
   });
 
+  describe("CapturedResult", () => {
+    test("captureRun() should get stdout", async () => {
+      mocked(exec).mockImplementation((cmd, args, options) => {
+        options?.listeners?.stdout?.(Buffer.from("completed", "utf8"));
+        return Promise.resolve(0);
+      });
+
+      const { code, stdout, stderr } = await context
+        .use("exec")
+        .captureRun("echo", "hello");
+
+      expect(code).toEqual(0);
+      expect(stdout?.toString()).toEqual("completed");
+      expect(stderr).toEqual(undefined);
+    });
+
+    test("captureRun() should get stderr", async () => {
+      mocked(exec).mockImplementation((cmd, args, options) => {
+        options?.listeners?.stderr?.(Buffer.from("failure", "utf8"));
+        return Promise.resolve(99);
+      });
+
+      const { code, stdout, stderr } = await context
+        .use("exec")
+        .captureRun("echo", "hello");
+
+      expect(code).toEqual(99);
+      expect(stdout).toEqual(undefined);
+      expect(stderr?.toString()).toEqual("failure");
+    });
+  });
+
   test("dry-run some command", async () => {
     const environment = {
       DRYRUN: "true",
     };
 
     await mockEnvironment(environment, async () => {
-      const context_ = ContextBuilder.fromInput()
+      const ctx = ContextBuilder.fromInput()
         .addPlugin(new InputContextPlugin())
         .addPlugin(new LogContextPlugin())
         .addPlugin(plugin)
         .build();
 
-      await context_.use("exec").run("ls", "-la");
+      await ctx.use("exec").run("ls", "-la");
       // Because dry-run is enabled
-      expect(exec).toHaveBeenCalledTimes(0);
+      expect(exec).not.toHaveBeenCalled();
     });
   });
 });

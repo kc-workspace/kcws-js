@@ -4,6 +4,8 @@
 
 ```ts
 
+/// <reference types="node" />
+
 import { AnnotationProperties } from '@actions/core';
 import { ExecOptions } from '@actions/exec';
 
@@ -161,6 +163,9 @@ export class DefaultContext<PLUGINS extends Plugins = NonNullable<unknown>> impl
 // @public
 export class ExecContextPlugin implements IExecContextPlugin {
     constructor();
+    captureRerun(cmd: string, ...args: string[]): Promise<CapturedResult>;
+    // Warning: (ae-forgotten-export) The symbol "CapturedResult" needs to be exported by the entry point index.d.ts
+    captureRun(cmd: string, ...args: string[]): Promise<CapturedResult>;
     // (undocumented)
     readonly dependencies: IExecContextPlugin["dependencies"];
     // Warning: (ae-forgotten-export) The symbol "IExecContext" needs to be exported by the entry point index.d.ts
@@ -169,8 +174,8 @@ export class ExecContextPlugin implements IExecContextPlugin {
     init(context: IExecContext): void;
     // (undocumented)
     readonly name = "exec";
-    rerun(cmd: string, ...arguments_: string[]): Promise<number>;
-    run(cmd: string, ...arguments_: string[]): Promise<number>;
+    rerun(cmd: string, ...args: string[]): Promise<number>;
+    run(cmd: string, ...args: string[]): Promise<number>;
     withOptions(options: ExecOptions): this;
 }
 

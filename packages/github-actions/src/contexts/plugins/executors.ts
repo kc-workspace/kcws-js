@@ -1,3 +1,5 @@
+import type { CapturedResult } from "./executors.type";
+
 import { exec, type ExecOptions } from "@actions/exec";
 
 import {
@@ -31,8 +33,8 @@ export class ExecContextPlugin implements IExecContextPlugin {
   readonly dependencies: IExecContextPlugin["dependencies"] = ["log", "input"];
 
   private options: ExecOptions | undefined;
-  private context: IExecContext | undefined;
   private dryrun: boolean;
+  private logger: LogContextPlugin | undefined;
 
   constructor() {
     this.options = undefined;
@@ -40,7 +42,7 @@ export class ExecContextPlugin implements IExecContextPlugin {
   }
 
   init(context: IExecContext) {
-    this.context = context;
+    this.logger = context.use("log");
     this.dryrun = context.use("input").optional("dryrun", toBool) ?? false;
   }
 
@@ -61,11 +63,10 @@ export class ExecContextPlugin implements IExecContextPlugin {
    * @param args - command arguments
    * @returns exit code
    */
-  async run(cmd: string, ...arguments_: string[]) {
-    const options = this.options;
+  async run(cmd: string, ...args: string[]) {
+    const output = await this.rerun(cmd, ...args);
     this.options = undefined;
-
-    return await this.execute(cmd, arguments_, options);
+    return output;
   }
 
   /**
@@ -77,8 +78,57 @@ export class ExecContextPlugin implements IExecContextPlugin {
    * @param args - command arguments
    * @returns exit code
    */
-  async rerun(cmd: string, ...arguments_: string[]) {
-    return await this.execute(cmd, arguments_, this.options);
+  async rerun(cmd: string, ...args: string[]) {
+    return await this.execute(cmd, args, this.options);
+  }
+
+  /**
+   * run input commandline with optional options and capture stdout and stderr.
+   * This will reset options after completed. To preserve the options later,
+   * use {@link ExecContextPlugin.captureRerun} instead
+   *
+   * @param cmd - command line
+   * @param args - command arguments
+   * @returns captured result from commandline
+   */
+  async captureRun(cmd: string, ...args: string[]): Promise<CapturedResult> {
+    const output = await this.captureRerun(cmd, ...args);
+    this.options = undefined;
+    return output;
+  }
+
+  /**
+   * run input commandline with optional options and capture stdout and stderr.
+   * This will preserve options after completed. To reset the options,
+   * use {@link ExecContextPlugin.captureRun} instead
+   *
+   * @param cmd - command line
+   * @param args - command arguments
+   * @returns captured result from commandline
+   */
+  async captureRerun(cmd: string, ...args: string[]): Promise<CapturedResult> {
+    let stdout: Buffer | undefined;
+    let stderr: Buffer | undefined;
+    const code = await this.execute(cmd, args, {
+      ...this.options,
+      listeners: {
+        ...this.options?.listeners,
+        stderr: data => {
+          stderr = data;
+        },
+        stdout: data => {
+          stdout = data;
+        },
+        debug: data => {
+          this.logger?.debug(data);
+        },
+      },
+    });
+    return {
+      code,
+      stderr,
+      stdout,
+    };
   }
 
   private async execute(
@@ -88,7 +138,7 @@ export class ExecContextPlugin implements IExecContextPlugin {
   ) {
     if (this.dryrun) {
       const message = `[DRY] $ ${cmd} '${arguments_.join(" ")}'`;
-      this.context?.use("log").info(message);
+      this.logger?.info(message);
 
       return 0;
     }
