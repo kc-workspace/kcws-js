@@ -2,6 +2,20 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.8.0",
+      "tag": "@kcws/github-actions_v0.8.0",
+      "date": "Thu, 13 Jun 2024 10:01:32 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add captureRerun and captureRun on ExecutorContextPlugin for capture stdout and stderr automatically after finish",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "6f3f4aeb53d33d919599e7bfb46776445c7371a0"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.7.0",
       "tag": "@kcws/github-actions_v0.7.0",
       "date": "Thu, 13 Jun 2024 08:31:15 GMT",
