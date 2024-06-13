@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Add new OutputContextPlugin for create output on GitHub Actions",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
