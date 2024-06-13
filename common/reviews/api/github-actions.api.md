@@ -18,6 +18,9 @@ export class Actions<Input extends object, Context extends BaseContext> {
 }
 
 // @public
+export type AppContext<App> = App extends Actions<object, infer C> ? C : never;
+
+// @public
 export type AppRunner<App> = App extends Actions<infer I, infer C> ? Runner<I, C> : never;
 
 // @public
@@ -50,6 +53,8 @@ export interface BaseData<Input> {
 export class CacheContextPlugin implements ContextPlugin<BaseContext, "cache"> {
     // (undocumented)
     readonly dependencies: never[];
+    getRestoreKeys(option: CacheKeyOption): string[];
+    getSaveKey(option: CacheKeyOption): string;
     // (undocumented)
     init(context: BaseContext): void;
     // (undocumented)
@@ -168,12 +173,6 @@ export class ExecContextPlugin implements IExecContextPlugin {
     run(cmd: string, ...arguments_: string[]): Promise<number>;
     withOptions(options: ExecOptions): this;
 }
-
-// @public
-export const getRestoreCacheKeys: (option: CacheKeyOption, actionName: string) => string[];
-
-// @public
-export const getSaveCacheKey: (option: CacheKeyOption, actionName: string) => string;
 
 // Warning: (ae-forgotten-export) The symbol "IHelperContextPlugin" needs to be exported by the entry point index.d.ts
 //
