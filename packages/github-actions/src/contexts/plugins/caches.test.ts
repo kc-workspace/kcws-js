@@ -1,21 +1,35 @@
 jest.mock("@actions/cache");
 
-import { saveCache, restoreCache } from "@actions/cache";
+import { saveCache, restoreCache, isFeatureAvailable } from "@actions/cache";
 
 import { ContextBuilder } from "..";
-import { CacheContextPlugin } from ".";
+import { CacheContextPlugin, LogContextPlugin } from ".";
 import { CacheKeyOption } from "./caches.type";
 
 describe("contexts.plugins.caches", () => {
   const plugin = new CacheContextPlugin();
-  const context = ContextBuilder.fromInput("name").addPlugin(plugin).build();
+  const context = ContextBuilder.fromInput("name")
+    .addPlugin(new LogContextPlugin())
+    .addPlugin(plugin)
+    .build();
 
   test("add plugin should usable with use()", () => {
     expect(context.use("cache")).toEqual(plugin);
     expect(context.use("cache").name).toEqual("cache");
   });
 
+  test("cannot save cache if feature is not available", async () => {
+    mocked(isFeatureAvailable).mockReturnValue(false);
+    await context
+      .use("cache")
+      .save({ actionName: true }, "/tmp/hello", "/tmp/world");
+
+    expect(saveCache).not.toHaveBeenCalled();
+  });
+
   test("save cache using actions/core apis", async () => {
+    mocked(isFeatureAvailable).mockReturnValue(true);
+
     await context
       .use("cache")
       .save({ actionName: true }, "/tmp/hello", "/tmp/world");
@@ -27,7 +41,22 @@ describe("contexts.plugins.caches", () => {
     );
   });
 
+  test("cannot restore cache if feature is not available", async () => {
+    mocked(isFeatureAvailable).mockReturnValue(false);
+    await context
+      .use("cache")
+      .restore(
+        { actionName: true, custom: ["hello", "world"] },
+        "/tmp/hello",
+        "/tmp/world"
+      );
+
+    expect(restoreCache).not.toHaveBeenCalled();
+  });
+
   test("restore cache using actions/core apis", async () => {
+    mocked(isFeatureAvailable).mockReturnValue(true);
+
     await context
       .use("cache")
       .restore(

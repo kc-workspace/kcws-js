@@ -1,32 +1,65 @@
-import type { BaseContext, ContextPlugin } from "..";
+import type { ContextPlugin, DefaultContext, LogContextPlugin } from "..";
 import type { CacheKeyOption } from "./caches.type";
 
-import { restoreCache, saveCache } from "@actions/cache";
+import { isFeatureAvailable, restoreCache, saveCache } from "@actions/cache";
+
+type ICacheContext = DefaultContext<{
+  [key in LogContextPlugin["name"]]: LogContextPlugin;
+}>;
+
+export type ICacheContextPlugin = ContextPlugin<
+  ICacheContext,
+  "cache",
+  ["log"]
+>;
 
 /**
  * Context Plugin allows user to caching their results
  * @public
  */
-export class CacheContextPlugin implements ContextPlugin<BaseContext, "cache"> {
+export class CacheContextPlugin implements ICacheContextPlugin {
   readonly name = "cache";
-  readonly dependencies = [];
+  readonly dependencies: ICacheContextPlugin["dependencies"] = ["log"];
 
   private actionName = "";
+  private logger: LogContextPlugin | undefined;
 
-  init(context: BaseContext) {
+  init(context: ICacheContext) {
     this.actionName = context.name;
+    this.logger = context.use("log");
+  }
+
+  /**
+   * check is current machine support data caching feature or not
+   *
+   * @returns true if has feature support
+   */
+  hasFeature() {
+    return isFeatureAvailable();
   }
 
   async restore(option: CacheKeyOption, ...paths: string[]) {
-    await restoreCache(
-      paths,
-      this.getSaveKey(option),
-      this.getRestoreKeys(option)
-    );
+    if (this.hasFeature()) {
+      return await restoreCache(
+        paths,
+        this.getSaveKey(option),
+        this.getRestoreKeys(option)
+      );
+    } else {
+      this.logger?.warn(
+        "Cannot restore cache because machine isn't support caching"
+      );
+    }
   }
 
   async save(option: CacheKeyOption, ...paths: string[]) {
-    await saveCache(paths, this.getSaveKey(option));
+    if (this.hasFeature()) {
+      await saveCache(paths, this.getSaveKey(option));
+    } else {
+      this.logger?.warn(
+        "Cannot save cache because machine isn't support caching"
+      );
+    }
   }
 
   /**

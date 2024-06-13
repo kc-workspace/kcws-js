@@ -51,18 +51,23 @@ export interface BaseData<Input> {
     input: Input;
 }
 
+// Warning: (ae-forgotten-export) The symbol "ICacheContextPlugin" needs to be exported by the entry point index.d.ts
+//
 // @public
-export class CacheContextPlugin implements ContextPlugin<BaseContext, "cache"> {
+export class CacheContextPlugin implements ICacheContextPlugin {
     // (undocumented)
-    readonly dependencies: never[];
+    readonly dependencies: ICacheContextPlugin["dependencies"];
     getRestoreKeys(option: CacheKeyOption): string[];
     getSaveKey(option: CacheKeyOption): string;
+    hasFeature(): boolean;
+    // Warning: (ae-forgotten-export) The symbol "ICacheContext" needs to be exported by the entry point index.d.ts
+    //
     // (undocumented)
-    init(context: BaseContext): void;
+    init(context: ICacheContext): void;
     // (undocumented)
     readonly name = "cache";
     // (undocumented)
-    restore(option: CacheKeyOption, ...paths: string[]): Promise<void>;
+    restore(option: CacheKeyOption, ...paths: string[]): Promise<string | undefined>;
     // (undocumented)
     save(option: CacheKeyOption, ...paths: string[]): Promise<void>;
 }

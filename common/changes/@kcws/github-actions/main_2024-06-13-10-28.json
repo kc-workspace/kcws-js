@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "CacheContextPlugin will check feature availablity first",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
