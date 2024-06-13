@@ -2,6 +2,32 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.7.0",
+      "tag": "@kcws/github-actions_v0.7.0",
+      "date": "Thu, 13 Jun 2024 08:31:15 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add new AppContext type for get Context object from Actions app",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "e21af6e3760e877d54ace392fe984a3b71c107be"
+          },
+          {
+            "comment": "Add new OutputContextPlugin for create output on GitHub Actions",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "0205e807b4537f858f5cdbefb7cb59334a387456"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Migrate cache utilities function to context plugin",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "9eb678eb43093584bed5e527b55b9622dd19ebd2"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.6.0",
       "tag": "@kcws/github-actions_v0.6.0",
       "date": "Thu, 13 Jun 2024 05:24:18 GMT",

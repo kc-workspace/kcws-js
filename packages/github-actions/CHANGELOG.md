@@ -1,6 +1,18 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Thu, 13 Jun 2024 05:24:18 GMT and should not be manually modified.
+This log was last generated on Thu, 13 Jun 2024 08:31:15 GMT and should not be manually modified.
+
+## 0.7.0
+Thu, 13 Jun 2024 08:31:15 GMT
+
+### Minor changes
+
+- Add new AppContext type for get Context object from Actions app
+- Add new OutputContextPlugin for create output on GitHub Actions
+
+### Patches
+
+- Migrate cache utilities function to context plugin
 
 ## 0.6.0
 Thu, 13 Jun 2024 05:24:18 GMT
