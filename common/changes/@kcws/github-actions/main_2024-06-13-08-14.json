@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Migrate cache utilities function to context plugin",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
