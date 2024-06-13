@@ -19,10 +19,13 @@ class Actions<Input extends object, Context extends BaseContext> {
     return new Actions(context, builder);
   }
 
-  private constructor(
-    private readonly context: Context,
-    private readonly builder: InputBuilder<Input, Context>
-  ) {}
+  private readonly context: Context;
+  private readonly builder: InputBuilder<Input, Context>;
+
+  private constructor(context: Context, builder: InputBuilder<Input, Context>) {
+    this.context = context;
+    this.builder = builder;
+  }
 
   async exec(runner: Runner<Input, Context>, input?: Partial<Input>) {
     try {

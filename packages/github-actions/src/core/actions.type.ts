@@ -33,3 +33,9 @@ export type Runner<Input, Context extends BaseContext = DefaultContext> = (
  */
 export type AppRunner<App> =
   App extends Actions<infer I, infer C> ? Runner<I, C> : never;
+
+/**
+ * A helper type for create Context based on input Actions app
+ * @public
+ */
+export type AppContext<App> = App extends Actions<object, infer C> ? C : never;
