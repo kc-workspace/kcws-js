@@ -2,6 +2,37 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.6.0",
+      "tag": "@kcws/github-actions_v0.6.0",
+      "date": "Thu, 13 Jun 2024 05:24:18 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix static fromPackageJson didn't update function signature",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "66242b378259c101d7779494ea6cddf9db374779"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Context plugin supports dependency to other plugins",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "e3567225e056c91fa78f00917a9a1113ebcaee03"
+          },
+          {
+            "comment": "New HelperContextPlugin for helper functions",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "4622622e6d5809c64e5714987e325096bb03c72a"
+          },
+          {
+            "comment": "Change static function name on ContextBuilder using `from*()` and `empty()` and update when default value might use if metadata is missing",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "053caaccd5559ea224e94f77378b0dbf6e14c407"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.5.0",
       "tag": "@kcws/github-actions_v0.5.0",
       "date": "Wed, 12 Jun 2024 11:00:41 GMT",

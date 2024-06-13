@@ -1,6 +1,19 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Wed, 12 Jun 2024 11:00:41 GMT and should not be manually modified.
+This log was last generated on Thu, 13 Jun 2024 05:24:18 GMT and should not be manually modified.
+
+## 0.6.0
+Thu, 13 Jun 2024 05:24:18 GMT
+
+### Minor changes
+
+- Context plugin supports dependency to other plugins
+- New HelperContextPlugin for helper functions
+- Change static function name on ContextBuilder using `from*()` and `empty()` and update when default value might use if metadata is missing
+
+### Patches
+
+- Fix static fromPackageJson didn't update function signature
 
 ## 0.5.0
 Wed, 12 Jun 2024 11:00:41 GMT
