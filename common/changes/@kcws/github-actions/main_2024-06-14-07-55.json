@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Add new IO and System ContextPlugins",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
