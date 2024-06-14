@@ -2,6 +2,27 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.9.0",
+      "tag": "@kcws/github-actions_v0.9.0",
+      "date": "Fri, 14 Jun 2024 08:18:12 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Fix typo on CHANGELOG",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "f6fcfb8df94a9a92d20e4c1c58af93acb3bbf923"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Add new IO and System ContextPlugins",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "0af4a8e337cda67bb1c3a7e81eb19bfb2a49c766"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.8.1",
       "tag": "@kcws/github-actions_v0.8.1",
       "date": "Thu, 13 Jun 2024 10:31:33 GMT",

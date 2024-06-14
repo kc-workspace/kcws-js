@@ -1,6 +1,13 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Thu, 13 Jun 2024 10:31:33 GMT and should not be manually modified.
+This log was last generated on Fri, 14 Jun 2024 08:18:12 GMT and should not be manually modified.
+
+## 0.9.0
+Fri, 14 Jun 2024 08:18:12 GMT
+
+### Minor changes
+
+- Add new IO and System ContextPlugins
 
 ## 0.8.1
 Thu, 13 Jun 2024 10:31:33 GMT
