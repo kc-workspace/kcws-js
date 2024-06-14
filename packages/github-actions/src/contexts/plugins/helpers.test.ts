@@ -1,3 +1,7 @@
+jest.mock("@actions/core");
+
+import { group } from "@actions/core";
+
 import { ContextBuilder } from "../builder";
 import { HelperContextPlugin } from "./helpers";
 import { LogContextPlugin } from "./loggers";
@@ -8,6 +12,20 @@ describe("contexts.plugins.helpers", () => {
     .addPlugin(new LogContextPlugin())
     .addPlugin(helpers)
     .build();
+
+  test("group action together", () => {
+    mocked(group).mockImplementation(async (_, runner) => {
+      await runner();
+    });
+
+    const runner = jest.fn();
+    context.use("helper").group("hello", runner);
+
+    expect(group).toHaveBeenCalledTimes(1);
+    expect(group).toHaveBeenCalledWith("hello", expect.any(Function));
+
+    expect(runner).toHaveBeenCalledWith(context);
+  });
 
   test("add plugin should usable with use()", () => {
     expect(context.use("helper")).toEqual(helpers);

@@ -10,6 +10,10 @@ import {
   warning,
 } from "@actions/core";
 
+/**
+ * Datatype log supported
+ * @public
+ */
 export type LogData = (Record<string, PrimitiveType> | PrimitiveType)[];
 
 /**

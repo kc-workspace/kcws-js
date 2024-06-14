@@ -4,31 +4,27 @@
   "packages": [
     {
       "name": "@actions/cache",
-      "allowedCategories": [ "examples", "libraries" ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@actions/core",
-      "allowedCategories": [ "examples", "libraries" ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@actions/exec",
-      "allowedCategories": [ "examples", "libraries" ]
+      "allowedCategories": [ "libraries" ]
     },
     {
-      "name": "@actions/github",
-      "allowedCategories": [ "examples" ]
-    },
-    {
-      "name": "@actions/http-client",
-      "allowedCategories": [ "examples" ]
+      "name": "@actions/glob",
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@actions/io",
-      "allowedCategories": [ "examples" ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@astrojs/check",
-      "allowedCategories": [ "libraries", "tools" ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@definitelytyped/eslint-plugin",
@@ -40,7 +36,7 @@
     },
     {
       "name": "@kcinternals/heft-node-rig",
-      "allowedCategories": [ "configs", "examples", "internals", "libraries", "tools" ]
+      "allowedCategories": [ "configs", "examples", "internals", "libraries" ]
     },
     {
       "name": "@kcinternals/heft-types-rig",
@@ -60,7 +56,7 @@
     },
     {
       "name": "@kcws/eslint-config",
-      "allowedCategories": [ "configs", "examples", "internals", "libraries", "tools", "types" ]
+      "allowedCategories": [ "configs", "examples", "internals", "libraries", "types" ]
     },
     {
       "name": "@kcws/github-actions",
@@ -68,7 +64,7 @@
     },
     {
       "name": "@kcws/heft-node-rig",
-      "allowedCategories": [ "examples", "libraries" ]
+      "allowedCategories": [ "examples" ]
     },
     {
       "name": "@kcws/heft-web-rig",
@@ -76,11 +72,7 @@
     },
     {
       "name": "@kcws/lintstaged-config",
-      "allowedCategories": [ "configs", "examples", "internals", "libraries", "tools", "types" ]
-    },
-    {
-      "name": "@kcws/prettier-config",
-      "allowedCategories": [ "examples" ]
+      "allowedCategories": [ "configs", "examples", "internals", "libraries", "types" ]
     },
     {
       "name": "@microsoft/api-extractor",
@@ -144,15 +136,11 @@
     },
     {
       "name": "astro",
-      "allowedCategories": [ "libraries", "tools" ]
-    },
-    {
-      "name": "decap-cms-app",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "decap-server",
-      "allowedCategories": [ "libraries", "tools" ]
+      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "esbuild",
@@ -248,7 +236,7 @@
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "examples", "internals", "libraries", "tools", "types" ]
+      "allowedCategories": [ "examples", "internals", "tools", "types" ]
     }
   ]
 }

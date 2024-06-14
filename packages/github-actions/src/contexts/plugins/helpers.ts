@@ -1,11 +1,18 @@
+import { group } from "@actions/core";
+
 import { DefaultContext } from "../builder";
 import { ContextPlugin } from "../builder.type";
 import { LogContextPlugin } from "./loggers";
+import { GroupRunner } from "./helpers.type";
 
 type IHelperContext = DefaultContext<{
   [key in LogContextPlugin["name"]]: LogContextPlugin;
 }>;
 
+/**
+ * simplify version of {@link HelperContextPlugin} interface
+ * @public
+ */
 export type IHelperContextPlugin = ContextPlugin<
   IHelperContext,
   "helper",
@@ -28,6 +35,15 @@ export class HelperContextPlugin implements IHelperContextPlugin {
 
   init(context: IHelperContext) {
     this.context = context;
+  }
+
+  group<OUT>(
+    name: string,
+    runner: GroupRunner<IHelperContext, OUT>
+  ): Promise<OUT> {
+    return group(name, async () => {
+      return await runner(this.context!);
+    });
   }
 
   logActionInfo() {

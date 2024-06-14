@@ -8,6 +8,10 @@
 
 import { AnnotationProperties } from '@actions/core';
 import { ExecOptions } from '@actions/exec';
+import { Globber } from '@actions/glob';
+import { CopyOptions as IOCopyOptions } from '@actions/io';
+import { GlobOptions as IOGlobOptions } from '@actions/glob';
+import { MoveOptions as IOMoveOptions } from '@actions/io';
 
 // @public
 export class Actions<Input extends object, Context extends BaseContext> {
@@ -79,6 +83,16 @@ export interface CacheKeyOption {
     custom?: string[] | null;
     // (undocumented)
     system?: boolean | SystemCacheKeyOption;
+}
+
+// @public
+export interface CapturedResult {
+    // (undocumented)
+    code: number;
+    // (undocumented)
+    stderr?: Buffer;
+    // (undocumented)
+    stdout?: Buffer;
 }
 
 // Warning: (ae-incompatible-release-tags) The symbol "ContextBuilder" is marked as @beta, but its signature references "Plugins" which is marked as @internal
@@ -163,13 +177,10 @@ export class DefaultContext<PLUGINS extends Plugins = NonNullable<unknown>> impl
     readonly version: string;
 }
 
-// Warning: (ae-forgotten-export) The symbol "IExecContextPlugin" needs to be exported by the entry point index.d.ts
-//
 // @public
 export class ExecContextPlugin implements IExecContextPlugin {
     constructor();
     captureRerun(cmd: string, ...args: string[]): Promise<CapturedResult>;
-    // Warning: (ae-forgotten-export) The symbol "CapturedResult" needs to be exported by the entry point index.d.ts
     captureRun(cmd: string, ...args: string[]): Promise<CapturedResult>;
     // (undocumented)
     readonly dependencies: IExecContextPlugin["dependencies"];
@@ -184,8 +195,9 @@ export class ExecContextPlugin implements IExecContextPlugin {
     withOptions(options: ExecOptions): this;
 }
 
-// Warning: (ae-forgotten-export) The symbol "IHelperContextPlugin" needs to be exported by the entry point index.d.ts
-//
+// @public
+export type GroupRunner<CONTEXT extends BaseContext, OUT> = (context: CONTEXT) => OUT | Promise<OUT>;
+
 // @public
 export class HelperContextPlugin implements IHelperContextPlugin {
     // (undocumented)
@@ -198,6 +210,8 @@ export class HelperContextPlugin implements IHelperContextPlugin {
     readonly dependencies: IHelperContextPlugin["dependencies"];
     // (undocumented)
     getActionInfo(): string;
+    // (undocumented)
+    group<OUT>(name: string, runner: GroupRunner<IHelperContext, OUT>): Promise<OUT>;
     // Warning: (ae-forgotten-export) The symbol "IHelperContext" needs to be exported by the entry point index.d.ts
     //
     // (undocumented)
@@ -207,6 +221,12 @@ export class HelperContextPlugin implements IHelperContextPlugin {
     // (undocumented)
     readonly name = "helper";
 }
+
+// @public
+export type IExecContextPlugin = ContextPlugin<IExecContext, "exec", (keyof IExecContext["plugins"])[]>;
+
+// @public
+export type IHelperContextPlugin = ContextPlugin<IHelperContext, "helper", (keyof IHelperContext["plugins"])[]>;
 
 // Warning: (ae-internal-missing-underscore) The name "InputBuilder" should be prefixed with an underscore because the declaration is marked as @internal
 //
@@ -232,13 +252,48 @@ export class InputContextPlugin implements ContextPlugin<BaseContext, "input"> {
 }
 
 // @public
+export class IOContextPlugin implements ContextPlugin<BaseContext, "io"> {
+    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "cp"
+    //
+    // (undocumented)
+    copy(source: string, dest: string, options?: IOCopyOptions): Promise<void>;
+    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "create"
+    //
+    // (undocumented)
+    createGlob(pattern: string, options?: IOGlobOptions): Promise<Globber>;
+    // (undocumented)
+    readonly dependencies: never[];
+    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "hashFiles"
+    //
+    // (undocumented)
+    hash(pattern: string, cwd?: string): Promise<string>;
+    // (undocumented)
+    init(): void;
+    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "mv"
+    //
+    // (undocumented)
+    move(source: string, dest: string, options?: IOMoveOptions): Promise<void>;
+    // (undocumented)
+    readonly name = "io";
+    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "_which"
+    //
+    // (undocumented)
+    which(tool: string, check: boolean): Promise<string>;
+}
+
+export { IOCopyOptions }
+
+export { IOGlobOptions }
+
+export { IOMoveOptions }
+
+// @public
 export class LogContextPlugin implements ContextPlugin<BaseContext, "log"> {
     debug(format: string, ...data: LogData): void;
     // (undocumented)
     readonly dependencies: never[];
     error(message: string | Error, properties?: AnnotationProperties): void;
     format(format: string, ...data: LogData): string;
-    // Warning: (ae-forgotten-export) The symbol "LogData" needs to be exported by the entry point index.d.ts
     info(format: string, ...data: LogData): void;
     // (undocumented)
     init(): void;
@@ -246,6 +301,24 @@ export class LogContextPlugin implements ContextPlugin<BaseContext, "log"> {
     readonly name = "log";
     notice(message: string | Error, properties?: AnnotationProperties): void;
     warn(message: string | Error, properties?: AnnotationProperties): void;
+}
+
+// Warning: (ae-forgotten-export) The symbol "PrimitiveType" needs to be exported by the entry point index.d.ts
+//
+// @public
+export type LogData = (Record<string, PrimitiveType> | PrimitiveType)[];
+
+// @public
+export class OutputContextPlugin implements ContextPlugin<BaseContext, "output"> {
+    // (undocumented)
+    readonly dependencies: never[];
+    // (undocumented)
+    init(): void;
+    // (undocumented)
+    readonly name = "output";
+    setOutput<V>(name: string, value: V): void;
+    // (undocumented)
+    setSecret(value: string): void;
 }
 
 // Warning: (ae-internal-missing-underscore) The name "Plugins" should be prefixed with an underscore because the declaration is marked as @internal
@@ -264,6 +337,26 @@ export interface SystemCacheKeyOption {
     arch?: boolean;
     // (undocumented)
     platform?: boolean;
+}
+
+// @public
+export class SystemContextPlugin implements ContextPlugin<BaseContext, "system"> {
+    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "_addPath"
+    //
+    // (undocumented)
+    addPath(additionalPath: string): void;
+    // (undocumented)
+    addPaths(...additionalPaths: string[]): void;
+    // (undocumented)
+    readonly dependencies: never[];
+    // (undocumented)
+    init(): void;
+    // (undocumented)
+    readonly name = "system";
+    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "exportVariable"
+    //
+    // (undocumented)
+    setEnvVar<V>(name: string, value: V): void;
 }
 
 // Warning: (ae-forgotten-export) The symbol "Converter" needs to be exported by the entry point index.d.ts

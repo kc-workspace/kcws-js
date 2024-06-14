@@ -1,6 +1,12 @@
 export { CacheContextPlugin } from "./caches";
 export type { CacheKeyOption, SystemCacheKeyOption } from "./caches.type";
-export { ExecContextPlugin } from "./executors";
-export { HelperContextPlugin } from "./helpers";
+export { ExecContextPlugin, type IExecContextPlugin } from "./executors";
+export type { CapturedResult } from "./executors.type";
+export { HelperContextPlugin, type IHelperContextPlugin } from "./helpers";
+export type { GroupRunner } from "./helpers.type";
 export { InputContextPlugin } from "./inputs";
-export { LogContextPlugin } from "./loggers";
+export { IOContextPlugin } from "./io";
+export type { IOCopyOptions, IOGlobOptions, IOMoveOptions } from "./io.type";
+export { LogContextPlugin, type LogData } from "./loggers";
+export { OutputContextPlugin } from "./outputs";
+export { SystemContextPlugin } from "./systems";

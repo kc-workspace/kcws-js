@@ -18,6 +18,10 @@ type IExecContext = DefaultContext<
   }
 >;
 
+/**
+ * simplify version of {@link ExecContextPlugin} interface
+ * @public
+ */
 export type IExecContextPlugin = ContextPlugin<
   IExecContext,
   "exec",
