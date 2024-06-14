@@ -8,7 +8,7 @@
       "comments": {
         "patch": [
           {
-            "comment": "CacheContextPlugin will check feature availablity first",
+            "comment": "CacheContextPlugin will check feature availability first",
             "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
             "commit": "db0339f9fddd89df43469ae2873d4a336096186f"
           }

@@ -7,7 +7,7 @@ Thu, 13 Jun 2024 10:31:33 GMT
 
 ### Patches
 
-- CacheContextPlugin will check feature availablity first
+- CacheContextPlugin will check feature availability first
 
 ## 0.8.0
 Thu, 13 Jun 2024 10:01:32 GMT
