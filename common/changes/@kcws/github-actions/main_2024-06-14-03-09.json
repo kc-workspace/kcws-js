@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Fix typo on CHANGELOG",
+      "type": "none"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
