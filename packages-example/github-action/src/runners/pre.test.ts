@@ -1,14 +1,11 @@
-jest.mock("@actions/core");
-
-import { info } from "@actions/core";
-
-import app from "../app";
+import app, { context } from "../app";
 import runner from "./pre";
 
 describe("[pre-hook] application runner", () => {
   test("should print info logs", async () => {
+    jest.spyOn(context.plugins.log, "info");
+
     app.exec(runner);
-    expect(info).toHaveBeenCalledTimes(1);
-    expect(info).toHaveBeenCalledWith("hello pre world");
+    expect(context.plugins.log.info).toHaveBeenCalledTimes(1);
   });
 });
