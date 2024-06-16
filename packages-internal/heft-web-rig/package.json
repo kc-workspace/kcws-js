@@ -33,7 +33,7 @@
   "dependencies": {
     "@microsoft/api-extractor": "7.47.0",
     "@rushstack/heft-api-extractor-plugin": "0.3.38",
-    "@rushstack/heft-jest-plugin": "0.11.39",
+    "@rushstack/heft-jest-plugin": "0.12.0",
     "@rushstack/heft-lint-plugin": "0.3.39",
     "@rushstack/heft-sass-plugin": "0.14.8",
     "@rushstack/heft-typescript-plugin": "0.5.16",

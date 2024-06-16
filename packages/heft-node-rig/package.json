@@ -34,7 +34,7 @@
     "@microsoft/api-extractor": "7.47.0",
     "@kcinternals/heft-esbuild-plugin": "workspace:*",
     "@rushstack/heft-api-extractor-plugin": "0.3.38",
-    "@rushstack/heft-jest-plugin": "0.11.39",
+    "@rushstack/heft-jest-plugin": "0.12.0",
     "@rushstack/heft-lint-plugin": "0.3.39",
     "@rushstack/heft-typescript-plugin": "0.5.16",
     "@types/heft-jest": "1.0.6",
