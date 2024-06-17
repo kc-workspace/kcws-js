@@ -12,6 +12,13 @@ import { deepMerge } from "../utils/objects";
  * @public
  */
 class Actions<Input extends object, Context extends BaseContext> {
+  /**
+   * create action object based on input and context
+   *
+   * @param context - actions context
+   * @param builder - actions input builder
+   * @returns action object for executes runner
+   */
   static builder<Input extends object, Context extends BaseContext>(
     context: Context,
     builder: InputBuilder<Input, Context>
@@ -27,9 +34,15 @@ class Actions<Input extends object, Context extends BaseContext> {
     this.builder = builder;
   }
 
+  /**
+   * executes input runner using action context and default input.
+   *
+   * @param runner - input runner
+   * @param input - additional input overrides default input and send to runner
+   */
   async exec(runner: Runner<Input, Context>, input?: Partial<Input>) {
     try {
-      const base = this.builder(this.context);
+      const base = await this.builder(this.context);
       const data = {
         input: deepMerge(base, input),
       };

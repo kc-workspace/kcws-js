@@ -16,7 +16,7 @@ export interface BaseData<Input> {
 export type InputBuilder<
   Input,
   Context extends BaseContext = DefaultContext,
-> = (context: Context) => Input;
+> = (context: Context) => Input | Promise<Input>;
 
 /**
  * Actions runner to executes when action has been called
