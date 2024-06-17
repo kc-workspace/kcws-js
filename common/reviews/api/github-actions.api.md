@@ -15,11 +15,7 @@ import { MoveOptions as IOMoveOptions } from '@actions/io';
 
 // @public
 export class Actions<Input extends object, Context extends BaseContext> {
-    // Warning: (ae-incompatible-release-tags) The symbol "builder" is marked as @public, but its signature references "InputBuilder" which is marked as @internal
-    //
-    // (undocumented)
     static builder<Input extends object, Context extends BaseContext>(context: Context, builder: InputBuilder<Input, Context>): Actions<Input, Context>;
-    // (undocumented)
     exec(runner: Runner<Input, Context>, input?: Partial<Input>): Promise<void>;
 }
 
@@ -228,10 +224,8 @@ export type IExecContextPlugin = ContextPlugin<IExecContext, "exec", (keyof IExe
 // @public
 export type IHelperContextPlugin = ContextPlugin<IHelperContext, "helper", (keyof IHelperContext["plugins"])[]>;
 
-// Warning: (ae-internal-missing-underscore) The name "InputBuilder" should be prefixed with an underscore because the declaration is marked as @internal
-//
-// @internal
-export type InputBuilder<Input, Context extends BaseContext = DefaultContext> = (context: Context) => Input;
+// @public
+export type InputBuilder<Input, Context extends BaseContext = DefaultContext> = (context: Context) => Input | Promise<Input>;
 
 // @public
 export class InputContextPlugin implements ContextPlugin<BaseContext, "input"> {

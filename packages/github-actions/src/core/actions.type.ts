@@ -11,7 +11,7 @@ export interface BaseData<Input> {
 
 /**
  * A function for build input value
- * @internal
+ * @public
  */
 export type InputBuilder<
   Input,
