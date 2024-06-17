@@ -6,7 +6,6 @@ describe("application runner", () => {
     jest.spyOn(context.plugins.log, "info");
 
     await app.exec(runner);
-
     expect(context.plugins.log.info).toHaveBeenCalledTimes(2);
   });
 
@@ -14,7 +13,6 @@ describe("application runner", () => {
     jest.spyOn(context.plugins.log, "info");
 
     await app.exec(runner, { name: "name" });
-
     expect(context.plugins.log.info).toHaveBeenCalledTimes(2);
   });
 });
