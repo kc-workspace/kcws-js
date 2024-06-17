@@ -29,11 +29,9 @@ export class LogContextPlugin implements ContextPlugin<BaseContext, "log"> {
 
   /**
    * Log notice message.
-   * Check {@link LogContextPlugin.format} for formatting syntax.
    *
-   * @param format - format message
-   * @param data - message data
-   * @see {@link LogContextPlugin.format}
+   * @param format - message
+   * @param properties - additional data
    */
   notice(message: string | Error, properties?: AnnotationProperties) {
     notice(message, properties);
@@ -41,11 +39,9 @@ export class LogContextPlugin implements ContextPlugin<BaseContext, "log"> {
 
   /**
    * Log error message.
-   * Check {@link LogContextPlugin.format} for formatting syntax.
    *
-   * @param format - format message
-   * @param data - message data
-   * @see {@link LogContextPlugin.format}
+   * @param format - message
+   * @param properties - additional data
    */
   error(message: string | Error, properties?: AnnotationProperties) {
     error(message, properties);
@@ -53,11 +49,9 @@ export class LogContextPlugin implements ContextPlugin<BaseContext, "log"> {
 
   /**
    * Log warning message.
-   * Check {@link LogContextPlugin.format} for formatting syntax.
    *
-   * @param format - format message
-   * @param data - message data
-   * @see {@link LogContextPlugin.format}
+   * @param format - message
+   * @param properties - additional data
    */
   warn(message: string | Error, properties?: AnnotationProperties) {
     warning(message, properties);
