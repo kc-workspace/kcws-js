@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Support building input from promise",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
