@@ -28,33 +28,33 @@ export class LogContextPlugin implements ContextPlugin<BaseContext, "log"> {
   init() {}
 
   /**
-   * Log notice message.
+   * Log notice data.
    *
-   * @param format - message
-   * @param properties - additional data
+   * @param data - logging data
+   * @param properties - additional data properties
    */
-  notice(message: string | Error, properties?: AnnotationProperties) {
-    notice(message, properties);
+  notice(data: string | Error, properties?: AnnotationProperties) {
+    notice(data, properties);
   }
 
   /**
-   * Log error message.
+   * Log error data.
    *
-   * @param format - message
-   * @param properties - additional data
+   * @param data - logging data
+   * @param properties - additional data properties
    */
-  error(message: string | Error, properties?: AnnotationProperties) {
-    error(message, properties);
+  error(data: string | Error, properties?: AnnotationProperties) {
+    error(data, properties);
   }
 
   /**
-   * Log warning message.
+   * Log warning data.
    *
-   * @param format - message
-   * @param properties - additional data
+   * @param data - logging data
+   * @param properties - additional data properties
    */
-  warn(message: string | Error, properties?: AnnotationProperties) {
-    warning(message, properties);
+  warn(data: string | Error, properties?: AnnotationProperties) {
+    warning(data, properties);
   }
 
   /**
