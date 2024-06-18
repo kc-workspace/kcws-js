@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Update jsdoc typo on LogContextPlugin",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
