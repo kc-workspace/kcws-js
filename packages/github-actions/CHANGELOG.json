@@ -2,6 +2,38 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.10.0",
+      "tag": "@kcws/github-actions_v0.10.0",
+      "date": "Tue, 18 Jun 2024 06:37:36 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix wrong document on function arguments",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "b3b951400f398635d3dba19069ffe81d28b7173b"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Support building input from promise",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "439df914d417b4611967b1403a1f79ae86e43166"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.18.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.43.3`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.22.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.9.0",
       "tag": "@kcws/github-actions_v0.9.0",
       "date": "Fri, 14 Jun 2024 08:18:12 GMT",

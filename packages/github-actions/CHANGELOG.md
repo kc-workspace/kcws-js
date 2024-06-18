@@ -1,6 +1,17 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Fri, 14 Jun 2024 08:18:12 GMT and should not be manually modified.
+This log was last generated on Tue, 18 Jun 2024 06:37:36 GMT and should not be manually modified.
+
+## 0.10.0
+Tue, 18 Jun 2024 06:37:36 GMT
+
+### Minor changes
+
+- Support building input from promise
+
+### Patches
+
+- Fix wrong document on function arguments
 
 ## 0.9.0
 Fri, 14 Jun 2024 08:18:12 GMT

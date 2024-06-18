@@ -2,6 +2,38 @@
   "name": "@kcws/rspack-config",
   "entries": [
     {
+      "version": "0.21.0",
+      "tag": "@kcws/rspack-config_v0.21.0",
+      "date": "Tue, 18 Jun 2024 06:37:36 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Fix test coverage incorrectly report when run with cache",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "e3567225e056c91fa78f00917a9a1113ebcaee03"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2bab0ce8a6dfba073eea032c17db7d91023333fb"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.18.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.43.3`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.22.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.20.2",
       "tag": "@kcws/rspack-config_v0.20.2",
       "date": "Tue, 11 Jun 2024 10:36:12 GMT",
