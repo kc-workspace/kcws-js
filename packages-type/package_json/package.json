@@ -42,7 +42,7 @@
     "@kcws/lintstaged-config": "workspace:*",
     "@kcinternals/heft-types-rig": "workspace:*",
     "@rushstack/heft": "0.66.18",
-    "tsd": "0.31.0",
+    "tsd": "0.31.1",
     "typescript": "5.3.3"
   },
   "peerDependencies": {
