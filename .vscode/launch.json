@@ -16,10 +16,18 @@
       "type": "node",
       "request": "launch",
       "name": "Debug heft command",
-      "program": "${workspaceFolder}/packages/github-actions/node_modules/@rushstack/heft/lib/start.js",
+      "program": "${fileWorkspaceFolder}/node_modules/@rushstack/heft/lib/start.js",
       "skipFiles": ["<node_internals>/**"],
-      "args": ["test", "--test-path-pattern", "environments.test"],
-      "cwd": "${workspaceFolder}/packages/github-actions"
+      "args": ["test", "--test-path-pattern", "${input:testPattern}"],
+      "cwd": "${fileWorkspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "testPattern",
+      "type": "promptString",
+      "description": "test pattern",
+      "default": ""
     }
   ]
 }
