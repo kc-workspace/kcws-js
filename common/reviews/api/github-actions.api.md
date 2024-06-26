@@ -28,8 +28,8 @@ export class App<C extends BaseContext, I> implements BaseApp<C, I> {
 // @public
 export class AppBuilder<C extends BaseContext = BaseContext, I = NonNullable<unknown>, RAW_C extends BaseContext = BaseContext, RAW_I = NonNullable<unknown>> implements Builder<BaseApp<ContextMerged<C, RAW_C>, I & RAW_I>> {
     build(): App<ContextMerged<C, RAW_C>, I & RAW_I>;
-    static defaultContext: BaseContext<{}>;
-    static defaultData: RunnerData<NonNullable<unknown>>;
+    static readonly defaultContext: BaseContext<{}>;
+    static readonly defaultData: RunnerData<NonNullable<unknown>>;
     static empty(): AppBuilder<BaseContext<{}>, {}, BaseContext<{}>, {}>;
     // Warning: (ae-forgotten-export) The symbol "DataFromBuilder" needs to be exported by the entry point index.d.ts
     static fromBuilders<CB extends ContextBuilder, NI>(contextBuilder: CB, dataBuilder: RunnerDataBuilder<DataFromBuilder<CB>, NI>): AppBuilder<DataFromBuilder<CB>, NI, BaseContext<{}>, {}>;
@@ -364,11 +364,11 @@ export class LogContextPlugin implements ILogContextPlugin {
     constructor(verbose?: boolean);
     debug(format: string, ...data: LogData): void;
     // (undocumented)
-    static defaultUnknownInfo: string;
+    static readonly defaultUnknownInfo = "Action info missing";
     // (undocumented)
-    static defaultUnknownName: string;
+    static readonly defaultUnknownName = "unknown-app";
     // (undocumented)
-    static defaultUnknownVersion: string;
+    static readonly defaultUnknownVersion = "unknown-version";
     // (undocumented)
     readonly dependencies: readonly [];
     error(data: string | Error, properties?: AnnotationProperties): void;
