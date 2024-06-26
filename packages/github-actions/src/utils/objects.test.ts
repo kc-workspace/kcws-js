@@ -12,6 +12,12 @@ describe("utils.objects.merger", () => {
     [{}, {}, {}],
     [{ a: "a" }, { b: "b" }, { a: "a", b: "b" }],
     [{ a: "a" }, { a: "b" }, { a: "b" }],
+    [{ a: "a" }, { a: undefined }, { a: "a" }],
+    [{ a: undefined }, { a: "b" }, { a: "b" }],
+    [{ a: undefined }, { a: undefined }, { a: undefined }],
+    [{ a: "a" }, { a: null }, { a: "a" }],
+    [{ a: null }, { a: "b" }, { a: "b" }],
+    [{ a: null }, { a: null }, { a: null }],
     [
       { a: { aa: { aaa: "a" }, bb: "bb" } },
       { a: { aa: { aaa: "b", bbb: "bbb" } } },

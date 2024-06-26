@@ -1,23 +1,8 @@
-import {
-  BaseContext,
-  ContextBuilder,
-  DefaultContext,
-  type ContextPlugin,
-} from ".";
+import { ContextBuilder, SimpleContext } from ".";
+import { FileNotFound } from "../errors";
+import { mockPlugin } from "../mocks";
 
-class EmptyPlugin implements ContextPlugin<BaseContext, "empty"> {
-  readonly dependencies = [];
-  readonly name = "empty";
-  init() {}
-}
-
-class DependsPlugin implements ContextPlugin<BaseContext, "depend", ["empty"]> {
-  readonly dependencies: ["empty"] = ["empty"];
-  readonly name = "depend";
-  init() {}
-}
-
-describe("context.builder", () => {
+describe("contexts.builder", () => {
   test("create empty context", () => {
     const context = ContextBuilder.empty().build();
     expect(context.name).toEqual("");
@@ -43,146 +28,112 @@ describe("context.builder", () => {
   });
 
   test("create context from default package.json", () => {
-    const context = ContextBuilder.fromPackageJson().build();
-    // By default it will check package.json file from script (code) directory
-    // NOT current directory because when we run on GitHub Actions,
-    // current directory will be repository which we run action on
-    // so we won't get Actions metadata but application metadata instead.
-    expect(context.name).toEqual("");
-    expect(context.version).toEqual("");
-  });
-
-  test("create context from current package.json", () => {
-    const context = ContextBuilder.fromPackageJson(process.cwd()).build();
+    const context = ContextBuilder.fromPackageJson(__dirname).build();
     // By default it will check package.json file from script (code) directory
     // NOT current directory because when we run on GitHub Actions,
     // current directory will be repository which we run action on
     // so we won't get Actions metadata but application metadata instead.
     expect(context.name).toEqual("@kcws/github-actions");
-    expect(context.version).not.toEqual("");
+    expect(context.version).toEqual(expect.any(String));
   });
 
-  describe("from BaseContext", () => {
-    test("should copy context version", () => {
-      const baseContext = new (class Context implements BaseContext {
-        name: string = "example";
-        version: string = "v1.0.0";
-      })();
+  test("create context from unknown json file, throws error", () => {
+    expect(() => ContextBuilder.fromPackageJson("/tmp", "a.json")).toThrow(
+      new FileNotFound("/tmp", "a.json")
+    );
+  });
 
-      const context = ContextBuilder.fromBaseContext(baseContext).build();
-      expect(context.name).toEqual(baseContext.name);
-      expect(context.version).toEqual(baseContext.version);
+  test("create context from empty SimpleContext", () => {
+    const baseContext = new SimpleContext();
+
+    // When use fromContext(), no default value will be use
+    const context = ContextBuilder.fromContext(baseContext).build();
+    expect(context.name).toEqual(baseContext.name);
+    expect(context.version).toEqual(baseContext.version);
+    expect(context.plugins).toEqual(baseContext.plugins);
+  });
+
+  test("create context from named SimpleContext", () => {
+    const baseContext = new SimpleContext("example", undefined);
+
+    const context = ContextBuilder.fromContext(baseContext).build();
+    expect(context.name).toEqual(baseContext.name);
+    expect(context.version).toEqual(""); // version cannot be undefined
+    expect(context.plugins).toEqual(baseContext.plugins);
+  });
+
+  test("create context from version SimpleContext", () => {
+    const baseContext = new SimpleContext(undefined, "v0.1.1");
+
+    const context = ContextBuilder.fromContext(baseContext).build();
+    expect(context.name).toEqual(""); // name cannot be undefined
+    expect(context.version).toEqual(baseContext.version);
+    expect(context.plugins).toEqual(baseContext.plugins);
+  });
+
+  test("create context from SimpleContext", () => {
+    const baseContext = new SimpleContext("example", "v0.1.1");
+
+    const context = ContextBuilder.fromContext(baseContext).build();
+    expect(context.name).toEqual(baseContext.name);
+    expect(context.version).toEqual(baseContext.version);
+    expect(context.plugins).toEqual(baseContext.plugins);
+  });
+
+  test("create context from another DefaultContext", () => {
+    const baseContext = ContextBuilder.fromContext(
+      new SimpleContext("simple", "v0.5.5")
+    )
+      .addPlugin(mockPlugin("example"))
+      .addPlugin(mockPlugin("hello", ["example"] as const))
+      .build();
+
+    const builder = ContextBuilder.fromContext(baseContext);
+
+    expect(builder.build().name).toEqual("simple");
+    expect(builder.build().version).toEqual("v0.5.5");
+    expect(builder.build().plugins).toMatchObject({
+      example: expect.any(Object),
+      hello: expect.any(Object),
     });
 
-    test("should no default data", () => {
-      const baseContext = new (class Context implements BaseContext {
-        name: string = "";
-        version: string = "";
-      })();
+    builder.setName("complex").setVersion("v0.7.7");
 
-      const context = ContextBuilder.fromBaseContext(baseContext).build();
-      expect(context.name).toEqual("");
-      expect(context.version).toEqual("");
+    expect(builder.build().name).toEqual("complex");
+    expect(builder.build().version).toEqual("v0.7.7");
+    expect(builder.build().plugins).toMatchObject({
+      example: expect.any(Object),
+      hello: expect.any(Object),
+    });
+
+    builder.addPlugin(mockPlugin("world", ["hello"] as const));
+
+    expect(builder.build().plugins).toMatchObject({
+      example: expect.any(Object),
+      hello: expect.any(Object),
+      world: expect.any(Object),
     });
   });
 
-  describe("from Context", () => {
-    test("should copy from new object", () => {
-      const defaultContext = new DefaultContext("hello", "v1.0.0", {});
-
-      const context = ContextBuilder.fromContext(defaultContext).build();
-      expect(context.name).toEqual(defaultContext.name);
-      expect(context.version).toEqual(defaultContext.version);
-    });
-
-    test("should copy from builder", () => {
-      const defaultContext = ContextBuilder.fromInput("a", "v1.1.1").build();
-
-      const context = ContextBuilder.fromContext(defaultContext).build();
-      expect(context.name).toEqual(defaultContext.name);
-      expect(context.version).toEqual(defaultContext.version);
-    });
-
-    test("should copy plugins", () => {
-      const defaultContext = ContextBuilder.empty()
-        .addPlugin(new EmptyPlugin())
-        .addPlugin(new DependsPlugin())
-        .build();
-
-      const context = ContextBuilder.fromContext(defaultContext).build();
-      expect(context.name).toEqual(defaultContext.name);
-      expect(context.version).toEqual(defaultContext.version);
-    });
-  });
-
-  test("custom builder name", () => {
+  test("create with empty()", () => {
     const builder = ContextBuilder.empty().setName("example");
+    expect(builder.build().name).toEqual("example");
+    expect(builder.build().version).toEqual("");
 
-    const context = builder.build();
-    expect(context.name).toEqual("example");
-    expect(context.version).toEqual("");
-  });
-
-  test("custom builder version", () => {
-    const builder = ContextBuilder.empty().setVersion("v1.1.1");
-
-    const context = builder.build();
-    expect(context.name).toEqual("");
-    expect(context.version).toEqual("v1.1.1");
-  });
-
-  describe("plugins", () => {
-    class TestPlugin implements ContextPlugin<BaseContext, "test", never[]> {
-      readonly dependencies: never[] = [];
-      readonly name = "test";
-      init() {}
-
-      call() {
-        return "hello";
-      }
-    }
-
-    class NextPlugin implements ContextPlugin<BaseContext, "next", ["test"]> {
-      readonly dependencies: ["test"] = ["test"];
-      readonly name = "next";
-      init() {}
-
-      call() {
-        return "hello";
-      }
-    }
-
-    test("use test plugin", () => {
-      const context = ContextBuilder.empty()
-        .addPlugin(new TestPlugin())
-        .addPlugin(new NextPlugin())
-        .build();
-
-      expect(context.use("test").name).toEqual("test");
-      expect(context.use("test").call()).toEqual("hello");
-    });
+    builder.setVersion("v2.1.0");
+    expect(builder.build().name).toEqual("example");
+    expect(builder.build().version).toEqual("v2.1.0");
   });
 });
 
-describe("context.defaults", () => {
-  test("create empty context", () => {
-    const context = new DefaultContext("", "v0.0.0", {});
+describe("contexts.plugins", () => {
+  test("use plugin", () => {
+    const context = ContextBuilder.empty()
+      .addPlugin(mockPlugin("test"))
+      .build();
 
-    expect(context.name).toEqual("");
-    expect(context.version).toEqual("v0.0.0");
-  });
-
-  test("create with plugin", () => {
-    const context = new DefaultContext("", "v0.0.0", {
-      test: new (class TestContextPlugin
-        implements ContextPlugin<BaseContext, "test">
-      {
-        readonly name = "test";
-        readonly dependencies: never[] = [];
-        init() {}
-      })(),
-    });
-
-    expect(context.use("test").name).toEqual("test");
+    context.use("test").action();
+    expect(context.plugins.test.mockInit).toHaveBeenCalledTimes(1);
+    expect(context.plugins.test.mockAction).toHaveBeenCalledTimes(1);
   });
 });

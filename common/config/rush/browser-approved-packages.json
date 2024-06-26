@@ -8,7 +8,7 @@
     },
     {
       "name": "@actions/core",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "examples", "libraries" ]
     },
     {
       "name": "@actions/exec",

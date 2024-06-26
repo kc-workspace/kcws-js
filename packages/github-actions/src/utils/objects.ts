@@ -11,6 +11,7 @@ const deepMerge = <A extends object>(a: A, b?: Partial<A> | null): A => {
       result[key] = [...(aValue as unknown[]), ...(bValue as unknown[])];
     } else if (
       typeof bValue === "object" &&
+      bValue !== null &&
       !Object.getOwnPropertyNames(Object.getPrototypeOf(bValue)).includes(
         "hasOwnProperty"
       )

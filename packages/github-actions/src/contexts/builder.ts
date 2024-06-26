@@ -1,109 +1,95 @@
-import type { BaseContext, ContextPlugin, Plugins } from "./builder.type";
+import type { Plugins, ContextPlugin } from "./plugins";
+import type { BaseContext } from "./context.type";
+import type { Builder } from "../builders/builder.type";
 
-import { resolve } from "node:path";
-import { readFileSync, existsSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { existsSync, readFileSync } from "node:fs";
+
+import { DefaultContext } from "./default";
+import { FileNotFound } from "../errors";
 
 /**
- * For create Context builder
- * @beta
+ * DefaultContext builder.
+ *
+ * @public
  */
-export class ContextBuilder<PS extends Plugins = NonNullable<unknown>> {
-  static readonly defaultVersion: string = "v0.0.0-dev";
-
-  private plugins: PS;
+export class ContextBuilder<PLUGINS extends Plugins = NonNullable<unknown>>
+  implements Builder<BaseContext<PLUGINS>>
+{
+  static readonly defaultName = "";
+  static readonly defaultVersion = "v0.0.0-dev";
 
   /**
-   * Special create function to create empty context builder.
-   * No default value will applied to context builder.
+   * Create empty builder.
+   * Empty means all metadata will be empty string
    *
-   * @returns empty context builder
-   *
-   * @public
+   * @returns builder
    */
   static empty() {
     return new ContextBuilder("", "");
   }
 
   /**
-   * create context builder from input value
+   * Create builder with input metadata
    *
-   * @param name - application name
-   * @param version - application version
-   * @returns context builder from input value
-   *
-   * @public
+   * @param name - input application name (if not found {@link ContextBuilder.defaultName} will be use)
+   * @param version - input application version (if not found {@link ContextBuilder.defaultVersion} will be use)
+   * @returns builder
    */
   static fromInput(name?: string, version?: string) {
     return new ContextBuilder(
-      name ?? "",
+      name ?? ContextBuilder.defaultName,
       version ?? ContextBuilder.defaultVersion
     );
   }
 
   /**
-   * Create context builder from package.json file.
-   *   - package.json missing: both name and version will be empty.
-   *   - package.json found: version will default to {@link ContextBuilder.defaultVersion} if not found.
+   * Create builder from package.json file.
+   * This will recursive upward untils it reach root directory.
    *
-   * @param basedir - custom base directory for resolve package.json file
-   * @param filename - custom package.json file name
-   * @returns context builder from package.json
+   * @param basedir - base directory of package.json
+   * @param filename - package.json file name
+   * @returns builder
    *
-   * @public
+   * @throws {@link FileNotFound}
+   * Thrown if package.json file is missing
    */
-  static fromPackageJson(
-    basedir: string = __dirname,
-    filename: string = "package.json"
-  ) {
-    const fullpath = resolve(basedir, filename);
-    if (existsSync(fullpath)) {
-      const content = readFileSync(fullpath, {
-        encoding: "utf8",
-      });
-      const pkg = JSON.parse(content);
-      return ContextBuilder.fromInput(
-        pkg.name ?? "",
-        pkg.version ?? ContextBuilder.defaultVersion
-      );
+  static fromPackageJson(basedir: string, filename: string = "package.json") {
+    let current = basedir;
+    while (!existsSync(resolve(current, filename))) {
+      if (current === "." || current === "/")
+        throw new FileNotFound(basedir, filename);
+      current = dirname(current);
     }
-    return ContextBuilder.empty();
+
+    const fullpath = resolve(current, filename);
+    const content = readFileSync(fullpath, {
+      encoding: "utf8",
+    });
+    const pkg = JSON.parse(content);
+    return ContextBuilder.fromInput(pkg.name, pkg.version);
   }
 
   /**
-   * create context builder from input base context.
-   * BaseContext contains only application name and application version.
+   * Create builder from existed BaseContext
    *
-   * @param context - base context for new ContextBuilder
-   * @returns context builder with input context as base value
-   *
-   * @public
+   * @param context - input context
+   * @returns builder
    */
-  static fromBaseContext(context: BaseContext) {
-    return new ContextBuilder(context.name, context.version);
+  static fromContext<CTX extends BaseContext = BaseContext>(context: CTX) {
+    return ContextBuilder.fromInput(context.name, context.version).setPlugins<
+      CTX["plugins"]
+    >(context.plugins);
   }
 
-  /**
-   * create context builder from another default context.
-   * This will included name, version, and plugins
-   *
-   * @param context - default context for new ContextBuilder
-   * @returns context builder with input context as base value
-   *
-   * @public
-   */
-  static fromContext<Context extends DefaultContext>(
-    context: Context
-  ): ContextBuilder<Context["plugins"]> {
-    return new ContextBuilder(context.name, context.version).setPlugins(
-      context.plugins
-    );
-  }
+  private name: string;
+  private version: string;
+  private plugins: PLUGINS;
 
-  private constructor(
-    private name: string,
-    private version: string
-  ) {
-    this.plugins = {} as PS;
+  private constructor(name: string, version: string) {
+    this.name = name;
+    this.version = version;
+    this.plugins = {} as PLUGINS;
   }
 
   setName(name: string): this {
@@ -116,71 +102,30 @@ export class ContextBuilder<PS extends Plugins = NonNullable<unknown>> {
     return this;
   }
 
-  setPlugins<NPS extends Plugins = NonNullable<unknown>>(
-    plugins: NPS
-  ): ContextBuilder<NPS> {
-    const output = this as unknown as ContextBuilder<NPS>;
+  setPlugins<PS extends Plugins = NonNullable<unknown>>(plugins: PS) {
+    const output = this as unknown as ContextBuilder<PS>;
     output.plugins = plugins;
     return output;
   }
 
   addPlugin<
     P extends ContextPlugin<
-      DefaultContext<PS>,
       string,
-      (keyof PS extends string ? keyof PS : never)[]
+      BaseContext<PLUGINS>,
+      (keyof PLUGINS extends string ? keyof PLUGINS : never)[]
     >,
   >(plugin: P) {
-    this.plugins[plugin.name as keyof PS] = plugin as unknown as PS[P["name"]];
-    return this as unknown as ContextBuilder<PS & { [key in P["name"]]: P }>;
+    type PNAME = P["name"];
+    const output = this as unknown as ContextBuilder<
+      PLUGINS & Record<PNAME, P>
+    >;
+
+    type PVAL = (typeof output)["plugins"][PNAME];
+    output.plugins[plugin.name as PNAME] = plugin as PVAL;
+    return output;
   }
 
-  build(): DefaultContext<PS> {
+  build(): BaseContext<PLUGINS> {
     return new DefaultContext(this.name, this.version, this.plugins);
-  }
-}
-
-/**
- * A Default context when using {@link ContextBuilder}
- * @public
- */
-export class DefaultContext<PLUGINS extends Plugins = NonNullable<unknown>>
-  implements BaseContext
-{
-  constructor(
-    /** application name */
-    readonly name: string,
-    /** application version */
-    readonly version: string,
-    /**
-     * Context plugins.
-     * You should not use plugin directly, instead call {@link DefaultContext.use} instead.
-     *
-     * @internal
-     */
-    readonly plugins: PLUGINS
-  ) {
-    const initiatedPlugins = {} as Record<keyof PLUGINS, boolean>;
-    for (const key in plugins) {
-      initiatedPlugins[key] = false;
-    }
-
-    // Initiate plugins
-    for (const key of Object.keys(plugins)) {
-      if (initiatedPlugins[key] === false) {
-        for (const dependency of plugins[key].dependencies) {
-          if (initiatedPlugins[dependency] === false) {
-            plugins[dependency].init(this);
-            initiatedPlugins[dependency as keyof PLUGINS] = true;
-          }
-        }
-        plugins[key].init(this);
-        initiatedPlugins[key as keyof PLUGINS] = true;
-      }
-    }
-  }
-
-  use<N extends keyof PLUGINS>(name: N): PLUGINS[N] {
-    return this.plugins[name];
   }
 }

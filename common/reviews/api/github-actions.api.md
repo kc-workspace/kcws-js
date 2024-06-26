@@ -4,6 +4,7 @@
 
 ```ts
 
+/// <reference types="jest" />
 /// <reference types="node" />
 
 import { AnnotationProperties } from '@actions/core';
@@ -14,20 +15,69 @@ import { GlobOptions as IOGlobOptions } from '@actions/glob';
 import { MoveOptions as IOMoveOptions } from '@actions/io';
 
 // @public
-export class Actions<Input extends object, Context extends BaseContext> {
-    static builder<Input extends object, Context extends BaseContext>(context: Context, builder: InputBuilder<Input, Context>): Actions<Input, Context>;
-    exec(runner: Runner<Input, Context>, input?: Partial<Input>): Promise<void>;
+export class App<C extends BaseContext, I> implements BaseApp<C, I> {
+    // Warning: (ae-forgotten-export) The symbol "AppHooks" needs to be exported by the entry point index.d.ts
+    constructor(context: C, dataBuilder: RunnerDataBuilder<C, I>, hooks?: AppHooks<C, I>);
+    // (undocumented)
+    readonly context: C;
+    run(runner: Runner<C, I>, input?: Partial<I> | undefined): Promise<void>;
+}
+
+// Warning: (ae-forgotten-export) The symbol "Builder" needs to be exported by the entry point index.d.ts
+//
+// @public
+export class AppBuilder<C extends BaseContext = BaseContext, I = NonNullable<unknown>, RAWC extends BaseContext = BaseContext, RAWI = NonNullable<unknown>> implements Builder<BaseApp<ContextMerged<C, RAWC>, I & RAWI>> {
+    build(): App<ContextMerged<C, RAWC>, I & RAWI>;
+    static defaultContext: BaseContext<{}>;
+    static defaultData: RunnerData<NonNullable<unknown>>;
+    static empty(): AppBuilder<BaseContext<{}>, {}, BaseContext<{}>, {}>;
+    // Warning: (ae-forgotten-export) The symbol "DataFromBuilder" needs to be exported by the entry point index.d.ts
+    static fromBuilders<CB extends ContextBuilder, NI>(contextBuilder: CB, dataBuilder: RunnerDataBuilder<DataFromBuilder<CB>, NI>): AppBuilder<DataFromBuilder<CB>, NI, BaseContext<{}>, {}>;
+    static fromContextBuilder<CB extends ContextBuilder>(contextBuilder: CB): AppBuilder<DataFromBuilder<CB>, {}, BaseContext<{}>, {}>;
+    static fromDataBuilder<NI>(dataBuilder: RunnerDataBuilder<BaseContext, NI>): AppBuilder<BaseContext<{}>, NI, BaseContext<{}>, {}>;
+    setContext<NC extends BaseContext>(context: NC): AppBuilder<C, I, NC, RAWI>;
+    setContextBuilder<NC extends BaseContext, NI>(contextBuilder: ContextBuilderFromContext<NC>, dataBuilder: RunnerDataBuilder<NC, NI>): AppBuilder<NC, NI, RAWC, RAWI>;
+    setData<NI>(data: RunnerData<NI>): AppBuilder<C, I, RAWC, NI>;
+    setDataBuilder<NI>(dataBuilder: RunnerDataBuilder<C, NI>): AppBuilder<C, NI, RAWC, RAWI>;
+    setHook<K extends keyof AppHooks<ContextMerged<C, RAWC>, I & RAWI>>(key: K, hook: AppHooks<ContextMerged<C, RAWC>, I & RAWI>[K]): this;
+    setHooks(hooks: AppHooks<ContextMerged<C, RAWC>, I & RAWI>): this;
 }
 
 // @public
-export type AppContext<App> = App extends Actions<object, infer C> ? C : never;
+export type AppBuilderContext<B extends Builder<unknown>> = AppContext<DataFromBuilder<B>>;
 
 // @public
-export type AppRunner<App> = App extends Actions<infer I, infer C> ? Runner<I, C> : never;
+export type AppBuilderData<B extends Builder<unknown>> = AppData<DataFromBuilder<B>>;
 
 // @public
-export interface BaseContext {
+export type AppBuilderRunner<B extends Builder<unknown>> = AppRunner<DataFromBuilder<B>>;
+
+// @public
+export type AppContext<APP> = APP extends BaseApp<infer C, unknown> ? C : never;
+
+// @public
+export type AppData<APP> = APP extends BaseApp<BaseContext, infer I> ? I : never;
+
+// @public
+export type AppRunner<APP> = APP extends BaseApp<infer C, infer I> ? Runner<C, I> : never;
+
+// @public
+export interface BaseApp<C extends BaseContext, I> {
+    // (undocumented)
+    readonly context: C;
+    run(runner: Runner<C, I>, input?: Partial<I>): Promise<void>;
+}
+
+// @public
+export interface BaseContext<PLUGINS extends Plugins<BaseContext, string[]> = NonNullable<unknown>> {
+    // (undocumented)
+    has(name: string): boolean;
+    // (undocumented)
+    merge<PS extends Plugins>(context: BaseContext<PS>): BaseContext<PLUGINS & PS>;
     readonly name: string;
+    readonly plugins: PLUGINS;
+    // (undocumented)
+    use<K extends keyof PLUGINS>(name: K): PLUGINS[K];
     readonly version: string;
 }
 
@@ -43,29 +93,17 @@ export interface BaseConverter<I, O> {
     readonly targetType: string;
 }
 
-// Warning: (ae-internal-missing-underscore) The name "BaseData" should be prefixed with an underscore because the declaration is marked as @internal
-//
-// @internal
-export interface BaseData<Input> {
-    // (undocumented)
-    input: Input;
-}
-
-// Warning: (ae-forgotten-export) The symbol "ICacheContextPlugin" needs to be exported by the entry point index.d.ts
-//
 // @public
 export class CacheContextPlugin implements ICacheContextPlugin {
     // (undocumented)
-    readonly dependencies: ICacheContextPlugin["dependencies"];
+    readonly dependencies: readonly ["log"];
     getRestoreKeys(option: CacheKeyOption): string[];
     getSaveKey(option: CacheKeyOption): string;
     hasFeature(): boolean;
-    // Warning: (ae-forgotten-export) The symbol "ICacheContext" needs to be exported by the entry point index.d.ts
-    //
     // (undocumented)
     init(context: ICacheContext): void;
     // (undocumented)
-    readonly name = "cache";
+    readonly name: "cache";
     // (undocumented)
     restore(option: CacheKeyOption, ...paths: string[]): Promise<string | undefined>;
     // (undocumented)
@@ -91,42 +129,46 @@ export interface CapturedResult {
     stdout?: Buffer;
 }
 
-// Warning: (ae-incompatible-release-tags) The symbol "ContextBuilder" is marked as @beta, but its signature references "Plugins" which is marked as @internal
-//
-// @beta
-export class ContextBuilder<PS extends Plugins = NonNullable<unknown>> {
+// @public
+export class ContextBuilder<PLUGINS extends Plugins = NonNullable<unknown>> implements Builder<BaseContext<PLUGINS>> {
     // (undocumented)
-    addPlugin<P extends ContextPlugin<DefaultContext<PS>, string, (keyof PS extends string ? keyof PS : never)[]>>(plugin: P): ContextBuilder<PS & { [key in P["name"]]: P; }>;
+    addPlugin<P extends ContextPlugin<string, BaseContext<PLUGINS>, (keyof PLUGINS extends string ? keyof PLUGINS : never)[]>>(plugin: P): ContextBuilder<PLUGINS & Record<P["name"], P>>;
     // (undocumented)
-    build(): DefaultContext<PS>;
+    build(): BaseContext<PLUGINS>;
     // (undocumented)
-    static readonly defaultVersion: string;
-    // @public
+    static readonly defaultName = "";
+    // (undocumented)
+    static readonly defaultVersion = "v0.0.0-dev";
     static empty(): ContextBuilder<{}>;
-    // @public
-    static fromBaseContext(context: BaseContext): ContextBuilder<{}>;
-    // @public
-    static fromContext<Context extends DefaultContext>(context: Context): ContextBuilder<Context["plugins"]>;
-    // @public
+    static fromContext<CTX extends BaseContext = BaseContext>(context: CTX): ContextBuilder<CTX["plugins"]>;
     static fromInput(name?: string, version?: string): ContextBuilder<{}>;
-    // @public
-    static fromPackageJson(basedir?: string, filename?: string): ContextBuilder<{}>;
+    static fromPackageJson(basedir: string, filename?: string): ContextBuilder<{}>;
     // (undocumented)
     setName(name: string): this;
     // (undocumented)
-    setPlugins<NPS extends Plugins = NonNullable<unknown>>(plugins: NPS): ContextBuilder<NPS>;
+    setPlugins<PS extends Plugins = NonNullable<unknown>>(plugins: PS): ContextBuilder<PS>;
     // (undocumented)
     setVersion(version: string): this;
 }
 
 // @public
-export interface ContextPlugin<CONTEXT extends BaseContext, NAME extends string, DEPS extends string[] = never[]> {
-    // (undocumented)
-    readonly dependencies: DEPS;
-    // (undocumented)
-    init: (context: CONTEXT) => void;
-    // (undocumented)
-    readonly name: NAME;
+export type ContextBuilderFromContext<CONTEXT extends BaseContext> = ContextBuilder<CONTEXT["plugins"]>;
+
+// @public
+export type ContextMerged<CONTEXT1 extends BaseContext, CONTEXT2 extends BaseContext> = BaseContext<CONTEXT1["plugins"] & CONTEXT2["plugins"]>;
+
+// Warning: (ae-forgotten-export) The symbol "ToDependencies" needs to be exported by the entry point index.d.ts
+//
+// @public
+export interface ContextPlugin<NAME extends string, CTX extends BaseContext = BaseContext, DEPS extends unknown[] = ToDependencies<CTX>> {
+    dependencies: Readonly<DEPS>;
+    init(context: CTX): void;
+    name: Readonly<NAME>;
+}
+
+// @public
+export class ContextPluginNotFound<K> extends Error {
+    constructor(name: K);
 }
 
 // Warning: (ae-internal-missing-underscore) The name "Convert" should be prefixed with an underscore because the declaration is marked as @internal
@@ -157,21 +199,34 @@ export const convertToInt: Convert_4;
 // @public
 export const convertToString: Convert_5;
 
-// Warning: (ae-incompatible-release-tags) The symbol "DefaultContext" is marked as @public, but its signature references "Plugins" which is marked as @internal
-//
 // @public
-export class DefaultContext<PLUGINS extends Plugins = NonNullable<unknown>> implements BaseContext {
-    constructor(
-    name: string,
-    version: string,
-    plugins: PLUGINS);
+export class DefaultContext<PLUGINS extends Plugins<DefaultContext, string[]> = NonNullable<unknown>> implements BaseContext<PLUGINS> {
+    constructor(name: string, version: string, plugins: PLUGINS);
+    has(name: string): boolean;
+    init(force?: boolean): void;
+    merge<PS extends Plugins<BaseContext, string[]>>(context: BaseContext<PS>): DefaultContext<PLUGINS & PS>;
     readonly name: string;
-    // @internal
     readonly plugins: PLUGINS;
-    // (undocumented)
-    use<N extends keyof PLUGINS>(name: N): PLUGINS[N];
+    use<K extends keyof PLUGINS>(name: K): PLUGINS[K];
     readonly version: string;
 }
+
+// @public
+export class EnvContextPlugin implements IEnvContextPlugin {
+    constructor();
+    // (undocumented)
+    readonly dependencies: readonly [];
+    getCombination(keys: string[], defaults?: string, environments?: Envvars): string | undefined;
+    // (undocumented)
+    init(): void;
+    lookup(keys: string[], environments?: Envvars): string | undefined;
+    // (undocumented)
+    readonly name: "env";
+    setEnvironments(environments: Envvars): this;
+}
+
+// @public
+export type Envvars = Record<string, string | undefined | null>;
 
 // @public
 export class ExecContextPlugin implements IExecContextPlugin {
@@ -179,62 +234,73 @@ export class ExecContextPlugin implements IExecContextPlugin {
     captureRerun(cmd: string, ...args: string[]): Promise<CapturedResult>;
     captureRun(cmd: string, ...args: string[]): Promise<CapturedResult>;
     // (undocumented)
-    readonly dependencies: IExecContextPlugin["dependencies"];
-    // Warning: (ae-forgotten-export) The symbol "IExecContext" needs to be exported by the entry point index.d.ts
-    //
+    readonly dependencies: readonly ["log", "input"];
     // (undocumented)
     init(context: IExecContext): void;
     // (undocumented)
-    readonly name = "exec";
+    readonly name: "exec";
     rerun(cmd: string, ...args: string[]): Promise<number>;
     run(cmd: string, ...args: string[]): Promise<number>;
     withOptions(options: ExecOptions): this;
 }
 
 // @public
-export type GroupRunner<CONTEXT extends BaseContext, OUT> = (context: CONTEXT) => OUT | Promise<OUT>;
-
-// @public
-export class HelperContextPlugin implements IHelperContextPlugin {
-    // (undocumented)
-    static defaultInfoMissingErr: string;
-    // (undocumented)
-    static defaultUnknownNameErr: string;
-    // (undocumented)
-    static defaultUnknownVersionErr: string;
-    // (undocumented)
-    readonly dependencies: IHelperContextPlugin["dependencies"];
-    // (undocumented)
-    getActionInfo(): string;
-    // (undocumented)
-    group<OUT>(name: string, runner: GroupRunner<IHelperContext, OUT>): Promise<OUT>;
-    // Warning: (ae-forgotten-export) The symbol "IHelperContext" needs to be exported by the entry point index.d.ts
-    //
-    // (undocumented)
-    init(context: IHelperContext): void;
-    // (undocumented)
-    logActionInfo(): void;
-    // (undocumented)
-    readonly name = "helper";
+export class FileNotFound extends Error {
+    constructor(basedir: string, filename: string);
 }
 
 // @public
-export type IExecContextPlugin = ContextPlugin<IExecContext, "exec", (keyof IExecContext["plugins"])[]>;
+export type GroupRunner<C extends BaseContext, R> = (ctx: C) => R | Promise<R>;
 
 // @public
-export type IHelperContextPlugin = ContextPlugin<IHelperContext, "helper", (keyof IHelperContext["plugins"])[]>;
+export type ICacheContext = BaseContext<ToPluginsObject<[LogContextPlugin]>>;
 
 // @public
-export type InputBuilder<Input, Context extends BaseContext = DefaultContext> = (context: Context) => Input | Promise<Input>;
+export type ICacheContextPlugin = ContextPlugin<"cache", ICacheContext>;
 
 // @public
-export class InputContextPlugin implements ContextPlugin<BaseContext, "input"> {
+export type IEnvContext = BaseContext;
+
+// @public
+export type IEnvContextPlugin = ContextPlugin<"env", IEnvContext>;
+
+// @public
+export type IExecContext = BaseContext<ToPluginsObject<[LogContextPlugin, InputContextPlugin]>>;
+
+// @public
+export type IExecContextPlugin = ContextPlugin<"exec", IExecContext>;
+
+// @public
+export type IInputContext = BaseContext<ToPluginsObject<[EnvContextPlugin]>>;
+
+// @public
+export type IInputContextPlugin = ContextPlugin<"input", IInputContext>;
+
+// @public
+export type IIOContext = BaseContext;
+
+// @public
+export type IIOContextPlugin = ContextPlugin<"io", IIOContext>;
+
+// @public
+export type ILogContext = BaseContext;
+
+// @public
+export type ILogContextPlugin = ContextPlugin<"log", ILogContext>;
+
+// Warning: (ae-forgotten-export) The symbol "DataBuilder" needs to be exported by the entry point index.d.ts
+//
+// @public
+export type InputBuilder<C extends BaseContext, I> = DataBuilder<C, I>;
+
+// @public
+export class InputContextPlugin implements IInputContextPlugin {
     // (undocumented)
-    readonly dependencies: never[];
+    readonly dependencies: readonly ["env"];
     // (undocumented)
-    init(context: BaseContext): void;
+    init(context: IInputContext): void;
     // (undocumented)
-    readonly name = "input";
+    readonly name: "input";
     // (undocumented)
     optional<Output>(name: string, converter: BaseConverter<string, Output>): Output | undefined;
     // (undocumented)
@@ -246,7 +312,7 @@ export class InputContextPlugin implements ContextPlugin<BaseContext, "input"> {
 }
 
 // @public
-export class IOContextPlugin implements ContextPlugin<BaseContext, "io"> {
+export class IOContextPlugin implements IIOContextPlugin {
     // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "cp"
     //
     // (undocumented)
@@ -256,7 +322,7 @@ export class IOContextPlugin implements ContextPlugin<BaseContext, "io"> {
     // (undocumented)
     createGlob(pattern: string, options?: IOGlobOptions): Promise<Globber>;
     // (undocumented)
-    readonly dependencies: never[];
+    readonly dependencies: readonly [];
     // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "hashFiles"
     //
     // (undocumented)
@@ -268,7 +334,7 @@ export class IOContextPlugin implements ContextPlugin<BaseContext, "io"> {
     // (undocumented)
     move(source: string, dest: string, options?: IOMoveOptions): Promise<void>;
     // (undocumented)
-    readonly name = "io";
+    readonly name: "io";
     // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "_which"
     //
     // (undocumented)
@@ -282,48 +348,115 @@ export { IOGlobOptions }
 export { IOMoveOptions }
 
 // @public
-export class LogContextPlugin implements ContextPlugin<BaseContext, "log"> {
+export type IOutputContext = BaseContext;
+
+// @public
+export type IOutputContextPlugin = ContextPlugin<"output", IOutputContext>;
+
+// @public
+export type ISystemContext = BaseContext;
+
+// @public
+export type ISystemContextPlugin = ContextPlugin<"system", ISystemContext>;
+
+// @public
+export class LogContextPlugin implements ILogContextPlugin {
+    constructor(verbose?: boolean);
     debug(format: string, ...data: LogData): void;
     // (undocumented)
-    readonly dependencies: never[];
-    error(message: string | Error, properties?: AnnotationProperties): void;
+    static defaultUnknownInfo: string;
+    // (undocumented)
+    static defaultUnknownName: string;
+    // (undocumented)
+    static defaultUnknownVersion: string;
+    // (undocumented)
+    readonly dependencies: readonly [];
+    error(data: string | Error, properties?: AnnotationProperties): void;
     format(format: string, ...data: LogData): string;
+    group<OUT>(name: string, runner: GroupRunner<ILogContext, OUT>): Promise<OUT>;
     info(format: string, ...data: LogData): void;
     // (undocumented)
-    init(): void;
+    init(context: ILogContext): void;
     // (undocumented)
-    readonly name = "log";
-    notice(message: string | Error, properties?: AnnotationProperties): void;
-    warn(message: string | Error, properties?: AnnotationProperties): void;
+    readonly name: "log";
+    notice(data: string | Error, properties?: AnnotationProperties): void;
+    throw(error: Error): void;
+    warn(data: string | Error, properties?: AnnotationProperties): void;
 }
 
-// Warning: (ae-forgotten-export) The symbol "PrimitiveType" needs to be exported by the entry point index.d.ts
-//
 // @public
-export type LogData = (Record<string, PrimitiveType> | PrimitiveType)[];
+export type LogData = PrimitiveType[] | (Record<string, PrimitiveType> | undefined)[];
 
 // @public
-export class OutputContextPlugin implements ContextPlugin<BaseContext, "output"> {
+export class MethodNotImplemented extends Error {
+    constructor(method: string);
+}
+
+// @public
+export const mockEnvironment: <Environment extends NodeJS.ProcessEnv, T>(environment: Environment, callback: (environment_: Environment) => T) => T;
+
+// Warning: (ae-forgotten-export) The symbol "MockContextPlugin" needs to be exported by the entry point index.d.ts
+//
+// @public
+export const mockPlugin: <N extends string, DEPS extends string[] = never[]>(name: N, dependencies?: DEPS | undefined) => MockContextPlugin<N, DEPS>;
+
+// @public
+export const mockRunner: <APP extends BaseApp<BaseContext<{}>, {}>>(_app: APP) => jest.Mock<void | Promise<void>, [RunnerData<AppData<APP>>, AppContext<APP>], any>;
+
+// @public
+export const mockRunnerData: <I>(input: I) => RunnerData<I>;
+
+// @public
+export const mockRunnerDataBuilder: <I, CB extends ContextBuilder<{}> = ContextBuilder<{}>>(input: I, _builder?: CB | undefined) => RunnerDataBuilder<DataFromBuilder<CB>, I>;
+
+// @public
+export class OutputContextPlugin implements IOutputContextPlugin {
     // (undocumented)
-    readonly dependencies: never[];
+    readonly dependencies: readonly [];
     // (undocumented)
     init(): void;
+    markAsSecret(value: string): void;
     // (undocumented)
-    readonly name = "output";
+    readonly name: "output";
     setOutput<V>(name: string, value: V): void;
-    // (undocumented)
-    setSecret(value: string): void;
 }
 
-// Warning: (ae-internal-missing-underscore) The name "Plugins" should be prefixed with an underscore because the declaration is marked as @internal
-//
-// @internal
-export type Plugins = Record<string, ContextPlugin<BaseContext, string>>;
-
-// Warning: (ae-incompatible-release-tags) The symbol "Runner" is marked as @public, but its signature references "BaseData" which is marked as @internal
-//
 // @public
-export type Runner<Input, Context extends BaseContext = DefaultContext> = (data: BaseData<Input>, context: Context) => Promise<void> | void;
+export type Plugins<CTX extends BaseContext = BaseContext, DEPS extends string[] = []> = Record<string, ContextPlugin<string, CTX, DEPS>>;
+
+// @public
+export type PrimitiveType = string | number | boolean | undefined;
+
+// @public
+export type Runner<C extends BaseContext, I> = (data: RunnerData<I>, context: C) => void | Promise<void>;
+
+// @public
+export interface RunnerData<I> {
+    // (undocumented)
+    error?: Error;
+    // (undocumented)
+    input?: I;
+}
+
+// @public
+export type RunnerDataBuilder<C extends BaseContext, I> = DataBuilder<C, RunnerData<I>>;
+
+// @public
+export class SimpleContext implements BaseContext {
+    constructor(name?: string, version?: string);
+    // (undocumented)
+    has(_: string): boolean;
+    // (undocumented)
+    merge<PS extends Plugins>(_: BaseContext<PS>): BaseContext<(typeof SimpleContext)["plugins"] & PS>;
+    // (undocumented)
+    readonly name: string;
+    // (undocumented)
+    readonly plugins: {};
+    // (undocumented)
+    use(_: string): never;
+    // (undocumented)
+    readonly version: string;
+}
 
 // @public
 export interface SystemCacheKeyOption {
@@ -334,7 +467,7 @@ export interface SystemCacheKeyOption {
 }
 
 // @public
-export class SystemContextPlugin implements ContextPlugin<BaseContext, "system"> {
+export class SystemContextPlugin implements ISystemContextPlugin {
     // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "_addPath"
     //
     // (undocumented)
@@ -342,15 +475,19 @@ export class SystemContextPlugin implements ContextPlugin<BaseContext, "system">
     // (undocumented)
     addPaths(...additionalPaths: string[]): void;
     // (undocumented)
-    readonly dependencies: never[];
+    readonly dependencies: readonly [];
     // (undocumented)
     init(): void;
     // (undocumented)
-    readonly name = "system";
+    readonly name: "system";
     // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "exportVariable"
     //
     // (undocumented)
     setEnvVar<V>(name: string, value: V): void;
+    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "_which"
+    //
+    // (undocumented)
+    which(tool: string, check?: boolean): Promise<string>;
 }
 
 // Warning: (ae-forgotten-export) The symbol "Converter" needs to be exported by the entry point index.d.ts
@@ -367,6 +504,11 @@ export const toFloat: Converter_2;
 //
 // @public
 export const toInt: Converter_3;
+
+// Warning: (ae-forgotten-export) The symbol "ToPluginObject" needs to be exported by the entry point index.d.ts
+//
+// @public
+export type ToPluginsObject<T> = T extends [infer FIRST, ...infer TAIL] ? ToPluginObject<FIRST> & (TAIL extends ContextPlugin<string, BaseContext<Plugins<BaseContext, string[]>>, string[]>[] ? ToPluginsObject<TAIL> : unknown) : unknown;
 
 // Warning: (ae-forgotten-export) The symbol "Converter_4" needs to be exported by the entry point index.d.ts
 //

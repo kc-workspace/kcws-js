@@ -1,16 +1,7 @@
-import { Actions, ContextBuilder } from ".";
+import { ContextBuilder } from ".";
 
-describe("actions", () => {
-  it("default usage", async () => {
-    const context = ContextBuilder.fromInput().build();
-    const actions = Actions.builder(context, context => {
-      return {
-        name: context.name,
-      };
-    });
-
-    await actions.exec(data => {
-      expect(data.input.name).toEqual("");
-    });
+describe("index", () => {
+  test("create context via builder", () => {
+    expect(ContextBuilder.empty()).toBeTruthy();
   });
 });
