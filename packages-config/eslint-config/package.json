@@ -37,12 +37,12 @@
     "_phase:build": "heft run --only build -- --clean"
   },
   "dependencies": {
-    "@definitelytyped/eslint-plugin": "0.1.12",
+    "@definitelytyped/eslint-plugin": "0.1.15",
     "@rushstack/eslint-patch": "1.10.3",
     "@rushstack/eslint-plugin": "0.15.1",
     "@rushstack/eslint-plugin-security": "0.8.1",
-    "@typescript-eslint/eslint-plugin": "6.21.0",
-    "@typescript-eslint/parser": "6.21.0",
+    "@typescript-eslint/eslint-plugin": "7.14.1",
+    "@typescript-eslint/parser": "7.14.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-node": "0.3.9",
     "eslint-import-resolver-typescript": "3.6.1",
