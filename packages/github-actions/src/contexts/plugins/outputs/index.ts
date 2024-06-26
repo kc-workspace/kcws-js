@@ -12,7 +12,10 @@ import {
 export class OutputContextPlugin implements IOutputContextPlugin {
   readonly name = "output" as const;
   readonly dependencies = [] as const;
-  init() {}
+
+  init() {
+    // we didn't initiate anything from context
+  }
 
   /**
    * mark input as secret, so it didn't show on outputs

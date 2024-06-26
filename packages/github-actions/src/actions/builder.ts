@@ -27,9 +27,9 @@ export class AppBuilder<
 > implements Builder<BaseApp<ContextMerged<C, RAW_C>, I & RAW_I>>
 {
   /** default context if didn't set */
-  static defaultContext = ContextBuilder.empty().build();
+  static readonly defaultContext = ContextBuilder.empty().build();
   /** default data if didn't set */
-  static defaultData: RunnerData<NonNullable<unknown>> = { input: {} };
+  static readonly defaultData: RunnerData<NonNullable<unknown>> = { input: {} };
 
   /**
    * create app builder without any data
@@ -208,9 +208,9 @@ export class AppBuilder<
         data = AppBuilder.defaultData as RunnerData<I & RAW_I>;
       }
 
-      return data!;
+      return data;
     };
 
-    return new App(context!, dataBuilder, this.hooks);
+    return new App(context, dataBuilder, this.hooks);
   }
 }

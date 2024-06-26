@@ -22,9 +22,9 @@ import {
  * @public
  */
 export class LogContextPlugin implements ILogContextPlugin {
-  static defaultUnknownVersion = "unknown-version";
-  static defaultUnknownName = "unknown-app";
-  static defaultUnknownInfo = "Action info missing";
+  static readonly defaultUnknownVersion = "unknown-version";
+  static readonly defaultUnknownName = "unknown-app";
+  static readonly defaultUnknownInfo = "Action info missing";
 
   readonly name = "log" as const;
   readonly dependencies = [] as const;

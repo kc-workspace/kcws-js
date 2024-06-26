@@ -9,11 +9,11 @@ export class EnvContextPlugin implements IEnvContextPlugin {
   readonly dependencies = [] as const;
 
   private environments: Envvars | undefined;
-  constructor() {
-    this.environments;
-  }
+  constructor() {}
 
-  init() {}
+  init() {
+    // we didn't initiate anything from context
+  }
 
   /**
    * set environments for searching data
@@ -65,7 +65,7 @@ export class EnvContextPlugin implements IEnvContextPlugin {
     return keys
       .filter(v => typeof v === "string")
       .map((_, index, a) => a.slice(index).join("."))
-      .map(v => this.normalizeKey(v!));
+      .map(v => this.normalizeKey(v));
   }
 
   private normalizeKey(key: string) {

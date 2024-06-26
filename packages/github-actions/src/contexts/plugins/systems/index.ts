@@ -10,7 +10,10 @@ import { which as _which } from "@actions/io";
 export class SystemContextPlugin implements ISystemContextPlugin {
   readonly name = "system" as const;
   readonly dependencies = [] as const;
-  init() {}
+
+  init() {
+    // we didn't initiate anything from context
+  }
 
   /**
    * {@inheritDoc _addPath}

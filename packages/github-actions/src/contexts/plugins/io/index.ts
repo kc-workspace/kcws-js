@@ -16,7 +16,10 @@ import { create, hashFiles } from "@actions/glob";
 export class IOContextPlugin implements IIOContextPlugin {
   readonly name = "io" as const;
   readonly dependencies = [] as const;
-  init() {}
+
+  init() {
+    // we didn't initiate anything from context
+  }
 
   /**
    * {@inheritDoc _which}
