@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Refactor App with actual builder class",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
