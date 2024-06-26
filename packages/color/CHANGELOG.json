@@ -2,6 +2,24 @@
   "name": "@kcws/color",
   "entries": [
     {
+      "version": "0.16.4",
+      "tag": "@kcws/color_v0.16.4",
+      "date": "Wed, 26 Jun 2024 12:47:18 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.19.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.43.4`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.23.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.16.3",
       "tag": "@kcws/color_v0.16.3",
       "date": "Tue, 18 Jun 2024 06:37:36 GMT",

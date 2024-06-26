@@ -1,6 +1,6 @@
 {
   "name": "@kcws/color",
-  "version": "0.16.3",
+  "version": "0.16.4",
   "description": "color management",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
