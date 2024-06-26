@@ -45,7 +45,7 @@ export class ContextBuilder<PLUGINS extends Plugins = NonNullable<unknown>>
 
   /**
    * Create builder from package.json file.
-   * This will recursive upward untils it reach root directory.
+   * This will recursive upward until it reach root directory.
    *
    * @param basedir - base directory of package.json
    * @param filename - package.json file name
@@ -120,8 +120,8 @@ export class ContextBuilder<PLUGINS extends Plugins = NonNullable<unknown>>
       PLUGINS & Record<PNAME, P>
     >;
 
-    type PVAL = (typeof output)["plugins"][PNAME];
-    output.plugins[plugin.name as PNAME] = plugin as PVAL;
+    type PLUGIN_VALUE = (typeof output)["plugins"][PNAME];
+    output.plugins[plugin.name as PNAME] = plugin as PLUGIN_VALUE;
     return output;
   }
 

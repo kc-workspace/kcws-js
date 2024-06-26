@@ -26,8 +26,8 @@ export class App<C extends BaseContext, I> implements BaseApp<C, I> {
 // Warning: (ae-forgotten-export) The symbol "Builder" needs to be exported by the entry point index.d.ts
 //
 // @public
-export class AppBuilder<C extends BaseContext = BaseContext, I = NonNullable<unknown>, RAWC extends BaseContext = BaseContext, RAWI = NonNullable<unknown>> implements Builder<BaseApp<ContextMerged<C, RAWC>, I & RAWI>> {
-    build(): App<ContextMerged<C, RAWC>, I & RAWI>;
+export class AppBuilder<C extends BaseContext = BaseContext, I = NonNullable<unknown>, RAW_C extends BaseContext = BaseContext, RAW_I = NonNullable<unknown>> implements Builder<BaseApp<ContextMerged<C, RAW_C>, I & RAW_I>> {
+    build(): App<ContextMerged<C, RAW_C>, I & RAW_I>;
     static defaultContext: BaseContext<{}>;
     static defaultData: RunnerData<NonNullable<unknown>>;
     static empty(): AppBuilder<BaseContext<{}>, {}, BaseContext<{}>, {}>;
@@ -35,12 +35,12 @@ export class AppBuilder<C extends BaseContext = BaseContext, I = NonNullable<unk
     static fromBuilders<CB extends ContextBuilder, NI>(contextBuilder: CB, dataBuilder: RunnerDataBuilder<DataFromBuilder<CB>, NI>): AppBuilder<DataFromBuilder<CB>, NI, BaseContext<{}>, {}>;
     static fromContextBuilder<CB extends ContextBuilder>(contextBuilder: CB): AppBuilder<DataFromBuilder<CB>, {}, BaseContext<{}>, {}>;
     static fromDataBuilder<NI>(dataBuilder: RunnerDataBuilder<BaseContext, NI>): AppBuilder<BaseContext<{}>, NI, BaseContext<{}>, {}>;
-    setContext<NC extends BaseContext>(context: NC): AppBuilder<C, I, NC, RAWI>;
-    setContextBuilder<NC extends BaseContext, NI>(contextBuilder: ContextBuilderFromContext<NC>, dataBuilder: RunnerDataBuilder<NC, NI>): AppBuilder<NC, NI, RAWC, RAWI>;
-    setData<NI>(data: RunnerData<NI>): AppBuilder<C, I, RAWC, NI>;
-    setDataBuilder<NI>(dataBuilder: RunnerDataBuilder<C, NI>): AppBuilder<C, NI, RAWC, RAWI>;
-    setHook<K extends keyof AppHooks<ContextMerged<C, RAWC>, I & RAWI>>(key: K, hook: AppHooks<ContextMerged<C, RAWC>, I & RAWI>[K]): this;
-    setHooks(hooks: AppHooks<ContextMerged<C, RAWC>, I & RAWI>): this;
+    setContext<NC extends BaseContext>(context: NC): AppBuilder<C, I, NC, RAW_I>;
+    setContextBuilder<NC extends BaseContext, NI>(contextBuilder: ContextBuilderFromContext<NC>, dataBuilder: RunnerDataBuilder<NC, NI>): AppBuilder<NC, NI, RAW_C, RAW_I>;
+    setData<NI>(data: RunnerData<NI>): AppBuilder<C, I, RAW_C, NI>;
+    setDataBuilder<NI>(dataBuilder: RunnerDataBuilder<C, NI>): AppBuilder<C, NI, RAW_C, RAW_I>;
+    setHook<K extends keyof AppHooks<ContextMerged<C, RAW_C>, I & RAW_I>>(key: K, hook: AppHooks<ContextMerged<C, RAW_C>, I & RAW_I>[K]): this;
+    setHooks(hooks: AppHooks<ContextMerged<C, RAW_C>, I & RAW_I>): this;
 }
 
 // @public

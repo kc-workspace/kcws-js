@@ -22,9 +22,9 @@ import { App } from "./app";
 export class AppBuilder<
   C extends BaseContext = BaseContext,
   I = NonNullable<unknown>,
-  RAWC extends BaseContext = BaseContext,
-  RAWI = NonNullable<unknown>,
-> implements Builder<BaseApp<ContextMerged<C, RAWC>, I & RAWI>>
+  RAW_C extends BaseContext = BaseContext,
+  RAW_I = NonNullable<unknown>,
+> implements Builder<BaseApp<ContextMerged<C, RAW_C>, I & RAW_I>>
 {
   /** default context if didn't set */
   static defaultContext = ContextBuilder.empty().build();
@@ -72,13 +72,13 @@ export class AppBuilder<
     return new AppBuilder<BaseContext, NI>(undefined, dataBuilder);
   }
 
-  private context: RAWC | undefined;
+  private context: RAW_C | undefined;
   private contextBuilder: ContextBuilderFromContext<C> | undefined;
 
-  private data: RunnerData<RAWI> | undefined;
+  private data: RunnerData<RAW_I> | undefined;
   private dataBuilder: RunnerDataBuilder<C, I> | undefined;
 
-  private hooks: AppHooks<ContextMerged<C, RAWC>, I & RAWI>;
+  private hooks: AppHooks<ContextMerged<C, RAW_C>, I & RAW_I>;
   private constructor(
     contextBuilder?: ContextBuilderFromContext<C>,
     dataBuilder?: RunnerDataBuilder<C, I>
@@ -102,7 +102,7 @@ export class AppBuilder<
     contextBuilder: ContextBuilderFromContext<NC>,
     dataBuilder: RunnerDataBuilder<NC, NI>
   ) {
-    const output = this as unknown as AppBuilder<NC, NI, RAWC, RAWI>;
+    const output = this as unknown as AppBuilder<NC, NI, RAW_C, RAW_I>;
     output.contextBuilder = contextBuilder;
     output.dataBuilder = dataBuilder;
     return output;
@@ -118,7 +118,7 @@ export class AppBuilder<
    * @returns builder
    */
   setDataBuilder<NI>(dataBuilder: RunnerDataBuilder<C, NI>) {
-    const output = this as unknown as AppBuilder<C, NI, RAWC, RAWI>;
+    const output = this as unknown as AppBuilder<C, NI, RAW_C, RAW_I>;
     output.dataBuilder = dataBuilder;
     return output;
   }
@@ -133,7 +133,7 @@ export class AppBuilder<
    * @returns builder
    */
   setContext<NC extends BaseContext>(context: NC) {
-    const output = this as unknown as AppBuilder<C, I, NC, RAWI>;
+    const output = this as unknown as AppBuilder<C, I, NC, RAW_I>;
     output.context = context;
     return output;
   }
@@ -148,7 +148,7 @@ export class AppBuilder<
    * @returns builder
    */
   setData<NI>(data: RunnerData<NI>) {
-    const output = this as unknown as AppBuilder<C, I, RAWC, NI>;
+    const output = this as unknown as AppBuilder<C, I, RAW_C, NI>;
     output.data = data;
     return output;
   }
@@ -159,9 +159,9 @@ export class AppBuilder<
    * @param key - hook name
    * @param hook - hook function
    */
-  setHook<K extends keyof AppHooks<ContextMerged<C, RAWC>, I & RAWI>>(
+  setHook<K extends keyof AppHooks<ContextMerged<C, RAW_C>, I & RAW_I>>(
     key: K,
-    hook: AppHooks<ContextMerged<C, RAWC>, I & RAWI>[K]
+    hook: AppHooks<ContextMerged<C, RAW_C>, I & RAW_I>[K]
   ) {
     this.hooks[key] = hook;
     return this;
@@ -172,7 +172,7 @@ export class AppBuilder<
    *
    * @param hooks - hook functions
    */
-  setHooks(hooks: AppHooks<ContextMerged<C, RAWC>, I & RAWI>) {
+  setHooks(hooks: AppHooks<ContextMerged<C, RAW_C>, I & RAW_I>) {
     this.hooks = deepMerge(hooks, this.hooks);
     return this;
   }
@@ -183,7 +183,7 @@ export class AppBuilder<
    * @returns Actions app
    */
   build() {
-    let context: ContextMerged<C, RAWC> | undefined;
+    let context: ContextMerged<C, RAW_C> | undefined;
 
     if (this.contextBuilder) context = this.contextBuilder.build();
     if (this.context) {
@@ -193,19 +193,19 @@ export class AppBuilder<
     }
 
     const dataBuilder: RunnerDataBuilder<
-      ContextMerged<C, RAWC>,
-      I & RAWI
+      ContextMerged<C, RAW_C>,
+      I & RAW_I
     > = async ctx => {
-      let data: RunnerData<I & RAWI> | undefined;
+      let data: RunnerData<I & RAW_I> | undefined;
 
       if (this.dataBuilder)
-        data = (await this.dataBuilder(ctx as C)) as RunnerData<I & RAWI>;
+        data = (await this.dataBuilder(ctx as C)) as RunnerData<I & RAW_I>;
       if (this.data) {
         data = data
-          ? deepMerge(data, this.data as RunnerData<I & RAWI>)
-          : (this.data as RunnerData<I & RAWI>);
+          ? deepMerge(data, this.data as RunnerData<I & RAW_I>)
+          : (this.data as RunnerData<I & RAW_I>);
       } else if (!data) {
-        data = AppBuilder.defaultData as RunnerData<I & RAWI>;
+        data = AppBuilder.defaultData as RunnerData<I & RAW_I>;
       }
 
       return data!;

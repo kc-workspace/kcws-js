@@ -47,7 +47,7 @@ export interface BaseApp<C extends BaseContext, I> {
    * run the input runner with app data and context
    *
    * @param runner - app runner
-   * @param input - overriden input value of current run
+   * @param input - overridden input value of current run
    */
   run(runner: Runner<C, I>, input?: Partial<I>): Promise<void>;
 }
