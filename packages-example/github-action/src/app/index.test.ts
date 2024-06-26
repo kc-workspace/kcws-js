@@ -1,28 +1,43 @@
-import { ContextBuilder } from "@kcws/github-actions";
+jest.mock("@actions/core");
 
-import app, { context } from ".";
+import { setFailed } from "@actions/core";
+import { mockRunner } from "@kcws/github-actions";
+
+import builder from ".";
 
 describe("app", () => {
+  const app = builder.build();
+
+  it("should fail when no required input", async () => {
+    await app.run(mockRunner(app));
+
+    expect(setFailed).toHaveBeenCalled();
+    expect(setFailed).toHaveBeenCalledWith(
+      new Error("Input required and not supplied: name")
+    );
+  });
+
   it("should executes runner", async () => {
-    const runner = jest.fn();
-    await app.exec(runner);
+    jest
+      .spyOn(app.context.plugins.input, "requiredString")
+      .mockReturnValueOnce("hello");
+
+    const runner = mockRunner(app);
+    await app.run(runner);
     expect(runner).toHaveBeenCalledTimes(1);
+    expect(runner).toHaveBeenCalledWith(
+      { input: { name: "hello" } },
+      app.context
+    );
   });
 });
 
 describe("app.context", () => {
+  const app = builder.build();
   it("should contains metadata", () => {
-    // By default package.json should not found on source code
-    // because package.json is NOT on the same directory as source code
-    expect(context.name).toBe("");
-    expect(context.version).toBe("");
+    const context = app.context;
 
-    ContextBuilder.fromContext(context);
-  });
-
-  it("should contains plugins", () => {
-    expect(context.use("input")).not.toBeFalsy();
-    expect(context.use("log")).not.toBeFalsy();
-    expect(context.use("exec")).not.toBeFalsy();
+    expect(context.name).toBe("@kcexamples/github-action");
+    expect(context.version).toMatch(/\d.\d.\d/);
   });
 });

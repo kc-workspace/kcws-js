@@ -1,19 +1,22 @@
 import {
+  AppBuilder,
   ContextBuilder,
+  EnvContextPlugin,
+  ExecContextPlugin,
   InputContextPlugin,
   LogContextPlugin,
-  Actions,
-  ExecContextPlugin,
 } from "@kcws/github-actions";
 
-export const context = ContextBuilder.fromPackageJson()
+export const contextBuilder = ContextBuilder.fromPackageJson(__dirname)
+  .addPlugin(new EnvContextPlugin())
   .addPlugin(new LogContextPlugin())
   .addPlugin(new InputContextPlugin())
-  .addPlugin(new ExecContextPlugin())
-  .build();
+  .addPlugin(new ExecContextPlugin());
 
-export default Actions.builder(context, (context) => {
+export default AppBuilder.fromBuilders(contextBuilder, (context) => {
   return {
-    name: context.use("input").optionalString("name") ?? "world",
+    input: {
+      name: context.use("input").requiredString("name"),
+    },
   };
 });

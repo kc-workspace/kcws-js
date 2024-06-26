@@ -1,8 +1,7 @@
-import type app from "../app";
+import type { AppBuilderRunner } from "@kcws/github-actions";
+import type builder from "../app";
 
-import { AppRunner } from "@kcws/github-actions";
-
-const runner: AppRunner<typeof app> = (data, context) => {
+const runner: AppBuilderRunner<typeof builder> = (data, context) => {
   context.use("log").info("hello pre {name}", data.input);
 };
 

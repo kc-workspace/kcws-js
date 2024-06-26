@@ -5,4 +5,5 @@ module.exports = createConfig({
   jest: true,
   prettier: true,
   ecma: "latest",
+  commonjs: true,
 });
