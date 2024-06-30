@@ -37,7 +37,7 @@
     "_phase:build": "heft run --only build -- --clean"
   },
   "dependencies": {
-    "@definitelytyped/eslint-plugin": "0.1.15",
+    "@definitelytyped/eslint-plugin": "0.1.17",
     "@rushstack/eslint-patch": "1.10.3",
     "@rushstack/eslint-plugin": "0.15.1",
     "@rushstack/eslint-plugin-security": "0.8.1",
@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
-    "@rushstack/heft": "0.66.18",
+    "@rushstack/heft": "0.66.19",
     "@types/eslint": "8.56.10"
   },
   "peerDependencies": {

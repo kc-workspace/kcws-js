@@ -46,7 +46,7 @@
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.66.18",
+    "@rushstack/heft": "0.66.19",
     "@rspack/core": "0.7.5"
   },
   "peerDependencies": {
