@@ -37,10 +37,12 @@ runs:
       uses: actions/cache/restore@v4
       with:
         path: common/temp/install-run
-        key: rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}
+        key: rush-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}
         restore-keys: |
-          rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
-          rush-${{ runner.os }}-
+          rush-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
+          rush-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-
+          rush-${{ github.workflow }}-${{ github.ref }}-
+          rush-${{ github.workflow }}-
           rush-
     - name: Installing rush
       ## Run any command from install-run-rush.sh script to download rush if not existed
@@ -51,7 +53,7 @@ runs:
       uses: actions/cache/save@v4
       with:
         path: common/temp/install-run
-        key: rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}
+        key: rush-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}
 
     - name: Restoring pnpm cache
       id: pnpm-restore
@@ -59,10 +61,12 @@ runs:
       uses: actions/cache/restore@v4
       with:
         path: common/temp/pnpm-store
-        key: pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        key: pnpm-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
-          pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
-          pnpm-${{ runner.os }}-
+          pnpm-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
+          pnpm-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-
+          pnpm-${{ github.workflow }}-${{ github.ref }}-
+          pnpm-${{ github.workflow }}-
           pnpm-
     - name: Installing dependencies
       if: inputs.install == 'true'
@@ -73,7 +77,7 @@ runs:
       uses: actions/cache/save@v4
       with:
         path: common/temp/pnpm-store
-        key: pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        key: pnpm-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
 
     - name: Restoring build cache
       id: rush-build-restore
@@ -81,9 +85,11 @@ runs:
       uses: actions/cache/restore@v4
       with:
         path: common/temp/build-cache
-        key: rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}
+        key: rush-build-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}
         restore-keys: |
-          rush-build-${{ runner.os }}-
+          rush-build-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-
+          rush-build-${{ github.workflow }}-${{ github.ref }}-
+          rush-build-${{ github.workflow }}-
           rush-build-
     - name: Building application
       if: inputs.build == 'true'
@@ -94,4 +100,4 @@ runs:
       uses: actions/cache/save@v4
       with:
         path: common/temp/build-cache
-        key: rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}
+        key: rush-build-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}
