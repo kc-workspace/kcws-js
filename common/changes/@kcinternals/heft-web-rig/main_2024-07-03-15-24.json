@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcinternals/heft-web-rig",
+      "comment": "Remove trailing comma from tsconfig config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcinternals/heft-web-rig"
+}
