@@ -35,8 +35,6 @@ jobs:
       - name: Setup rushjs
         uses: ./.github/actions/setup-rush
         with:
-          install: true
-          install-cache: true
           build: true
           build-cache: true
       - name: Check for missing changelogs
@@ -81,9 +79,7 @@ jobs:
       - name: Setup rushjs
         uses: ./.github/actions/setup-rush
         with:
-          install: false
-          install-cache: true
-          build: false
+          build: true
           build-cache: true
       - name: Deploying packages
         uses: ./.github/actions/run-rush
@@ -121,13 +117,13 @@ jobs:
         with:
           gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}
 
-  deploying-docs:
+  deploy-docs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs:
-      - deploying
+      - deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
