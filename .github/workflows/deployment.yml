@@ -115,7 +115,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GH_TOKEN }}
       - name: Setup rushjs
         uses: ./.github/actions/setup-rush
         with:
