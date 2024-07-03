@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/reset.css",
+      "comment": "Remove typedoc config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/reset.css"
+}
