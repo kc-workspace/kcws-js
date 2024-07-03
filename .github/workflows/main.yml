@@ -25,7 +25,8 @@ jobs:
       - name: Setup rushjs
         uses: ./.github/actions/setup-rush
         with:
-          install: true
+          build: true
+          build-cache: true
       - name: Checking for missing changelogs
         uses: ./.github/actions/run-rush
         with:
@@ -112,11 +113,8 @@ jobs:
       - name: Setup rushjs
         uses: ./.github/actions/setup-rush
         with:
-          install: true
-      - name: Building packages
-        uses: ./.github/actions/run-rush
-        with:
-          command: build
+          build: true
+          build-cache: true
       - name: Testing packages
         uses: ./.github/actions/run-rush
         with:
@@ -142,12 +140,9 @@ jobs:
       - name: Setup rushjs
         uses: ./.github/actions/setup-rush
         with:
-          install: true
           node-version: ${{ matrix.node-version }}
-      - name: Building packages
-        uses: ./.github/actions/run-rush
-        with:
-          command: build
+          build: true
+          build-cache: true
       - name: Testing packages
         uses: ./.github/actions/run-rush
         with:

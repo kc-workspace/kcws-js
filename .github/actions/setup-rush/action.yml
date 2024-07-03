@@ -4,52 +4,100 @@ author: Kamontat Chantrachirathumrong
 inputs:
   node-version:
     description: Install nodejs version
-    default: ''
+    default: ""
   install:
     description: Install dependencies after setup rush repository
     default: "true"
-  cache-rush:
+  install-cache:
+    description: Enabled caching installed dependencies
+    default: "true"
+  build:
+    description: Build applications after setup rush repository
+    default: "false"
+  build-cache:
+    description: Enabled caching built applications
+    default: "false"
+  rush-cache:
     description: Enabled caching installed rush
-    default: "true"
-  cache-pnpm:
-    description: Enabled caching pnpm store
-    default: "true"
-  cache-build:
-    description: Enabled caching build-cache
     default: "true"
 
 runs:
   using: composite
   steps:
-    - uses: actions/setup-node@v4
+    - name: Setup NodeJS
+      id: nodejs
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
         node-version-file: .tool-versions
-    - name: Caching rush
-      if: inputs.cache-rush == 'true'
-      uses: actions/cache@v4
+
+    - name: Restoring rush cache
+      id: rush-restore
+      if: inputs.rush-cache == 'true'
+      uses: actions/cache/restore@v4
       with:
         path: common/temp/install-run
-        key: ${{ runner.os }}-rush-${{ hashFiles('rush.json') }}
+        key: rush-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}
         restore-keys: |
-          ${{ runner.os }}-rush-
-    - name: Caching pnpm store
-      if: inputs.cache-pnpm == 'true'
-      uses: actions/cache@v4
+          rush-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
+          rush-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-
+          rush-${{ github.workflow }}-${{ github.ref }}-
+          rush-${{ github.workflow }}-
+          rush-
+    - name: Installing rush
+      ## Run any command from install-run-rush.sh script to download rush if not existed
+      run: node common/scripts/install-run-rush.js --help >/dev/null
+      shell: bash
+    - name: Saving rush cache
+      if: inputs.rush-cache == 'true' && steps.rush-restore.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v4
+      with:
+        path: common/temp/install-run
+        key: rush-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}
+
+    - name: Restoring pnpm cache
+      id: pnpm-restore
+      if: inputs.install-cache == 'true' && inputs.install == 'true'
+      uses: actions/cache/restore@v4
       with:
         path: common/temp/pnpm-store
-        key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+        key: pnpm-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
-          ${{ runner.os }}-pnpm-
-    - name: Caching build-cache
-      if: inputs.cache-build == 'true'
-      uses: actions/cache@v4
-      with:
-        path: common/temp/build-cache
-        key: ${{ runner.os }}-build
-        restore-keys: |
-          ${{ runner.os }}-build
+          pnpm-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
+          pnpm-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-
+          pnpm-${{ github.workflow }}-${{ github.ref }}-
+          pnpm-${{ github.workflow }}-
+          pnpm-
     - name: Installing dependencies
       if: inputs.install == 'true'
       run: node common/scripts/install-run-rush.js install
       shell: bash
+    - name: Saving pnpm cache
+      if: inputs.install-cache == 'true' && inputs.install == 'true' && steps.pnpm-restore.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v4
+      with:
+        path: common/temp/pnpm-store
+        key: pnpm-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+    - name: Restoring build cache
+      id: rush-build-restore
+      if: inputs.build-cache == 'true' && inputs.build == 'true'
+      uses: actions/cache/restore@v4
+      with:
+        path: common/temp/build-cache
+        key: rush-build-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}
+        restore-keys: |
+          rush-build-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-
+          rush-build-${{ github.workflow }}-${{ github.ref }}-
+          rush-build-${{ github.workflow }}-
+          rush-build-
+    - name: Building application
+      if: inputs.build == 'true'
+      run: node common/scripts/install-run-rush.js build --timeline
+      shell: bash
+    - name: Saving build cache
+      if: inputs.build-cache == 'true' && inputs.build == 'true' && steps.rush-build-restore.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v4
+      with:
+        path: common/temp/build-cache
+        key: rush-build-${{ github.workflow }}-${{ github.ref }}-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}

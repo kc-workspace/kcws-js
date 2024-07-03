@@ -25,7 +25,29 @@ env:
   DOCS_VERSION: v2
 
 jobs:
-  deploying:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup rushjs
+        uses: ./.github/actions/setup-rush
+        with:
+          build: true
+          build-cache: true
+      - name: Check for missing changelogs
+        uses: ./.github/actions/run-rush
+        with:
+          command: change
+          args: --verify
+      - name: Deployment summary
+        uses: ./.github/actions/run-rush
+        with:
+          command: publish
+
+  deploy:
     # This will enforce deploy applications from main branch only
     # however, developer still able to dry-run
     # deployment on their feature branch.
@@ -38,6 +60,8 @@ jobs:
     environment:
       name: npm-registry
       url: https://www.npmjs.com/org/kcws
+    needs:
+      - check
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
@@ -55,17 +79,8 @@ jobs:
       - name: Setup rushjs
         uses: ./.github/actions/setup-rush
         with:
-          install: true
-          cache-build: false
-      - name: Checking for missing changelogs
-        uses: ./.github/actions/run-rush
-        with:
-          command: change
-          args: --verify
-      - name: Building packages
-        uses: ./.github/actions/run-rush
-        with:
-          command: build
+          build: true
+          build-cache: false
       - name: Deploying packages
         uses: ./.github/actions/run-rush
         with:
@@ -77,6 +92,35 @@ jobs:
             --add-commit-details
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Syncback active branch
+        uses: ./.github/actions/sync-git
+        with:
+          base-branch: main
+          branch: release
+      - name: Cleanup git
+        if: always()
+        uses: ./.github/actions/cleanup-git
+        with:
+          gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}
+
+  deploy-docs:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs:
+      - deploy
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+      - name: Setup rushjs
+        uses: ./.github/actions/setup-rush
+        with:
+          build: true
+          build-cache: true
       - name: Building documentation
         uses: ./.github/actions/run-rush
         with:
@@ -91,25 +135,5 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
-      - name: Syncback active branch
-        uses: ./.github/actions/sync-git
-        with:
-          base-branch: main
-          branch: release
-      - name: Cleanup git
-        if: always()
-        uses: ./.github/actions/cleanup-git
-        with:
-          gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}
-
-  deploying-docs:
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs:
-      - deploying
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4

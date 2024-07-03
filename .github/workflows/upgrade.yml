@@ -34,11 +34,6 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
-      - name: Setup rushjs
-        uses: ./.github/actions/setup-rush
-        with:
-          install: true
-          cache-build: false
       - name: Setup git
         uses: ./.github/actions/setup-git
         with:
@@ -47,6 +42,8 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN }}
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY_BASE64 }}
           gpg-fingerprint: ${{ secrets.GPG_FINGERPRINT }}
+      - name: Setup rushjs
+        uses: ./.github/actions/setup-rush
       - name: Update dependencies
         uses: ./.github/actions/run-rush
         with:
