@@ -3,23 +3,22 @@
   "extends": ["./typedoc.base.json"],
 
   // Input: https://typedoc.org/options/input/
+  "name": "@kcws/js",
   "entryPointStrategy": "packages",
   "entryPoints": [
     "../../../packages/color",
     "../../../packages/dtcheck",
     "../../../packages/equals",
     "../../../packages/error",
-    "../../../packages/eslint-config",
-    "../../../packages/lintstaged-config",
     "../../../packages/mixin",
     "../../../packages/random",
-    "../../../packages/reset.css",
-    "../../../packages/heft-esbuild-plugin",
     "../../../packages/astro-decap-cms",
     "../../../packages/github-actions",
-    "../../../typings/*"
+    "../../../packages-config/eslint-config",
+    "../../../packages-config/lintstaged-config",
+    "../../../packages-internal/heft-esbuild-plugin",
+    "../../../packages-type/*"
   ],
-  "name": "@kcws/js",
 
   // Output: https://typedoc.org/options/output/
   "out": "../../../_site",
@@ -27,9 +26,8 @@
   "lightHighlightTheme": "solarized-light",
   "darkHighlightTheme": "solarized-dark",
   "cname": "js.kcws.kamontat.net",
-  "htmlLang": "en",
+  "lang": "en",
   "githubPages": true,
-  "gaID": "",
   "hideParameterTypesInTitle": true,
   "hideGenerator": false,
   "searchInComments": true,
@@ -42,7 +40,8 @@
   },
   "navigation": {
     "includeCategories": true,
-    "includeGroups": true
+    "includeGroups": true,
+    "includeFolders": false
   },
   "visibilityFilters": {
     "inherited": true,
@@ -52,7 +51,8 @@
     "@beta": true,
     "@alpha": false
   },
+  "cacheBust": true
 
   // Other: https://typedoc.org/options/other/
-  // "logLevel": "Verbose"
+  // ,"logLevel": "Verbose"
 }

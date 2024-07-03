@@ -1,16 +1,19 @@
 {
   "$schema": "https://typedoc.org/schema.json",
+
   // Input: https://typedoc.org/options/input/
-  "entryPointStrategy": "expand",
   "exclude": ["**/*+(index|.spec|.e2e).ts"],
   "includeVersion": true,
+  "excludeExternals": true,
 
   // Output: https://typedoc.org/options/output/
 
   // Comment: https://typedoc.org/options/comments/
+  "suppressCommentWarningsInDeclarationFiles": true,
+  "useTsLinkResolution": false,
 
   // Organization: https://typedoc.org/options/organization/
-  "categorizeByGroup": false,
+  "categorizeByGroup": true,
   "sort": ["visibility", "static-first", "enum-value-ascending", "alphabetical"],
 
   // Validation: https://typedoc.org/options/validation/
