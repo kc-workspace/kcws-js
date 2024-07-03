@@ -1,6 +1,13 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Wed, 03 Jul 2024 10:50:31 GMT and should not be manually modified.
+This log was last generated on Wed, 03 Jul 2024 13:10:22 GMT and should not be manually modified.
+
+## 0.11.2
+Wed, 03 Jul 2024 13:10:22 GMT
+
+### Patches
+
+- Add additional documents to interface and type
 
 ## 0.11.1
 Wed, 03 Jul 2024 10:50:31 GMT
