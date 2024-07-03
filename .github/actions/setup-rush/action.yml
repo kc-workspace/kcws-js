@@ -37,9 +37,8 @@ runs:
       uses: actions/cache/restore@v4
       with:
         path: common/temp/install-run
-        key: rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}-${{ hashFiles('common/config/rush/repo-state.json') }}
+        key: rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}
         restore-keys: |
-          rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}-
           rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
           rush-${{ runner.os }}-
           rush-
@@ -52,7 +51,7 @@ runs:
       uses: actions/cache/save@v4
       with:
         path: common/temp/install-run
-        key: rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}-${{ hashFiles('common/config/rush/repo-state.json') }}
+        key: rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}
 
     - name: Restoring pnpm cache
       id: pnpm-restore
@@ -60,11 +59,11 @@ runs:
       uses: actions/cache/restore@v4
       with:
         path: common/temp/pnpm-store
-        key: pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('common/config/rush/repo-state.json') }}
+        key: pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
-          pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}-
           pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
           pnpm-${{ runner.os }}-
+          pnpm-
     - name: Installing dependencies
       if: inputs.install == 'true'
       run: node common/scripts/install-run-rush.js install
@@ -74,7 +73,7 @@ runs:
       uses: actions/cache/save@v4
       with:
         path: common/temp/pnpm-store
-        key: pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('common/config/rush/repo-state.json') }}
+        key: pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
 
     - name: Restoring build cache
       id: rush-build-restore
@@ -82,9 +81,8 @@ runs:
       uses: actions/cache/restore@v4
       with:
         path: common/temp/build-cache
-        key: rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('common/config/rush/repo-state.json') }}
+        key: rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}
         restore-keys: |
-          rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
           rush-build-${{ runner.os }}-
           rush-build-
     - name: Building application
@@ -96,4 +94,4 @@ runs:
       uses: actions/cache/save@v4
       with:
         path: common/temp/build-cache
-        key: rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('common/config/rush/repo-state.json') }}
+        key: rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}
