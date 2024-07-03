@@ -2,6 +2,48 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.11.0",
+      "tag": "@kcws/github-actions_v0.11.0",
+      "date": "Wed, 03 Jul 2024 10:37:19 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update jsdoc typo on LogContextPlugin",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "c0dfe4f4cda68377f668bb59a3fd72cba749a5d2"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Refactor App with actual builder class",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "43436456dc915df566f91a5c5f7e57f886378be9"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "ac60fa05a87e8f69ba774f00b66e6df67b667017"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2f25097e192b16f829a4b1667bafc9a9cf827c76"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.19.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.44.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.23.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.10.0",
       "tag": "@kcws/github-actions_v0.10.0",
       "date": "Tue, 18 Jun 2024 06:37:36 GMT",
