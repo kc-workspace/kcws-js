@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Add additional documents to interface and type",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
