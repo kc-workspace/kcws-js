@@ -40,7 +40,14 @@ export class DefaultContext<
   }
 
   /**
-   * {@inheritDoc DefaultContext.getPlugin}
+   * Get plugin by name.
+   * If plugin never initiate before, this will initiate for you.
+   *
+   * @param name - plugin name
+   * @returns plugin object
+   *
+   * @throws {@link ContextPluginNotFound}
+   * Thrown if plugin is missing from context
    */
   use<K extends keyof PLUGINS>(name: K): PLUGINS[K] {
     return this.initPlugin(name);

@@ -64,8 +64,8 @@ export class AppBuilder<
   }
 
   /**
-   * create app builder from app builder. Context should be default value ({@link AppBuilder.defaultContext})
-   * @param appBuilder - app builder
+   * create data builder from data builder. Context should be default value ({@link AppBuilder.defaultContext})
+   * @param dataBuilder - data builder
    * @returns builder
    */
   static fromDataBuilder<NI>(dataBuilder: RunnerDataBuilder<BaseContext, NI>) {

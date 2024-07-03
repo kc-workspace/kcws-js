@@ -6,7 +6,7 @@ import type {
 } from "./index.type";
 
 import { isDebug } from "@actions/core";
-import { which as _which, mv, cp } from "@actions/io";
+import { mv, cp } from "@actions/io";
 import { create, hashFiles } from "@actions/glob";
 
 /**
@@ -22,27 +22,52 @@ export class IOContextPlugin implements IIOContextPlugin {
   }
 
   /**
-   * {@inheritDoc _which}
+   * Moves file/folder from source path to destination
+   *
+   * @param source - source path
+   * @param dest - destination path
+   * @param options - move options
+   *
+   * @see https://github.com/actions/toolkit/tree/main/packages/io
    */
-  which(tool: string, check: boolean) {
-    return _which(tool, check);
-  }
-
-  /** {@inheritDoc mv} */
   move(source: string, dest: string, options?: IOMoveOptions) {
     return mv(source, dest, options);
   }
 
-  /** {@inheritDoc cp} */
+  /**
+   * Copies file/folder from source path to destination
+   *
+   * @param source - source path
+   * @param dest - destination path
+   * @param options - copy options
+   *
+   * @see https://github.com/actions/toolkit/tree/main/packages/io
+   */
   copy(source: string, dest: string, options?: IOCopyOptions) {
     return cp(source, dest, options);
   }
-  /** {@inheritDoc create} */
+  /**
+   * Create glob object with input patterns
+   *
+   * @param pattern - patterns separated by newlines
+   * @param options - glob options
+   * @returns globber object
+   *
+   * @see https://github.com/actions/toolkit/tree/main/packages/glob
+   */
   createGlob(pattern: string, options?: IOGlobOptions) {
     return create(pattern, options);
   }
 
-  /** {@inheritDoc hashFiles} */
+  /**
+   * Computes the sha256 hash of a glob
+   *
+   * @param pattern - patterns separated by newlines
+   * @param cwd - workspace used when matching files
+   * @returns file hash string
+   *
+   * @see https://github.com/actions/toolkit/tree/main/packages/glob
+   */
   hash(pattern: string, cwd?: string) {
     return hashFiles(pattern, cwd, { followSymbolicLinks: true }, isDebug());
   }

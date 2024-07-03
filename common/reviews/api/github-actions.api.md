@@ -313,32 +313,16 @@ export class InputContextPlugin implements IInputContextPlugin {
 
 // @public
 export class IOContextPlugin implements IIOContextPlugin {
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "cp"
-    //
-    // (undocumented)
     copy(source: string, dest: string, options?: IOCopyOptions): Promise<void>;
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "create"
-    //
-    // (undocumented)
     createGlob(pattern: string, options?: IOGlobOptions): Promise<Globber>;
     // (undocumented)
     readonly dependencies: readonly [];
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "hashFiles"
-    //
-    // (undocumented)
     hash(pattern: string, cwd?: string): Promise<string>;
     // (undocumented)
     init(): void;
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "mv"
-    //
-    // (undocumented)
     move(source: string, dest: string, options?: IOMoveOptions): Promise<void>;
     // (undocumented)
     readonly name: "io";
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "_which"
-    //
-    // (undocumented)
-    which(tool: string, check: boolean): Promise<string>;
 }
 
 export { IOCopyOptions }
@@ -468,11 +452,7 @@ export interface SystemCacheKeyOption {
 
 // @public
 export class SystemContextPlugin implements ISystemContextPlugin {
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "_addPath"
-    //
-    // (undocumented)
     addPath(additionalPath: string): void;
-    // (undocumented)
     addPaths(...additionalPaths: string[]): void;
     // (undocumented)
     readonly dependencies: readonly [];
@@ -480,13 +460,7 @@ export class SystemContextPlugin implements ISystemContextPlugin {
     init(): void;
     // (undocumented)
     readonly name: "system";
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "exportVariable"
-    //
-    // (undocumented)
     setEnvVar<V>(name: string, value: V): void;
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@kcws/github-actions" does not have an export "_which"
-    //
-    // (undocumented)
     which(tool: string, check?: boolean): Promise<string>;
 }
 
