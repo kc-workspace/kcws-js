@@ -2,6 +2,27 @@
   "name": "@kcws/dtcheck",
   "entries": [
     {
+      "version": "0.45.1",
+      "tag": "@kcws/dtcheck_v0.45.1",
+      "date": "Wed, 03 Jul 2024 10:50:31 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.20.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kctypes/generic\" to `1.18.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.44.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.23.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.45.0",
       "tag": "@kcws/dtcheck_v0.45.0",
       "date": "Wed, 03 Jul 2024 10:37:19 GMT",
