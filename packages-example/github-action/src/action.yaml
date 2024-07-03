@@ -15,6 +15,9 @@ inputs:
 
 runs:
   using: node20
-  pre: pre.js
   main: index.js
+
+  # NOTES: pre and post are optional, you can remove it.
+  # Don't forget to remove those files from ./src directory as well
+  pre: pre.js
   post: post.js
