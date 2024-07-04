@@ -1,6 +1,13 @@
 # Change Log - @kcws/reset.css
 
-This log was last generated on Wed, 03 Jul 2024 13:10:22 GMT and should not be manually modified.
+This log was last generated on Thu, 04 Jul 2024 03:44:32 GMT and should not be manually modified.
+
+## 1.21.3
+Thu, 04 Jul 2024 03:44:32 GMT
+
+### Patches
+
+- Remove typedoc config
 
 ## 1.21.2
 Wed, 03 Jul 2024 13:10:22 GMT

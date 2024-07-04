@@ -2,6 +2,31 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.11.3",
+      "tag": "@kcws/github-actions_v0.11.3",
+      "date": "Thu, 04 Jul 2024 03:44:32 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update documents and fix unresolved links",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "595a80e3aab3eb682c46e96f2b0e2926ecbbd6a0"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.22.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `0.44.3`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.23.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.11.2",
       "tag": "@kcws/github-actions_v0.11.2",
       "date": "Wed, 03 Jul 2024 13:10:22 GMT",
