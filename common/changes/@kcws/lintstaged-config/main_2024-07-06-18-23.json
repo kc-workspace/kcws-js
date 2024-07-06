@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "comment": "Update ConfigCondition type to receive action key as first argument instead of regex",
+      "type": "major"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config"
+}
