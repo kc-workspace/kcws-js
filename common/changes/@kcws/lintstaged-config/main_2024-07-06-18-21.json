@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/lintstaged-config",
+      "comment": "yamllint will check default config in multiple places before giveup",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config"
+}
