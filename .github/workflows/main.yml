@@ -3,6 +3,9 @@ name: Main
 on:
   push:
 
+permissions:
+  actions: write
+
 defaults:
   run:
     shell: bash
@@ -40,7 +43,7 @@ jobs:
       - name: Running cspell
         uses: streetsidesoftware/cspell-action@v5
         with:
-          config: '.github/linters/cspell.json'
+          config: ".github/linters/cspell.json"
           # Log progress and other information during the action execution.
           verbose: true
           # Determines if the action should be failed
