@@ -216,7 +216,7 @@
     },
     {
       "name": "prettier",
-      "allowedCategories": [ "configs" ]
+      "allowedCategories": [ "configs", "examples" ]
     },
     {
       "name": "stylelint",

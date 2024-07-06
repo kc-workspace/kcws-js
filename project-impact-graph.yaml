@@ -172,6 +172,7 @@ projects:
     includedGlobs:
       - packages-config/lintstaged-config/**
     dependentProjects:
+      - '@kcexamples/github-action'
       - '@kcexamples/heft-example-plugin'
       - '@kcexamples/local-node-lib'
       - '@kcexamples/local-web-lib'

@@ -151,6 +151,9 @@ importers:
       '@kcws/heft-node-rig':
         specifier: workspace:*
         version: link:../../packages/heft-node-rig
+      '@kcws/lintstaged-config':
+        specifier: workspace:*
+        version: link:../../packages-config/lintstaged-config
       '@rushstack/heft':
         specifier: 0.66.19
         version: 0.66.19(@types/node@20.14.2)
@@ -160,6 +163,9 @@ importers:
       '@types/node':
         specifier: 20.14.2
         version: 20.14.2
+      prettier:
+        specifier: 3.3.2
+        version: 3.3.2
 
   ../../packages-example/heft-example-plugin:
     devDependencies:
@@ -515,7 +521,7 @@ importers:
         version: 0.66.19(@types/node@20.14.2)
       astro:
         specifier: 4.11.3
-        version: 4.11.3(@types/node@20.14.2)(typescript@5.4.2)
+        version: 4.11.3(@types/node@20.14.2)(terser@5.31.1)(typescript@5.4.2)
 
   ../../packages/color:
     devDependencies:
@@ -8758,7 +8764,7 @@ snapshots:
 
   astral-regex@2.0.0: {}
 
-  astro@4.11.3(@types/node@20.14.2)(typescript@5.4.2):
+  astro@4.11.3(@types/node@20.14.2)(terser@5.31.1)(typescript@5.4.2):
     dependencies:
       '@astrojs/compiler': 2.8.1
       '@astrojs/internal-helpers': 0.4.1
@@ -8816,8 +8822,8 @@ snapshots:
       tsconfck: 3.1.1(typescript@5.4.2)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.3.2(@types/node@20.14.2)
-      vitefu: 0.2.5(vite@5.3.2(@types/node@20.14.2))
+      vite: 5.3.2(@types/node@20.14.2)(terser@5.31.1)
+      vitefu: 0.2.5(vite@5.3.2(@types/node@20.14.2)(terser@5.31.1))
       which-pm: 2.2.0
       yargs-parser: 21.1.1
       zod: 3.23.8
@@ -13402,7 +13408,7 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.3.2(@types/node@20.14.2):
+  vite@5.3.2(@types/node@20.14.2)(terser@5.31.1):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.39
@@ -13410,10 +13416,11 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.14.2
       fsevents: 2.3.3
+      terser: 5.31.1
 
-  vitefu@0.2.5(vite@5.3.2(@types/node@20.14.2)):
+  vitefu@0.2.5(vite@5.3.2(@types/node@20.14.2)(terser@5.31.1)):
     optionalDependencies:
-      vite: 5.3.2(@types/node@20.14.2)
+      vite: 5.3.2(@types/node@20.14.2)(terser@5.31.1)
 
   volar-service-css@0.0.45(@volar/language-service@2.2.5):
     dependencies:
