@@ -13,7 +13,8 @@ export class Builder<K extends string> implements IConfigBuilder {
     append<EK extends string>(key: EK, value: Partial<Exclude<IConfigValue, "actionFn">>): Builder<K | EK>;
     build(): Config<K>;
     debugMode(): this;
-    default(): Builder<K | DefaultKey>;
+    // Warning: (ae-forgotten-export) The symbol "CustomDefaultConfig" needs to be exported by the entry point index.d.ts
+    default(custom?: CustomDefaultConfig): Builder<K | DefaultKey>;
     delete<EK extends K>(key: EK): Builder<Exclude<K, EK>>;
     set<EK extends string>(key: EK, value: Partial<IConfigValue>): Builder<K | EK>;
 }
@@ -36,13 +37,15 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
 }
 
 // @public
-export type ConfigCondition = (regex: Array<string>) => Array<string>;
+export type ConfigCondition = (
+key: string,
+regex: Array<string>) => Array<string>;
 
 // @public
 export type ConfigFn = (filenames: Array<string>) => CommandType;
 
 // @beta
-export const DEFAULT_YAMLLINT_CONFIG: string;
+export const DEFAULT_YAMLLINT_CONFIGS: string[];
 
 // @public
 export type DefaultKey = "jsts" | "json" | "sh" | "yaml";
