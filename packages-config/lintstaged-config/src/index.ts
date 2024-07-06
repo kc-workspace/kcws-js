@@ -38,8 +38,8 @@ function defineConfig(builder: IConfigBuilder): ConfigFn {
   };
 
   const config = builder.build();
-  return async (stagedFiles) => {
-    return await config.getCommands((regexs) => {
+  return async stagedFiles => {
+    return await config.getCommands((_key, regexs) => {
       return micromatch(stagedFiles, regexs, options);
     });
   };

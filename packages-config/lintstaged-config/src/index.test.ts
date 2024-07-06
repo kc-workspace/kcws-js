@@ -27,7 +27,7 @@ describe("index", () => {
     [
       {
         regexs: ["test*.ts"],
-        actionFn: (f) => `echo ${f.join(",")}`,
+        actionFn: f => `echo ${f.join(",")}`,
       } as Partial<IConfigValue>,
       ["test.ts", "test2.ts", "test3.ts"],
       ["echo test.ts,test2.ts,test3.ts"],
@@ -70,7 +70,7 @@ describe("index", () => {
       [
         "eslint --fix --max-warnings 0 test.ts",
         "prettier --write test.ts",
-        "yamllint --config-file .github/linters/.yamllint.yml --strict test.yaml test.yml",
+        "yamllint --strict test.yaml test.yml",
       ],
     ],
     [
