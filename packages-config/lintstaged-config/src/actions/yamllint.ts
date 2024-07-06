@@ -1,6 +1,7 @@
 import type { IBaseActionOptions, BaseActionFn } from "./_base";
 
 import { existsSync } from "node:fs";
+import { join } from "node:path";
 
 import { getCommand } from "../utils/cmd";
 
@@ -19,7 +20,10 @@ export interface IYamllintOptions extends IBaseActionOptions {
  *
  * @beta
  */
-export const DEFAULT_YAMLLINT_CONFIG: string = ".github/linters/.yamllint.yml";
+export const DEFAULT_YAMLLINT_CONFIGS = [
+  ".github/linters/.yamllint.yml",
+  ".github/linters/.yamllint.yaml",
+];
 
 /**
  * create command with input option
@@ -41,11 +45,16 @@ export const yamllint: BaseActionFn<IYamllintOptions> = option => {
   if (option?.config) {
     args.push("--config-file", option?.config);
     // Else check if default config is existed, then use the default config
-  } else if (existsSync(DEFAULT_YAMLLINT_CONFIG)) {
-    args.push("--config-file", DEFAULT_YAMLLINT_CONFIG);
+  } else {
+    for (const config of DEFAULT_YAMLLINT_CONFIGS) {
+      if (existsSync(join(process.cwd(), config))) {
+        args.push("--config-file", join(process.cwd(), config));
+        break;
+      }
+    }
   }
-  if (option?.strict ?? true) args.push("--strict");
 
+  if (option?.strict ?? true) args.push("--strict");
   const files = option?.files ?? [];
   if (files.length > 0) args.push(...files);
   else args.push("."); // Run all files in current directory
