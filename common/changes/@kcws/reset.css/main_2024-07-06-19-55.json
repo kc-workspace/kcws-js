@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/reset.css",
+      "comment": "Improve lint speed by caching the result",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/reset.css"
+}

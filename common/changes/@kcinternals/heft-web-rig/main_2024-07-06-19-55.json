@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcinternals/heft-web-rig",
+      "comment": "Support caching stylelint result on css profile",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@kcinternals/heft-web-rig"
+}
