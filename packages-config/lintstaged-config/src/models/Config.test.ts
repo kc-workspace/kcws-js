@@ -29,12 +29,12 @@ describe("Config", () => {
       .append("", { actions: ["echo 'hello empty'"] })
       .build();
 
-    const result1 = await config.getCommands((regex) =>
+    const result1 = await config.getCommands((_, regex) =>
       regex.length === 1 ? ["found"] : []
     );
     expect(result1).toEqual(["echo 'hello world'", "echo 'hello next'"]);
 
-    const result2 = await config.getCommands((re) =>
+    const result2 = await config.getCommands((_, re) =>
       re.length === 0 ? ["found"] : []
     );
     expect(result2).toEqual(["echo 'hello empty'"]);
@@ -61,7 +61,7 @@ describe("Config", () => {
       .build();
 
     return expect(
-      config.getCommands((regex) => {
+      config.getCommands((_, regex) => {
         return regex[0] === input ? ["found"] : [];
       })
     ).resolves.toEqual([action]);

@@ -94,4 +94,9 @@ export interface IConfig {
  *
  * @public
  */
-export type ConfigCondition = (regex: Array<string>) => Array<string>;
+export type ConfigCondition = (
+  /** each action will have key correspond to action function */
+  key: string,
+  /** files regex for execute specific action */
+  regex: Array<string>
+) => Array<string>;

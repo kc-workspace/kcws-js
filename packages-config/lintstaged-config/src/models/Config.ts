@@ -6,7 +6,11 @@ import type {
   IConfig,
 } from "./IConfig";
 
-import { defineDefaultConfig, type DefaultKey } from "../constants/default";
+import {
+  defineDefaultConfig,
+  type DefaultKey,
+  type CustomDefaultConfig,
+} from "../constants/default";
 import { toArray } from "../utils/array";
 import { toPromise } from "../utils/promise";
 import { isSameMap } from "../utils/map";
@@ -51,8 +55,8 @@ class Builder<K extends string> implements IConfigBuilder {
    *
    * @public
    */
-  public default(): Builder<K | DefaultKey> {
-    return defineDefaultConfig(this);
+  public default(custom?: CustomDefaultConfig): Builder<K | DefaultKey> {
+    return defineDefaultConfig(this, custom);
   }
 
   /**
@@ -133,10 +137,10 @@ class Builder<K extends string> implements IConfigBuilder {
     value: IConfigValue,
     addon: Partial<IConfigValue>
   ): IConfigValue {
-    const a = toArray(value.actions).map((action) =>
+    const a = toArray(value.actions).map(action =>
       toPromise(action).then(toArray)
     );
-    const b = toArray(addon.actions).map((action) =>
+    const b = toArray(addon.actions).map(action =>
       toPromise(action).then(toArray)
     );
 
@@ -218,7 +222,7 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
     for await (const [key, value] of this._config.entries()) {
       if (this._isDebug) console.log(`verifying ${key}...`);
 
-      const files = condition(value.regexs);
+      const files = condition(key, value.regexs);
       if (files.length > 0) {
         if (this._isDebug)
           console.log(`found matched files [${files.join(",")}]`);
@@ -256,10 +260,10 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
   }
 
   /**
-   * Compare current config with other,
-   * This function WILL NOT compare function.
+   * Compare current config with another config.
+   * This function WILL ignore all function from comparison
    *
-   * @param c - other config
+   * @param c - another config
    * @returns true if this config is equal to other config
    *
    * @beta
@@ -288,12 +292,12 @@ export class Config<K extends string> implements IConfigBuilder, IConfig {
     if (!actions) return [];
 
     // Resolve to list of promise of list of string
-    const promises = toArray(actions).map((action) =>
+    const promises = toArray(actions).map(action =>
       toPromise(action).then(toArray)
     );
 
     // Resolve to promise of list of string
-    return Promise.all(promises).then((v) => v.flat());
+    return Promise.all(promises).then(v => v.flat());
   }
 }
 
