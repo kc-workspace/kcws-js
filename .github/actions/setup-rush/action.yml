@@ -58,12 +58,21 @@ runs:
       if: inputs.install-cache == 'true' && inputs.install == 'true'
       uses: actions/cache/restore@v4
       with:
-        path: common/temp/pnpm-store
+        path: |
+          common/temp/pnpm-store
+          common/temp/node_modules
         key: pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
           pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
           pnpm-${{ runner.os }}-
           pnpm-
+    ## TODO: Remove this once we verify cache hit works as expected and pnpm cache save no longer log warning message
+    - name: Check cache hit
+      run: |
+        echo "-----------------------------------------------------------------"
+        echo "${{ steps.pnpm-restore.outputs.cache-hit }}"
+        echo "-----------------------------------------------------------------"
+      shell: bash
     - name: Installing dependencies
       if: inputs.install == 'true'
       run: node common/scripts/install-run-rush.js install
@@ -72,7 +81,9 @@ runs:
       if: inputs.install-cache == 'true' && inputs.install == 'true' && steps.pnpm-restore.outputs.cache-hit != 'true'
       uses: actions/cache/save@v4
       with:
-        path: common/temp/pnpm-store
+        path: |
+          common/temp/pnpm-store
+          common/temp/node_modules
         key: pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
 
     - name: Restoring build cache
@@ -90,7 +101,7 @@ runs:
       run: node common/scripts/install-run-rush.js build --timeline
       shell: bash
     - name: Saving build cache
-      if: inputs.build-cache == 'true' && inputs.build == 'true' && steps.rush-build-restore.outputs.cache-hit != 'true'
+      if: inputs.build-cache == 'true' && inputs.build == 'true'
       uses: actions/cache/save@v4
       with:
         path: common/temp/build-cache
