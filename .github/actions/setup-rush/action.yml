@@ -31,10 +31,9 @@ runs:
         node-version: ${{ inputs.node-version }}
         node-version-file: .tool-versions
 
-    - name: Restoring rush cache
-      id: rush-restore
+    - name: Caching rush
       if: inputs.rush-cache == 'true'
-      uses: actions/cache/restore@v4
+      uses: actions/cache@v4
       with:
         path: common/temp/install-run
         key: rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}
@@ -46,17 +45,10 @@ runs:
       ## Run any command from install-run-rush.sh script to download rush if not existed
       run: node common/scripts/install-run-rush.js --help >/dev/null
       shell: bash
-    - name: Saving rush cache
-      if: inputs.rush-cache == 'true' && steps.rush-restore.outputs.cache-hit != 'true'
-      uses: actions/cache/save@v4
-      with:
-        path: common/temp/install-run
-        key: rush-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('rush.json') }}
 
-    - name: Restoring pnpm cache
-      id: pnpm-restore
+    - name: Caching pnpm packages
       if: inputs.install-cache == 'true' && inputs.install == 'true'
-      uses: actions/cache/restore@v4
+      uses: actions/cache@v4
       with:
         path: |
           common/temp/pnpm-store
@@ -66,43 +58,22 @@ runs:
           pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
           pnpm-${{ runner.os }}-
           pnpm-
-    ## TODO: Remove this once we verify cache hit works as expected and pnpm cache save no longer log warning message
-    - name: Check cache hit
-      run: |
-        echo "-----------------------------------------------------------------"
-        echo "${{ steps.pnpm-restore.outputs.cache-hit }}"
-        echo "-----------------------------------------------------------------"
-      shell: bash
-    - name: Installing dependencies
+    - name: Installing pnpm packages
       if: inputs.install == 'true'
       run: node common/scripts/install-run-rush.js install
       shell: bash
-    - name: Saving pnpm cache
-      if: inputs.install-cache == 'true' && inputs.install == 'true' && steps.pnpm-restore.outputs.cache-hit != 'true'
-      uses: actions/cache/save@v4
-      with:
-        path: |
-          common/temp/pnpm-store
-          common/temp/node_modules
-        key: pnpm-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
 
-    - name: Restoring build cache
-      id: rush-build-restore
+    - name: Caching applications
       if: inputs.build-cache == 'true' && inputs.build == 'true'
-      uses: actions/cache/restore@v4
+      uses: actions/cache@v4
       with:
         path: common/temp/build-cache
-        key: rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}
+        key: rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-${{ github.run_id }}
         restore-keys: |
+          rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}-
           rush-build-${{ runner.os }}-
           rush-build-
-    - name: Building application
+    - name: Building applications
       if: inputs.build == 'true'
       run: node common/scripts/install-run-rush.js build --timeline
       shell: bash
-    - name: Saving build cache
-      if: inputs.build-cache == 'true' && inputs.build == 'true'
-      uses: actions/cache/save@v4
-      with:
-        path: common/temp/build-cache
-        key: rush-build-${{ runner.os }}-${{ steps.nodejs.outputs.node-version }}

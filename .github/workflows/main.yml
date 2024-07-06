@@ -3,10 +3,6 @@ name: Main
 on:
   push:
 
-permissions:
-  # NOTES: Try for workaround here: actions/stale#1090
-  actions: write
-
 defaults:
   run:
     shell: bash

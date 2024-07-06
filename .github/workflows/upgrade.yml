@@ -16,8 +16,6 @@ concurrency:
 permissions:
   # NOTES: Needed for create dependencies upgrade PR
   pull-requests: write
-  # NOTES: Try for workaround here: actions/stale#1090
-  actions: write
 
 env:
   PULL_REQUEST_TITLE: "fix(deps): upgrade dependencies [auto]"
