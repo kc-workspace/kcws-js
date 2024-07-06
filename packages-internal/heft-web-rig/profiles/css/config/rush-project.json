@@ -3,6 +3,10 @@
 
   "operationSettings": [
     {
+      "operationName": "_phase:lint",
+      "outputFolderNames": ["temp/cache"]
+    },
+    {
       "operationName": "_phase:build",
       "outputFolderNames": ["lib-css", "dist"]
     }

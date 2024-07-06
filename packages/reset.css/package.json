@@ -35,7 +35,7 @@
     "lint": "stylelint **/*.scss",
     "build": "heft build",
     "clean": "heft clean",
-    "_phase:lint": "stylelint **/*.scss",
+    "_phase:lint": "stylelint **/*.scss --cache --cache-location temp/cache/",
     "_phase:build": "heft run --only build -- --clean"
   },
   "devDependencies": {
