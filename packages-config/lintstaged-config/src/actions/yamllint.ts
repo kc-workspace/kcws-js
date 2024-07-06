@@ -11,7 +11,12 @@ import { getCommand } from "../utils/cmd";
  * @beta
  */
 export interface IYamllintOptions extends IBaseActionOptions {
+  /** yamllint config file; recommend to use absolute path */
   config?: string;
+  /**
+   * enabled yamllint strict mode;
+   * Strict means return non-zero code when warning occur
+   */
   strict?: boolean;
 }
 

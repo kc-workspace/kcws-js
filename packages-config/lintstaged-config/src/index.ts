@@ -53,7 +53,11 @@ export * from "./actions";
 
 export { Config } from "./models/Config";
 
-export type { DefaultKey } from "./constants/default";
+export type {
+  DefaultKey,
+  CustomDefaultConfig,
+  OnlyAppOptions,
+} from "./constants/default";
 export type { Builder } from "./models/Config";
 
 export type { _WalkCallback } from "./actions/rush";

@@ -13,7 +13,7 @@ export class Builder<K extends string> implements IConfigBuilder {
     append<EK extends string>(key: EK, value: Partial<Exclude<IConfigValue, "actionFn">>): Builder<K | EK>;
     build(): Config<K>;
     debugMode(): this;
-    // Warning: (ae-forgotten-export) The symbol "CustomDefaultConfig" needs to be exported by the entry point index.d.ts
+    // Warning: (ae-incompatible-release-tags) The symbol "default" is marked as @public, but its signature references "CustomDefaultConfig" which is marked as @beta
     default(custom?: CustomDefaultConfig): Builder<K | DefaultKey>;
     delete<EK extends K>(key: EK): Builder<Exclude<K, EK>>;
     set<EK extends string>(key: EK, value: Partial<IConfigValue>): Builder<K | EK>;
@@ -43,6 +43,15 @@ regex: Array<string>) => Array<string>;
 
 // @public
 export type ConfigFn = (filenames: Array<string>) => CommandType;
+
+// @beta
+export interface CustomDefaultConfig {
+    eslint?: OnlyAppOptions<IEslintOptions> | false;
+    jsonPrettier?: OnlyAppOptions<IPrettierOptions> | false;
+    jstsPrettier?: OnlyAppOptions<IPrettierOptions> | false;
+    shellcheck?: OnlyAppOptions<IShellcheckOptions> | false;
+    yamllint?: OnlyAppOptions<IYamllintOptions> | false;
+}
 
 // @beta
 export const DEFAULT_YAMLLINT_CONFIGS: string[];
@@ -102,11 +111,12 @@ export interface IShellcheckOptions extends IBaseActionOptions {
 
 // @beta
 export interface IYamllintOptions extends IBaseActionOptions {
-    // (undocumented)
     config?: string;
-    // (undocumented)
     strict?: boolean;
 }
+
+// @beta
+export type OnlyAppOptions<T> = Pick<T, Exclude<keyof T, keyof IBaseActionOptions>>;
 
 // @beta
 export const prettier: BaseActionFn<IPrettierOptions>;

@@ -19,12 +19,29 @@ import {
  */
 export type DefaultKey = "jsts" | "json" | "sh" | "yaml";
 
-type OnlyAppOptions<T> = Pick<T, Exclude<keyof T, keyof IBaseActionOptions>>;
+/**
+ * A helper type for select only application options without base action.
+ * @beta
+ */
+export type OnlyAppOptions<T> = Pick<
+  T,
+  Exclude<keyof T, keyof IBaseActionOptions>
+>;
+
+/**
+ * Custom type for default configuration builder
+ * @beta
+ */
 export interface CustomDefaultConfig {
+  /** custom config for jsts eslint */
   eslint?: OnlyAppOptions<IEslintOptions> | false;
+  /** custom config for jsts prettier */
   jstsPrettier?: OnlyAppOptions<IPrettierOptions> | false;
+  /** custom config for json prettier */
   jsonPrettier?: OnlyAppOptions<IPrettierOptions> | false;
+  /** custom config for shellcheck */
   shellcheck?: OnlyAppOptions<IShellcheckOptions> | false;
+  /** custom config for yamllint */
   yamllint?: OnlyAppOptions<IYamllintOptions> | false;
 }
 
