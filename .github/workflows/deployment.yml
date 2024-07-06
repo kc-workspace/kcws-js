@@ -11,8 +11,11 @@ defaults:
 
 permissions:
   contents: read
+  # NOTES: For deploy GitHub Pages (deploy the pages)
   pages: write
+  # NOTES: For deploy GitHub Pages (verify the deployment source)
   id-token: write
+  # NOTES: Try for workaround here: actions/stale#1090
   actions: write
 
 concurrency:

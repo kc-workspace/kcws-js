@@ -14,7 +14,9 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
+  # NOTES: Needed for create dependencies upgrade PR
   pull-requests: write
+  # NOTES: Try for workaround here: actions/stale#1090
   actions: write
 
 env:
