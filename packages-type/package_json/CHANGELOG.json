@@ -2,6 +2,21 @@
   "name": "@kctypes/package_json",
   "entries": [
     {
+      "version": "1.18.4",
+      "tag": "@kctypes/package_json_v1.18.4",
+      "date": "Sun, 07 Jul 2024 09:30:34 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.24.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.0.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.18.3",
       "tag": "@kctypes/package_json_v1.18.3",
       "date": "Thu, 04 Jul 2024 03:44:32 GMT",

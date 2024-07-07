@@ -2,6 +2,25 @@
   "name": "@kcws/eslint-config",
   "entries": [
     {
+      "version": "1.24.0",
+      "tag": "@kcws/eslint-config_v1.24.0",
+      "date": "Sun, 07 Jul 2024 09:30:34 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "085bfc27ff661535aa61a30476b23b116d5b39c1"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.23.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.23.3",
       "tag": "@kcws/eslint-config_v1.23.3",
       "date": "Thu, 04 Jul 2024 03:44:32 GMT",

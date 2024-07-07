@@ -1,6 +1,24 @@
 # Change Log - @kcws/lintstaged-config
 
-This log was last generated on Thu, 04 Jul 2024 03:44:32 GMT and should not be manually modified.
+This log was last generated on Sun, 07 Jul 2024 09:30:34 GMT and should not be manually modified.
+
+## 1.0.0
+Sun, 07 Jul 2024 09:30:34 GMT
+
+### Breaking changes
+
+- Update ConfigCondition type to receive action key as first argument instead of regex
+
+### Minor changes
+
+- yamllint will check default config in multiple places before give up
+- Support customize default config without overrides whole function
+- upgrade dependencies [auto]
+
+### Patches
+
+- Fix missing default config file should fallback to builtin config on yamllint
+- Improve apidocs on some functions
 
 ## 0.44.3
 Thu, 04 Jul 2024 03:44:32 GMT

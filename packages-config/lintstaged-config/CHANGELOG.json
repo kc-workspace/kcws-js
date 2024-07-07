@@ -2,6 +2,57 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "1.0.0",
+      "tag": "@kcws/lintstaged-config_v1.0.0",
+      "date": "Sun, 07 Jul 2024 09:30:34 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix missing default config file should fallback to builtin config on yamllint",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "dfc57261f130ae0bf122f5dc5f5aaa9fbd91b7f6"
+          },
+          {
+            "comment": "Improve apidocs on some functions",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "f0ef270ca5991b7fcdc45042a492eaf214df6afe"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "yamllint will check default config in multiple places before give up",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "05074db822b9e3f6487af4482a84d07655848d85"
+          },
+          {
+            "comment": "Support customize default config without overrides whole function",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "ab61f5313dce35fea2e529a410d3d6c656575251"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "085bfc27ff661535aa61a30476b23b116d5b39c1"
+          }
+        ],
+        "major": [
+          {
+            "comment": "Update ConfigCondition type to receive action key as first argument instead of regex",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "9d1a5e8e7b5a545997d5aea754f19adda674e95a"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.23.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.24.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.44.3",
       "tag": "@kcws/lintstaged-config_v0.44.3",
       "date": "Thu, 04 Jul 2024 03:44:32 GMT",

@@ -1,6 +1,6 @@
 {
   "name": "@kctypes/package_json",
-  "version": "1.18.3",
+  "version": "1.18.4",
   "description": "typescript definitions for package.json file",
   "main": "types/index.d.ts",
   "types": "types/index.d.ts",
