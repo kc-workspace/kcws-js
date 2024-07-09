@@ -2,6 +2,42 @@
   "name": "@kcws/heft-node-rig",
   "entries": [
     {
+      "version": "0.33.0",
+      "tag": "@kcws/heft-node-rig_v0.33.0",
+      "date": "Tue, 09 Jul 2024 22:38:22 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "github-actions profile will copy package.json to target",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "6f30cf5741734cab5e548cf4a4a7b82b1d08fa84"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2bab0ce8a6dfba073eea032c17db7d91023333fb"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2f25097e192b16f829a4b1667bafc9a9cf827c76"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "github-actions profile will ignore root files for calculate code coverage",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "5450e4bd2140ff3602b92fa8904b7209ed69c6d7"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-esbuild-plugin\" to `0.14.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.17.2",
       "tag": "@kcws/heft-node-rig_v0.17.2",
       "date": "Wed, 12 Jun 2024 08:33:27 GMT",

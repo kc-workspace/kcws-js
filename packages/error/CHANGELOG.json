@@ -2,6 +2,24 @@
   "name": "@kcws/error",
   "entries": [
     {
+      "version": "0.16.5",
+      "tag": "@kcws/error_v0.16.5",
+      "date": "Tue, 09 Jul 2024 22:38:22 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.24.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.0.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.24.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.16.4",
       "tag": "@kcws/error_v0.16.4",
       "date": "Sun, 07 Jul 2024 09:30:34 GMT",

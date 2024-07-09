@@ -1,6 +1,19 @@
 # Change Log - @kcws/heft-node-rig
 
-This log was last generated on Wed, 12 Jun 2024 08:33:27 GMT and should not be manually modified.
+This log was last generated on Tue, 09 Jul 2024 22:38:22 GMT and should not be manually modified.
+
+## 0.33.0
+Tue, 09 Jul 2024 22:38:22 GMT
+
+### Minor changes
+
+- github-actions profile will copy package.json to target
+- upgrade dependencies [auto]
+- upgrade dependencies [auto]
+
+### Patches
+
+- github-actions profile will ignore root files for calculate code coverage
 
 ## 0.17.2
 Wed, 12 Jun 2024 08:33:27 GMT

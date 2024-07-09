@@ -1,6 +1,11 @@
 # Change Log - @kcinternals/heft-esbuild-plugin
 
-This log was last generated on Sun, 07 Jul 2024 09:30:34 GMT and should not be manually modified.
+This log was last generated on Tue, 09 Jul 2024 22:38:22 GMT and should not be manually modified.
+
+## 0.14.1
+Tue, 09 Jul 2024 22:38:22 GMT
+
+_Version update only_
 
 ## 0.14.0
 Sun, 07 Jul 2024 09:30:34 GMT
