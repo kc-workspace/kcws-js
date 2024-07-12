@@ -1,6 +1,13 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Tue, 09 Jul 2024 22:38:22 GMT and should not be manually modified.
+This log was last generated on Fri, 12 Jul 2024 09:26:55 GMT and should not be manually modified.
+
+## 0.11.6
+Fri, 12 Jul 2024 09:26:55 GMT
+
+### Patches
+
+- Fix input field in runner data should be required and remove error field
 
 ## 0.11.5
 Tue, 09 Jul 2024 22:38:22 GMT
