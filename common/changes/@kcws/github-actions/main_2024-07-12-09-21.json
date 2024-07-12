@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/github-actions",
+      "comment": "Fix input field in runner data should be required and remove error field",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/github-actions"
+}
