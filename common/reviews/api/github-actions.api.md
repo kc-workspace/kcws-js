@@ -416,10 +416,7 @@ export type Runner<C extends BaseContext, I> = (data: RunnerData<I>, context: C)
 
 // @public
 export interface RunnerData<I> {
-    // (undocumented)
-    error?: Error;
-    // (undocumented)
-    input?: I;
+    input: I;
 }
 
 // @public

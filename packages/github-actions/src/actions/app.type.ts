@@ -6,8 +6,8 @@ import type { BaseContext } from "../contexts";
  * @public
  */
 export interface RunnerData<I> {
-  input?: I;
-  error?: Error;
+  /** Input data from action user */
+  input: I;
 }
 
 /**
