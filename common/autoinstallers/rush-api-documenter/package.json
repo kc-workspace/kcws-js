@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@microsoft/api-documenter": "7.25.4",
-    "typedoc": "0.26.3",
+    "typedoc": "0.26.4",
     "typedoc-plugin-missing-exports": "3.0.0",
     "typedoc-plugin-extras": "3.1.0",
     "typedoc-theme-hierarchy": "5.0.3"
