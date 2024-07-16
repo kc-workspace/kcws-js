@@ -2,6 +2,21 @@
   "name": "@kcws/error",
   "entries": [
     {
+      "version": "0.16.7",
+      "tag": "@kcws/error_v0.16.7",
+      "date": "Tue, 16 Jul 2024 22:38:39 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.0.3`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.25.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.16.6",
       "tag": "@kcws/error_v0.16.6",
       "date": "Fri, 12 Jul 2024 09:26:55 GMT",

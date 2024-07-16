@@ -2,6 +2,18 @@
   "name": "@kcws/heft-web-rig",
   "entries": [
     {
+      "version": "0.25.1",
+      "tag": "@kcws/heft-web-rig_v0.25.1",
+      "date": "Tue, 16 Jul 2024 22:38:39 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-esbuild-plugin\" to `0.14.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.17.2",
       "tag": "@kcws/heft-web-rig_v0.17.2",
       "date": "Wed, 12 Jun 2024 08:33:27 GMT",

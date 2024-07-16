@@ -2,6 +2,20 @@
   "name": "@kcws/eslint-config",
   "entries": [
     {
+      "version": "1.25.0",
+      "tag": "@kcws/eslint-config_v1.25.0",
+      "date": "Tue, 16 Jul 2024 22:38:39 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "11594621812c482b9ed69c8510abb6affcc5a0ac"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.24.2",
       "tag": "@kcws/eslint-config_v1.24.2",
       "date": "Fri, 12 Jul 2024 09:26:55 GMT",

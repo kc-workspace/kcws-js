@@ -2,6 +2,18 @@
   "name": "@kcws/heft-node-rig",
   "entries": [
     {
+      "version": "0.33.2",
+      "tag": "@kcws/heft-node-rig_v0.33.2",
+      "date": "Tue, 16 Jul 2024 22:38:39 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-esbuild-plugin\" to `0.14.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.33.1",
       "tag": "@kcws/heft-node-rig_v0.33.1",
       "date": "Fri, 12 Jul 2024 09:26:55 GMT",
