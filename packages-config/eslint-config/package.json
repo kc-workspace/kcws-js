@@ -37,7 +37,7 @@
     "_phase:build": "heft run --only build -- --clean"
   },
   "dependencies": {
-    "@definitelytyped/eslint-plugin": "0.1.17",
+    "@definitelytyped/eslint-plugin": "0.1.18",
     "@rushstack/eslint-patch": "1.10.3",
     "@rushstack/eslint-plugin": "0.15.1",
     "@rushstack/eslint-plugin-security": "0.8.1",
@@ -50,14 +50,14 @@
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-jest": "28.6.0",
     "eslint-plugin-n": "17.9.0",
-    "eslint-plugin-promise": "6.4.0",
-    "eslint-plugin-react": "7.34.4",
+    "eslint-plugin-promise": "6.5.1",
+    "eslint-plugin-react": "7.35.0",
     "eslint-plugin-tsdoc": "0.3.0",
     "eslint-plugin-unicorn": "54.0.0"
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
-    "@rushstack/heft": "0.66.19",
+    "@rushstack/heft": "0.66.22",
     "@types/eslint": "8.56.10"
   },
   "peerDependencies": {
