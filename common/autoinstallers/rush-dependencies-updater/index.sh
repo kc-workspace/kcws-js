@@ -24,11 +24,6 @@ Please run 'rush %s %s' before execute this script." \
   exit 1
 fi
 
-verbose=""
-if test -n "$CI"; then
-  verbose="--verbose"
-fi
-
 pkg="package.json"
 config="$autoinstallers/.ncurc.json"
 tmp="$(mktemp)"
@@ -44,7 +39,6 @@ while IFS= read -r pjson <&3; do
     --packageFile "$pjson" \
     --configFilePath "$root" \
     --configFileName "$config" \
-    "$verbose" \
     "$@"
 done 3<"$tmp"
 
