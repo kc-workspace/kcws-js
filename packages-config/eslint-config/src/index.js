@@ -1,8 +1,5 @@
-// require("./common/config")
-
-const { whatIf } = require("./utils/condition");
 const { mergeConfig, defineConfig, mergeExtends } = require("./utils/config");
-const { defineFlatConfig } = require("./utils/flat-config");
+const { whatIf } = require("./utils/condition");
 const { resolveMixin, resolveProfile } = require("./utils/resolver");
 
 /**
@@ -29,7 +26,7 @@ function createRules(data) {
 
 /**
  * @param {import('./types').Data & (import('./types').CustomEslintConfig | import('./types').CustomEslintFlatConfig)} data - a config data
- * @returns {import('./types').EslintConfig | import('./types').EslintFlatConfig | undefined} a eslint config
+ * @returns {import('./types').EslintConfig | import('./types').EslintFlatConfig | import('./types').EslintFlatConfig[] | undefined} a eslint config
  */
 function createConfig(data) {
   if (!data.config) data.config = "legacy";
@@ -76,9 +73,31 @@ function createConfig(data) {
 
   if (data.config === "flat") {
     // TODO: Implement eslint flat config builder
-    return defineFlatConfig({
-      name: "hello world",
-    });
+    // const base = defineFlatConfig({
+    //   name: "hello world",
+    //   languageOptions: {
+    //     ecmaVersion: data.ecma ?? "latest",
+    //     parserOptions: {
+    //       tsconfigRootDir: data.cwd,
+    //       ecmaVersion: data.ecma ?? "latest",
+    //     },
+    //   },
+    //   ignores: [
+    //     ".eslintrc.cjs",
+    //     "dist/**",
+    //     "temp/**",
+    //     "lib/**",
+    //     "lib-*/**",
+    //     ".rush/**",
+    //     "coverage/**",
+    //   ],
+    // });
+
+    throw new Error(
+      "Flag config is not support yet! " +
+        "waiting @typescript-eslint to support"
+    );
+    // return mergeFlagConfig(base, data.custom);
   }
 }
 

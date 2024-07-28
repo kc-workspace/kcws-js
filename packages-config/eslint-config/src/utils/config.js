@@ -20,8 +20,8 @@ const { flatObject, isEmpty, toArray } = require("./helpers");
 /**
  * Return input config with autocomplete
  *
- * @param {import('eslint').Linter.Config} config - A return config
- * @returns {import('eslint').Linter.Config} a input config
+ * @param {import('../types').EslintConfig} config - A return config
+ * @returns {import('../types').EslintConfig} a input config
  */
 function defineConfig(config) {
   return config;
@@ -127,13 +127,13 @@ function mergeIgnorePatterns(...ignorePatterns) {
 }
 
 /**
- * Merge 2 inputs config to single config
+ * Merge multiple inputs config to single config
  *
- * @param {...Optional<import('eslint').Linter.Config>} configs - a config
- * @returns {import('eslint').Linter.Config} a merged config
+ * @param {...Optional<import('../types').EslintConfig>} configs - a config
+ * @returns {import('../types').EslintConfig} a merged config
  */
 function mergeConfig(...configs) {
-  /** @type {import('eslint').Linter.Config} */
+  /** @type {import('../types').EslintConfig} */
   const config = {};
 
   const root = mergeRoot(...configs.map(c => c?.root));
