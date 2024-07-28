@@ -52,6 +52,7 @@
     // https://github.com/microsoft/rushstack/issues/4635
     // https://github.com/microsoft/rushstack/tree/main/heft-plugins/heft-lint-plugin
     // https://github.com/microsoft/rushstack/tree/main/eslint/eslint-patch
-    "eslint"
+    "eslint",
+    "@types/eslint"
   ]
 }
