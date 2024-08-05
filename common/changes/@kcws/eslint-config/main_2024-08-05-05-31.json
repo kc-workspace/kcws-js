@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "Throw error when user enabled flat config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}
