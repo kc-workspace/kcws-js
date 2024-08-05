@@ -31,12 +31,12 @@
     "_phase:build": ""
   },
   "dependencies": {
-    "@microsoft/api-extractor": "7.47.2",
+    "@microsoft/api-extractor": "7.47.5",
     "@kcinternals/heft-esbuild-plugin": "workspace:*",
-    "@rushstack/heft-api-extractor-plugin": "0.3.42",
-    "@rushstack/heft-jest-plugin": "0.12.4",
-    "@rushstack/heft-lint-plugin": "0.3.43",
-    "@rushstack/heft-typescript-plugin": "0.5.20",
+    "@rushstack/heft-api-extractor-plugin": "0.3.45",
+    "@rushstack/heft-jest-plugin": "0.12.7",
+    "@rushstack/heft-lint-plugin": "0.3.46",
+    "@rushstack/heft-typescript-plugin": "0.5.23",
     "@types/heft-jest": "1.0.6",
     "@types/node": "18.19.3",
     "eslint": "8.57.0",
@@ -46,7 +46,7 @@
     "typescript": "5.3.3"
   },
   "devDependencies": {
-    "@rushstack/heft": "0.66.22"
+    "@rushstack/heft": "0.66.25"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.63.5"
