@@ -25,7 +25,15 @@ function mergeFlagConfig(...configs) {
   /** @type {import('../types').EslintFlatConfig} */
   const config = {};
 
-  return [config, ...configs.filter(c => c !== undefined)];
+  /** @type {import('../types').EslintFlatConfig[]} */
+  const output = [config];
+
+  for (const input of configs) {
+    if (input !== undefined) {
+      output.push(input);
+    }
+  }
+  return output;
 }
 
 module.exports = { defineFlatConfig, mergeFlagConfig };
