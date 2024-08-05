@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "Fix type error on flat-config merger",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}
