@@ -2,6 +2,28 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "1.2.0",
+      "tag": "@kcws/lintstaged-config_v1.2.0",
+      "date": "Tue, 06 Aug 2024 22:38:53 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "3b477e913d26b0bd579bb024f451268bc5c28575"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.28.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.27.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.1.1",
       "tag": "@kcws/lintstaged-config_v1.1.1",
       "date": "Tue, 30 Jul 2024 22:37:16 GMT",

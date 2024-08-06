@@ -1,6 +1,13 @@
 # Change Log - @kcws/random
 
-This log was last generated on Tue, 30 Jul 2024 22:37:16 GMT and should not be manually modified.
+This log was last generated on Tue, 06 Aug 2024 22:38:53 GMT and should not be manually modified.
+
+## 0.47.0
+Tue, 06 Aug 2024 22:38:53 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.46.1
 Tue, 30 Jul 2024 22:37:16 GMT

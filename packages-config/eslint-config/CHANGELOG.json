@@ -2,6 +2,37 @@
   "name": "@kcws/eslint-config",
   "entries": [
     {
+      "version": "1.27.0",
+      "tag": "@kcws/eslint-config_v1.27.0",
+      "date": "Tue, 06 Aug 2024 22:38:53 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Throw error when user enabled flat config",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "8c50d5afd5864ff8b35484a123052b2fc9a5b30e"
+          },
+          {
+            "comment": "Fix type error on flat-config merger",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "b1c1fefa0c2ca6c4f2fac3b8b8bd160e12721e2c"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "3b477e913d26b0bd579bb024f451268bc5c28575"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.28.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.26.1",
       "tag": "@kcws/eslint-config_v1.26.1",
       "date": "Tue, 30 Jul 2024 22:37:16 GMT",
