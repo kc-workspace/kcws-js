@@ -46,15 +46,15 @@
     "_phase:test": "heft run --only test -- --clean"
   },
   "dependencies": {
-    "decap-server": "3.0.4"
+    "decap-server": "3.1.0"
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.66.25",
-    "@astrojs/check": "0.9.1",
-    "astro": "4.13.1"
+    "@astrojs/check": "0.9.2",
+    "astro": "4.13.3"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.65.5",
