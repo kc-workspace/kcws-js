@@ -2,6 +2,21 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.13.1",
+      "tag": "@kcws/github-actions_v0.13.1",
+      "date": "Tue, 13 Aug 2024 22:38:38 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.2.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.28.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.13.0",
       "tag": "@kcws/github-actions_v0.13.0",
       "date": "Tue, 06 Aug 2024 22:38:53 GMT",
