@@ -1,6 +1,6 @@
 {
   "name": "@kcws/eslint-config",
-  "version": "1.27.0",
+  "version": "1.28.0",
   "description": "kamontat's eslint configuration",
   "main": "src/index.js",
   "types": "lib/index.d.ts",
@@ -48,9 +48,9 @@
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-deprecation": "3.0.0",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-jest": "28.7.0",
+    "eslint-plugin-jest": "28.8.0",
     "eslint-plugin-n": "17.10.2",
-    "eslint-plugin-promise": "7.0.0",
+    "eslint-plugin-promise": "7.1.0",
     "eslint-plugin-react": "7.35.0",
     "eslint-plugin-tsdoc": "0.3.0",
     "eslint-plugin-unicorn": "55.0.0"

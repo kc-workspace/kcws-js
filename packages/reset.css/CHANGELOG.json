@@ -2,6 +2,18 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "1.25.1",
+      "tag": "@kcws/reset.css_v1.25.1",
+      "date": "Tue, 13 Aug 2024 22:38:38 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.2.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.25.0",
       "tag": "@kcws/reset.css_v1.25.0",
       "date": "Tue, 06 Aug 2024 22:38:53 GMT",
