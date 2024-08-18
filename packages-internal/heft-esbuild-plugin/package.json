@@ -43,14 +43,14 @@
     "_phase:test": "heft run --only test -- --clean"
   },
   "dependencies": {
-    "esbuild": "0.23.0"
+    "esbuild": "0.23.1"
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.66.25",
-    "@rushstack/terminal": "0.13.3",
+    "@rushstack/heft": "0.66.26",
+    "@rushstack/terminal": "0.13.4",
     "@types/tapable": "1.0.6",
     "tapable": "1.1.3"
   },

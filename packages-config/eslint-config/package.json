@@ -39,7 +39,7 @@
   "dependencies": {
     "@definitelytyped/eslint-plugin": "0.1.18",
     "@rushstack/eslint-patch": "1.10.4",
-    "@rushstack/eslint-plugin": "0.15.2",
+    "@rushstack/eslint-plugin": "0.16.0",
     "@rushstack/eslint-plugin-security": "0.8.2",
     "@typescript-eslint/eslint-plugin": "7.14.1",
     "@typescript-eslint/parser": "7.14.1",
@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
-    "@rushstack/heft": "0.66.25",
+    "@rushstack/heft": "0.66.26",
     "@types/eslint": "8.56.10"
   },
   "peerDependencies": {
