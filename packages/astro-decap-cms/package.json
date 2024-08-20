@@ -1,6 +1,6 @@
 {
   "name": "@kcws/astro-decap-cms",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "add decap cms to astro repository",
   "main": "lib/index.js",
   "module": "lib-esnext/index.js",
