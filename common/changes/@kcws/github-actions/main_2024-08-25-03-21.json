@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "upgrade dependencies [auto]",
+      "type": "minor",
+      "packageName": "@kcws/github-actions"
+    }
+  ],
+  "packageName": "@kcws/github-actions",
+  "email": "97302203+kc-bot@users.noreply.github.com"
+}
