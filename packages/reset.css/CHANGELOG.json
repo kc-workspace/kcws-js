@@ -2,6 +2,28 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "1.27.0",
+      "tag": "@kcws/reset.css_v1.27.0",
+      "date": "Tue, 27 Aug 2024 22:41:00 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "333077006772f770ab61f6cafc61d9ff0fb6ed1b"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.30.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.4.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.26.0",
       "tag": "@kcws/reset.css_v1.26.0",
       "date": "Tue, 20 Aug 2024 22:38:16 GMT",
