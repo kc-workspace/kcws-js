@@ -42,7 +42,7 @@
     "@kcinternals/heft-web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@rushstack/heft": "0.67.0",
-    "stylelint": "16.8.2",
+    "stylelint": "16.9.0",
     "stylelint-config-standard-scss": "13.1.0"
   },
   "engines": {

@@ -35,7 +35,7 @@
     "@rushstack/heft-api-extractor-plugin": "0.3.47",
     "@rushstack/heft-jest-plugin": "0.12.9",
     "@rushstack/heft-lint-plugin": "0.4.1",
-    "@rushstack/heft-sass-plugin": "0.14.17",
+    "@rushstack/heft-sass-plugin": "0.14.18",
     "@rushstack/heft-typescript-plugin": "0.5.25",
     "@types/heft-jest": "1.0.6",
     "eslint": "8.57.0",
