@@ -68,6 +68,9 @@ jobs:
           run-tests: true
   lintcheck:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      statuses: write
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
@@ -75,31 +78,35 @@ jobs:
           fetch-depth: 0
       - name: Linting
         ## https://github.com/super-linter/super-linter#slim-image
-        uses: super-linter/super-linter/slim@v5
+        uses: super-linter/super-linter/slim@v7
         env:
           DEFAULT_BRANCH: ${{ env.DEFAULT_BRANCH }}
-          VALIDATE_ALL_CODEBASE: false
-          IGNORE_GITIGNORED_FILES: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          YAML_CONFIG_FILE: .yamllint.yml
-          YAML_ERROR_ON_WARNING: true
-          # Disabled javascript/typescript as we have lint on rushjs
-          VALIDATE_JAVASCRIPT_ES: false
-          VALIDATE_JAVASCRIPT_STANDARD: false
-          VALIDATE_JSX: false
-          VALIDATE_TYPESCRIPT_ES: false
-          VALIDATE_TYPESCRIPT_STANDARD: false
-          VALIDATE_TSX: false
-          # Disabled json validation as issue #30
-          VALIDATE_JSON: false
-          # The overrided config cannot resolve to correct path
-          # so we disabled it for now.
-          # For now, we only have single project using css linter
-          # so we will run it manually on local.
-          VALIDATE_CSS: false
+          IGNORE_GITIGNORED_FILES: true
+          IGNORE_GENERATED_FILES: true
           # For markdownlint, as it cannot exclude file from config file
           # exclude reviews file because it autogen file
           FILTER_REGEX_EXCLUDE: common/reviews/api/*
+
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_CHECKOV: true
+          VALIDATE_EDITORCONFIG: true
+          VALIDATE_ENV: true
+          VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_GITLEAKS: true
+          VALIDATE_JSCPD: true
+          VALIDATE_NATURAL_LANGUAGE: true
+          VALIDATE_BASH: true
+          VALIDATE_BASH_EXEC: true
+          VALIDATE_SHELL_SHFMT: true
+          VALIDATE_XML: true
+          VALIDATE_JSON_PRETTIER: true
+          VALIDATE_JSONC: true
+          VALIDATE_MARKDOWN_PRETTIER: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_YAML: true
+          YAML_CONFIG_FILE: .yamllint.yml
+          YAML_ERROR_ON_WARNING: true
 
   testing:
     runs-on: ubuntu-latest
@@ -120,7 +127,7 @@ jobs:
         with:
           command: test
       - name: Analysis packages
-        uses: SonarSource/sonarcloud-github-action@v2.1.1
+        uses: SonarSource/sonarcloud-github-action@v3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

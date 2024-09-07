@@ -2,10 +2,10 @@
 
 ## Required features
 
-- typescript / javascript
+- TypeScript / JavaScript
 - lint-staged && husky (git-hooks)
 - linters
-  - eslint
+  - ESLint
   - prettier
   - commitlint && commitizen
 - test framework (select one)
@@ -19,5 +19,5 @@
 - package generator
 - release
   - conventional commits
-  - indenpendent versions
+  - independent versions
   - support release by GitHub Actions
