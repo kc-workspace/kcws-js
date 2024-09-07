@@ -101,7 +101,9 @@
     ]
   },
   "settings": {
-    "eslint.packageManager": "pnpm",
+    "files.associations": {
+      "*.json": "jsonc"
+    },
     "npm.packageManager": "pnpm"
   }
 }

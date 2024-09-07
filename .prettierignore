@@ -113,9 +113,6 @@ shrinkwrap.json
 dist
 lib
 
-# Prettier reformats code blocks inside Markdown, which affects rendered output
-*.md
-
 # Prettier reformats comments in json file which is not desired
 tsconfig.json
 tsconfig.*.json
