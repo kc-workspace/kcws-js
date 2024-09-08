@@ -8,6 +8,10 @@ on:
   schedule:
     - cron: "00 08 * * 2" # https://crontab.guru/#00_08_*_*_2
 
+permissions:
+  contents: read
+  statuses: write
+
 jobs:
   analyze:
     runs-on: "ubuntu-latest"
