@@ -54,7 +54,7 @@
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.67.0",
     "@astrojs/check": "0.9.3",
-    "astro": "4.15.1"
+    "astro": "4.15.4"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.65.5",
