@@ -167,11 +167,15 @@
       "allowedCategories": [ "configs" ]
     },
     {
-      "name": "eslint-plugin-import",
+      "name": "eslint-plugin-import-x",
       "allowedCategories": [ "configs" ]
     },
     {
       "name": "eslint-plugin-jest",
+      "allowedCategories": [ "configs" ]
+    },
+    {
+      "name": "eslint-plugin-jsdoc",
       "allowedCategories": [ "configs" ]
     },
     {

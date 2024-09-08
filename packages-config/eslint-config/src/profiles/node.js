@@ -8,7 +8,7 @@ module.exports = mergeConfig(common, {
     node: true,
   },
   rules: {
-    // Already supported on eslint-plugin-import
+    // Already supported on eslint-plugin-import-x
     "n/no-missing-import": "off",
     "n/no-unpublished-import": ["error", { ignoreTypeImport: true }],
   },

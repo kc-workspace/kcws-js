@@ -11,22 +11,16 @@ module.exports = defineConfig({
     {
       files: typescripts,
       excludedFiles: dts,
-      plugins: [
-        "@typescript-eslint/eslint-plugin",
-        "eslint-plugin-deprecation",
-      ],
-      extends: [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:eslint-plugin-deprecation/recommended",
-      ],
+      plugins: ["@typescript-eslint/eslint-plugin"],
+      extends: ["plugin:@typescript-eslint/recommended"],
       rules: {
         // Disable this when using with typescript
         // ref: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-syntax.md
         "n/no-unsupported-features/es-syntax": "off",
 
         // TypeScript compilation already ensures that named imports exist in the referenced module
-        "import/named": "off",
-
+        "import-x/named": "off",
+        "import-x/no-deprecated": "warn",
         "@typescript-eslint/no-unused-vars": [
           "error",
           {
@@ -40,12 +34,12 @@ module.exports = defineConfig({
         ],
       },
       settings: {
-        "import/extensions": lang(typescripts, javascripts),
-        "import/external-module-folders": [
+        "import-x/extensions": lang(typescripts, javascripts),
+        "import-x/external-module-folders": [
           "node_modules",
           "node_modules/@types",
         ],
-        "import/resolver": {
+        "import-x/resolver": {
           [require.resolve("eslint-import-resolver-typescript")]: true,
           [require.resolve("eslint-import-resolver-node")]: true,
         },
@@ -53,10 +47,10 @@ module.exports = defineConfig({
     },
     {
       files: javascripts,
-      extends: [
-        "plugin:@typescript-eslint/base",
-        "plugin:eslint-plugin-deprecation/recommended",
-      ],
+      extends: ["plugin:@typescript-eslint/base"],
+      rules: {
+        "import-x/no-deprecated": "warn",
+      },
     },
   ],
 });

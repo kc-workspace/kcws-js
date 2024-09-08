@@ -18,7 +18,7 @@ module.exports = defineConfig({
         // Disable null on test because sometimes we will testing on null value
         "unicorn/no-null": "off",
         // This is when using jest.mock must come before import statement
-        "import/first": "off",
+        "import-x/first": "off",
       },
       settings: {
         jest: {

@@ -4,12 +4,12 @@ module.exports = defineConfig({
   plugins: mergePlugins(
     "@rushstack/eslint-plugin-security",
     "eslint-plugin-unicorn",
-    "eslint-plugin-import",
+    "eslint-plugin-import-x",
     "eslint-plugin-promise"
   ),
   extends: [
     "plugin:eslint-plugin-unicorn/recommended",
-    "plugin:import/recommended",
+    "plugin:import-x/recommended",
     "plugin:promise/recommended",
   ],
   rules: {
@@ -157,17 +157,16 @@ module.exports = defineConfig({
         allowList: {},
       },
     ],
-    // Already use deprecation/deprecation rules
-    "import/no-deprecated": "off",
-    "import/first": "error",
+    "import-x/no-deprecated": "warn",
+    "import-x/first": "error",
     // NOTES: Expensive rules with comparatively computationally
-    "import/no-cycle": ["error", { ignoreExternal: true }],
-    "import/no-absolute-path": "error",
-    "import/no-self-import": "error",
-    "import/newline-after-import": "warn",
-    "import/no-empty-named-blocks": "warn",
-    "import/no-namespace": "warn",
-    "import/order": [
+    "import-x/no-cycle": ["error", { ignoreExternal: true }],
+    "import-x/no-absolute-path": "error",
+    "import-x/no-self-import": "error",
+    "import-x/newline-after-import": "warn",
+    "import-x/no-empty-named-blocks": "warn",
+    "import-x/no-namespace": "warn",
+    "import-x/order": [
       "warn",
       {
         "newlines-between": "always",
