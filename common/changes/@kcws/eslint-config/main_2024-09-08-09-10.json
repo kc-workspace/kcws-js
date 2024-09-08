@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@kcws/eslint-config",
+      "comment": "Prepare for ESLint 9",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@kcws/eslint-config"
+}
