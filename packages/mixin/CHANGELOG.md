@@ -1,6 +1,11 @@
 # Change Log - @kcws/mixin
 
-This log was last generated on Tue, 03 Sep 2024 22:40:49 GMT and should not be manually modified.
+This log was last generated on Tue, 10 Sep 2024 22:40:02 GMT and should not be manually modified.
+
+## 0.46.2
+Tue, 10 Sep 2024 22:40:02 GMT
+
+_Version update only_
 
 ## 0.46.1
 Tue, 03 Sep 2024 22:40:49 GMT

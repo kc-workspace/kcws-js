@@ -2,6 +2,28 @@
   "name": "@kctypes/package_json",
   "entries": [
     {
+      "version": "1.23.0",
+      "tag": "@kctypes/package_json_v1.23.0",
+      "date": "Tue, 10 Sep 2024 22:40:02 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "d49a69913041bcf287bb50c791407e0d99baaced"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.32.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.4.2`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.22.1",
       "tag": "@kctypes/package_json_v1.22.1",
       "date": "Tue, 03 Sep 2024 22:40:49 GMT",
