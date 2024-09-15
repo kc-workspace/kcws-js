@@ -46,7 +46,7 @@
     "@kcinternals/heft-web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.67.0"
+    "@rushstack/heft": "0.67.2"
   },
   "engines": {
     "node": ">=12"
