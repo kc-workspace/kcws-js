@@ -1,6 +1,13 @@
 # Change Log - @kcws/astro-decap-cms
 
-This log was last generated on Tue, 10 Sep 2024 22:40:02 GMT and should not be manually modified.
+This log was last generated on Tue, 17 Sep 2024 22:39:58 GMT and should not be manually modified.
+
+## 0.19.0
+Tue, 17 Sep 2024 22:39:58 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.18.0
 Tue, 10 Sep 2024 22:40:02 GMT

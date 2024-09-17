@@ -1,6 +1,30 @@
 {
-  "name": "@kcws/node-rig",
+  "name": "@kcinternals/heft-node-rig",
   "entries": [
+    {
+      "version": "0.33.0",
+      "tag": "@kcinternals/heft-node-rig_v0.33.0",
+      "date": "Tue, 17 Sep 2024 22:39:58 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "39cb6de6fe85d9ca3d9b0a26ea77f9bae82c0f38"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "333077006772f770ab61f6cafc61d9ff0fb6ed1b"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "f4412342ec13fcf7db037b5fd9853ce15f519339"
+          }
+        ]
+      }
+    },
     {
       "version": "0.42.0",
       "tag": "@kcws/node-rig_v0.42.0",

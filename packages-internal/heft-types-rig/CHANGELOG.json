@@ -2,6 +2,20 @@
   "name": "@kcinternals/heft-types-rig",
   "entries": [
     {
+      "version": "0.22.0",
+      "tag": "@kcinternals/heft-types-rig_v0.22.0",
+      "date": "Tue, 17 Sep 2024 22:39:58 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "f4412342ec13fcf7db037b5fd9853ce15f519339"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.21.0",
       "tag": "@kcinternals/heft-types-rig_v0.21.0",
       "date": "Tue, 27 Aug 2024 22:41:00 GMT",
