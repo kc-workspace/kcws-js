@@ -43,7 +43,7 @@
     "_phase:test": "heft run --only test -- --clean"
   },
   "dependencies": {
-    "esbuild": "0.23.1"
+    "esbuild": "0.24.0"
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
