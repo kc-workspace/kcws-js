@@ -8,7 +8,7 @@
     "@commitlint/config-conventional": "19.5.0",
     "@commitlint/cz-commitlint": "19.5.0",
     "commitizen": "4.3.0",
-    "inquirer": "10.2.2"
+    "inquirer": "11.0.2"
   },
   "devDependencies": {
     "@commitlint/types": "19.5.0"
