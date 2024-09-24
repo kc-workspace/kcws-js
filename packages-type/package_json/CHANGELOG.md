@@ -1,6 +1,11 @@
 # Change Log - @kctypes/package_json
 
-This log was last generated on Tue, 17 Sep 2024 22:39:58 GMT and should not be manually modified.
+This log was last generated on Tue, 24 Sep 2024 22:41:22 GMT and should not be manually modified.
+
+## 1.24.1
+Tue, 24 Sep 2024 22:41:22 GMT
+
+_Version update only_
 
 ## 1.24.0
 Tue, 17 Sep 2024 22:39:58 GMT
