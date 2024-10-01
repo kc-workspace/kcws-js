@@ -2,6 +2,21 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "1.29.1",
+      "tag": "@kcws/reset.css_v1.29.1",
+      "date": "Tue, 01 Oct 2024 22:41:32 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.34.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.5.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.29.0",
       "tag": "@kcws/reset.css_v1.29.0",
       "date": "Tue, 17 Sep 2024 22:39:58 GMT",

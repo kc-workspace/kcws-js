@@ -1,6 +1,14 @@
 # Change Log - @kcws/eslint-config
 
-This log was last generated on Tue, 17 Sep 2024 22:39:58 GMT and should not be manually modified.
+This log was last generated on Tue, 01 Oct 2024 22:41:32 GMT and should not be manually modified.
+
+## 1.34.0
+Tue, 01 Oct 2024 22:41:32 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+- upgrade dependencies [auto]
 
 ## 1.33.0
 Tue, 17 Sep 2024 22:39:58 GMT
