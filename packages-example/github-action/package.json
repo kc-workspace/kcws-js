@@ -24,11 +24,11 @@
     "@kcws/github-actions": "workspace:*"
   },
   "devDependencies": {
-    "@actions/core": "1.10.1",
+    "@actions/core": "1.11.1",
     "@kcws/eslint-config": "workspace:*",
     "@kcws/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
-    "@rushstack/heft": "0.67.2",
+    "@rushstack/heft": "0.68.2",
     "@types/heft-jest": "1.0.6",
     "@types/node": "20.14.2",
     "prettier": "3.3.3"
