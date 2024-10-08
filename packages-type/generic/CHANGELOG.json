@@ -2,6 +2,31 @@
   "name": "@kctypes/generic",
   "entries": [
     {
+      "version": "1.25.0",
+      "tag": "@kctypes/generic_v1.25.0",
+      "date": "Tue, 08 Oct 2024 22:41:43 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "b6589a5568c397a2c9db561bad1082c2bdc70bcd"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.35.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.6.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-types-rig\" to `0.23.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.24.1",
       "tag": "@kctypes/generic_v1.24.1",
       "date": "Tue, 01 Oct 2024 22:41:32 GMT",

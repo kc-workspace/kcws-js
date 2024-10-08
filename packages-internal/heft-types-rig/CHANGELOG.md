@@ -1,6 +1,13 @@
 # Change Log - @kcinternals/heft-types-rig
 
-This log was last generated on Tue, 17 Sep 2024 22:39:58 GMT and should not be manually modified.
+This log was last generated on Tue, 08 Oct 2024 22:41:43 GMT and should not be manually modified.
+
+## 0.23.0
+Tue, 08 Oct 2024 22:41:43 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 0.22.0
 Tue, 17 Sep 2024 22:39:58 GMT
