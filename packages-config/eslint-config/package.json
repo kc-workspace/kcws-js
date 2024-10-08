@@ -49,15 +49,15 @@
     "eslint-plugin-jest": "28.8.3",
     "eslint-plugin-n": "17.10.3",
     "eslint-plugin-promise": "7.1.0",
-    "eslint-plugin-react": "7.37.0",
+    "eslint-plugin-react": "7.37.1",
     "eslint-plugin-tsdoc": "0.3.0",
-    "eslint-plugin-unicorn": "55.0.0",
+    "eslint-plugin-unicorn": "56.0.0",
     "eslint-plugin-jsdoc": "44.2.7",
-    "eslint-plugin-import-x": "4.3.0"
+    "eslint-plugin-import-x": "4.3.1"
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
-    "@rushstack/heft": "0.67.2",
+    "@rushstack/heft": "0.68.2",
     "@types/eslint": "8.56.10"
   },
   "peerDependencies": {

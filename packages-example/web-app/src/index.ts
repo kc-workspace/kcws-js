@@ -18,5 +18,6 @@ export const hello = (name: string = Name): string => {
  * @alpha
  */
 export const windowString = () => {
+  // eslint-disable-next-line unicorn/prefer-global-this
   return window.toString();
 };
