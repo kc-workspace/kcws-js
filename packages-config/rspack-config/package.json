@@ -47,7 +47,7 @@
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.68.2",
-    "@rspack/core": "1.0.8"
+    "@rspack/core": "1.0.10"
   },
   "peerDependencies": {
     "@rspack/cli": "^0.5.0"
