@@ -2,6 +2,31 @@
   "name": "@kcws/astro-decap-cms",
   "entries": [
     {
+      "version": "0.22.0",
+      "tag": "@kcws/astro-decap-cms_v0.22.0",
+      "date": "Tue, 15 Oct 2024 22:41:19 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2a8f09d88875f1dfc1f8f8525e399842970c2e91"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.35.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.6.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.36.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.21.0",
       "tag": "@kcws/astro-decap-cms_v0.21.0",
       "date": "Tue, 08 Oct 2024 22:41:43 GMT",

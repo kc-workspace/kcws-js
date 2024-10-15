@@ -1,6 +1,13 @@
 # Change Log - @kcws/reset.css
 
-This log was last generated on Tue, 08 Oct 2024 22:41:43 GMT and should not be manually modified.
+This log was last generated on Tue, 15 Oct 2024 22:41:19 GMT and should not be manually modified.
+
+## 1.31.0
+Tue, 15 Oct 2024 22:41:19 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 1.30.0
 Tue, 08 Oct 2024 22:41:43 GMT
