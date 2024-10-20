@@ -9,25 +9,25 @@ importers:
   .:
     dependencies:
       '@microsoft/api-documenter':
-        specifier: 7.25.17
-        version: 7.25.17
+        specifier: 7.25.19
+        version: 7.25.19
       typedoc:
-        specifier: 0.26.9
-        version: 0.26.9(typescript@5.6.3)
+        specifier: 0.26.10
+        version: 0.26.10(typescript@5.6.3)
       typedoc-plugin-extras:
         specifier: 3.1.0
-        version: 3.1.0(typedoc@0.26.9(typescript@5.6.3))
+        version: 3.1.0(typedoc@0.26.10(typescript@5.6.3))
       typedoc-plugin-missing-exports:
         specifier: 3.0.0
-        version: 3.0.0(typedoc@0.26.9(typescript@5.6.3))
+        version: 3.0.0(typedoc@0.26.10(typescript@5.6.3))
       typedoc-theme-hierarchy:
         specifier: 5.0.3
-        version: 5.0.3(typedoc@0.26.9(typescript@5.6.3))
+        version: 5.0.3(typedoc@0.26.10(typescript@5.6.3))
 
 packages:
 
-  '@microsoft/api-documenter@7.25.17':
-    resolution: {integrity: sha512-/pPYePc1niY1cjryKcxA39NIGbva70LazDh1u+9T0hRzACCzzfJKu9qZvPJwnrhVGHKBKxUtKJ0fGOaEXqpXZw==}
+  '@microsoft/api-documenter@7.25.19':
+    resolution: {integrity: sha512-2JTqn0Gowjy3l5pO8spSq/dj4D2Aq0ZnfZSM+zYIpT0Kd1LNpS08Q9jCEC+E+/TLkFminsNuwaz7Qq16LLf/1Q==}
     hasBin: true
 
   '@microsoft/api-extractor-model@7.29.8':
@@ -55,8 +55,8 @@ packages:
       '@types/node':
         optional: true
 
-  '@rushstack/ts-command-line@4.22.8':
-    resolution: {integrity: sha512-XbFjOoV7qZHJnSuFUHv0pKaFA4ixyCuki+xMjsMfDwfvQjs5MYG0IK5COal3tRnG7KCDe2l/G+9LrzYE/RJhgg==}
+  '@rushstack/ts-command-line@4.23.0':
+    resolution: {integrity: sha512-jYREBtsxduPV6ptNq8jOKp9+yx0ld1Tb/Tkdnlj8gTjazl1sF3DwX2VbluyYrNd0meWIL0bNeer7WDf5tKFjaQ==}
 
   '@shikijs/core@1.22.0':
     resolution: {integrity: sha512-S8sMe4q71TJAW+qG93s5VaiihujRK6rqDFqBnxqvga/3LvqHEnxqBIOPkt//IdXVtHkQWKu4nOQNk0uBGicU7Q==}
@@ -322,8 +322,8 @@ packages:
     peerDependencies:
       typedoc: ^0.26.0
 
-  typedoc@0.26.9:
-    resolution: {integrity: sha512-Rc7QpWL7EtmrT8yxV0GmhOR6xHgFnnhphbD9Suti3fz3um7ZOrou6q/g9d6+zC5PssTLZmjaW4Upmzv8T1rCcQ==}
+  typedoc@0.26.10:
+    resolution: {integrity: sha512-xLmVKJ8S21t+JeuQLNueebEuTVphx6IrP06CdV7+0WVflUSW3SPmR+h1fnWVdAR/FQePEgsSWCUHXqKKjzuUAw==}
     engines: {node: '>= 18'}
     hasBin: true
     peerDependencies:
@@ -372,8 +372,8 @@ packages:
   yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
 
-  yaml@2.5.1:
-    resolution: {integrity: sha512-bLQOjaX/ADgQ20isPJRvF0iRUHIxVhYvr53Of7wGcWlO2jvtUlH5m87DsmulFVxRpNLOnI4tB6p/oh8D7kpn9Q==}
+  yaml@2.6.0:
+    resolution: {integrity: sha512-a6ae//JvKDEra2kdi1qzCyrJW/WZCgFi8ydDV+eXExl95t+5R+ijnqHJbz9tmMh8FUjx3iv2fCQ4dclAQlO2UQ==}
     engines: {node: '>= 14'}
     hasBin: true
 
@@ -382,13 +382,13 @@ packages:
 
 snapshots:
 
-  '@microsoft/api-documenter@7.25.17':
+  '@microsoft/api-documenter@7.25.19':
     dependencies:
       '@microsoft/api-extractor-model': 7.29.8
       '@microsoft/tsdoc': 0.15.0
       '@rushstack/node-core-library': 5.9.0
       '@rushstack/terminal': 0.14.2
-      '@rushstack/ts-command-line': 4.22.8
+      '@rushstack/ts-command-line': 4.23.0
       js-yaml: 3.13.1
       resolve: 1.22.8
     transitivePeerDependencies:
@@ -427,7 +427,7 @@ snapshots:
       '@rushstack/node-core-library': 5.9.0
       supports-color: 8.1.1
 
-  '@rushstack/ts-command-line@4.22.8':
+  '@rushstack/ts-command-line@4.23.0':
     dependencies:
       '@rushstack/terminal': 0.14.2
       '@types/argparse': 1.0.38
@@ -706,27 +706,27 @@ snapshots:
 
   trim-lines@3.0.1: {}
 
-  typedoc-plugin-extras@3.1.0(typedoc@0.26.9(typescript@5.6.3)):
+  typedoc-plugin-extras@3.1.0(typedoc@0.26.10(typescript@5.6.3)):
     dependencies:
-      typedoc: 0.26.9(typescript@5.6.3)
+      typedoc: 0.26.10(typescript@5.6.3)
 
-  typedoc-plugin-missing-exports@3.0.0(typedoc@0.26.9(typescript@5.6.3)):
+  typedoc-plugin-missing-exports@3.0.0(typedoc@0.26.10(typescript@5.6.3)):
     dependencies:
-      typedoc: 0.26.9(typescript@5.6.3)
+      typedoc: 0.26.10(typescript@5.6.3)
 
-  typedoc-theme-hierarchy@5.0.3(typedoc@0.26.9(typescript@5.6.3)):
+  typedoc-theme-hierarchy@5.0.3(typedoc@0.26.10(typescript@5.6.3)):
     dependencies:
       fs-extra: 11.1.1
-      typedoc: 0.26.9(typescript@5.6.3)
+      typedoc: 0.26.10(typescript@5.6.3)
 
-  typedoc@0.26.9(typescript@5.6.3):
+  typedoc@0.26.10(typescript@5.6.3):
     dependencies:
       lunr: 2.3.9
       markdown-it: 14.1.0
       minimatch: 9.0.5
       shiki: 1.22.0
       typescript: 5.6.3
-      yaml: 2.5.1
+      yaml: 2.6.0
 
   typescript@5.6.3: {}
 
@@ -775,6 +775,6 @@ snapshots:
 
   yallist@4.0.0: {}
 
-  yaml@2.5.1: {}
+  yaml@2.6.0: {}
 
   zwitch@2.0.4: {}
