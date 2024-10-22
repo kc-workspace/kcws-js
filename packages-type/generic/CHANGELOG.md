@@ -1,6 +1,13 @@
 # Change Log - @kctypes/generic
 
-This log was last generated on Tue, 15 Oct 2024 22:41:19 GMT and should not be manually modified.
+This log was last generated on Tue, 22 Oct 2024 22:41:28 GMT and should not be manually modified.
+
+## 1.26.0
+Tue, 22 Oct 2024 22:41:28 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
 
 ## 1.25.1
 Tue, 15 Oct 2024 22:41:19 GMT
