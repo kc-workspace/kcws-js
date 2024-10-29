@@ -2,6 +2,18 @@
   "name": "@kcws/eslint-config",
   "entries": [
     {
+      "version": "1.37.1",
+      "tag": "@kcws/eslint-config_v1.37.1",
+      "date": "Tue, 29 Oct 2024 22:42:50 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.37.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.37.0",
       "tag": "@kcws/eslint-config_v1.37.0",
       "date": "Tue, 22 Oct 2024 22:41:29 GMT",

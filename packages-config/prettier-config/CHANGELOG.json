@@ -2,6 +2,24 @@
   "name": "@kcws/prettier-config",
   "entries": [
     {
+      "version": "0.27.1",
+      "tag": "@kcws/prettier-config_v0.27.1",
+      "date": "Tue, 29 Oct 2024 22:42:50 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.37.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.7.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.37.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.27.0",
       "tag": "@kcws/prettier-config_v0.27.0",
       "date": "Tue, 22 Oct 2024 22:41:29 GMT",
