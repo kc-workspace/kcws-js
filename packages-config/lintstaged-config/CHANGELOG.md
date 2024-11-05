@@ -1,6 +1,11 @@
 # Change Log - @kcws/lintstaged-config
 
-This log was last generated on Tue, 29 Oct 2024 22:42:50 GMT and should not be manually modified.
+This log was last generated on Tue, 05 Nov 2024 22:42:17 GMT and should not be manually modified.
+
+## 1.7.2
+Tue, 05 Nov 2024 22:42:17 GMT
+
+_Version update only_
 
 ## 1.7.1
 Tue, 29 Oct 2024 22:42:50 GMT

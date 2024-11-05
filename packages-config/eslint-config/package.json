@@ -1,6 +1,6 @@
 {
   "name": "@kcws/eslint-config",
-  "version": "1.37.1",
+  "version": "1.37.2",
   "description": "kamontat's eslint configuration",
   "main": "src/index.js",
   "types": "lib/index.d.ts",
