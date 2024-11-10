@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "upgrade dependencies [manually]",
+      "type": "minor",
+      "packageName": "@kcws/random"
+    }
+  ],
+  "packageName": "@kcws/random",
+  "email": "14089557+kamontat@users.noreply.github.com"
+}

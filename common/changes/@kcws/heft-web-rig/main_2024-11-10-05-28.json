@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "upgrade dependencies [manually]",
+      "type": "minor",
+      "packageName": "@kcws/heft-web-rig"
+    }
+  ],
+  "packageName": "@kcws/heft-web-rig",
+  "email": "14089557+kamontat@users.noreply.github.com"
+}

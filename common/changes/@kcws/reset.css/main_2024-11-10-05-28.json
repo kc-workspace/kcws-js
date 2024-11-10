@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "upgrade dependencies [manually]",
+      "type": "minor",
+      "packageName": "@kcws/reset.css"
+    }
+  ],
+  "packageName": "@kcws/reset.css",
+  "email": "14089557+kamontat@users.noreply.github.com"
+}

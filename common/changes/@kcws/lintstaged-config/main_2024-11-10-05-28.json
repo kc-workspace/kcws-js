@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "upgrade dependencies [manually]",
+      "type": "minor",
+      "packageName": "@kcws/lintstaged-config"
+    }
+  ],
+  "packageName": "@kcws/lintstaged-config",
+  "email": "14089557+kamontat@users.noreply.github.com"
+}

@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "upgrade dependencies [manually]",
+      "type": "minor",
+      "packageName": "@kctypes/package_json"
+    }
+  ],
+  "packageName": "@kctypes/package_json",
+  "email": "14089557+kamontat@users.noreply.github.com"
+}
