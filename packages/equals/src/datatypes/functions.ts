@@ -14,7 +14,7 @@ import { EquivalentValue } from "../constants";
  *
  * @beta
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export const isFunctionVEquals: VEqualFn<Function> = (a, b) => {
   return a === b;
 };

@@ -8,7 +8,7 @@ import { isExist } from "./exist";
  *
  * @public
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export const isFunction = (input: Optional<unknown>): input is Function => {
   return isExist(input) && typeof input === "function";
 };

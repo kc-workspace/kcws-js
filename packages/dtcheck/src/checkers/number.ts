@@ -1,6 +1,6 @@
 import { isExist } from "./exist";
 
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 const checkObjectConstructor = <C extends Function>(
   input: Optional<unknown>,
   constructor: C

@@ -9,25 +9,25 @@ importers:
   .:
     dependencies:
       '@microsoft/api-documenter':
-        specifier: 7.25.19
-        version: 7.25.19
+        specifier: 7.25.21
+        version: 7.25.21
       typedoc:
-        specifier: 0.26.10
-        version: 0.26.10(typescript@5.6.3)
+        specifier: 0.26.11
+        version: 0.26.11(typescript@5.6.3)
       typedoc-plugin-extras:
         specifier: 3.1.0
-        version: 3.1.0(typedoc@0.26.10(typescript@5.6.3))
+        version: 3.1.0(typedoc@0.26.11(typescript@5.6.3))
       typedoc-plugin-missing-exports:
         specifier: 3.0.0
-        version: 3.0.0(typedoc@0.26.10(typescript@5.6.3))
+        version: 3.0.0(typedoc@0.26.11(typescript@5.6.3))
       typedoc-theme-hierarchy:
         specifier: 5.0.3
-        version: 5.0.3(typedoc@0.26.10(typescript@5.6.3))
+        version: 5.0.3(typedoc@0.26.11(typescript@5.6.3))
 
 packages:
 
-  '@microsoft/api-documenter@7.25.19':
-    resolution: {integrity: sha512-2JTqn0Gowjy3l5pO8spSq/dj4D2Aq0ZnfZSM+zYIpT0Kd1LNpS08Q9jCEC+E+/TLkFminsNuwaz7Qq16LLf/1Q==}
+  '@microsoft/api-documenter@7.25.21':
+    resolution: {integrity: sha512-Nyfidxbi9wIZ1H7VjVqw3nUhRM1fUJuGqvt2iDEI91Z4k8X+BqxSaLOsnn8n65YaAZhUJRkh1Ouxt90r7cnmjA==}
     hasBin: true
 
   '@microsoft/api-extractor-model@7.29.8':
@@ -58,17 +58,17 @@ packages:
   '@rushstack/ts-command-line@4.23.0':
     resolution: {integrity: sha512-jYREBtsxduPV6ptNq8jOKp9+yx0ld1Tb/Tkdnlj8gTjazl1sF3DwX2VbluyYrNd0meWIL0bNeer7WDf5tKFjaQ==}
 
-  '@shikijs/core@1.22.0':
-    resolution: {integrity: sha512-S8sMe4q71TJAW+qG93s5VaiihujRK6rqDFqBnxqvga/3LvqHEnxqBIOPkt//IdXVtHkQWKu4nOQNk0uBGicU7Q==}
+  '@shikijs/core@1.22.2':
+    resolution: {integrity: sha512-bvIQcd8BEeR1yFvOYv6HDiyta2FFVePbzeowf5pPS1avczrPK+cjmaxxh0nx5QzbON7+Sv0sQfQVciO7bN72sg==}
 
-  '@shikijs/engine-javascript@1.22.0':
-    resolution: {integrity: sha512-AeEtF4Gcck2dwBqCFUKYfsCq0s+eEbCEbkUuFou53NZ0sTGnJnJ/05KHQFZxpii5HMXbocV9URYVowOP2wH5kw==}
+  '@shikijs/engine-javascript@1.22.2':
+    resolution: {integrity: sha512-iOvql09ql6m+3d1vtvP8fLCVCK7BQD1pJFmHIECsujB0V32BJ0Ab6hxk1ewVSMFA58FI0pR2Had9BKZdyQrxTw==}
 
-  '@shikijs/engine-oniguruma@1.22.0':
-    resolution: {integrity: sha512-5iBVjhu/DYs1HB0BKsRRFipRrD7rqjxlWTj4F2Pf+nQSPqc3kcyqFFeZXnBMzDf0HdqaFVvhDRAGiYNvyLP+Mw==}
+  '@shikijs/engine-oniguruma@1.22.2':
+    resolution: {integrity: sha512-GIZPAGzQOy56mGvWMoZRPggn0dTlBf1gutV5TdceLCZlFNqWmuc7u+CzD0Gd9vQUTgLbrt0KLzz6FNprqYAxlA==}
 
-  '@shikijs/types@1.22.0':
-    resolution: {integrity: sha512-Fw/Nr7FGFhlQqHfxzZY8Cwtwk5E9nKDUgeLjZgt3UuhcM3yJR9xj3ZGNravZZok8XmEZMiYkSMTPlPkULB8nww==}
+  '@shikijs/types@1.22.2':
+    resolution: {integrity: sha512-NCWDa6LGZqTuzjsGfXOBWfjS/fDIbDdmVDug+7ykVe1IKT4c1gakrvlfFYp5NhAXH/lyqLM8wsAPo5wNy73Feg==}
 
   '@shikijs/vscode-textmate@9.3.0':
     resolution: {integrity: sha512-jn7/7ky30idSkd/O5yDBfAnVt+JJpepofP/POZ1iMOxK59cOfqIgg/Dj0eFsjOTMw+4ycJN0uhZH/Eb0bs/EUA==}
@@ -264,8 +264,8 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  regex@4.3.3:
-    resolution: {integrity: sha512-r/AadFO7owAq1QJVeZ/nq9jNS1vyZt+6t1p/E59B56Rn2GCya+gr1KSyOzNL/er+r+B7phv5jG2xU2Nz1YkmJg==}
+  regex@4.4.0:
+    resolution: {integrity: sha512-uCUSuobNVeqUupowbdZub6ggI5/JZkYyJdDogddJr60L764oxC2pMZov1fQ3wM9bdyzUILDG+Sqx6NAKAz9rKQ==}
 
   require-from-string@2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
@@ -280,8 +280,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  shiki@1.22.0:
-    resolution: {integrity: sha512-/t5LlhNs+UOKQCYBtl5ZsH/Vclz73GIqT2yQsCBygr8L/ppTdmpL4w3kPLoZJbMKVWtoG77Ue1feOjZfDxvMkw==}
+  shiki@1.22.2:
+    resolution: {integrity: sha512-3IZau0NdGKXhH2bBlUk4w1IHNxPh6A5B2sUpyY+8utLu2j/h1QpFkAaUA1bAMxOWWGtTWcAh531vnS4NJKS/lA==}
 
   space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
@@ -322,8 +322,8 @@ packages:
     peerDependencies:
       typedoc: ^0.26.0
 
-  typedoc@0.26.10:
-    resolution: {integrity: sha512-xLmVKJ8S21t+JeuQLNueebEuTVphx6IrP06CdV7+0WVflUSW3SPmR+h1fnWVdAR/FQePEgsSWCUHXqKKjzuUAw==}
+  typedoc@0.26.11:
+    resolution: {integrity: sha512-sFEgRRtrcDl2FxVP58Ze++ZK2UQAEvtvvH8rRlig1Ja3o7dDaMHmaBfvJmdGnNEFaLTpQsN8dpvZaTqJSu/Ugw==}
     engines: {node: '>= 18'}
     hasBin: true
     peerDependencies:
@@ -382,7 +382,7 @@ packages:
 
 snapshots:
 
-  '@microsoft/api-documenter@7.25.19':
+  '@microsoft/api-documenter@7.25.21':
     dependencies:
       '@microsoft/api-extractor-model': 7.29.8
       '@microsoft/tsdoc': 0.15.0
@@ -436,27 +436,27 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
-  '@shikijs/core@1.22.0':
+  '@shikijs/core@1.22.2':
     dependencies:
-      '@shikijs/engine-javascript': 1.22.0
-      '@shikijs/engine-oniguruma': 1.22.0
-      '@shikijs/types': 1.22.0
+      '@shikijs/engine-javascript': 1.22.2
+      '@shikijs/engine-oniguruma': 1.22.2
+      '@shikijs/types': 1.22.2
       '@shikijs/vscode-textmate': 9.3.0
       '@types/hast': 3.0.4
       hast-util-to-html: 9.0.3
 
-  '@shikijs/engine-javascript@1.22.0':
+  '@shikijs/engine-javascript@1.22.2':
     dependencies:
-      '@shikijs/types': 1.22.0
+      '@shikijs/types': 1.22.2
       '@shikijs/vscode-textmate': 9.3.0
       oniguruma-to-js: 0.4.3
 
-  '@shikijs/engine-oniguruma@1.22.0':
+  '@shikijs/engine-oniguruma@1.22.2':
     dependencies:
-      '@shikijs/types': 1.22.0
+      '@shikijs/types': 1.22.2
       '@shikijs/vscode-textmate': 9.3.0
 
-  '@shikijs/types@1.22.0':
+  '@shikijs/types@1.22.2':
     dependencies:
       '@shikijs/vscode-textmate': 9.3.0
       '@types/hast': 3.0.4
@@ -654,7 +654,7 @@ snapshots:
 
   oniguruma-to-js@0.4.3:
     dependencies:
-      regex: 4.3.3
+      regex: 4.4.0
 
   path-parse@1.0.7: {}
 
@@ -664,7 +664,7 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  regex@4.3.3: {}
+  regex@4.4.0: {}
 
   require-from-string@2.0.2: {}
 
@@ -678,12 +678,12 @@ snapshots:
     dependencies:
       lru-cache: 6.0.0
 
-  shiki@1.22.0:
+  shiki@1.22.2:
     dependencies:
-      '@shikijs/core': 1.22.0
-      '@shikijs/engine-javascript': 1.22.0
-      '@shikijs/engine-oniguruma': 1.22.0
-      '@shikijs/types': 1.22.0
+      '@shikijs/core': 1.22.2
+      '@shikijs/engine-javascript': 1.22.2
+      '@shikijs/engine-oniguruma': 1.22.2
+      '@shikijs/types': 1.22.2
       '@shikijs/vscode-textmate': 9.3.0
       '@types/hast': 3.0.4
 
@@ -706,25 +706,25 @@ snapshots:
 
   trim-lines@3.0.1: {}
 
-  typedoc-plugin-extras@3.1.0(typedoc@0.26.10(typescript@5.6.3)):
+  typedoc-plugin-extras@3.1.0(typedoc@0.26.11(typescript@5.6.3)):
     dependencies:
-      typedoc: 0.26.10(typescript@5.6.3)
+      typedoc: 0.26.11(typescript@5.6.3)
 
-  typedoc-plugin-missing-exports@3.0.0(typedoc@0.26.10(typescript@5.6.3)):
+  typedoc-plugin-missing-exports@3.0.0(typedoc@0.26.11(typescript@5.6.3)):
     dependencies:
-      typedoc: 0.26.10(typescript@5.6.3)
+      typedoc: 0.26.11(typescript@5.6.3)
 
-  typedoc-theme-hierarchy@5.0.3(typedoc@0.26.10(typescript@5.6.3)):
+  typedoc-theme-hierarchy@5.0.3(typedoc@0.26.11(typescript@5.6.3)):
     dependencies:
       fs-extra: 11.1.1
-      typedoc: 0.26.10(typescript@5.6.3)
+      typedoc: 0.26.11(typescript@5.6.3)
 
-  typedoc@0.26.10(typescript@5.6.3):
+  typedoc@0.26.11(typescript@5.6.3):
     dependencies:
       lunr: 2.3.9
       markdown-it: 14.1.0
       minimatch: 9.0.5
-      shiki: 1.22.0
+      shiki: 1.22.2
       typescript: 5.6.3
       yaml: 2.6.0
 

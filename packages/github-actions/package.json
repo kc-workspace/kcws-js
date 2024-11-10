@@ -42,7 +42,7 @@
     "_phase:test": "heft run --only test -- --clean"
   },
   "dependencies": {
-    "@actions/cache": "3.2.4",
+    "@actions/cache": "3.3.0",
     "@actions/core": "1.11.1",
     "@actions/exec": "1.1.1",
     "@actions/glob": "0.5.0",
@@ -52,7 +52,7 @@
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.68.4"
+    "@rushstack/heft": "0.68.6"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.65.5"

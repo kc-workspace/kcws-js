@@ -7,6 +7,7 @@ import { getCommand } from "../utils/cmd";
  *
  * @beta
  */
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface IShellcheckOptions extends IBaseActionOptions {}
 
 /**

@@ -52,9 +52,9 @@
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.68.4",
+    "@rushstack/heft": "0.68.6",
     "@astrojs/check": "0.9.4",
-    "astro": "4.16.6"
+    "astro": "4.16.10"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.65.5",

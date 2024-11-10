@@ -9,16 +9,16 @@ importers:
   .:
     dependencies:
       npm-check-updates:
-        specifier: 17.1.4
-        version: 17.1.4
+        specifier: 17.1.10
+        version: 17.1.10
 
 packages:
 
-  npm-check-updates@17.1.4:
-    resolution: {integrity: sha512-crOUeN2GngqlkRCFQ/zi1zsneWd9IGZgIfAWYGAuhYiPnfbBTmJBL7Yq1wI0e1dsW8CfWc+h348WmfCREqeOBA==}
+  npm-check-updates@17.1.10:
+    resolution: {integrity: sha512-GnN6KbUzC8BpwsRYJntuumgCiagZ0+xxorvUJM9m06d7AlyK9lm3iFsAsnXF3VAZZzpD5QjZvWBwNze61Vywkw==}
     engines: {node: ^18.18.0 || >=20.0.0, npm: '>=8.12.1'}
     hasBin: true
 
 snapshots:
 
-  npm-check-updates@17.1.4: {}
+  npm-check-updates@17.1.10: {}

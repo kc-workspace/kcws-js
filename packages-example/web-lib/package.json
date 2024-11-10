@@ -45,7 +45,7 @@
     "@kcws/heft-web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.68.4",
+    "@rushstack/heft": "0.68.6",
     "@types/heft-jest": "1.0.6",
     "@types/node": "18.19.3",
     "typescript": "5.3.3"
