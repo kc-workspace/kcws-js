@@ -1,6 +1,6 @@
 {
   "name": "@kctypes/generic",
-  "version": "1.26.2",
+  "version": "1.27.0",
   "description": "typescript definitions for global generic type",
   "main": "types/index.d.ts",
   "types": "types/index.d.ts",
