@@ -5,7 +5,7 @@
   "dependencies": {
     "@microsoft/api-documenter": "7.25.21",
     "typedoc": "0.26.11",
-    "typedoc-plugin-missing-exports": "3.0.0",
+    "typedoc-plugin-missing-exports": "3.0.2",
     "typedoc-plugin-extras": "3.1.0",
     "typedoc-theme-hierarchy": "5.0.3"
   }
