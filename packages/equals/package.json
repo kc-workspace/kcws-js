@@ -1,6 +1,6 @@
 {
   "name": "@kcws/equals",
-  "version": "0.30.1",
+  "version": "0.31.0",
   "description": "object equivalent",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
