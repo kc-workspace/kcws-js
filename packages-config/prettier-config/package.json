@@ -41,7 +41,7 @@
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
     "@rushstack/heft": "0.68.8",
-    "prettier": "3.3.3"
+    "prettier": "3.4.1"
   },
   "peerDependencies": {
     "prettier": "^3.1.0"

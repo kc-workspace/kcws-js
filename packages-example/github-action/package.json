@@ -31,7 +31,7 @@
     "@rushstack/heft": "0.68.8",
     "@types/heft-jest": "1.0.6",
     "@types/node": "20.14.2",
-    "prettier": "3.3.3"
+    "prettier": "3.4.1"
   },
   "engines": {
     "node": ">=20"
