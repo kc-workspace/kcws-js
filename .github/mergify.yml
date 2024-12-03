@@ -14,24 +14,6 @@ shared:
     - check-success=alternative-testing (18)
     - check-success=alternative-testing (20)
 
-queue_rules:
-  - name: duplicated default from Automatic merging by owner
-    queue_conditions:
-      - "#approved-reviews-by>=1"
-      - or:
-          - author=kc-bot
-          - author=kamontat
-      - base=main
-    merge_conditions: []
-    merge_method: squash
-  - name: default
-    queue_conditions:
-      - "#approved-reviews-by>=1"
-    merge_conditions:
-      - and: *pr_status
-      - and: *ci_status
-    merge_method: squash
-
 pull_request_rules:
   - name: Convert wip to draft PR
     conditions:
@@ -42,6 +24,12 @@ pull_request_rules:
       label:
         remove:
           - wip
+
+  - name: Queue action rule
+    conditions: [ ]
+    actions:
+      queue:
+
   - name: Notify author on queue failure
     conditions:
       - "check-failure=Queue: Embarked in merge train"
@@ -54,7 +42,22 @@ pull_request_rules:
           with `@mergifyio requeue`.
           More details can be found on the `Queue: Embarked in merge train`
           check-run.
-  - name: refactored queue action rule
-    conditions: []
-    actions:
-      queue:
+
+queue_rules:
+  - name: default
+    queue_conditions:
+      - "#approved-reviews-by>=1"
+    merge_conditions:
+      - and: *pr_status
+      - and: *ci_status
+    merge_method: squash
+  - name: merging by owner
+    queue_conditions:
+      - or:
+          - author=kc-bot
+          - author=kamontat
+      - base=main
+    merge_conditions:
+      - and: *pr_status
+      - and: *ci_status
+    merge_method: squash
