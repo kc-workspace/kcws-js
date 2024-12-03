@@ -24,14 +24,12 @@ queue_rules:
       - base=main
     merge_conditions: []
     merge_method: squash
-    method: squash
   - name: default
     queue_conditions:
       - "#approved-reviews-by>=1"
     merge_conditions:
       - and: *pr_status
       - and: *ci_status
-
     merge_method: squash
 
 pull_request_rules:
