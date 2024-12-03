@@ -14,6 +14,35 @@ shared:
     - check-success=alternative-testing (18)
     - check-success=alternative-testing (20)
 
+pull_request_rules:
+  - name: Convert wip to draft PR
+    conditions:
+      - label=wip
+    actions:
+      edit:
+        draft: true
+      label:
+        remove:
+          - wip
+
+  - name: Queue action rule
+    conditions: [ ]
+    actions:
+      queue:
+
+  - name: Notify author on queue failure
+    conditions:
+      - "check-failure=Queue: Embarked in merge train"
+    actions:
+      comment:
+        message: >
+          Hey @{{ author }}, this pull request failed to merge and has been
+          dequeued from the merge train. If you believe your PR failed in
+          the merge train because of a flaky test, requeue it by commenting
+          with `@mergifyio requeue`.
+          More details can be found on the `Queue: Embarked in merge train`
+          check-run.
+
 queue_rules:
   - name: default
     queue_conditions:
@@ -32,27 +61,3 @@ queue_rules:
       - and: *pr_status
       - and: *ci_status
     merge_method: squash
-
-pull_request_rules:
-  - name: Convert wip to draft PR
-    conditions:
-      - label=wip
-    actions:
-      edit:
-        draft: true
-      label:
-        remove:
-          - wip
-
-  - name: Notify author on queue failure
-    conditions:
-      - "check-failure=Queue: Embarked in merge train"
-    actions:
-      comment:
-        message: >
-          Hey @{{ author }}, this pull request failed to merge and has been
-          dequeued from the merge train. If you believe your PR failed in
-          the merge train because of a flaky test, requeue it by commenting
-          with `@mergifyio requeue`.
-          More details can be found on the `Queue: Embarked in merge train`
-          check-run.
