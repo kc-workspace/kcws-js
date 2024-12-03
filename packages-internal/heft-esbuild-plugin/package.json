@@ -1,6 +1,6 @@
 {
   "name": "@kcinternals/heft-esbuild-plugin",
-  "version": "0.24.0",
+  "version": "0.24.1",
   "description": "heft-plugin for bundling with esbuild",
   "main": "lib/index.js",
   "module": "lib-esnext/index.js",

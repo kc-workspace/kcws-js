@@ -2,6 +2,21 @@
   "name": "@kcws/lintstaged-config",
   "entries": [
     {
+      "version": "1.9.1",
+      "tag": "@kcws/lintstaged-config_v1.9.1",
+      "date": "Tue, 03 Dec 2024 22:43:51 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.42.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.41.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.9.0",
       "tag": "@kcws/lintstaged-config_v1.9.0",
       "date": "Tue, 26 Nov 2024 22:43:38 GMT",

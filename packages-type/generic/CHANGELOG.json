@@ -2,6 +2,21 @@
   "name": "@kctypes/generic",
   "entries": [
     {
+      "version": "1.28.1",
+      "tag": "@kctypes/generic_v1.28.1",
+      "date": "Tue, 03 Dec 2024 22:43:51 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.41.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.9.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.28.0",
       "tag": "@kctypes/generic_v1.28.0",
       "date": "Tue, 26 Nov 2024 22:43:38 GMT",

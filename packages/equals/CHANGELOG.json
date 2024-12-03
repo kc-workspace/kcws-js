@@ -2,6 +2,27 @@
   "name": "@kcws/equals",
   "entries": [
     {
+      "version": "0.31.1",
+      "tag": "@kcws/equals_v0.31.1",
+      "date": "Tue, 03 Dec 2024 22:43:51 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/dtcheck\" to `0.54.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.43.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.9.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.41.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.31.0",
       "tag": "@kcws/equals_v0.31.0",
       "date": "Tue, 26 Nov 2024 22:43:38 GMT",

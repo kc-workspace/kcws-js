@@ -2,6 +2,24 @@
   "name": "@kcws/github-actions",
   "entries": [
     {
+      "version": "0.20.1",
+      "tag": "@kcws/github-actions_v0.20.1",
+      "date": "Tue, 03 Dec 2024 22:43:51 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.42.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.9.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.41.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.20.0",
       "tag": "@kcws/github-actions_v0.20.0",
       "date": "Tue, 26 Nov 2024 22:43:38 GMT",
