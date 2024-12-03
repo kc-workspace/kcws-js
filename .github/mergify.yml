@@ -22,8 +22,9 @@ queue_rules:
           - author=kc-bot
           - author=kamontat
       - base=main
-    merge_conditions: []
+    merge_conditions: [ ]
     merge_method: squash
+
   - name: default
     queue_conditions:
       - "#approved-reviews-by>=1"
@@ -42,6 +43,7 @@ pull_request_rules:
       label:
         remove:
           - wip
+
   - name: Notify author on queue failure
     conditions:
       - "check-failure=Queue: Embarked in merge train"
@@ -54,7 +56,8 @@ pull_request_rules:
           with `@mergifyio requeue`.
           More details can be found on the `Queue: Embarked in merge train`
           check-run.
+
   - name: refactored queue action rule
-    conditions: []
+    conditions: [ ]
     actions:
       queue:
