@@ -1,22 +1,23 @@
 {
   "$schema": "https://typedoc.org/schema.json",
 
-  // Input: https://typedoc.org/options/input/
+  // Input: https://typedoc.org/documents/Options.Input.html
   "exclude": ["**/*+(index|.spec|.e2e).ts"],
   "includeVersion": true,
   "excludeExternals": true,
 
-  // Output: https://typedoc.org/options/output/
+  // Output: https://typedoc.org/documents/Options.Output.html
+  "favicon": "public/kc.ico",
 
-  // Comment: https://typedoc.org/options/comments/
+  // Comment: https://typedoc.org/documents/Options.Comments.html
   "suppressCommentWarningsInDeclarationFiles": true,
   "useTsLinkResolution": false,
 
-  // Organization: https://typedoc.org/options/organization/
+  // Organization: https://typedoc.org/documents/Options.Organization.html
   "categorizeByGroup": true,
   "sort": ["visibility", "static-first", "enum-value-ascending", "alphabetical"],
 
-  // Validation: https://typedoc.org/options/validation/
+  // Validation: https://typedoc.org/documents/Options.Validation.html
   "validation": {
     "invalidLink": true,
     "notExported": true,
@@ -34,10 +35,17 @@
   //   "Reference"
   // ],
 
-  // Other: https://typedoc.org/options/other/
+  // Other: https://typedoc.org/documents/Options.Other.html
 
-  // Plugins: https://typedoc.org/guides/plugins/
-  "plugin": ["typedoc-plugin-missing-exports", "typedoc-plugin-extras"],
+  // Plugins: https://typedoc.org/documents/Plugins.html
+  "plugin": [
+    "typedoc-github-theme",
+    "typedoc-plugin-missing-exports"
+    // FIXME: https://github.com/Drarig29/typedoc-plugin-extras/issues/24
+    // "typedoc-plugin-extras"
+  ],
+
+  // Themes: https://typedoc.org/documents/Themes.html
 
   // typedoc-plugin-missing-exports
   // https://github.com/Gerrit0/typedoc-plugin-missing-exports#options
@@ -45,8 +53,7 @@
 
   // typedoc-plugin-extras
   // https://github.com/Drarig29/typedoc-plugin-extras#arguments
-  "customDescription": "kamontat's workspace for javascript ecosystem",
-  "favicon": "common/autoinstallers/rush-api-documenter/public/kc.ico",
-  "footerTypedocVersion": true,
-  "footerLastModified": true
+  // "customDescription": "kamontat's workspace for javascript ecosystem",
+  // "footerTypedocVersion": true,
+  // "footerLastModified": true
 }

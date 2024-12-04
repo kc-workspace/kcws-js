@@ -28,7 +28,6 @@
   "cname": "js.kcws.kamontat.net",
   "lang": "en",
   "githubPages": true,
-  "hideParameterTypesInTitle": true,
   "hideGenerator": false,
   "searchInComments": true,
   "cleanOutputDir": true,
