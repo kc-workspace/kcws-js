@@ -2,6 +2,35 @@
   "name": "@kcinternals/heft-node-rig",
   "entries": [
     {
+      "version": "0.43.0",
+      "tag": "@kcinternals/heft-node-rig_v0.43.0",
+      "date": "Wed, 04 Dec 2024 02:53:48 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2a8f09d88875f1dfc1f8f8525e399842970c2e91"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "ac3fc51c19afc7927244c3fdc3a0a0485423b33a"
+          },
+          {
+            "comment": "upgrade dependencies [manually]",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "d61ade0f84c321f7f33ae7b120673b63b92df6b2"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "be206fc0864532ddc49c5c8f0d9bb744908d1464"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.34.0",
       "tag": "@kcinternals/heft-node-rig_v0.34.0",
       "date": "Tue, 08 Oct 2024 22:41:43 GMT",

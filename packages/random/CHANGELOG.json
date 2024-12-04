@@ -2,6 +2,27 @@
   "name": "@kcws/random",
   "entries": [
     {
+      "version": "0.54.2",
+      "tag": "@kcws/random_v0.54.2",
+      "date": "Wed, 04 Dec 2024 02:53:48 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.44.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kctypes/generic\" to `1.28.2`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.9.2`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.41.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.54.1",
       "tag": "@kcws/random_v0.54.1",
       "date": "Tue, 03 Dec 2024 22:43:51 GMT",
