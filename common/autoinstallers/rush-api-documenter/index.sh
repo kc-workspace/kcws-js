@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -e
+
 # Support only yaml and markdown
 outtype="markdown"
 # Must be the same location as api-extractor docModel output
