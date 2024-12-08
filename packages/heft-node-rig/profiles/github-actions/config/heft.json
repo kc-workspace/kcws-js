@@ -29,8 +29,7 @@
               "minify": true,
               "sourcemap": true,
               "platform": "node",
-              "target": "node20",
-              "external": ["@protobuf-ts/runtime", "@protobuf-ts/runtime-rpc"]
+              "target": "node20"
             }
           }
         },
