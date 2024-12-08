@@ -41,11 +41,11 @@
     "@rushstack/eslint-patch": "1.10.4",
     "@rushstack/eslint-plugin": "0.16.1",
     "@rushstack/eslint-plugin-security": "0.8.3",
-    "@typescript-eslint/eslint-plugin": "8.16.0",
-    "@typescript-eslint/parser": "8.16.0",
+    "@typescript-eslint/eslint-plugin": "8.17.0",
+    "@typescript-eslint/parser": "8.17.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-node": "0.3.9",
-    "eslint-import-resolver-typescript": "3.6.3",
+    "eslint-import-resolver-typescript": "3.7.0",
     "eslint-plugin-jest": "28.9.0",
     "eslint-plugin-n": "17.14.0",
     "eslint-plugin-promise": "7.2.1",
@@ -53,11 +53,11 @@
     "eslint-plugin-tsdoc": "0.4.0",
     "eslint-plugin-unicorn": "56.0.1",
     "eslint-plugin-jsdoc": "44.2.7",
-    "eslint-plugin-import-x": "4.4.3"
+    "eslint-plugin-import-x": "4.5.0"
   },
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
-    "@rushstack/heft": "0.68.8",
+    "@rushstack/heft": "0.68.9",
     "@types/eslint": "8.56.10"
   },
   "peerDependencies": {
