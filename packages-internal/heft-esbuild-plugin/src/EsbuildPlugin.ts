@@ -15,7 +15,8 @@ type EsBuildOptionWhitelist =
   | "minify"
   | "sourcemap"
   | "platform"
-  | "target";
+  | "target"
+  | "external";
 
 /**
  * The options for esbuild build() function.
@@ -83,6 +84,7 @@ class EsbuildPlugin implements IHeftTaskPlugin<IEsbuildOption> {
         bundle: options?.bundle ?? true,
         minify: options?.minify ?? true,
         sourcemap: options?.sourcemap ?? false,
+        external: options?.external,
       };
 
       if (options?.platform) buildOptions.platform = options.platform;

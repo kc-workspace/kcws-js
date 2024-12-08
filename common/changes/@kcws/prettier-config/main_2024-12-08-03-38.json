@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "upgrade dependencies [auto]",
+      "type": "minor",
+      "packageName": "@kcws/prettier-config"
+    }
+  ],
+  "packageName": "@kcws/prettier-config",
+  "email": "97302203+kc-bot@users.noreply.github.com"
+}

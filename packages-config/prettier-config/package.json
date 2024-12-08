@@ -40,8 +40,8 @@
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.68.8",
-    "prettier": "3.4.1"
+    "@rushstack/heft": "0.68.9",
+    "prettier": "3.4.2"
   },
   "peerDependencies": {
     "prettier": "^3.1.0"
