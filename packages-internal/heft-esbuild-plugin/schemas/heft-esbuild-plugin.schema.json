@@ -60,6 +60,13 @@
           }
         }
       ]
+    },
+    "external": {
+      "description": "Documentation: https://esbuild.github.io/api/#external",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   }
 }
