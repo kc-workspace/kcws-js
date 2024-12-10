@@ -2,6 +2,20 @@
   "name": "@kcinternals/heft-node-rig",
   "entries": [
     {
+      "version": "0.44.0",
+      "tag": "@kcinternals/heft-node-rig_v0.44.0",
+      "date": "Tue, 10 Dec 2024 22:43:47 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "c812c7ceab8050a63332eaa6c2fa9a16451be097"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.43.0",
       "tag": "@kcinternals/heft-node-rig_v0.43.0",
       "date": "Wed, 04 Dec 2024 02:53:48 GMT",
