@@ -25,7 +25,9 @@
         "self": ["_phase:build"]
       },
       "ignoreMissingScript": true,
-      "allowWarningsOnSuccess": false
+      // Currently, jest always print deprecate warning message
+      // TODO: Change back to false when https://github.com/jestjs/jest/issues/15367 resolved
+      "allowWarningsOnSuccess": true
     }
   ],
   "commands": [
