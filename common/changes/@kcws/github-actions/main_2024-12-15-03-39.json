@@ -3,9 +3,9 @@
     {
       "comment": "upgrade dependencies [auto]",
       "type": "minor",
-      "packageName": "@kcinternals/heft-node-rig"
+      "packageName": "@kcws/github-actions"
     }
   ],
-  "packageName": "@kcinternals/heft-node-rig",
+  "packageName": "@kcws/github-actions",
   "email": "97302203+kc-bot@users.noreply.github.com"
 }

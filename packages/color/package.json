@@ -1,6 +1,6 @@
 {
   "name": "@kcws/color",
-  "version": "0.26.0",
+  "version": "0.27.0",
   "description": "color management",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
@@ -46,7 +46,7 @@
     "@kcinternals/heft-web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.68.8"
+    "@rushstack/heft": "0.68.11"
   },
   "engines": {
     "node": ">=12"

@@ -1,6 +1,6 @@
 {
   "name": "@kcws/reset.css",
-  "version": "1.34.0",
+  "version": "1.36.0",
   "description": "css reseting package",
   "main": "lib/reset.scss.css",
   "style": "lib/reset.scss.css",
@@ -41,9 +41,9 @@
   "devDependencies": {
     "@kcinternals/heft-web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
-    "@rushstack/heft": "0.68.8",
-    "stylelint": "16.10.0",
-    "stylelint-config-standard-scss": "13.1.0"
+    "@rushstack/heft": "0.68.11",
+    "stylelint": "16.11.0",
+    "stylelint-config-standard-scss": "14.0.0"
   },
   "engines": {
     "node": ">=12"

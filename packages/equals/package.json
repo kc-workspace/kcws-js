@@ -1,6 +1,6 @@
 {
   "name": "@kcws/equals",
-  "version": "0.31.0",
+  "version": "0.32.0",
   "description": "object equivalent",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
@@ -50,7 +50,7 @@
     "@kcinternals/heft-web-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.68.8"
+    "@rushstack/heft": "0.68.11"
   },
   "engines": {
     "node": ">=12"

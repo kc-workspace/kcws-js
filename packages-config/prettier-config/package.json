@@ -1,6 +1,6 @@
 {
   "name": "@kcws/prettier-config",
-  "version": "0.29.0",
+  "version": "0.31.0",
   "description": "kamontat's prettier configuration",
   "main": "src/index.js",
   "types": "lib/index.d.ts",
@@ -40,8 +40,8 @@
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.68.8",
-    "prettier": "3.3.3"
+    "@rushstack/heft": "0.68.11",
+    "prettier": "3.4.2"
   },
   "peerDependencies": {
     "prettier": "^3.1.0"

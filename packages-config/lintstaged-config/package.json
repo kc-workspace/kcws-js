@@ -1,6 +1,6 @@
 {
   "name": "@kcws/lintstaged-config",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "kamontat's lintstaged config",
   "main": "lib/index.js",
   "module": "lib-esnext/index.js",
@@ -48,7 +48,7 @@
   "devDependencies": {
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.68.8",
+    "@rushstack/heft": "0.68.11",
     "@types/micromatch": "4.0.9"
   },
   "engines": {

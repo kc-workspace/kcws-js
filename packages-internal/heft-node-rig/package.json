@@ -1,6 +1,6 @@
 {
   "name": "@kcinternals/heft-node-rig",
-  "version": "0.41.0",
+  "version": "0.44.0",
   "description": "a rig package for node development (internal usage)",
   "license": "AGPL-3.0-only",
   "homepage": "https://github.com/kc-workspace/kcws-js/tree/main/packages-internal/heft-node-rig",
@@ -31,11 +31,11 @@
     "_phase:build": ""
   },
   "dependencies": {
-    "@microsoft/api-extractor": "7.48.0",
-    "@rushstack/heft-api-extractor-plugin": "0.3.58",
-    "@rushstack/heft-jest-plugin": "0.13.1",
-    "@rushstack/heft-lint-plugin": "0.5.7",
-    "@rushstack/heft-typescript-plugin": "0.6.1",
+    "@microsoft/api-extractor": "7.48.1",
+    "@rushstack/heft-api-extractor-plugin": "0.3.61",
+    "@rushstack/heft-jest-plugin": "0.14.1",
+    "@rushstack/heft-lint-plugin": "0.5.10",
+    "@rushstack/heft-typescript-plugin": "0.6.4",
     "@types/heft-jest": "1.0.6",
     "@types/node": "18.19.3",
     "eslint": "8.57.0",
@@ -45,7 +45,7 @@
     "typescript": "5.3.3"
   },
   "devDependencies": {
-    "@rushstack/heft": "0.68.8"
+    "@rushstack/heft": "0.68.11"
   },
   "peerDependencies": {
     "@rushstack/heft": ">=0.63.5"

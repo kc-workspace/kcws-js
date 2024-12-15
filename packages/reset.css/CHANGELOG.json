@@ -2,6 +2,65 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "1.36.0",
+      "tag": "@kcws/reset.css_v1.36.0",
+      "date": "Tue, 10 Dec 2024 22:43:47 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "c812c7ceab8050a63332eaa6c2fa9a16451be097"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.45.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.10.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.35.1",
+      "tag": "@kcws/reset.css_v1.35.1",
+      "date": "Wed, 04 Dec 2024 02:53:48 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.44.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.9.2`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.35.0",
+      "tag": "@kcws/reset.css_v1.35.0",
+      "date": "Tue, 03 Dec 2024 22:43:51 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "1c278ecdb42882a20f93cb38cdf451d924e64c8f"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.43.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.9.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.34.0",
       "tag": "@kcws/reset.css_v1.34.0",
       "date": "Tue, 26 Nov 2024 22:43:38 GMT",

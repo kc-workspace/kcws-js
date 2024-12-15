@@ -1,6 +1,23 @@
 # Change Log - @kcinternals/heft-node-rig
 
-This log was last generated on Tue, 08 Oct 2024 22:41:43 GMT and should not be manually modified.
+This log was last generated on Tue, 10 Dec 2024 22:43:47 GMT and should not be manually modified.
+
+## 0.44.0
+Tue, 10 Dec 2024 22:43:47 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+
+## 0.43.0
+Wed, 04 Dec 2024 02:53:48 GMT
+
+### Minor changes
+
+- upgrade dependencies [auto]
+- upgrade dependencies [auto]
+- upgrade dependencies [manually]
+- upgrade dependencies [auto]
 
 ## 0.34.0
 Tue, 08 Oct 2024 22:41:43 GMT
