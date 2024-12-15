@@ -14,6 +14,11 @@ trim_trailing_whitespace = true
 [*.json]
 max_line_length = 130
 
+# Ignore line length of changelog json
+[CHANGELOG.json]
+max_line_length = unset
+insert_final_newline = unset
+
 # I temporarily increase the max_line_length to 130 for rush.json
 # because the official schema path is not up-to-date
 [rush.json]
