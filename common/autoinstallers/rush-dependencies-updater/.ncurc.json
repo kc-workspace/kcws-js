@@ -52,6 +52,8 @@
     "@types/eslint",
 
     // This depends on @definitelytyped/eslint-plugin
-    "eslint-plugin-jsdoc"
+    "eslint-plugin-jsdoc",
+    // This is because issue https://github.com/actions/toolkit/issues/1898
+    "@actions/cache"
   ]
 }

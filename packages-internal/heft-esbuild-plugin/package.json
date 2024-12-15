@@ -49,8 +49,8 @@
     "@kcinternals/heft-node-rig": "workspace:*",
     "@kcws/lintstaged-config": "workspace:*",
     "@kcws/eslint-config": "workspace:*",
-    "@rushstack/heft": "0.68.9",
-    "@rushstack/terminal": "0.14.3",
+    "@rushstack/heft": "0.68.11",
+    "@rushstack/terminal": "0.14.4",
     "@types/tapable": "1.0.6",
     "tapable": "1.1.3"
   },
