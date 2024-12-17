@@ -2,6 +2,31 @@
   "name": "@kcinternals/heft-esbuild-plugin",
   "entries": [
     {
+      "version": "0.26.0",
+      "tag": "@kcinternals/heft-esbuild-plugin_v0.26.0",
+      "date": "Tue, 17 Dec 2024 22:41:41 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "844edfae78047c0c1ab193be1c8a79de4b77472c"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-node-rig\" to `0.45.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.11.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.43.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.25.0",
       "tag": "@kcinternals/heft-esbuild-plugin_v0.25.0",
       "date": "Tue, 10 Dec 2024 22:43:47 GMT",

@@ -2,6 +2,34 @@
   "name": "@kcws/equals",
   "entries": [
     {
+      "version": "0.33.0",
+      "tag": "@kcws/equals_v0.33.0",
+      "date": "Tue, 17 Dec 2024 22:41:41 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "844edfae78047c0c1ab193be1c8a79de4b77472c"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/dtcheck\" to `0.56.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-web-rig\" to `0.46.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.11.0`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.43.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.32.0",
       "tag": "@kcws/equals_v0.32.0",
       "date": "Tue, 10 Dec 2024 22:43:47 GMT",

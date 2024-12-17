@@ -2,6 +2,45 @@
   "name": "@kcws/heft-web-rig",
   "entries": [
     {
+      "version": "0.46.0",
+      "tag": "@kcws/heft-web-rig_v0.46.0",
+      "date": "Tue, 17 Dec 2024 22:41:41 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "ac3fc51c19afc7927244c3fdc3a0a0485423b33a"
+          },
+          {
+            "comment": "upgrade dependencies [manually]",
+            "author": "Kamontat Chantrachirathumrong <14089557+kamontat@users.noreply.github.com>",
+            "commit": "d61ade0f84c321f7f33ae7b120673b63b92df6b2"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "be206fc0864532ddc49c5c8f0d9bb744908d1464"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "c812c7ceab8050a63332eaa6c2fa9a16451be097"
+          },
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "844edfae78047c0c1ab193be1c8a79de4b77472c"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcinternals/heft-esbuild-plugin\" to `0.26.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.36.0",
       "tag": "@kcws/heft-web-rig_v0.36.0",
       "date": "Tue, 15 Oct 2024 22:41:19 GMT",
