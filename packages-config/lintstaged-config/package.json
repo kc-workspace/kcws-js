@@ -1,6 +1,6 @@
 {
   "name": "@kcws/lintstaged-config",
-  "version": "1.11.0",
+  "version": "1.11.1",
   "description": "kamontat's lintstaged config",
   "main": "lib/index.js",
   "module": "lib-esnext/index.js",

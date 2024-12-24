@@ -1,6 +1,6 @@
 {
   "name": "@kcws/dtcheck",
-  "version": "0.56.0",
+  "version": "0.56.1",
   "description": "datatype checking",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",

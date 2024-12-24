@@ -1,6 +1,6 @@
 {
   "name": "@kcws/github-actions",
-  "version": "0.22.0",
+  "version": "0.22.1",
   "description": "github actions utilities",
   "main": "lib/index.js",
   "module": "lib-esnext/index.js",

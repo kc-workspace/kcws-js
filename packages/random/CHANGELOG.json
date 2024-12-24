@@ -2,6 +2,24 @@
   "name": "@kcws/random",
   "entries": [
     {
+      "version": "0.56.1",
+      "tag": "@kcws/random_v0.56.1",
+      "date": "Tue, 24 Dec 2024 22:39:27 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kctypes/generic\" to `1.30.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.11.1`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.44.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.56.0",
       "tag": "@kcws/random_v0.56.0",
       "date": "Tue, 17 Dec 2024 22:41:41 GMT",

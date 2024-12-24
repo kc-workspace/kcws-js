@@ -2,6 +2,25 @@
   "name": "@kcws/reset.css",
   "entries": [
     {
+      "version": "1.38.0",
+      "tag": "@kcws/reset.css_v1.38.0",
+      "date": "Tue, 24 Dec 2024 22:39:27 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "upgrade dependencies [auto]",
+            "author": "kamontat [bot] <97302203+kc-bot@users.noreply.github.com>",
+            "commit": "2c99cf7fdaa9311299e9fa5b9f5a063b6af3342e"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.11.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.37.0",
       "tag": "@kcws/reset.css_v1.37.0",
       "date": "Tue, 17 Dec 2024 22:41:41 GMT",
