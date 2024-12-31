@@ -2,6 +2,21 @@
   "name": "@kcws/rspack-config",
   "entries": [
     {
+      "version": "0.40.1",
+      "tag": "@kcws/rspack-config_v0.40.1",
+      "date": "Tue, 31 Dec 2024 22:39:37 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.11.2`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.45.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.40.0",
       "tag": "@kcws/rspack-config_v0.40.0",
       "date": "Tue, 24 Dec 2024 22:39:27 GMT",

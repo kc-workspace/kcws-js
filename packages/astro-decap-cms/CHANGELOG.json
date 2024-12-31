@@ -2,6 +2,21 @@
   "name": "@kcws/astro-decap-cms",
   "entries": [
     {
+      "version": "0.30.1",
+      "tag": "@kcws/astro-decap-cms_v0.30.1",
+      "date": "Tue, 31 Dec 2024 22:39:37 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.11.2`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.45.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.30.0",
       "tag": "@kcws/astro-decap-cms_v0.30.0",
       "date": "Tue, 24 Dec 2024 22:39:27 GMT",

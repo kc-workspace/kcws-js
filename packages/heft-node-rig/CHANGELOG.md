@@ -1,6 +1,11 @@
 # Change Log - @kcws/heft-node-rig
 
-This log was last generated on Tue, 24 Dec 2024 22:39:27 GMT and should not be manually modified.
+This log was last generated on Tue, 31 Dec 2024 22:39:37 GMT and should not be manually modified.
+
+## 0.49.2
+Tue, 31 Dec 2024 22:39:37 GMT
+
+_Version update only_
 
 ## 0.49.1
 Tue, 24 Dec 2024 22:39:27 GMT
