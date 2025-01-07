@@ -1,6 +1,11 @@
 # Change Log - @kcws/github-actions
 
-This log was last generated on Tue, 31 Dec 2024 22:39:37 GMT and should not be manually modified.
+This log was last generated on Tue, 07 Jan 2025 22:40:54 GMT and should not be manually modified.
+
+## 0.22.3
+Tue, 07 Jan 2025 22:40:54 GMT
+
+_Version update only_
 
 ## 0.22.2
 Tue, 31 Dec 2024 22:39:37 GMT

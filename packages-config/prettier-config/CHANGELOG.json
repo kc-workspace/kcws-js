@@ -2,6 +2,21 @@
   "name": "@kcws/prettier-config",
   "entries": [
     {
+      "version": "0.32.3",
+      "tag": "@kcws/prettier-config_v0.32.3",
+      "date": "Tue, 07 Jan 2025 22:40:54 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@kcws/lintstaged-config\" to `1.11.3`"
+          },
+          {
+            "comment": "Updating dependency \"@kcws/eslint-config\" to `1.46.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.32.2",
       "tag": "@kcws/prettier-config_v0.32.2",
       "date": "Tue, 31 Dec 2024 22:39:37 GMT",
