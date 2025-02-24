@@ -4,6 +4,6 @@
   "private": true,
   "dependencies": {
     "prettier": "3.4.2",
-    "lint-staged": "15.4.1"
+    "lint-staged": "15.4.3"
   }
 }
